@@ -750,7 +750,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         <div class="nav-main-btns" id="nav-main-btns">
             <button class="navbar-pdf-btn" id="pdf-nav-btn" onclick="showPDFs()">&#128218; Guides</button>
             <button class="navbar-audio-btn" id="lectures-nav-btn" onclick="showLectures()">&#127911; Audio Lectures</button>
-            <button class="navbar-lib-btn" id="lib-nav-btn" onclick="showPDFs()">&#128451; Library</button>
+            <button class="navbar-lib-btn" id="lib-nav-btn" onclick="showFullExam()">&#128221; Full Exam</button>
             <div class="nav-search-wrap" id="nav-search-wrap">
                 <input type="text" id="global-search" class="search-input" placeholder="&#128270; Search cards..." oninput="doGlobalSearch(this.value)">
             </div>
@@ -907,7 +907,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
 
         var GH_CDN = 'https://cdn.jsdelivr.net/gh/Peptopia-Health/bluebook-questions@main/';
         var GH_PAGES = 'https://peptopia-health.github.io/bluebook-questions/';
-        var CACHE_BUST = '?v=2.1';
+        var CACHE_BUST = '?v=2.2';
 
         fetch(GH_CDN + 'mnt_studydata.json' + CACHE_BUST)
             .then(function(r) {
@@ -925,8 +925,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
                     '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
             });
 
-        var APP_VERSION = '2.1';
-        var QUIZ_COUNTS = { cardio:116, resp:112, neuro:100, gi:105, obpeds:136, endo:114, musc:103, psych:124, hemonc:112, integ:100, pharm:119, fund:120, gero:95, nutr:95 };
+        var APP_VERSION = '2.2';
+        var QUIZ_COUNTS = { cardio:116, resp:112, neuro:100, gi:105, obpeds:136, endo:114, musc:103, psych:124, hemonc:112, integ:100, pharm:119, fund:120, gero:95, nutr:95, fullexam:122 };
 
         function buildBannerText() {
             var secs = Object.keys(contentData).length;
@@ -1381,6 +1381,32 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             document.getElementById('q-rationale').classList.remove('visible');
             document.getElementById('next-btn').style.display = 'none';
             fetchGitHubQuiz(data.type).then(function(quizQs) {
+                if (quizQs.length === 0) {
+                    document.getElementById('quiz-title').textContent = 'No questions available';
+                    return;
+                }
+                currentQuizData = shuffleArray(quizQs.slice());
+                document.getElementById('qsb-total').textContent = currentQuizData.length;
+                updateScoreBar();
+                showQuestion();
+            });
+        };
+
+        window.showFullExam = function() {
+            document.getElementById('quiz-modal').style.display = 'block';
+            document.getElementById('quiz-title').textContent = 'Full Exam';
+            document.getElementById('quiz-subtitle').textContent = '122 unique NCLEX topics';
+            document.getElementById('quiz-question-area').style.display = 'block';
+            document.getElementById('quiz-completion').classList.remove('visible');
+            document.getElementById('quiz-score-bar').style.display = 'flex';
+            quizIndex = 0; quizScore = 0; quizWrong = 0;
+            quizAnswered = {}; isRetestMode = false; origQuizData = null; retestHistory = [];
+            quizSectionTitle = 'Full Exam';
+            document.getElementById('q-text').textContent = '';
+            document.getElementById('q-options').innerHTML = '';
+            document.getElementById('q-rationale').classList.remove('visible');
+            document.getElementById('next-btn').style.display = 'none';
+            fetchGitHubQuiz('fullexam').then(function(quizQs) {
                 if (quizQs.length === 0) {
                     document.getElementById('quiz-title').textContent = 'No questions available';
                     return;
