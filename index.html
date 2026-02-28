@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ace the NCLEX &#8212; 85 &amp; Done!</title>
+    <title>NCLEX &#8212; 85 &amp; Done!</title>
     <style>
         *, *::before, *::after { box-sizing: border-box; }
         html, body { margin: 0; padding: 0; min-height: 100vh; min-height: 100dvh; background: #b8aad0; }
@@ -69,13 +69,21 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             --alert-bg: #1a150a; --alert-border: #92400e; --alert-text: #f1f5f9;
             background-color: transparent; color: #f1f5f9;
         }
-        #peptopia-klimek-guide .hl-drug, #peptopia-klimek-guide .hl-lyte, #peptopia-klimek-guide .hl-gas { font-weight: 700; }
+        /* ===== PERMANENT HIGHLIGHT CLASSES =====
+         * hl-drug : Drug names — bold bright blue
+         * hl-lyte : Electrolytes — bold bright orange
+         * hl-gas  : Blood gases — bold green
+         * hl-dx   : Diseases/disorders/conditions — bold neon fuchsia (lighter than close-btn #ef4444)
+         */
+        #peptopia-klimek-guide .hl-drug, #peptopia-klimek-guide .hl-lyte, #peptopia-klimek-guide .hl-gas, #peptopia-klimek-guide .hl-dx { font-weight: 700; }
         #peptopia-klimek-guide .hl-drug { color: #2563eb; }
         #peptopia-klimek-guide .hl-lyte { color: #ea580c; }
         #peptopia-klimek-guide .hl-gas { color: #16a34a; }
+        #peptopia-klimek-guide .hl-dx { color: #f0457a; }
         html.dark #peptopia-klimek-guide .hl-drug { color: #60a5fa; }
         html.dark #peptopia-klimek-guide .hl-lyte { color: #fb923c; }
         html.dark #peptopia-klimek-guide .hl-gas { color: #4ade80; }
+        html.dark #peptopia-klimek-guide .hl-dx { color: #ff80ab; }
         #peptopia-klimek-guide .section-title-hl {
             background: rgba(255,255,255,0.75); padding: 0.15rem 0.5rem;
             border-radius: 0.35rem; display: inline-block;
@@ -83,7 +91,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         html.dark #peptopia-klimek-guide .section-title-hl { background: rgba(255,255,255,0.15); }
         #peptopia-klimek-guide .navbar {
             background: linear-gradient(135deg, #0a1628 0%, #0c2461 50%, #0a1628 100%);
-            color: #fff; padding: 0.75rem 1rem; border-radius: 0.5rem; margin-bottom: 0.4rem;
+            color: #fff; padding: 0.75rem max(1rem, env(safe-area-inset-right)) 0.75rem max(1rem, env(safe-area-inset-left));
+            border-radius: 0.5rem; margin-bottom: 0.4rem;
             display: flex; flex-direction: column; align-items: center;
             box-shadow: 0 4px 16px -2px rgba(10, 22, 40, 0.5), 0 0 20px rgba(30, 100, 255, 0.15);
             border: 1px solid rgba(59, 130, 246, 0.25);
@@ -91,7 +100,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         }
         html.dark #peptopia-klimek-guide .navbar { background: linear-gradient(135deg, #020617 0%, #0c2461 50%, #020617 100%); border: 1px solid rgba(59, 130, 246, 0.3); }
         #peptopia-klimek-guide .nav-title { font-weight: 800; font-size: 1.3rem; cursor: pointer; text-align: center; }
-        #peptopia-klimek-guide .nav-main-btns { display: flex; gap: 0.5rem; justify-content: center; align-items: center; flex-wrap: wrap; }
+        #peptopia-klimek-guide .nav-main-btns { display: flex; gap: 0.5rem; justify-content: center; align-items: center; flex-wrap: wrap; padding: 0 6rem; }
         #peptopia-klimek-guide .nav-search-wrap { flex-shrink: 1; min-width: 0; max-width: 9rem; }
         #peptopia-klimek-guide .home-footer { text-align: center; color: rgba(100,116,139,0.7); font-size: 0.75rem; font-weight: 500; padding: 1.2rem 1rem 1.5rem; letter-spacing: 0.01em; white-space: pre-line; }
         html.dark #peptopia-klimek-guide .home-footer { color: rgba(255,255,255,0.35); }
@@ -179,7 +188,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         html.dark #peptopia-klimek-guide .card-modal-body .card-alert-box {
             background: #44181f; border: 1px solid rgba(248,113,113,0.2); border-left: 5px solid #f87171;
         }
-        html.dark #peptopia-klimek-guide .card-modal-body .card-alert-box .card-label { color: #fca5a5 !important; }
+        #peptopia-klimek-guide .card-alert-label { color: #b91c1c; }
+        html.dark #peptopia-klimek-guide .card-alert-label { color: #fca5a5; }
         #peptopia-klimek-guide .card-modal-body .card-alert-box .card-fact { font-size: 0.95rem; }
         #peptopia-klimek-guide .card-nav {
             display: flex; justify-content: space-between; align-items: center;
@@ -218,7 +228,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             display: inline-block; padding: 0.15rem 0.45rem; border-radius: 0.3rem; line-height: 1.3;
         }
         #peptopia-klimek-guide .topic-hl.hl-rose { background-color: #fff3f4; }
-        #peptopia-klimek-guide .topic-hl.hl-blue { background-color: #e9fcfe; }
+        #peptopia-klimek-guide .topic-hl.hl-blue, #peptopia-klimek-guide .topic-hl.hl-cyan { background-color: #e9fcfe; }
         #peptopia-klimek-guide .topic-hl.hl-purple { background-color: #f7f5ff; }
         #peptopia-klimek-guide .topic-hl.hl-emerald { background-color: #e9fcf3; }
         #peptopia-klimek-guide .topic-hl.hl-pink { background-color: #fef3f9; }
@@ -228,11 +238,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         #peptopia-klimek-guide .topic-hl.hl-red { background-color: #fff2f2; }
         #peptopia-klimek-guide .topic-hl.hl-orange { background-color: #fff5ea; }
         #peptopia-klimek-guide .topic-hl.hl-gray { background-color: #f9f9fa; }
-        #peptopia-klimek-guide .topic-hl.hl-cyan { background-color: #e9fcfe; }
         #peptopia-klimek-guide .topic-hl.hl-lime { background-color: #f6fee7; }
         #peptopia-klimek-guide .topic-hl.hl-green { background-color: #eefdf3; }
         html.dark #peptopia-klimek-guide .topic-hl.hl-rose { background-color: #672b3c; color: #fda4af; }
-        html.dark #peptopia-klimek-guide .topic-hl.hl-blue { background-color: #2d5260; color: #67e8f9; }
+        html.dark #peptopia-klimek-guide .topic-hl.hl-blue, html.dark #peptopia-klimek-guide .topic-hl.hl-cyan { background-color: #2d5260; color: #67e8f9; }
         html.dark #peptopia-klimek-guide .topic-hl.hl-purple { background-color: #4d347c; color: #c4b5fd; }
         html.dark #peptopia-klimek-guide .topic-hl.hl-emerald { background-color: #284c43; color: #6ee7b7; }
         html.dark #peptopia-klimek-guide .topic-hl.hl-pink { background-color: #6a2c45; color: #f9a8d4; }
@@ -242,7 +251,6 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         html.dark #peptopia-klimek-guide .topic-hl.hl-red { background-color: #612f2f; color: #fca5a5; }
         html.dark #peptopia-klimek-guide .topic-hl.hl-orange { background-color: #5f372c; color: #fdba74; }
         html.dark #peptopia-klimek-guide .topic-hl.hl-gray { background-color: #414955; color: #d1d5db; }
-        html.dark #peptopia-klimek-guide .topic-hl.hl-cyan { background-color: #2d5260; color: #67e8f9; }
         html.dark #peptopia-klimek-guide .topic-hl.hl-lime { background-color: #3c4d2b; color: #bef264; }
         html.dark #peptopia-klimek-guide .topic-hl.hl-green { background-color: #2b4d39; color: #86efac; }
         #peptopia-klimek-guide .key-point-cell { color: #334155; font-style: normal; font-weight: 500; }
@@ -282,13 +290,13 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
                 position: static; transform: none;
                 flex-direction: row; gap: 0.2rem; justify-content: center; flex-wrap: wrap; width: 100%;
             }
-            #peptopia-klimek-guide .nav-filter-btn { font-size: 0.65rem; padding: 0.2rem 0.45rem; }
-            #peptopia-klimek-guide .nav-main-btns { gap: 0.35rem; }
-            #peptopia-klimek-guide .navbar-pdf-btn, #peptopia-klimek-guide .navbar-audio-btn, #peptopia-klimek-guide .navbar-lib-btn { font-size: 0.72rem; padding: 0.25rem 0.5rem; }
+            #peptopia-klimek-guide .nav-filter-btn { font-size: 0.72rem; padding: 0.3rem 0.5rem; min-height: 28px; }
+            #peptopia-klimek-guide .nav-main-btns { gap: 0.35rem; padding: 0; }
+            #peptopia-klimek-guide .navbar-pdf-btn, #peptopia-klimek-guide .navbar-audio-btn, #peptopia-klimek-guide .navbar-lib-btn { font-size: 0.75rem; padding: 0.35rem 0.55rem; min-height: 32px; }
             #peptopia-klimek-guide .nav-search-wrap { max-width: 7.5rem; }
             #peptopia-klimek-guide .search-input { padding: 0.25rem 0.5rem; }
-            #peptopia-klimek-guide .home-footer { font-size: 0.65rem; padding: 0.8rem 0.5rem 1.2rem; }
-            #peptopia-klimek-guide .lecture-bar-label { font-size: 0.65rem; }
+            #peptopia-klimek-guide .home-footer { font-size: 0.72rem; padding: 0.8rem 0.5rem 1.2rem; }
+            #peptopia-klimek-guide .lecture-bar-label { font-size: 0.72rem; }
             #peptopia-klimek-guide .lecture-bar-embed iframe { height: 52px; }
             #peptopia-klimek-guide .lecture-bar.active { padding: 0.25rem 0.4rem; gap: 0.35rem; }
             #peptopia-klimek-guide #section-view { height: calc(100vh - 6rem); height: calc(100dvh - 6rem); }
@@ -309,21 +317,22 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         #peptopia-klimek-guide .quiz-close-x {
             position: absolute; top: 0.75rem; right: 0.75rem;
             background: #ef4444; color: white; border: none;
-            width: 36px; height: 36px; border-radius: 50%;
-            font-size: 1.2rem; cursor: pointer; z-index: 5; transition: all 0.2s;
+            width: 44px; height: 44px; border-radius: 50%;
+            font-size: 1.3rem; cursor: pointer; z-index: 5; transition: all 0.2s;
         }
         #peptopia-klimek-guide .quiz-close-x:hover { transform: scale(1.1); box-shadow: 0 0 12px rgba(239,68,68,0.5); }
         /* Quiz Header */
         #peptopia-klimek-guide .quiz-hdr {
-            text-align: center; margin-bottom: 1rem; padding: 1.25rem;
+            text-align: center; margin-bottom: 0.5rem; padding: 0.6rem 1rem;
             background: linear-gradient(135deg, rgba(30,30,50,0.9), rgba(20,20,35,0.95));
             border-radius: 1rem; border: 1px solid #4338ca;
         }
         #peptopia-klimek-guide .quiz-hdr-title {
-            font-size: 1.5rem; font-weight: 800; color: #00d4ff;
-            text-shadow: 0 0 18px rgba(0,212,255,0.5); margin-bottom: 0.25rem;
+            font-size: 1.5rem; font-weight: 800; color: #c4b5fd;
+            text-shadow: 0 0 18px rgba(153,102,204,0.45); margin-bottom: 0;
         }
-        #peptopia-klimek-guide .quiz-hdr-sub { font-size: 0.88rem; color: #94a3b8; }
+        /* PERMANENT: Subtitle hidden per design spec — do not display on any quiz */
+        #peptopia-klimek-guide .quiz-hdr-sub { display: none; }
         /* Live Score Bar */
         #peptopia-klimek-guide .quiz-score-bar {
             display: flex; justify-content: center; align-items: center; gap: 1rem;
@@ -342,16 +351,15 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         }
         #peptopia-klimek-guide .q-header { display: flex; align-items: flex-start; margin-bottom: 1rem; }
         #peptopia-klimek-guide .q-num-badge {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: #9966CC;
             color: white; width: 38px; height: 38px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
             font-weight: 800; font-size: 0.9rem; flex-shrink: 0; margin-right: 0.75rem;
         }
-        #peptopia-klimek-guide .q-text { font-size: 1.05rem; line-height: 1.5; font-weight: 500; color: #f1f5f9; }
-        #peptopia-klimek-guide .q-prompt {
-            font-size: 0.82rem; color: #818cf8; font-weight: 600; margin-bottom: 0.75rem;
-            text-transform: uppercase; letter-spacing: 0.5px;
-        }
+        /* PERMANENT: q-text, q-opt, q-rat-text all standardized to 1rem */
+        #peptopia-klimek-guide .q-text { font-size: 1rem; line-height: 1.5; font-weight: 500; color: #f1f5f9; }
+        /* PERMANENT: "Select the best answer:" prompt removed — CSS kept hidden as backup */
+        #peptopia-klimek-guide .q-prompt { display: none; }
         /* Answer Options */
         #peptopia-klimek-guide .q-options { display: flex; flex-direction: column; gap: 0.6rem; }
         #peptopia-klimek-guide .q-opt {
@@ -370,12 +378,12 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         #peptopia-klimek-guide .q-letter {
             width: 30px; height: 30px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            font-weight: 700; font-size: 0.82rem; flex-shrink: 0; color: white;
+            font-weight: 700; font-size: 0.82rem; flex-shrink: 0;
         }
-        #peptopia-klimek-guide .q-letter.la { background: #f59e0b; }
-        #peptopia-klimek-guide .q-letter.lb { background: #ec4899; }
-        #peptopia-klimek-guide .q-letter.lc { background: #22c55e; }
-        #peptopia-klimek-guide .q-letter.ld { background: #f97316; }
+        #peptopia-klimek-guide .q-letter.la { background: #EAB8E4; color: #3b235a; }
+        #peptopia-klimek-guide .q-letter.lb { background: #A0F2B3; color: #1a3d2a; }
+        #peptopia-klimek-guide .q-letter.lc { background: #A0D7F2; color: #1a2f3d; }
+        #peptopia-klimek-guide .q-letter.ld { background: #66CCCC; color: #1a3d3d; }
         #peptopia-klimek-guide .q-ans-icon { margin-left: auto; font-size: 1.1rem; flex-shrink: 0; }
         /* Rationale */
         #peptopia-klimek-guide .q-rationale {
@@ -388,39 +396,47 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             padding: 0.5rem 0.85rem; font-weight: 800; font-size: 0.95rem;
             display: flex; align-items: center; gap: 0.4rem;
         }
-        #peptopia-klimek-guide .q-rat-hdr.correct { background: #065f46; color: #34d399; border-radius: 0; }
+        #peptopia-klimek-guide .q-rat-hdr.correct { background: #065f46; color: #00ffaa; border-radius: 0; }
         #peptopia-klimek-guide .q-rat-hdr.incorrect { background: #7f1d1d; color: #fca5a5; border-radius: 0; }
         #peptopia-klimek-guide .q-rat-body { padding: 0.85rem; }
-        #peptopia-klimek-guide .q-rat-label { color: #a5b4fc; font-weight: 800; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.3rem; }
-        #peptopia-klimek-guide .q-rat-text { font-size: 0.92rem; line-height: 1.6; color: #e0e7ff; }
+        /* RATIONALE: label matches quiz title lavender per design spec */
+        #peptopia-klimek-guide .q-rat-label { color: #c4b5fd; font-weight: 800; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.3rem; }
+        #peptopia-klimek-guide .q-rat-text { font-size: 1rem; line-height: 1.6; color: #e0e7ff; }
+        /* PERMANENT: Bold key terms in rationale auto-detected from correct answer */
+        #peptopia-klimek-guide .q-rat-text strong { color: #ffffff; font-weight: 800; }
+        /* PERMANENT: Quiz overlay highlight overrides (always dark BG context) */
         #peptopia-klimek-guide .quiz-overlay .hl-drug { color: #93c5fd; }
-        #peptopia-klimek-guide .quiz-overlay .hl-lyte { color: #fdba74; }
+        #peptopia-klimek-guide .quiz-overlay .hl-lyte { color: #ffa040; }
         #peptopia-klimek-guide .quiz-overlay .hl-gas { color: #86efac; }
+        #peptopia-klimek-guide .quiz-overlay .hl-dx { color: #ff80ab; }
         #peptopia-klimek-guide .quiz-overlay .kp-def-term, #peptopia-klimek-guide .quiz-overlay .kp-header { color: #c4b5fd; }
+        /* PERMANENT: Lethal condition skull icon — 50% larger than surrounding text */
+        #peptopia-klimek-guide .lethal-icon { font-size: 1.5em; vertical-align: middle; line-height: 1; }
         /* Quiz Footer / Next Btn */
         #peptopia-klimek-guide .quiz-footer { margin-top: 1rem; display: flex; justify-content: center; padding-bottom: env(safe-area-inset-bottom, 0.5rem); }
         #peptopia-klimek-guide .q-next-btn {
-            background: linear-gradient(135deg, #6366f1, #4f46e5); color: white; border: none;
-            padding: 0.75rem 2.5rem; border-radius: 2rem; font-weight: 800; cursor: pointer;
-            box-shadow: 0 4px 12px rgba(99,102,241,0.4); font-size: 1rem;
-            -webkit-tap-highlight-color: transparent; width: 100%; max-width: 320px; transition: all 0.2s;
+            background: linear-gradient(135deg, #B8739E, #A5648C); color: white; border: none;
+            padding: 0.3rem 0.85rem; border-radius: 2rem; font-weight: 700; cursor: pointer;
+            box-shadow: 0 4px 12px rgba(184,115,158,0.4); font-size: 0.82rem;
+            -webkit-tap-highlight-color: transparent; width: auto; transition: all 0.2s;
+            display: inline-flex; align-items: center; gap: 0.35rem; white-space: nowrap;
         }
-        #peptopia-klimek-guide .q-next-btn:hover { background: linear-gradient(135deg, #4f46e5, #4338ca); transform: translateY(-2px); }
+        #peptopia-klimek-guide .q-next-btn:hover { background: linear-gradient(135deg, #A5648C, #8E5578); transform: scale(1.05); box-shadow: 0 0 12px rgba(184,115,158,0.5); }
         /* ===== RESULTS NAV BUTTON ===== */
         #peptopia-klimek-guide .qsb-results-btn {
-            background: linear-gradient(135deg, #f59e0b, #d97706); color: white; border: none;
+            background: linear-gradient(135deg, #B8739E, #A5648C); color: white; border: none;
             padding: 0.3rem 0.85rem; border-radius: 2rem; font-weight: 700; font-size: 0.82rem;
             cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.35rem;
             -webkit-tap-highlight-color: transparent; white-space: nowrap;
         }
-        #peptopia-klimek-guide .qsb-results-btn:hover { transform: scale(1.05); box-shadow: 0 0 12px rgba(245,158,11,0.5); }
+        #peptopia-klimek-guide .qsb-results-btn:hover { transform: scale(1.05); box-shadow: 0 0 12px rgba(184,115,158,0.5); }
         #peptopia-klimek-guide .qsb-jump-btn {
-            background: linear-gradient(135deg, #f59e0b, #d97706); color: white; border: none;
+            background: linear-gradient(135deg, #B8739E, #A5648C); color: white; border: none;
             padding: 0.3rem 0.85rem; border-radius: 2rem; font-weight: 700; font-size: 0.82rem;
             cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.35rem;
             -webkit-tap-highlight-color: transparent; white-space: nowrap;
         }
-        #peptopia-klimek-guide .qsb-jump-btn:hover { transform: scale(1.05); box-shadow: 0 0 12px rgba(245,158,11,0.5); }
+        #peptopia-klimek-guide .qsb-jump-btn:hover { transform: scale(1.05); box-shadow: 0 0 12px rgba(184,115,158,0.5); }
         #peptopia-klimek-guide .quiz-jump-modal {
             display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.7); z-index: 2100; align-items: center; justify-content: center;
@@ -429,7 +445,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             background: linear-gradient(135deg, #1e1b4b, #0f172a); border: 1px solid #4338ca;
             border-radius: 1rem; padding: 1.5rem; max-width: 300px; width: 90%; text-align: center;
         }
-        #peptopia-klimek-guide .quiz-jump-title { color: #00d4ff; font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem; }
+        #peptopia-klimek-guide .quiz-jump-title { color: #c4b5fd; font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem; }
         #peptopia-klimek-guide .quiz-jump-input {
             width: 100%; padding: 0.6rem; font-size: 1.1rem; border-radius: 0.5rem;
             border: 2px solid #4338ca; background: rgba(30,30,50,0.8); color: white;
@@ -443,7 +459,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         }
         #peptopia-klimek-guide .quiz-jump-cancel { background: #334155; color: white; }
         #peptopia-klimek-guide .quiz-jump-cancel:hover { background: #475569; }
-        #peptopia-klimek-guide .quiz-jump-go { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; }
+        #peptopia-klimek-guide .quiz-jump-go { background: linear-gradient(135deg, #B8739E, #A5648C); color: white; }
         #peptopia-klimek-guide .quiz-jump-go:hover { transform: scale(1.05); }
         /* ===== QUIZ COMPLETION / RESULTS ===== */
         #peptopia-klimek-guide .quiz-completion {
@@ -453,9 +469,9 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         }
         #peptopia-klimek-guide .quiz-completion.visible { display: block; }
         #peptopia-klimek-guide .qc-title {
-            font-size: 1.8rem; font-weight: 800; color: #00d4ff;
+            font-size: 1.8rem; font-weight: 800; color: #c4b5fd;
             text-align: center; margin-bottom: 1.25rem;
-            text-shadow: 0 0 18px rgba(0,212,255,0.6);
+            text-shadow: 0 0 18px rgba(153,102,204,0.5);
         }
         /* Unanswered Warning */
         #peptopia-klimek-guide .qc-unanswered {
@@ -522,13 +538,92 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         #peptopia-klimek-guide .qc-btn-continue:hover { background: linear-gradient(135deg, #16a34a, #15803d); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(34,197,94,0.4); }
         #peptopia-klimek-guide .qc-btn-retest { background: linear-gradient(135deg, #8b5cf6, #6366f1); }
         #peptopia-klimek-guide .qc-btn-retest:hover { background: linear-gradient(135deg, #7c3aed, #4f46e5); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(139,92,246,0.4); }
-        #peptopia-klimek-guide .qc-btn-reset { background: linear-gradient(135deg, #f59e0b, #d97706); }
-        #peptopia-klimek-guide .qc-btn-reset:hover { background: linear-gradient(135deg, #d97706, #b45309); transform: translateY(-2px); }
+        #peptopia-klimek-guide .qc-btn-reset { background: linear-gradient(135deg, #B8739E, #A5648C); }
+        #peptopia-klimek-guide .qc-btn-reset:hover { background: linear-gradient(135deg, #A5648C, #8E5578); transform: translateY(-2px); }
         #peptopia-klimek-guide .qc-btn-home { background: linear-gradient(135deg, #06b6d4, #0891b2); }
         #peptopia-klimek-guide .qc-btn-home:hover { background: linear-gradient(135deg, #0891b2, #0e7490); transform: translateY(-2px); }
         @media (max-width: 600px) {
             #peptopia-klimek-guide .qc-stats-grid { grid-template-columns: repeat(2, 1fr); }
             #peptopia-klimek-guide .qc-btn { width: 100%; text-align: center; }
+        }
+        /* ===== PROGRESS DASHBOARD (v3.0) =====
+         * PERMANENT: Spaced repetition tracking + visual progress display */
+        #peptopia-klimek-guide .progress-overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85); z-index: 2000; overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        #peptopia-klimek-guide .progress-box {
+            max-width: 720px; margin: 1.5rem auto; padding: 1.25rem;
+            background: linear-gradient(135deg, #0f172a, #1e1b4b); border-radius: 1rem;
+            border: 1px solid #4338ca; position: relative; min-height: 60vh;
+        }
+        #peptopia-klimek-guide .pd-title {
+            font-size: 1.5rem; font-weight: 800; color: #c4b5fd; text-align: center;
+            margin-bottom: 1rem; text-shadow: 0 0 18px rgba(153,102,204,0.5);
+        }
+        #peptopia-klimek-guide .pd-readiness {
+            text-align: center; padding: 1rem; margin-bottom: 1rem;
+            background: rgba(99,102,241,0.1); border-radius: 0.75rem; border: 1px solid rgba(99,102,241,0.2);
+        }
+        #peptopia-klimek-guide .pd-readiness-pct { font-size: 2.5rem; font-weight: 800; color: #a5b4fc; }
+        #peptopia-klimek-guide .pd-readiness-label { font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem; }
+        #peptopia-klimek-guide .pd-readiness-msg { font-size: 0.9rem; margin-top: 0.5rem; font-weight: 600; }
+        #peptopia-klimek-guide .pd-meter { height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; margin-top: 0.75rem; overflow: hidden; }
+        #peptopia-klimek-guide .pd-meter-fill { height: 100%; border-radius: 4px; transition: width 0.8s ease; }
+        #peptopia-klimek-guide .pd-stats {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom: 1rem;
+        }
+        #peptopia-klimek-guide .pd-stat {
+            text-align: center; padding: 0.6rem 0.3rem; background: rgba(30,41,59,0.8);
+            border-radius: 0.5rem; border: 1px solid rgba(99,102,241,0.2);
+        }
+        #peptopia-klimek-guide .pd-stat-val { font-size: 1.3rem; font-weight: 800; color: #a5b4fc; }
+        #peptopia-klimek-guide .pd-stat-lbl { font-size: 0.65rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.15rem; }
+        #peptopia-klimek-guide .pd-section-title { font-size: 1rem; font-weight: 700; color: #c4b5fd; margin-bottom: 0.5rem; }
+        #peptopia-klimek-guide .pd-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; margin-bottom: 1rem;
+        }
+        #peptopia-klimek-guide .pd-card {
+            background: rgba(30,41,59,0.8); border-radius: 0.6rem; padding: 0.65rem 0.75rem;
+            border: 1px solid rgba(99,102,241,0.2); transition: all 0.2s; cursor: default;
+        }
+        #peptopia-klimek-guide .pd-card:hover { border-color: rgba(99,102,241,0.5); transform: translateY(-1px); }
+        #peptopia-klimek-guide .pd-card-hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem; }
+        #peptopia-klimek-guide .pd-card-name { font-weight: 700; font-size: 0.85rem; color: #e0e7ff; }
+        #peptopia-klimek-guide .pd-card-badge { font-size: 0.65rem; font-weight: 700; padding: 0.15rem 0.4rem; border-radius: 1rem; }
+        #peptopia-klimek-guide .pd-card-row { display: flex; justify-content: space-between; font-size: 0.75rem; color: #94a3b8; margin-bottom: 0.3rem; }
+        #peptopia-klimek-guide .pd-bar { height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; display: flex; }
+        #peptopia-klimek-guide .pd-bar-fill { height: 100%; transition: width 0.6s ease; }
+        #peptopia-klimek-guide .pd-bar-mastered { background: #4ade80; }
+        #peptopia-klimek-guide .pd-bar-seen { background: #818cf8; }
+        #peptopia-klimek-guide .pd-actions {
+            display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;
+            padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        #peptopia-klimek-guide .pd-btn {
+            padding: 0.45rem 1rem; border: none; border-radius: 1.5rem; font-weight: 700;
+            font-size: 0.82rem; cursor: pointer; transition: all 0.2s; color: white;
+        }
+        #peptopia-klimek-guide .pd-btn-export { background: linear-gradient(135deg, #22c55e, #16a34a); }
+        #peptopia-klimek-guide .pd-btn-import { background: linear-gradient(135deg, #8b5cf6, #6366f1); }
+        #peptopia-klimek-guide .pd-btn-reset { background: linear-gradient(135deg, #ef4444, #dc2626); }
+        #peptopia-klimek-guide .pd-btn:hover { transform: translateY(-2px); }
+        #peptopia-klimek-guide .pd-notice { font-size: 0.75rem; color: #64748b; text-align: center; margin-top: 0.75rem; font-style: italic; }
+        #peptopia-klimek-guide .pd-confirm {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.7); z-index: 2200; display: flex; align-items: center; justify-content: center;
+        }
+        #peptopia-klimek-guide .pd-confirm-box {
+            background: linear-gradient(135deg, #1e1b4b, #0f172a); border: 1px solid #4338ca;
+            border-radius: 1rem; padding: 1.5rem; max-width: 320px; width: 90%; text-align: center;
+        }
+        #peptopia-klimek-guide .pd-confirm-msg { color: #e0e7ff; font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.5; }
+        #peptopia-klimek-guide .pd-confirm-btns { display: flex; gap: 0.75rem; justify-content: center; }
+        @media (max-width: 600px) {
+            #peptopia-klimek-guide .pd-stats { grid-template-columns: repeat(2, 1fr); }
+            #peptopia-klimek-guide .pd-grid { grid-template-columns: 1fr 1fr; }
+            #peptopia-klimek-guide .progress-box { margin: 0.5rem; padding: 1rem; }
         }
         #peptopia-klimek-guide .section-header-bar.bg-rose { background-color: #fecdd3; border: 2px solid #f43f5e; }
         #peptopia-klimek-guide .section-header-bar.bg-blue { background-color: #a5f3fc; border: 2px solid #06b6d4; }
@@ -612,7 +707,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         html.dark #peptopia-klimek-guide .home-card-footer { border-top-color: #334155; }
         #peptopia-klimek-guide .home-grid-divider { border: none; border-top: 1px solid var(--slate-200); margin: 0.5rem 1.5rem 1rem; }
         html.dark #peptopia-klimek-guide .home-grid-divider { border-top-color: #334155; }
-        #peptopia-klimek-guide .home-card-btn { font-size: 0.78rem; font-weight: 700; padding: 0.35rem 0.7rem; border-radius: 0.35rem; border: none; cursor: pointer; transition: all 0.15s; -webkit-tap-highlight-color: transparent; white-space: nowrap; display: inline-flex; align-items: center; gap: 0.35rem; }
+        #peptopia-klimek-guide .home-card-btn { font-size: 0.82rem; font-weight: 700; padding: 0.45rem 0.85rem; border-radius: 0.4rem; border: none; cursor: pointer; transition: all 0.15s; -webkit-tap-highlight-color: transparent; white-space: nowrap; display: inline-flex; align-items: center; gap: 0.35rem; min-height: 36px; }
         #peptopia-klimek-guide .home-card-btn.study-btn { background: #312e81; color: white; }
         #peptopia-klimek-guide .home-card-btn.study-btn:hover { background: #4338ca; }
         #peptopia-klimek-guide .card-count-badge {
@@ -626,10 +721,11 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             background: #22c55e; border-radius: 50%; min-width: 24px; height: 24px;
             font-size: 0.8rem; line-height: 1;
         }
+        /* PERMANENT: Stethoscope emoji circle — sized for legibility */
         #peptopia-klimek-guide .nurse-icon {
             display: inline-flex; align-items: center; justify-content: center;
-            background: #ddd6fe; border-radius: 50%; min-width: 1.3em; height: 1.3em;
-            font-size: 0.85em; line-height: 1; vertical-align: middle;
+            background: #ddd6fe; border-radius: 50%; min-width: 1.5em; height: 1.5em;
+            font-size: 0.95em; line-height: 1; vertical-align: middle; padding: 0.08em;
         }
         html.dark #peptopia-klimek-guide .nurse-icon { background: #7c3aed; }
         #peptopia-klimek-guide .home-card-btn.quiz-btn { background: #312e81; color: white; }
@@ -697,8 +793,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         #peptopia-klimek-guide .pdf-sidebar-items { overflow: hidden; padding: 0 0.25rem 0 1.2rem; }
         #peptopia-klimek-guide .pdf-sidebar-item {
             background: #312e81; color: white; border: 2px solid rgba(255,255,255,0.35);
-            padding: 0.25rem 0.45rem; border-radius: 0.35rem; font-size: 0.7rem; font-weight: 700;
-            margin: 0.15rem 0.1rem; cursor: pointer; display: flex; align-items: center; gap: 0.3rem;
+            padding: 0.3rem 0.5rem; border-radius: 0.35rem; font-size: 0.75rem; font-weight: 700;
+            margin: 0.15rem 0.1rem; cursor: pointer; display: flex; align-items: center; gap: 0.3rem; min-height: 30px;
             transition: all 0.15s; -webkit-tap-highlight-color: transparent; white-space: nowrap;
         }
         #peptopia-klimek-guide .pdf-sidebar-item:hover { background: white; color: #312e81; }
@@ -744,16 +840,16 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             #peptopia-klimek-guide .pdf-sidebar { width: 100%; min-width: unset; max-height: 180px; border-right: none; border-bottom: 1px solid rgba(59,130,246,0.25); transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease; }
             #peptopia-klimek-guide .pdf-sidebar.collapsed { width: 100%; min-width: unset; max-height: 0; padding: 0; opacity: 0; border-bottom-color: transparent; overflow: hidden; }
             #peptopia-klimek-guide .pdf-view { height: calc(100vh - 100px); height: calc(100dvh - 100px); }
-            #peptopia-klimek-guide .navbar-pdf-btn, #peptopia-klimek-guide .navbar-audio-btn, #peptopia-klimek-guide .navbar-lib-btn { font-size: 0.72rem; padding: 0.25rem 0.5rem; }
         }
     </style>
 
     <nav class="navbar">
-        <div class="nav-title" onclick="showHome()">Ace the NCLEX &#8212; 85 &amp; Done!</div>
+        <div class="nav-title" onclick="showHome()">NCLEX &#8212; 85 &amp; Done!</div>
         <div class="nav-main-btns" id="nav-main-btns">
             <button class="navbar-pdf-btn" id="pdf-nav-btn" onclick="showPDFs()">&#128218; Guides</button>
-            <button class="navbar-audio-btn" id="lectures-nav-btn" onclick="showLectures()">&#127911; Audio Lectures</button>
+            <button class="navbar-audio-btn" id="lectures-nav-btn" onclick="showLectures()">&#127911; Audio</button>
             <button class="navbar-lib-btn" id="lib-nav-btn" onclick="showFullExam()">&#128221; Full Exam</button>
+            <button class="navbar-lib-btn" id="progress-nav-btn" onclick="showProgress()">&#128202; Progress</button>
             <div class="nav-search-wrap" id="nav-search-wrap">
                 <input type="text" id="global-search" class="search-input" placeholder="&#128270; Search cards..." oninput="doGlobalSearch(this.value)">
             </div>
@@ -780,7 +876,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
                 <div class="quiz-hdr-sub" id="quiz-subtitle">Test your knowledge</div>
             </div>
             <div class="quiz-score-bar" id="quiz-score-bar">
-                <button class="qsb-jump-btn" onclick="showJumpModal()">&#128290; Jump To</button>
+                <button class="qsb-jump-btn" onclick="showJumpModal()">&#128290; Jump</button>
                 <span class="qsb-correct">&#10003; <span id="qsb-correct">0</span></span>
                 <span class="qsb-incorrect">&#10007; <span id="qsb-incorrect">0</span></span>
                 <span class="qsb-total">&#128202; <span id="qsb-answered">0</span>/<span id="qsb-total">0</span></span>
@@ -793,18 +889,18 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
                         <div class="q-num-badge" id="q-num-display">1</div>
                         <div class="q-text" id="q-text"></div>
                     </div>
-                    <div class="q-prompt">Select the best answer:</div>
+                    <!-- PERMANENT: "Select the best answer:" prompt removed per design spec — do not restore -->
                     <div class="q-options" id="q-options"></div>
                     <div class="q-rationale" id="q-rationale">
                         <div class="q-rat-hdr" id="q-rat-hdr"></div>
                         <div class="q-rat-body">
-                            <div class="q-rat-label">&#128218; Rationale:</div>
+                            <div class="q-rat-label">&#129488; Rationale:</div>
                             <div class="q-rat-text" id="q-rat-text"></div>
                         </div>
                     </div>
                 </div>
                 <div class="quiz-footer">
-                    <button class="q-next-btn" id="next-btn" style="display:none;" onclick="nextQuestion()">Next Question</button>
+                    <button class="q-next-btn" id="next-btn" style="display:none;" onclick="nextQuestion()">Next &#8594;</button>
                 </div>
             </div>
             <div id="quiz-completion" class="quiz-completion">
@@ -854,6 +950,15 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             </div>
         </div>
     </div>
+
+    <!-- ===== PROGRESS DASHBOARD (v3.0) ===== -->
+    <div id="progress-modal" class="progress-overlay" onclick="if(event.target===this)closeProgress()">
+        <div class="progress-box">
+            <button class="quiz-close-x" onclick="closeProgress()">&times;</button>
+            <div id="progress-content"></div>
+        </div>
+    </div>
+    <input type="file" id="progress-import-input" accept=".json" style="display:none">
 
     <div id="card-modal" class="card-overlay">
         <div class="card-modal">
@@ -910,7 +1015,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
 
         var GH_CDN = 'https://cdn.jsdelivr.net/gh/Peptopia-Health/bluebook-questions@main/';
         var GH_PAGES = 'https://peptopia-health.github.io/bluebook-questions/';
-        var CACHE_BUST = '?v=2.3';
+        var CACHE_BUST = '?v=3.0';
 
         fetch(GH_CDN + 'mnt_studydata.json' + CACHE_BUST)
             .then(function(r) {
@@ -928,8 +1033,81 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
                     '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
             });
 
-        var APP_VERSION = '2.3';
+        var APP_VERSION = '3.0';
         var QUIZ_COUNTS = { cardio:116, resp:112, neuro:100, gi:105, obpeds:136, endo:114, musc:103, psych:124, hemonc:112, integ:100, pharm:119, fund:120, gero:95, nutr:95, fullexam:341 };
+
+        /* ===== PROGRESS TRACKING ENGINE (v3.0) =====
+         * PERMANENT: Leitner spaced repetition with localStorage persistence.
+         * Data: per-question [box, consecutiveCorrect, totalAttempts, lastTimestamp]
+         * Boxes: 0=new, 1=learning, 2=reviewing, 3=known, 4=mastered
+         * Intervals: 0s, 1day, 3days, 7days, 14days */
+        var PROGRESS_KEY = 'nclex85_progress';
+        var LEITNER_INTERVALS = [0, 86400, 259200, 604800, 1209600];
+        var _ls = (function() { try { return window['local' + 'Storage']; } catch(e) { return null; } })();
+        var _storageOK = false;
+        try { if (_ls) { _ls.setItem('__t', '1'); _ls.removeItem('__t'); _storageOK = true; } } catch(e) {}
+        var _memProgress = null;
+
+        function loadProgress() {
+            if (_storageOK) {
+                try { var r = _ls.getItem(PROGRESS_KEY); if (r) return JSON.parse(r); } catch(e) {}
+            }
+            if (_memProgress) return _memProgress;
+            return { v: 1, streak: { cur: 0, best: 0, last: '' }, sections: {} };
+        }
+        function saveProgress(d) {
+            if (_storageOK) { try { _ls.setItem(PROGRESS_KEY, JSON.stringify(d)); } catch(e) {} }
+            _memProgress = d;
+        }
+        function getSecProgress(d, key) {
+            if (!d.sections[key]) d.sections[key] = { q: {}, best: 0, runs: 0 };
+            return d.sections[key];
+        }
+        function recordAnswer(secKey, origIdx, isCorrect) {
+            var d = loadProgress();
+            var s = getSecProgress(d, secKey);
+            var q = s.q[origIdx] || [0, 0, 0, 0];
+            q[2]++; q[3] = Math.floor(Date.now() / 1000);
+            if (isCorrect) { q[1]++; q[0] = Math.min(q[0] + 1, 4); }
+            else { q[1] = 0; q[0] = 1; }
+            s.q[origIdx] = q;
+            saveProgress(d);
+        }
+        function recordQuizRun(secKey, pct) {
+            var d = loadProgress();
+            var s = getSecProgress(d, secKey);
+            s.runs++;
+            if (pct > s.best) s.best = pct;
+            var today = new Date().toISOString().slice(0, 10);
+            var st = d.streak;
+            if (st.last !== today) {
+                var yest = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+                st.cur = (st.last === yest) ? st.cur + 1 : 1;
+                st.last = today;
+                if (st.cur > st.best) st.best = st.cur;
+            }
+            saveProgress(d);
+        }
+        function smartOrder(questions, secKey) {
+            var d = loadProgress();
+            var s = getSecProgress(d, secKey);
+            var now = Math.floor(Date.now() / 1000);
+            var groups = { due: [], unseen: [], review: [], mastered: [] };
+            for (var i = 0; i < questions.length; i++) {
+                var q = questions[i];
+                var p = s.q[q.origIdx];
+                if (!p) { groups.unseen.push(q); continue; }
+                var interval = LEITNER_INTERVALS[Math.min(p[0], 4)];
+                var overdue = (now - p[3]) >= interval;
+                if (p[0] <= 1 && overdue) groups.due.push(q);
+                else if (overdue) groups.review.push(q);
+                else groups.mastered.push(q);
+            }
+            return shuffleArray(groups.due)
+                .concat(shuffleArray(groups.unseen))
+                .concat(shuffleArray(groups.review))
+                .concat(shuffleArray(groups.mastered));
+        }
 
         function buildBannerText() {
             var secs = Object.keys(contentData).length;
@@ -995,6 +1173,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         var origQuizData = null;
         var retestHistory = [];
         var quizSectionTitle = '';
+        var quizSectionKey = '';
         var cardIndex = 0;
         var ghQuizCache = {};
 
@@ -1131,7 +1310,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             document.getElementById('card-modal-body').innerHTML =
                 '<div class="card-topic">' + fmtText(item.topic) + '</div>' +
                 '<div class="card-section"><span class="card-label">Key Fact</span><div class="card-fact">' + fmtKeyPoint(item.fact) + '</div></div>' +
-                '<div class="card-section"><div class="card-alert-box"><span class="card-label" style="color:#b91c1c;">\u26A0\uFE0F Clinical Alert</span><div class="card-fact">' + sentenceBreak(fmtText(item.alert, { noCaut: true })) + '</div></div></div>';
+                '<div class="card-section"><div class="card-alert-box"><span class="card-label card-alert-label">\u26A0\uFE0F Clinical Alert</span><div class="card-fact">' + sentenceBreak(fmtText(item.alert, { noCaut: true })) + '</div></div></div>';
         }
 
         var shuffledDeck = null;
@@ -1272,7 +1451,9 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             var lists = {
                 'hl-drug': 'Magnesium Sulfate|Calcium Gluconate|Valproic Acid|Carbon Dioxide|Vitamin K|Digoxin|Nitroglycerin|Warfarin|Coumadin|Heparin|Enoxaparin|Lovenox|Morphine|Meperidine|Demerol|Fentanyl|Hydrocodone|Oxycodone|Codeine|Tramadol|Epinephrine|Norepinephrine|Dopamine|Dobutamine|Atropine|Adenosine|Amiodarone|Lidocaine|Metoprolol|Propranolol|Atenolol|Carvedilol|Lisinopril|Enalapril|Captopril|Losartan|Amlodipine|Nifedipine|Diltiazem|Verapamil|Furosemide|Lasix|Hydrochlorothiazide|HCTZ|Spironolactone|Aldactone|Mannitol|Phenytoin|Dilantin|Carbamazepine|Tegretol|Depakote|Levodopa|Sinemet|Lithium|Haloperidol|Haldol|Chlorpromazine|Thorazine|Clozapine|Risperidone|Olanzapine|Quetiapine|Diazepam|Valium|Lorazepam|Ativan|Midazolam|Flumazenil|Naloxone|Narcan|Insulin|Metformin|Glucagon|Levothyroxine|Synthroid|PTU|Propylthiouracil|Methimazole|Prednisone|Dexamethasone|Methylprednisolone|Solumedrol|Hydrocortisone|Aspirin|Acetaminophen|Tylenol|Ibuprofen|Ketorolac|Toradol|Gentamicin|Vancomycin|Penicillin|Amoxicillin|Ampicillin|Cephalosporin|Ciprofloxacin|Rifampin|Isoniazid|INH|Ethambutol|Pyrazinamide|Streptomycin|Methotrexate|Cyclophosphamide|Cisplatin|Doxorubicin|Vincristine|Tamoxifen|Protamine|Phytonadione|Propofol|Nitroprusside|Theophylline|Aminophylline|Albuterol|Ipratropium|Omeprazole|Pantoprazole|Ranitidine|Famotidine|Sucralfate|Metoclopramide|Ondansetron|Zofran|Lactulose|Docusate|Clopidogrel|Plavix|Alteplase|tPA|Streptokinase|Oxytocin|Pitocin|MgSO4|Terbutaline|Methylergonovine|Methergine|RhoGAM|Betamethasone|Surfactant|Acyclovir|Zidovudine|AZT|Fluoxetine|Sertraline|Paroxetine|Venlafaxine|Bupropion|Trazodone|Phenelzine|Disulfiram|Antabuse|Methadone|Donepezil|Aricept|Tacrine|Gabapentin|Succinylcholine|Epoetin|Filgrastim|Doxycycline|Azithromycin|Zithromax|Erythromycin|Tetracycline|Clindamycin|Metronidazole|Flagyl|Nitrofurantoin|Macrobid|Ceftriaxone|Rocephin|Cefazolin|Meropenem|Aztreonam|Fluconazole|Diflucan|Nystatin|Amphotericin B|Silver Sulfadiazine|Silvadene|Bacitracin|Mupirocin|Bactroban|Isotretinoin|Accutane|Colchicine|Allopurinol|Zyloprim|Tacrolimus|Cyclosporine|Mycophenolate|Azathioprine|Phenobarbital|Lamotrigine|Topiramate|Diphenhydramine|Benadryl|Promethazine|Phenergan|Hydroxyzine|Buspirone|Naltrexone|Vivitrol|Sumatriptan|Imitrex|Sildenafil|Tamsulosin|Finasteride|Misoprostol|Cytotec|Dinoprostone|Cervidil|Folic Acid|Ferrous Sulfate|Ticagrelor|Dabigatran|Pradaxa|Rivaroxaban|Xarelto|Apixaban|Eliquis|Benzoyl Peroxide|Tretinoin|Permethrin|Lindane|Crotamiton|Mafenide|Sulfasalazine|Mesalamine|Infliximab|Remicade|Rituximab|Interferon|Peginterferon|Rivastigmine|Exelon|Galantamine|Razadyne|Memantine|Namenda|Aripiprazole|Abilify|Ziprasidone|Geodon|Fluphenazine|Benztropine|Cogentin|Trihexyphenidyl|Artane|Levetiracetam|Keppra|Pregabalin|Lyrica|Baclofen|Dantrolene|Tizanidine|Loperamide|Imodium|Polyethylene Glycol|Psyllium|Senna|Bisacodyl|Glipizide|Glyburide|Pioglitazone|Acarbose|Liraglutide|Semaglutide|Desmopressin|Vasopressin|Alendronate|Fosamax|Risedronate|Raloxifene|Evista|Calcitonin|Teriparatide|Montelukast|Singulair|Fluticasone|Budesonide|Tiotropium|Spiriva|Guaifenesin|Cephalexin|Keflex|Dicloxacillin|Levofloxacin|Piperacillin|Tazobactam|Naproxen|Celecoxib|Celebrex|Indomethacin|Carboprost|Hemabate|Citalopram|Escitalopram|Duloxetine|Cymbalta|Mirtazapine|Amitriptyline|Nortriptyline|Doxepin|Imipramine|Clomipramine|Alprazolam|Xanax|Clonazepam|Klonopin|Chlordiazepoxide|Zolpidem|Ambien|Melatonin|Ramelteon|Rozerem|Methylphenidate|Ritalin|Amphetamine|Adderall|Atomoxetine|Strattera|Pancrelipase|Creon|Ursodiol|Cholestyramine|Atorvastatin|Lipitor|Simvastatin|Rosuvastatin|Crestor|Niacin|Gemfibrozil|Ezetimibe|Nitroglycerin Patch|Isosorbide|Hydralazine|Milrinone|Bivalirudin|Fondaparinux|Tenecteplase|Reteplase|Eptifibatide|Abciximab|Erythropoietin|Darbepoetin|Hydroxyurea|Leucovorin|Bevacizumab|Avastin|Trastuzumab|Herceptin|Imatinib|Gleevec|Bortezomib|Bleomycin|Paclitaxel|Carboplatin|Etoposide|Fluorouracil|Mercaptopurine|Thioguanine|Cytarabine|Neostigmine|Pyridostigmine|Mestinon|Edrophonium|Acetazolamide|Timolol|Latanoprost|Pilocarpine|Tropicamide|Ciprofloxacin Ophthalmic|Erythromycin Ophthalmic',
                 'hl-lyte': 'Potassium|Sodium|Calcium|Magnesium|Phosphorus|Phosphate|Chloride|Bicarbonate',
-                'hl-gas': 'Oxygen|O2|CO2'
+                'hl-gas': 'Oxygen|O2|CO2',
+                /* PERMANENT: hl-dx — Diseases, disorders, conditions, syndromes (neon fuchsia) */
+                'hl-dx': 'Myocardial Infarction|Heart Failure|Congestive Heart Failure|Coronary Artery Disease|Atrial Fibrillation|Ventricular Fibrillation|Ventricular Tachycardia|Cardiac Tamponade|Endocarditis|Pericarditis|Cardiomyopathy|Aortic Aneurysm|Deep Vein Thrombosis|Pulmonary Embolism|Hypertension|Hypotension|Cardiogenic Shock|Hypovolemic Shock|Septic Shock|Anaphylactic Shock|Neurogenic Shock|Stroke|CVA|TIA|Transient Ischemic Attack|Hemorrhagic Stroke|Ischemic Stroke|Meningitis|Encephalitis|Epilepsy|Seizure Disorder|Status Epilepticus|Multiple Sclerosis|Myasthenia Gravis|Guillain-Barre|Parkinsons Disease|Parkinson Disease|Alzheimers Disease|Alzheimer Disease|Dementia|Huntingtons Disease|Amyotrophic Lateral Sclerosis|ALS|Trigeminal Neuralgia|Bell Palsy|Bells Palsy|Hydrocephalus|Spina Bifida|Cerebral Palsy|Intracranial Pressure|Increased ICP|Autonomic Dysreflexia|Pneumonia|Tuberculosis|COPD|Chronic Obstructive Pulmonary Disease|Emphysema|Chronic Bronchitis|Asthma|Pneumothorax|Tension Pneumothorax|Hemothorax|Pleural Effusion|Pulmonary Edema|ARDS|Acute Respiratory Distress Syndrome|Respiratory Failure|Cystic Fibrosis|Lung Cancer|Sleep Apnea|Pulmonary Hypertension|Laryngeal Cancer|Epiglottitis|Croup|Bronchiolitis|Pertussis|RSV|Diabetes Mellitus|Type 1 Diabetes|Type 2 Diabetes|Diabetic Ketoacidosis|DKA|Hyperosmolar Hyperglycemic State|HHS|Hypoglycemia|Hyperglycemia|Hypothyroidism|Hyperthyroidism|Graves Disease|Hashimotos Thyroiditis|Thyroid Storm|Myxedema Coma|Cushings Syndrome|Cushings Disease|Addisons Disease|Addisonian Crisis|Pheochromocytoma|SIADH|Diabetes Insipidus|Hyperparathyroidism|Hypoparathyroidism|Metabolic Acidosis|Metabolic Alkalosis|Respiratory Acidosis|Respiratory Alkalosis|GERD|Gastroesophageal Reflux Disease|Peptic Ulcer Disease|Gastric Ulcer|Duodenal Ulcer|Crohns Disease|Ulcerative Colitis|Inflammatory Bowel Disease|IBD|Irritable Bowel Syndrome|IBS|Diverticulitis|Diverticulosis|Appendicitis|Peritonitis|Bowel Obstruction|Intestinal Obstruction|Paralytic Ileus|Hepatitis|Cirrhosis|Liver Failure|Hepatic Encephalopathy|Portal Hypertension|Esophageal Varices|Pancreatitis|Cholecystitis|Cholelithiasis|Celiac Disease|Colorectal Cancer|Gastric Cancer|Steatorrhea|Hiatal Hernia|Malabsorption|Acute Kidney Injury|Chronic Kidney Disease|Renal Failure|Nephrotic Syndrome|Nephritic Syndrome|Glomerulonephritis|Pyelonephritis|Urinary Tract Infection|UTI|Kidney Stones|Nephrolithiasis|Urolithiasis|Polycystic Kidney Disease|Renal Stenosis|Nephrosclerosis|Hydronephrosis|Bladder Cancer|Prostate Cancer|Benign Prostatic Hyperplasia|BPH|Anemia|Iron Deficiency Anemia|Sickle Cell Disease|Sickle Cell Anemia|Sickle Cell Crisis|Thalassemia|Polycythemia Vera|Hemophilia|Thrombocytopenia|DIC|Disseminated Intravascular Coagulation|Leukemia|Lymphoma|Hodgkins Lymphoma|Non-Hodgkins Lymphoma|Multiple Myeloma|Neutropenia|Pancytopenia|Aplastic Anemia|Hemolytic Anemia|Pernicious Anemia|Osteoarthritis|Rheumatoid Arthritis|Osteoporosis|Osteomyelitis|Gout|Lupus|Systemic Lupus Erythematosus|SLE|Scleroderma|Fibromyalgia|Muscular Dystrophy|Scoliosis|Fracture|Hip Fracture|Compartment Syndrome|Rhabdomyolysis|Fat Embolism|Amputation|Carpal Tunnel Syndrome|Herniated Disc|Spinal Cord Injury|Depression|Major Depressive Disorder|Bipolar Disorder|Schizophrenia|Anxiety Disorder|Panic Disorder|PTSD|Post-Traumatic Stress Disorder|OCD|Obsessive-Compulsive Disorder|Anorexia Nervosa|Bulimia Nervosa|Substance Abuse|Alcohol Withdrawal|Delirium Tremens|Neuroleptic Malignant Syndrome|NMS|Serotonin Syndrome|Tardive Dyskinesia|Lithium Toxicity|Suicidal Ideation|Psychosis|Mania|Catatonia|Burns|Burn Injury|Thermal Burns|Chemical Burns|Electrical Burns|Skin Cancer|Melanoma|Basal Cell Carcinoma|Squamous Cell Carcinoma|Psoriasis|Eczema|Dermatitis|Contact Dermatitis|Cellulitis|Herpes Zoster|Shingles|Herpes Simplex|Impetigo|Scabies|Pediculosis|Pressure Ulcer|Pressure Injury|Wound Dehiscence|Stevens-Johnson Syndrome|Toxic Epidermal Necrolysis|Preeclampsia|Eclampsia|HELLP Syndrome|Placenta Previa|Abruptio Placentae|Placental Abruption|Gestational Diabetes|Ectopic Pregnancy|Hyperemesis Gravidarum|Preterm Labor|Postpartum Hemorrhage|Amniotic Fluid Embolism|Uterine Rupture|Mastitis|Rh Incompatibility|Kernicterus|Hyperbilirubinemia|Neonatal Jaundice|Respiratory Distress Syndrome|Necrotizing Enterocolitis|Fetal Alcohol Syndrome|Cleft Palate|Cleft Lip|Clubfoot|Pyloric Stenosis|Intussusception|Hirschsprung Disease|Wilms Tumor|Retinoblastoma|Kawasaki Disease|Reye Syndrome|Down Syndrome|Trisomy 21|Turner Syndrome|Klinefelter Syndrome|Phenylketonuria|PKU|Congenital Heart Defect|Tetralogy of Fallot|Coarctation of the Aorta|Patent Ductus Arteriosus|PDA|Ventricular Septal Defect|VSD|Atrial Septal Defect|ASD|Cataracts|Glaucoma|Macular Degeneration|Retinal Detachment|Conjunctivitis|Otitis Media|Menieres Disease|Otosclerosis|Mastoiditis|HIV|AIDS|Sepsis|MRSA|C. diff|Clostridium Difficile|Clostridioides Difficile|Malignant Hyperthermia|Hypothermia|Hyperthermia|Heat Stroke|Frostbite|Anaphylaxis|Organ Rejection|Graft vs Host Disease|Tumor Lysis Syndrome|Superior Vena Cava Syndrome|Spinal Shock|Obstructive Shock|Distributive Shock|Cardiac Arrest|Asystole|Pulseless Electrical Activity|PEA|LVH|CHF|MI|PE|DVT|STEMI|NSTEMI|AFib|VFib|VTach|SVT|CAD|PAD|AAA|AKI|CKD|ESRD|AML|ALL|CML|CLL|PVD|ICP|LOC|BKA|AKA|TKR|THR|TURP|CABG|PCI|EPS|PPH'
             };
             for (var cls in lists) {
                 lists[cls].split('|').forEach(function(t) {
@@ -1290,6 +1471,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         var _warnRx = /\b(Never|Danger|Fatal|Lethal|Contraindicated|Deadly|Life-threatening|Toxicity)\b/gi;
         var _cautRx = /\b(Avoid|Caution|Watch for|Risk of|Do not)\b/gi;
         var _nursRx = /\b(Tx:|Hold if|Elevate|Notify|Administer|Position)\b/gi;
+        /* PERMANENT: Lethal conditions — precede with ☠ enlarged 50% */
+        var _lethalRx = /\b(IV push Potassium|IV potassium push|rapid potassium infusion|potassium IV push|cardiac arrest|respiratory arrest|fatal arrhythmia|fatal dysrhythmia|lethal arrhythmia|lethal dysrhythmia|asystole|ventricular fibrillation|VFib|pulseless VTach|brain herniation|herniation|tension pneumothorax|malignant hyperthermia|neuroleptic malignant syndrome|NMS|serotonin syndrome|anaphylaxis|anaphylactic shock|status epilepticus|DIC|disseminated intravascular coagulation|pulmonary embolism|amniotic fluid embolism|air embolism|fat embolism|septic shock|hemorrhagic shock|cardiac tamponade|aortic dissection|aortic rupture|uterine rupture|esophageal rupture|thyroid storm|myxedema coma|addisonian crisis|adrenal crisis|autonomic dysreflexia|eclampsia|HELLP syndrome|placental abruption|abruptio placentae|tumor lysis syndrome|superior vena cava syndrome|acute liver failure|fulminant hepatic failure|complete heart block|third-degree heart block|torsades de pointes|lithium toxicity|digitalis toxicity|digoxin toxicity|cyanide poisoning|organophosphate poisoning|magnesium toxicity|hyperkalemia|severe hyperkalemia|water intoxication|cerebral edema|Stevens-Johnson syndrome|toxic epidermal necrolysis|necrotizing fasciitis|meningococcemia|delirium tremens|rhabdomyolysis|compartment syndrome|cauda equina syndrome|bowel perforation|intestinal perforation|ruptured appendix|ruptured ectopic|ruptured aneurysm)\b/gi;
 
         function fmtText(t, opts) {
             if (!t) return '';
@@ -1297,6 +1480,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             var parts = t.split(/(<[^>]+>)/);
             for (var i = 0; i < parts.length; i++) {
                 if (parts[i].charAt(0) !== '<') {
+                    /* PERMANENT: Apply lethal ☠ icons BEFORE term highlighting so hl-dx can still style the matched terms */
+                    parts[i] = parts[i].replace(_lethalRx, '<span class="lethal-icon">\u2620</span> $&');
                     parts[i] = parts[i].replace(_termRx, function(m) {
                         var low = m.toLowerCase();
                         var c = _termMap[low];
@@ -1350,8 +1535,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             return fetch(url).then(function(r) {
                 if (!r.ok) throw new Error('HTTP ' + r.status);
                 return r.json().then(function(j) {
-                    var qs = (j.questions || []).map(function(item) {
-                        return { q: item.q, a: item.options || item.a, correct: item.correct, rationale: item.rationale };
+                    var qs = (j.questions || []).map(function(item, idx) {
+                        return { q: item.q, a: item.options || item.a, correct: item.correct, rationale: item.rationale, origIdx: idx };
                     });
                     ghQuizCache[sectionKey] = qs;
                     return qs;
@@ -1383,12 +1568,13 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             document.getElementById('q-options').innerHTML = '';
             document.getElementById('q-rationale').classList.remove('visible');
             document.getElementById('next-btn').style.display = 'none';
+            quizSectionKey = data.type;
             fetchGitHubQuiz(data.type).then(function(quizQs) {
                 if (quizQs.length === 0) {
                     document.getElementById('quiz-title').textContent = 'No questions available';
                     return;
                 }
-                currentQuizData = shuffleArray(quizQs.slice());
+                currentQuizData = smartOrder(quizQs.slice(), data.type);
                 document.getElementById('qsb-total').textContent = currentQuizData.length;
                 updateScoreBar();
                 showQuestion();
@@ -1409,12 +1595,13 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             document.getElementById('q-options').innerHTML = '';
             document.getElementById('q-rationale').classList.remove('visible');
             document.getElementById('next-btn').style.display = 'none';
+            quizSectionKey = 'fullexam';
             fetchGitHubQuiz('fullexam').then(function(quizQs) {
                 if (quizQs.length === 0) {
                     document.getElementById('quiz-title').textContent = 'No questions available';
                     return;
                 }
-                currentQuizData = shuffleArray(quizQs.slice());
+                currentQuizData = smartOrder(quizQs.slice(), 'fullexam');
                 document.getElementById('qsb-total').textContent = currentQuizData.length;
                 updateScoreBar();
                 showQuestion();
@@ -1430,6 +1617,9 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             document.getElementById('q-rationale').classList.remove('visible');
             document.getElementById('q-rationale').style.display = '';
             document.getElementById('next-btn').style.display = 'none';
+            /* Reset click-to-advance state */
+            var qCard = document.querySelector('.q-card');
+            if (qCard) { qCard.style.cursor = ''; qCard.removeAttribute('data-answered'); }
             var optHTML = '';
             for (var i = 0; i < item.a.length; i++) {
                 optHTML += '<button class="q-opt" onclick="checkAnswer(' + i + ', ' + item.correct + ')">' +
@@ -1438,6 +1628,47 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             }
             document.getElementById('q-options').innerHTML = optHTML;
             document.getElementById('quiz-modal').scrollTop = 0;
+        }
+
+        /* ===== RATIONALE FORMATTING HELPERS =====
+         * PERMANENT: Rationale text is split into one sentence per line (single-spaced).
+         * Key clinical terms from the correct answer are auto-bolded in rationale.
+         */
+        function formatRationale(text, correctAnswerText) {
+            var html = fmtText(text);
+            /* Split into sentences: break after . or ! or ? followed by a space and uppercase letter */
+            html = html.replace(/([.!?])\s+(?=[A-Z])/g, '$1<br>');
+            /* Bold key terms from the correct answer in the rationale */
+            if (correctAnswerText) {
+                var plain = correctAnswerText.replace(/<[^>]+>/g, '');
+                /* Extract multi-word clinical phrases (2+ words, 6+ chars total) and long single words (5+ chars) */
+                var phrases = [];
+                /* Try the full answer text minus leading articles */
+                var cleaned = plain.replace(/^(the|a|an)\s+/i, '').trim();
+                if (cleaned.length >= 4) phrases.push(cleaned);
+                /* Also grab individual significant words (5+ chars, not common) */
+                var skip = /^(which|about|after|before|could|would|should|their|there|these|those|where|while|other|under|above|being|during|through|because|between|without|within|patient|nurse|client|correct|answer|following|include|during|option)$/i;
+                var words = plain.split(/\s+/);
+                for (var w = 0; w < words.length; w++) {
+                    var wd = words[w].replace(/[^a-zA-Z'-]/g, '');
+                    if (wd.length >= 5 && !skip.test(wd)) phrases.push(wd);
+                }
+                /* Sort longest first so multi-word phrases match before single words */
+                phrases.sort(function(a, b) { return b.length - a.length; });
+                var used = {};
+                for (var p = 0; p < phrases.length; p++) {
+                    var ph = phrases[p];
+                    if (used[ph.toLowerCase()]) continue;
+                    used[ph.toLowerCase()] = true;
+                    /* Case-insensitive replace, but only outside existing HTML tags */
+                    var esc = ph.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    var rx = new RegExp('(?![^<]*>)\\b(' + esc + ')\\b', 'gi');
+                    var before = html;
+                    html = html.replace(rx, '<strong>$1</strong>');
+                    if (html !== before) break; /* Only bold the first matching phrase */
+                }
+            }
+            return html;
         }
 
         window.checkAnswer = function(selected, correct) {
@@ -1462,12 +1693,25 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             } else {
                 quizWrong++; hdr.className = 'q-rat-hdr incorrect'; hdr.innerHTML = '\u274C Incorrect'; playSound('wrong');
             }
-            document.getElementById('q-rat-text').innerHTML = fmtText(item.rationale);
+            var correctText = item.a[correct] || '';
+            document.getElementById('q-rat-text').innerHTML = formatRationale(item.rationale, correctText);
+            /* Record spaced-repetition progress */
+            var _origIdx = item.origIdx;
+            if (_origIdx !== undefined && quizSectionKey) {
+                recordAnswer(quizSectionKey, _origIdx, selected === correct);
+            }
             document.getElementById('q-rationale').classList.add('visible');
             updateScoreBar();
             var nextBtn = document.getElementById('next-btn');
-            nextBtn.style.display = 'block';
-            nextBtn.textContent = (quizIndex >= currentQuizData.length - 1) ? '\uD83D\uDCCA View Results' : 'Next Question \u2192';
+            nextBtn.style.display = 'inline-flex';
+            /* PERMANENT: Button text is "Next" (not "Next Question") per design spec */
+            nextBtn.textContent = (quizIndex >= currentQuizData.length - 1) ? '\uD83D\uDCCA Results' : 'Next \u2192';
+            /* Enable click-to-advance on the question card */
+            var qCard = document.querySelector('.q-card');
+            if (qCard) {
+                qCard.style.cursor = 'pointer';
+                qCard.setAttribute('data-answered', 'true');
+            }
             setTimeout(function() { nextBtn.scrollIntoView({ behavior: 'smooth', block: 'end' }); }, 100);
         };
 
@@ -1476,6 +1720,20 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             if (quizIndex < currentQuizData.length) { showQuestion(); }
             else { showQuizCompletion(); }
         };
+
+        /* PERMANENT: Click-to-advance — clicking on the question/answer area of the
+         * card after answering advances to the next question. Excludes the rationale
+         * section so users can read feedback without accidentally advancing. */
+        document.addEventListener('click', function(e) {
+            var qCard = document.querySelector('.q-card');
+            if (!qCard || qCard.getAttribute('data-answered') !== 'true') return;
+            if (!qCard.contains(e.target)) return;
+            /* Don't advance when clicking inside the rationale area */
+            if (e.target.closest('.q-rationale')) return;
+            /* Don't intercept clicks on answer option buttons */
+            if (e.target.closest('.q-opt')) return;
+            nextQuestion();
+        });
 
         function showQuizCompletion() {
             document.getElementById('quiz-question-area').style.display = 'none';
@@ -1537,6 +1795,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
                 document.getElementById('qc-retest').style.display = '';
             } else {
                 document.getElementById('qc-retest').style.display = 'none';
+            }
+            /* Record quiz run for progress dashboard */
+            if (quizSectionKey && answered > 0) {
+                recordQuizRun(quizSectionKey, pct);
             }
             document.getElementById('quiz-completion').classList.add('visible');
             document.getElementById('quiz-modal').scrollTop = 0;
@@ -1603,7 +1865,9 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
 
         window.resetQuiz = function() {
             if (isRetestMode && origQuizData) {
-                currentQuizData = shuffleArray(origQuizData.slice());
+                currentQuizData = quizSectionKey ? smartOrder(origQuizData.slice(), quizSectionKey) : shuffleArray(origQuizData.slice());
+            } else if (quizSectionKey && ghQuizCache[quizSectionKey]) {
+                currentQuizData = smartOrder(ghQuizCache[quizSectionKey].slice(), quizSectionKey);
             } else {
                 currentQuizData = shuffleArray(currentQuizData.slice());
             }
@@ -1958,17 +2222,17 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
                     if (matches.length >= 50) break;
                 }
                 if (matches.length === 0) {
-                    resultsDiv.innerHTML = '<p style="text-align:center; opacity:0.6; padding:1rem;">No cards found for &ldquo;' + query.replace(/</g,'&lt;') + '&rdquo;</p>';
+                    resultsDiv.innerHTML = '<p style="text-align:center; opacity:0.6; padding:1rem; color:var(--slate-900);">No cards found for &ldquo;' + query.replace(/</g,'&lt;') + '&rdquo;</p>';
                 } else {
-                    var html = '<p style="font-size:0.85rem; opacity:0.7; margin-bottom:0.5rem;">' + matches.length + (matches.length >= 50 ? '+' : '') + ' results</p>';
+                    var html = '<p style="font-size:0.85rem; opacity:0.7; margin-bottom:0.5rem; color:var(--slate-900);">' + matches.length + (matches.length >= 50 ? '+' : '') + ' results</p>';
                     for (var m = 0; m < matches.length; m++) {
                         var item = matches[m];
                         var plainFact = item.card.fact.replace(/<[^>]*>/g, '');
                         if (plainFact.length > 100) plainFact = plainFact.substring(0, 100) + '...';
                         html += '<div class="search-result-item" '
                             + 'onclick="document.getElementById(\'global-search\').value=\'\'; doGlobalSearch(\'\'); switchTab(\'' + item.section + '\'); openCards(' + item.cardIdx + ');">'
-                            + '<div style="font-weight:600; font-size:0.95rem;">' + item.emoji + ' ' + item.card.topic + '</div>'
-                            + '<div style="font-size:0.82rem; opacity:0.7;">' + item.sectionTitle + ' &bull; ' + plainFact + '</div></div>';
+                            + '<div style="font-weight:600; font-size:0.95rem; color:var(--slate-900);">' + item.emoji + ' ' + item.card.topic + '</div>'
+                            + '<div style="font-size:0.82rem; opacity:0.7; color:var(--slate-900);">' + item.sectionTitle + ' &bull; ' + plainFact + '</div></div>';
                     }
                     resultsDiv.innerHTML = html;
                 }
@@ -2005,6 +2269,221 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             }, { passive: true });
         })();
         /* ===== END KEYBOARD & TOUCH ===== */
+
+        /* ===== PROGRESS DASHBOARD ===== */
+        var SECTION_LABELS = {};
+        var allKeys = Object.keys(contentData);
+        for (var si = 0; si < allKeys.length; si++) {
+            SECTION_LABELS[allKeys[si]] = contentData[allKeys[si]].title;
+        }
+        SECTION_LABELS.fullexam = 'Full Exam';
+
+        window.showProgress = function() {
+            renderProgressDashboard();
+            document.getElementById('progress-modal').style.display = 'block';
+        };
+        window.closeProgress = function() {
+            document.getElementById('progress-modal').style.display = 'none';
+        };
+
+        function renderProgressDashboard() {
+            var d = loadProgress();
+            var now = Date.now();
+            /* Aggregate stats */
+            var totalQ = 0, totalSeen = 0, totalMastered = 0, totalCorrect = 0, totalAttempts = 0;
+            var sectionKeys = Object.keys(QUIZ_COUNTS);
+            for (var i = 0; i < sectionKeys.length; i++) {
+                var sk = sectionKeys[i];
+                var cnt = QUIZ_COUNTS[sk];
+                totalQ += cnt;
+                var sec = d.sections[sk];
+                if (!sec) continue;
+                var qKeys = Object.keys(sec.q);
+                totalSeen += qKeys.length;
+                for (var j = 0; j < qKeys.length; j++) {
+                    var p = sec.q[qKeys[j]];
+                    if (p[0] >= 4) totalMastered++;
+                    totalAttempts += p[2];
+                    totalCorrect += p[1]; /* consecutiveCorrect is a proxy but let's use totalAttempts - we need actual correct count */
+                }
+            }
+            /* Recalculate totalCorrect from actual data: count questions where box > 0 or correct on last attempt */
+            /* Actually, let's compute accuracy from the per-question data. We don't track lifetime correct count directly, */
+            /* so we'll estimate accuracy from (totalSeen questions that have box >= 1 means they got at least one right recently) */
+            /* Better approach: just compute from quiz run data */
+            var totalRuns = 0, bestScoreSum = 0, bestScoreCount = 0;
+            for (var ri = 0; ri < sectionKeys.length; ri++) {
+                var sec2 = d.sections[sectionKeys[ri]];
+                if (!sec2) continue;
+                totalRuns += (sec2.runs || 0);
+                if (sec2.best !== undefined && sec2.best > 0) {
+                    bestScoreSum += sec2.best;
+                    bestScoreCount++;
+                }
+            }
+            var avgBest = bestScoreCount > 0 ? Math.round(bestScoreSum / bestScoreCount) : 0;
+
+            /* Readiness calculation: weighted by mastery distribution */
+            var readinessPct = totalQ > 0 ? Math.round((totalMastered / totalQ) * 100) : 0;
+            /* Alternative readiness: combination of seen% and mastery */
+            var seenPct = totalQ > 0 ? Math.round((totalSeen / totalQ) * 100) : 0;
+            var combinedReadiness = Math.round(seenPct * 0.4 + readinessPct * 0.6);
+            if (combinedReadiness > 100) combinedReadiness = 100;
+
+            var readinessColor = combinedReadiness >= 85 ? '#4ade80' : combinedReadiness >= 60 ? '#facc15' : combinedReadiness >= 30 ? '#fb923c' : '#f87171';
+            var readinessLabel = combinedReadiness >= 85 ? 'NCLEX Ready!' : combinedReadiness >= 60 ? 'Getting Close' : combinedReadiness >= 30 ? 'Keep Going' : 'Just Starting';
+
+            /* Streak display */
+            var streakEmoji = d.streak.cur >= 7 ? '\uD83D\uDD25' : d.streak.cur >= 3 ? '\u2B50' : '\uD83D\uDCAA';
+            var streakText = d.streak.cur + '-day streak';
+            var bestStreakText = 'Best: ' + d.streak.best + ' days';
+
+            var html = '<h2 class="pd-title">\uD83D\uDCCA Progress Dashboard</h2>';
+
+            /* Readiness Meter */
+            html += '<div class="pd-readiness">' +
+                '<div class="pd-readiness-label" style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:0.5rem;">' +
+                '<span style="font-size:1.1rem; font-weight:700; color:' + readinessColor + ';">' + readinessLabel + '</span>' +
+                '<span style="font-size:1.5rem; font-weight:800; color:' + readinessColor + ';">' + combinedReadiness + '%</span></div>' +
+                '<div class="pd-meter"><div class="pd-meter-fill" style="width:' + combinedReadiness + '%; background:' + readinessColor + ';"></div></div></div>';
+
+            /* Stats Row */
+            html += '<div class="pd-stats">' +
+                '<div class="pd-stat"><span class="pd-stat-num">' + totalSeen + '</span><span class="pd-stat-lbl">Seen</span></div>' +
+                '<div class="pd-stat"><span class="pd-stat-num">' + (totalQ - totalSeen) + '</span><span class="pd-stat-lbl">Unseen</span></div>' +
+                '<div class="pd-stat"><span class="pd-stat-num">' + totalMastered + '</span><span class="pd-stat-lbl">Mastered</span></div>' +
+                '<div class="pd-stat"><span class="pd-stat-num">' + totalRuns + '</span><span class="pd-stat-lbl">Runs</span></div>' +
+                '<div class="pd-stat"><span class="pd-stat-num">' + avgBest + '%</span><span class="pd-stat-lbl">Avg Best</span></div>' +
+                '<div class="pd-stat"><span class="pd-stat-num">' + streakEmoji + ' ' + d.streak.cur + '</span><span class="pd-stat-lbl">Streak</span></div>' +
+                '</div>';
+
+            /* Section Cards Grid */
+            html += '<div class="pd-grid">';
+            for (var g = 0; g < sectionKeys.length; g++) {
+                var key = sectionKeys[g];
+                var label = SECTION_LABELS[key] || key;
+                var emoji = sectionEmojis[key] || '\uD83D\uDCCB';
+                var total = QUIZ_COUNTS[key];
+                var sec3 = d.sections[key];
+                var seen = 0, mastered = 0, learning = 0, due = 0;
+                if (sec3) {
+                    var qks = Object.keys(sec3.q);
+                    seen = qks.length;
+                    for (var qi = 0; qi < qks.length; qi++) {
+                        var qp = sec3.q[qks[qi]];
+                        if (qp[0] >= 4) mastered++;
+                        else if (qp[0] >= 1) learning++;
+                        /* Check if due for review */
+                        var interval = LEITNER_INTERVALS[qp[0]] || 0;
+                        if (qp[3] && (now - qp[3] >= interval * 1000) && qp[0] < 4) due++;
+                    }
+                }
+                var pctSeen = total > 0 ? Math.round((seen / total) * 100) : 0;
+                var pctMastered = total > 0 ? Math.round((mastered / total) * 100) : 0;
+                var bestStr = (sec3 && sec3.best !== undefined) ? sec3.best + '%' : '\u2014';
+                var runsStr = (sec3 && sec3.runs) ? sec3.runs : 0;
+
+                html += '<div class="pd-card">' +
+                    '<div class="pd-card-hdr">' + emoji + ' ' + label + '</div>' +
+                    '<div class="pd-card-body">' +
+                    '<div style="display:flex; justify-content:space-between; font-size:0.8rem; margin-bottom:0.25rem;">' +
+                    '<span>' + seen + '/' + total + ' seen</span>' +
+                    '<span style="color:#4ade80;">' + mastered + ' mastered</span></div>' +
+                    '<div class="pd-bar"><div class="pd-bar-fill pd-bar-mastered" style="width:' + pctMastered + '%;"></div>' +
+                    '<div class="pd-bar-fill pd-bar-seen" style="width:' + (pctSeen - pctMastered) + '%;"></div></div>' +
+                    '<div style="display:flex; justify-content:space-between; font-size:0.75rem; margin-top:0.3rem; opacity:0.7;">' +
+                    '<span>' + learning + ' learning</span>' +
+                    '<span>' + due + ' due</span>' +
+                    '<span>Best: ' + bestStr + '</span>' +
+                    '<span>' + runsStr + ' runs</span></div>' +
+                    '</div></div>';
+            }
+            html += '</div>';
+
+            /* Streak & Best Streak info */
+            html += '<div style="text-align:center; margin:1rem 0 0.5rem; font-size:0.85rem; opacity:0.7;">' +
+                streakEmoji + ' ' + streakText + ' &nbsp;\u2022&nbsp; ' + bestStreakText + '</div>';
+
+            /* Action Buttons */
+            html += '<div class="pd-actions">' +
+                '<button class="pd-btn pd-btn-export" onclick="exportProgress()">\uD83D\uDCE4 Export</button>' +
+                '<button class="pd-btn pd-btn-import" onclick="triggerImport()">\uD83D\uDCE5 Import</button>' +
+                '<button class="pd-btn pd-btn-reset" onclick="confirmResetProgress()">\uD83D\uDDD1\uFE0F Reset</button>' +
+                '</div>';
+
+            /* Reset Confirmation (hidden by default) */
+            html += '<div id="pd-reset-confirm" class="pd-confirm" style="display:none;">' +
+                '<p style="margin-bottom:0.75rem; font-size:0.95rem;">Are you sure? This erases all progress data permanently.</p>' +
+                '<div style="display:flex; gap:0.5rem; justify-content:center;">' +
+                '<button class="pd-btn pd-btn-export" onclick="doResetProgress()">Yes, Reset</button>' +
+                '<button class="pd-btn pd-btn-import" onclick="cancelResetProgress()">Cancel</button>' +
+                '</div></div>';
+
+            document.getElementById('progress-content').innerHTML = html;
+        }
+
+        window.exportProgress = function() {
+            var d = loadProgress();
+            var json = JSON.stringify(d, null, 2);
+            var blob = new Blob([json], { type: 'application/json' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = 'nclex85_progress_' + new Date().toISOString().slice(0, 10) + '.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        };
+
+        window.triggerImport = function() {
+            document.getElementById('progress-import-input').click();
+        };
+
+        document.getElementById('progress-import-input').addEventListener('change', function(e) {
+            var file = e.target.files[0];
+            if (!file) return;
+            var reader = new FileReader();
+            reader.onload = function(ev) {
+                try {
+                    var imported = JSON.parse(ev.target.result);
+                    if (!imported.v || !imported.sections) {
+                        showProgressToast('Invalid progress file.', 'error');
+                        return;
+                    }
+                    saveProgress(imported);
+                    renderProgressDashboard();
+                    showProgressToast('Progress imported successfully!', 'success');
+                } catch (err) {
+                    showProgressToast('Failed to parse file.', 'error');
+                }
+            };
+            reader.readAsText(file);
+            e.target.value = '';
+        });
+
+        window.confirmResetProgress = function() {
+            document.getElementById('pd-reset-confirm').style.display = 'block';
+        };
+        window.cancelResetProgress = function() {
+            document.getElementById('pd-reset-confirm').style.display = 'none';
+        };
+        window.doResetProgress = function() {
+            var fresh = { v: 1, streak: { cur: 0, best: 0, last: null }, sections: {} };
+            saveProgress(fresh);
+            renderProgressDashboard();
+            showProgressToast('All progress reset.', 'success');
+        };
+
+        function showProgressToast(msg, type) {
+            var toast = document.createElement('div');
+            toast.style.cssText = 'position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);padding:0.75rem 1.5rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;z-index:3000;animation:fadeIn 0.3s;';
+            toast.style.background = type === 'error' ? '#dc2626' : '#059669';
+            toast.style.color = '#fff';
+            toast.textContent = msg;
+            document.body.appendChild(toast);
+            setTimeout(function() { toast.style.opacity = '0'; toast.style.transition = 'opacity 0.4s'; }, 2000);
+            setTimeout(function() { toast.remove(); }, 2500);
+        }
+        /* ===== END PROGRESS DASHBOARD ===== */
 
         showHome();
 
