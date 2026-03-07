@@ -249,6 +249,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             background: var(--white); width: 100%; max-width: 560px; border-radius: 0.75rem;
             display: flex; flex-direction: column;
             box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+            overflow: hidden;
         }
         @media (min-width: 640px) {
             #peptopia-klimek-guide .card-overlay { align-items: center; padding: 1.5rem; }
@@ -259,17 +260,33 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             padding: 0.4rem 0.85rem; color: white; font-weight: 800; font-size: 0.82rem;
             display: flex; justify-content: space-between; align-items: flex-start;
             border-radius: 0.75rem 0.75rem 0 0;
-            background: #0f0f0f !important;
         }
         @media (min-width: 640px) { #peptopia-klimek-guide .card-modal-header { border-radius: 1rem 1rem 0 0; } }
         #peptopia-klimek-guide .card-modal-header .card-header-left { display: flex; flex-direction: column; gap: 0.05rem; min-width: 0; flex: 1; }
         #peptopia-klimek-guide .card-modal-header .card-header-sub { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.55); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         #peptopia-klimek-guide .card-modal-header .card-header-drug { font-size: 1.1rem; font-weight: 800; color: #fff; line-height: 1.25; }
+        #peptopia-klimek-guide .card-modal-header .card-header-actions { display: flex; align-items: center; gap: 0.3rem; flex-shrink: 0; margin-top: 0.1rem; }
+        #peptopia-klimek-guide .card-flag-btn {
+            background: none; border: none; cursor: pointer; font-size: 1.15rem; line-height: 1; padding: 0.1rem;
+            opacity: 0.45; transition: opacity 0.15s, transform 0.15s; -webkit-tap-highlight-color: transparent;
+        }
+        #peptopia-klimek-guide .card-flag-btn:hover { opacity: 0.8; }
+        #peptopia-klimek-guide .card-flag-btn.flagged { opacity: 1; transform: scale(1.15); }
+        #peptopia-klimek-guide .flagged-banner {
+            background: linear-gradient(135deg, #78350f 0%, #451a03 100%); border: 2px solid #f59e0b;
+            border-radius: 0.75rem; padding: 0.7rem 1rem; margin: 0.5rem 1rem 0.25rem; cursor: pointer;
+            display: none; align-items: center; gap: 0.6rem; transition: transform 0.15s;
+        }
+        #peptopia-klimek-guide .flagged-banner:hover { transform: scale(1.01); }
+        #peptopia-klimek-guide .flagged-banner-icon { font-size: 1.4rem; }
+        #peptopia-klimek-guide .flagged-banner-text { color: #fef3c7; font-weight: 700; font-size: 0.9rem; flex: 1; }
+        #peptopia-klimek-guide .flagged-banner-count { background: #f59e0b; color: #451a03; font-weight: 800; border-radius: 999px; padding: 0.15rem 0.6rem; font-size: 0.8rem; }
         #peptopia-klimek-guide .card-modal-header .card-close-btn {
-            background: none; border: none; color: rgba(255,255,255,0.7); font-size: 1.4rem; cursor: pointer; padding: 0 0.15rem; line-height: 1; flex-shrink: 0; margin-top: 0.1rem;
+            background: none; border: none; color: rgba(255,255,255,0.7); font-size: 1.4rem; cursor: pointer; padding: 0 0.15rem; line-height: 1;
         }
         #peptopia-klimek-guide .card-modal-header .card-close-btn:hover { color: #fff; }
-        #peptopia-klimek-guide .card-modal-body { padding: 0.5rem 1.1rem 0.85rem; min-height: 240px; }
+        #peptopia-klimek-guide .card-modal-body { padding: 0.5rem 1.1rem 0.4rem; }
+        #peptopia-klimek-guide .card-modal-body .card-section:last-child { margin-bottom: 0; }
         #peptopia-klimek-guide .deck-end-prompt {
             background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
             border-top: 2px solid #22c55e; padding: 0.85rem 1rem;
@@ -302,13 +319,13 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         #peptopia-klimek-guide .card-modal-body .card-fact { font-size: 0.95rem; line-height: 1.35; color: var(--slate-900); }
         html.dark #peptopia-klimek-guide .card-modal-body .card-fact { color: #e2e8f0; }
         #peptopia-klimek-guide .card-modal-body .card-alert-box {
-            background: #fff7ed; border-left: 5px solid #ea580c; padding: 0.75rem; border-radius: 0.25rem;
+            background: #fff7ed; border-left: 5px solid #ea580c; padding: 0.5rem 0.75rem; border-radius: 0.25rem;
         }
         html.dark #peptopia-klimek-guide .card-modal-body .card-alert-box {
             background: #431407; border: 1px solid rgba(251,146,60,0.2); border-left: 5px solid #fb923c;
         }
-        #peptopia-klimek-guide .card-alert-label { color: #ea580c; font-weight: 800; }
-        html.dark #peptopia-klimek-guide .card-alert-label { color: #fb923c; }
+        #peptopia-klimek-guide .card-modal-body .card-label.card-alert-label { color: #ea580c; font-weight: 800; font-size: 0.75rem; }
+        html.dark #peptopia-klimek-guide .card-modal-body .card-label.card-alert-label { color: #fb923c; }
         #peptopia-klimek-guide .card-modal-body .card-alert-box .card-fact { font-size: 0.9rem; line-height: 1.35; }
         #peptopia-klimek-guide .card-nav {
             display: flex; justify-content: center; align-items: center;
@@ -978,6 +995,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         #peptopia-klimek-guide .card-modal-header.bg-cyan { background-color: var(--cyan-500); }
         #peptopia-klimek-guide .card-modal-header.bg-lime { background-color: var(--lime-500); }
         #peptopia-klimek-guide .card-modal-header.bg-green { background-color: var(--green-500); }
+        #peptopia-klimek-guide .card-modal-header.bg-black { background-color: #0f0f0f; }
         #peptopia-klimek-guide .search-input {
             width: 100%; padding: 0.3rem 0.4rem; font-size: 16px; border-radius: 0.35rem;
             border: 2px solid rgba(255,255,255,0.5); background: #312e81; color: #ffffff;
@@ -1513,12 +1531,15 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
 
     <script>
     (function() {
+        /* Global error recovery */
+        window.onerror = function(msg, src, line) { console.log('ERR L' + line + ': ' + msg); return true; };
+        window.onunhandledrejection = function(ev) { ev.preventDefault(); console.log('Unhandled promise: ' + (ev.reason || '')); };
         var loadingEl = document.getElementById('home-dashboard');
-        loadingEl.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-900);font-weight:600;">Loading study data...</div>';
+        if (loadingEl) loadingEl.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-900);font-weight:600;">Loading study data...</div>';
 
         var GH_CDN = 'https://cdn.jsdelivr.net/gh/Peptopia-Health/NCLEX@main/';
         var GH_PAGES = 'https://peptopia-health.github.io/NCLEX/';
-        var CACHE_BUST = '?v=3.7';
+        var CACHE_BUST = '?v=3.9';
 
         fetch(GH_CDN + 'mnt_studydata.json' + CACHE_BUST)
             .then(function(r) {
@@ -1597,6 +1618,37 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         function getSecProgress(d, key) {
             if (!d.sections[key]) d.sections[key] = { q: {}, best: 0, runs: 0 };
             return d.sections[key];
+        }
+        /* ===== CARD FLAGGING / BOOKMARKING ===== */
+        function getFlagKey(secKey, idx) { return secKey + ':' + idx; }
+        function loadFlags() { var d = loadProgress(); return d.flags || {}; }
+        function isCardFlagged(secKey, idx) { var f = loadFlags(); return !!f[getFlagKey(secKey, idx)]; }
+        function toggleFlag(secKey, idx) {
+            var d = loadProgress();
+            if (!d.flags) d.flags = {};
+            var k = getFlagKey(secKey, idx);
+            if (d.flags[k]) { delete d.flags[k]; } else { d.flags[k] = 1; }
+            saveProgress(d);
+            return !!d.flags[k];
+        }
+        function getFlaggedCards() {
+            var f = loadFlags(); var cards = []; var keys = Object.keys(f);
+            for (var i = 0; i < keys.length; i++) {
+                var parts = keys[i].split(':'); var sec = parts[0]; var idx = parseInt(parts[1], 10);
+                if (contentData[sec] && contentData[sec].data[idx]) {
+                    var item = contentData[sec].data[idx];
+                    cards.push({ item: item, secKey: sec, origIdx: idx, data: contentData[sec] });
+                }
+            }
+            return cards;
+        }
+        function updateFlaggedBanner() {
+            var el = document.getElementById('flagged-banner');
+            if (!el) return;
+            var count = Object.keys(loadFlags()).length;
+            el.style.display = count > 0 ? 'flex' : 'none';
+            var cEl = document.getElementById('flagged-count');
+            if (cEl) cEl.textContent = count;
         }
         /* ===== EXAM DATE — shared logic for Plan & Progress ===== */
         function getExamCountdown(d) {
@@ -1715,6 +1767,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
         loadingEl.innerHTML =
             '<div id="search-results" style="display:none; padding:0.5rem 1rem; max-width:700px; margin:0 auto;"></div>' +
             '<div id="home-grid">' +
+            '<div class="flagged-banner" id="flagged-banner" onclick="openFlaggedDeck()"><span class="flagged-banner-icon">\uD83D\uDEA9</span><span class="flagged-banner-text">Flagged for Review</span><span class="flagged-banner-count" id="flagged-count">0</span></div>' +
             '<div class="home-grid" id="home-grid-systems"></div>' +
             '<div class="home-grid-divider" id="home-grid-divider"></div>' +
             '<div class="home-grid" id="home-grid-foundations"></div>' +
@@ -2201,28 +2254,82 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             }
             return html;
         }
+        var _currentCardSecKey = '', _currentCardOrigIdx = -1;
         function renderCardInModal(item, data, idx, total) {
-            document.getElementById('card-modal-header').className = 'card-modal-header';
-            var subText = data.title;
-            if (item.drugClass && currentTab === 'workpharm') { subText += ' \u2022 ' + item.drugClass; }
-            var headerEl = document.getElementById('card-modal-header');
-            var drugName = fmtText(item.topic);
-            headerEl.innerHTML =
-                '<div class="card-header-left">' +
-                '<span class="card-header-sub">' + subText + '</span>' +
-                '<span class="card-header-drug">' + drugName + '</span></div>' +
-                '<button class="card-close-btn" onclick="closeCards()">&times;</button>';
-            document.getElementById('card-counter').textContent = (idx + 1) + ' / ' + total;
-            document.getElementById('card-prev-btn').disabled = (idx === 0);
-            document.getElementById('card-next-btn').disabled = (idx >= total - 1);
+            try {
+            if (!item || !data) return;
+            /* Track original index for flagging */
+            _currentCardSecKey = currentTab || '';
+            _currentCardOrigIdx = (data.data && data.data.indexOf) ? data.data.indexOf(item) : idx;
+            if (_currentCardOrigIdx < 0) _currentCardOrigIdx = idx;
+            var hdrColor = (currentTab === 'workpharm') ? 'bg-black' : (data.color || 'bg-gray');
+            var hdrEl = document.getElementById('card-modal-header');
+            if (hdrEl) {
+                hdrEl.className = 'card-modal-header ' + hdrColor;
+                var subText = data.title || '';
+                if (item.drugClass && currentTab === 'workpharm') { subText += ' \u2022 ' + item.drugClass; }
+                var isFlagged = isCardFlagged(_currentCardSecKey, _currentCardOrigIdx);
+                hdrEl.innerHTML =
+                    '<div class="card-header-left">' +
+                    '<span class="card-header-sub">' + subText + '</span>' +
+                    '<span class="card-header-drug">' + fmtText(item.topic || '') + '</span></div>' +
+                    '<div class="card-header-actions">' +
+                    '<button class="card-flag-btn' + (isFlagged ? ' flagged' : '') + '" onclick="toggleCardFlag()" title="Flag for review">\uD83D\uDEA9</button>' +
+                    '<button class="card-close-btn" onclick="closeCards()">&times;</button></div>';
+            }
+            var ctr = document.getElementById('card-counter');
+            if (ctr) ctr.textContent = (idx + 1) + ' / ' + total;
+            var prevBtn = document.getElementById('card-prev-btn');
+            if (prevBtn) prevBtn.disabled = (idx === 0);
+            var nextBtn = document.getElementById('card-next-btn');
+            if (nextBtn) nextBtn.disabled = (idx >= total - 1);
             var _factHasMulti = item.fact && (item.fact.indexOf('\u2022') !== -1 || item.fact.indexOf('\n') !== -1 || (item.fact.match(/;\s/g) || []).length >= 2 || (item.fact.match(/\.\s/g) || []).length >= 2);
             var _factLabel = _factHasMulti ? 'Key Facts' : 'Key Fact';
-            document.getElementById('card-modal-body').innerHTML =
-                '<div class="card-section"><span class="card-label card-keyfact-label">' + _factLabel + '</span><div class="card-fact">' + fmtKeyPoint(item.fact) + '</div></div>' +
-                '<div class="card-section"><div class="card-alert-box"><span class="card-label card-alert-label">\u26A0\uFE0F CLINICAL ALERT</span><div class="card-fact">' + sentenceBreak(fmtText(item.alert, { noCaut: true })) + '</div></div></div>';
-            /* Show end-of-deck quiz prompt on last card */
+            var bodyEl = document.getElementById('card-modal-body');
+            if (bodyEl) {
+                bodyEl.innerHTML =
+                    '<div class="card-section"><span class="card-label card-keyfact-label">' + _factLabel + '</span><div class="card-fact">' + fmtKeyPoint(item.fact || '') + '</div></div>' +
+                    '<div class="card-section"><div class="card-alert-box"><span class="card-label card-alert-label">\u26A0\uFE0F CLINICAL ALERT</span><div class="card-fact">' + sentenceBreak(fmtText(item.alert || '', { noCaut: true })) + '</div></div></div>';
+            }
             var prompt = document.getElementById('deck-end-prompt');
             if (prompt) { prompt.style.display = (idx >= total - 1) ? 'block' : 'none'; }
+            } catch(e) { console.log('renderCard error: ' + (e.message || e)); }
+        }
+        /* Toggle flag on currently displayed card */
+        window.toggleCardFlag = function() {
+            if (_currentCardOrigIdx < 0 || !_currentCardSecKey) return;
+            var nowFlagged = toggleFlag(_currentCardSecKey, _currentCardOrigIdx);
+            var btn = document.querySelector('.card-flag-btn');
+            if (btn) { if (nowFlagged) btn.classList.add('flagged'); else btn.classList.remove('flagged'); }
+            updateFlaggedBanner();
+        };
+        /* Open flagged cards as a browsable deck */
+        var _flaggedDeckCards = null;
+        window.openFlaggedDeck = function() {
+            var cards = getFlaggedCards();
+            if (cards.length === 0) return;
+            _flaggedDeckCards = cards;
+            cardIndex = 0;
+            shuffledDeck = null;
+            wpFilteredDeck = null;
+            /* Swap prev/next to use flagged-deck navigation */
+            if (!_origPrevCard) { _origPrevCard = window.prevCard; _origNextCard = window.nextCard; }
+            window.prevCard = flaggedPrev;
+            window.nextCard = flaggedNext;
+            var c = cards[0];
+            currentTab = c.secKey;
+            renderCardInModal(c.item, c.data, 0, cards.length);
+            document.getElementById('card-modal').style.display = 'flex';
+        };
+        /* Override prev/next to work with flagged deck when active */
+        var _origPrevCard, _origNextCard;
+        function flaggedPrev() {
+            if (!_flaggedDeckCards) { if (_origPrevCard) _origPrevCard(); return; }
+            if (cardIndex > 0) { cardIndex--; var c = _flaggedDeckCards[cardIndex]; currentTab = c.secKey; renderCardInModal(c.item, c.data, cardIndex, _flaggedDeckCards.length); }
+        }
+        function flaggedNext() {
+            if (!_flaggedDeckCards) { if (_origNextCard) _origNextCard(); return; }
+            if (cardIndex < _flaggedDeckCards.length - 1) { cardIndex++; var c = _flaggedDeckCards[cardIndex]; currentTab = c.secKey; renderCardInModal(c.item, c.data, cardIndex, _flaggedDeckCards.length); }
         }
         /* End-of-deck: launch quiz for current section/class */
         window.deckEndQuiz = function() {
@@ -2367,11 +2474,14 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             if (cardIndex < deck.length - 1) { cardIndex++; renderCardInModal(deck[cardIndex], data, cardIndex, deck.length); }
         };
         window.shuffleCards = function() {
+            try {
             var data = contentData[currentTab];
+            if (!data || !data.data) return;
             var src = wpFilteredDeck || data.data;
             shuffledDeck = shuffleArray(src.slice());
             cardIndex = 0;
             renderCardInModal(shuffledDeck[0], data, 0, shuffledDeck.length);
+            } catch(e) { console.log('shuffle error: ' + (e.message || e)); }
         };
         window.closeCards = function() {
             /* Exit fullscreen if active before closing */
@@ -2382,6 +2492,9 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             document.getElementById('card-modal').style.display = 'none';
             shuffledDeck = null;
             wpFilteredDeck = null;
+            _flaggedDeckCards = null;
+            /* Restore original nav handlers */
+            if (_origPrevCard) { window.prevCard = _origPrevCard; window.nextCard = _origNextCard; }
         };
 
         /* ── Fullscreen toggle for card slideshow ── */
@@ -2539,6 +2652,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
             document.getElementById('home-grid-foundations').innerHTML = foundationsHtml;
             document.getElementById('home-grid-workpharm').innerHTML = workpharmHtml;
             applyFilter();
+            updateFlaggedBanner();
         }
 
         /* Term highlighting: drugs, electrolytes, gases, icons */
@@ -2622,6 +2736,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
 
         function renderContent() {
             var data = contentData[currentTab];
+            if (!data || !data.data) return;
             var summary = sectionSummaries[currentTab] || '';
             var hlClass = 'hl-' + (colorBaseMap[data.color] || 'gray');
             var rows = '';
@@ -2715,7 +2830,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
          * which may not match QUIZ_COUNTS keys, breaking progress tracking */
         window.startQuiz = function() {
             var data = contentData[currentTab];
-            initQuizUI(data.title + ' Quiz', currentTab);
+            if (!data) return;
+            initQuizUI((data.title || 'Section') + ' Quiz', currentTab);
         };
 
         window.showFullExam = function() {
@@ -3027,7 +3143,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
                         pdfjsLib.GlobalWorkerOptions.workerSrc = URL.createObjectURL(b);
                         pdfJsLoaded = true;
                         cb();
-                    });
+                    }).catch(function(e) { console.log('PDF worker load failed: ' + (e.message || e)); });
             };
             document.head.appendChild(s);
         }
