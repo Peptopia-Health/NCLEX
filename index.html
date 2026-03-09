@@ -42,7 +42,7 @@ loadingEl.innerHTML =
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
 var APP_VERSION = '10.0';
-var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, fullexam:341 };
+var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:38, fullexam:341 };
 var GH_AUDIO = 'https://github.com/Peptopia/NCLEX/releases/download/audio-v1/';
 var PDF_AUDIO_MAP = {
 'Cardiovascular.pdf':  [{ title: 'Cardiovascular', src: GH_AUDIO + 'Cardiovascular.mp3' }],
@@ -233,7 +233,7 @@ document.getElementById('home-footer').textContent = buildBannerText();
 var sectionEmojis = {
 cardio: '\u2764\uFE0F', resp: '\uD83D\uDCA8', neuro: '\uD83E\uDDE0', gi: '\uD83C\uDF7D\uFE0F', obpeds: '\uD83D\uDC76',
 endo: '\u2697\uFE0F', musc: '\uD83E\uDDB4', psych: '\uD83E\uDDD8', hemonc: '\uD83E\uDE78', integ: '\uD83E\uDE79', pharm: '\uD83D\uDC8A',
-fund: '\uD83D\uDCCB', gero: '\uD83E\uDDD3', nutr: '\uD83E\uDD57', workpharm: '\uD83E\uDDEC'
+fund: '\uD83D\uDCCB', gero: '\uD83E\uDDD3', nutr: '\uD83E\uDD57', workpharm: '\uD83E\uDDEC', yellowfever: '\uD83E\uDDA0'
 };
 var sectionSummaries = {
 cardio: 'Heart failure, rhythms, shock, vascular disorders.',
@@ -261,7 +261,7 @@ var colorBaseMap = {
 };
 var GROUPS = {
 systems: ['cardio','resp','neuro','gi','endo','musc','psych','hemonc','integ'],
-foundations: ['workpharm','pharm','fund','gero','nutr','obpeds'],
+foundations: ['workpharm','pharm','fund','gero','nutr','obpeds','yellowfever'],
 workpharm: []
 };
 var activeFilter = 'all';
@@ -1032,6 +1032,13 @@ var fkey = GROUPS.foundations[fi];
 if (foundCards[fkey]) foundationsHtml += foundCards[fkey];
 }
 document.getElementById('home-grid-systems').innerHTML = '<div class="klimek-banner">\uD83C\uDFE5 Systems</div>' + systemsHtml;
+var yfCard = '<div class="home-card" data-section="yellowfever" style="animation-delay:' + (idx * 0.04) + 's; border-color:var(--amber-800);" onclick="launchYellowFeverQuiz()">' +
+'<div class="home-card-header" style="background-color:var(--amber-100); color:var(--amber-800);">' +
+'<span class="home-card-emoji">\uD83E\uDDA0</span><span>Yellow Fever</span></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:var(--amber-800);">Flavivirus transmission, Faget sign, toxic phase management, vaccination &amp; global prevention.</div></div>' +
+'<div class="home-card-footer">' +
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchYellowFeverQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span> 38 Questions</button></div></div>';
+foundationsHtml += yfCard;
 document.getElementById('home-grid-foundations').innerHTML = '<div class="klimek-banner">\uD83D\uDCD6 Foundations</div>' + foundationsHtml;
 document.getElementById('home-grid-workpharm').innerHTML = '';
 renderLectureCards();
@@ -1316,8 +1323,12 @@ initQuizUI((data.title || 'Section') + ' Quiz', currentTab);
 window.showFullExam = function() {
 initQuizUI('Full Exam', 'fullexam');
 };
+window.launchYellowFeverQuiz = function() {
+initQuizUI('Yellow Fever Quiz', 'yellowfever');
+};
 window.launchSection = function(key) {
 if (key === 'fullexam') { showFullExam(); return; }
+if (key === 'yellowfever') { launchYellowFeverQuiz(); return; }
 if (contentData[key]) { switchTab(key); setTimeout(startQuiz, 120); }
 };
 function showQuestion() {
@@ -2198,6 +2209,7 @@ for (var si = 0; si < allKeys.length; si++) {
 SECTION_LABELS[allKeys[si]] = contentData[allKeys[si]].title;
 }
 SECTION_LABELS.fullexam = 'Full Exam';
+SECTION_LABELS.yellowfever = 'Yellow Fever';
 window.showProgress = function() {
 renderProgressDashboard();
 document.getElementById('progress-modal').style.display = 'block';
@@ -2208,7 +2220,7 @@ document.getElementById('progress-modal').style.display = 'none';
 function renderProgressDashboard() {
 var d = loadProgress();
 var now = Date.now();
-var EXCLUDED_FROM_PCT = { workpharm: 1 };
+var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1 };
 var totalQ = 0, totalSeen = 0, totalMastered = 0;
 var sectionKeys = Object.keys(QUIZ_COUNTS);
 for (var i = 0; i < sectionKeys.length; i++) {
@@ -2416,7 +2428,7 @@ var d = loadProgress();
 var now = Date.now();
 var today = new Date();
 var studyKeys = Object.keys(QUIZ_COUNTS);
-var EXCLUDED_SP = { workpharm: 1 };
+var EXCLUDED_SP = { workpharm: 1, yellowfever: 1 };
 var totalQ = 0;
 var sections = [];
 for (var i = 0; i < studyKeys.length; i++) {
