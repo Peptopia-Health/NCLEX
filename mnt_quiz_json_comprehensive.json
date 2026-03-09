@@ -1,0 +1,1883 @@
+[
+  {
+    "q": "A patient's ABG shows pH 7.30 and HCO3 18 mEq/L. Using the Rule of B's, the nurse identifies this as which type of imbalance?",
+    "options": [
+      "Metabolic acidosis",
+      "Respiratory acidosis",
+      "Respiratory alkalosis",
+      "Metabolic alkalosis"
+    ],
+    "correct": 0,
+    "rationale": "Using the Rule of B's, when pH and bicarbonate are Both going in the same direction (both down), the imbalance is metabolic. Low pH (7.30) with low bicarb (18) = metabolic acidosis."
+  },
+  {
+    "q": "A patient's ABG shows pH 7.50 and HCO3 22 mEq/L. Using the Rule of B's, the nurse identifies this as which acid-base imbalance?",
+    "options": [
+      "Respiratory acidosis",
+      "Metabolic alkalosis",
+      "Metabolic acidosis",
+      "Respiratory alkalosis"
+    ],
+    "correct": 3,
+    "rationale": "When pH and bicarbonate are going in opposite directions (pH up, bicarb normal/not following), the imbalance is respiratory. Elevated pH (7.50) with normal bicarb = respiratory alkalosis."
+  },
+  {
+    "q": "A nurse observes deep, rapid Kussmaul respirations in a patient. Which acid-base imbalance is the ONLY condition that causes this breathing pattern?",
+    "options": [
+      "Metabolic alkalosis",
+      "Respiratory acidosis",
+      "Respiratory alkalosis",
+      "Metabolic acidosis"
+    ],
+    "correct": 3,
+    "rationale": "MACKussmaul \u2014 only Metabolic ACidosis causes Kussmaul respirations. The body compensates by hyperventilating to blow off excess CO2 and raise pH."
+  },
+  {
+    "q": "A patient has alkalosis. Using the principle 'as the pH goes, so goes my patient, except for potassium,' which electrolyte finding should the nurse anticipate?",
+    "options": [
+      "Hypokalemia",
+      "Hypocalcemia",
+      "Hypernatremia",
+      "Hyperkalemia"
+    ],
+    "correct": 0,
+    "rationale": "The exception to 'as the pH goes, so goes my patient' is potassium \u2014 it goes opposite. When pH is up (alkalosis), potassium goes down (hypokalemia). Everything else follows the pH direction."
+  },
+  {
+    "q": "A patient in acidosis is at risk for which cardiac rhythm change?",
+    "options": [
+      "Tachycardia",
+      "Atrial fibrillation",
+      "Bradycardia",
+      "Premature atrial contractions"
+    ],
+    "correct": 2,
+    "rationale": "Down = hyperkalemia, acidosis, bradycardia, constipation, flaccid. Acidosis causes everything to go 'down,' including heart rate (bradycardia)."
+  },
+  {
+    "q": "A patient has prolonged gastric suctioning. Which acid-base imbalance should the nurse anticipate?",
+    "options": [
+      "Respiratory acidosis",
+      "Respiratory alkalosis",
+      "Metabolic alkalosis",
+      "Metabolic acidosis"
+    ],
+    "correct": 2,
+    "rationale": "Prolonged gastric vomiting or suctioning removes hydrochloric acid from the stomach, leading to metabolic alkalosis. This is one of only two non-lung causes of alkalosis."
+  },
+  {
+    "q": "A patient on a mechanical ventilator develops respiratory alkalosis. Which action should the nurse take?",
+    "options": [
+      "Notify the provider that ventilator settings are too high",
+      "Suction the patient immediately",
+      "Increase the ventilator rate",
+      "Clamp the chest tube"
+    ],
+    "correct": 0,
+    "rationale": "Respiratory alkalosis on a ventilator means the patient is overventilating \u2014 the vent settings are too high and blowing off too much CO2. The settings need to be decreased."
+  },
+  {
+    "q": "A ventilator's high-pressure alarm sounds. Which cause should the nurse investigate first?",
+    "options": [
+      "Removed ventilator tubing",
+      "Kinked ventilator tubing or mucus plugging",
+      "Disconnected oxygen sensor",
+      "Deflated endotracheal tube cuff"
+    ],
+    "correct": 1,
+    "rationale": "High pressure alarms indicate increased resistance in the system \u2014 kinked tubing, water in the tubing, or mucus in the airway. These all increase the pressure needed to deliver a breath."
+  },
+  {
+    "q": "A ventilator's low-pressure alarm sounds. The nurse should first check for which cause?",
+    "options": [
+      "Mucus plug in the airway",
+      "Kinked endotracheal tube",
+      "Disconnected ventilator tubing",
+      "Patient biting the tube"
+    ],
+    "correct": 2,
+    "rationale": "Low pressure alarms indicate decreased resistance \u2014 disconnected tubing or a disconnected oxygen sensor. The system cannot build pressure because air is escaping."
+  },
+  {
+    "q": "The provider orders ventilator weaning for a patient. The nurse understands this means which process?",
+    "options": [
+      "Increasing the ventilator rate to strengthen the diaphragm",
+      "Gradually decreasing ventilator support with the goal of discontinuing it entirely",
+      "Switching from mechanical ventilation to BiPAP permanently",
+      "Immediately removing the patient from the ventilator"
+    ],
+    "correct": 1,
+    "rationale": "Weaning means gradually decreasing ventilator settings with the goal of getting the patient off the ventilator altogether. It is a step-down process, not an abrupt change."
+  },
+  {
+    "q": "A patient in acidosis presents with which cluster of symptoms?",
+    "options": [
+      "Tachycardia, diarrhea, and seizures",
+      "Hypertension, hyperreflexia, and tremors",
+      "Tachypnea, anxiety, and muscle spasms",
+      "Bradycardia, constipation, and flaccid muscles"
+    ],
+    "correct": 3,
+    "rationale": "Down = acidosis, bradycardia, constipation, flaccid muscles. Everything goes 'down' with acidosis. The opposite cluster (up = tachycardia, diarrhea, seizures) goes with alkalosis."
+  },
+  {
+    "q": "When a nurse cannot determine the type of acid-base imbalance from the clinical data, which default should be chosen?",
+    "options": [
+      "Respiratory acidosis",
+      "Respiratory alkalosis",
+      "Metabolic acidosis",
+      "Metabolic alkalosis"
+    ],
+    "correct": 2,
+    "rationale": "When you don't know the answer, choose metabolic acidosis. It is the most common acid-base imbalance and the safest default when clinical data is ambiguous."
+  },
+  {
+    "q": "A patient on a ventilator develops a pH of 7.28 and CO2 of 58. The nurse recognizes this as which imbalance?",
+    "options": [
+      "Respiratory acidosis from ventilator settings too low",
+      "Metabolic acidosis from renal failure",
+      "Respiratory alkalosis from ventilator settings too high",
+      "Metabolic alkalosis from gastric suctioning"
+    ],
+    "correct": 0,
+    "rationale": "Respiratory acidosis on a ventilator means the patient is underventilating \u2014 the vent settings are too low, not removing enough CO2. Low pH with high CO2 confirms respiratory acidosis."
+  },
+  {
+    "q": "A patient with alkalosis presents with which neurological findings?",
+    "options": [
+      "Seizures and hyperreflexia",
+      "Lethargy and flaccid paralysis",
+      "Confusion and bradycardia",
+      "Constipation and hyporeflexia"
+    ],
+    "correct": 0,
+    "rationale": "Up = alkalosis, hypokalemia, HTN, tachycardia, seizures, hyperreflexia, diarrhea. Everything goes 'up' with alkalosis, including neurological excitability (seizures, hyperreflexia)."
+  },
+  {
+    "q": "Using Maslow's hierarchy, which patient need should the nurse address first?",
+    "options": [
+      "A patient complaining of loneliness",
+      "A patient expressing fear about an upcoming surgery",
+      "A patient reporting inability to breathe",
+      "A patient requesting a visit from the chaplain"
+    ],
+    "correct": 2,
+    "rationale": "Maslow's hierarchy prioritizes physiological needs first: Physiological \u2192 Safety \u2192 Comfort \u2192 Psychological \u2192 Social \u2192 Spiritual. Breathing is the most basic physiological need."
+  },
+  {
+    "q": "A nurse is working with the spouse of an alcoholic patient. The spouse states, 'I feel good about myself when I help him.' The nurse recognizes this as which dynamic?",
+    "options": [
+      "Codependency",
+      "Enabling",
+      "Manipulation",
+      "Dependency"
+    ],
+    "correct": 0,
+    "rationale": "Codependency is when the significant other derives positive self-esteem from doing things for the abuser. The spouse's sense of self-worth is tied to their caretaking role."
+  },
+  {
+    "q": "A nurse is assessing a patient with chronic alcoholism who has amnesia and fills in memory gaps with fabricated stories. The nurse recognizes this as which condition?",
+    "options": [
+      "Delirium tremens",
+      "Hepatic encephalopathy",
+      "Alcohol withdrawal syndrome",
+      "Wernicke-Korsakoff syndrome"
+    ],
+    "correct": 3,
+    "rationale": "Wernicke's (Korsakoff's) syndrome is a psychosis from B1 (thiamine) deficiency characterized by amnesia with confabulation (making up stories to fill memory gaps). It is preventable and arrestable but irreversible once established."
+  },
+  {
+    "q": "A patient taking Antabuse asks the nurse what foods and products to avoid. Which response is most accurate?",
+    "options": [
+      "You may use alcohol-based hand sanitizer and aftershave freely",
+      "Only avoid beer and hard liquor",
+      "Avoid ALL forms of alcohol including mouthwash, cough syrup, and cooking wine",
+      "Avoid only beverages containing more than 5% alcohol"
+    ],
+    "correct": 2,
+    "rationale": "Patients on Antabuse (disulfiram) must avoid ALL forms of alcohol \u2014 including mouthwash, cough syrups, cooking wine, aftershave, and any product containing alcohol. Even small amounts can trigger a severe reaction."
+  },
+  {
+    "q": "A nurse is caring for a patient who overdosed on cocaine. Which complication should the nurse prepare for?",
+    "options": [
+      "Seizures",
+      "Profound hypotension",
+      "Respiratory arrest",
+      "Bradycardia"
+    ],
+    "correct": 0,
+    "rationale": "Cocaine is an 'upper' (stimulant). Overdose of uppers causes too much stimulation, leading to seizures. The priority is to have suction available. Downers cause respiratory arrest; uppers cause seizures."
+  },
+  {
+    "q": "A patient overdosed on opioids and is becoming increasingly obtunded. Which intervention should the nurse prepare for?",
+    "options": [
+      "Suction for seizures",
+      "Defibrillation for cardiac arrest",
+      "Intubation for respiratory arrest",
+      "Gastric lavage for poison removal"
+    ],
+    "correct": 2,
+    "rationale": "Opioids are 'downers.' Overdose of downers leads to respiratory depression and arrest. The priority intervention is intubation to establish an airway and support breathing."
+  },
+  {
+    "q": "A newborn born to a substance-abusing mother begins showing symptoms at 36 hours of life. The nurse should suspect which condition?",
+    "options": [
+      "Neonatal sepsis",
+      "Neonatal intoxication",
+      "Fetal alcohol syndrome",
+      "Neonatal withdrawal"
+    ],
+    "correct": 3,
+    "rationale": "Newborn symptoms appearing at \u226524 hours of life indicate withdrawal. Symptoms appearing <24 hours indicate intoxication (the drug is still in the baby's system from maternal use)."
+  },
+  {
+    "q": "A patient experiencing delirium tremens should be assigned to which type of room?",
+    "options": [
+      "Any available room with family present",
+      "Isolation room at the end of the hallway",
+      "Private room near the nurses' station",
+      "Semi-private room with another patient"
+    ],
+    "correct": 2,
+    "rationale": "DT (delirium tremens) can be life-threatening and requires close monitoring. The patient needs a private room near the nurses' station, clear liquid or NPO diet, and vest/2-point restraints if needed."
+  },
+  {
+    "q": "Which medication regimen is given to BOTH patients with alcohol withdrawal syndrome AND delirium tremens?",
+    "options": [
+      "Anti-hypertensive, tranquilizer, and multivitamin",
+      "Antibiotics, analgesics, and antacids",
+      "Anticonvulsants, antidepressants, and antiemetics",
+      "Diuretics, bronchodilators, and corticosteroids"
+    ],
+    "correct": 0,
+    "rationale": "Both AWS and DT patients receive the same three medication types: anti-hypertensive (for elevated BP), tranquilizer (for agitation/anxiety), and multivitamin (for nutritional deficiencies from chronic alcoholism)."
+  },
+  {
+    "q": "The nurse identifies the number one problem in substance abuse as which behavior?",
+    "options": [
+      "Anger",
+      "Manipulation",
+      "Depression",
+      "Denial"
+    ],
+    "correct": 3,
+    "rationale": "Denial is the #1 problem in substance abuse. The therapeutic approach is to confront denial by pointing out the difference between what the patient says and what they do. However, denial related to loss/grief should be supported, not confronted."
+  },
+  {
+    "q": "A nurse is preparing to draw a trough level for gentamicin. When should the blood be drawn?",
+    "options": [
+      "15 minutes after the IV infusion is complete",
+      "30 minutes before the next scheduled dose",
+      "Immediately after the IM injection",
+      "2 hours after the oral dose"
+    ],
+    "correct": 1,
+    "rationale": "Trough levels are always drawn 30 minutes before the next scheduled dose, regardless of the route. This measures the lowest drug concentration to ensure it stays within the therapeutic range."
+  },
+  {
+    "q": "Which antibiotic ending in -mycin is NOT classified as an aminoglycoside?",
+    "options": [
+      "Tobramycin",
+      "Streptomycin",
+      "Gentamicin",
+      "Azithromycin"
+    ],
+    "correct": 3,
+    "rationale": "Not all -mycins are aminoglycosides. Azithromycin, Clarithromycin, and Erythromycin are macrolides, NOT aminoglycosides. True aminoglycosides include Streptomycin, Tobramycin, Gentamicin, Vancomycin, and Clindamycin."
+  },
+  {
+    "q": "A patient receiving IV gentamicin reports ringing in the ears and dizziness. The nurse recognizes these as signs of which toxic effect?",
+    "options": [
+      "Ototoxicity affecting cranial nerve VIII",
+      "Nephrotoxicity affecting the glomerulus",
+      "Hepatotoxicity affecting the bile ducts",
+      "Cardiotoxicity affecting the SA node"
+    ],
+    "correct": 0,
+    "rationale": "Aminoglycosides cause ototoxicity (cranial nerve VIII damage) and nephrotoxicity. Tinnitus (ringing in the ears), hearing loss, and dizziness/balance problems indicate ototoxicity. Monitor hearing, balance, and tinnitus."
+  },
+  {
+    "q": "A nurse is monitoring a patient on aminoglycosides. Which lab value best indicates nephrotoxicity?",
+    "options": [
+      "BUN only",
+      "Liver enzymes (AST/ALT)",
+      "Serum potassium",
+      "Serum creatinine"
+    ],
+    "correct": 3,
+    "rationale": "Aminoglycosides are nephrotoxic, and serum creatinine is the best indicator of kidney function. Rising creatinine indicates nephrotoxicity and requires immediate notification of the provider."
+  },
+  {
+    "q": "In which specific clinical situation are aminoglycosides given orally?",
+    "options": [
+      "Hepatic encephalopathy and pre-operative bowel surgery",
+      "Skin infections and wound care",
+      "Upper respiratory infections and sinusitis",
+      "Urinary tract infections and pneumonia"
+    ],
+    "correct": 0,
+    "rationale": "Aminoglycosides are normally not given PO because they are poorly absorbed. The two exceptions are hepatic encephalopathy (to reduce ammonia-producing gut bacteria) and pre-op bowel surgery (bowel sterilization with Neo-Kan)."
+  },
+  {
+    "q": "Calcium channel blockers produce which cardiac effects?",
+    "options": [
+      "Positive inotropic, chronotropic, and dromotropic effects",
+      "Negative inotropic, chronotropic, and dromotropic effects",
+      "Positive inotropic with negative chronotropic effects",
+      "No cardiac effects; they only affect peripheral vasculature"
+    ],
+    "correct": 1,
+    "rationale": "CCBs are described as 'Valium for your heart' because they produce negative inotropic (decreased strength), negative chronotropic (decreased rate), and negative dromotropic (decreased conductivity) effects."
+  },
+  {
+    "q": "Which medications produce positive inotropic, chronotropic, and dromotropic effects?",
+    "options": [
+      "Nifedipine and amlodipine",
+      "Metoprolol and atenolol",
+      "Diltiazem and verapamil",
+      "Atropine and epinephrine"
+    ],
+    "correct": 3,
+    "rationale": "Positive I/C/D agents include atropine, epinephrine, and norepinephrine \u2014 they increase heart strength, rate, and conductivity. CCBs and beta blockers produce the opposite (negative) effects."
+  },
+  {
+    "q": "A nurse observes a saw-tooth pattern on the cardiac monitor. Which rhythm does this represent?",
+    "options": [
+      "Asystole",
+      "Atrial flutter",
+      "Atrial fibrillation",
+      "Ventricular tachycardia"
+    ],
+    "correct": 1,
+    "rationale": "Atrial flutter has a characteristic saw-tooth pattern on the ECG. Atrial fibrillation shows chaotic P-waves, V-tach shows wide bizarre QRS complexes, and asystole is a flat line."
+  },
+  {
+    "q": "A patient has more than 6 PVCs per minute. Which medication should the nurse anticipate administering?",
+    "options": [
+      "Digoxin",
+      "Atropine",
+      "Adenocard (adenosine)",
+      "Lidocaine or amiodarone"
+    ],
+    "correct": 3,
+    "rationale": "PVCs and V-tach are treated with lidocaine and amiodarone. Concern about PVCs arises when there are >6/minute, 6 in a row, or a PVC falls on the T-wave (R-on-T phenomenon)."
+  },
+  {
+    "q": "A patient is in ventricular fibrillation. Which intervention should be performed FIRST?",
+    "options": [
+      "Defibrillation",
+      "Administer lidocaine",
+      "Administer epinephrine then atropine",
+      "Start CPR and give amiodarone"
+    ],
+    "correct": 0,
+    "rationale": "V-fib is a lethal rhythm and the first-line treatment is defibrillation. Lidocaine and amiodarone are for PVCs/V-tach. Epinephrine then atropine is the sequence for asystole."
+  },
+  {
+    "q": "A patient in asystole requires which medication sequence?",
+    "options": [
+      "Atropine first, then epinephrine",
+      "Lidocaine first, then amiodarone",
+      "Epinephrine first, then atropine",
+      "Adenocard first, then a beta blocker"
+    ],
+    "correct": 2,
+    "rationale": "Asystole (flat line) is a lethal rhythm treated with epinephrine first, then atropine. This is the opposite of V-fib treatment (defibrillation). Lidocaine/amiodarone are for V-tach/PVCs."
+  },
+  {
+    "q": "When administering IV push medications, the nurse knows that all should be given slowly EXCEPT which drug?",
+    "options": [
+      "Diltiazem",
+      "Metoprolol",
+      "Digoxin",
+      "Adenocard (adenosine)"
+    ],
+    "correct": 3,
+    "rationale": "All IV push medications should be given slowly except Adenocard (adenosine), which must be given as a rapid IV push followed by a saline flush. Adenocard has an extremely short half-life and must reach the heart quickly."
+  },
+  {
+    "q": "A patient's chest tube is accidentally pulled out. What should the nurse do FIRST?",
+    "options": [
+      "Prepare for chest tube reinsertion",
+      "Cover the site with a gloved hand",
+      "Call the provider immediately",
+      "Clamp the tubing"
+    ],
+    "correct": 1,
+    "rationale": "When a chest tube comes out, the nurse should first cover the site with a gloved hand, then apply Vaseline gauze covered by a dry dressing taped on three sides. The three-sided taping acts as a flutter valve."
+  },
+  {
+    "q": "A nurse observes continuous bubbling in the water seal chamber of a chest tube drainage system. This indicates which problem?",
+    "options": [
+      "An air leak in the system",
+      "Normal functioning of the drainage system",
+      "The suction is set at the correct level",
+      "Effective re-expansion of the lung"
+    ],
+    "correct": 0,
+    "rationale": "In the water seal chamber, intermittent bubbling is good (normal air evacuation), but continuous bubbling is bad (indicates an air leak in the system). In the suction control chamber, the opposite is true \u2014 continuous bubbling is good."
+  },
+  {
+    "q": "A child has Tetralogy of Fallot. Using the TRouBLe mnemonic, the nurse knows this is which type of congenital heart defect?",
+    "options": [
+      "Obstructive defect causing hypertension",
+      "Right-to-left shunt causing cyanosis (blue)",
+      "Acyanotic defect with no shunting",
+      "Left-to-right shunt causing heart failure"
+    ],
+    "correct": 1,
+    "rationale": "TRouBLe = T-diseases are Right-to-Left shunts causing Blue (cyanotic) appearance. Tetralogy of Fallot is a T-disease with four defects: VSD, pulmonary stenosis, overriding aorta, and right ventricular hypertrophy."
+  },
+  {
+    "q": "A patient with tuberculosis requires which type of isolation precautions?",
+    "options": [
+      "Airborne precautions with negative-pressure room and N95 respirator",
+      "Standard precautions only",
+      "Droplet precautions with surgical mask",
+      "Contact precautions with gown and gloves only"
+    ],
+    "correct": 0,
+    "rationale": "Airborne precautions (MTV \u2014 Measles, TB, Varicella) require a negative-pressure room and N95 respirator. Remember: Contact = gown/gloves, Droplet = mask/goggle, Airborne = negative pressure + N95."
+  },
+  {
+    "q": "A nurse is preparing to enter a patient's room requiring full PPE. Which is the correct donning sequence?",
+    "options": [
+      "Gloves, gown, mask, goggles",
+      "Mask, goggles, gown, gloves",
+      "Gown, mask, goggles, gloves",
+      "Gloves, goggles, mask, gown"
+    ],
+    "correct": 2,
+    "rationale": "The correct donning (putting on) sequence is: Gown \u2192 Mask \u2192 Goggles \u2192 Gloves. For doffing (removing), it is the reverse: Gloves \u2192 Goggles \u2192 Gown \u2192 Mask. PPE is donned outside and doffed inside the room."
+  },
+  {
+    "q": "Where does the nurse remove PPE after caring for a patient in isolation?",
+    "options": [
+      "Inside the patient's room",
+      "In the hallway outside the room",
+      "At the nurses' station",
+      "In the clean utility room"
+    ],
+    "correct": 0,
+    "rationale": "PPE is donned (put on) outside the patient's room and doffed (removed) inside the patient's room. This prevents contamination of the hallway and other areas."
+  },
+  {
+    "q": "A chest tube is placed at the apex of the lung. The nurse understands this placement is for which condition?",
+    "options": [
+      "Pleural effusion",
+      "Empyema",
+      "Hemothorax",
+      "Pneumothorax"
+    ],
+    "correct": 3,
+    "rationale": "Pneumothorax = air, which rises, so the chest tube is placed high (apical). Hemothorax = blood, which pools, so the tube is placed low (basilar). Air rises, blood falls."
+  },
+  {
+    "q": "The nurse is fitting a patient for axillary crutches. What is the correct measurement?",
+    "options": [
+      "At the level of the waist with 90-degree elbow flexion",
+      "4-5 finger widths below the posterior axillary fold",
+      "2-3 finger widths below the anterior axillary fold with 30-degree elbow flexion",
+      "Directly in the axilla with arms fully extended"
+    ],
+    "correct": 2,
+    "rationale": "Crutches should be positioned 2-3 finger widths below the anterior axillary fold to prevent axillary nerve damage, with 30-degree elbow flexion for proper weight distribution through the hands, not the axillae."
+  },
+  {
+    "q": "A patient with a fractured right leg is learning crutch walking. Which gait pattern is most appropriate?",
+    "options": [
+      "Swing-through gait for maximum speed",
+      "2-point gait: one crutch and the opposite foot",
+      "4-point gait: nothing moves together",
+      "3-point gait: both crutches and the injured leg advance together"
+    ],
+    "correct": 3,
+    "rationale": "3-point gait is used when one leg is affected (one bad leg): both crutches plus the bad leg move together, then the good leg follows. Odd-numbered gaits are for one affected limb."
+  },
+  {
+    "q": "A patient with severe bilateral leg weakness is learning to walk with crutches. Which gait should the nurse teach?",
+    "options": [
+      "Swing-through gait",
+      "4-point gait",
+      "3-point gait",
+      "2-point gait"
+    ],
+    "correct": 1,
+    "rationale": "4-point gait is the most stable and slowest gait, used for severe bilateral weakness. Nothing moves together \u2014 each point of contact moves independently. Even-numbered gaits are for evenly distributed bilateral weakness."
+  },
+  {
+    "q": "A patient using crutches asks how to go up stairs. Which instruction is correct?",
+    "options": [
+      "Go up with the good leg first, then bring the crutches and bad leg up",
+      "Go up with the bad leg first, then bring the crutches and good leg up",
+      "Sit down and scoot up the stairs backwards",
+      "Place both crutches on the step above first"
+    ],
+    "correct": 0,
+    "rationale": "Stairs: 'Up with the good, down with the bad.' The good leg leads going up stairs, and the bad leg (with crutches) leads going down. Crutches always move with the bad leg."
+  },
+  {
+    "q": "A patient with left-sided weakness is using a cane. On which side should the cane be held?",
+    "options": [
+      "Whichever hand is dominant",
+      "Left side (affected side)",
+      "It does not matter which side",
+      "Right side (unaffected side)"
+    ],
+    "correct": 3,
+    "rationale": "A cane is always held on the unaffected side and advanced with the opposite (affected) leg. This provides a wider base of support and more stable gait pattern."
+  },
+  {
+    "q": "A patient with schizophrenia insists that news anchors are sending coded messages specifically to them. The nurse documents this as which symptom?",
+    "options": [
+      "Visual hallucinations",
+      "Ideas of reference",
+      "Loosening of associations",
+      "Delusions of grandeur"
+    ],
+    "correct": 1,
+    "rationale": "Ideas of reference occur when a patient believes that external events, people, or media have special personal significance or are directed at them. It is a common feature of paranoid thinking in schizophrenia."
+  },
+  {
+    "q": "A patient with functional psychosis is expressing delusional beliefs. Which nursing intervention is most appropriate?",
+    "options": [
+      "Challenge the delusion with logical arguments",
+      "Ignore the patient until the episode passes",
+      "Acknowledge feelings, present reality, and set limits",
+      "Agree with the delusion to build rapport"
+    ],
+    "correct": 2,
+    "rationale": "For functional psychosis, the approach is: acknowledge the patient's feelings, present reality (without arguing), set limits, and enforce them. This validates the emotional experience while maintaining a reality-based framework."
+  },
+  {
+    "q": "A nurse is caring for a patient with dementia who is hallucinating. Which intervention is most therapeutic?",
+    "options": [
+      "Acknowledge feelings and redirect to a reality-based activity",
+      "Explain that the hallucination is not real repeatedly",
+      "Confront the hallucination and set strict limits",
+      "Restrain the patient to prevent self-harm"
+    ],
+    "correct": 0,
+    "rationale": "For psychosis of dementia, the approach is: acknowledge feelings and redirect. Unlike functional psychosis, you do not confront or set limits \u2014 the patient cannot learn new coping behaviors due to cognitive impairment."
+  },
+  {
+    "q": "A patient on the psychiatric unit exhibits word salad, flight of ideas, and neologisms. The nurse documents this as which symptom?",
+    "options": [
+      "Loosening of associations",
+      "Concrete thinking",
+      "Circumstantial speech",
+      "Pressured speech"
+    ],
+    "correct": 0,
+    "rationale": "Loosening of associations encompasses flight of ideas (rapidly shifting topics), word salad (incoherent jumble of words), and neologisms (made-up words). These are thought process disturbances common in schizophrenia."
+  },
+  {
+    "q": "A hallmark feature that distinguishes dementia from other psychiatric conditions is which finding?",
+    "options": [
+      "Anxiety with panic attacks",
+      "Memory loss with inability to learn new information",
+      "Elevated mood with grandiose thinking",
+      "Auditory hallucinations with paranoid delusions"
+    ],
+    "correct": 1,
+    "rationale": "The hallmarks of dementia are memory loss and inability to learn. These cognitive deficits distinguish dementia from other psychiatric conditions like schizophrenia (hallucinations/delusions) or bipolar disorder (mood changes)."
+  },
+  {
+    "q": "A nurse is caring for a patient with diabetes insipidus. Which symptoms should the nurse expect?",
+    "options": [
+      "Fluid overload, hypertension, and edema",
+      "Hyperglycemia, ketoacidosis, and weight gain",
+      "Hypoglycemia, diaphoresis, and tremors",
+      "Severe dehydration, polyuria, and polydipsia"
+    ],
+    "correct": 3,
+    "rationale": "Diabetes insipidus (DI) is NOT related to glucose metabolism \u2014 it is a condition of severe dehydration, polyuria (excessive urination), and polydipsia (excessive thirst) due to inadequate antidiuretic hormone (ADH)."
+  },
+  {
+    "q": "A nurse is teaching a patient about Type I diabetes. Which statement by the patient indicates correct understanding?",
+    "options": [
+      "I only need to take insulin when my blood sugar is high",
+      "Exercise will replace my need for insulin entirely",
+      "I will need insulin injections, dietary management, and regular exercise for life",
+      "I can manage my diabetes with oral hypoglycemic pills alone"
+    ],
+    "correct": 2,
+    "rationale": "Type I diabetes treatment requires all three: Diet, Insulin, and Exercise. Type I is insulin-dependent, juvenile onset, and ketosis-prone. Oral hypoglycemics are only for Type II diabetes."
+  },
+  {
+    "q": "A nurse administers Regular insulin at 0800. At what time should the nurse monitor most closely for hypoglycemia?",
+    "options": [
+      "1400 (6 hours after)",
+      "1000 (2 hours after administration)",
+      "0900 (1 hour after)",
+      "2000 (12 hours after)"
+    ],
+    "correct": 1,
+    "rationale": "Regular insulin (R) has onset at 1 hour, peak at 2 hours, and duration of 4 hours. Hypoglycemia risk is highest at peak action. Administered at 0800, peak occurs at 1000."
+  },
+  {
+    "q": "A patient takes NPH insulin at 0700. When should the nurse anticipate peak effect?",
+    "options": [
+      "0900 (2 hours after)",
+      "1500-1700 (8-10 hours after)",
+      "0100 next day (18 hours after)",
+      "1000 (3 hours after)"
+    ],
+    "correct": 1,
+    "rationale": "NPH insulin (N) has onset at 6 hours, peak at 8-10 hours, and duration of 12 hours. Given at 0700, peak would occur at 1500-1700 (3:00-5:00 PM), which is when hypoglycemia risk is highest."
+  },
+  {
+    "q": "A patient with diabetes is 'cold and clammy.' Which intervention should the nurse perform FIRST?",
+    "options": [
+      "Hold all food and fluids",
+      "Administer regular insulin IV",
+      "Check the HbA1c level",
+      "Give a rapid-acting carbohydrate such as candy or honey"
+    ],
+    "correct": 3,
+    "rationale": "'Cold and clammy, get some candy.' Cold and clammy indicates hypoglycemia (insulin shock). Give rapid-acting carbohydrates immediately. If unconscious, administer IV D50 or IM glucagon. Delay can cause permanent brain damage."
+  },
+  {
+    "q": "A patient with Type I diabetes presents with Kussmaul respirations, acetone breath, and dehydration. Which condition does the nurse suspect?",
+    "options": [
+      "Diabetic ketoacidosis (DKA)",
+      "HHNK/HHNC",
+      "Diabetes insipidus",
+      "Hypoglycemia"
+    ],
+    "correct": 0,
+    "rationale": "DKA occurs with too much food/not enough insulin: Dehydration, Ketones, Kussmaul respirations, high K+, Acidosis, and Acetone breath. Treatment is IV Regular insulin. 'Hot and dry, sugar's high.'"
+  },
+  {
+    "q": "Which test is the BEST indicator of long-term blood glucose control over the past 2-3 months?",
+    "options": [
+      "Random blood glucose",
+      "HbA1c (glycosylated hemoglobin)",
+      "Oral glucose tolerance test",
+      "Fasting blood glucose"
+    ],
+    "correct": 1,
+    "rationale": "HbA1c measures the percentage of hemoglobin bound to glucose over the lifespan of a red blood cell (2-3 months), making it the best indicator of long-term glucose control."
+  },
+  {
+    "q": "A Type II diabetic patient has a blood glucose of 750 mg/dL with severe dehydration but no ketones. The nurse suspects which condition?",
+    "options": [
+      "Diabetic ketoacidosis (DKA)",
+      "Addisonian crisis",
+      "Hypoglycemic shock",
+      "Hyperglycemic hyperosmolar nonketotic coma (HHNK/HHNC)"
+    ],
+    "correct": 3,
+    "rationale": "Type II diabetics with extremely high blood sugar develop HHNK/HHNC (severe dehydration without ketosis). Unlike DKA, there are no ketones because Type II patients produce some insulin. Treatment priority is rehydration."
+  },
+  {
+    "q": "When drawing up a combination of NPH and Regular insulin, what is the correct sequence?",
+    "options": [
+      "Draw NPH first, then draw Regular",
+      "Mix both in the same syringe without specific order",
+      "Pressurize Regular, pressurize NPH, draw NPH, draw Regular",
+      "Pressurize NPH, pressurize Regular, draw Regular, draw NPH (NRRN)"
+    ],
+    "correct": 3,
+    "rationale": "The sequence is NRRN: pressurize N (inject air into NPH), pressurize R (inject air into Regular), draw R (withdraw Regular first \u2014 it's clear), draw N (withdraw NPH last). Regular is always drawn first to prevent contamination."
+  },
+  {
+    "q": "Humalog insulin has which onset and peak times?",
+    "options": [
+      "Onset 15 minutes, peak 30 minutes",
+      "No peak; steady release over 24 hours",
+      "Onset 1 hour, peak 2 hours",
+      "Onset 6 hours, peak 8-10 hours"
+    ],
+    "correct": 0,
+    "rationale": "Humalog is the fastest-acting insulin: onset 15 minutes, peak 30 minutes, duration 3 hours. This makes it ideal for mealtime blood sugar coverage but also means hypoglycemia can occur very quickly."
+  },
+  {
+    "q": "A patient's lithium level is 2.5 mEq/L. The nurse should recognize this as which finding?",
+    "options": [
+      "Subtherapeutic level requiring dose increase",
+      "Therapeutic level requiring no action",
+      "Toxic level requiring immediate intervention",
+      "Normal fluctuation expected with lithium therapy"
+    ],
+    "correct": 2,
+    "rationale": "Lithium therapeutic range is 0.6-1.2 mEq/L. A level \u22652 is toxic. Signs of lithium toxicity include tremors and metallic taste. The nurse should hold the medication and notify the provider immediately."
+  },
+  {
+    "q": "A patient's digoxin level is 2.4 ng/mL. Which action should the nurse take?",
+    "options": [
+      "Hold the digoxin and notify the provider of the toxic level",
+      "Recheck the level in one week",
+      "Increase the dose as the level is subtherapeutic",
+      "Administer the next scheduled dose"
+    ],
+    "correct": 0,
+    "rationale": "Digoxin therapeutic range is 1-2 ng/mL. A level >2 is toxic. The nurse should hold the medication, assess for toxicity signs (visual changes, bradycardia, nausea), and notify the provider."
+  },
+  {
+    "q": "A newborn has a bilirubin level of 22 mg/dL with opisthotonos. The nurse recognizes this posturing indicates which complication?",
+    "options": [
+      "Hemolytic disease requiring exchange transfusion",
+      "Normal newborn jaundice requiring observation only",
+      "Hepatitis with liver inflammation",
+      "Kernicterus with bilirubin deposited in the brain"
+    ],
+    "correct": 3,
+    "rationale": "Bilirubin >20 is toxic. Kernicterus is bilirubin deposited in the cerebrospinal fluid/brain tissue. Opisthotonos (severe neck extension/arching) is a classic sign indicating brain involvement and neurological damage."
+  },
+  {
+    "q": "A patient with dumping syndrome asks the nurse about dietary modifications. Which instruction is correct?",
+    "options": [
+      "Follow a clear liquid diet and elevate the head of the bed",
+      "Eat a low-carbohydrate diet with limited fluids, and lie flat after eating",
+      "Eat a high-carbohydrate diet with plenty of fluids, and sit upright after eating",
+      "Eat six small high-protein meals with extra fluids between meals"
+    ],
+    "correct": 1,
+    "rationale": "Dumping syndrome treatment: HOB LOW (lie flat), fluids LOW (restrict fluids with meals), carbs LOW (low-carbohydrate diet). Keep the stomach full and slow gastric emptying. This is the opposite of hiatal hernia treatment."
+  },
+  {
+    "q": "A patient with a hiatal hernia should be instructed to follow which regimen?",
+    "options": [
+      "Restrict fluids and eat a high-protein, high-fat diet",
+      "Lie flat after meals and eat a low-carbohydrate diet",
+      "Elevate the head of the bed, increase fluids, and eat high-carbohydrate foods",
+      "Eat large meals three times daily and recline immediately after"
+    ],
+    "correct": 2,
+    "rationale": "Hiatal hernia treatment: HOB HIGH (elevate head), fluids HIGH (increase fluids), carbs HIGH (empty the stomach faster). The goal is to reduce acid regurgitation by keeping the stomach as empty as possible."
+  },
+  {
+    "q": "A nurse is assessing a patient with hypocalcemia. Tapping the facial nerve anterior to the ear causes facial muscle twitching. This is known as which sign?",
+    "options": [
+      "Kernig's sign",
+      "Chvostek's sign",
+      "Brudzinski's sign",
+      "Trousseau's sign"
+    ],
+    "correct": 1,
+    "rationale": "Chvostek's sign is elicited by tapping the facial nerve (cheek tap) which causes facial muscle spasm/twitching. It indicates hypocalcemia. Calcemias do the OPPOSITE of their prefix \u2014 hypocalcemia causes hyperexcitability."
+  },
+  {
+    "q": "The nurse inflates a blood pressure cuff on a patient's arm and observes carpopedal spasm. This positive finding is known as which sign?",
+    "options": [
+      "Homans' sign",
+      "Hegar's sign",
+      "Trousseau's sign",
+      "Chvostek's sign"
+    ],
+    "correct": 2,
+    "rationale": "Trousseau's sign is elicited by inflating a BP cuff (occluding blood flow) which causes carpal spasm in the hand. Like Chvostek's sign, it indicates hypocalcemia and neuromuscular hyperexcitability."
+  },
+  {
+    "q": "A patient has hyperkalemia. Which findings does the nurse expect for heart rate and urine output?",
+    "options": [
+      "Decreased heart rate and decreased urine output",
+      "Increased heart rate and decreased urine output",
+      "Decreased heart rate and increased urine output",
+      "Increased heart rate and increased urine output"
+    ],
+    "correct": 0,
+    "rationale": "Kalemias do the same as the prefix EXCEPT for heart rate and urine output. Hyperkalemia = everything goes up, BUT heart rate goes DOWN and urine output goes DOWN. These are the two exceptions to the 'same as prefix' rule."
+  },
+  {
+    "q": "Which is the earliest sign of any electrolyte imbalance?",
+    "options": [
+      "Numbness and tingling (paresthesias)",
+      "Seizures",
+      "Cardiac arrhythmias",
+      "Muscle weakness (paresis)"
+    ],
+    "correct": 0,
+    "rationale": "The earliest sign of electrolyte disorder is numbness and tingling (paresthesias). The universal sign (present in all electrolyte imbalances) is muscle weakness (paresis). Paresthesias appear before other symptoms."
+  },
+  {
+    "q": "The nurse knows that IV potassium must NEVER be administered by which route?",
+    "options": [
+      "IV piggyback diluted in 100 mL",
+      "Mixed in IV maintenance fluids",
+      "Oral supplement",
+      "IV push"
+    ],
+    "correct": 3,
+    "rationale": "Never push potassium IV \u2014 it can cause fatal cardiac arrest. The maximum concentration is 40 mEq K+ per liter of IV fluid, given via slow infusion on a pump."
+  },
+  {
+    "q": "Which intervention provides a PERMANENT reduction in serum potassium?",
+    "options": [
+      "IV sodium bicarbonate",
+      "D5W with insulin",
+      "Kayexalate (sodium polystyrene sulfonate)",
+      "IV calcium gluconate"
+    ],
+    "correct": 2,
+    "rationale": "D5W + insulin drives potassium into cells temporarily but does not remove it from the body. Kayexalate is a cation exchange resin that permanently removes potassium from the body through the GI tract."
+  },
+  {
+    "q": "A patient has hypernatremia. The nurse understands this indicates which fluid status?",
+    "options": [
+      "Third-spacing",
+      "Dehydration",
+      "Normal fluid balance",
+      "Fluid overload"
+    ],
+    "correct": 1,
+    "rationale": "Hypernatremia = dEhydration (remember the E). High sodium concentration means the patient has lost more water than sodium. Hyponatremia = Overload (dilutional \u2014 too much water diluting the sodium)."
+  },
+  {
+    "q": "A patient with Grave's disease presents with weight loss, diarrhea, tachycardia, heat intolerance, and protruding eyes. The nurse identifies these as symptoms of which condition?",
+    "options": [
+      "Hyperthyroidism",
+      "Cushing's syndrome",
+      "Hypothyroidism",
+      "Addison's disease"
+    ],
+    "correct": 0,
+    "rationale": "Hyperthyroidism (Grave's disease) is hyper-metabolism: weight loss, diarrhea, increased heart rate, heat intolerance, and exophthalmos (protruding eyes). Everything is 'sped up' in hyperthyroidism."
+  },
+  {
+    "q": "A patient with hyperthyroidism is being treated with radioactive iodine. Which precaution should the nurse teach?",
+    "options": [
+      "Double-flush the toilet because radiation is excreted in urine",
+      "Avoid all dairy products for six months",
+      "Isolate in a negative-pressure room",
+      "Wear a lead apron at all times"
+    ],
+    "correct": 0,
+    "rationale": "Radioactive iodine is excreted through the urine. Patients must double-flush the toilet to reduce radiation exposure to others. This is a key safety teaching point for patients receiving this treatment."
+  },
+  {
+    "q": "A nurse is monitoring a patient 24 hours after a total thyroidectomy. Which complication should be the priority assessment?",
+    "options": [
+      "Thyroid storm",
+      "Hemorrhage",
+      "Respiratory distress",
+      "Tetany from hypocalcemia"
+    ],
+    "correct": 3,
+    "rationale": "Total thyroidectomy = Tetany. At 12-48 hours post-op, the risk is hypocalcemia/tetany from accidental removal or damage to the parathyroid glands. Subtotal thyroidectomy = Storm. First 12 hours = airway/bleeding for both."
+  },
+  {
+    "q": "A patient develops thyroid storm after a subtotal thyroidectomy. Which interventions should the nurse anticipate?",
+    "options": [
+      "Administer oxygen and implement cooling measures to lower temperature",
+      "Administer IV calcium gluconate",
+      "Prepare for emergency tracheostomy",
+      "Give IV potassium replacement"
+    ],
+    "correct": 0,
+    "rationale": "Thyroid storm features extremely high vitals/fever and the patient may become psychotically delirious. Priority treatment is oxygen and lowering the body temperature. Subtotal = Storm; Total = Tetany."
+  },
+  {
+    "q": "A patient with hypothyroidism is scheduled for surgery. Which concern should the nurse communicate to the surgical team?",
+    "options": [
+      "The patient requires a higher dose of anesthesia",
+      "Thyroid medication should be held when NPO",
+      "The patient needs extra sedation preoperatively",
+      "The patient is a high-risk anesthesia candidate"
+    ],
+    "correct": 3,
+    "rationale": "Hypothyroid patients are high-risk for anesthesia because their slowed metabolism affects drug clearance. Do NOT sedate these patients, and do NOT hold thyroid pills when NPO \u2014 thyroid replacement is essential."
+  },
+  {
+    "q": "A patient with Addison's disease is admitted during an acute crisis. Which finding does the nurse expect?",
+    "options": [
+      "Moon face, buffalo hump, and central obesity",
+      "Exophthalmos with tremors and tachycardia",
+      "Weight gain with cold intolerance and constipation",
+      "Hyperpigmented skin with inability to respond to physiological stress"
+    ],
+    "correct": 3,
+    "rationale": "Addison's disease is under-secretion of the adrenal cortex. Features include hyperpigmented skin and inability to respond to stress. Treatment is steroids (Add-a-sone = add a steroid)."
+  },
+  {
+    "q": "A nurse assesses a patient with Cushing's syndrome. Which cluster of findings is expected?",
+    "options": [
+      "Moon face, buffalo hump, central obesity, and easy bruising",
+      "Hyperpigmentation, weight loss, and hypotension",
+      "Constipation, lethargy, and cold intolerance",
+      "Weight loss, diarrhea, and tachycardia"
+    ],
+    "correct": 0,
+    "rationale": "Cushing's syndrome is over-secretion of the adrenal cortex (cushy = more). Features include moon face, buffalo hump, central obesity, easy bruising, and thin skin. Treatment is adrenalectomy, then lifetime steroids."
+  },
+  {
+    "q": "The nurse should perform Accu-Checks (blood glucose monitoring) on patients receiving which three therapies?",
+    "options": [
+      "Antibiotics, antihypertensives, and diuretics",
+      "Diabetes management, TPN, and steroids",
+      "Heparin, warfarin, and aspirin",
+      "Bronchodilators, antacids, and laxatives"
+    ],
+    "correct": 1,
+    "rationale": "Accu-checks are needed for diabetes (glucose management), TPN (high glucose content can cause hyperglycemia), and steroids (can raise blood glucose levels). All three affect glucose metabolism."
+  },
+  {
+    "q": "A nurse is selecting an age-appropriate toy for a 7-month-old infant. Which toy is best?",
+    "options": [
+      "A competitive board game",
+      "A cover-and-uncover toy (peek-a-boo)",
+      "A musical mobile",
+      "A push-pull toy"
+    ],
+    "correct": 1,
+    "rationale": "6-9 months = cover/uncover toy (learning object permanence). 0-6 months = musical mobile. 9-12 months = verbal toy. Toddlers get push/pull toys for gross motor development."
+  },
+  {
+    "q": "A nurse selects a play activity for a school-age child (8 years old). Which activity is most appropriate?",
+    "options": [
+      "Pretend play with dress-up clothes",
+      "A musical mobile or rattle",
+      "A creative group project or competitive team sport",
+      "Parallel play with blocks"
+    ],
+    "correct": 2,
+    "rationale": "School-age children (7-11) prefer the 3 C's: Creative, Competitive, and Collective activities. They enjoy team sports, group projects, and games with rules. This corresponds to Piaget's concrete operational stage."
+  },
+  {
+    "q": "A patient is 2 days post-lumbar laminectomy. Which complication should the nurse monitor for?",
+    "options": [
+      "Paralytic ileus",
+      "Thyroid storm",
+      "Pneumonia",
+      "Urinary retention"
+    ],
+    "correct": 3,
+    "rationale": "Lumbar laminectomy: pre-op assess urine output and leg function; post-op watch for urinary retention. Cervical = watch for pneumonia. Thoracic = watch for pneumonia and paralytic ileus."
+  },
+  {
+    "q": "After laminectomy surgery, which position change technique must ALWAYS be used?",
+    "options": [
+      "Dangling legs at the bedside first",
+      "Sitting up at 90 degrees to pivot",
+      "Log rolling",
+      "Pulling up using an overhead trapeze"
+    ],
+    "correct": 2,
+    "rationale": "Post-laminectomy: always log roll to maintain spinal alignment. No dangling (keep legs elevated), and limit sitting to 20-30 minutes at a time to prevent stress on the surgical site."
+  },
+  {
+    "q": "A bone graft from the iliac crest is used in spinal fusion. The nurse knows the hip donor site is associated with which increased risk?",
+    "options": [
+      "More pain and bleeding at the donor site",
+      "Increased neurological deficits",
+      "Higher infection rate at the spine",
+      "More risk of graft rejection"
+    ],
+    "correct": 0,
+    "rationale": "In spinal fusion, bone is grafted from the iliac crest (hip). The hip donor site carries more risk of pain and bleeding. The spine recipient site carries more risk of rejection. The nurse monitors both sites."
+  },
+  {
+    "q": "A patient's serum creatinine is 3.8 mg/dL. The nurse recognizes this indicates which problem?",
+    "options": [
+      "Cardiac failure",
+      "Liver disease",
+      "Normal kidney function",
+      "Significant kidney dysfunction"
+    ],
+    "correct": 3,
+    "rationale": "Creatinine (normal 0.6-1.2 mg/dL) is the best indicator of kidney function. A level of 3.8 is critically elevated and indicates significant renal impairment. Unlike BUN, creatinine is not affected by hydration status."
+  },
+  {
+    "q": "A patient on Coumadin has an INR of 4.5. Which action should the nurse take FIRST?",
+    "options": [
+      "Increase the Coumadin dose",
+      "Prepare to administer protamine sulfate",
+      "Hold the Coumadin, assess for bleeding, and prepare vitamin K",
+      "Administer the next dose as scheduled"
+    ],
+    "correct": 2,
+    "rationale": "INR normal therapeutic range on Coumadin is 2-3. An INR \u22654 requires holding Coumadin, assessing for signs of bleeding, and preparing vitamin K (the antidote for Coumadin). Protamine sulfate is the antidote for heparin, not Coumadin."
+  },
+  {
+    "q": "A patient's potassium level is 6.2 mEq/L. The nurse classifies this as which level of concern?",
+    "options": [
+      "Normal high range requiring no intervention",
+      "Deadly dangerous requiring emergency treatment",
+      "Critical but manageable with oral supplements",
+      "Mildly elevated requiring monitoring only"
+    ],
+    "correct": 1,
+    "rationale": "K+ \u22656 is 'deadly dangerous' (one of the 5 D's). Normal K+ is 3.5-5.0. At 5.4-5.9, hold K+ and give Kayexalate. At \u22656, this is a medical emergency requiring aggressive intervention to prevent fatal cardiac arrhythmias."
+  },
+  {
+    "q": "A patient's hemoglobin is 7.2 g/dL. The nurse anticipates which intervention?",
+    "options": [
+      "Increased dietary protein",
+      "Blood transfusion",
+      "Iron supplement only",
+      "No intervention needed"
+    ],
+    "correct": 1,
+    "rationale": "Hemoglobin 12-18 is normal. At 8-11, the nurse should be concerned. Below 8 is critical and requires blood transfusion. A hemoglobin of 7.2 is in the critical range."
+  },
+  {
+    "q": "A patient's CO2 level is 62 mmHg. The nurse should immediately prepare for which intervention?",
+    "options": [
+      "Nasal cannula oxygen at 2 L/min",
+      "Incentive spirometry",
+      "Intubation",
+      "Pursed-lip breathing exercises"
+    ],
+    "correct": 2,
+    "rationale": "CO2 in the 50s is critical (teach pursed-lip breathing, no supplemental O2). CO2 in the 60s is deadly dangerous \u2014 prepare for intubation and mechanical ventilation. CO2 of 62 is in the deadly range."
+  },
+  {
+    "q": "A patient's PO2 is 58 mmHg. This falls into which category?",
+    "options": [
+      "Normal range \u2014 no intervention",
+      "Critical \u2014 administer oxygen",
+      "Mildly low \u2014 continue monitoring",
+      "Deadly dangerous \u2014 prepare for intubation"
+    ],
+    "correct": 3,
+    "rationale": "PO2 80-100 is normal. 70-77 is critical (give supplemental O2). PO2 \u226460 is deadly dangerous and requires intubation. A PO2 of 58 is in the deadly range and is one of the 5 D's."
+  },
+  {
+    "q": "A patient's BNP level is 450 pg/mL. The nurse suspects which condition?",
+    "options": [
+      "Pulmonary embolism",
+      "Renal failure",
+      "Liver cirrhosis",
+      "Heart failure"
+    ],
+    "correct": 3,
+    "rationale": "BNP (B-type natriuretic peptide) <100 is normal. Elevated BNP is the best indicator of congestive heart failure (CHF). A level of 450 strongly suggests CHF and the need for further cardiac assessment."
+  },
+  {
+    "q": "A patient's WBC count is 3,200/mm\u00b3. Which precaution should the nurse implement?",
+    "options": [
+      "No additional precautions needed",
+      "Neutropenic precautions (protective isolation)",
+      "Droplet precautions",
+      "Contact precautions"
+    ],
+    "correct": 1,
+    "rationale": "WBC normal range is 5,000-11,000. A WBC <5,000 indicates the patient is neutropenic and requires neutropenic precautions (protective isolation, no raw fruits/vegetables, no fresh flowers, meticulous hand hygiene)."
+  },
+  {
+    "q": "A patient's platelet count is 35,000/mm\u00b3. The nurse recognizes this as which level of concern?",
+    "options": [
+      "Critical but manageable with standard precautions",
+      "Deadly dangerous with high risk of spontaneous bleeding",
+      "Mildly low requiring monitoring only",
+      "Normal variation requiring no action"
+    ],
+    "correct": 1,
+    "rationale": "Platelets <40,000 is one of the '5 D's' (deadly dangerous). Normal is 150,000-400,000. Below 90,000 is critical, and below 40,000 is deadly with risk of spontaneous hemorrhage. Implement strict bleeding precautions."
+  },
+  {
+    "q": "Which five lab values are classified as 'deadly dangerous' (the 5 D's)?",
+    "options": [
+      "Troponin >6, BNP >600, D-dimer >6, lactate >6, ammonia >60",
+      "Na+ <120, BUN >60, glucose >600, WBC <1000, Hgb <6",
+      "K+ \u22656, pH in the 6s, CO2 in the 60s, PO2 \u226460, platelets <40,000",
+      "INR >6, creatinine >6, calcium <6, magnesium <0.6, albumin <1.6"
+    ],
+    "correct": 2,
+    "rationale": "The 5 D's (Deadly Dangerous) are: K+ \u22656, pH in the 6's, CO2 in the 60's, PO2 \u226460, and platelets <40,000. These require immediate emergency intervention as they are all potentially fatal."
+  },
+  {
+    "q": "A common side effect shared by ALL psychotropic medications is which finding?",
+    "options": [
+      "Hyperglycemia and tachycardia",
+      "Hypotension and weight changes",
+      "Hypertension and weight loss only",
+      "Seizures and renal impairment"
+    ],
+    "correct": 1,
+    "rationale": "All psychiatric drugs cause hypotension and weight changes. This is important to remember as a baseline \u2014 individual drug classes then have additional specific side effects."
+  },
+  {
+    "q": "A patient on a phenothiazine develops involuntary repetitive facial movements and tongue protrusion. The nurse identifies this as which side effect?",
+    "options": [
+      "Anticholinergic effects",
+      "Extrapyramidal symptoms (EPS)",
+      "Neuroleptic malignant syndrome",
+      "Agranulocytosis"
+    ],
+    "correct": 1,
+    "rationale": "Phenothiazines (ending in -zine) have ABCDEFG side effects: Anticholinergic, Blurred vision, Constipation, Drowsiness, EPS (extrapyramidal symptoms), Photosensitivity, and aGranulocytosis. EPS includes dystonia, akathisia, and tardive dyskinesia."
+  },
+  {
+    "q": "A patient who is non-compliant with oral antipsychotic medication should be prescribed which formulation?",
+    "options": [
+      "Sublingual tablets",
+      "Rectal suppositories",
+      "Decanoate (long-acting injectable)",
+      "Transdermal patches"
+    ],
+    "correct": 2,
+    "rationale": "Decanoate is a long-acting injectable form of phenothiazines given to non-compliant patients. One injection provides therapeutic drug levels for weeks, ensuring medication adherence without daily oral dosing."
+  },
+  {
+    "q": "A patient on an MAO inhibitor eats aged cheddar cheese and develops a severe headache with blood pressure of 220/130 mmHg. Which complication has occurred?",
+    "options": [
+      "Neuroleptic malignant syndrome",
+      "Serotonin syndrome from SSRI interaction",
+      "Hypertensive crisis from tyramine interaction",
+      "Anticholinergic toxicity"
+    ],
+    "correct": 2,
+    "rationale": "MAO inhibitors (MARplan, NARdil, PARnate) interact with tyramine-containing foods causing fatal hypertensive crisis. Restricted foods include aged cheese, bananas, avocados, raisins, organ/preserved meats, alcohol, caffeine, and chocolate."
+  },
+  {
+    "q": "A patient taking lithium for bipolar disorder reports tremors and a metallic taste. The nurse suspects which problem?",
+    "options": [
+      "Lithium toxicity",
+      "Lithium withdrawal",
+      "Therapeutic lithium effect",
+      "Allergic reaction to lithium"
+    ],
+    "correct": 0,
+    "rationale": "Lithium therapeutic level is 0.6-1.2. Tremors and metallic taste are classic signs of lithium toxicity. Patients should hydrate with electrolyte drinks (not plain water) because lithium is an electrolyte that competes with sodium."
+  },
+  {
+    "q": "A patient taking Prozac (fluoxetine) reports difficulty sleeping. Which instruction should the nurse provide?",
+    "options": [
+      "Add a benzodiazepine at night for sleep",
+      "Take the medication before noon to reduce insomnia",
+      "Take the medication at bedtime for best effect",
+      "Discontinue the medication immediately"
+    ],
+    "correct": 1,
+    "rationale": "SSRIs like Prozac commonly cause insomnia as a side effect. The medication should be taken before noon to minimize sleep disruption. Additionally, watch for increased suicide risk in adolescents when changing SSRI doses."
+  },
+  {
+    "q": "An elderly patient on Haldol develops a fever of 105\u00b0F with muscle rigidity. The nurse suspects which life-threatening complication?",
+    "options": [
+      "Serotonin syndrome",
+      "Malignant hyperthermia",
+      "Sepsis",
+      "Neuroleptic malignant syndrome (NMS)"
+    ],
+    "correct": 3,
+    "rationale": "Haldol in the elderly can cause neuroleptic malignant syndrome (NMS), presenting with fever of 104\u00b0F or higher and severe muscle rigidity. Haldol should be given at half-dose for elderly patients. NMS is a medical emergency."
+  },
+  {
+    "q": "A patient on Clozaril (clozapine) requires which specific monitoring?",
+    "options": [
+      "Bi-weekly thyroid function tests",
+      "Daily liver function tests",
+      "Monthly renal function panels",
+      "Weekly WBC count for the first 4 weeks"
+    ],
+    "correct": 3,
+    "rationale": "Clozaril (an atypical antipsychotic for severe schizophrenia) causes severe agranulocytosis. Weekly WBC monitoring is required for the first 4 weeks to detect this potentially fatal drop in white blood cells."
+  },
+  {
+    "q": "A patient taking Zoloft with St. John's Wort is at risk for which dangerous interaction?",
+    "options": [
+      "Stevens-Johnson syndrome",
+      "Serotonin syndrome",
+      "Hypertensive crisis",
+      "Neuroleptic malignant syndrome"
+    ],
+    "correct": 1,
+    "rationale": "Zoloft (sertraline) is an SSRI. Combining SSRIs with St. John's Wort (which also affects serotonin) can cause serotonin syndrome \u2014 a potentially fatal condition of serotonin excess. Zoloft side effects include SAD Head: Sweating, Apprehensive, Dizzy, Headache."
+  },
+  {
+    "q": "Using Naegele's Rule, if a patient's LMP was March 10, what is the estimated due date?",
+    "options": [
+      "January 17",
+      "December 17",
+      "June 10",
+      "November 10"
+    ],
+    "correct": 1,
+    "rationale": "Naegele's Rule: LMP + 7 days - 3 months. March 10 + 7 days = March 17. March - 3 months = December 17 (of the same or following year)."
+  },
+  {
+    "q": "A patient at 22 weeks gestation has the fundus palpable at the level of the umbilicus. The nurse determines this is which finding?",
+    "options": [
+      "Indicative of multiple gestation",
+      "Small for gestational age",
+      "Expected/normal fundal height",
+      "A sign of polyhydramnios"
+    ],
+    "correct": 2,
+    "rationale": "The fundus is palpable at week 12 (above the symphysis pubis) and reaches the umbilicus at 20-22 weeks. A fundal height at the umbilicus at 22 weeks is a normal, expected finding."
+  },
+  {
+    "q": "An examiner palpates fetal movement through the abdomen. This is classified as which type of pregnancy sign?",
+    "options": [
+      "Diagnostic indicator only",
+      "Presumptive sign",
+      "Positive sign of pregnancy",
+      "Probable sign"
+    ],
+    "correct": 2,
+    "rationale": "Positive pregnancy signs include: fetal skeleton on X-ray, ultrasound visualization, Doppler FHR, and examiner palpation of fetal movement. These definitively confirm pregnancy, unlike presumptive or probable signs."
+  },
+  {
+    "q": "A patient in labor has contractions every 3 minutes lasting 50 seconds with moderate intensity and cervical dilation of 6 cm. Which phase of labor is this?",
+    "options": [
+      "Second stage of labor",
+      "Active phase",
+      "Transition phase",
+      "Latent phase"
+    ],
+    "correct": 1,
+    "rationale": "Active phase: 5-7 cm dilation, contractions every 3-5 minutes lasting 30-60 seconds, moderate intensity. This matches the patient's findings. Latent = 0-4 cm, Transition = 8-10 cm."
+  },
+  {
+    "q": "A nurse discovers a prolapsed umbilical cord during a vaginal exam. Which action should be taken FIRST?",
+    "options": [
+      "Cover the cord with a warm saline dressing",
+      "Clamp the cord to prevent hemorrhage",
+      "Prepare for immediate vaginal delivery",
+      "Push the presenting part back up off the cord and place the patient in knee-chest position"
+    ],
+    "correct": 3,
+    "rationale": "For prolapsed cord: push the baby's head back off the cord (to relieve compression), place the patient in knee-chest or Trendelenburg position, and prepare for emergency cesarean section. The priority is relieving cord compression."
+  },
+  {
+    "q": "During labor, fetal distress occurs. Using the LION mnemonic, what interventions should the nurse implement?",
+    "options": [
+      "Left lateral position, IV increase, Oxygen, Notify provider, stop Pitocin",
+      "Low stimulation, Incentive spirometry, Oxytocin increase, Notify family",
+      "Lithotomy position, IV antibiotics, Oxygen, Narcan administration",
+      "Lights on, Ice chips, Oral fluids, Narcotic for pain"
+    ],
+    "correct": 0,
+    "rationale": "LION for labor complications: Left lateral position (to improve placental perfusion), IV increase (to expand blood volume), Oxygen (to improve oxygenation), Notify provider, and stop Pitocin (to stop stimulating contractions)."
+  },
+  {
+    "q": "During the fourth stage of labor, the nurse should perform which assessments?",
+    "options": [
+      "Perform a complete neurological exam hourly",
+      "Check cervical dilation every 30 minutes",
+      "Vitals, fundus firmness, pad count, and roll patient to check for pooling \u2014 all every 15 minutes",
+      "Assess fetal heart tones every 5 minutes"
+    ],
+    "correct": 2,
+    "rationale": "The 4th stage (first 2 hours after delivery) requires 4 things checked 4 times per hour (every 15 minutes): vital signs, fundus firmness, pad saturation, and roll patient to side to check for blood pooling underneath."
+  },
+  {
+    "q": "On postpartum day 3, the nurse palpates the fundus 4 cm below the umbilicus. Is this normal?",
+    "options": [
+      "No \u2014 the fundus should still be at the umbilicus",
+      "Yes \u2014 the fundus drops 4 cm per day",
+      "Yes \u2014 this is exactly where the fundus should be",
+      "No \u2014 the fundus should be about 2 cm below the umbilicus by day 1 and descend 2 cm per day"
+    ],
+    "correct": 3,
+    "rationale": "The fundus is at the pubis immediately after delivery, rises to the umbilicus by 24 hours, then drops approximately 2 cm per postpartum day. By day 3, it should be about 6 cm below the umbilicus, but 4 cm below suggests slower involution \u2014 still reasonable but monitor closely."
+  },
+  {
+    "q": "A postpartum patient saturates a peri-pad in 15 minutes. The nurse documents this as which type of bleeding?",
+    "options": [
+      "Light lochia requiring no action",
+      "Expected bloody show from cervical changes",
+      "Excessive lochia requiring immediate intervention",
+      "Moderate lochia which is normal"
+    ],
+    "correct": 2,
+    "rationale": "Saturating a pad in 15 minutes is excessive lochia and constitutes a postpartum hemorrhage. Moderate lochia is 4-6 inches on a pad per hour. The nurse should massage the fundus, notify the provider, and prepare for interventions."
+  },
+  {
+    "q": "A nurse notes a newborn has a swelling on the head that does NOT cross suture lines. This is which finding?",
+    "options": [
+      "Mongolian spots",
+      "Cephalohematoma",
+      "Milia",
+      "Caput succedaneum"
+    ],
+    "correct": 1,
+    "rationale": "Cephalohematoma does NOT cross suture lines because it is a collection of blood beneath the periosteum of one cranial bone. Caput succedaneum DOES cross suture lines because it is diffuse scalp edema."
+  },
+  {
+    "q": "A patient at 30 weeks gestation is in preterm labor. Which medication does the nurse anticipate for fetal lung maturity?",
+    "options": [
+      "Betamethasone administered IM to the mother",
+      "Pitocin given IV to the mother",
+      "Terbutaline given IV to the baby",
+      "Survanta given transtracheally to the mother"
+    ],
+    "correct": 0,
+    "rationale": "Betamethasone (a corticosteroid) is given IM to the mother to accelerate fetal lung maturity. Survanta (surfactant) is given directly to the baby transtracheally after birth. Fetal lung meds: Betamethasone = to mom IM; Survanta = to baby transtracheal."
+  },
+  {
+    "q": "A patient on heparin asks about the antidote. Which medication reverses heparin?",
+    "options": [
+      "Fresh frozen plasma",
+      "Vitamin K",
+      "Protamine sulfate",
+      "Aminocaproic acid"
+    ],
+    "correct": 2,
+    "rationale": "Heparin's antidote is protamine sulfate. Heparin works immediately, is given for a maximum of 21 days, monitored by PTT, and is safe in pregnancy. Coumadin's antidote is vitamin K, monitored by PT/INR, and is class X in pregnancy."
+  },
+  {
+    "q": "A nurse is monitoring fetal heart rate tracings and observes late decelerations after each contraction. Which intervention is the priority?",
+    "options": [
+      "Implement LION protocol: left lateral, IV increase, oxygen, notify, stop Pitocin",
+      "Prepare for immediate vaginal delivery",
+      "Continue monitoring with no intervention needed",
+      "Increase the Pitocin rate to strengthen contractions"
+    ],
+    "correct": 0,
+    "rationale": "Late decelerations indicate uteroplacental insufficiency and are always bad \u2014 implement LION protocol immediately. Late decelerations, low FHR, and low variability all require the same response: Left lateral, IV increase, Oxygen, Notify, stop Pitocin."
+  },
+  {
+    "q": "Variable decelerations on the fetal monitor may indicate which emergency?",
+    "options": [
+      "Maternal hypertension",
+      "Uteroplacental insufficiency",
+      "Prolapsed umbilical cord",
+      "Normal head compression during contractions"
+    ],
+    "correct": 2,
+    "rationale": "Variable decelerations can be very bad and may indicate umbilical cord compression or prolapsed cord. Early decelerations (mirror-image of contractions) are benign head compression. Accelerations are reassuring and not a crisis."
+  },
+  {
+    "q": "During stage 2 of labor, after the fetal head delivers, the nurse should instruct the mother to do what?",
+    "options": [
+      "Turn to the left lateral position",
+      "Begin breathing exercises for pain control",
+      "Push harder to deliver the body quickly",
+      "Stop pushing while the nurse suctions the mouth and nose"
+    ],
+    "correct": 3,
+    "rationale": "Stage 2 delivery sequence: deliver the head (tell mother to STOP pushing), suction mouth then nose, check for nuchal cord, then deliver the body, and apply ID bands. Stopping pushing prevents rapid uncontrolled delivery."
+  },
+  {
+    "q": "After delivery of the placenta, the nurse examines it and finds only 2 vessels. This indicates which concern?",
+    "options": [
+      "An abnormal placenta \u2014 normal has 3 vessels (2 arteries, 1 vein)",
+      "Placenta previa",
+      "A normal placenta finding",
+      "Placental abruption"
+    ],
+    "correct": 0,
+    "rationale": "The placenta should have 3 vessels: 2 arteries and 1 vein (AVA). Finding only 2 vessels is abnormal and may indicate a single umbilical artery, which is associated with congenital anomalies. The provider should be notified."
+  },
+  {
+    "q": "When prioritizing patient assignments, which patient should the nurse see FIRST?",
+    "options": [
+      "A newly admitted patient 2 hours post-op with general anesthesia and changing vitals",
+      "A patient 24 hours post-op with local anesthesia and stable vitals",
+      "A patient with well-controlled diabetes and unchanged assessment",
+      "A stable patient with chronic COPD to be discharged today"
+    ],
+    "correct": 0,
+    "rationale": "Unstable indicators: acute, post-op <12 hours, general anesthesia, changing assessment, newly admitted. The 2-hour post-op patient with general anesthesia and changing vitals meets multiple unstable criteria and needs to be seen first."
+  },
+  {
+    "q": "Which task can the nurse delegate to a UAP (unlicensed assistive personnel)?",
+    "options": [
+      "Developing the plan of care",
+      "Performing initial patient assessments",
+      "Bathing, bed-making, and assisting with ADLs",
+      "Administering IV push medications"
+    ],
+    "correct": 2,
+    "rationale": "UAPs can do: baths, beds, ADLs, vital signs, and Accu-checks. They CANNOT: chart, assess (except VS and accucheck), give meds/IVs (except OTC topical), or perform treatments (except SSE/soap suds enema)."
+  },
+  {
+    "q": "Which task is OUTSIDE the scope of practice for an LPN?",
+    "options": [
+      "Monitoring vital signs",
+      "Performing wound care",
+      "Taking verbal orders from a physician",
+      "Administering oral medications"
+    ],
+    "correct": 2,
+    "rationale": "LPN cannot: start IVs, hang/mix IV meds, evaluate IV sites, give IV push/piggyback meds, give blood, perform assessments requiring judgment, develop plans of care, perform teaching, or take verbal orders."
+  },
+  {
+    "q": "A nurse observes a colleague diverting narcotics from the medication dispensing system. Which action is most appropriate?",
+    "options": [
+      "Document the incident but take no further action",
+      "Counsel the colleague about proper medication handling",
+      "Confront the colleague privately and give them a chance to explain",
+      "Report the behavior to the supervisor immediately"
+    ],
+    "correct": 3,
+    "rationale": "Illegal behavior should be reported to the supervisor immediately. If there is immediate danger to patients, intervene first. Legal but inappropriate behavior can be counseled later. Drug diversion is illegal and must be reported."
+  },
+  {
+    "q": "The nurse understands that the termination phase of the nurse-patient relationship begins at which time?",
+    "options": [
+      "At the time of admission",
+      "24 hours before discharge",
+      "When treatment goals are met",
+      "When the patient is ready for discharge"
+    ],
+    "correct": 0,
+    "rationale": "The termination phase begins at admission \u2014 the patient is informed from the start that the therapeutic relationship is time-limited. This prevents dependency and allows the patient to work toward discharge goals from the beginning."
+  },
+  {
+    "q": "A nurse is planning activities for a patient with bipolar disorder in the manic phase. Which activity is most appropriate?",
+    "options": [
+      "Gross motor non-competitive exercise such as walking or jogging",
+      "A quiet group reading session",
+      "A detailed arts and crafts project requiring fine motor skills",
+      "A competitive chess tournament"
+    ],
+    "correct": 0,
+    "rationale": "Bipolar/manic patients need: finger foods (high calorie \u2014 they won't sit to eat), 8 hours sleep, and gross motor non-competitive exercise (walking, jogging) to channel excess energy without stimulation from competition."
+  },
+  {
+    "q": "A patient with schizophrenia is experiencing active hallucinations. Which nursing intervention is most therapeutic?",
+    "options": [
+      "Leave the patient alone to work through the episode",
+      "Reduce environmental stimulation, observe, and offer presence",
+      "Confront the hallucinations with reality orientation",
+      "Engage the patient in competitive group activities"
+    ],
+    "correct": 1,
+    "rationale": "For schizophrenia: reduce stimulation, observe, offer presence, and engage in reality-based non-competitive activities. Reducing stimulation helps decrease the sensory overload that can worsen hallucinations."
+  },
+  {
+    "q": "A nurse is using systematic desensitization for a patient with a severe phobia of dogs. What is the correct sequence?",
+    "options": [
+      "Sedate the patient and place them in a room with dogs",
+      "Immediately expose the patient to a friendly dog",
+      "Talk about dogs, look at pictures, be around dogs, interact with dogs",
+      "Have the patient watch videos of dog attacks to confront fear"
+    ],
+    "correct": 2,
+    "rationale": "Desensitization follows a graduated approach: talk about the feared object \u2192 view pictures \u2192 be in the presence of the object \u2192 interact with the object. Each step is mastered before progressing to the next."
+  },
+  {
+    "q": "A patient in psychiatric restraints requires which monitoring frequency?",
+    "options": [
+      "Check every 15 minutes with doctor's order every 24 hours",
+      "Evaluation within 1 hour and constant observation",
+      "Hourly rounds with PRN restraint orders",
+      "Assessment every 4 hours with daily orders"
+    ],
+    "correct": 1,
+    "rationale": "Psychiatric restraints require evaluation within 1 hour and constant (continuous) observation. Non-psychiatric restraints require checks every 15 minutes with a doctor's order renewed every 24 hours. Psychiatric monitoring is more frequent."
+  },
+  {
+    "q": "When approaching a violent psychiatric patient, the team should consist of how many people?",
+    "options": [
+      "3 people \u2014 one for arms, one for legs, one to talk",
+      "1 person \u2014 the primary nurse only",
+      "5 people \u2014 one for each limb and one for the head",
+      "2 people \u2014 one on each side"
+    ],
+    "correct": 2,
+    "rationale": "A violent patient requires 5 people for safe restraint: one person assigned to each limb and one for the head. Only one person talks to the patient to reduce confusion and overstimulation."
+  },
+  {
+    "q": "The nurse identifies which Category A bioterrorism agents using the mnemonic STAPH B?",
+    "options": [
+      "Smallpox, Tularemia, Anthrax, Plague, Hemorrhagic illness, Botulism",
+      "Staphylococcus, Typhoid, Aspergillus, Pseudomonas, Hantavirus, Bordetella",
+      "Shigella, Toxoplasmosis, Acinetobacter, Pneumocystis, Histoplasmosis, Babesiosis",
+      "Salmonella, Tetanus, Adenovirus, Pertussis, Hepatitis, Brucellosis"
+    ],
+    "correct": 0,
+    "rationale": "STAPH B represents the Category A (worst/highest priority) bioterrorism agents: Smallpox, Tularemia, Anthrax, Plague, Hemorrhagic illness, and Botulism. These pose the greatest risk to public health and national security."
+  },
+  {
+    "q": "A patient exposed to anthrax via inhalation develops flu-like symptoms progressing to respiratory failure. Which antibiotic should the nurse anticipate?",
+    "options": [
+      "Ciprofloxacin",
+      "Azithromycin",
+      "Amoxicillin",
+      "Metronidazole"
+    ],
+    "correct": 0,
+    "rationale": "Inhalation anthrax presents as flu-like symptoms progressing to severe respiratory failure. Treatment includes ciprofloxacin, penicillin, or streptomycin. Early antibiotic therapy is critical for survival."
+  },
+  {
+    "q": "A patient with suspected botulism presents with descending paralysis, fever, and remains alert. The nurse's primary concern is which complication?",
+    "options": [
+      "Ascending paralysis reaching the brain",
+      "Cardiac arrest from myocardial toxin",
+      "Renal failure from toxin accumulation",
+      "Respiratory arrest from descending paralysis reaching the diaphragm"
+    ],
+    "correct": 3,
+    "rationale": "Botulism (ingested toxin) causes descending paralysis \u2014 starting from the head and moving down. The patient remains alert and febrile. The critical concern is respiratory arrest when the paralysis reaches the diaphragm/respiratory muscles."
+  },
+  {
+    "q": "After a chemical exposure incident, the priority action is which intervention?",
+    "options": [
+      "Isolation",
+      "Quarantine",
+      "Decontamination",
+      "Antibiotic administration"
+    ],
+    "correct": 2,
+    "rationale": "Biological exposure \u2192 isolate the patient. Chemical exposure \u2192 decontaminate the patient. Decontamination removes the chemical agent from the patient's body to prevent further absorption and protect healthcare workers."
+  },
+  {
+    "q": "A patient exposed to Sarin nerve agent requires decontamination with which solution?",
+    "options": [
+      "Sterile water",
+      "Bleach solution",
+      "Soap and water",
+      "Normal saline"
+    ],
+    "correct": 1,
+    "rationale": "Sarin nerve agent requires bleach for decontamination. All other chemical agents can be decontaminated with soap and water. Sarin is a nerve agent causing BB SLUDGE symptoms (bradycardia, bronchospasm, salivation, lacrimation, urination, defecation, GI distress, emesis)."
+  },
+  {
+    "q": "When performing surgical hand scrubbing, how should the hands and arms be positioned?",
+    "options": [
+      "Arms above the head with alcohol-based rub",
+      "Hands below elbows, using regular soap, washing for 15-20 seconds",
+      "Elbows below hands, using chlorhexidine solution, scrubbing for several minutes",
+      "Hands at waist level with povidone-iodine for 30 seconds"
+    ],
+    "correct": 2,
+    "rationale": "Surgical scrubbing: elbows below hands (water drains from cleanest to dirtiest), minutes (longer duration), using chlorhexidine solution. Regular handwashing: hands below elbows, seconds, using soap and water."
+  },
+  {
+    "q": "A nurse is performing sterile gloving. Which hand should be gloved first?",
+    "options": [
+      "The left hand always",
+      "Either hand \u2014 there is no preference",
+      "The dominant hand",
+      "The non-dominant hand"
+    ],
+    "correct": 2,
+    "rationale": "Sterile gloving: glove the dominant hand first (for better dexterity when gloving the non-dominant hand). Skin touches only the inside of the glove; the outside of the sterile glove touches only the outside of the other sterile glove."
+  },
+  {
+    "q": "A nurse assesses a pressure ulcer with yellow subcutaneous fat visible in the wound bed. This is which stage?",
+    "options": [
+      "Stage 1",
+      "Stage 4",
+      "Stage 2",
+      "Stage 3"
+    ],
+    "correct": 3,
+    "rationale": "Pressure sore staging: Stage 1 = non-blanching erythema, intact skin. Stage 2 = ulcerated, pink dermis visible. Stage 3 = yellow subcutaneous fat visible. Stage 4 = red-white muscle or bone visible."
+  },
+  {
+    "q": "A nurse is preparing to teach a 5-year-old about a tonsillectomy scheduled for tomorrow. Using Piaget's stages, when should the teaching occur?",
+    "options": [
+      "Several days before surgery",
+      "Immediately after the procedure",
+      "The morning of surgery",
+      "Two weeks before the procedure"
+    ],
+    "correct": 2,
+    "rationale": "A 5-year-old is in Piaget's pre-operational stage (3-6 years), which is characterized by fantasy thinking and limited time concept. Teaching should occur the morning of the procedure. Teaching too early may increase anxiety through fantasy/imagination."
+  },
+  {
+    "q": "A patient with cyanide poisoning requires which specific antidote?",
+    "options": [
+      "Activated charcoal",
+      "Sodium thiosulfate",
+      "Atropine sulfate",
+      "Pralidoxime (2-PAM)"
+    ],
+    "correct": 1,
+    "rationale": "Cyanide causes respiratory arrest, and the specific antidote is sodium thiosulfate. Chemical agents: Mustard gas = blisters, Cyanide = respiratory arrest (sodium thiosulfate), Phosgene = choking, Sarin = nerve agent (BB SLUDGE)."
+  },
+  {
+    "q": "A patient has plague presenting with hemoptysis, hematemesis, and hematochezia. The nurse anticipates which complication?",
+    "options": [
+      "Disseminated intravascular coagulation (DIC)",
+      "Hepatic encephalopathy",
+      "Pulmonary embolism",
+      "Myocardial infarction"
+    ],
+    "correct": 0,
+    "rationale": "Plague presents with the 3 H's: Hemoptysis (coughing blood), Hematemesis (vomiting blood), and Hematochezia (bloody stool), leading to DIC. Treatment is doxycycline or aminoglycosides (-mycins)."
+  },
+  {
+    "q": "A patient is receiving a tocolytic medication and develops tachycardia. The nurse suspects which medication is being administered?",
+    "options": [
+      "Cervidil",
+      "Nifedipine",
+      "Pitocin",
+      "Terbutaline"
+    ],
+    "correct": 3,
+    "rationale": "Terbutaline is a tocolytic (stops preterm contractions) with the primary side effect of tachycardia (it is a beta-agonist). Nifedipine (also a tocolytic) causes headache and hypotension. Pitocin and Cervidil are oxytocics (stimulate contractions)."
+  },
+  {
+    "q": "Coumadin (warfarin) is classified as pregnancy category X. What does this mean for the pregnant patient?",
+    "options": [
+      "It is preferred over heparin during pregnancy",
+      "It is absolutely contraindicated during pregnancy due to teratogenic effects",
+      "It can be used safely in the second trimester only",
+      "It requires dose adjustment but is acceptable in pregnancy"
+    ],
+    "correct": 1,
+    "rationale": "Coumadin is class X in pregnancy \u2014 absolutely contraindicated because it crosses the placenta and is teratogenic. Heparin is the anticoagulant of choice during pregnancy because it does NOT cross the placenta and is safe for the fetus."
+  },
+  {
+    "q": "The nurse is assessing a patient and notes a positive Trousseau's sign. Which electrolyte abnormality is indicated?",
+    "options": [
+      "Hypermagnesemia",
+      "Hyponatremia",
+      "Hyperkalemia",
+      "Hypocalcemia"
+    ],
+    "correct": 3,
+    "rationale": "Trousseau's sign (carpopedal spasm when BP cuff inflated) indicates hypocalcemia. Calcemias do the OPPOSITE of their prefix: hypocalcemia causes increased neuromuscular excitability (hyperexcitable signs like Chvostek's and Trousseau's)."
+  },
+  {
+    "q": "A nurse caring for a patient with hypermagnesemia expects which clinical finding?",
+    "options": [
+      "Decreased deep tendon reflexes and muscle weakness",
+      "Tachycardia and hypertension",
+      "Seizures and hyperactive bowel sounds",
+      "Increased deep tendon reflexes and muscle spasms"
+    ],
+    "correct": 0,
+    "rationale": "Magnesemias do the OPPOSITE of their prefix. Hypermagnesemia causes hypo-symptoms: decreased deep tendon reflexes, muscle weakness, respiratory depression, and bradycardia. Hypomagnesemia causes hyper-symptoms: tremors, seizures, hyperreflexia."
+  },
+  {
+    "q": "A patient is admitted with a BUN of 45 mg/dL. The nurse should first assess for which condition?",
+    "options": [
+      "Dehydration",
+      "Liver disease",
+      "Heart failure",
+      "Hyperglycemia"
+    ],
+    "correct": 0,
+    "rationale": "BUN normal is 8-30 mg/dL. When BUN is elevated, the first assessment should be for dehydration, as BUN rises with decreased renal perfusion from hypovolemia. After ruling out dehydration, other renal causes can be investigated."
+  },
+  {
+    "q": "A patient's ABG shows pH 7.48 and HCO3 32 mEq/L. The nurse identifies this as which imbalance?",
+    "options": [
+      "Respiratory alkalosis",
+      "Metabolic alkalosis",
+      "Respiratory acidosis",
+      "Metabolic acidosis"
+    ],
+    "correct": 1,
+    "rationale": "Using the Rule of B's, pH and bicarbonate are Both going in the same direction (both elevated). When both go in the same direction, the imbalance is metabolic. High pH + high bicarb = metabolic alkalosis."
+  },
+  {
+    "q": "An alcoholic patient's spouse cleans up after the patient's binges, makes excuses to the employer, and hides the alcohol. This behavior is known as which dynamic?",
+    "options": [
+      "Dependency",
+      "Manipulation",
+      "Confrontation",
+      "Codependency"
+    ],
+    "correct": 0,
+    "rationale": "Dependency occurs when the abuser gets the significant other to do things for them \u2014 covering up, making excuses, and managing consequences. The SO is being used by the abuser to maintain the addiction pattern."
+  },
+  {
+    "q": "A nurse is drawing a peak aminoglycoside level for a patient who received the drug via IV infusion. When should the blood be drawn?",
+    "options": [
+      "2 hours after the infusion is complete",
+      "15-30 minutes after the IV infusion is complete",
+      "30 minutes before the next dose",
+      "Immediately before starting the infusion"
+    ],
+    "correct": 1,
+    "rationale": "Peak levels measure the highest drug concentration. For IV: draw 15-30 minutes after the infusion is complete. For IM: draw 30-60 minutes after injection. For SL: draw 5-10 minutes after the tablet dissolves. Trough is always 30 minutes before the next dose."
+  },
+  {
+    "q": "A patient experiencing alcohol withdrawal syndrome (AWS) should be placed in which room type?",
+    "options": [
+      "Isolation room",
+      "Private room near the nurses' station",
+      "Any available room",
+      "Semi-private room"
+    ],
+    "correct": 3,
+    "rationale": "AWS (not life-threatening) is placed in a semi-private room. DT (life-threatening) is placed in a private room near the nurses' station. AWS gets regular diet and no restraints; DT gets clear liquid/NPO diet with vest/2-point restraints."
+  },
+  {
+    "q": "A nurse notices PVCs occurring on the T-wave of the preceding beat. This is known as which dangerous pattern?",
+    "options": [
+      "Wenckebach pattern",
+      "Normal sinus arrhythmia",
+      "R-on-T phenomenon",
+      "First-degree heart block"
+    ],
+    "correct": 2,
+    "rationale": "A PVC falling on the T-wave (R-on-T phenomenon) is one of three concerning PVC patterns (along with >6/minute and 6 in a row). The R-on-T phenomenon can trigger lethal ventricular fibrillation because it occurs during the vulnerable repolarization period."
+  },
+  {
+    "q": "The nurse knows that supraventricular tachycardia is treated using which medication sequence (ABCD)?",
+    "options": [
+      "Aspirin, Benzodiazepine, Corticosteroid, Diuretic",
+      "Adenocard, Beta blocker, Calcium channel blocker, Digitalis",
+      "Atropine, Bicarbonate, Calcium, Dextrose",
+      "Amiodarone, Bretylium, Cardioversion, Defibrillation"
+    ],
+    "correct": 1,
+    "rationale": "The ABCD mnemonic for supraventricular tachycardia treatment is: Adenocard (given rapid IV push), Beta blocker, CCB (calcium channel blocker), and Digitalis. This is the stepwise approach when each agent fails to convert the rhythm."
+  },
+  {
+    "q": "A chest tube suction control chamber shows intermittent bubbling. The nurse interprets this as which finding?",
+    "options": [
+      "An air leak that needs repair",
+      "Normal functioning requiring no intervention",
+      "Excessive suction requiring adjustment",
+      "Insufficient suction \u2014 continuous bubbling is desired in the suction control chamber"
+    ],
+    "correct": 3,
+    "rationale": "In the suction control chamber, continuous bubbling is good (means suction is working properly), while intermittent bubbling is bad (means suction is inadequate). This is the opposite of the water seal chamber where intermittent = good and continuous = bad."
+  },
+  {
+    "q": "The nurse should NEVER routinely clamp a chest tube. In which situation is clamping appropriate?",
+    "options": [
+      "During patient transport to radiology",
+      "When the patient ambulates in the hallway",
+      "Emergency situations such as accidental disconnection",
+      "While bathing the patient"
+    ],
+    "correct": 2,
+    "rationale": "Chest tubes should never be routinely clamped because clamping can cause a tension pneumothorax. The only appropriate time to clamp is in an emergency, such as when the system becomes disconnected and a new system is not immediately available."
+  },
+  {
+    "q": "A patient has a meningococcal meningitis infection. Which type of isolation precautions should the nurse implement?",
+    "options": [
+      "Contact precautions with gown and gloves only",
+      "Standard precautions only",
+      "Droplet precautions with mask and goggles",
+      "Airborne precautions with N95 respirator"
+    ],
+    "correct": 2,
+    "rationale": "Droplet precautions are used for meningitis and H. influenzae \u2014 requiring a surgical mask and goggles. Contact precautions (gown/gloves) are for enteric, staph, RSV, herpes. Airborne (N95, negative pressure) is for MTV: Measles, TB, Varicella."
+  },
+  {
+    "q": "Exercise has which effect on insulin requirements for a diabetic patient?",
+    "options": [
+      "Exercise inhibits insulin, so more insulin is needed",
+      "Exercise causes insulin resistance requiring double the dose",
+      "Exercise has no effect on insulin requirements",
+      "Exercise potentiates insulin, so less insulin is needed"
+    ],
+    "correct": 3,
+    "rationale": "Exercise potentiates (enhances) the effect of insulin. More exercise means the body uses glucose more efficiently, requiring less insulin. Patients should be taught to adjust food intake or insulin doses when exercise levels change significantly."
+  },
+  {
+    "q": "A patient with Lantus insulin asks when to expect the peak effect. Which response is most accurate?",
+    "options": [
+      "Peak occurs at 2 hours after injection",
+      "Peak occurs at 8-10 hours after injection",
+      "Peak occurs at 30 minutes after injection",
+      "Lantus has no peak \u2014 it provides a steady release over 12-24 hours"
+    ],
+    "correct": 3,
+    "rationale": "Lantus is a long-acting insulin with no peak and a duration of 12-24 hours. It provides a steady basal level of insulin coverage. This is in contrast to Regular (peak 2 hrs), NPH (peak 8-10 hrs), and Humalog (peak 30 min)."
+  },
+  {
+    "q": "An aminophylline level of 22 mcg/mL is reported. The nurse should take which action?",
+    "options": [
+      "Hold the medication and notify the provider \u2014 the level is toxic",
+      "Increase the dose because the level is subtherapeutic",
+      "Administer the next dose as scheduled",
+      "No action needed \u2014 this is within normal range"
+    ],
+    "correct": 0,
+    "rationale": "Aminophylline therapeutic range is 10-20 mcg/mL. A level \u226520 is toxic. At 22 mcg/mL, the nurse should hold the medication, assess for toxicity signs (tachycardia, nausea, seizures), and notify the provider."
+  },
+  {
+    "q": "A patient with hypothyroidism (myxedema) exhibits which cluster of symptoms?",
+    "options": [
+      "Weight loss, diarrhea, tachycardia, and heat intolerance",
+      "Weight gain, constipation, lethargy, and cold intolerance",
+      "Hyperpigmentation, hypotension, and weakness",
+      "Moon face, buffalo hump, and central obesity"
+    ],
+    "correct": 1,
+    "rationale": "Hypothyroidism (myxedema) is hypo-metabolism: everything slows down. Weight gain, constipation, lethargy, cold intolerance, bradycardia, and dry skin. Treatment is thyroid replacement \u2014 never sedate these patients and never hold thyroid pills when NPO."
+  },
+  {
+    "q": "A patient with Addison's disease is about to undergo a stressful dental procedure. The nurse should advocate for which intervention?",
+    "options": [
+      "Delaying the procedure until Addison's resolves",
+      "Administration of thyroid hormone replacement",
+      "Increased steroid dose to help the body manage stress",
+      "Discontinuation of all steroids before the procedure"
+    ],
+    "correct": 2,
+    "rationale": "Addison's disease patients cannot respond to physiological stress because of adrenal cortex under-secretion. They require increased steroid doses (stress doses) before, during, and after stressful events like surgery or dental procedures."
+  },
+  {
+    "q": "Which phase of the therapeutic nurse-patient relationship involves implementing the plan of care with a focused and directive approach?",
+    "options": [
+      "Pre-interaction phase",
+      "Working/therapeutic phase",
+      "Introductory/orientation phase",
+      "Termination phase"
+    ],
+    "correct": 1,
+    "rationale": "The working/therapeutic phase is when the nurse implements the plan of care. The approach should be focused, directive, and include setting limits. The introductory phase is warm and fuzzy (establishing rapport). Pre-interaction is when the nurse explores their own feelings."
+  },
+  {
+    "q": "A depressed patient on a psychiatric unit makes a statement about wanting to die. The nurse's FIRST action should be which intervention?",
+    "options": [
+      "Inquire directly about suicidal ideation and establish a safety contract",
+      "Notify the family and request they provide constant observation",
+      "Ignore the statement to avoid reinforcing attention-seeking behavior",
+      "Immediately place the patient in restraints"
+    ],
+    "correct": 0,
+    "rationale": "For depression: inquire about suicide directly (asking does not cause it), establish a safety contract, and provide activities with others that don't require interaction. Direct inquiry is essential for safety assessment."
+  },
+  {
+    "q": "A patient with RSV (respiratory syncytial virus) requires which type of isolation precautions?",
+    "options": [
+      "Airborne precautions with N95 respirator",
+      "Contact precautions with gown and gloves",
+      "Standard precautions only",
+      "Droplet precautions with surgical mask"
+    ],
+    "correct": 1,
+    "rationale": "RSV requires contact precautions (gown and gloves). Contact precautions are used for: enteric infections, staphylococcal infections, RSV, and herpes. The nurse must wear gown and gloves when entering the room."
+  },
+  {
+    "q": "The nurse is teaching a parent about expected weight gain during pregnancy. Which statement indicates correct understanding?",
+    "options": [
+      "I should gain 1 pound per day throughout pregnancy",
+      "I should gain about 1 pound per week during the second and third trimesters",
+      "Total weight gain should be limited to 10 pounds",
+      "I should not gain any weight during the first trimester"
+    ],
+    "correct": 1,
+    "rationale": "Normal pregnancy weight gain is 25-31 pounds total: approximately 1 pound per month in the first trimester, then 1 pound per week during the second and third trimesters."
+  },
+  {
+    "q": "A nurse notes lochia rubra on a patient who is 2 days postpartum. Is this finding normal?",
+    "options": [
+      "No \u2014 lochia should be serosa (pink) by day 2",
+      "No \u2014 all lochia should have ceased by 48 hours",
+      "Yes \u2014 but only if it is heavy enough to saturate a pad hourly",
+      "Yes \u2014 lochia rubra (red) is expected in the first few days after delivery"
+    ],
+    "correct": 3,
+    "rationale": "Lochia rubra (red, bloody discharge) is normal for the first few days postpartum. After about one week, it transitions to lochia serosa (pink/brownish). Moderate lochia rubra = 4-6 inches on a pad per hour is expected."
+  },
+  {
+    "q": "Using Piaget's cognitive development stages, a 10-year-old child is in which stage?",
+    "options": [
+      "Formal operations",
+      "Concrete operations",
+      "Pre-operational",
+      "Sensorimotor"
+    ],
+    "correct": 1,
+    "rationale": "Concrete operations (7-11 years): the child understands rules, logic, and can think systematically about concrete events. Teaching should occur days ahead. Sensorimotor = 0-2 years. Pre-operational = 3-6 years. Formal operations = 12-14 years."
+  },
+  {
+    "q": "A patient in the 2nd stage of grief following a terminal diagnosis is verbally abusive to the nursing staff. The nurse recognizes this as which stage?",
+    "options": [
+      "Depression",
+      "Bargaining",
+      "Anger",
+      "Denial"
+    ],
+    "correct": 2,
+    "rationale": "The 5 stages of grief are: Denial, Anger, Bargaining, Depression, Acceptance. The second stage is anger, where the patient may direct hostility toward caregivers. The nurse should allow expression of anger while maintaining professional boundaries."
+  },
+  {
+    "q": "A patient with a narrowed self-concept refuses to change clothes, leave the room, or participate in activities. The nurse recognizes this as a symptom of which condition?",
+    "options": [
+      "Mania",
+      "Psychosis",
+      "Depression",
+      "Generalized anxiety disorder"
+    ],
+    "correct": 1,
+    "rationale": "Narrowed self-concept is a psychotic symptom where the patient restricts their world to a very small, controllable space \u2014 refusing to change clothes, leave their room, or engage with others. It reflects the patient's attempt to cope with an overwhelming loss of reality contact."
+  }
+]
