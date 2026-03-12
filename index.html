@@ -1432,116 +1432,10 @@ accHtml += '<div class="wp-acc-item">' +
 '<th>\uD83D\uDCA1 Brand and Common Names</th><th>\uD83C\uDFAF Key Point</th><th>\u26A0\uFE0F Alert</th>' +
 '</tr></thead><tbody>' + gRows + '</tbody></table></div></div>';
 }
-var bodyMapHtml='';
-try{
-var _bmC={},_bmMax=1;
-for(var _bmi=0;_bmi<wpOrd.length;_bmi++){var _bn=wpOrd[_bmi],_bl=wpGrp[_bn].length;_bmC[_bn]=_bl;if(_bl>_bmMax)_bmMax=_bl;}
-var _ps=function(cat){var r=4-((_bmC[cat]||0)/_bmMax)*2.5;return(r<1.5?1.5:r).toFixed(1);};
-var _ct=function(cat){return _bmC[cat]||0;};
-bodyMapHtml='<div class="body-map-container bm-open">'+
-'<div class="body-map-toggle" onclick="toggleBodyMap()">'+
-'<span>\uD83C\uDFE5 Body System Navigator</span>'+
-'<span class="body-map-arrow" id="body-map-arrow">\u25BE</span></div>'+
-'<div class="body-map-content" id="body-map-content">'+
-'<svg class="body-map-svg" viewBox="0 0 560 640" xmlns="http://www.w3.org/2000/svg">'+
-'<defs>'+
-'<filter id="bmGlow" x="-50%" y="-50%" width="200%" height="200%">'+
-'<feGaussianBlur stdDeviation="6" result="b"/>'+
-'<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>'+
-'<clipPath id="brL"><rect x="220" y="10" width="60" height="90"/></clipPath>'+
-'<clipPath id="brR"><rect x="280" y="10" width="60" height="90"/></clipPath>'+
-'</defs>'+
-'<g class="bm-body">'+
-'<ellipse cx="280" cy="58" rx="38" ry="46"/>'+
-'<rect x="268" y="101" width="24" height="28" rx="10"/>'+
-'<rect x="208" y="127" width="144" height="78" rx="22"/>'+
-'<rect x="218" y="197" width="124" height="98" rx="14"/>'+
-'<ellipse cx="280" cy="328" rx="62" ry="38"/>'+
-'<rect x="166" y="135" width="34" height="105" rx="14" transform="rotate(-8,183,188)"/>'+
-'<rect x="360" y="135" width="34" height="105" rx="14" transform="rotate(8,377,188)"/>'+
-'<rect x="152" y="234" width="26" height="78" rx="11" transform="rotate(-4,165,273)"/>'+
-'<rect x="382" y="234" width="26" height="78" rx="11" transform="rotate(4,395,273)"/>'+
-'<ellipse cx="155" cy="318" rx="14" ry="10"/>'+
-'<ellipse cx="405" cy="318" rx="14" ry="10"/>'+
-'<rect x="226" y="356" width="42" height="136" rx="18" transform="rotate(-2,247,424)"/>'+
-'<rect x="292" y="356" width="42" height="136" rx="18" transform="rotate(2,313,424)"/>'+
-'<rect x="230" y="486" width="34" height="104" rx="14" transform="rotate(-1,247,538)"/>'+
-'<rect x="296" y="486" width="34" height="104" rx="14" transform="rotate(1,313,538)"/>'+
-'<ellipse cx="242" cy="598" rx="22" ry="10"/>'+
-'<ellipse cx="318" cy="598" rx="22" ry="10"/>'+
-'</g>'+
-'<g class="bm-organ" onclick="bodyMapClick(\'Nervous System\')" style="animation:organPulse '+_ps('Nervous System')+'s ease-in-out infinite">'+
-'<ellipse cx="280" cy="48" rx="29" ry="22" fill="#8b5cf6" opacity="0.8" clip-path="url(#brL)"/>'+
-'<ellipse cx="280" cy="48" rx="35" ry="28" fill="transparent" clip-path="url(#brL)"/>'+
-'</g>'+
-'<g class="bm-organ" onclick="bodyMapClick(\'Psychiatric / Mental Health\')" style="animation:organPulse '+_ps('Psychiatric / Mental Health')+'s ease-in-out infinite">'+
-'<ellipse cx="280" cy="48" rx="29" ry="22" fill="#818cf8" opacity="0.8" clip-path="url(#brR)"/>'+
-'<ellipse cx="280" cy="48" rx="35" ry="28" fill="transparent" clip-path="url(#brR)"/>'+
-'</g>'+
-'<g class="bm-organ" onclick="bodyMapClick(\'Sensory / Ophthalmic\')" style="animation:organPulse '+_ps('Sensory / Ophthalmic')+'s ease-in-out infinite">'+
-'<ellipse cx="270" cy="70" rx="6" ry="5" fill="#22c55e" opacity="0.9"/>'+
-'<ellipse cx="290" cy="70" rx="6" ry="5" fill="#22c55e" opacity="0.9"/>'+
-'<rect x="258" y="60" width="44" height="22" rx="8" fill="transparent" class="bm-touch"/>'+
-'</g>'+
-'<g class="bm-organ" onclick="bodyMapClick(\'Endocrine\')" style="animation:organPulse '+_ps('Endocrine')+'s ease-in-out infinite">'+
-'<ellipse cx="273" cy="116" rx="7" ry="5" fill="#ec4899" opacity="0.85" transform="rotate(-15,273,116)"/>'+
-'<ellipse cx="287" cy="116" rx="7" ry="5" fill="#ec4899" opacity="0.85" transform="rotate(15,287,116)"/>'+
-'<rect x="260" y="106" width="40" height="22" rx="8" fill="transparent" class="bm-touch"/>'+
-'</g>'+
-'<g class="bm-organ" onclick="bodyMapClick(\'Cardiovascular\')" style="animation:organPulse '+_ps('Cardiovascular')+'s ease-in-out infinite">'+
-'<path d="M265,176 C265,168 253,165 253,175 C253,185 265,196 265,196 C265,196 277,185 277,175 C277,165 265,168 265,176Z" fill="#ef4444" opacity="0.9"/>'+
-'<circle cx="265" cy="182" r="20" fill="transparent" class="bm-touch"/>'+
-'</g>'+
-'<g class="bm-organ" onclick="bodyMapClick(\'Respiratory\')" style="animation:organPulse '+_ps('Respiratory')+'s ease-in-out infinite">'+
-'<ellipse cx="248" cy="178" rx="16" ry="32" fill="#06b6d4" opacity="0.6" transform="rotate(5,248,178)"/>'+
-'<ellipse cx="312" cy="178" rx="16" ry="32" fill="#06b6d4" opacity="0.6" transform="rotate(-5,312,178)"/>'+
-'<rect x="228" y="142" width="104" height="76" rx="10" fill="transparent" class="bm-touch"/>'+
-'</g>'+
-'<g class="bm-organ" onclick="bodyMapClick(\'Digestive / GI\')" style="animation:organPulse '+_ps('Digestive / GI')+'s ease-in-out infinite">'+
-'<ellipse cx="288" cy="250" rx="22" ry="18" fill="#f59e0b" opacity="0.75" transform="rotate(-10,288,250)"/>'+
-'<ellipse cx="275" cy="275" rx="18" ry="12" fill="#f59e0b" opacity="0.5"/>'+
-'<rect x="252" y="228" width="50" height="66" rx="8" fill="transparent" class="bm-touch"/>'+
-'</g>'+
-'<g class="bm-organ" onclick="bodyMapClick(\'Renal / Urinary\')" style="animation:organPulse '+_ps('Renal / Urinary')+'s ease-in-out infinite">'+
-'<ellipse cx="240" cy="260" rx="10" ry="15" fill="#14b8a6" opacity="0.8" transform="rotate(-12,240,260)"/>'+
-'<ellipse cx="320" cy="260" rx="10" ry="15" fill="#14b8a6" opacity="0.8" transform="rotate(12,320,260)"/>'+
-'<circle cx="240" cy="260" r="18" fill="transparent" class="bm-touch"/>'+
-'<circle cx="320" cy="260" r="18" fill="transparent" class="bm-touch"/>'+
-'</g>'+
-'<g class="bm-organ" onclick="bodyMapClick(\'Musculoskeletal / Pain\')" style="animation:organPulse '+_ps('Musculoskeletal / Pain')+'s ease-in-out infinite;opacity:0.55">'+
-'<line x1="247" y1="370" x2="244" y2="480" stroke="#eab308" stroke-width="3" stroke-linecap="round"/>'+
-'<line x1="313" y1="370" x2="316" y2="480" stroke="#eab308" stroke-width="3" stroke-linecap="round"/>'+
-'<line x1="247" y1="420" x2="260" y2="418" stroke="#eab308" stroke-width="2" opacity="0.6"/>'+
-'<line x1="313" y1="420" x2="300" y2="418" stroke="#eab308" stroke-width="2" opacity="0.6"/>'+
-'<line x1="182" y1="155" x2="175" y2="240" stroke="#eab308" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>'+
-'<line x1="378" y1="155" x2="385" y2="240" stroke="#eab308" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>'+
-'<rect x="160" y="145" width="240" height="350" rx="10" fill="transparent" class="bm-touch"/>'+
-'</g>'+
-'<g class="bm-organ" onclick="bodyMapClick(\'Integumentary\')" style="animation:organPulse '+_ps('Integumentary')+'s ease-in-out infinite;opacity:0.45">'+
-'<ellipse cx="280" cy="58" rx="40" ry="48" fill="none" stroke="#f97316" stroke-width="2.5" stroke-dasharray="6,4"/>'+
-'<rect x="206" y="127" width="148" height="80" rx="24" fill="none" stroke="#f97316" stroke-width="2" stroke-dasharray="6,4" opacity="0.7"/>'+
-'</g>'+
-'<line class="bm-line" x1="130" y1="40" x2="251" y2="48"/><g class="bm-label" onclick="bodyMapClick(\'Nervous System\')"><circle cx="126" cy="36" r="5" fill="#8b5cf6"/><text class="bm-label-text" x="118" y="39" text-anchor="end" font-size="11.5">Nervous System</text><text class="bm-label-count" x="118" y="52" text-anchor="end" font-size="9.5">'+_ct('Nervous System')+' drugs</text></g>'+
-'<line class="bm-line" x1="430" y1="40" x2="309" y2="48"/><g class="bm-label" onclick="bodyMapClick(\'Psychiatric / Mental Health\')"><circle cx="434" cy="36" r="5" fill="#818cf8"/><text class="bm-label-text" x="444" y="39" font-size="11.5">Psychiatric</text><text class="bm-label-count" x="444" y="52" font-size="9.5">'+_ct('Psychiatric / Mental Health')+' drugs</text></g>'+
-'<line class="bm-line" x1="430" y1="78" x2="296" y2="70"/><g class="bm-label" onclick="bodyMapClick(\'Sensory / Ophthalmic\')"><circle cx="434" cy="74" r="5" fill="#22c55e"/><text class="bm-label-text" x="444" y="77" font-size="11.5">Sensory / Eyes</text><text class="bm-label-count" x="444" y="90" font-size="9.5">'+_ct('Sensory / Ophthalmic')+' drugs</text></g>'+
-'<line class="bm-line" x1="430" y1="118" x2="294" y2="116"/><g class="bm-label" onclick="bodyMapClick(\'Endocrine\')"><circle cx="434" cy="114" r="5" fill="#ec4899"/><text class="bm-label-text" x="444" y="117" font-size="11.5">Endocrine</text><text class="bm-label-count" x="444" y="130" font-size="9.5">'+_ct('Endocrine')+' drugs</text></g>'+
-'<line class="bm-line" x1="130" y1="142" x2="208" y2="185"/><g class="bm-label" onclick="bodyMapClick(\'Integumentary\')"><circle cx="126" cy="138" r="5" fill="#f97316"/><text class="bm-label-text" x="118" y="141" text-anchor="end" font-size="11.5">Integumentary</text><text class="bm-label-count" x="118" y="154" text-anchor="end" font-size="9.5">'+_ct('Integumentary')+' drugs</text></g>'+
-'<line class="bm-line" x1="130" y1="185" x2="232" y2="178"/><g class="bm-label" onclick="bodyMapClick(\'Respiratory\')"><circle cx="126" cy="181" r="5" fill="#06b6d4"/><text class="bm-label-text" x="118" y="184" text-anchor="end" font-size="11.5">Respiratory</text><text class="bm-label-count" x="118" y="197" text-anchor="end" font-size="9.5">'+_ct('Respiratory')+' drugs</text></g>'+
-'<line class="bm-line" x1="430" y1="185" x2="277" y2="182"/><g class="bm-label" onclick="bodyMapClick(\'Cardiovascular\')"><circle cx="434" cy="181" r="5" fill="#ef4444"/><text class="bm-label-text" x="444" y="184" font-size="11.5">Cardiovascular</text><text class="bm-label-count" x="444" y="197" font-size="9.5">'+_ct('Cardiovascular')+' drugs</text></g>'+
-'<line class="bm-line" x1="430" y1="255" x2="310" y2="250"/><g class="bm-label" onclick="bodyMapClick(\'Digestive / GI\')"><circle cx="434" cy="251" r="5" fill="#f59e0b"/><text class="bm-label-text" x="444" y="254" font-size="11.5">Digestive / GI</text><text class="bm-label-count" x="444" y="267" font-size="9.5">'+_ct('Digestive / GI')+' drugs</text></g>'+
-'<line class="bm-line" x1="130" y1="260" x2="230" y2="260"/><g class="bm-label" onclick="bodyMapClick(\'Renal / Urinary\')"><circle cx="126" cy="256" r="5" fill="#14b8a6"/><text class="bm-label-text" x="118" y="259" text-anchor="end" font-size="11.5">Renal / Urinary</text><text class="bm-label-count" x="118" y="272" text-anchor="end" font-size="9.5">'+_ct('Renal / Urinary')+' drugs</text></g>'+
-'<line class="bm-line" x1="130" y1="410" x2="226" y2="420"/><g class="bm-label" onclick="bodyMapClick(\'Musculoskeletal / Pain\')"><circle cx="126" cy="406" r="5" fill="#eab308"/><text class="bm-label-text" x="118" y="409" text-anchor="end" font-size="11.5">Musculoskeletal</text><text class="bm-label-count" x="118" y="422" text-anchor="end" font-size="9.5">'+_ct('Musculoskeletal / Pain')+' drugs</text></g>'+
-'</svg>'+
-'<div class="bm-extras">'+
-'<div class="bm-card" onclick="bodyMapClick(\'Anti-Infective\')"><span class="bm-card-dot" style="background:#10b981"></span>Anti-Infective<span class="bm-card-count">'+_ct('Anti-Infective')+'</span></div>'+
-'<div class="bm-card" onclick="bodyMapClick(\'Immune / Lymphatic\')"><span class="bm-card-dot" style="background:#3b82f6"></span>Immune / Lymphatic<span class="bm-card-count">'+_ct('Immune / Lymphatic')+'</span></div>'+
-'<div class="bm-card" onclick="bodyMapClick(\'Nutritional Support\')"><span class="bm-card-dot" style="background:#84cc16"></span>Nutritional Support<span class="bm-card-count">'+_ct('Nutritional Support')+'</span></div>'+
-'</div>'+
-'<div class="bm-hint">Tap any region or label to jump to that drug group</div>'+
-'</div></div>';
-}catch(bmErr){console.log('Body map error:'+bmErr);bodyMapHtml='';}
-document.getElementById('content-area').innerHTML = wpHeaderHtml + bodyMapHtml +
+document.getElementById('content-area').innerHTML = wpHeaderHtml +
+'<div id="bm-mount"></div>' +
 '<div class="wp-accordion" id="wp-accordion">' + accHtml + '</div>';
+try{ _buildBodyMap(wpOrd, wpGrp); }catch(e){ console.log('Body map build error: '+e.message); }
 return;
 }
 var rows = '';
@@ -1646,6 +1540,132 @@ if (resultsDiv && resultsDiv.style.display === 'block' && !e.target.closest('.wp
 resultsDiv.style.display = 'none';
 }
 });
+
+function _buildBodyMap(wpOrd, wpGrp) {
+var mount = document.getElementById('bm-mount');
+if (!mount) return;
+var bmC = {}, bmMax = 1;
+for (var i = 0; i < wpOrd.length; i++) {
+var n = wpOrd[i], l = wpGrp[n].length;
+bmC[n] = l;
+if (l > bmMax) bmMax = l;
+}
+function ps(cat) {
+var r = 4 - ((bmC[cat] || 0) / bmMax) * 2.5;
+return (r < 1.5 ? 1.5 : r).toFixed(1);
+}
+function ct(cat) { return bmC[cat] || 0; }
+
+// Build SVG parts as array
+var svg = [];
+svg.push('<svg class="body-map-svg" viewBox="0 0 560 640" xmlns="http://www.w3.org/2000/svg">');
+svg.push('<defs>');
+svg.push('<filter id="bmGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>');
+svg.push('<clipPath id="brL"><rect x="220" y="10" width="60" height="90"/></clipPath>');
+svg.push('<clipPath id="brR"><rect x="280" y="10" width="60" height="90"/></clipPath>');
+svg.push('</defs>');
+
+// Body silhouette
+svg.push('<g class="bm-body">');
+svg.push('<ellipse cx="280" cy="58" rx="38" ry="46"/>');
+svg.push('<rect x="268" y="101" width="24" height="28" rx="10"/>');
+svg.push('<rect x="208" y="127" width="144" height="78" rx="22"/>');
+svg.push('<rect x="218" y="197" width="124" height="98" rx="14"/>');
+svg.push('<ellipse cx="280" cy="328" rx="62" ry="38"/>');
+svg.push('<rect x="166" y="135" width="34" height="105" rx="14" transform="rotate(-8,183,188)"/>');
+svg.push('<rect x="360" y="135" width="34" height="105" rx="14" transform="rotate(8,377,188)"/>');
+svg.push('<rect x="152" y="234" width="26" height="78" rx="11" transform="rotate(-4,165,273)"/>');
+svg.push('<rect x="382" y="234" width="26" height="78" rx="11" transform="rotate(4,395,273)"/>');
+svg.push('<ellipse cx="155" cy="318" rx="14" ry="10"/>');
+svg.push('<ellipse cx="405" cy="318" rx="14" ry="10"/>');
+svg.push('<rect x="226" y="356" width="42" height="136" rx="18" transform="rotate(-2,247,424)"/>');
+svg.push('<rect x="292" y="356" width="42" height="136" rx="18" transform="rotate(2,313,424)"/>');
+svg.push('<rect x="230" y="486" width="34" height="104" rx="14" transform="rotate(-1,247,538)"/>');
+svg.push('<rect x="296" y="486" width="34" height="104" rx="14" transform="rotate(1,313,538)"/>');
+svg.push('<ellipse cx="242" cy="598" rx="22" ry="10"/>');
+svg.push('<ellipse cx="318" cy="598" rx="22" ry="10"/>');
+svg.push('</g>');
+
+// Organ highlights - using data-cat attribute instead of inline onclick
+var organs = [
+{cat:"Nervous System",shapes:'<ellipse cx="280" cy="48" rx="29" ry="22" fill="#8b5cf6" opacity="0.8" clip-path="url(#brL)"/><ellipse cx="280" cy="48" rx="35" ry="28" fill="transparent" clip-path="url(#brL)"/>'},
+{cat:"Psychiatric / Mental Health",shapes:'<ellipse cx="280" cy="48" rx="29" ry="22" fill="#818cf8" opacity="0.8" clip-path="url(#brR)"/><ellipse cx="280" cy="48" rx="35" ry="28" fill="transparent" clip-path="url(#brR)"/>'},
+{cat:"Sensory / Ophthalmic",shapes:'<ellipse cx="270" cy="70" rx="6" ry="5" fill="#22c55e" opacity="0.9"/><ellipse cx="290" cy="70" rx="6" ry="5" fill="#22c55e" opacity="0.9"/><rect x="258" y="60" width="44" height="22" rx="8" fill="transparent" class="bm-touch"/>'},
+{cat:"Endocrine",shapes:'<ellipse cx="273" cy="116" rx="7" ry="5" fill="#ec4899" opacity="0.85" transform="rotate(-15,273,116)"/><ellipse cx="287" cy="116" rx="7" ry="5" fill="#ec4899" opacity="0.85" transform="rotate(15,287,116)"/><rect x="260" y="106" width="40" height="22" rx="8" fill="transparent" class="bm-touch"/>'},
+{cat:"Cardiovascular",shapes:'<path d="M265,176 C265,168 253,165 253,175 C253,185 265,196 265,196 C265,196 277,185 277,175 C277,165 265,168 265,176Z" fill="#ef4444" opacity="0.9"/><circle cx="265" cy="182" r="20" fill="transparent" class="bm-touch"/>'},
+{cat:"Respiratory",shapes:'<ellipse cx="248" cy="178" rx="16" ry="32" fill="#06b6d4" opacity="0.6" transform="rotate(5,248,178)"/><ellipse cx="312" cy="178" rx="16" ry="32" fill="#06b6d4" opacity="0.6" transform="rotate(-5,312,178)"/><rect x="228" y="142" width="104" height="76" rx="10" fill="transparent" class="bm-touch"/>'},
+{cat:"Digestive / GI",shapes:'<ellipse cx="288" cy="250" rx="22" ry="18" fill="#f59e0b" opacity="0.75" transform="rotate(-10,288,250)"/><ellipse cx="275" cy="275" rx="18" ry="12" fill="#f59e0b" opacity="0.5"/><rect x="252" y="228" width="50" height="66" rx="8" fill="transparent" class="bm-touch"/>'},
+{cat:"Renal / Urinary",shapes:'<ellipse cx="240" cy="260" rx="10" ry="15" fill="#14b8a6" opacity="0.8" transform="rotate(-12,240,260)"/><ellipse cx="320" cy="260" rx="10" ry="15" fill="#14b8a6" opacity="0.8" transform="rotate(12,320,260)"/><circle cx="240" cy="260" r="18" fill="transparent" class="bm-touch"/><circle cx="320" cy="260" r="18" fill="transparent" class="bm-touch"/>'},
+{cat:"Musculoskeletal / Pain",extra:"opacity:0.55",shapes:'<line x1="247" y1="370" x2="244" y2="480" stroke="#eab308" stroke-width="3" stroke-linecap="round"/><line x1="313" y1="370" x2="316" y2="480" stroke="#eab308" stroke-width="3" stroke-linecap="round"/><line x1="247" y1="420" x2="260" y2="418" stroke="#eab308" stroke-width="2" opacity="0.6"/><line x1="313" y1="420" x2="300" y2="418" stroke="#eab308" stroke-width="2" opacity="0.6"/><line x1="182" y1="155" x2="175" y2="240" stroke="#eab308" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/><line x1="378" y1="155" x2="385" y2="240" stroke="#eab308" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/><rect x="160" y="145" width="240" height="350" rx="10" fill="transparent" class="bm-touch"/>'},
+{cat:"Integumentary",extra:"opacity:0.45",shapes:'<ellipse cx="280" cy="58" rx="40" ry="48" fill="none" stroke="#f97316" stroke-width="2.5" stroke-dasharray="6,4"/><rect x="206" y="127" width="148" height="80" rx="24" fill="none" stroke="#f97316" stroke-width="2" stroke-dasharray="6,4" opacity="0.7"/>'}
+];
+for (var oi = 0; oi < organs.length; oi++) {
+var o = organs[oi];
+var extra = o.extra ? ';' + o.extra : '';
+svg.push('<g class="bm-organ" data-cat="' + o.cat + '" style="animation:organPulse ' + ps(o.cat) + 's ease-in-out infinite' + extra + '">' + o.shapes + '</g>');
+}
+
+// Labels with connecting lines
+var labels = [
+{cat:"Nervous System",side:"L",cx:126,cy:36,lx:130,ly:40,tx:251,ty:48,color:"#8b5cf6",text:"Nervous System"},
+{cat:"Psychiatric / Mental Health",side:"R",cx:434,cy:36,lx:430,ly:40,tx:309,ty:48,color:"#818cf8",text:"Psychiatric"},
+{cat:"Sensory / Ophthalmic",side:"R",cx:434,cy:74,lx:430,ly:78,tx:296,ty:70,color:"#22c55e",text:"Sensory / Eyes"},
+{cat:"Endocrine",side:"R",cx:434,cy:114,lx:430,ly:118,tx:294,ty:116,color:"#ec4899",text:"Endocrine"},
+{cat:"Integumentary",side:"L",cx:126,cy:138,lx:130,ly:142,tx:208,ty:185,color:"#f97316",text:"Integumentary"},
+{cat:"Respiratory",side:"L",cx:126,cy:181,lx:130,ly:185,tx:232,ty:178,color:"#06b6d4",text:"Respiratory"},
+{cat:"Cardiovascular",side:"R",cx:434,cy:181,lx:430,ly:185,tx:277,ty:182,color:"#ef4444",text:"Cardiovascular"},
+{cat:"Digestive / GI",side:"R",cx:434,cy:251,lx:430,ly:255,tx:310,ty:250,color:"#f59e0b",text:"Digestive / GI"},
+{cat:"Renal / Urinary",side:"L",cx:126,cy:256,lx:130,ly:260,tx:230,ty:260,color:"#14b8a6",text:"Renal / Urinary"},
+{cat:"Musculoskeletal / Pain",side:"L",cx:126,cy:406,lx:130,ly:410,tx:226,ty:420,color:"#eab308",text:"Musculoskeletal"}
+];
+for (var li = 0; li < labels.length; li++) {
+var lb = labels[li];
+var tx = lb.side === 'L' ? lb.cx - 8 : lb.cx + 10;
+svg.push('<line class="bm-line" x1="' + lb.lx + '" y1="' + lb.ly + '" x2="' + lb.tx + '" y2="' + lb.ty + '"/>');
+svg.push('<g class="bm-label" data-cat="' + lb.cat + '">');
+svg.push('<circle cx="' + lb.cx + '" cy="' + lb.cy + '" r="5" fill="' + lb.color + '"/>');
+svg.push('<text class="bm-label-text" x="' + tx + '" y="' + (lb.cy + 3) + '"' + (lb.side === 'L' ? ' text-anchor="end"' : '') + ' font-size="11.5">' + lb.text + '</text>');
+svg.push('<text class="bm-label-count" x="' + tx + '" y="' + (lb.cy + 16) + '"' + (lb.side === 'L' ? ' text-anchor="end"' : '') + ' font-size="9.5">' + ct(lb.cat) + ' drugs</text>');
+svg.push('</g>');
+}
+
+svg.push('</svg>');
+
+// Non-body category cards
+var cards = [
+{cat:"Anti-Infective",color:"#10b981"},
+{cat:"Immune / Lymphatic",color:"#3b82f6"},
+{cat:"Nutritional Support",color:"#84cc16"}
+];
+var cardsHtml = '<div class="bm-extras">';
+for (var ci = 0; ci < cards.length; ci++) {
+var c = cards[ci];
+cardsHtml += '<div class="bm-card" data-cat="' + c.cat + '"><span class="bm-card-dot" style="background:' + c.color + '"></span>' + c.cat + '<span class="bm-card-count">' + ct(c.cat) + '</span></div>';
+}
+cardsHtml += '</div>';
+
+// Assemble complete body map
+var container = document.createElement('div');
+container.className = 'body-map-container bm-open';
+container.innerHTML =
+'<div class="body-map-toggle" onclick="toggleBodyMap()">' +
+'<span>\uD83C\uDFE5 Body System Navigator</span>' +
+'<span class="body-map-arrow">\u25BE</span></div>' +
+'<div class="body-map-content">' +
+svg.join('') +
+cardsHtml +
+'<div class="bm-hint">Tap any region or label to jump to that drug group</div>' +
+'</div>';
+
+mount.appendChild(container);
+
+// Attach click handlers via event delegation (avoids inline onclick escaping issues)
+container.addEventListener('click', function(e) {
+var el = e.target.closest('[data-cat]');
+if (el) bodyMapClick(el.getAttribute('data-cat'));
+});
+}
+
 window.bodyMapClick = function(category) {
 var items = document.querySelectorAll('.wp-acc-item');
 for (var i = 0; i < items.length; i++) {
