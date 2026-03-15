@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prioritization — NCLEX Crib Notes</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --pri-bg-from: #0f1117;
+  --pri-bg-mid: #1a1f2e;
+  --pri-bg-to: #252d3f;
+  --pri-accent: #dc2626;
+  --pri-accent-light: #f87171;
+  --pri-text: #e8ecf4;
+  --pri-text-muted: #94a3b8;
+  --pri-gold: #fbbf24;
+  --pri-border: #ef4444;
+  --pri-card-bg: rgba(255,255,255,0.04);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(160deg, var(--pri-bg-from) 0%, var(--pri-bg-mid) 45%, var(--pri-bg-to) 100%);
+  color: var(--pri-text);
+  min-height: 100vh;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 1.02rem;
+}
+body::before {
+  content: '';
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 15%, rgba(220,38,38,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 85% 80%, rgba(239,68,68,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.guide-container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #1a0a0a 0%, #2d1218 40%, #451a24 100%);
+  border-radius: 1.25rem;
+  padding: 2rem 1.75rem 1.75rem;
+  margin-bottom: 2rem;
+  border: 2px solid var(--pri-accent);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -40%; right: -15%; width: 280px; height: 280px;
+  background: radial-gradient(circle, rgba(248,113,113,0.15), transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '🚨';
+  position: absolute; top: 1rem; right: 1.25rem; font-size: 2.8rem; opacity: 0.12;
+  pointer-events: none;
+}
+.hero h1 {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 12px rgba(220,38,38,0.3);
+}
+.hero .subtitle {
+  font-size: 1.05rem;
+  color: #fca5a5;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.hero .badge-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.85rem; }
+.hero .badge {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.25rem 0.65rem; border-radius: 2rem;
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.03em; text-transform: uppercase;
+  backdrop-filter: blur(4px);
+}
+.badge-abc   { background: rgba(220,38,38,0.2); color: #fca5a5; border: 1px solid rgba(220,38,38,0.4); }
+.badge-deleg { background: rgba(99,102,241,0.2); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.4); }
+.badge-triage{ background: rgba(16,185,129,0.2); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.4); }
+.badge-sbar  { background: rgba(14,165,233,0.2); color: #7dd3fc; border: 1px solid rgba(14,165,233,0.4); }
+.badge-emerg { background: rgba(249,115,22,0.2); color: #fdba74; border: 1px solid rgba(249,115,22,0.4); }
+
+/* ========== SECTION HEADERS ========== */
+.section-hdr {
+  position: relative;
+  margin: 2.5rem 0 0;
+  padding: 0.85rem 1.15rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.sh-abc     { background: #7f1d1d; color: #fecaca; }
+.sh-acutevc { background: #78350f; color: #fef3c7; }
+.sh-deleg   { background: #312e81; color: #c7d2fe; }
+.sh-triage  { background: #064e3b; color: #a7f3d0; }
+.sh-emerg   { background: #7c2d12; color: #fed7aa; }
+.sh-sbar    { background: #164e63; color: #a5f3fc; }
+.sh-meds    { background: #4a1d96; color: #e9d5ff; }
+.sh-anchors { background: #881337; color: #fecdd3; }
+
+/* ========== CONTENT BLOCKS ========== */
+.content-block {
+  background: var(--pri-card-bg);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-top: none;
+  border-radius: 0 0 0.75rem 0.75rem;
+  padding: 1.25rem 1.15rem 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.content-block h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--pri-accent-light);
+  margin: 1.4rem 0 0.5rem;
+}
+.content-block h3:first-child { margin-top: 0; }
+.content-block p {
+  margin: 0.4rem 0 0.7rem;
+  color: var(--pri-text);
+  line-height: 1.65;
+}
+.content-block ul, .content-block ol {
+  margin: 0.4rem 0 0.8rem 1.3rem;
+  color: var(--pri-text);
+}
+.content-block li {
+  margin-bottom: 0.35rem;
+  line-height: 1.55;
+}
+.content-block li strong { color: #fff; }
+
+/* ========== DRUG / LYTE HIGHLIGHTS ========== */
+.drug {
+  color: #93c5fd;
+  font-weight: 700;
+}
+.lyte {
+  color: #ffa040;
+  font-weight: 700;
+}
+
+/* ========== TABLES ========== */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0 1rem;
+  font-size: 0.95rem;
+}
+.info-table th {
+  background: rgba(220,38,38,0.15);
+  color: var(--pri-accent-light);
+  padding: 0.55rem 0.7rem;
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 2px solid rgba(220,38,38,0.3);
+}
+.info-table td {
+  padding: 0.5rem 0.7rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  vertical-align: top;
+}
+.info-table tr:last-child td { border-bottom: none; }
+.info-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+/* ========== PRIORITY BOXES ========== */
+.priority-box {
+  border-radius: 0.6rem;
+  padding: 0.85rem 1rem;
+  margin: 0.75rem 0;
+  border-left: 4px solid;
+}
+.pbox-red {
+  background: rgba(220,38,38,0.08);
+  border-color: #dc2626;
+}
+.pbox-amber {
+  background: rgba(245,158,11,0.08);
+  border-color: #f59e0b;
+}
+.pbox-green {
+  background: rgba(16,185,129,0.08);
+  border-color: #10b981;
+}
+.pbox-blue {
+  background: rgba(59,130,246,0.08);
+  border-color: #3b82f6;
+}
+.pbox-purple {
+  background: rgba(139,92,246,0.08);
+  border-color: #8b5cf6;
+}
+
+/* ========== TRIAGE TAGS ========== */
+.triage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin: 0.75rem 0 1rem;
+}
+.triage-tag {
+  border-radius: 0.6rem;
+  padding: 0.75rem 0.85rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+.tag-red    { background: #dc2626; color: #fff; }
+.tag-yellow { background: #eab308; color: #1a1a00; }
+.tag-green  { background: #16a34a; color: #fff; }
+.tag-black  { background: #1c1917; color: #a8a29e; border: 1px solid #44403c; }
+
+.triage-tag .tag-label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+.triage-tag .tag-desc {
+  font-weight: 400;
+  font-size: 0.82rem;
+  opacity: 0.9;
+}
+
+/* ========== DECISION FLOW ========== */
+.decision-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.flow-step {
+  background: rgba(220,38,38,0.12);
+  border: 1px solid rgba(220,38,38,0.3);
+  color: #fca5a5;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+}
+.flow-arrow {
+  color: var(--pri-text-muted);
+  font-size: 1.1rem;
+}
+
+/* ========== SCOPE COLUMNS ========== */
+.scope-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.75rem;
+  margin: 0.75rem 0 1rem;
+}
+.scope-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 0.65rem;
+  padding: 0.85rem 1rem;
+}
+.scope-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid;
+}
+.scope-rn h4  { color: #f87171; border-color: #dc2626; }
+.scope-lpn h4 { color: #a78bfa; border-color: #7c3aed; }
+.scope-uap h4 { color: #34d399; border-color: #10b981; }
+.scope-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.scope-card li {
+  padding: 0.2rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+  font-size: 0.93rem;
+}
+.scope-card li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+.scope-rn li::before  { color: #f87171; }
+.scope-lpn li::before { color: #a78bfa; }
+.scope-uap li::before { color: #34d399; }
+
+/* ========== SBAR VISUAL ========== */
+.sbar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.6rem;
+  margin: 0.75rem 0 1rem;
+}
+.sbar-item {
+  border-radius: 0.6rem;
+  padding: 0.75rem 0.85rem;
+  text-align: center;
+}
+.sbar-s { background: rgba(220,38,38,0.12); border: 1px solid rgba(220,38,38,0.3); }
+.sbar-b { background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.3); }
+.sbar-a { background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.3); }
+.sbar-r { background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.3); }
+.sbar-letter {
+  font-size: 1.6rem;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+.sbar-s .sbar-letter { color: #f87171; }
+.sbar-b .sbar-letter { color: #fbbf24; }
+.sbar-a .sbar-letter { color: #34d399; }
+.sbar-r .sbar-letter { color: #60a5fa; }
+.sbar-word {
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.sbar-desc {
+  font-size: 0.82rem;
+  color: var(--pri-text-muted);
+}
+
+/* ========== MNEMONIC BOX ========== */
+.mnemonic-box {
+  background: rgba(220,38,38,0.06);
+  border: 1px solid rgba(220,38,38,0.2);
+  border-radius: 0.6rem;
+  padding: 0.85rem 1rem;
+  margin: 0.75rem 0;
+}
+.mnemonic-box .title {
+  font-weight: 700;
+  color: var(--pri-accent-light);
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+.mnemonic-box .letters {
+  font-size: 0.95rem;
+}
+.mnemonic-box .letters span {
+  color: var(--pri-gold);
+  font-weight: 800;
+}
+
+/* ========== KEY RULE ========== */
+.key-rule {
+  background: rgba(251,191,36,0.08);
+  border: 1px solid rgba(251,191,36,0.25);
+  border-radius: 0.6rem;
+  padding: 0.75rem 1rem;
+  margin: 0.6rem 0;
+  font-weight: 600;
+  color: var(--pri-gold);
+  font-size: 0.95rem;
+}
+.key-rule .rule-icon { margin-right: 0.4rem; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.55rem; }
+  .guide-container { padding: 1rem 0.65rem 2rem; }
+  .content-block { padding: 1rem 0.85rem 1.2rem; }
+  .scope-grid { grid-template-columns: 1fr; }
+  .sbar-grid { grid-template-columns: 1fr 1fr; }
+  .triage-grid { grid-template-columns: 1fr 1fr; }
+  .info-table { font-size: 0.85rem; }
+  .info-table th, .info-table td { padding: 0.4rem 0.5rem; }
+}
+</style>
+</head>
+<body>
+<div class="guide-container">
+
+<!-- ==================== HERO ==================== -->
+<div class="hero">
+  <h1>🚨 Prioritization</h1>
+  <div class="subtitle">ABCs, Maslow's, delegation scope, triage systems, emergency protocols &amp; clinical decision-making for NCLEX success.</div>
+  <div class="badge-row">
+    <span class="badge badge-abc">ABCs</span>
+    <span class="badge badge-deleg">Delegation</span>
+    <span class="badge badge-triage">Triage</span>
+    <span class="badge badge-sbar">SBAR</span>
+    <span class="badge badge-emerg">Emergency</span>
+  </div>
+</div>
+
+<!-- ==================== SECTION 1: ABCs & Maslow ==================== -->
+<div class="section-hdr sh-abc">🫁 Section 1 — ABCs &amp; Maslow's Framework</div>
+<div class="content-block">
+
+  <h3>Airway → Breathing → Circulation (ABC)</h3>
+  <p>The ABC hierarchy is the <strong>universal foundation</strong> of nursing priority. When multiple patients need attention, always address the patient with the highest-level compromise first:</p>
+
+  <div class="decision-flow">
+    <span class="flow-step">A — Airway</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">B — Breathing</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">C — Circulation</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">D — Disability</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">E — Exposure</span>
+  </div>
+
+  <ul>
+    <li><strong>Airway obstruction</strong> always takes priority — without a patent airway, nothing else matters. Think: stridor, choking, anaphylactic tongue edema, post-op laryngospasm.</li>
+    <li><strong>Breathing problems</strong> come next — <span class="lyte">SpO₂ &lt; 90%</span>, severe dyspnea, absent breath sounds, tension pneumothorax.</li>
+    <li><strong>Circulation</strong> — active hemorrhage, <span class="lyte">systolic BP &lt; 90 mmHg</span>, pulseless extremity, signs of shock.</li>
+    <li><strong>Disability</strong> — acute change in level of consciousness (<span class="lyte">GCS drop ≥ 2 points</span>), unequal pupils, new focal neuro deficit.</li>
+    <li><strong>Exposure</strong> — full body assessment, temperature regulation, environmental safety.</li>
+  </ul>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: If an answer choice addresses AIRWAY, it is almost always the correct priority — unless the patient is already stable and another patient has an acute, life-threatening change.
+  </div>
+
+  <h3>Maslow's Hierarchy Applied to Nursing</h3>
+  <p>Maslow's hierarchy maps directly to nursing priority. Always address <strong>lower-level needs before higher-level needs</strong>:</p>
+
+  <table class="info-table">
+    <tr><th>Level</th><th>Need</th><th>Nursing Example</th></tr>
+    <tr><td><strong>1 — Physiological</strong></td><td>Oxygen, fluids, nutrition, elimination, pain</td><td>Suctioning airway, starting <span class="drug">IV fluids</span>, managing <span class="lyte">hypoglycemia (BG &lt; 70 mg/dL)</span></td></tr>
+    <tr><td><strong>2 — Safety</strong></td><td>Physical safety, infection control, fall prevention</td><td>Bed alarm, side rails up, seizure precautions, isolation</td></tr>
+    <tr><td><strong>3 — Love/Belonging</strong></td><td>Social support, family involvement</td><td>Facilitating family visits, support groups</td></tr>
+    <tr><td><strong>4 — Esteem</strong></td><td>Dignity, autonomy, self-worth</td><td>Encouraging independence in ADLs, respecting preferences</td></tr>
+    <tr><td><strong>5 — Self-Actualization</strong></td><td>Growth, education, health promotion</td><td>Discharge teaching, wellness education</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Tip: Physiological needs (oxygenation, circulation, pain) always beat psychosocial needs. Teaching and emotional support come AFTER physical stability.
+  </div>
+
+  <h3>Assess Before You Act</h3>
+  <p>The <strong>nursing process</strong> starts with Assessment. On NCLEX, if "assess" or "check" is an answer option, it is often correct — the nurse should gather data before intervening.</p>
+
+  <div class="priority-box pbox-red">
+    <strong>Exceptions — Act IMMEDIATELY without assessment:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>Cardiac/respiratory arrest → start <strong>CPR</strong> immediately</li>
+      <li>Complete airway obstruction → <strong>abdominal thrusts</strong> (Heimlich)</li>
+      <li>Active hemorrhage → apply <strong>direct pressure</strong></li>
+      <li>Anaphylaxis with known trigger → administer <span class="drug">epinephrine</span></li>
+      <li>Witnessed ventricular fibrillation → <strong>defibrillate</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ==================== SECTION 2: Acute vs Chronic ==================== -->
+<div class="section-hdr sh-acutevc">⚖️ Section 2 — Who to See First</div>
+<div class="content-block">
+
+  <h3>The 4 Priority Principles</h3>
+  <p>When the NCLEX asks "Which patient should the nurse see FIRST?", apply these rules in order:</p>
+
+  <table class="info-table">
+    <tr><th>#</th><th>Principle</th><th>See First</th><th>See Later</th></tr>
+    <tr><td><strong>1</strong></td><td>Unexpected over Expected</td><td>Post-op patient with sudden <span class="lyte">BP 78/50</span></td><td>Heart failure patient with chronic peripheral edema</td></tr>
+    <tr><td><strong>2</strong></td><td>Unstable over Stable</td><td>Patient with <span class="lyte">O₂ sat 82%</span> on room air</td><td>COPD patient with baseline <span class="lyte">SpO₂ 91%</span> on <span class="lyte">2L NC</span></td></tr>
+    <tr><td><strong>3</strong></td><td>Acute over Chronic</td><td>New-onset chest pain</td><td>Chronic angina managed with <span class="drug">nitroglycerin</span> PRN</td></tr>
+    <tr><td><strong>4</strong></td><td>Change over Baseline</td><td>Patient with new confusion (was alert × 4)</td><td>Dementia patient at baseline orientation</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> The golden question: "Which patient is MOST LIKELY to deteriorate right now?" — that is who you see first.
+  </div>
+
+  <h3>Common "See First" NCLEX Scenarios</h3>
+
+  <div class="priority-box pbox-red">
+    <strong>🔴 See IMMEDIATELY (life-threatening):</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>Chest pain with <span class="lyte">ST elevation</span> or new dysrhythmia</li>
+      <li>Post-thyroidectomy stridor (airway compromise)</li>
+      <li>Acute change in level of consciousness</li>
+      <li>Post-cardiac cath with pulseless extremity</li>
+      <li>Blood transfusion reaction (fever, chills, flank pain)</li>
+      <li><span class="lyte">Potassium &gt; 6.0 mEq/L</span> with ECG changes</li>
+      <li>Sickle cell patient with <span class="lyte">O₂ sat &lt; 90%</span> and chest pain (acute chest syndrome)</li>
+    </ul>
+  </div>
+
+  <div class="priority-box pbox-amber">
+    <strong>🟡 See Soon (potentially unstable):</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>New-onset confusion in an elderly patient (may indicate UTI, hypoxia, or stroke)</li>
+      <li>Post-op patient who hasn't voided in <span class="lyte">8 hours</span></li>
+      <li>Diabetic patient with <span class="lyte">BG 52 mg/dL</span> who is alert and able to swallow</li>
+      <li>Patient with new-onset peripheral numbness and tingling</li>
+      <li>Fever of <span class="lyte">101.5°F (38.6°C)</span> in a neutropenic patient</li>
+    </ul>
+  </div>
+
+  <div class="priority-box pbox-green">
+    <strong>🟢 Can Wait (stable/expected):</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>Chronic heart failure patient with <span class="lyte">2+ pitting edema</span> (baseline finding)</li>
+      <li>Post-op day 2 patient requesting pain medication</li>
+      <li>Patient asking for discharge teaching</li>
+      <li>Stable patient requesting diet change</li>
+    </ul>
+  </div>
+
+  <h3>Post-Op Priority Timeline</h3>
+  <table class="info-table">
+    <tr><th>Timeframe</th><th>Priority Assessment</th><th>Key Concerns</th></tr>
+    <tr><td><strong>Immediate (0–1 hr)</strong></td><td>Airway, breathing, circulation</td><td>Laryngospasm, hemorrhage, <span class="drug">anesthesia</span> recovery</td></tr>
+    <tr><td><strong>Early (1–24 hr)</strong></td><td>Pain, bleeding, voiding</td><td>Hemorrhage, urinary retention, <span class="lyte">I&amp;O monitoring</span></td></tr>
+    <tr><td><strong>Intermediate (24–72 hr)</strong></td><td>Infection, mobility, GI function</td><td>Wound infection, atelectasis, ileus, DVT</td></tr>
+    <tr><td><strong>Late (72+ hr)</strong></td><td>Healing, teaching, discharge</td><td>Wound dehiscence, patient education</td></tr>
+  </table>
+</div>
+
+<!-- ==================== SECTION 3: Delegation ==================== -->
+<div class="section-hdr sh-deleg">👥 Section 3 — Delegation &amp; Scope of Practice</div>
+<div class="content-block">
+
+  <h3>Scope of Practice — Who Can Do What</h3>
+
+  <div class="scope-grid">
+    <div class="scope-card scope-rn">
+      <h4>🩺 RN (Registered Nurse)</h4>
+      <ul>
+        <li>Assessment &amp; reassessment</li>
+        <li>Nursing diagnosis</li>
+        <li>Care plan development</li>
+        <li>Patient/family teaching</li>
+        <li>Evaluation of outcomes</li>
+        <li>IV push medications</li>
+        <li><span class="drug">Blood product</span> administration</li>
+        <li>Unstable patient care</li>
+        <li>New admission assessment</li>
+        <li>Discharge planning</li>
+        <li>Central line care</li>
+        <li>Telephone orders (receive &amp; verify)</li>
+      </ul>
+    </div>
+
+    <div class="scope-card scope-lpn">
+      <h4>💉 LPN/LVN</h4>
+      <ul>
+        <li>Stable, predictable patients</li>
+        <li>Data collection (not initial assessment)</li>
+        <li>Oral &amp; IM medications</li>
+        <li>Subcutaneous injections (including <span class="drug">insulin</span>)</li>
+        <li>Dressing changes (non-complex)</li>
+        <li>Foley catheter insertion &amp; care</li>
+        <li>NG tube feedings</li>
+        <li>Suctioning (oral/tracheal)</li>
+        <li>Vital signs &amp; documentation</li>
+        <li>Reinforce teaching (NOT initiate)</li>
+        <li>Wound care per protocol</li>
+        <li>IV monitoring (NOT initiation in most states)</li>
+      </ul>
+    </div>
+
+    <div class="scope-card scope-uap">
+      <h4>🤝 UAP (Unlicensed Assistive Personnel)</h4>
+      <ul>
+        <li>ADLs: bathing, grooming, dressing</li>
+        <li>Vital signs (stable patients)</li>
+        <li>Ambulation &amp; positioning</li>
+        <li>Intake &amp; output measurement</li>
+        <li>Feeding (stable, no swallowing issues)</li>
+        <li>Weight measurement</li>
+        <li>Specimen collection</li>
+        <li>Hygiene &amp; comfort measures</li>
+        <li>Bed-making &amp; room preparation</li>
+        <li>Transport</li>
+        <li>Post-mortem care</li>
+        <li>CPR (certified)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>The 5 Rights of Delegation</h3>
+  <table class="info-table">
+    <tr><th>Right</th><th>Question to Ask</th><th>Example</th></tr>
+    <tr><td><strong>1. Right Task</strong></td><td>Can this task be delegated?</td><td>Vital signs → YES. Assessment → NO.</td></tr>
+    <tr><td><strong>2. Right Circumstance</strong></td><td>Is the patient stable enough?</td><td>Stable post-op vitals → OK. Actively bleeding → NOT OK.</td></tr>
+    <tr><td><strong>3. Right Person</strong></td><td>Is this person competent for this task?</td><td>Experienced UAP for ambulation; new UAP needs supervision.</td></tr>
+    <tr><td><strong>4. Right Direction</strong></td><td>Did I give clear, specific instructions?</td><td>"Take vitals q4h; report <span class="lyte">SBP &lt; 100</span> or <span class="lyte">&gt; 160</span> immediately."</td></tr>
+    <tr><td><strong>5. Right Supervision</strong></td><td>Am I following up on the delegated task?</td><td>RN checks back to ensure vitals were done and reviews results.</td></tr>
+  </table>
+
+  <h3>NEVER Delegate (The ATEN Rule)</h3>
+  <div class="mnemonic-box">
+    <div class="title">🧠 ATEN — Never Delegate These</div>
+    <div class="letters">
+      <span>A</span>ssessment (initial &amp; ongoing) ·
+      <span>T</span>eaching (initial education) ·
+      <span>E</span>valuation (of outcomes) ·
+      <span>N</span>ursing judgment (clinical decisions)
+    </div>
+  </div>
+
+  <div class="priority-box pbox-purple">
+    <strong>Additional items that cannot be delegated:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>Care of <strong>unstable</strong> patients (to LPN or UAP)</li>
+      <li>New admission assessments</li>
+      <li><span class="drug">Blood product</span> administration (RN only)</li>
+      <li><span class="drug">IV push medications</span> (RN only)</li>
+      <li>Patient education (LPN can <em>reinforce</em>, not initiate)</li>
+      <li>Discharge teaching</li>
+      <li>Calling the healthcare provider with assessment findings</li>
+    </ul>
+  </div>
+
+  <h3>Charge Nurse Role</h3>
+  <p>The charge nurse's primary responsibility is <strong>coordinating care and making assignments</strong>. On NCLEX:</p>
+  <ul>
+    <li>The charge nurse assigns the <strong>most complex</strong> patients to the <strong>most experienced</strong> RN.</li>
+    <li>Assign <strong>stable, predictable</strong> patients to the LPN/LVN.</li>
+    <li>Assign <strong>routine ADLs</strong> and <strong>vital signs</strong> to the UAP.</li>
+    <li>New graduate nurses should get stable patients with predictable outcomes.</li>
+    <li>Float/agency nurses should get patients that don't require specialized unit knowledge.</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 4: Triage ==================== -->
+<div class="section-hdr sh-triage">🏥 Section 4 — Triage Systems</div>
+<div class="content-block">
+
+  <h3>Emergency Department Triage (ESI — Emergency Severity Index)</h3>
+
+  <table class="info-table">
+    <tr><th>ESI Level</th><th>Category</th><th>Description</th><th>Example</th></tr>
+    <tr><td><strong>Level 1</strong></td><td style="color:#f87171;">Resuscitation</td><td>Immediate life-saving intervention</td><td>Cardiac arrest, active hemorrhage, respiratory failure</td></tr>
+    <tr><td><strong>Level 2</strong></td><td style="color:#fbbf24;">Emergent</td><td>High risk; altered mental status; severe pain</td><td>Chest pain, stroke symptoms, <span class="lyte">O₂ sat &lt; 90%</span></td></tr>
+    <tr><td><strong>Level 3</strong></td><td style="color:#fb923c;">Urgent</td><td>Needs 2+ resources; stable vitals</td><td>Abdominal pain needing labs + imaging</td></tr>
+    <tr><td><strong>Level 4</strong></td><td style="color:#34d399;">Less Urgent</td><td>Needs 1 resource</td><td>Simple laceration needing sutures</td></tr>
+    <tr><td><strong>Level 5</strong></td><td style="color:#60a5fa;">Non-Urgent</td><td>Needs 0 resources</td><td>Medication refill, minor rash</td></tr>
+  </table>
+
+  <h3>Disaster Triage (START Triage — Mass Casualty)</h3>
+  <p>In a <strong>mass casualty incident (MCI)</strong>, the priority shifts from "save the individual" to "save the MOST people." Resources are allocated to patients most likely to survive with treatment.</p>
+
+  <div class="triage-grid">
+    <div class="triage-tag tag-red">
+      <span class="tag-label">🔴 RED — Immediate</span>
+      <span class="tag-desc">Life-threatening but SURVIVABLE with treatment. Treat first.</span>
+    </div>
+    <div class="triage-tag tag-yellow">
+      <span class="tag-label">🟡 YELLOW — Delayed</span>
+      <span class="tag-desc">Serious but can wait 30–60 min without deterioration.</span>
+    </div>
+    <div class="triage-tag tag-green">
+      <span class="tag-label">🟢 GREEN — Minor</span>
+      <span class="tag-desc">Walking wounded. Minor injuries. Can self-treat or wait.</span>
+    </div>
+    <div class="triage-tag tag-black">
+      <span class="tag-label">⚫ BLACK — Expectant</span>
+      <span class="tag-desc">Injuries incompatible with survival. Comfort care only.</span>
+    </div>
+  </div>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> CRITICAL NCLEX Distinction: In <strong>emergency triage</strong>, the most critical patient is treated first. In <strong>disaster triage</strong>, the patient who will benefit MOST from immediate treatment (RED tag) is treated first — NOT the most critically injured (BLACK tag).
+  </div>
+
+  <h3>START Triage Assessment — 30-Second Rapid Check</h3>
+  <table class="info-table">
+    <tr><th>Step</th><th>Assess</th><th>Action</th></tr>
+    <tr><td><strong>1. Can they walk?</strong></td><td>Ambulatory</td><td>Yes → <strong style="color:#16a34a;">GREEN</strong></td></tr>
+    <tr><td><strong>2. Respirations</strong></td><td><span class="lyte">Rate &gt; 30</span> or absent after repositioning</td><td>Absent → <strong style="color:#a8a29e;">BLACK</strong>; &gt; 30 → <strong style="color:#dc2626;">RED</strong></td></tr>
+    <tr><td><strong>3. Perfusion</strong></td><td><span class="lyte">Capillary refill &gt; 2 sec</span> OR no radial pulse</td><td>Abnormal → <strong style="color:#dc2626;">RED</strong></td></tr>
+    <tr><td><strong>4. Mental status</strong></td><td>Can't follow simple commands</td><td>Abnormal → <strong style="color:#dc2626;">RED</strong>; Normal → <strong style="color:#eab308;">YELLOW</strong></td></tr>
+  </table>
+
+  <h3>Key Triage Differences</h3>
+  <table class="info-table">
+    <tr><th>Feature</th><th>Emergency Triage</th><th>Disaster Triage</th></tr>
+    <tr><td><strong>Goal</strong></td><td>Save the individual</td><td>Greatest good for the greatest number</td></tr>
+    <tr><td><strong>Most critical first?</strong></td><td>Yes — treat sickest first</td><td>No — treat most salvageable first</td></tr>
+    <tr><td><strong>Resources</strong></td><td>Adequate for all patients</td><td>Insufficient — must be rationed</td></tr>
+    <tr><td><strong>Re-triage</strong></td><td>Continuous reassessment</td><td>Ongoing; tags can change as resources allow</td></tr>
+  </table>
+</div>
+
+<!-- ==================== SECTION 5: Emergency Protocols ==================== -->
+<div class="section-hdr sh-emerg">🔥 Section 5 — Emergency Response Protocols</div>
+<div class="content-block">
+
+  <h3>RACE — Fire Response</h3>
+  <div class="decision-flow">
+    <span class="flow-step">R — Rescue</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">A — Alarm</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">C — Contain</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">E — Extinguish / Evacuate</span>
+  </div>
+  <ul>
+    <li><strong>Rescue</strong> — Remove patients from immediate danger FIRST</li>
+    <li><strong>Alarm</strong> — Pull the fire alarm and call the fire code</li>
+    <li><strong>Contain</strong> — Close all doors and windows to limit fire spread</li>
+    <li><strong>Extinguish</strong> — Use a fire extinguisher if safe to do so, or evacuate the area</li>
+  </ul>
+
+  <h3>PASS — Fire Extinguisher</h3>
+  <div class="decision-flow">
+    <span class="flow-step">P — Pull pin</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">A — Aim at base</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">S — Squeeze handle</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">S — Sweep side to side</span>
+  </div>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: RESCUE is ALWAYS the first action in a fire. Remove patients first, THEN pull the alarm. The nurse's first priority is patient safety.
+  </div>
+
+  <h3>Code Blue — Cardiac Arrest Response</h3>
+  <table class="info-table">
+    <tr><th>Step</th><th>Action</th><th>Key Detail</th></tr>
+    <tr><td><strong>1</strong></td><td>Recognize &amp; call for help</td><td>Check responsiveness, call Code Blue / activate rapid response</td></tr>
+    <tr><td><strong>2</strong></td><td>Start CPR</td><td><span class="lyte">30:2 ratio</span>, compress <span class="lyte">2–2.4 inches</span> deep, rate <span class="lyte">100–120/min</span></td></tr>
+    <tr><td><strong>3</strong></td><td>Defibrillate</td><td>VF/pulseless VT → shock ASAP; <span class="lyte">&lt; 3 minutes</span> ideal</td></tr>
+    <tr><td><strong>4</strong></td><td>Medications</td><td><span class="drug">Epinephrine 1 mg IV</span> q3-5 min; <span class="drug">Amiodarone 300 mg IV</span> for refractory VF/VT</td></tr>
+    <tr><td><strong>5</strong></td><td>Advanced airway</td><td>Intubation; continuous compressions once placed</td></tr>
+  </table>
+
+  <h3>Rapid Response Team (RRT) — Activation Triggers</h3>
+  <p>Call the Rapid Response Team when a patient shows <strong>acute deterioration</strong>:</p>
+  <div class="priority-box pbox-red">
+    <ul style="margin-bottom:0;">
+      <li><strong>Respiratory:</strong> <span class="lyte">RR &lt; 8 or &gt; 28/min</span>, <span class="lyte">SpO₂ &lt; 90%</span> despite <span class="lyte">O₂</span>, new stridor</li>
+      <li><strong>Cardiac:</strong> <span class="lyte">HR &lt; 40 or &gt; 130/min</span>, <span class="lyte">SBP &lt; 90 mmHg</span>, new chest pain</li>
+      <li><strong>Neurological:</strong> Acute change in mental status, new seizure, sudden focal weakness</li>
+      <li><strong>Other:</strong> Urine output <span class="lyte">&lt; 50 mL in 4 hours</span>, staff member has significant concern</li>
+    </ul>
+  </div>
+
+  <h3>Chain of Command</h3>
+  <p>If a nursing concern is <strong>not addressed</strong> by the primary provider, the nurse is obligated to escalate:</p>
+  <div class="decision-flow">
+    <span class="flow-step">Primary Provider</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Charge Nurse</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Supervisor / Manager</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Chief Medical Officer</span>
+  </div>
+  <p style="margin-top:0.5rem;">The nurse is a <strong>patient advocate</strong> — never abandon a concern because one person dismisses it.</p>
+</div>
+
+<!-- ==================== SECTION 6: SBAR ==================== -->
+<div class="section-hdr sh-sbar">📞 Section 6 — SBAR &amp; Communication</div>
+<div class="content-block">
+
+  <h3>SBAR Framework</h3>
+  <p>SBAR is the standardized communication tool used for <strong>nurse-to-provider</strong> handoffs and critical reports:</p>
+
+  <div class="sbar-grid">
+    <div class="sbar-item sbar-s">
+      <span class="sbar-letter">S</span>
+      <span class="sbar-word">Situation</span>
+      <span class="sbar-desc">What is happening RIGHT NOW?</span>
+    </div>
+    <div class="sbar-item sbar-b">
+      <span class="sbar-letter">B</span>
+      <span class="sbar-word">Background</span>
+      <span class="sbar-desc">What is the relevant clinical history?</span>
+    </div>
+    <div class="sbar-item sbar-a">
+      <span class="sbar-letter">A</span>
+      <span class="sbar-word">Assessment</span>
+      <span class="sbar-desc">What do I think the problem is?</span>
+    </div>
+    <div class="sbar-item sbar-r">
+      <span class="sbar-letter">R</span>
+      <span class="sbar-word">Recommendation</span>
+      <span class="sbar-desc">What do I think we should do?</span>
+    </div>
+  </div>
+
+  <h3>SBAR Example — Nurse Calling Provider</h3>
+  <div class="priority-box pbox-blue">
+    <p style="margin:0;">
+      <strong>S:</strong> "Dr. Smith, I'm calling about Mrs. Jones in Room 412. She's having new-onset chest pain rated <span class="lyte">8/10</span> and is diaphoretic."<br>
+      <strong>B:</strong> "She's a 68-year-old admitted for pneumonia. History of <span class="lyte">CAD</span>, prior MI 2019. Currently on <span class="drug">heparin</span> drip and <span class="drug">ceftriaxone</span>."<br>
+      <strong>A:</strong> "I'm concerned this may be an acute cardiac event. Her <span class="lyte">BP is 92/58</span>, <span class="lyte">HR 112</span>, <span class="lyte">SpO₂ 94%</span>. ECG shows new <span class="lyte">ST elevation</span> in leads II, III, aVF."<br>
+      <strong>R:</strong> "I'd like to administer <span class="drug">nitroglycerin 0.4 mg SL</span>, obtain a <span class="lyte">troponin</span> level, and have the patient evaluated at bedside."
+    </p>
+  </div>
+
+  <h3>Read-Back Protocol — Verbal &amp; Telephone Orders</h3>
+  <ol>
+    <li><strong>Write it down</strong> — Document the order as it is being given.</li>
+    <li><strong>Read it back</strong> — Repeat the entire order to the provider verbatim.</li>
+    <li><strong>Receive confirmation</strong> — The provider must confirm "That's correct."</li>
+  </ol>
+  <p>This applies to ALL verbal orders, telephone orders, and <strong>critical lab values</strong>.</p>
+
+  <h3>Handoff Communication (I-SBAR-R)</h3>
+  <table class="info-table">
+    <tr><th>Letter</th><th>Component</th><th>Content</th></tr>
+    <tr><td><strong>I</strong></td><td>Introduction</td><td>Your name, role, patient identifiers</td></tr>
+    <tr><td><strong>S</strong></td><td>Situation</td><td>Reason for handoff, current status</td></tr>
+    <tr><td><strong>B</strong></td><td>Background</td><td>Diagnosis, relevant history, allergies</td></tr>
+    <tr><td><strong>A</strong></td><td>Assessment</td><td>Current condition, recent changes, lab results</td></tr>
+    <tr><td><strong>R</strong></td><td>Recommendation</td><td>Pending tasks, anticipated needs, what to watch for</td></tr>
+    <tr><td><strong>R</strong></td><td>Read-back</td><td>Receiver confirms understanding of key information</td></tr>
+  </table>
+</div>
+
+<!-- ==================== SECTION 7: Priority Medications ==================== -->
+<div class="section-hdr sh-meds">💊 Section 7 — Time-Critical &amp; Priority Medications</div>
+<div class="content-block">
+
+  <h3>Medications That Change a Patient's Priority</h3>
+  <p>When a patient has an order for one of these medications AND a matching clinical finding, that patient becomes a <strong>higher priority</strong>:</p>
+
+  <table class="info-table">
+    <tr><th>Clinical Finding</th><th>Time-Critical Medication</th><th>Priority Rationale</th></tr>
+    <tr><td>Acute MI within <span class="lyte">12-hour window</span></td><td><span class="drug">Alteplase (tPA)</span></td><td>Narrow therapeutic window; delays → tissue death</td></tr>
+    <tr><td>Acute ischemic stroke within <span class="lyte">4.5 hours</span></td><td><span class="drug">Alteplase (tPA)</span></td><td>"Time is brain" — every minute matters</td></tr>
+    <tr><td>Anaphylaxis</td><td><span class="drug">Epinephrine 0.3 mg IM</span></td><td>Airway loss within minutes without treatment</td></tr>
+    <tr><td><span class="lyte">BG &lt; 54 mg/dL</span> + altered LOC</td><td><span class="drug">Dextrose 50% (D50) IV</span></td><td>Severe hypoglycemia → seizure, brain damage</td></tr>
+    <tr><td>Opioid overdose (<span class="lyte">RR &lt; 8</span>, pinpoint pupils)</td><td><span class="drug">Naloxone (Narcan)</span></td><td>Respiratory arrest imminent</td></tr>
+    <tr><td><span class="lyte">K⁺ &gt; 6.5 mEq/L</span> + peaked T waves</td><td><span class="drug">Calcium gluconate IV</span>, then <span class="drug">insulin + D50</span></td><td>Lethal dysrhythmia risk</td></tr>
+    <tr><td>Active seizure &gt; <span class="lyte">5 minutes</span></td><td><span class="drug">Lorazepam (Ativan) IV</span></td><td>Status epilepticus → permanent neuro damage</td></tr>
+    <tr><td><span class="lyte">INR &gt; 9</span> + active bleeding</td><td><span class="drug">Vitamin K (phytonadione) IV</span> + FFP</td><td>Uncontrolled hemorrhage risk</td></tr>
+    <tr><td>Malignant hyperthermia (<span class="lyte">T &gt; 104°F</span>)</td><td><span class="drug">Dantrolene</span></td><td>Fatal without immediate treatment</td></tr>
+    <tr><td><span class="drug">Digoxin</span> toxicity + <span class="lyte">K⁺ &gt; 5.5</span></td><td><span class="drug">Digoxin Immune Fab (Digibind)</span></td><td>Lethal dysrhythmia risk</td></tr>
+  </table>
+
+  <h3>Time-Critical Medication Rules</h3>
+  <ul>
+    <li><strong>First-dose antibiotics:</strong> Administer within <span class="lyte">1 hour</span> of order for suspected sepsis — draw blood cultures FIRST, then give the antibiotic.</li>
+    <li><strong>Insulin:</strong> Give <span class="drug">rapid-acting insulin</span> with meals; do NOT hold for NPO without a provider order. Always check <span class="lyte">BG</span> first.</li>
+    <li><strong>Anticoagulants:</strong> <span class="drug">Heparin</span> drips require <span class="lyte">aPTT</span> monitoring; <span class="drug">Warfarin</span> requires <span class="lyte">INR</span> before administration.</li>
+    <li><strong>Seizure medications:</strong> Never skip or delay <span class="drug">phenytoin</span>, <span class="drug">levetiracetam</span>, or <span class="drug">valproic acid</span> — risk of breakthrough seizures.</li>
+    <li><strong>Thrombolytics:</strong> Strict time windows. Check for contraindications: recent surgery (&lt; <span class="lyte">14 days</span>), active bleeding, <span class="lyte">BP &gt; 185/110</span>, history of hemorrhagic stroke.</li>
+  </ul>
+
+  <h3>Independent Double-Check Required</h3>
+  <p>These <strong>high-alert medications</strong> require two nurses to independently verify before administration:</p>
+  <ul>
+    <li><span class="drug">Insulin</span> (all IV drips)</li>
+    <li><span class="drug">Heparin</span> (IV drips and SQ high-dose)</li>
+    <li><span class="drug">Blood products</span> (verify at bedside with 2 RNs)</li>
+    <li><span class="drug">Chemotherapy</span> agents</li>
+    <li><span class="drug">Opioid</span> PCA pumps</li>
+    <li><span class="drug">Potassium chloride (KCl)</span> IV — NEVER give IV push; always diluted, always on a pump</li>
+    <li>Pediatric weight-based dosing calculations</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 8: Memory Anchors ==================== -->
+<div class="section-hdr sh-anchors">🧠 Section 8 — Memory Anchors &amp; Decision Trees</div>
+<div class="content-block">
+
+  <h3>Priority Decision Algorithm</h3>
+  <p>Use this quick mental checklist when facing any "see first" or "do first" NCLEX question:</p>
+
+  <div class="priority-box pbox-red">
+    <strong>Step 1:</strong> Is there an AIRWAY problem? → Address FIRST, always.
+  </div>
+  <div class="priority-box pbox-amber">
+    <strong>Step 2:</strong> Is there active BLEEDING or hemodynamic instability? → Address next.
+  </div>
+  <div class="priority-box pbox-blue">
+    <strong>Step 3:</strong> Which finding is UNEXPECTED for this patient's condition? → That patient first.
+  </div>
+  <div class="priority-box pbox-green">
+    <strong>Step 4:</strong> When all patients are stable — use Maslow: physiological → safety → psychosocial.
+  </div>
+
+  <h3>Key Mnemonics</h3>
+
+  <div class="mnemonic-box">
+    <div class="title">🚨 RACE — Fire Response</div>
+    <div class="letters">
+      <span>R</span>escue · <span>A</span>larm · <span>C</span>ontain · <span>E</span>xtinguish/Evacuate
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🧯 PASS — Fire Extinguisher</div>
+    <div class="letters">
+      <span>P</span>ull pin · <span>A</span>im at base · <span>S</span>queeze · <span>S</span>weep
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🚫 ATEN — Never Delegate</div>
+    <div class="letters">
+      <span>A</span>ssessment · <span>T</span>eaching · <span>E</span>valuation · <span>N</span>ursing Judgment
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">📞 SBAR — Communication</div>
+    <div class="letters">
+      <span>S</span>ituation · <span>B</span>ackground · <span>A</span>ssessment · <span>R</span>ecommendation
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🏷️ Disaster Tags — Triage Colors</div>
+    <div class="letters">
+      <span style="color:#f87171;">Red</span> = Immediate ·
+      <span style="color:#eab308;">Yellow</span> = Delayed ·
+      <span style="color:#34d399;">Green</span> = Minor ·
+      <span style="color:#a8a29e;">Black</span> = Expectant
+    </div>
+  </div>
+
+  <h3>NCLEX Quick-Reference Rules</h3>
+  <table class="info-table">
+    <tr><th>Rule</th><th>Application</th></tr>
+    <tr><td><strong>Assess before you act</strong></td><td>Unless CPR, airway obstruction, active hemorrhage, or anaphylaxis</td></tr>
+    <tr><td><strong>Unexpected &gt; Expected</strong></td><td>A new symptom is more urgent than a chronic baseline finding</td></tr>
+    <tr><td><strong>Unstable &gt; Stable</strong></td><td>Changing vitals and deteriorating status = see first</td></tr>
+    <tr><td><strong>Acute &gt; Chronic</strong></td><td>New-onset always beats long-standing, managed conditions</td></tr>
+    <tr><td><strong>Safety = environment</strong></td><td>If patient is in danger (fall risk, fire, elopement) → act on safety</td></tr>
+    <tr><td><strong>ABC before Maslow</strong></td><td>Airway-Breathing-Circulation is the TOP of Maslow's physiological level</td></tr>
+    <tr><td><strong>Don't delegate ATEN</strong></td><td>Assessment, Teaching, Evaluation, Nursing judgment = RN only</td></tr>
+    <tr><td><strong>Disaster ≠ Emergency</strong></td><td>MCI = treat the salvageable; ED = treat the sickest</td></tr>
+    <tr><td><strong>Rescue first in fire</strong></td><td>RACE: move patients BEFORE pulling the alarm</td></tr>
+    <tr><td><strong>Escalate when ignored</strong></td><td>Chain of command — never abandon a concern because one person dismisses it</td></tr>
+  </table>
+
+  <h3>Common NCLEX Traps</h3>
+  <ul>
+    <li><strong>Trap:</strong> "Notify the provider" is listed as an option → Often NOT the first action. Assess and stabilize first, THEN notify.</li>
+    <li><strong>Trap:</strong> A psychological symptom looks urgent → Remember Maslow. Physical needs (pain, oxygenation) always come before emotional/psychosocial needs.</li>
+    <li><strong>Trap:</strong> "Document the finding" is an answer → Documentation is important but NEVER the first action when a patient is in distress.</li>
+    <li><strong>Trap:</strong> All four patients seem critical → Re-read carefully. Look for the one with an UNEXPECTED finding or CHANGE from baseline — that's your answer.</li>
+    <li><strong>Trap:</strong> Delegate to LPN or UAP → If the patient is unstable, changing, or requires assessment — the RN must handle it directly.</li>
+  </ul>
+</div>
+
+</div><!-- end guide-container -->
+</body>
+</html>
