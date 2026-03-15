@@ -96,6 +96,11 @@ body::before {
 .badge-triage{ background: rgba(16,185,129,0.2); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.4); }
 .badge-sbar  { background: rgba(14,165,233,0.2); color: #7dd3fc; border: 1px solid rgba(14,165,233,0.4); }
 .badge-emerg { background: rgba(249,115,22,0.2); color: #fdba74; border: 1px solid rgba(249,115,22,0.4); }
+.badge-seefirst { background: rgba(251,191,36,0.2); color: #fde68a; border: 1px solid rgba(251,191,36,0.4); }
+.badge-meds { background: rgba(168,85,247,0.2); color: #d8b4fe; border: 1px solid rgba(168,85,247,0.4); }
+.badge-mem { background: rgba(148,163,184,0.2); color: #cbd5e1; border: 1px solid rgba(148,163,184,0.4); }
+.hero .badge-row .badge{cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;text-decoration:none}
+.hero .badge-row .badge:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
 
 /* ========== SECTION HEADERS ========== */
 .section-hdr {
@@ -398,16 +403,19 @@ body::before {
   <h1>🚨 Prioritization</h1>
   <div class="subtitle">ABCs, Maslow's, delegation scope, triage systems, emergency protocols &amp; clinical decision-making for NCLEX success.</div>
   <div class="badge-row">
-    <span class="badge badge-abc">ABCs</span>
-    <span class="badge badge-deleg">Delegation</span>
-    <span class="badge badge-triage">Triage</span>
-    <span class="badge badge-sbar">SBAR</span>
-    <span class="badge badge-emerg">Emergency</span>
+    <a class="badge badge-abc" href="#sec-abc">🫁 ABCs</a>
+    <a class="badge badge-seefirst" href="#sec-seefirst">⚖️ See First</a>
+    <a class="badge badge-deleg" href="#sec-deleg">👥 Delegation</a>
+    <a class="badge badge-triage" href="#sec-triage">🏥 Triage</a>
+    <a class="badge badge-emerg" href="#sec-emerg">🔥 Emergency</a>
+    <a class="badge badge-sbar" href="#sec-sbar">📞 SBAR</a>
+    <a class="badge badge-meds" href="#sec-meds">💊 Meds</a>
+    <a class="badge badge-mem" href="#sec-anchors">🧠 Memory</a>
   </div>
 </div>
 
 <!-- ==================== SECTION 1: ABCs & Maslow ==================== -->
-<div class="section-hdr sh-abc">🫁 Section 1 — ABCs &amp; Maslow's Framework</div>
+<div id="sec-abc" class="section-hdr sh-abc">🫁 Section 1 — ABCs &amp; Maslow's Framework</div>
 <div class="content-block">
 
   <h3>Airway → Breathing → Circulation (ABC)</h3>
@@ -469,7 +477,7 @@ body::before {
 </div>
 
 <!-- ==================== SECTION 2: Acute vs Chronic ==================== -->
-<div class="section-hdr sh-acutevc">⚖️ Section 2 — Who to See First</div>
+<div id="sec-seefirst" class="section-hdr sh-acutevc">⚖️ Section 2 — Who to See First</div>
 <div class="content-block">
 
   <h3>The 4 Priority Principles</h3>
@@ -534,7 +542,7 @@ body::before {
 </div>
 
 <!-- ==================== SECTION 3: Delegation ==================== -->
-<div class="section-hdr sh-deleg">👥 Section 3 — Delegation &amp; Scope of Practice</div>
+<div id="sec-deleg" class="section-hdr sh-deleg">👥 Section 3 — Delegation &amp; Scope of Practice</div>
 <div class="content-block">
 
   <h3>Scope of Practice — Who Can Do What</h3>
@@ -641,7 +649,7 @@ body::before {
 </div>
 
 <!-- ==================== SECTION 4: Triage ==================== -->
-<div class="section-hdr sh-triage">🏥 Section 4 — Triage Systems</div>
+<div id="sec-triage" class="section-hdr sh-triage">🏥 Section 4 — Triage Systems</div>
 <div class="content-block">
 
   <h3>Emergency Department Triage (ESI — Emergency Severity Index)</h3>
@@ -701,7 +709,7 @@ body::before {
 </div>
 
 <!-- ==================== SECTION 5: Emergency Protocols ==================== -->
-<div class="section-hdr sh-emerg">🔥 Section 5 — Emergency Response Protocols</div>
+<div id="sec-emerg" class="section-hdr sh-emerg">🔥 Section 5 — Emergency Response Protocols</div>
 <div class="content-block">
 
   <h3>RACE — Fire Response</h3>
@@ -772,7 +780,7 @@ body::before {
 </div>
 
 <!-- ==================== SECTION 6: SBAR ==================== -->
-<div class="section-hdr sh-sbar">📞 Section 6 — SBAR &amp; Communication</div>
+<div id="sec-sbar" class="section-hdr sh-sbar">📞 Section 6 — SBAR &amp; Communication</div>
 <div class="content-block">
 
   <h3>SBAR Framework</h3>
@@ -832,7 +840,7 @@ body::before {
 </div>
 
 <!-- ==================== SECTION 7: Priority Medications ==================== -->
-<div class="section-hdr sh-meds">💊 Section 7 — Time-Critical &amp; Priority Medications</div>
+<div id="sec-meds" class="section-hdr sh-meds">💊 Section 7 — Time-Critical &amp; Priority Medications</div>
 <div class="content-block">
 
   <h3>Medications That Change a Patient's Priority</h3>
@@ -875,7 +883,7 @@ body::before {
 </div>
 
 <!-- ==================== SECTION 8: Memory Anchors ==================== -->
-<div class="section-hdr sh-anchors">🧠 Section 8 — Memory Anchors &amp; Decision Trees</div>
+<div id="sec-anchors" class="section-hdr sh-anchors">🧠 Section 8 — Memory Anchors &amp; Decision Trees</div>
 <div class="content-block">
 
   <h3>Priority Decision Algorithm</h3>
@@ -960,5 +968,17 @@ body::before {
 </div>
 
 </div><!-- end guide-container -->
+<script>
+document.querySelectorAll('.drug').forEach(function(el){
+  el.style.cursor='pointer';
+  el.title='Click to view drug card';
+  el.addEventListener('click',function(){
+    var name=this.textContent.trim();
+    if(window.parent&&window.parent!==window){
+      window.parent.postMessage({type:'showDrugCard',drug:name},'*');
+    }
+  });
+});
+</script>
 </body>
 </html>

@@ -52,6 +52,11 @@ body::before{
 .badge-ecl{background:rgba(248,113,113,0.2);color:#fca5a5;border:1px solid rgba(248,113,113,0.4)}
 .badge-hellp{background:rgba(168,85,247,0.2);color:#d8b4fe;border:1px solid rgba(168,85,247,0.4)}
 .badge-gest{background:rgba(34,211,238,0.2);color:#67e8f9;border:1px solid rgba(34,211,238,0.4)}
+.badge-mgso4{background:rgba(244,114,182,0.2);color:#f9a8d4;border:1px solid rgba(244,114,182,0.4)}
+.badge-ref{background:rgba(52,211,153,0.2);color:#6ee7b7;border:1px solid rgba(52,211,153,0.4)}
+.badge-mem{background:rgba(148,163,184,0.2);color:#cbd5e1;border:1px solid rgba(148,163,184,0.4)}
+.hero .badge-row .badge{cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;text-decoration:none}
+.hero .badge-row .badge:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
 
 /* === STICKY NAV === */
 .nav-bar{
@@ -302,23 +307,15 @@ em{color:#cbd5e1}
 <h1>🤰 OB Hypertensive Disorders</h1>
 <p class="subtitle">A high-yield comparison of the most dangerous and commonly tested hypertensive disorders of pregnancy. Master the diagnostic criteria, labs, complications, and emergency management for NCLEX success.</p>
 <div class="badge-row">
-<span class="badge badge-gest">🩺 Gestational HTN</span>
-<span class="badge badge-pre">⚠️ Preeclampsia</span>
-<span class="badge badge-ecl">🚨 Eclampsia</span>
-<span class="badge badge-hellp">💜 HELLP</span>
+<a class="badge badge-gest" href="#sec-spectrum">🩺 Spectrum</a>
+<a class="badge badge-pre" href="#sec-pre">⚠️ Preeclampsia</a>
+<a class="badge badge-ecl" href="#sec-ecl">🚨 Eclampsia</a>
+<a class="badge badge-hellp" href="#sec-hellp">💜 HELLP</a>
+<a class="badge badge-mgso4" href="#sec-mgso4">💊 MgSO4</a>
+<a class="badge badge-ref" href="#sec-ref">📊 Quick Ref</a>
+<a class="badge badge-mem" href="#sec-mem">🧠 Memory</a>
 </div>
 </div>
-
-<!-- STICKY NAV -->
-<nav class="nav-bar anim d1">
-<a class="nav-pill" href="#sec-spectrum">🩺 Spectrum</a>
-<a class="nav-pill" href="#sec-pre">⚠️ Preeclampsia</a>
-<a class="nav-pill" href="#sec-ecl">🚨 Eclampsia</a>
-<a class="nav-pill" href="#sec-hellp">💜 HELLP</a>
-<a class="nav-pill" href="#sec-mgso4">💊 MgSO4</a>
-<a class="nav-pill" href="#sec-ref">📊 Quick Ref</a>
-<a class="nav-pill" href="#sec-mem">🧠 Memory</a>
-</nav>
 
 <!-- ====================================================== -->
 <div id="sec-spectrum" class="section-hdr sh-spectrum anim d2">
@@ -428,7 +425,7 @@ Gestational HTN → Preeclampsia (without severe features) → Preeclampsia (wit
 
 <h3>Risk Factors</h3>
 <table class="compare-table">
-<thead><tr><th>High Risk (1 factor = start low-dose aspirin)</th><th>Moderate Risk (2+ factors = start low-dose aspirin)</th></tr></thead>
+<thead><tr><th>High Risk (1 factor = start low-dose <span class="drug">aspirin</span>)</th><th>Moderate Risk (2+ factors = start low-dose <span class="drug">aspirin</span>)</th></tr></thead>
 <tbody>
 <tr>
 <td>
@@ -690,7 +687,7 @@ Gestational HTN → Preeclampsia (without severe features) → Preeclampsia (wit
 </tbody></table>
 
 <div class="lethal">
-<strong>NEVER use ACE inhibitors (lisinopril, enalapril) or ARBs (losartan, valsartan) in pregnancy!</strong> These cause fatal fetal renal agenesis, oligohydramnios, skull defects, and neonatal death. They are <strong>absolutely contraindicated</strong> in ALL trimesters. This is an automatic wrong answer on NCLEX.
+<strong>NEVER use ACE inhibitors (<span class="drug">lisinopril</span>, <span class="drug">enalapril</span>) or ARBs (<span class="drug">losartan</span>, <span class="drug">valsartan</span>) in pregnancy!</strong> These cause fatal fetal renal agenesis, oligohydramnios, skull defects, and neonatal death. They are <strong>absolutely contraindicated</strong> in ALL trimesters. This is an automatic wrong answer on NCLEX.
 </div>
 
 <hr class="section-divider">
@@ -833,9 +830,9 @@ Gestational HTN → Preeclampsia (without severe features) → Preeclampsia (wit
 <div class="qref-box">
 <h4>🕐 Timing Is Everything</h4>
 <ul>
-<li>Aspirin prophylaxis: start 12-16 wks</li>
-<li>Betamethasone: 24-34 wks (lung maturity)</li>
-<li>MgSO4: continue 24-48h postpartum</li>
+<li><span class="drug">Aspirin</span> prophylaxis: start 12-16 wks</li>
+<li><span class="drug">Betamethasone</span>: 24-34 wks (lung maturity)</li>
+<li><span class="drug">MgSO4</span>: continue 24-48h postpartum</li>
 <li>Postpartum eclampsia: up to 6 weeks!</li>
 </ul>
 </div>
@@ -846,5 +843,17 @@ Gestational HTN → Preeclampsia (without severe features) → Preeclampsia (wit
 </div>
 
 </div>
+<script>
+document.querySelectorAll('.drug').forEach(function(el){
+  el.style.cursor='pointer';
+  el.title='Click to view drug card';
+  el.addEventListener('click',function(){
+    var name=this.textContent.trim();
+    if(window.parent&&window.parent!==window){
+      window.parent.postMessage({type:'showDrugCard',drug:name},'*');
+    }
+  });
+});
+</script>
 </body>
 </html>

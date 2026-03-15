@@ -52,6 +52,12 @@ body::before{
 .badge-labor{background:rgba(248,113,113,0.2);color:#fca5a5;border:1px solid rgba(248,113,113,0.4)}
 .badge-pp{background:rgba(168,85,247,0.2);color:#d8b4fe;border:1px solid rgba(168,85,247,0.4)}
 .badge-nb{background:rgba(56,189,248,0.2);color:#7dd3fc;border:1px solid rgba(56,189,248,0.4)}
+.badge-fhr{background:rgba(52,211,153,0.2);color:#6ee7b7;border:1px solid rgba(52,211,153,0.4)}
+.badge-nbc{background:rgba(251,146,60,0.2);color:#fdba74;border:1px solid rgba(251,146,60,0.4)}
+.badge-meds{background:rgba(244,114,182,0.2);color:#f9a8d4;border:1px solid rgba(244,114,182,0.4)}
+.badge-mem{background:rgba(148,163,184,0.2);color:#cbd5e1;border:1px solid rgba(148,163,184,0.4)}
+.hero .badge-row .badge{cursor:pointer;transition:transform 0.15s,box-shadow 0.15s}
+.hero .badge-row .badge:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
 
 /* === STICKY NAV === */
 .nav-bar{
@@ -315,24 +321,16 @@ em{color:#cbd5e1}
 <h1>👶 OB Maternal-Newborn Complications</h1>
 <p class="subtitle">Master the highest-yield OB complications tested on the NCLEX — from antepartum hemorrhage through postpartum emergencies and critical newborn assessment. Every section targets confirmed test content.</p>
 <div class="badge-row">
-<span class="badge badge-ante">🩸 Antepartum</span>
-<span class="badge badge-labor">🚨 Labor &amp; Delivery</span>
-<span class="badge badge-pp">💜 Postpartum</span>
-<span class="badge badge-nb">👶 Newborn</span>
+<a class="badge badge-ante" href="#sec-ante">🩸 Antepartum</a>
+<a class="badge badge-labor" href="#sec-labor">🚨 L&amp;D</a>
+<a class="badge badge-fhr" href="#sec-fhr">📊 Fetal Monitoring</a>
+<a class="badge badge-pp" href="#sec-pp">💜 Postpartum</a>
+<a class="badge badge-nb" href="#sec-nb">👶 Newborn</a>
+<a class="badge badge-nbc" href="#sec-nbc">⚠️ NB Complications</a>
+<a class="badge badge-meds" href="#sec-meds">💊 Meds</a>
+<a class="badge badge-mem" href="#sec-mem">🧠 Memory</a>
 </div>
 </div>
-
-<!-- STICKY NAV -->
-<nav class="nav-bar anim d1">
-<a class="nav-pill" href="#sec-ante">🩸 Antepartum</a>
-<a class="nav-pill" href="#sec-labor">🚨 L&amp;D Emergencies</a>
-<a class="nav-pill" href="#sec-fhr">📊 Fetal Monitoring</a>
-<a class="nav-pill" href="#sec-pp">💜 Postpartum</a>
-<a class="nav-pill" href="#sec-nb">👶 Newborn</a>
-<a class="nav-pill" href="#sec-nbc">⚠️ NB Complications</a>
-<a class="nav-pill" href="#sec-meds">💊 High-Risk Meds</a>
-<a class="nav-pill" href="#sec-mem">🧠 Memory</a>
-</nav>
 
 <!-- ====================================================== -->
 <div id="sec-ante" class="section-hdr sh-ante anim d2">
@@ -897,5 +895,17 @@ These contraindications are tested on virtually every NCLEX exam.
 </div>
 
 </div>
+<script>
+document.querySelectorAll('.drug').forEach(function(el){
+  el.style.cursor='pointer';
+  el.title='Click to view drug card';
+  el.addEventListener('click',function(){
+    var name=this.textContent.trim();
+    if(window.parent&&window.parent!==window){
+      window.parent.postMessage({type:'showDrugCard',drug:name},'*');
+    }
+  });
+});
+</script>
 </body>
 </html>

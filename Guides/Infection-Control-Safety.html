@@ -56,6 +56,22 @@ body {
   color: var(--ic-text-gold);
   opacity: 0.85;
 }
+.hero .badge-row{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.85rem}
+.hero .badge-row .badge{
+  display:inline-flex;align-items:center;gap:0.3rem;padding:0.25rem 0.65rem;
+  border-radius:2rem;font-size:0.75rem;font-weight:700;letter-spacing:0.03em;
+  text-transform:uppercase;text-decoration:none;cursor:pointer;
+  transition:transform 0.15s,box-shadow 0.15s;backdrop-filter:blur(4px);
+}
+.hero .badge-row .badge:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+.badge-prec{background:rgba(194,135,10,0.25);color:#fde68a;border:1px solid rgba(194,135,10,0.5)}
+.badge-ster{background:rgba(56,189,248,0.2);color:#7dd3fc;border:1px solid rgba(56,189,248,0.4)}
+.badge-hai{background:rgba(248,113,113,0.2);color:#fca5a5;border:1px solid rgba(248,113,113,0.4)}
+.badge-tb{background:rgba(163,230,53,0.2);color:#bef264;border:1px solid rgba(163,230,53,0.4)}
+.badge-bb{background:rgba(244,114,182,0.2);color:#f9a8d4;border:1px solid rgba(244,114,182,0.4)}
+.badge-neu{background:rgba(168,85,247,0.2);color:#d8b4fe;border:1px solid rgba(168,85,247,0.4)}
+.badge-med{background:rgba(251,146,60,0.2);color:#fdba74;border:1px solid rgba(251,146,60,0.4)}
+.badge-anc{background:rgba(148,163,184,0.2);color:#cbd5e1;border:1px solid rgba(148,163,184,0.4)}
 
 /* Section headers */
 .section-header {
@@ -276,12 +292,22 @@ ul.plain li::before { content: '• '; color: var(--ic-accent); }
 <div class="hero">
   <h1>🦠 Infection Control &amp; Safety</h1>
   <p class="subtitle">Standard Precautions • Transmission-Based Isolation • Sterile Technique • TB • HAIs • Neutropenic Care</p>
+  <div class="badge-row">
+    <a class="badge badge-prec" href="#sec-prec">🧤 Precautions</a>
+    <a class="badge badge-ster" href="#sec-sterile">🔬 Sterile</a>
+    <a class="badge badge-hai" href="#sec-hai">🏥 HAIs</a>
+    <a class="badge badge-tb" href="#sec-tb">🫁 TB</a>
+    <a class="badge badge-bb" href="#sec-bborne">🩸 Bloodborne</a>
+    <a class="badge badge-neu" href="#sec-neutro">🛡️ Neutropenic</a>
+    <a class="badge badge-med" href="#sec-meds">💊 Meds</a>
+    <a class="badge badge-anc" href="#sec-anchors">🧠 Memory</a>
+  </div>
 </div>
 
 <!-- ========================================== -->
 <!-- SECTION 1: STANDARD & TRANSMISSION-BASED -->
 <!-- ========================================== -->
-<div class="section-header sh-precautions">1 · Standard &amp; Transmission-Based Precautions</div>
+<div id="sec-prec" class="section-header sh-precautions">1 · Standard &amp; Transmission-Based Precautions</div>
 <div class="section-body">
 
   <div class="sub-heading">Standard Precautions — Applied to ALL Patients</div>
@@ -366,7 +392,7 @@ ul.plain li::before { content: '• '; color: var(--ic-accent); }
 <!-- ========================================== -->
 <!-- SECTION 2: STERILE TECHNIQUE -->
 <!-- ========================================== -->
-<div class="section-header sh-sterile">2 · Sterile Technique &amp; Surgical Asepsis</div>
+<div id="sec-sterile" class="section-header sh-sterile">2 · Sterile Technique &amp; Surgical Asepsis</div>
 <div class="section-body">
 
   <div class="sub-heading">Sterile Field Principles — The Non-Negotiables</div>
@@ -443,7 +469,7 @@ ul.plain li::before { content: '• '; color: var(--ic-accent); }
 <!-- ========================================== -->
 <!-- SECTION 3: HEALTHCARE-ASSOCIATED INFECTIONS -->
 <!-- ========================================== -->
-<div class="section-header sh-hai">3 · Healthcare-Associated Infections (HAIs)</div>
+<div id="sec-hai" class="section-header sh-hai">3 · Healthcare-Associated Infections (HAIs)</div>
 <div class="section-body">
 
   <div class="sub-heading">Central Line–Associated Bloodstream Infection (CLABSI) Prevention</div>
@@ -475,7 +501,7 @@ ul.plain li::before { content: '• '; color: var(--ic-accent); }
 
   <div class="sub-heading">Ventilator-Associated Pneumonia (VAP) Prevention</div>
   <div class="mnemonic-box">
-    <div class="mn-title">🫁 VAP Prevention Bundle</div>
+    <div class="mn-title">&#x1FAC1; VAP Prevention Bundle</div>
     <ul>
       <li>Elevate HOB <span class="lyte">30-45 degrees</span> (reduces aspiration)</li>
       <li>Oral care with <span class="drug">chlorhexidine</span> every <span class="lyte">12 hours</span></li>
@@ -509,7 +535,7 @@ ul.plain li::before { content: '• '; color: var(--ic-accent); }
       </tr>
       <tr>
         <td><span class="cat-label">Cause</span></td>
-        <td>Disruption of normal flora from broad-spectrum antibiotics (clindamycin, fluoroquinolones, cephalosporins)</td>
+        <td>Disruption of normal flora from broad-spectrum antibiotics (<span class="drug">clindamycin</span>, <span class="drug">fluoroquinolones</span>, <span class="drug">cephalosporins</span>)</td>
       </tr>
       <tr>
         <td><span class="cat-label">Treatment</span></td>
@@ -528,7 +554,7 @@ ul.plain li::before { content: '• '; color: var(--ic-accent); }
 
   <div class="sub-heading">Surgical Site Infection (SSI) Prevention</div>
   <ul class="plain">
-    <li>Administer prophylactic antibiotics within <span class="lyte">1 hour</span> before surgical incision (or 2 hours for vancomycin/fluoroquinolones)</li>
+    <li>Administer prophylactic antibiotics within <span class="lyte">1 hour</span> before surgical incision (or 2 hours for <span class="drug">vancomycin</span>/<span class="drug">fluoroquinolones</span>)</li>
     <li>Clip hair (do NOT shave) — shaving creates micro-abrasions that harbor bacteria</li>
     <li>Maintain normothermia during surgery</li>
     <li>Maintain blood glucose control (especially in diabetic patients)</li>
@@ -540,7 +566,7 @@ ul.plain li::before { content: '• '; color: var(--ic-accent); }
 <!-- ========================================== -->
 <!-- SECTION 4: TUBERCULOSIS -->
 <!-- ========================================== -->
-<div class="section-header sh-tb">4 · Tuberculosis Screening &amp; Management</div>
+<div id="sec-tb" class="section-header sh-tb">4 · Tuberculosis Screening &amp; Management</div>
 <div class="section-body">
 
   <div class="sub-heading">TB Testing Methods</div>
@@ -605,10 +631,10 @@ ul.plain li::before { content: '• '; color: var(--ic-accent); }
   <div class="mnemonic-box">
     <div class="mn-title">💊 RIPE — First-Line TB Medications</div>
     <ul>
-      <li><strong>R</strong>ifampin — turns body fluids <span class="lyte">orange/red</span> (urine, tears, sweat). Decreases effectiveness of oral contraceptives. Potent CYP450 inducer.</li>
-      <li><strong>I</strong>soniazid (INH) — hepatotoxic (monitor <span class="lyte">LFTs</span>). Give with <span class="drug">pyridoxine (Vitamin B6)</span> to prevent peripheral neuropathy.</li>
-      <li><strong>P</strong>yrazinamide — hepatotoxic. Monitor <span class="lyte">uric acid</span> levels (can cause hyperuricemia/gout).</li>
-      <li><strong>E</strong>thambutol — causes <span class="lyte">optic neuritis</span> (visual changes: decreased acuity, color blindness). Baseline vision exam required. "E = Eyes"</li>
+      <li><span class="drug"><strong>R</strong>ifampin</span> — turns body fluids <span class="lyte">orange/red</span> (urine, tears, sweat). Decreases effectiveness of oral contraceptives. Potent CYP450 inducer.</li>
+      <li><span class="drug"><strong>I</strong>soniazid (INH)</span> — hepatotoxic (monitor <span class="lyte">LFTs</span>). Give with <span class="drug">pyridoxine (Vitamin B6)</span> to prevent peripheral neuropathy.</li>
+      <li><span class="drug"><strong>P</strong>yrazinamide</span> — hepatotoxic. Monitor <span class="lyte">uric acid</span> levels (can cause hyperuricemia/gout).</li>
+      <li><span class="drug"><strong>E</strong>thambutol</span> — causes <span class="lyte">optic neuritis</span> (visual changes: decreased acuity, color blindness). Baseline vision exam required. "E = Eyes"</li>
     </ul>
   </div>
 
@@ -629,7 +655,7 @@ ul.plain li::before { content: '• '; color: var(--ic-accent); }
 <!-- ========================================== -->
 <!-- SECTION 5: BLOODBORNE PATHOGEN EXPOSURE -->
 <!-- ========================================== -->
-<div class="section-header sh-bborne">5 · Bloodborne Pathogen Exposure</div>
+<div id="sec-bborne" class="section-header sh-bborne">5 · Bloodborne Pathogen Exposure</div>
 <div class="section-body">
 
   <div class="sub-heading">Needlestick Protocol — Immediate Actions</div>
@@ -717,7 +743,7 @@ ul.plain li::before { content: '• '; color: var(--ic-accent); }
 <!-- ========================================== -->
 <!-- SECTION 6: NEUTROPENIC PRECAUTIONS -->
 <!-- ========================================== -->
-<div class="section-header sh-neutro">6 · Neutropenic &amp; Immunocompromised Precautions</div>
+<div id="sec-neutro" class="section-header sh-neutro">6 · Neutropenic &amp; Immunocompromised Precautions</div>
 <div class="section-body">
 
   <div class="sub-heading">Absolute Neutrophil Count (ANC) Calculation</div>
@@ -783,7 +809,7 @@ ul.plain li::before { content: '• '; color: var(--ic-accent); }
 <!-- ========================================== -->
 <!-- SECTION 7: HIGH-ALERT IC MEDICATIONS -->
 <!-- ========================================== -->
-<div class="section-header sh-meds">7 · High-Alert Infection Control Medications</div>
+<div id="sec-meds" class="section-header sh-meds">7 · High-Alert Infection Control Medications</div>
 <div class="section-body">
 
   <table>
@@ -803,7 +829,7 @@ ul.plain li::before { content: '• '; color: var(--ic-accent); }
       <tr>
         <td><span class="drug">Gentamicin / Tobramycin</span> (aminoglycosides)</td>
         <td>Gram-negative coverage, often combined with other antibiotics</td>
-        <td>Monitor <span class="lyte">peak &amp; trough levels</span>. <strong>Nephrotoxic</strong> (monitor BUN/creatinine) and <strong>Ototoxic</strong> (monitor hearing, tinnitus, balance). Never mix with penicillins in same IV line.</td>
+        <td>Monitor <span class="lyte">peak &amp; trough levels</span>. <strong>Nephrotoxic</strong> (monitor BUN/creatinine) and <strong>Ototoxic</strong> (monitor hearing, tinnitus, balance). Never mix with <span class="drug">penicillins</span> in same IV line.</td>
       </tr>
       <tr>
         <td><span class="drug">Isoniazid (INH)</span></td>
@@ -842,7 +868,7 @@ ul.plain li::before { content: '• '; color: var(--ic-accent); }
 <!-- ========================================== -->
 <!-- SECTION 8: MEMORY ANCHORS -->
 <!-- ========================================== -->
-<div class="section-header sh-anchors">8 · Memory Anchors — Quick Reference</div>
+<div id="sec-anchors" class="section-header sh-anchors">8 · Memory Anchors — Quick Reference</div>
 <div class="section-body">
 
   <div class="anchor-grid">
@@ -930,5 +956,17 @@ ul.plain li::before { content: '• '; color: var(--ic-accent); }
 </div>
 
 </div><!-- end guide-container -->
+<script>
+document.querySelectorAll('.drug').forEach(function(el){
+  el.style.cursor='pointer';
+  el.title='Click to view drug card';
+  el.addEventListener('click',function(){
+    var name=this.textContent.trim();
+    if(window.parent&&window.parent!==window){
+      window.parent.postMessage({type:'showDrugCard',drug:name},'*');
+    }
+  });
+});
+</script>
 </body>
 </html>
