@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pharmacology — NCLEX Crib Notes</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --pri-bg-from: #0b0f1a;
+  --pri-bg-mid: #111827;
+  --pri-bg-to: #1e2740;
+  --pri-accent: #4f46e5;
+  --pri-accent-light: #818cf8;
+  --pri-text: #e8ecf4;
+  --pri-text-muted: #94a3b8;
+  --pri-gold: #fbbf24;
+  --pri-border: #6366f1;
+  --pri-card-bg: rgba(255,255,255,0.04);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(160deg, var(--pri-bg-from) 0%, var(--pri-bg-mid) 45%, var(--pri-bg-to) 100%);
+  color: var(--pri-text);
+  min-height: 100vh;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 1.02rem;
+}
+body::before {
+  content: '';
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 15%, rgba(79,70,229,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 85% 80%, rgba(99,102,241,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.guide-container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #0a0a20 0%, #1a1040 40%, #2d1b6e 100%);
+  border-radius: 1.25rem;
+  padding: 2rem 1.75rem 1.75rem;
+  margin-bottom: 2rem;
+  border: 2px solid var(--pri-accent);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -40%; right: -15%; width: 280px; height: 280px;
+  background: radial-gradient(circle, rgba(129,140,248,0.15), transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '💊';
+  position: absolute; top: 1rem; right: 1.25rem; font-size: 2.8rem; opacity: 0.12;
+  pointer-events: none;
+}
+.hero h1 {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 12px rgba(79,70,229,0.3);
+}
+.hero .subtitle {
+  font-size: 1.05rem;
+  color: #a5b4fc;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.hero .badge-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.85rem; }
+.hero .badge {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.25rem 0.65rem; border-radius: 2rem;
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.03em; text-transform: uppercase;
+  backdrop-filter: blur(4px);
+}
+.badge-pk     { background: rgba(79,70,229,0.2); color: #a5b4fc; border: 1px solid rgba(79,70,229,0.4); }
+.badge-calc   { background: rgba(16,185,129,0.2); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.4); }
+.badge-alert  { background: rgba(239,68,68,0.2); color: #fca5a5; border: 1px solid rgba(239,68,68,0.4); }
+.badge-cardio { background: rgba(225,29,72,0.2); color: #fda4af; border: 1px solid rgba(225,29,72,0.4); }
+.badge-resp   { background: rgba(14,165,233,0.2); color: #7dd3fc; border: 1px solid rgba(14,165,233,0.4); }
+.badge-neuro  { background: rgba(168,85,247,0.2); color: #d8b4fe; border: 1px solid rgba(168,85,247,0.4); }
+.badge-infx   { background: rgba(245,158,11,0.2); color: #fcd34d; border: 1px solid rgba(245,158,11,0.4); }
+.badge-mem    { background: rgba(148,163,184,0.2); color: #cbd5e1; border: 1px solid rgba(148,163,184,0.4); }
+.hero .badge-row .badge{cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;text-decoration:none}
+.hero .badge-row .badge:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+
+/* ========== SECTION HEADERS ========== */
+.section-hdr {
+  position: relative;
+  margin: 2.5rem 0 0;
+  padding: 0.85rem 1.15rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.sh-pk       { background: #1e1b4b; color: #c7d2fe; }
+.sh-calc     { background: #064e3b; color: #a7f3d0; }
+.sh-alert    { background: #7f1d1d; color: #fecaca; }
+.sh-cardio   { background: #881337; color: #fecdd3; }
+.sh-resp     { background: #0c4a6e; color: #bae6fd; }
+.sh-neuro    { background: #4a1d96; color: #e9d5ff; }
+.sh-infx     { background: #78350f; color: #fef3c7; }
+.sh-mem      { background: #1e293b; color: #e2e8f0; }
+
+/* ========== CONTENT BLOCKS ========== */
+.content-block {
+  background: var(--pri-card-bg);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-top: none;
+  border-radius: 0 0 0.75rem 0.75rem;
+  padding: 1.25rem 1.15rem 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.content-block h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--pri-accent-light);
+  margin: 1.4rem 0 0.5rem;
+}
+.content-block h3:first-child { margin-top: 0; }
+.content-block p {
+  margin: 0.4rem 0 0.7rem;
+  color: var(--pri-text);
+  line-height: 1.65;
+}
+.content-block ul, .content-block ol {
+  margin: 0.4rem 0 0.8rem 1.3rem;
+  color: var(--pri-text);
+}
+.content-block li {
+  margin-bottom: 0.35rem;
+  line-height: 1.55;
+}
+.content-block li strong { color: #fff; }
+
+/* ========== DRUG / LYTE HIGHLIGHTS ========== */
+.drug { color: #93c5fd; font-weight: 700; }
+.lyte { color: #ffa040; font-weight: 700; }
+
+/* ========== TABLES ========== */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0 1rem;
+  font-size: 0.95rem;
+}
+.info-table th {
+  background: rgba(79,70,229,0.15);
+  color: var(--pri-accent-light);
+  padding: 0.55rem 0.7rem;
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 2px solid rgba(79,70,229,0.3);
+}
+.info-table td {
+  padding: 0.5rem 0.7rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  vertical-align: top;
+}
+.info-table tr:last-child td { border-bottom: none; }
+.info-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+/* ========== PRIORITY BOXES ========== */
+.priority-box {
+  border-radius: 0.6rem;
+  padding: 0.85rem 1rem;
+  margin: 0.75rem 0;
+  border-left: 4px solid;
+}
+.pbox-red    { background: rgba(220,38,38,0.08); border-color: #dc2626; }
+.pbox-amber  { background: rgba(245,158,11,0.08); border-color: #f59e0b; }
+.pbox-green  { background: rgba(16,185,129,0.08); border-color: #10b981; }
+.pbox-blue   { background: rgba(59,130,246,0.08); border-color: #3b82f6; }
+.pbox-purple { background: rgba(139,92,246,0.08); border-color: #8b5cf6; }
+.pbox-indigo { background: rgba(79,70,229,0.08); border-color: #4f46e5; }
+
+/* ========== MNEMONIC BOX ========== */
+.mnemonic-box {
+  background: rgba(79,70,229,0.06);
+  border: 1px solid rgba(79,70,229,0.2);
+  border-radius: 0.6rem;
+  padding: 0.85rem 1rem;
+  margin: 0.75rem 0;
+}
+.mnemonic-box .title {
+  font-weight: 700;
+  color: var(--pri-accent-light);
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+.mnemonic-box .letters {
+  font-size: 0.95rem;
+}
+.mnemonic-box .letters span {
+  color: var(--pri-gold);
+  font-weight: 800;
+}
+
+/* ========== KEY RULE ========== */
+.key-rule {
+  background: rgba(251,191,36,0.08);
+  border: 1px solid rgba(251,191,36,0.25);
+  border-radius: 0.6rem;
+  padding: 0.75rem 1rem;
+  margin: 0.6rem 0;
+  font-weight: 600;
+  color: var(--pri-gold);
+  font-size: 0.95rem;
+}
+.key-rule .rule-icon { margin-right: 0.4rem; }
+
+/* ========== DECISION FLOW ========== */
+.decision-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.flow-step {
+  background: rgba(79,70,229,0.12);
+  border: 1px solid rgba(79,70,229,0.3);
+  color: #a5b4fc;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+}
+.flow-arrow {
+  color: var(--pri-text-muted);
+  font-size: 1.1rem;
+}
+
+/* ========== SCOPE COLUMNS ========== */
+.scope-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.75rem;
+  margin: 0.75rem 0 1rem;
+}
+.scope-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 0.65rem;
+  padding: 0.85rem 1rem;
+}
+.scope-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid;
+}
+.scope-card ul { list-style: none; margin: 0; padding: 0; }
+.scope-card li {
+  padding: 0.2rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+  font-size: 0.93rem;
+}
+.scope-card li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+.sc-blue h4  { color: #60a5fa; border-color: #3b82f6; }
+.sc-blue li::before  { color: #60a5fa; }
+.sc-green h4 { color: #34d399; border-color: #10b981; }
+.sc-green li::before { color: #34d399; }
+.sc-red h4   { color: #f87171; border-color: #dc2626; }
+.sc-red li::before   { color: #f87171; }
+.sc-amber h4 { color: #fbbf24; border-color: #f59e0b; }
+.sc-amber li::before { color: #fbbf24; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.55rem; }
+  .guide-container { padding: 1rem 0.65rem 2rem; }
+  .content-block { padding: 1rem 0.85rem 1.2rem; }
+  .scope-grid { grid-template-columns: 1fr; }
+  .info-table { font-size: 0.85rem; }
+  .info-table th, .info-table td { padding: 0.4rem 0.5rem; }
+}
+</style>
+</head>
+<body>
+<div class="guide-container">
+
+<!-- ==================== HERO ==================== -->
+<div class="hero">
+  <h1>💊 Pharmacology</h1>
+  <div class="subtitle">Drug safety, pharmacokinetics, dosage calculations, high-alert medications, cardiovascular, respiratory, neurological &amp; anti-infective pharmacology for NCLEX mastery.</div>
+  <div class="badge-row">
+    <a class="badge badge-pk" href="#sec-pk">💊 PK/PD</a>
+    <a class="badge badge-calc" href="#sec-calc">🧮 Calculations</a>
+    <a class="badge badge-alert" href="#sec-alert">⚠️ High-Alert</a>
+    <a class="badge badge-cardio" href="#sec-cardio">❤️ Cardiac</a>
+    <a class="badge badge-resp" href="#sec-resp">🫁 Resp/Endo</a>
+    <a class="badge badge-neuro" href="#sec-neuro">🧠 Neuro/Psych</a>
+    <a class="badge badge-infx" href="#sec-infx">🦠 Anti-Infectives</a>
+    <a class="badge badge-mem" href="#sec-mem">🧪 Memory</a>
+  </div>
+</div>
+
+<!-- ==================== SECTION 1: Pharmacokinetics & Drug Safety ==================== -->
+<div id="sec-pk" class="section-hdr sh-pk">💊 Section 1 — Pharmacokinetics &amp; Drug Safety</div>
+<div class="content-block">
+
+  <h3>Pharmacokinetics — ADME</h3>
+  <p>Pharmacokinetics describes what the <strong>body does to the drug</strong>. The four processes are Absorption, Distribution, Metabolism, and Excretion:</p>
+
+  <table class="info-table">
+    <tr><th>Process</th><th>Description</th><th>Key Nursing Implications</th></tr>
+    <tr><td><strong>Absorption</strong></td><td>Drug moves from site of administration into bloodstream</td><td>Oral drugs affected by food, pH, GI motility. IV = 100% bioavailability. IM faster than SubQ.</td></tr>
+    <tr><td><strong>Distribution</strong></td><td>Drug travels via blood to target tissues</td><td>Protein-binding affects drug availability — low albumin → more free drug → increased toxicity risk.</td></tr>
+    <tr><td><strong>Metabolism</strong></td><td>Liver (primarily) converts drug to metabolites</td><td>First-pass effect reduces oral drug availability. Hepatic impairment → drug accumulation. CYP450 interactions.</td></tr>
+    <tr><td><strong>Excretion</strong></td><td>Drug eliminated, primarily via kidneys</td><td>Monitor <span class="lyte">BUN &amp; creatinine</span> for renal dosing. Elderly have ↓ GFR → slower excretion → ↑ toxicity risk.</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: If a patient has hepatic or renal impairment, ALWAYS anticipate reduced drug clearance and need for dose adjustment.
+  </div>
+
+  <h3>Pharmacodynamics — Drug-Receptor Interactions</h3>
+  <p>Pharmacodynamics describes what the <strong>drug does to the body</strong>:</p>
+  <ul>
+    <li><strong>Agonist</strong> — Binds receptor and activates it (e.g., <span class="drug">morphine</span> at opioid receptors)</li>
+    <li><strong>Antagonist</strong> — Binds receptor and blocks it (e.g., <span class="drug">naloxone</span> blocks opioid receptors)</li>
+    <li><strong>Partial agonist</strong> — Activates receptor with less-than-maximal response (e.g., <span class="drug">buprenorphine</span>)</li>
+  </ul>
+
+  <h3>Therapeutic Range &amp; Drug Levels</h3>
+  <p>Some drugs have a <strong>narrow therapeutic index (NTI)</strong> — the effective dose is dangerously close to the toxic dose. These require monitoring of serum drug levels:</p>
+
+  <table class="info-table">
+    <tr><th>Drug</th><th>Therapeutic Range</th><th>Toxicity Signs</th></tr>
+    <tr><td><span class="drug">Digoxin (Lanoxin)</span></td><td><span class="lyte">0.5–2.0 ng/mL</span></td><td>Anorexia, N/V, yellow-green halos, bradycardia, dysrhythmias. Check <span class="lyte">K⁺</span> — hypokalemia ↑ toxicity risk.</td></tr>
+    <tr><td><span class="drug">Lithium (Lithobid)</span></td><td><span class="lyte">0.6–1.2 mEq/L</span></td><td>Coarse tremor, confusion, seizures, oliguria. Maintain <span class="lyte">Na⁺</span> &amp; hydration. Draw levels <span class="lyte">12 hours</span> after last dose.</td></tr>
+    <tr><td><span class="drug">Phenytoin (Dilantin)</span></td><td><span class="lyte">10–20 mcg/mL</span></td><td>Nystagmus, ataxia, gingival hyperplasia. Administer slowly IV — rate max <span class="lyte">50 mg/min</span>.</td></tr>
+    <tr><td><span class="drug">Vancomycin</span></td><td>Trough: <span class="lyte">10–20 mcg/mL</span></td><td>Red Man Syndrome (infuse over ≥ <span class="lyte">60 min</span>), nephrotoxicity, ototoxicity.</td></tr>
+    <tr><td><span class="drug">Aminoglycosides</span> (gentamicin, tobramycin)</td><td>Peak: <span class="lyte">5–10 mcg/mL</span>; Trough: <span class="lyte">&lt; 2 mcg/mL</span></td><td>Nephrotoxicity, ototoxicity (tinnitus, hearing loss). Monitor <span class="lyte">creatinine</span> &amp; hearing.</td></tr>
+    <tr><td><span class="drug">Theophylline</span></td><td><span class="lyte">10–20 mcg/mL</span></td><td>Tachycardia, seizures, N/V. Avoid caffeine.</td></tr>
+    <tr><td><span class="drug">Valproic acid (Depakote)</span></td><td><span class="lyte">50–100 mcg/mL</span></td><td>Hepatotoxicity, pancreatitis, thrombocytopenia. Monitor <span class="lyte">LFTs</span> &amp; platelets.</td></tr>
+    <tr><td><span class="drug">Carbamazepine (Tegretol)</span></td><td><span class="lyte">4–12 mcg/mL</span></td><td>Aplastic anemia, agranulocytosis. Monitor <span class="lyte">CBC</span> regularly.</td></tr>
+  </table>
+
+  <div class="priority-box pbox-red">
+    <strong>🔴 When to HOLD a medication and notify the provider:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>Drug level is above therapeutic range</li>
+      <li>Heart rate &lt; <span class="lyte">60 bpm</span> before giving <span class="drug">digoxin</span> or beta-blockers</li>
+      <li><span class="lyte">SBP &lt; 100 mmHg</span> before giving antihypertensives</li>
+      <li><span class="lyte">RR &lt; 12/min</span> before giving opioids</li>
+      <li><span class="lyte">K⁺ &lt; 3.5 mEq/L</span> before giving <span class="drug">digoxin</span> (hypokalemia ↑ dig toxicity)</li>
+    </ul>
+  </div>
+
+  <h3>The 10 Rights of Medication Administration</h3>
+  <div class="mnemonic-box">
+    <div class="title">📋 10 Rights — Verify EVERY Time</div>
+    <div class="letters">
+      <span>1</span>. Right Patient · <span>2</span>. Right Drug · <span>3</span>. Right Dose · <span>4</span>. Right Route ·
+      <span>5</span>. Right Time · <span>6</span>. Right Documentation · <span>7</span>. Right Reason ·
+      <span>8</span>. Right Response · <span>9</span>. Right to Refuse · <span>10</span>. Right Education
+    </div>
+  </div>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Tip: Use TWO patient identifiers (name + DOB or medical record number). Room number is NEVER a valid identifier.
+  </div>
+</div>
+
+<!-- ==================== SECTION 2: Dosage Calculations ==================== -->
+<div id="sec-calc" class="section-hdr sh-calc">🧮 Section 2 — Dosage Calculations &amp; Administration</div>
+<div class="content-block">
+
+  <h3>Essential Formulas</h3>
+  <table class="info-table">
+    <tr><th>Calculation</th><th>Formula</th><th>Example</th></tr>
+    <tr><td><strong>Desired over Have</strong></td><td>Dose = (D / H) × V</td><td>Order: 500 mg. Available: 250 mg/5 mL → (500/250) × 5 = <span class="lyte">10 mL</span></td></tr>
+    <tr><td><strong>IV Flow Rate (mL/hr)</strong></td><td>mL/hr = Total Volume ÷ Hours</td><td>1000 mL over 8 hr → <span class="lyte">125 mL/hr</span></td></tr>
+    <tr><td><strong>IV Drip Rate (gtt/min)</strong></td><td>(Volume × Drop Factor) ÷ (Time in min)</td><td>1000 mL × 15 gtt/mL ÷ 480 min = <span class="lyte">31 gtt/min</span></td></tr>
+    <tr><td><strong>Weight-Based (mcg/kg/min)</strong></td><td>Rate = (Dose × Weight × 60) ÷ Concentration</td><td>Used for <span class="drug">dopamine</span>, <span class="drug">dobutamine</span>, <span class="drug">nitroprusside</span></td></tr>
+    <tr><td><strong>Pediatric (mg/kg)</strong></td><td>Dose = mg/kg × child's weight in kg</td><td>15 mg/kg × 22 kg = <span class="lyte">330 mg</span></td></tr>
+    <tr><td><strong>BSA (m²)</strong></td><td>√ (height cm × weight kg ÷ 3600)</td><td>Used for chemotherapy &amp; pediatric dosing</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: ALWAYS convert units first (g → mg, lb → kg). 1 kg = 2.2 lb. If the calculated dose seems unreasonably high or low, RE-CALCULATE before administering.
+  </div>
+
+  <h3>Common Drop Factors</h3>
+  <ul>
+    <li><strong>Macrodrip:</strong> 10, 15, or 20 gtt/mL — used for standard IV infusions</li>
+    <li><strong>Microdrip:</strong> 60 gtt/mL — used for pediatric and precise medication delivery; mL/hr = gtt/min</li>
+    <li><strong>Blood tubing:</strong> 10 gtt/mL — large bore for blood products</li>
+  </ul>
+
+  <h3>Routes of Administration</h3>
+  <table class="info-table">
+    <tr><th>Route</th><th>Onset</th><th>Nursing Considerations</th></tr>
+    <tr><td><strong>IV</strong></td><td>Immediate</td><td>Most rapid onset. Monitor for infiltration, phlebitis. High-alert drugs require pump.</td></tr>
+    <tr><td><strong>IM</strong></td><td>10–30 min</td><td>Z-track for irritating meds (<span class="drug">iron dextran</span>). Vastus lateralis for infants. Max <span class="lyte">3 mL</span> per site (adults).</td></tr>
+    <tr><td><strong>SubQ</strong></td><td>15–30 min</td><td><span class="drug">Insulin</span>, <span class="drug">heparin</span>, <span class="drug">enoxaparin</span>. Rotate sites. Do NOT aspirate for SubQ injections.</td></tr>
+    <tr><td><strong>Oral</strong></td><td>30–60 min</td><td>Most common route. Affected by first-pass metabolism. Hold if NPO (check with provider).</td></tr>
+    <tr><td><strong>Sublingual</strong></td><td>1–3 min</td><td><span class="drug">Nitroglycerin</span> SL — place under tongue, no swallowing until dissolved. May repeat × 3 at <span class="lyte">5-min</span> intervals.</td></tr>
+    <tr><td><strong>Transdermal</strong></td><td>Variable (hours)</td><td>Remove old patch before applying new. Rotate sites. MRI — remove any metallic-backed patches.</td></tr>
+    <tr><td><strong>Rectal</strong></td><td>15–30 min</td><td>Useful when patient is NPO or vomiting. Insert past internal sphincter.</td></tr>
+    <tr><td><strong>Inhalation</strong></td><td>Minutes</td><td>Bronchodilator (<span class="drug">albuterol</span>) FIRST, then corticosteroid. Rinse mouth after inhaled corticosteroids.</td></tr>
+  </table>
+
+  <div class="priority-box pbox-green">
+    <strong>🟢 Injection Site Selection:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li><strong>Deltoid:</strong> Max <span class="lyte">1 mL</span>. Vaccines, small-volume IM injections</li>
+      <li><strong>Ventrogluteal:</strong> Preferred for IM in adults. Least risk of nerve injury</li>
+      <li><strong>Vastus lateralis:</strong> Preferred for infants &lt; <span class="lyte">12 months</span></li>
+      <li><strong>Dorsogluteal:</strong> AVOID — risk of sciatic nerve injury</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ==================== SECTION 3: High-Alert Medications ==================== -->
+<div id="sec-alert" class="section-hdr sh-alert">⚠️ Section 3 — High-Alert Medications &amp; Safety</div>
+<div class="content-block">
+
+  <h3>Independent Double-Check Required</h3>
+  <p>These <strong>high-alert medications</strong> require two nurses to independently verify before administration:</p>
+  <ul>
+    <li><span class="drug">Insulin</span> — all IV drips &amp; concentrated formulations</li>
+    <li><span class="drug">Heparin</span> — IV drips and high-dose SubQ</li>
+    <li><span class="drug">Blood products</span> — verify at bedside with 2 RNs using 2 patient identifiers</li>
+    <li><span class="drug">Chemotherapy</span> — complex protocols with narrow margins of safety</li>
+    <li><span class="drug">Opioid PCA pumps</span> — programming verification</li>
+    <li><span class="drug">Potassium chloride (KCl) IV</span> — NEVER give IV push; always diluted, always on a pump</li>
+    <li><strong>Pediatric weight-based calculations</strong> — second nurse verifies math</li>
+  </ul>
+
+  <div class="priority-box pbox-red">
+    <strong>🔴 NEVER Do These:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>NEVER give <span class="drug">KCl</span> IV push — causes fatal cardiac arrest</li>
+      <li>NEVER crush enteric-coated or sustained-release medications</li>
+      <li>NEVER give <span class="drug">methotrexate</span> daily (weekly dosing for RA — daily = fatal overdose)</li>
+      <li>NEVER use trailing zeros (1.0 mg → write "1 mg") or skip leading zeros (0.5 mg, not .5 mg)</li>
+      <li>NEVER abbreviate: U (units), IU, QD, QOD, MS, MgSO₄ — use full words</li>
+    </ul>
+  </div>
+
+  <h3>Allergic &amp; Anaphylactic Reactions</h3>
+  <table class="info-table">
+    <tr><th>Severity</th><th>Signs</th><th>Nursing Action</th></tr>
+    <tr><td><strong>Mild allergic</strong></td><td>Rash, urticaria, pruritus</td><td>Stop drug. Notify provider. Administer <span class="drug">diphenhydramine (Benadryl)</span> as ordered.</td></tr>
+    <tr><td><strong>Anaphylaxis</strong></td><td>Throat tightening, stridor, hypotension, tachycardia, wheezing</td><td>STOP drug immediately. <span class="drug">Epinephrine 0.3 mg IM</span> (anterolateral thigh). Maintain airway. Call rapid response.</td></tr>
+    <tr><td><strong>Serum sickness</strong></td><td>Fever, joint pain, rash — occurs <span class="lyte">7–14 days</span> after exposure</td><td>Delayed reaction. Notify provider. Treat symptoms.</td></tr>
+  </table>
+
+  <h3>Blood Product Administration</h3>
+  <ul>
+    <li><strong>Pre-transfusion:</strong> Verify with 2 RNs at bedside using 2 patient identifiers + blood bank band. Check ABO/Rh compatibility.</li>
+    <li><strong>Vital signs:</strong> Before, at <span class="lyte">15 min</span>, every <span class="lyte">30 min</span>, and after completion</li>
+    <li><strong>Rate:</strong> Start slowly (<span class="lyte">2 mL/min</span> for first 15 min). Complete within <span class="lyte">4 hours</span>.</li>
+    <li><strong>Only NS:</strong> Use <span class="drug">0.9% Normal Saline</span> with blood products — NEVER lactated Ringer's, D5W, or medications in the same line</li>
+  </ul>
+
+  <div class="priority-box pbox-red">
+    <strong>Transfusion Reaction — Act Immediately:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li><strong>STOP</strong> the transfusion immediately</li>
+      <li>Disconnect blood tubing — infuse <span class="drug">NS</span> with NEW tubing</li>
+      <li>Maintain IV access — do NOT remove the line</li>
+      <li>Notify provider and blood bank</li>
+      <li>Send blood bag &amp; tubing + patient blood sample to the lab</li>
+      <li>Signs: fever, chills, flank pain, dark urine, hypotension, tachycardia, dyspnea</li>
+    </ul>
+  </div>
+
+  <h3>Medication Error Prevention</h3>
+  <ul>
+    <li><strong>Look-alike / Sound-alike:</strong> <span class="drug">Celebrex</span> vs <span class="drug">Celexa</span>; <span class="drug">metformin</span> vs <span class="drug">metoprolol</span>; <span class="drug">hydroxyzine</span> vs <span class="drug">hydralazine</span></li>
+    <li><strong>Tall Man Lettering:</strong> hydrOXYzine vs hydrALAZINE — emphasizes critical letters</li>
+    <li><strong>ISMP Do Not Crush List:</strong> SR, XL, ER, EC formulations must be swallowed whole</li>
+    <li><strong>Report all errors</strong> — no matter how minor. Use incident reporting system. Focus on system fixes, not blame.</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 4: Cardiovascular Pharmacology ==================== -->
+<div id="sec-cardio" class="section-hdr sh-cardio">❤️ Section 4 — Cardiovascular Pharmacology</div>
+<div class="content-block">
+
+  <h3>Anticoagulants &amp; Thrombolytics</h3>
+  <table class="info-table">
+    <tr><th>Drug</th><th>Monitoring</th><th>Antidote</th><th>Key Nursing Points</th></tr>
+    <tr><td><span class="drug">Heparin (IV)</span></td><td><span class="lyte">aPTT</span> (1.5–2.5× control)</td><td><span class="drug">Protamine sulfate</span></td><td>Weight-based dosing. aPTT drawn <span class="lyte">6 hr</span> after initiation or dose change. Watch for HIT (heparin-induced thrombocytopenia).</td></tr>
+    <tr><td><span class="drug">Enoxaparin (Lovenox)</span></td><td>Anti-Xa levels (if monitored)</td><td><span class="drug">Protamine</span> (partial)</td><td>SubQ only. Do NOT expel air bubble. Do NOT aspirate or rub site. Rotate abdomen sites.</td></tr>
+    <tr><td><span class="drug">Warfarin (Coumadin)</span></td><td><span class="lyte">PT/INR</span> (target 2.0–3.0)</td><td><span class="drug">Vitamin K (phytonadione)</span></td><td>Takes <span class="lyte">3–5 days</span> for full effect (bridge with heparin). Interacts with vitamin K–rich foods, many drugs.</td></tr>
+    <tr><td><span class="drug">Apixaban (Eliquis)</span></td><td>No routine monitoring</td><td><span class="drug">Andexanet alfa</span></td><td>Direct oral anticoagulant (DOAC). Fixed dosing. Fewer dietary restrictions than warfarin.</td></tr>
+    <tr><td><span class="drug">Rivaroxaban (Xarelto)</span></td><td>No routine monitoring</td><td><span class="drug">Andexanet alfa</span></td><td>Take with evening meal for absorption. One daily dose for most indications.</td></tr>
+    <tr><td><span class="drug">Alteplase (tPA)</span></td><td>Bleeding precautions</td><td><span class="drug">Aminocaproic acid</span></td><td>Thrombolytic — dissolves clots. Strict time window: stroke ≤ <span class="lyte">4.5 hr</span>, MI ≤ <span class="lyte">12 hr</span>. Contraindicated if active bleeding, recent surgery, or <span class="lyte">BP &gt; 185/110</span>.</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: Heparin → aPTT. Warfarin → PT/INR. NEVER confuse these labs. If INR &gt; 3.0, hold warfarin and notify provider.
+  </div>
+
+  <h3>Antihypertensives</h3>
+  <table class="info-table">
+    <tr><th>Class</th><th>Suffix / Example</th><th>Key Points</th></tr>
+    <tr><td><strong>ACE Inhibitors</strong></td><td>"-pril" (<span class="drug">lisinopril, enalapril</span>)</td><td>Dry cough (switch to ARB if persistent). Hyperkalemia risk. TERATOGENIC. Monitor <span class="lyte">K⁺</span> &amp; <span class="lyte">creatinine</span>. Risk of angioedema.</td></tr>
+    <tr><td><strong>ARBs</strong></td><td>"-sartan" (<span class="drug">losartan, valsartan</span>)</td><td>Similar to ACE without cough. Also TERATOGENIC. Monitor <span class="lyte">K⁺</span>. Do not combine with ACE inhibitors.</td></tr>
+    <tr><td><strong>Beta-Blockers</strong></td><td>"-olol" (<span class="drug">metoprolol, atenolol, propranolol</span>)</td><td>Hold if <span class="lyte">HR &lt; 60</span> or <span class="lyte">SBP &lt; 100</span>. Mask hypoglycemia in diabetics. NEVER stop abruptly — taper. Contraindicated in asthma (non-selective).</td></tr>
+    <tr><td><strong>CCBs</strong></td><td>"-dipine" (<span class="drug">amlodipine, nifedipine</span>); <span class="drug">diltiazem, verapamil</span></td><td>Avoid grapefruit juice. Peripheral edema common. <span class="drug">Verapamil</span> can cause constipation &amp; bradycardia.</td></tr>
+    <tr><td><strong>Diuretics (Thiazide)</strong></td><td><span class="drug">hydrochlorothiazide (HCTZ)</span></td><td>Monitor <span class="lyte">K⁺</span> (causes hypokalemia). Check blood glucose (can ↑ BG). Photosensitivity.</td></tr>
+    <tr><td><strong>Diuretics (Loop)</strong></td><td><span class="drug">furosemide (Lasix), bumetanide</span></td><td>Potent K⁺ wasting. Monitor <span class="lyte">K⁺</span>, hearing (ototoxicity), fluid balance. Give in AM to avoid nocturia.</td></tr>
+    <tr><td><strong>K⁺-Sparing Diuretics</strong></td><td><span class="drug">spironolactone, triamterene</span></td><td>Risk of <span class="lyte">hyperkalemia</span>. Do NOT give with K⁺ supplements or ACE/ARBs without close monitoring.</td></tr>
+  </table>
+
+  <h3>Cardiac Glycosides &amp; Antidysrhythmics</h3>
+  <ul>
+    <li><span class="drug">Digoxin (Lanoxin)</span> — Check apical pulse for <strong>full minute</strong> before giving. Hold if <span class="lyte">HR &lt; 60 bpm</span> (adult) or <span class="lyte">&lt; 100 bpm</span> (infant). Monitor <span class="lyte">K⁺</span> (hypokalemia ↑ dig toxicity).</li>
+    <li><span class="drug">Amiodarone</span> — Broad-spectrum antidysrhythmic. Pulmonary toxicity (monitor for cough/dyspnea), thyroid dysfunction, corneal deposits, photosensitivity. Requires baseline PFTs &amp; TFTs.</li>
+    <li><span class="drug">Adenosine</span> — Rapid IV push followed immediately by NS flush. Used for SVT. Patient may feel brief chest tightness or transient asystole (expected).</li>
+    <li><span class="drug">Atropine</span> — First-line for symptomatic bradycardia. Contraindicated in hypothermic patients.</li>
+  </ul>
+
+  <h3>Nitrates &amp; Antianginals</h3>
+  <div class="priority-box pbox-blue">
+    <strong><span class="drug">Nitroglycerin (NTG)</span> Protocol:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>SL: 1 tablet q5min × 3 doses max. If pain persists after 1st dose → call 911 / activate EMS.</li>
+      <li>Check <span class="lyte">BP</span> before each dose — hold if <span class="lyte">SBP &lt; 90 mmHg</span></li>
+      <li>Headache is expected (vasodilation) — treat with <span class="drug">acetaminophen</span></li>
+      <li>NEVER give with <span class="drug">sildenafil (Viagra)</span> or other PDE5 inhibitors — fatal hypotension</li>
+      <li>Store in dark glass container. Replace every <span class="lyte">6 months</span>. Should tingle under tongue if potent.</li>
+    </ul>
+  </div>
+
+  <h3>Statins &amp; Lipid-Lowering Agents</h3>
+  <ul>
+    <li><span class="drug">Statins</span> ("-statin": <span class="drug">atorvastatin, simvastatin, rosuvastatin</span>) — Take at bedtime (cholesterol synthesis peaks at night). Monitor <span class="lyte">LFTs</span>. Report muscle pain (rhabdomyolysis risk → check <span class="lyte">CK levels</span>). Avoid grapefruit juice.</li>
+    <li><span class="drug">Cholestyramine (Questran)</span> — Bile acid sequestrant. Mix with fluid, never dry. Take other meds <span class="lyte">1 hr before or 4 hr after</span> (interferes with absorption).</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 5: Respiratory & Endocrine Pharmacology ==================== -->
+<div id="sec-resp" class="section-hdr sh-resp">🫁 Section 5 — Respiratory &amp; Endocrine Pharmacology</div>
+<div class="content-block">
+
+  <h3>Respiratory Medications</h3>
+  <table class="info-table">
+    <tr><th>Class</th><th>Drug</th><th>Key Points</th></tr>
+    <tr><td><strong>Short-Acting Beta₂ Agonist (SABA)</strong></td><td><span class="drug">Albuterol (ProAir)</span></td><td>Rescue inhaler. Always give FIRST if using with corticosteroid. Side effects: tachycardia, tremor, hypokalemia.</td></tr>
+    <tr><td><strong>Long-Acting Beta₂ Agonist (LABA)</strong></td><td><span class="drug">Salmeterol, formoterol</span></td><td>Maintenance only — NEVER for acute attack. Always combined with inhaled corticosteroid (ICS).</td></tr>
+    <tr><td><strong>Inhaled Corticosteroid (ICS)</strong></td><td><span class="drug">Fluticasone, budesonide</span></td><td>Rinse mouth after use (prevents oral candidiasis). Spacer recommended. Not for acute rescue.</td></tr>
+    <tr><td><strong>Anticholinergic</strong></td><td><span class="drug">Ipratropium (Atrovent), tiotropium (Spiriva)</span></td><td>Bronchodilation by blocking muscarinic receptors. Monitor for urinary retention, dry mouth. Avoid with glaucoma.</td></tr>
+    <tr><td><strong>Leukotriene Modifier</strong></td><td><span class="drug">Montelukast (Singulair)</span></td><td>Take in evening. BLACK BOX: neuropsychiatric events (mood changes, suicidal ideation). Monitor behavior.</td></tr>
+    <tr><td><strong>Mucolytic</strong></td><td><span class="drug">Acetylcysteine (Mucomyst)</span></td><td>Also antidote for <span class="drug">acetaminophen</span> overdose. Smells like rotten eggs. Keep suction at bedside.</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: When using both a bronchodilator and corticosteroid inhaler — always give the BRONCHODILATOR FIRST (opens airways for better corticosteroid delivery). Wait <span class="lyte">1–2 minutes</span> between puffs.
+  </div>
+
+  <h3>Insulin</h3>
+  <table class="info-table">
+    <tr><th>Type</th><th>Onset</th><th>Peak</th><th>Duration</th><th>Key Points</th></tr>
+    <tr><td><span class="drug">Rapid-acting</span> (lispro, aspart)</td><td><span class="lyte">15 min</span></td><td><span class="lyte">1–2 hr</span></td><td><span class="lyte">3–5 hr</span></td><td>Give with meals. Clear solution. Can give IV (lispro).</td></tr>
+    <tr><td><span class="drug">Short-acting</span> (Regular)</td><td><span class="lyte">30–60 min</span></td><td><span class="lyte">2–4 hr</span></td><td><span class="lyte">6–8 hr</span></td><td>Give 30 min before meals. ONLY insulin that can be given IV. Clear solution.</td></tr>
+    <tr><td><span class="drug">Intermediate</span> (NPH)</td><td><span class="lyte">1–2 hr</span></td><td><span class="lyte">6–12 hr</span></td><td><span class="lyte">18–24 hr</span></td><td>Cloudy — roll gently, do NOT shake. Can mix with regular (draw clear first).</td></tr>
+    <tr><td><span class="drug">Long-acting</span> (glargine/Lantus, detemir)</td><td><span class="lyte">1–2 hr</span></td><td><span class="lyte">No peak</span></td><td><span class="lyte">24 hr</span></td><td>Give at SAME TIME daily. Clear solution. Do NOT mix with other insulins.</td></tr>
+  </table>
+
+  <div class="mnemonic-box">
+    <div class="title">💉 Insulin Mixing Rule: "Clear Before Cloudy"</div>
+    <div class="letters">Draw <span>R</span>egular (clear) FIRST → then draw <span>N</span>PH (cloudy). Think: <span>RN</span> = Regular before NPH.</div>
+  </div>
+
+  <h3>Oral Hypoglycemics</h3>
+  <ul>
+    <li><span class="drug">Metformin (Glucophage)</span> — First-line for Type 2 DM. Hold <span class="lyte">48 hr</span> before and after contrast dye (risk of lactic acidosis). Contraindicated in renal impairment (<span class="lyte">GFR &lt; 30</span>). GI side effects common. Does NOT cause hypoglycemia alone.</li>
+    <li><span class="drug">Sulfonylureas</span> (<span class="drug">glipizide, glyburide</span>) — Stimulate insulin secretion. CAN cause hypoglycemia. Take 30 min before meals.</li>
+    <li><span class="drug">SGLT2 inhibitors</span> (<span class="drug">empagliflozin, dapagliflozin</span>) — Cause glycosuria. Risk of UTI, genital yeast infections. Monitor for euglycemic DKA.</li>
+  </ul>
+
+  <h3>Thyroid Medications</h3>
+  <ul>
+    <li><span class="drug">Levothyroxine (Synthroid)</span> — Hypothyroidism replacement. Take on empty stomach, <span class="lyte">30–60 min</span> before breakfast. Separate from calcium, iron, antacids by <span class="lyte">4 hours</span>. Monitor <span class="lyte">TSH</span> (should decrease with treatment).</li>
+    <li><span class="drug">Methimazole (Tapazole)</span> — Hyperthyroidism (blocks thyroid hormone synthesis). Monitor for <strong>agranulocytosis</strong> — report sore throat or fever immediately. TERATOGENIC in first trimester (use <span class="drug">PTU</span> instead).</li>
+    <li><span class="drug">PTU (Propylthiouracil)</span> — Hyperthyroidism. Preferred in first-trimester pregnancy. Risk of hepatotoxicity. Monitor <span class="lyte">LFTs</span>.</li>
+  </ul>
+
+  <h3>Corticosteroids</h3>
+  <div class="priority-box pbox-amber">
+    <strong><span class="drug">Prednisone / Methylprednisolone / Dexamethasone</span> — Key Rules:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>NEVER stop abruptly — taper gradually (risk of adrenal crisis)</li>
+      <li>Side effects: hyperglycemia, immunosuppression, osteoporosis, cushingoid features, GI bleeding</li>
+      <li>Take with food. Monitor <span class="lyte">blood glucose</span> and <span class="lyte">K⁺</span></li>
+      <li>Avoid live vaccines during therapy</li>
+      <li>Report signs of infection (fever may be masked)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ==================== SECTION 6: Neuro & Psych Pharmacology ==================== -->
+<div id="sec-neuro" class="section-hdr sh-neuro">🧠 Section 6 — Neurological &amp; Psychotropic Pharmacology</div>
+<div class="content-block">
+
+  <h3>Antiepileptics / Anticonvulsants</h3>
+  <table class="info-table">
+    <tr><th>Drug</th><th>Therapeutic Level</th><th>Critical Nursing Points</th></tr>
+    <tr><td><span class="drug">Phenytoin (Dilantin)</span></td><td><span class="lyte">10–20 mcg/mL</span></td><td>IV: compatible only with NS (precipitates in D5W). Max rate <span class="lyte">50 mg/min</span>. Side effects: gingival hyperplasia (oral care essential), hirsutism, nystagmus, ataxia. TERATOGENIC (fetal hydantoin syndrome).</td></tr>
+    <tr><td><span class="drug">Valproic acid (Depakote)</span></td><td><span class="lyte">50–100 mcg/mL</span></td><td>Monitor <span class="lyte">LFTs</span>, platelets, ammonia. Risk of hepatotoxicity &amp; pancreatitis. TERATOGENIC. Do NOT give to children &lt; 2 years with other anticonvulsants.</td></tr>
+    <tr><td><span class="drug">Carbamazepine (Tegretol)</span></td><td><span class="lyte">4–12 mcg/mL</span></td><td>Monitor <span class="lyte">CBC</span> — risk of aplastic anemia, agranulocytosis. Report sore throat, bruising, or fever. Induces CYP450 enzymes.</td></tr>
+    <tr><td><span class="drug">Levetiracetam (Keppra)</span></td><td>No routine levels</td><td>Well-tolerated. Monitor for behavioral changes, mood alterations, somnolence. Dose adjust for renal impairment.</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: NEVER abruptly stop anticonvulsants — risk of status epilepticus. Always taper. If a dose is missed, take it ASAP unless close to next dose.
+  </div>
+
+  <h3>Parkinson's Disease Medications</h3>
+  <ul>
+    <li><span class="drug">Levodopa/Carbidopa (Sinemet)</span> — First-line. Restores dopamine. "On-off phenomenon" with long-term use. Avoid high-protein meals (↓ absorption). Urine may turn dark. Monitor for dyskinesias.</li>
+    <li><span class="drug">Dopamine agonists</span> (<span class="drug">pramipexole, ropinirole</span>) — Risk of impulse control disorders (gambling, compulsive shopping), excessive sleepiness.</li>
+    <li><span class="drug">Anticholinergics</span> (<span class="drug">benztropine, trihexyphenidyl</span>) — Reduce tremors. Side effects: dry mouth, constipation, urinary retention, blurred vision. Contraindicated in glaucoma.</li>
+  </ul>
+
+  <h3>Antidepressants</h3>
+  <table class="info-table">
+    <tr><th>Class</th><th>Examples</th><th>Key Points</th></tr>
+    <tr><td><strong>SSRIs</strong></td><td><span class="drug">fluoxetine, sertraline, escitalopram</span></td><td>First-line for depression &amp; anxiety. BLACK BOX: ↑ suicidality in &lt; 25 y/o. Takes <span class="lyte">2–4 weeks</span> for full effect. Serotonin syndrome risk if combined with MAOIs.</td></tr>
+    <tr><td><strong>SNRIs</strong></td><td><span class="drug">venlafaxine, duloxetine</span></td><td>Also treats neuropathic pain &amp; fibromyalgia. Monitor BP (can ↑). Discontinuation syndrome if stopped abruptly.</td></tr>
+    <tr><td><strong>TCAs</strong></td><td><span class="drug">amitriptyline, nortriptyline</span></td><td>Anticholinergic side effects. Lethal in overdose (cardiac toxicity → widened QRS). Keep out of reach of suicidal patients.</td></tr>
+    <tr><td><strong>MAOIs</strong></td><td><span class="drug">phenelzine, tranylcypromine</span></td><td>TYRAMINE restriction (aged cheese, wine, cured meats → hypertensive crisis). Wait <span class="lyte">14 days</span> before switching to/from other antidepressants.</td></tr>
+  </table>
+
+  <div class="priority-box pbox-red">
+    <strong>🔴 Serotonin Syndrome — Life-Threatening Emergency:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li><strong>Cause:</strong> Excess serotonin — combining SSRIs + MAOIs, or SSRIs + <span class="drug">tramadol</span>, <span class="drug">meperidine</span>, <span class="drug">triptans</span>, <span class="drug">linezolid</span></li>
+      <li><strong>Signs:</strong> Hyperthermia, agitation, myoclonus (muscle jerking), diaphoresis, hyperreflexia, diarrhea, tachycardia</li>
+      <li><strong>Treatment:</strong> Stop all serotonergic drugs. Cooling measures. <span class="drug">Cyproheptadine</span> (serotonin antagonist). Supportive care.</li>
+    </ul>
+  </div>
+
+  <h3>Antipsychotics</h3>
+  <table class="info-table">
+    <tr><th>Generation</th><th>Examples</th><th>Key Side Effects</th></tr>
+    <tr><td><strong>Typical (1st gen)</strong></td><td><span class="drug">haloperidol (Haldol), chlorpromazine</span></td><td>EPS: dystonia, akathisia, tardive dyskinesia. Treat acute EPS with <span class="drug">benztropine</span> or <span class="drug">diphenhydramine</span>. Neuroleptic Malignant Syndrome (NMS) risk.</td></tr>
+    <tr><td><strong>Atypical (2nd gen)</strong></td><td><span class="drug">olanzapine (Zyprexa), quetiapine, risperidone, clozapine</span></td><td>Metabolic syndrome: weight gain, hyperglycemia, dyslipidemia. <span class="drug">Clozapine</span>: requires <span class="lyte">ANC</span> monitoring (risk of agranulocytosis — fatal without monitoring).</td></tr>
+  </table>
+
+  <div class="priority-box pbox-red">
+    <strong>🔴 Neuroleptic Malignant Syndrome (NMS):</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li><strong>Cause:</strong> Antipsychotic medications (especially high-potency typicals)</li>
+      <li><strong>Signs:</strong> Hyperthermia (&gt; <span class="lyte">104°F</span>), "lead-pipe" rigidity, altered mental status, autonomic instability, ↑ <span class="lyte">CK</span></li>
+      <li><strong>Treatment:</strong> STOP antipsychotic immediately. <span class="drug">Dantrolene</span> + <span class="drug">bromocriptine</span>. Cooling measures. IV hydration. ICU admission.</li>
+    </ul>
+  </div>
+
+  <h3>Anxiolytics &amp; Sedatives</h3>
+  <ul>
+    <li><span class="drug">Benzodiazepines</span> (<span class="drug">lorazepam, diazepam, midazolam, alprazolam</span>) — CNS depression. Respiratory depression risk. Antidote: <span class="drug">flumazenil</span>. Avoid alcohol. Fall risk in elderly. Taper to discontinue (seizure risk).</li>
+    <li><span class="drug">Buspirone (BuSpar)</span> — Non-sedating anxiolytic. Takes <span class="lyte">2–4 weeks</span> for effect. No abuse potential. Cannot be used PRN for acute anxiety. Avoid grapefruit juice.</li>
+  </ul>
+
+  <h3>Lithium — Bipolar Disorder</h3>
+  <div class="priority-box pbox-amber">
+    <strong><span class="drug">Lithium</span> — Critical Monitoring:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>Therapeutic range: <span class="lyte">0.6–1.2 mEq/L</span>. Draw levels <span class="lyte">12 hr</span> after last dose.</li>
+      <li>Narrow therapeutic index — toxicity begins at <span class="lyte">&gt; 1.5 mEq/L</span></li>
+      <li>Maintain adequate <span class="lyte">Na⁺</span> and fluid intake — dehydration/low Na⁺ → ↑ lithium levels</li>
+      <li>Avoid <span class="drug">NSAIDs</span>, <span class="drug">thiazides</span>, <span class="drug">ACE inhibitors</span> (↑ lithium levels)</li>
+      <li>Early toxicity: fine tremors, N/V, diarrhea, drowsiness</li>
+      <li>Severe toxicity: coarse tremors, confusion, seizures, oliguria, coma</li>
+      <li>Monitor <span class="lyte">thyroid</span> &amp; <span class="lyte">renal function</span> regularly (causes hypothyroidism &amp; nephrogenic DI)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ==================== SECTION 7: Anti-Infectives & Pain Management ==================== -->
+<div id="sec-infx" class="section-hdr sh-infx">🦠 Section 7 — Anti-Infectives &amp; Pain Management</div>
+<div class="content-block">
+
+  <h3>Antibiotic Classes</h3>
+  <table class="info-table">
+    <tr><th>Class</th><th>Suffix / Example</th><th>Key Points</th></tr>
+    <tr><td><strong>Penicillins</strong></td><td><span class="drug">amoxicillin, ampicillin</span></td><td>Cross-sensitivity with cephalosporins. Ask about allergy before first dose. Anaphylaxis risk. Rash with mono + amoxicillin.</td></tr>
+    <tr><td><strong>Cephalosporins</strong></td><td><span class="drug">ceftriaxone, cephalexin</span></td><td>Cross-allergy with penicillin (~1–2%). Avoid alcohol with some (disulfiram reaction). IM <span class="drug">ceftriaxone</span>: reconstitute with <span class="drug">lidocaine</span>.</td></tr>
+    <tr><td><strong>Fluoroquinolones</strong></td><td>"-floxacin" (<span class="drug">ciprofloxacin, levofloxacin</span>)</td><td>BLACK BOX: tendon rupture (especially Achilles), peripheral neuropathy. Avoid in &lt; 18 y/o. Avoid dairy/antacids (↓ absorption). Photosensitivity.</td></tr>
+    <tr><td><strong>Aminoglycosides</strong></td><td>"-mycin/-micin" (<span class="drug">gentamicin, tobramycin</span>)</td><td>Nephrotoxic + ototoxic. Monitor <span class="lyte">BUN/creatinine</span> &amp; hearing. Draw peak/trough levels. Adequate hydration essential.</td></tr>
+    <tr><td><strong>Macrolides</strong></td><td>"-thromycin" (<span class="drug">azithromycin, erythromycin</span>)</td><td>GI upset common. QT prolongation risk. <span class="drug">Erythromycin</span>: used in newborn eye prophylaxis.</td></tr>
+    <tr><td><strong>Tetracyclines</strong></td><td><span class="drug">doxycycline, tetracycline</span></td><td>TERATOGENIC. Avoid in children &lt; 8 y/o (permanent teeth staining). Avoid dairy, antacids, iron. Photosensitivity. Take with full glass of water.</td></tr>
+    <tr><td><strong>Sulfonamides</strong></td><td><span class="drug">sulfamethoxazole-trimethoprim (Bactrim)</span></td><td>Sulfa allergy is common. Increase fluids (risk of crystalluria). Photosensitivity. Monitor <span class="lyte">CBC</span> (bone marrow suppression).</td></tr>
+    <tr><td><strong>Glycopeptides</strong></td><td><span class="drug">Vancomycin</span></td><td>Monitor trough levels (<span class="lyte">10–20 mcg/mL</span>). Infuse over ≥ <span class="lyte">60 min</span> (Red Man Syndrome if too fast). Nephrotoxic &amp; ototoxic.</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: For ALL antibiotics — obtain cultures BEFORE first dose, then administer ASAP. "Culture first, treat fast." For suspected sepsis, first dose within <span class="lyte">1 hour</span>.
+  </div>
+
+  <h3>Antituberculars</h3>
+  <div class="mnemonic-box">
+    <div class="title">🫁 RIPE — First-Line TB Treatment</div>
+    <div class="letters">
+      <span>R</span>ifampin (orange body fluids, ↓ oral contraceptive effectiveness) ·
+      <span>I</span>soniazid (INH) (hepatotoxic, give <span class="drug">pyridoxine/B6</span> to prevent neuropathy) ·
+      <span>P</span>yrazinamide (hepatotoxic, hyperuricemia) ·
+      <span>E</span>thanbutol (visual changes — check acuity before starting)
+    </div>
+  </div>
+
+  <h3>Antivirals &amp; Antifungals</h3>
+  <ul>
+    <li><span class="drug">Acyclovir (Zovirax)</span> — Herpes, varicella. Maintain hydration (nephrotoxicity). IV: infuse slowly over <span class="lyte">≥ 1 hour</span>.</li>
+    <li><span class="drug">Oseltamivir (Tamiflu)</span> — Influenza. Start within <span class="lyte">48 hours</span> of symptom onset for best effect.</li>
+    <li><span class="drug">Amphotericin B</span> — Potent antifungal. Highly nephrotoxic ("Amphoterrible"). Premedicate with <span class="drug">acetaminophen</span> and <span class="drug">diphenhydramine</span> for infusion reactions. Monitor <span class="lyte">BUN/creatinine</span>, <span class="lyte">K⁺</span>, <span class="lyte">Mg²⁺</span>.</li>
+    <li><span class="drug">Fluconazole (Diflucan)</span> — Oral/systemic fungal infections. Monitor <span class="lyte">LFTs</span>. Fewer side effects than amphotericin B.</li>
+  </ul>
+
+  <h3>Pain Management — Opioid Analgesics</h3>
+  <table class="info-table">
+    <tr><th>Drug</th><th>Key Points</th></tr>
+    <tr><td><span class="drug">Morphine</span></td><td>Gold standard for severe pain. Causes respiratory depression, constipation, hypotension, urinary retention. Hold if <span class="lyte">RR &lt; 12/min</span>. Antidote: <span class="drug">naloxone (Narcan)</span>. Histamine release → pruritus.</td></tr>
+    <tr><td><span class="drug">Hydromorphone (Dilaudid)</span></td><td>5–7× more potent than morphine. Used when morphine is not tolerated. Same precautions as morphine.</td></tr>
+    <tr><td><span class="drug">Fentanyl</span></td><td>50–100× more potent than morphine. Transdermal patch: takes <span class="lyte">12–24 hr</span> for full effect. NEVER cut patches. Used for chronic pain.</td></tr>
+    <tr><td><span class="drug">Meperidine (Demerol)</span></td><td>AVOID in elderly and renal impairment — metabolite (normeperidine) causes seizures. Avoid with MAOIs (serotonin syndrome). Not recommended for chronic pain.</td></tr>
+    <tr><td><span class="drug">Codeine</span></td><td>Mild-moderate pain. Some patients are ultra-rapid metabolizers (CYP2D6) → excessive response. AVOID in children &lt; 12 y/o for cough.</td></tr>
+  </table>
+
+  <div class="priority-box pbox-red">
+    <strong>🔴 Opioid Toxicity / Overdose:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li><strong>Classic Triad:</strong> Respiratory depression (<span class="lyte">RR &lt; 8</span>) + pinpoint pupils + decreased LOC</li>
+      <li><strong>Antidote:</strong> <span class="drug">Naloxone (Narcan) 0.4–2 mg IV</span> — may repeat q2-3min. Short duration — monitor for re-sedation.</li>
+      <li><strong>Priority:</strong> Maintain airway + ventilation. Naloxone reverses respiratory depression within <span class="lyte">1–2 minutes</span>.</li>
+    </ul>
+  </div>
+
+  <h3>Non-Opioid Analgesics</h3>
+  <ul>
+    <li><span class="drug">Acetaminophen (Tylenol)</span> — Max <span class="lyte">3,000 mg/day</span> (some sources: <span class="lyte">4,000 mg/day</span> for healthy adults; <span class="lyte">2,000 mg/day</span> with hepatic disease). Overdose → hepatic necrosis. Antidote: <span class="drug">N-acetylcysteine (Mucomyst)</span>. No anti-inflammatory effect.</li>
+    <li><span class="drug">NSAIDs</span> (<span class="drug">ibuprofen, naproxen, ketorolac</span>) — Anti-inflammatory, analgesic, antipyretic. Risk of GI bleeding, renal impairment, ↑ BP. Contraindicated in third trimester pregnancy. <span class="drug">Ketorolac (Toradol)</span>: max <span class="lyte">5 days</span> use. Take with food.</li>
+  </ul>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Pain Principle: Always assess pain BEFORE medicating and re-assess AFTER. Use the WHO Pain Ladder: non-opioid → weak opioid → strong opioid. Multimodal analgesia is preferred.
+  </div>
+</div>
+
+<!-- ==================== SECTION 8: Memory Anchors & Key Rules ==================== -->
+<div id="sec-mem" class="section-hdr sh-mem">🧪 Section 8 — Memory Anchors &amp; Key Rules</div>
+<div class="content-block">
+
+  <h3>Drug Name Suffixes — Quick Reference</h3>
+  <table class="info-table">
+    <tr><th>Suffix</th><th>Drug Class</th><th>Example</th></tr>
+    <tr><td><strong>-olol</strong></td><td>Beta-blockers</td><td><span class="drug">metoprolol, atenolol, propranolol</span></td></tr>
+    <tr><td><strong>-pril</strong></td><td>ACE inhibitors</td><td><span class="drug">lisinopril, enalapril, captopril</span></td></tr>
+    <tr><td><strong>-sartan</strong></td><td>ARBs</td><td><span class="drug">losartan, valsartan, irbesartan</span></td></tr>
+    <tr><td><strong>-dipine</strong></td><td>Calcium channel blockers (DHP)</td><td><span class="drug">amlodipine, nifedipine</span></td></tr>
+    <tr><td><strong>-statin</strong></td><td>HMG-CoA reductase inhibitors</td><td><span class="drug">atorvastatin, simvastatin</span></td></tr>
+    <tr><td><strong>-pam / -lam</strong></td><td>Benzodiazepines</td><td><span class="drug">diazepam, lorazepam, alprazolam</span></td></tr>
+    <tr><td><strong>-pine / -done</strong></td><td>Atypical antipsychotics</td><td><span class="drug">olanzapine, quetiapine, risperidone</span></td></tr>
+    <tr><td><strong>-floxacin</strong></td><td>Fluoroquinolones</td><td><span class="drug">ciprofloxacin, levofloxacin</span></td></tr>
+    <tr><td><strong>-mycin / -micin</strong></td><td>Aminoglycosides</td><td><span class="drug">gentamicin, tobramycin</span></td></tr>
+    <tr><td><strong>-cillin</strong></td><td>Penicillins</td><td><span class="drug">amoxicillin, ampicillin</span></td></tr>
+    <tr><td><strong>-caine</strong></td><td>Local anesthetics</td><td><span class="drug">lidocaine, bupivacaine</span></td></tr>
+    <tr><td><strong>-prazole</strong></td><td>Proton pump inhibitors</td><td><span class="drug">omeprazole, pantoprazole</span></td></tr>
+    <tr><td><strong>-tidine</strong></td><td>H2 receptor antagonists</td><td><span class="drug">famotidine, ranitidine</span></td></tr>
+    <tr><td><strong>-triptine</strong></td><td>Tricyclic antidepressants</td><td><span class="drug">amitriptyline, nortriptyline</span></td></tr>
+    <tr><td><strong>-setron</strong></td><td>5-HT3 antagonists (antiemetics)</td><td><span class="drug">ondansetron (Zofran)</span></td></tr>
+    <tr><td><strong>-gliptin</strong></td><td>DPP-4 inhibitors</td><td><span class="drug">sitagliptin, linagliptin</span></td></tr>
+    <tr><td><strong>-flozin</strong></td><td>SGLT2 inhibitors</td><td><span class="drug">empagliflozin, dapagliflozin</span></td></tr>
+  </table>
+
+  <h3>Critical Antidotes</h3>
+  <table class="info-table">
+    <tr><th>Toxicity / Overdose</th><th>Antidote</th></tr>
+    <tr><td><span class="drug">Heparin</span></td><td><span class="drug">Protamine sulfate</span></td></tr>
+    <tr><td><span class="drug">Warfarin</span></td><td><span class="drug">Vitamin K (phytonadione)</span> + FFP for acute bleeding</td></tr>
+    <tr><td><span class="drug">Opioids</span> (morphine, fentanyl)</td><td><span class="drug">Naloxone (Narcan)</span></td></tr>
+    <tr><td><span class="drug">Benzodiazepines</span></td><td><span class="drug">Flumazenil (Romazicon)</span></td></tr>
+    <tr><td><span class="drug">Acetaminophen</span></td><td><span class="drug">N-acetylcysteine (Mucomyst)</span></td></tr>
+    <tr><td><span class="drug">Digoxin</span></td><td><span class="drug">Digoxin Immune Fab (Digibind)</span></td></tr>
+    <tr><td><span class="drug">Magnesium sulfate</span></td><td><span class="drug">Calcium gluconate</span></td></tr>
+    <tr><td><span class="drug">Iron</span></td><td><span class="drug">Deferoxamine</span></td></tr>
+    <tr><td><span class="drug">Lead</span></td><td><span class="drug">Succimer (DMSA)</span> (children); <span class="drug">EDTA</span> (adults)</td></tr>
+    <tr><td><span class="drug">Organophosphates</span></td><td><span class="drug">Atropine</span> + <span class="drug">Pralidoxime (2-PAM)</span></td></tr>
+    <tr><td>Malignant hyperthermia</td><td><span class="drug">Dantrolene</span></td></tr>
+    <tr><td><span class="drug">Methotrexate</span></td><td><span class="drug">Leucovorin (folinic acid)</span></td></tr>
+    <tr><td><span class="lyte">Hyperkalemia</span></td><td><span class="drug">Calcium gluconate</span> (cardiac stabilizer) → <span class="drug">insulin + D50</span> → kayexalate</td></tr>
+  </table>
+
+  <h3>Key Mnemonics</h3>
+
+  <div class="mnemonic-box">
+    <div class="title">💊 ADME — What the Body Does to the Drug</div>
+    <div class="letters">
+      <span>A</span>bsorption · <span>D</span>istribution · <span>M</span>etabolism · <span>E</span>xcretion
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🫁 RIPE — TB Drug Therapy</div>
+    <div class="letters">
+      <span>R</span>ifampin · <span>I</span>soniazid · <span>P</span>yrazinamide · <span>E</span>thanbutol
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">⚡ FAST — Serotonin Syndrome Signs</div>
+    <div class="letters">
+      <span>F</span>ever · <span>A</span>gitation · <span>S</span>weating · <span>T</span>remor/myoclonus
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🔥 FEVER — NMS Signs</div>
+    <div class="letters">
+      <span>F</span>ever · <span>E</span>ncephalopathy · <span>V</span>itals unstable · <span>E</span>levated CK · <span>R</span>igidity (lead-pipe)
+    </div>
+  </div>
+
+  <h3>NCLEX Pharmacology Quick-Reference Rules</h3>
+  <table class="info-table">
+    <tr><th>Rule</th><th>Application</th></tr>
+    <tr><td><strong>10 Rights — every time</strong></td><td>Two patient identifiers. Verify before EVERY administration.</td></tr>
+    <tr><td><strong>Heparin → aPTT; Warfarin → INR</strong></td><td>Never reverse the labs. INR 2–3 is therapeutic for warfarin.</td></tr>
+    <tr><td><strong>Culture before first dose</strong></td><td>Always obtain cultures before starting antibiotics. Then give ASAP.</td></tr>
+    <tr><td><strong>Hold parameters</strong></td><td>HR &lt; 60 → hold digoxin/beta-blockers. SBP &lt; 100 → hold antihypertensives. RR &lt; 12 → hold opioids.</td></tr>
+    <tr><td><strong>Never stop abruptly</strong></td><td>Beta-blockers, corticosteroids, anticonvulsants, benzodiazepines, antidepressants → TAPER</td></tr>
+    <tr><td><strong>Bronchodilator FIRST</strong></td><td>Albuterol before inhaled corticosteroid. Open airways first.</td></tr>
+    <tr><td><strong>Clear before cloudy</strong></td><td>Draw Regular insulin before NPH. RN = Regular, NPH.</td></tr>
+    <tr><td><strong>Grapefruit interactions</strong></td><td>CCBs, statins, buspirone, cyclosporine — grapefruit ↑ drug levels</td></tr>
+    <tr><td><strong>Teratogenic drugs</strong></td><td>ACE/ARBs, warfarin, phenytoin, valproic acid, methotrexate, lithium, tetracyclines, methimazole</td></tr>
+    <tr><td><strong>Black Box warnings</strong></td><td>SSRIs (youth suicidality), fluoroquinolones (tendon rupture), montelukast (psych), clozapine (agranulocytosis), opioids (respiratory depression)</td></tr>
+  </table>
+
+  <h3>Common NCLEX Pharmacology Traps</h3>
+  <ul>
+    <li><strong>Trap:</strong> "Give the medication and observe" — If vitals are outside hold parameters, the answer is HOLD and notify the provider, not give and observe.</li>
+    <li><strong>Trap:</strong> A medication side effect is presented as a new symptom — recognize common drug side effects (e.g., ACE cough, statin myalgia, diuretic hypokalemia).</li>
+    <li><strong>Trap:</strong> "Administer the PRN antianxiety medication" for a pre-op patient — always assess first. Anxiety is normal pre-op. Non-pharmacological interventions first.</li>
+    <li><strong>Trap:</strong> Mixing up antidotes — memorize the antidote pairs. If unsure, the safest action is usually to stop the drug and call the provider.</li>
+    <li><strong>Trap:</strong> Giving medications past hold parameters — never give digoxin if HR &lt; 60, never give antihypertensives if SBP &lt; 100. Even if it's "time for the medication."</li>
+  </ul>
+</div>
+
+</div><!-- end guide-container -->
+<script>
+document.querySelectorAll('.drug').forEach(function(el){
+  el.style.cursor='pointer';
+  el.title='Click to view drug card';
+  el.addEventListener('click',function(){
+    var name=this.textContent.trim();
+    if(window.parent&&window.parent!==window){
+      window.parent.postMessage({type:'showDrugCard',drug:name},'*');
+    }
+  });
+});
+</script>
+</body>
+</html>

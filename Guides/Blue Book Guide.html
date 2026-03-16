@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peptopia Klimek Review Guide - Comprehensive</title>
+</head>
+<body>
+
+<!-- Peptopia Klimek Guide Widget -->
+<div id="peptopia-klimek-guide">
+    <style>
+        /* --- Scoped Styles --- */
+        #peptopia-klimek-guide {
+            /* Palette - Softened / Neon-Pastel */
+            --slate-50: #f8fafc; --slate-100: #f1f5f9; --slate-200: #e2e8f0;
+            --slate-700: #334155; --slate-800: #1e293b; --slate-900: #0f172a; --white: #ffffff;
+            
+            /* Theme Colors */
+            --rose-500: #f43f5e; /* Cardio */
+            --blue-500: #06b6d4; /* Respiratory */
+            --purple-500: #8b5cf6; /* Neuro */
+            --emerald-500: #10b981; /* GI/Renal */
+            
+            /* Backgrounds */
+            --rose-50: #fff1f2; --blue-50: #ecfeff;
+            --purple-50: #f5f3ff; --emerald-50: #ecfdf5;
+
+            /* Alert Colors */
+            --alert-bg: #fff7ed; 
+            --alert-border: #fdba74;
+            --alert-text: #1e293b;
+            
+            /* Accents */
+            --accent-gold: #f59e0b; 
+            --drug-blue: #2563eb;
+            --key-purple: #7c3aed; 
+            
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--slate-50);
+            color: var(--slate-900);
+            line-height: 1.6;
+            font-size: 16px;
+            max-width: 64rem;
+            margin: 0 auto;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        #peptopia-klimek-guide * { box-sizing: border-box; }
+
+        /* Navbar Layout */
+        #peptopia-klimek-guide .navbar {
+            background-color: var(--slate-800); 
+            color: var(--white); padding: 0.75rem 1rem;
+            border-radius: 0.5rem; margin-bottom: 1.5rem; 
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            min-height: 80px; /* Ensure space for fixed buttons */
+        }
+        
+        #peptopia-klimek-guide .nav-title { 
+            font-weight: 800; font-size: 1.5rem; 
+            display: flex; align-items: center; gap: 0.75rem; 
+        }
+
+        /* Fixed Button Container */
+        #peptopia-klimek-guide .nav-actions {
+            display: flex; 
+            flex-direction: column; 
+            gap: 0.25rem; /* Tight vertical line */
+            width: 140px; /* Fixed width */
+            flex-shrink: 0; /* Do not flex */
+        }
+        
+        /* Buttons */
+        #peptopia-klimek-guide .action-btn {
+            padding: 0.4rem 0.5rem; border-radius: 0.25rem; border: none; 
+            cursor: pointer; font-weight: 600; font-size: 0.85rem; 
+            transition: all 0.2s; width: 100%; text-align: center;
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        #peptopia-klimek-guide .print-btn { background-color: var(--accent-gold); color: white; }
+        #peptopia-klimek-guide .print-btn:hover { background-color: #d97706; }
+        
+        #peptopia-klimek-guide .quiz-btn { background-color: #6366f1; color: white; }
+        #peptopia-klimek-guide .quiz-btn:hover { background-color: #4f46e5; }
+
+        /* Mobile Responsive Navbar */
+        @media (max-width: 650px) {
+            #peptopia-klimek-guide .navbar { flex-direction: column; gap: 1rem; text-align: center; }
+            #peptopia-klimek-guide .nav-title { width: 100%; justify-content: center; margin-bottom: 0.5rem; }
+            /* Button container remains fixed size but centered */
+            #peptopia-klimek-guide .nav-actions { margin: 0 auto; }
+        }
+
+        /* Tabs */
+        #peptopia-klimek-guide .tabs-container { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+        #peptopia-klimek-guide .tab-btn {
+            padding: 0.6rem 1rem; border-radius: 0.5rem; font-weight: 700; 
+            color: var(--white); border: none; flex-grow: 1; text-align: center;
+            cursor: pointer; transition: all 0.2s; font-size: 0.95rem;
+            filter: grayscale(40%) opacity(0.9); 
+        }
+        #peptopia-klimek-guide .tab-btn:hover { filter: grayscale(0%) opacity(1); transform: translateY(-1px); }
+        #peptopia-klimek-guide .tab-btn.active { 
+            filter: grayscale(0%) opacity(1); 
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); 
+            transform: translateY(1px);
+        }
+
+        /* Tab Colors */
+        #peptopia-klimek-guide #tab-cardio { background-color: var(--rose-500); }
+        #peptopia-klimek-guide #tab-resp { background-color: var(--blue-500); }
+        #peptopia-klimek-guide #tab-neuro { background-color: var(--purple-500); }
+        #peptopia-klimek-guide #tab-gi { background-color: var(--emerald-500); }
+
+        /* Layout */
+        #peptopia-klimek-guide .grid-layout { display: flex; flex-direction: column; gap: 2rem; } 
+        
+        /* Card Headers - Reduced Height (60%) */
+        #peptopia-klimek-guide .card-header {
+            padding: 0.4rem 1rem; 
+            min-height: 35px;
+            color: white; display: flex; justify-content: space-between; align-items: center;
+            border-top-left-radius: 0.5rem; border-top-right-radius: 0.5rem;
+            font-size: 0.95rem; font-weight: 700; letter-spacing: 0.5px;
+        }
+
+        /* Tables */
+        #peptopia-klimek-guide .table-container { 
+            overflow-x: auto; border: 2px solid; border-radius: 0 0 0.5rem 0.5rem; background: white; 
+            max-height: 500px; overflow-y: auto; 
+        }
+        #peptopia-klimek-guide table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem; }
+        #peptopia-klimek-guide th { padding: 0.75rem; background-color: var(--slate-50); color: var(--slate-900); border-bottom: 2px solid var(--slate-200); position: sticky; top: 0; z-index: 10; }
+        #peptopia-klimek-guide td { padding: 0.75rem; border-bottom: 1px solid var(--slate-100); vertical-align: top; }
+        #peptopia-klimek-guide tr:hover td { cursor: pointer; filter: brightness(98%); }
+        
+        /* Selection Highlighting */
+        #peptopia-klimek-guide tr.selected td { border-left: 5px solid var(--accent-gold); background-color: #fffbeb; }
+
+        /* Specific Colors */
+        #peptopia-klimek-guide .bg-rose { background-color: var(--rose-500) !important; }
+        #peptopia-klimek-guide .border-rose { border-color: var(--rose-500) !important; }
+        #peptopia-klimek-guide .bg-blue { background-color: var(--blue-500) !important; }
+        #peptopia-klimek-guide .border-blue { border-color: var(--blue-500) !important; }
+        #peptopia-klimek-guide .bg-purple { background-color: var(--purple-500) !important; }
+        #peptopia-klimek-guide .border-purple { border-color: var(--purple-500) !important; }
+        #peptopia-klimek-guide .bg-emerald { background-color: var(--emerald-500) !important; }
+        #peptopia-klimek-guide .border-emerald { border-color: var(--emerald-500) !important; }
+
+        /* Cell Styles */
+        #peptopia-klimek-guide .topic-cell { font-weight: 800; white-space: nowrap; width: 1%; color: var(--slate-900); }
+        #peptopia-klimek-guide .topic-cell.cardio { background-color: var(--rose-50); }
+        #peptopia-klimek-guide .topic-cell.resp { background-color: var(--blue-50); }
+        #peptopia-klimek-guide .topic-cell.neuro { background-color: var(--purple-50); }
+        #peptopia-klimek-guide .topic-cell.gi { background-color: var(--emerald-50); }
+
+        #peptopia-klimek-guide .key-point-cell { color: var(--slate-700); font-style: italic; }
+        #peptopia-klimek-guide .key-term { color: var(--key-purple); font-weight: 600; font-style: italic; }
+        
+        #peptopia-klimek-guide .alert-cell { color: var(--alert-text); background-color: var(--alert-bg); border-left: 3px solid var(--alert-border); }
+        #peptopia-klimek-guide .alert-cell strong { color: #be123c; font-weight: 800; }
+        #peptopia-klimek-guide .drug-name { color: var(--drug-blue); font-weight: 800; }
+
+        /* Visuals */
+        #peptopia-klimek-guide .visual-container {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 1.5rem; background-color: white; border: 1px solid var(--slate-200);
+            border-radius: 0.5rem; min-height: 250px; max-width: 600px; margin: 0 auto;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        #peptopia-klimek-guide .visual-svg-wrapper {
+            width: 100%; height: 220px; display: flex; justify-content: center; align-items: center; overflow: hidden;
+        }
+
+        /* Quiz */
+        #peptopia-klimek-guide .quiz-overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.95); z-index: 1000; align-items: center; justify-content: center;
+        }
+        #peptopia-klimek-guide .quiz-box {
+            background: linear-gradient(145deg, #1e1b4b, #312e81); width: 90%; max-width: 700px; 
+            padding: 2rem; border-radius: 1rem; border: 1px solid #4338ca; color: white; position: relative;
+        }
+        #peptopia-klimek-guide .quiz-header { border-bottom: 1px solid #4338ca; padding-bottom: 1rem; margin-bottom: 2rem; text-align: center;}
+        #peptopia-klimek-guide .quiz-title { color: #a5b4fc; font-weight: 800; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 2px; }
+        #peptopia-klimek-guide .quiz-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 2rem; cursor: pointer; color: #a5b4fc; }
+        #peptopia-klimek-guide .quiz-option {
+            display: block; width: 100%; padding: 1rem; margin: 0.5rem 0; text-align: left;
+            border: 2px solid #4338ca; border-radius: 0.5rem; background: rgba(30, 27, 75, 0.6); 
+            color: #e0e7ff; cursor: pointer; transition: all 0.2s; font-size: 1rem;
+        }
+        #peptopia-klimek-guide .quiz-option:hover { background: #4338ca; }
+        #peptopia-klimek-guide .quiz-option.correct { background: #065f46; border-color: #34d399; }
+        #peptopia-klimek-guide .quiz-option.wrong { background: #7f1d1d; border-color: #f87171; }
+        #peptopia-klimek-guide .next-btn {
+            background: #4f46e5; color: white; border: none; padding: 0.5rem 1.5rem;
+            border-radius: 2rem; font-weight: 800; text-transform: uppercase; cursor: pointer;
+        }
+
+        /* Print */
+        @media print {
+            body { background: white; color: black; }
+            #peptopia-klimek-guide .navbar, #peptopia-klimek-guide .tabs-container, .quiz-btn { display: none; }
+            #peptopia-klimek-guide .grid-layout { display: block; }
+            #peptopia-klimek-guide .table-container { max-height: none; overflow: visible; }
+        }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-title">
+            <span>📘</span> Blue Book NCLEX Guide
+        </div>
+        <div class="nav-actions">
+            <button class="action-btn print-btn" onclick="window.print()">Print Guide</button>
+            <button class="action-btn quiz-btn" onclick="startQuiz()">Take Quiz</button>
+        </div>
+    </nav>
+
+    <!-- Tabs -->
+    <div class="tabs-container">
+        <button class="tab-btn bg-rose" id="tab-cardio" onclick="switchTab('cardio')">Cardiovascular</button>
+        <button class="tab-btn bg-blue" id="tab-resp" onclick="switchTab('resp')">Respiratory</button>
+        <button class="tab-btn bg-purple" id="tab-neuro" onclick="switchTab('neuro')">Neurological</button>
+        <button class="tab-btn bg-emerald" id="tab-gi" onclick="switchTab('gi')">GI & Renal</button>
+    </div>
+
+    <!-- Content -->
+    <div id="content-area"></div>
+
+    <!-- Quiz Modal -->
+    <div id="quiz-modal" class="quiz-overlay">
+        <div class="quiz-box">
+            <button onclick="closeQuiz()" class="quiz-close">&times;</button>
+            <div class="quiz-header">
+                <div class="quiz-title" id="quiz-title-text">Practice Questions</div>
+            </div>
+            <div id="quiz-question-container">
+                <p id="q-text" style="font-size:1.2rem; font-weight:600; margin-bottom:1.5rem;"></p>
+                <div id="q-options"></div>
+                <div id="q-feedback" style="margin-top:1rem; font-weight:bold; text-align:center; min-height:1.5rem;"></div>
+            </div>
+            <div style="margin-top:1.5rem; display:flex; justify-content:space-between; align-items:center;">
+                <span id="q-counter" style="color:#a5b4fc; font-weight:600;">Question 1 of ?</span>
+                <button id="next-btn" class="next-btn" style="display:none;" onclick="nextQuestion()">Next Question</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        const contentData = {
+            cardio: {
+                title: 'Cardiovascular System', color: 'bg-rose', border: 'border-rose', type: 'cardio',
+                description: 'Exhaustive notes from Klimek Blue Book covering all cardiovascular concepts.',
+                data: [
+                    { topic: 'Blood Pressure', fact: '<span class="key-term">Systole</span> (Maximal force) vs <span class="key-term">Diastole</span> (Lowest force).', alert: 'Cessation of sounds = 2nd diastolic sound.', q: 'What is the definition of systole?', a: ['Maximal force of blood on artery walls', 'Lowest force of blood on artery walls', 'The average pressure', 'The pulse pressure'], correct: 0 },
+                    { topic: 'BP Cuff Size', fact: 'Width must be <span class="key-term">2/3</span> of the arm.', alert: 'Too Narrow = False HIGH. Too Wide = False LOW.', q: 'If you use a BP cuff that is too narrow, the reading will be:', a: ['False High', 'False Low', 'Accurate', 'Unreadable'], correct: 0 },
+                    { topic: 'Pulse Pressure', fact: 'Diff between <span class="key-term">Systolic</span> and <span class="key-term">Diastolic</span>.', alert: '<strong>Shock:</strong> Narrows. <strong>ICP:</strong> Widens.', q: 'What is the pulse pressure if BP is 190/110?', a: ['80 mmHg', '100 mmHg', '60 mmHg', '150 mmHg'], correct: 0 },
+                    { topic: 'Myocardial Infarction', fact: '<span class="key-term">Necrosis</span> of myocardial cells due to blockage.', alert: '<strong>Symptoms:</strong> Crushing pain, diaphoresis. Pain NOT relieved by rest/nitro.', q: 'What is the #1 symptom of an MI?', a: ['Severe chest pain unrelieved by rest/nitro', 'Indigestion', 'Shortness of breath', 'Left arm numbness'], correct: 0 },
+                    { topic: 'Angina Pectoris', fact: 'Chest pain caused by <span class="key-term">ischemia</span>.', alert: 'Pain IS relieved by rest/nitro.', q: 'What causes angina pectoris?', a: ['Decreased blood supply to myocardium', 'Coronary artery rupture', 'Heart failure', 'Pericarditis'], correct: 0 },
+                    { topic: 'Nitroglycerin', fact: 'Dilates <span class="key-term">coronary arteries</span>.', alert: '<strong>Protocol:</strong> 1 tab q5min x3. <strong>Storage:</strong> Dry/Cool.', q: 'How many nitroglycerin tabs can you take before calling the doctor?', a: ['3', '1', '2', '4'], correct: 0 },
+                    { topic: 'CHF: Left', fact: 'Fluid backs up into <span class="key-term">LUNGS</span>.', alert: '<strong>Signs:</strong> Dyspnea, Rales, Orthopnea, Frothy sputum.', q: 'Pulmonary edema usually results from failure of which side of the heart?', a: ['Left', 'Right', 'Both', 'Atrial'], correct: 0 },
+                    { topic: 'CHF: Right', fact: 'Fluid backs up into <span class="key-term">BODY</span>.', alert: '<strong>Signs:</strong> JVD, Edema, Ascites.', q: 'What sign is associated with Right Sided CHF?', a: ['Distended Neck Veins', 'Crackles', 'Dyspnea', 'Frothy Sputum'], correct: 0 },
+                    { topic: 'Digoxin', fact: 'Increases <span class="key-term">strength</span>, decreases <span class="key-term">rate</span>.', alert: '<strong>Hold:</strong> AP < 60. <strong>Toxicity:</strong> Yellow vision.', q: 'Before giving Digitalis, you must check:', a: ['Apical Pulse', 'Blood Pressure', 'Respiratory Rate', 'Urine Output'], correct: 0 }
+                ]
+            },
+            resp: {
+                title: 'Respiratory System', color: 'bg-blue', border: 'border-blue', type: 'resp',
+                description: 'Comprehensive Respiratory notes covering COPD, Pneumonia, TB, and Airway.',
+                data: [
+                    { topic: 'COPD', fact: 'Asthma, Bronchitis, Emphysema. <span class="key-term">Air Trapping</span>.', alert: '<strong>Drive:</strong> Hypoxic (Low O2). <strong>Max O2:</strong> 2 LPM.', q: 'A client with COPD should not receive O2 greater than:', a: ['2 LPM', '5 LPM', '10 LPM', '15 LPM'], correct: 0 },
+                    { topic: 'Emphysema', fact: 'Alveoli <span class="key-term">over-enlarged</span>/under-ventilated.', alert: '<strong>Sign:</strong> Barrel Chest, Pursed lip breathing.', q: 'What does the chest of a client with COPD look like?', a: ['Barrel chest', 'Pigeon chest', 'Funnel chest', 'Flat chest'], correct: 0 },
+                    { topic: 'Epiglottitis', fact: 'Inflammation of epiglottis. <span class="key-term">H. flu B</span>.', alert: '<strong>Danger:</strong> Airway Obstruction. <strong>NEVER:</strong> Put anything in mouth.', q: 'What is the #1 danger of epiglottitis?', a: ['Airway obstruction', 'Dehydration', 'High Fever', 'Seizures'], correct: 0 },
+                    { topic: 'Tuberculosis', fact: '<span class="key-term">Mycobacterium tuberculosis</span>.', alert: '<strong>Iso:</strong> Airborne (Neg Pressure). <strong>Meds:</strong> STRIPE.', q: 'What organism is the cause of TB?', a: ['Mycobacterium tuberculosis', 'Staph aureus', 'E. coli', 'Pseudomonas'], correct: 0 },
+                    { topic: 'Pulmonary Embolus', fact: 'Blockage of pulmonary artery. Source: <span class="key-term">DVT</span>.', alert: '<strong>Signs:</strong> Dyspnea, Pleuritic Pain.', q: 'What is the first sign of pulmonary embolus?', a: ['Dyspnea', 'Chest pain', 'Hemoptysis', 'Fever'], correct: 0 }
+                ]
+            },
+            neuro: {
+                title: 'Neurological System', color: 'bg-purple', border: 'border-purple', type: 'neuro',
+                description: 'Neuro content covering ICP, CVA, Spinal Cord, and Sensory.',
+                data: [
+                    { topic: 'Increased ICP', fact: 'Normal 0-15 mmHg.', alert: '<strong>Earliest Sign:</strong> Change in LOC.', q: 'What is the earliest sign of increased ICP?', a: ['Change in LOC', 'Pupil dilation', 'Vomiting', 'Headache'], correct: 0 },
+                    { topic: 'Cushing\'s Triad', fact: 'Late sign of ICP.', alert: '<strong>Signs:</strong> HTN w/ widening PP, Bradycardia, Irregular Resp.', q: 'What is Cushing\'s Triad?', a: ['HTN/Widening PP, Bradycardia, Irregular Resp', 'Hypotension, Tachycardia, Tachypnea', 'Fever, Rash, Joint pain', 'None of these'], correct: 0 },
+                    { topic: 'Meningitis', fact: 'Inflammation of arachnoid/pia.', alert: '<strong>Signs:</strong> Nuchal rigidity, Photophobia. Kernig/Brudzinski.', q: 'What is the classic sign of meningitis?', a: ['Nuchal rigidity', 'Back pain', 'Leg pain', 'Abdominal pain'], correct: 0 },
+                    { topic: 'Seizures', fact: 'Uncontrolled electrical discharge.', alert: '<strong>Safety:</strong> Do NOT restrain. Side lying.', q: 'What is the priority nursing action during a seizure?', a: ['Safety/Protect head', 'Restrain limbs', 'Insert airway', 'Give water'], correct: 0 },
+                    { topic: 'Laminectomy', fact: 'Removal of bone to relieve nerve compression.', alert: '<strong>Post-op:</strong> Log roll. No sitting >30 mins.', q: 'How do you turn a patient after a laminectomy?', a: ['Log roll', 'Twist', 'Sit up then turn', 'Normal turn'], correct: 0 }
+                ]
+            },
+            gi: {
+                title: 'GI & Renal System', color: 'bg-emerald', border: 'border-emerald', type: 'gi',
+                description: 'Comprehensive GI and Renal content including Failure, Stones, and Digestive disorders.',
+                data: [
+                    { topic: 'Acute Glomerulonephritis', fact: 'Inflammation of glomeruli. Cause: <span class="key-term">Strep</span>.', alert: '<strong>Signs:</strong> Hematuria, Proteinuria, HTN.', q: 'What organism commonly causes Acute Glomerulonephritis?', a: ['Group A Beta Strep', 'E. Coli', 'Staph Aureus', 'Pseudomonas'], correct: 0 },
+                    { topic: 'Appendicitis', fact: 'Inflammation of appendix. <span class="key-term">RLQ Pain</span>.', alert: '<strong>Sign:</strong> McBurney\'s Point. <strong>Tx:</strong> NPO, Surgery. NO HEAT.', q: 'Where is the pain located in appendicitis?', a: ['RLQ (McBurney\'s Point)', 'LLQ', 'RUQ', 'Epigastric'], correct: 0 },
+                    { topic: 'Celiac Disease', fact: 'Gluten intolerance.', alert: '<strong>Diet:</strong> No B.R.O.W. (Barley, Rye, Oats, Wheat).', q: 'Which food must a Celiac client avoid?', a: ['Wheat bread', 'Rice', 'Corn', 'Potatoes'], correct: 0 },
+                    { topic: 'Renal Failure', fact: 'Kidneys fail. Oliguric vs Diuretic phases.', alert: '<strong>Danger:</strong> Hyperkalemia.', q: 'What electrolyte imbalance is most dangerous in renal failure?', a: ['Hyperkalemia', 'Hyponatremia', 'Hypocalcemia', 'Hypermagnesemia'], correct: 0 },
+                    { topic: 'Pyloric Stenosis', fact: 'Narrowing of pylorus.', alert: '<strong>Signs:</strong> Projectile Vomiting, Olive-shaped mass.', q: 'What assessment finding is classic for Pyloric Stenosis?', a: ['Olive-shaped mass', 'Sausage-shaped mass', 'Bound abdomen', 'Distended veins'], correct: 0 },
+                    { topic: 'Intussusception', fact: 'Telescoping bowel.', alert: '<strong>Signs:</strong> Currant jelly stool, Sausage-shaped mass.', q: 'What is the classic sign of intussusception?', a: ['Currant jelly stool', 'Ribbon stool', 'Steatorrhea', 'Clay colored stool'], correct: 0 },
+                    { topic: 'Hirschsprung\'s', fact: 'Megacolon (No nerves).', alert: '<strong>Signs:</strong> Ribbon-like stool.', q: 'What type of stool is seen in Hirschsprung\'s?', a: ['Ribbon-like', 'Currant jelly', 'Tarry', 'Frothy'], correct: 0 },
+                    { topic: 'Hepatitis', fact: 'Liver inflammation.', alert: '<strong>Diet:</strong> High Carb, Low Fat. <strong>Urine:</strong> Dark.', q: 'In later stages of hepatitis, the urine turns:', a: ['Dark', 'Clear', 'Red', 'Blue'], correct: 0 },
+                    { topic: 'Pancreatitis', fact: 'Autodigestion.', alert: '<strong>Signs:</strong> Cullen\'s (Umbilicus), Turner\'s (Flank). <strong>Tx:</strong> NPO.', q: 'What sign indicates retroperitoneal bleeding in pancreatitis?', a: ['Turner\'s Sign', 'McBurney\'s Sign', 'Murphy\'s Sign', 'Homan\'s Sign'], correct: 0 },
+                    { topic: 'Peptic Ulcer', fact: 'Gastric vs Duodenal.', alert: '<strong>Gastric:</strong> Pain w/ food. <strong>Duodenal:</strong> Pain empty.', q: 'Does food relieve or worsen Duodenal Ulcer pain?', a: ['Relieves (Feed it)', 'Worsens (Starve it)', 'No effect', 'Causes vomiting'], correct: 0 }
+                ]
+            }
+        };
+
+        // --- Logic ---
+        let currentTab = 'cardio';
+        let currentItem = contentData.cardio.data[0];
+        let quizIndex = 0;
+        let quizScore = 0;
+        let currentQuizData = []; 
+
+        function renderVisual(key) {
+            const style = 'height:200px; width:auto; display:block; margin:0 auto;';
+            // Realistic Anatomy SVGs
+            if(key.includes('MI') || key.includes('Angina')) {
+                // Heart with blockage
+                return `<svg viewBox="0 0 100 100" style="${style}">
+                    <path d="M50 30 C 20 10, 10 50, 50 90 C 90 50, 80 10, 50 30" fill="#fee2e2" stroke="#e11d48" stroke-width="2"/>
+                    <path d="M55 35 Q 65 45 60 60" stroke="#7f1d1d" stroke-width="3" fill="none"/>
+                    <circle cx="60" cy="50" r="4" fill="#000"/>
+                    <text x="70" y="50" font-size="6" fill="#7f1d1d">Blockage</text>
+                </svg>`;
+            }
+            if(key.includes('Emphysema') || key.includes('COPD')) {
+                // Alveoli
+                return `<svg viewBox="0 0 100 100" style="${style}">
+                    <circle cx="40" cy="40" r="15" fill="#eff6ff" stroke="#0ea5e9" stroke-width="2"/>
+                    <circle cx="60" cy="40" r="15" fill="#eff6ff" stroke="#0ea5e9" stroke-width="2"/>
+                    <circle cx="50" cy="60" r="20" fill="#eff6ff" stroke="#0ea5e9" stroke-width="2"/>
+                    <text x="50" y="50" font-size="6" text-anchor="middle" fill="#0369a1">Trapped Air</text>
+                </svg>`;
+            }
+            if(key.includes('Pyloric') || key.includes('Stomach')) {
+                // Stomach with olive
+                return `<svg viewBox="0 0 100 100" style="${style}">
+                    <path d="M30 40 Q 60 20 80 50 Q 70 90 40 80 Q 20 60 30 40" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+                    <ellipse cx="75" cy="50" rx="5" ry="8" fill="#047857"/>
+                    <text x="75" y="70" font-size="6" text-anchor="middle" fill="#047857">Olive Mass</text>
+                </svg>`;
+            }
+            if(key.includes('Kidney') || key.includes('Renal')) {
+                // Kidney
+                return `<svg viewBox="0 0 100 100" style="${style}">
+                    <path d="M30 30 Q 80 30 80 60 Q 80 90 50 80 Q 20 60 30 30" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+                    <path d="M35 45 Q 45 45 45 55 Q 45 65 35 65" fill="none" stroke="#047857" stroke-width="2"/>
+                </svg>`;
+            }
+            if(key.includes('Appendicitis')) {
+                return `<svg viewBox="0 0 100 100" style="${style}">
+                   <path d="M30 20 L30 80 L80 80 L80 20 Z" fill="none" stroke="#ccc"/>
+                   <circle cx="70" cy="70" r="5" fill="#ef4444"/>
+                   <text x="60" y="60" font-size="6" fill="#ef4444">RLQ</text>
+                </svg>`;
+            }
+             if(key.includes('ICP') || key.includes('Neuro')) {
+                // Brain
+                return `<svg viewBox="0 0 100 100" style="${style}">
+                    <path d="M30 40 Q 50 10 70 40 Q 90 50 70 80 Q 50 90 30 80 Q 10 50 30 40" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+                    <text x="50" y="50" font-size="8" text-anchor="middle" fill="#7c3aed">Brain Tissue</text>
+                </svg>`;
+            }
+            return `<svg viewBox="0 0 100 100" style="${style}"><text x="50" y="50" font-size="8" text-anchor="middle" fill="#94a3b8">Visual Reference</text></svg>`;
+        }
+
+        // --- Render Logic ---
+        window.switchTab = function(tabName) {
+            currentTab = tabName;
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-rose', 'bg-blue', 'bg-purple', 'bg-emerald');
+                if(btn.id === 'tab-cardio') btn.classList.add('bg-rose'); 
+            });
+            
+            const activeBtn = document.getElementById(`tab-${tabName}`);
+            activeBtn.classList.add('active');
+            
+            if(tabName === 'cardio') activeBtn.classList.add('bg-rose');
+            if(tabName === 'resp') activeBtn.classList.add('bg-blue');
+            if(tabName === 'neuro') activeBtn.classList.add('bg-purple');
+            if(tabName === 'gi') activeBtn.classList.add('bg-emerald');
+
+            currentItem = contentData[tabName].data[0];
+            renderGuide();
+        }
+
+        function renderGuide() {
+            const container = document.getElementById('content-area');
+            const data = contentData[currentTab];
+
+            const rows = data.data.map((item, idx) => `
+                <tr onclick="selectItem(${idx})" class="${currentItem.topic === item.topic ? 'selected ' + data.type : ''}">
+                    <td class="topic-cell ${data.type}">${item.topic}</td>
+                    <td class="key-point-cell">${item.fact}</td>
+                    <td class="alert-cell ${data.type}">${item.alert}</td>
+                </tr>
+            `).join('');
+
+            const visualHTML = renderVisual(currentItem.topic);
+
+            const content = `
+                <div class="card-header ${data.color}">
+                    <h2 style="margin:0;">${data.title}</h2>
+                </div>
+                <div class="grid-layout">
+                    <div>
+                        <div style="margin-bottom:1rem; padding:0.5rem; background:#f1f5f9; border-radius:0.25rem;">${data.description}</div>
+                        <div class="table-container ${data.border}">
+                            <table>
+                                <thead><tr><th>Topic</th><th>Clinical Fact</th><th>Nursing Priority / Alerts</th></tr></thead>
+                                <tbody>${rows}</tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="visual-container">
+                            <h3 style="margin:0 0 1rem 0;">Visual Reference</h3>
+                            <div class="visual-svg-wrapper">${visualHTML}</div>
+                            <p style="margin-top:1rem; font-weight:700; text-align:center;">${currentItem.topic}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.innerHTML = content;
+        }
+
+        window.selectItem = function(idx) {
+            currentItem = contentData[currentTab].data[idx];
+            renderGuide();
+        }
+
+        // --- Quiz Logic ---
+        window.startQuiz = function() {
+            document.getElementById('quiz-modal').style.display = 'flex';
+            currentQuizData = contentData[currentTab].data;
+            document.getElementById('quiz-title-text').innerText = `${contentData[currentTab].title} Quiz`;
+            quizIndex = 0;
+            quizScore = 0;
+            loadQuestion();
+        }
+
+        window.closeQuiz = function() {
+            document.getElementById('quiz-modal').style.display = 'none';
+        }
+
+        function loadQuestion() {
+            const qData = currentQuizData[quizIndex];
+            document.getElementById('next-btn').style.display = 'none';
+            document.getElementById('q-counter').innerText = `Question ${quizIndex + 1} of ${currentQuizData.length}`;
+            document.getElementById('q-text').innerText = qData.q;
+            document.getElementById('q-feedback').innerText = '';
+            document.getElementById('q-feedback').className = 'quiz-feedback'; 
+
+            const optionsHTML = qData.a.map((opt, idx) => 
+                `<button class="quiz-option" onclick="checkAnswer(${idx})">${opt}</button>`
+            ).join('');
+            
+            document.getElementById('q-options').innerHTML = optionsHTML;
+        }
+
+        window.checkAnswer = function(selectedIdx) {
+            const qData = currentQuizData[quizIndex];
+            const options = document.querySelectorAll('.quiz-option');
+            const feedback = document.getElementById('q-feedback');
+            const nextBtn = document.getElementById('next-btn');
+
+            options.forEach(btn => {
+                btn.disabled = true;
+                btn.style.cursor = 'default';
+            });
+
+            if(selectedIdx === qData.correct) {
+                options[selectedIdx].classList.add('correct');
+                feedback.innerHTML = 'Correct!';
+                feedback.style.background = 'rgba(16, 185, 129, 0.2)';
+                feedback.style.color = '#34d399';
+                quizScore++;
+            } else {
+                options[selectedIdx].classList.add('wrong');
+                options[qData.correct].classList.add('correct');
+                feedback.innerHTML = 'Incorrect.';
+                feedback.style.background = 'rgba(239, 68, 68, 0.2)';
+                feedback.style.color = '#f87171';
+            }
+
+            nextBtn.style.display = 'block';
+        }
+
+        window.nextQuestion = function() {
+            quizIndex++;
+            if(quizIndex < currentQuizData.length) {
+                loadQuestion();
+            } else {
+                const container = document.getElementById('quiz-question-container');
+                container.innerHTML = `
+                    <div style="text-align:center; padding:2rem; color: white;">
+                        <h3>Quiz Complete!</h3>
+                        <p style="font-size:1.2rem;">You scored <strong>${quizScore} / ${currentQuizData.length}</strong></p>
+                        <button class="action-btn print-btn" onclick="closeQuiz()">Close</button>
+                    </div>
+                `;
+                document.getElementById('next-btn').style.display = 'none';
+            }
+        }
+
+        // Init
+        switchTab('cardio'); 
+    })();
+    </script>
+</div>
+
+</body>
+</html>

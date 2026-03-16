@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutrition — NCLEX Crib Notes</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --pri-bg-from: #071209;
+  --pri-bg-mid: #0f2318;
+  --pri-bg-to: #1a3828;
+  --pri-accent: #16a34a;
+  --pri-accent-light: #4ade80;
+  --pri-text: #e8ecf4;
+  --pri-text-muted: #94a3b8;
+  --pri-gold: #fbbf24;
+  --pri-border: #22c55e;
+  --pri-card-bg: rgba(255,255,255,0.04);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(160deg, var(--pri-bg-from) 0%, var(--pri-bg-mid) 45%, var(--pri-bg-to) 100%);
+  color: var(--pri-text); min-height: 100vh; padding: 0; line-height: 1.6; font-size: 1.02rem;
+}
+body::before {
+  content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 15%, rgba(22,163,74,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 85% 80%, rgba(34,197,94,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+.guide-container { max-width: 920px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #05120a 0%, #0d2818 40%, #164430 100%);
+  border-radius: 1.25rem; padding: 2rem 1.75rem 1.75rem; margin-bottom: 2rem;
+  border: 2px solid var(--pri-accent); overflow: hidden;
+}
+.hero::before { content: ''; position: absolute; top: -40%; right: -15%; width: 280px; height: 280px; background: radial-gradient(circle, rgba(74,222,128,0.12), transparent 70%); pointer-events: none; }
+.hero::after { content: '🥗'; position: absolute; top: 1rem; right: 1.25rem; font-size: 2.8rem; opacity: 0.12; pointer-events: none; }
+.hero h1 { font-size: 2rem; font-weight: 800; color: #fff; letter-spacing: -0.01em; margin-bottom: 0.5rem; text-shadow: 0 2px 12px rgba(22,163,74,0.3); }
+.hero .subtitle { font-size: 1.05rem; color: #86efac; line-height: 1.6; font-weight: 400; }
+.hero .badge-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.85rem; }
+.hero .badge { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.25rem 0.65rem; border-radius: 2rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; backdrop-filter: blur(4px); cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; text-decoration: none; }
+.hero .badge:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+.badge-macro { background: rgba(22,163,74,0.2); color: #86efac; border: 1px solid rgba(22,163,74,0.4); }
+.badge-vit   { background: rgba(245,158,11,0.2); color: #fcd34d; border: 1px solid rgba(245,158,11,0.4); }
+.badge-min   { background: rgba(59,130,246,0.2); color: #93c5fd; border: 1px solid rgba(59,130,246,0.4); }
+.badge-diet  { background: rgba(168,85,247,0.2); color: #d8b4fe; border: 1px solid rgba(168,85,247,0.4); }
+.badge-tube  { background: rgba(220,38,38,0.2); color: #fca5a5; border: 1px solid rgba(220,38,38,0.4); }
+.badge-tpn   { background: rgba(225,29,72,0.2); color: #fda4af; border: 1px solid rgba(225,29,72,0.4); }
+.badge-spec  { background: rgba(14,165,233,0.2); color: #7dd3fc; border: 1px solid rgba(14,165,233,0.4); }
+.badge-mem   { background: rgba(148,163,184,0.2); color: #cbd5e1; border: 1px solid rgba(148,163,184,0.4); }
+
+.section-hdr { position: relative; margin: 2.5rem 0 0; padding: 0.85rem 1.15rem; border-radius: 0.75rem 0.75rem 0 0; font-family: 'Inter', system-ui, sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.01em; }
+.sh-macro { background: #14532d; color: #bbf7d0; }
+.sh-vit   { background: #78350f; color: #fef3c7; }
+.sh-min   { background: #1e3a5f; color: #bfdbfe; }
+.sh-diet  { background: #4a1d96; color: #e9d5ff; }
+.sh-tube  { background: #7f1d1d; color: #fecaca; }
+.sh-tpn   { background: #881337; color: #fecdd3; }
+.sh-spec  { background: #0c4a6e; color: #bae6fd; }
+.sh-mem   { background: #1e293b; color: #e2e8f0; }
+
+.content-block { background: var(--pri-card-bg); border: 1px solid rgba(255,255,255,0.06); border-top: none; border-radius: 0 0 0.75rem 0.75rem; padding: 1.25rem 1.15rem 1.5rem; margin-bottom: 0.5rem; }
+.content-block h3 { font-size: 1.1rem; font-weight: 700; color: var(--pri-accent-light); margin: 1.4rem 0 0.5rem; }
+.content-block h3:first-child { margin-top: 0; }
+.content-block p { margin: 0.4rem 0 0.7rem; color: var(--pri-text); line-height: 1.65; }
+.content-block ul, .content-block ol { margin: 0.4rem 0 0.8rem 1.3rem; color: var(--pri-text); }
+.content-block li { margin-bottom: 0.35rem; line-height: 1.55; }
+.content-block li strong { color: #fff; }
+.drug { color: #93c5fd; font-weight: 700; }
+.lyte { color: #ffa040; font-weight: 700; }
+
+.info-table { width: 100%; border-collapse: collapse; margin: 0.75rem 0 1rem; font-size: 0.95rem; }
+.info-table th { background: rgba(22,163,74,0.15); color: var(--pri-accent-light); padding: 0.55rem 0.7rem; text-align: left; font-weight: 700; border-bottom: 2px solid rgba(22,163,74,0.3); }
+.info-table td { padding: 0.5rem 0.7rem; border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top; }
+.info-table tr:last-child td { border-bottom: none; }
+.info-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+.priority-box { border-radius: 0.6rem; padding: 0.85rem 1rem; margin: 0.75rem 0; border-left: 4px solid; }
+.pbox-red { background: rgba(220,38,38,0.08); border-color: #dc2626; }
+.pbox-amber { background: rgba(245,158,11,0.08); border-color: #f59e0b; }
+.pbox-green { background: rgba(16,185,129,0.08); border-color: #10b981; }
+.pbox-blue { background: rgba(59,130,246,0.08); border-color: #3b82f6; }
+.pbox-purple { background: rgba(139,92,246,0.08); border-color: #8b5cf6; }
+
+.mnemonic-box { background: rgba(22,163,74,0.06); border: 1px solid rgba(22,163,74,0.2); border-radius: 0.6rem; padding: 0.85rem 1rem; margin: 0.75rem 0; }
+.mnemonic-box .title { font-weight: 700; color: var(--pri-accent-light); font-size: 1rem; margin-bottom: 0.3rem; }
+.mnemonic-box .letters { font-size: 0.95rem; }
+.mnemonic-box .letters span { color: var(--pri-gold); font-weight: 800; }
+.key-rule { background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.25); border-radius: 0.6rem; padding: 0.75rem 1rem; margin: 0.6rem 0; font-weight: 600; color: var(--pri-gold); font-size: 0.95rem; }
+.key-rule .rule-icon { margin-right: 0.4rem; }
+
+.decision-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin: 0.75rem 0; font-weight: 700; font-size: 0.95rem; }
+.flow-step { background: rgba(22,163,74,0.12); border: 1px solid rgba(22,163,74,0.3); color: #86efac; padding: 0.4rem 0.75rem; border-radius: 0.5rem; }
+.flow-arrow { color: var(--pri-text-muted); font-size: 1.1rem; }
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.55rem; }
+  .guide-container { padding: 1rem 0.65rem 2rem; }
+  .content-block { padding: 1rem 0.85rem 1.2rem; }
+  .info-table { font-size: 0.85rem; }
+  .info-table th, .info-table td { padding: 0.4rem 0.5rem; }
+}
+</style>
+</head>
+<body>
+<div class="guide-container">
+
+<div class="hero">
+  <h1>🥗 Nutrition</h1>
+  <div class="subtitle">Macronutrients, vitamins, minerals, therapeutic diets, enteral &amp; parenteral nutrition, nutritional assessment &amp; special populations for NCLEX mastery.</div>
+  <div class="badge-row">
+    <a class="badge badge-macro" href="#sec-macro">🍎 Macronutrients</a>
+    <a class="badge badge-vit" href="#sec-vit">💊 Vitamins</a>
+    <a class="badge badge-min" href="#sec-min">🧪 Minerals</a>
+    <a class="badge badge-diet" href="#sec-diet">🍽️ Diets</a>
+    <a class="badge badge-tube" href="#sec-tube">🔧 Enteral</a>
+    <a class="badge badge-tpn" href="#sec-tpn">💉 TPN</a>
+    <a class="badge badge-spec" href="#sec-spec">👶 Special Pops</a>
+    <a class="badge badge-mem" href="#sec-mem">🧠 Memory</a>
+  </div>
+</div>
+
+<!-- ==================== SECTION 1 ==================== -->
+<div id="sec-macro" class="section-hdr sh-macro">🍎 Section 1 — Macronutrients &amp; Nutritional Assessment</div>
+<div class="content-block">
+
+  <h3>Macronutrients</h3>
+  <table class="info-table">
+    <tr><th>Nutrient</th><th>Calories/gram</th><th>Function</th><th>Key Sources</th></tr>
+    <tr><td><strong>Carbohydrates</strong></td><td><span class="lyte">4 kcal/g</span></td><td>Primary energy source. Brain fuel. Fiber for GI health.</td><td>Grains, fruits, vegetables, legumes, dairy</td></tr>
+    <tr><td><strong>Protein</strong></td><td><span class="lyte">4 kcal/g</span></td><td>Tissue repair, immune function, enzymes, hormones.</td><td>Meat, fish, eggs, dairy, legumes, soy</td></tr>
+    <tr><td><strong>Fat</strong></td><td><span class="lyte">9 kcal/g</span></td><td>Energy storage, insulation, vitamin absorption (A, D, E, K), cell membranes.</td><td>Oils, nuts, avocado, fatty fish, butter</td></tr>
+  </table>
+
+  <h3>Nutritional Assessment Parameters</h3>
+  <table class="info-table">
+    <tr><th>Marker</th><th>Normal Value</th><th>Significance</th></tr>
+    <tr><td><strong>Albumin</strong></td><td><span class="lyte">3.5–5.0 g/dL</span></td><td>Long-term nutrition indicator (half-life: <span class="lyte">20 days</span>). &lt; 3.5 = malnutrition risk.</td></tr>
+    <tr><td><strong>Prealbumin</strong></td><td><span class="lyte">15–36 mg/dL</span></td><td>Short-term indicator (half-life: <span class="lyte">2–3 days</span>). Best for monitoring acute nutritional changes.</td></tr>
+    <tr><td><strong>Transferrin</strong></td><td><span class="lyte">200–400 mg/dL</span></td><td>Intermediate indicator. Also reflects iron status.</td></tr>
+    <tr><td><strong>BMI</strong></td><td><span class="lyte">18.5–24.9</span></td><td>&lt; 18.5 = underweight; 25–29.9 = overweight; ≥ 30 = obese</td></tr>
+    <tr><td><strong>Total lymphocyte count</strong></td><td><span class="lyte">&gt; 1500/mm³</span></td><td>↓ with malnutrition (impaired immune function)</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: Prealbumin is the BEST indicator for acute/recent nutritional changes. Albumin is best for chronic/long-term status. Both are affected by inflammation and hydration.
+  </div>
+
+  <h3>Signs of Malnutrition</h3>
+  <ul>
+    <li>Unintentional weight loss &gt; <span class="lyte">10%</span> in 6 months</li>
+    <li>Muscle wasting, fatigue, poor wound healing</li>
+    <li>Dry, flaky skin; brittle hair and nails; angular cheilitis (cracking at mouth corners)</li>
+    <li>Edema (in severe protein deficiency — kwashiorkor)</li>
+    <li>Weakened immune response (frequent infections)</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 2 ==================== -->
+<div id="sec-vit" class="section-hdr sh-vit">💊 Section 2 — Vitamins</div>
+<div class="content-block">
+
+  <h3>Fat-Soluble Vitamins (A, D, E, K)</h3>
+  <p>Stored in fat tissue and liver. Can accumulate to toxic levels. Require dietary fat for absorption.</p>
+  <table class="info-table">
+    <tr><th>Vitamin</th><th>Function</th><th>Deficiency</th><th>Key Sources &amp; Notes</th></tr>
+    <tr><td><strong>A</strong></td><td>Vision (night vision), skin integrity, immune function</td><td>Night blindness, xerophthalmia, dry skin, ↑ infection risk</td><td>Liver, carrots, sweet potatoes, spinach. TERATOGENIC in excess. Supplement in measles.</td></tr>
+    <tr><td><strong>D</strong></td><td>Calcium absorption, bone mineralization, immune modulation</td><td>Rickets (children), osteomalacia (adults), osteoporosis, ↓ immunity</td><td>Sunlight, fortified milk, fatty fish. <span class="lyte">800–1000 IU/day</span> for adults. Elderly at high risk of deficiency.</td></tr>
+    <tr><td><strong>E</strong></td><td>Antioxidant, protects cell membranes, RBC integrity</td><td>Hemolytic anemia (in newborns), peripheral neuropathy</td><td>Nuts, seeds, vegetable oils, wheat germ. High doses: ↑ bleeding risk with anticoagulants.</td></tr>
+    <tr><td><strong>K</strong></td><td>Blood clotting (synthesis of factors II, VII, IX, X)</td><td>Bleeding, bruising, prolonged <span class="lyte">PT/INR</span></td><td>Green leafy vegetables, broccoli, liver. Newborns receive <span class="drug">phytonadione</span> IM at birth. Antagonizes <span class="drug">warfarin</span>.</td></tr>
+  </table>
+
+  <div class="mnemonic-box">
+    <div class="title">🔑 Fat-Soluble Vitamins — "ADEK in the FAT"</div>
+    <div class="letters">
+      Vitamins <span>A</span>, <span>D</span>, <span>E</span>, <span>K</span> — stored in fat. Can become toxic. Need bile for absorption.
+    </div>
+  </div>
+
+  <h3>Water-Soluble Vitamins (B-Complex &amp; C)</h3>
+  <table class="info-table">
+    <tr><th>Vitamin</th><th>Function</th><th>Deficiency</th><th>Key Points</th></tr>
+    <tr><td><strong>B1 (Thiamine)</strong></td><td>Carbohydrate metabolism, nerve function</td><td>Beriberi (cardiac &amp; neuro), Wernicke-Korsakoff syndrome</td><td>Give BEFORE glucose in alcoholics (glucose without thiamine → Wernicke's encephalopathy).</td></tr>
+    <tr><td><strong>B2 (Riboflavin)</strong></td><td>Energy metabolism</td><td>Cheilosis (cracked lips), glossitis, photosensitivity</td><td>Dairy, eggs, green vegetables. Urine may turn bright yellow.</td></tr>
+    <tr><td><strong>B3 (Niacin)</strong></td><td>Energy metabolism, DNA repair</td><td>Pellagra: Dermatitis, Diarrhea, Dementia, Death (4 D's)</td><td>High doses used for hyperlipidemia → flushing (take <span class="drug">aspirin</span> 30 min before).</td></tr>
+    <tr><td><strong>B6 (Pyridoxine)</strong></td><td>Protein metabolism, neurotransmitter synthesis</td><td>Peripheral neuropathy, microcytic anemia, dermatitis</td><td>Given with <span class="drug">isoniazid (INH)</span> to prevent neuropathy. Excess: neuropathy.</td></tr>
+    <tr><td><strong>B9 (Folate/Folic Acid)</strong></td><td>DNA synthesis, RBC formation</td><td>Megaloblastic anemia, neural tube defects (NTDs) in pregnancy</td><td><span class="lyte">400 mcg/day</span> for all women of childbearing age. <span class="lyte">600 mcg/day</span> in pregnancy. Green leafy vegetables, fortified grains.</td></tr>
+    <tr><td><strong>B12 (Cobalamin)</strong></td><td>DNA synthesis, myelin sheath, RBC formation</td><td>Pernicious anemia (megaloblastic), peripheral neuropathy, glossitis</td><td>Requires intrinsic factor for absorption. Deficient in strict vegans, gastric bypass, elderly (↓ IF). IM <span class="drug">cyanocobalamin</span> if no IF.</td></tr>
+    <tr><td><strong>C (Ascorbic Acid)</strong></td><td>Collagen synthesis, antioxidant, iron absorption, wound healing</td><td>Scurvy: bleeding gums, petechiae, poor wound healing, loose teeth</td><td>Citrus, tomatoes, peppers, strawberries. ↑ need in smokers. Enhances iron absorption (take with iron supplements).</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: Water-soluble vitamins (B &amp; C) are NOT stored — excess is excreted in urine. Daily intake needed. Toxicity is rare (exception: B6 neuropathy from megadoses).
+  </div>
+</div>
+
+<!-- ==================== SECTION 3 ==================== -->
+<div id="sec-min" class="section-hdr sh-min">🧪 Section 3 — Minerals &amp; Electrolytes</div>
+<div class="content-block">
+
+  <h3>Key Minerals</h3>
+  <table class="info-table">
+    <tr><th>Mineral</th><th>Function</th><th>Deficiency</th><th>Excess / Notes</th></tr>
+    <tr><td><strong>Iron</strong></td><td>Hemoglobin synthesis, oxygen transport</td><td>Iron-deficiency anemia: fatigue, pallor, spoon nails (koilonychia), pica</td><td>Take on empty stomach with vitamin C. Avoid with dairy, tea, antacids. Black stools = expected. Constipation common. <span class="drug">Iron dextran</span> IV → test dose first (anaphylaxis risk).</td></tr>
+    <tr><td><strong>Calcium</strong></td><td>Bone/teeth, muscle contraction, clotting, nerve impulse</td><td>Tetany, Trousseau sign, Chvostek sign, numbness, seizures, ↑ QT</td><td>Normal: <span class="lyte">8.5–10.5 mg/dL</span>. Take with vitamin D. Separate from iron by 2 hr. Do not give with <span class="drug">digoxin</span> IV (cardiac arrest risk).</td></tr>
+    <tr><td><strong>Phosphorus</strong></td><td>Bone structure, energy (ATP), acid-base balance</td><td>Weakness, bone pain (with CKD — ↑ phosphorus, ↓ calcium)</td><td>Inverse relationship with calcium. <span class="drug">Phosphate binders</span> with meals in CKD (sevelamer, calcium acetate).</td></tr>
+    <tr><td><strong>Magnesium</strong></td><td>Enzyme activation, nerve/muscle function, cardiac rhythm</td><td>Tremors, hyperreflexia, seizures, torsades de pointes</td><td>Normal: <span class="lyte">1.5–2.5 mEq/L</span>. ↓ Mg → ↓ K (treat Mg first). <span class="drug">MgSO₄</span> IV: monitor reflexes, RR (&lt; <span class="lyte">12</span> = hold). Antidote: <span class="drug">calcium gluconate</span>.</td></tr>
+    <tr><td><strong>Zinc</strong></td><td>Wound healing, immune function, taste/smell</td><td>Poor wound healing, hair loss, altered taste, ↓ immunity</td><td>Supplement in burns, malnutrition, alcoholism. Avoid dairy with zinc supplements.</td></tr>
+    <tr><td><strong>Iodine</strong></td><td>Thyroid hormone synthesis</td><td>Goiter, hypothyroidism, cretinism (congenital if maternal deficiency)</td><td>Iodized salt. Seafood. Excess: thyroid dysfunction.</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: Calcium and phosphorus have an INVERSE relationship. When one goes up, the other goes down. In CKD: ↑ phosphorus → ↓ calcium → secondary hyperparathyroidism → bone loss.
+  </div>
+</div>
+
+<!-- ==================== SECTION 4 ==================== -->
+<div id="sec-diet" class="section-hdr sh-diet">🍽️ Section 4 — Therapeutic Diets</div>
+<div class="content-block">
+
+  <h3>Common Therapeutic Diets</h3>
+  <table class="info-table">
+    <tr><th>Diet</th><th>Indication</th><th>Key Restrictions</th></tr>
+    <tr><td><strong>Low-Sodium</strong></td><td>HF, HTN, cirrhosis, renal disease</td><td>≤ <span class="lyte">2,000 mg Na⁺/day</span>. Avoid processed foods, canned soups, deli meats, soy sauce. Read labels.</td></tr>
+    <tr><td><strong>Low-Potassium</strong></td><td>CKD, hyperkalemia</td><td>Avoid bananas, oranges, potatoes, tomatoes, avocado, spinach, beans, salt substitutes (contain KCl).</td></tr>
+    <tr><td><strong>High-Potassium</strong></td><td>Loop diuretic use, hypokalemia</td><td>Increase bananas, oranges, potatoes, raisins, beans, spinach, avocado.</td></tr>
+    <tr><td><strong>Renal Diet</strong></td><td>Chronic kidney disease</td><td>Low protein, low Na⁺, low K⁺, low phosphorus, fluid restriction. Limit dairy.</td></tr>
+    <tr><td><strong>Cardiac / DASH</strong></td><td>HTN, cardiovascular disease</td><td>Rich in fruits, vegetables, whole grains, low-fat dairy. Low saturated fat &amp; sodium. ↑ K⁺, Mg²⁺, Ca²⁺.</td></tr>
+    <tr><td><strong>Diabetic</strong></td><td>Type 1 &amp; Type 2 DM</td><td>Consistent carbohydrate intake. Carb counting. Balanced meals. Avoid concentrated sweets. Spread meals evenly.</td></tr>
+    <tr><td><strong>Low-Residue / Low-Fiber</strong></td><td>Crohn's flare, diverticulitis flare, pre-colonoscopy, post-GI surgery</td><td>Avoid raw fruits/vegetables, whole grains, nuts, seeds. White bread/rice allowed.</td></tr>
+    <tr><td><strong>High-Fiber</strong></td><td>Constipation, diverticulosis (not flare), IBS, hyperlipidemia</td><td><span class="lyte">25–30 g/day</span>. Whole grains, fruits, vegetables, legumes. Increase fluids with fiber.</td></tr>
+    <tr><td><strong>Dysphagia Diet</strong></td><td>Stroke, Parkinson's, dementia, esophageal disorders</td><td>Thickened liquids, pureed/minced foods per speech therapy recommendation. HOB ≥ <span class="lyte">30°</span> for meals.</td></tr>
+    <tr><td><strong>Celiac Diet</strong></td><td>Celiac disease</td><td>Strict gluten-free: avoid wheat, barley, rye, oats (unless certified GF). Rice, corn, potatoes OK.</td></tr>
+    <tr><td><strong>Phenylketonuria (PKU)</strong></td><td>PKU (inborn error of metabolism)</td><td>Restrict phenylalanine: avoid aspartame (NutraSweet), high-protein foods. Special formula for infants.</td></tr>
+  </table>
+
+  <div class="priority-box pbox-amber">
+    <strong>🟡 Warfarin &amp; Vitamin K Consistency:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>Patients on <span class="drug">warfarin</span> should maintain CONSISTENT vitamin K intake — not avoid it entirely</li>
+      <li>Sudden ↑ in vitamin K–rich foods (kale, spinach, broccoli) → ↓ INR → ↑ clotting risk</li>
+      <li>Sudden ↓ in vitamin K–rich foods → ↑ INR → ↑ bleeding risk</li>
+      <li>Key message: "Keep your intake consistent day to day"</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ==================== SECTION 5 ==================== -->
+<div id="sec-tube" class="section-hdr sh-tube">🔧 Section 5 — Enteral Nutrition (Tube Feeding)</div>
+<div class="content-block">
+
+  <h3>Types of Feeding Tubes</h3>
+  <table class="info-table">
+    <tr><th>Tube</th><th>Location</th><th>Duration</th><th>Key Points</th></tr>
+    <tr><td><strong>NG (Nasogastric)</strong></td><td>Nose → Stomach</td><td>Short-term (≤ <span class="lyte">4 weeks</span>)</td><td>Verify placement: X-ray (gold standard on initial placement), pH of aspirate (gastric ≤ <span class="lyte">5.5</span>), CO₂ detector. NEVER use auscultation alone.</td></tr>
+    <tr><td><strong>NJ/ND (Nasoduodenal/Jejunal)</strong></td><td>Nose → Duodenum/Jejunum</td><td>Short-term</td><td>Post-pyloric. Used when aspiration risk is high. pH &gt; 6 (intestinal).</td></tr>
+    <tr><td><strong>G-tube (Gastrostomy/PEG)</strong></td><td>Abdominal wall → Stomach</td><td>Long-term</td><td>Surgically or endoscopically placed. Site care: clean with soap and water, rotate tube daily, assess for leakage.</td></tr>
+    <tr><td><strong>J-tube (Jejunostomy)</strong></td><td>Abdominal wall → Jejunum</td><td>Long-term</td><td>Continuous feeding only (no bolus — small bowel can't handle volume). Less aspiration risk.</td></tr>
+  </table>
+
+  <h3>Tube Feeding Administration</h3>
+  <ul>
+    <li><strong>HOB elevation:</strong> ≥ <span class="lyte">30–45°</span> during and for <span class="lyte">30–60 min</span> after feeding (aspiration prevention)</li>
+    <li><strong>Residual check:</strong> Check gastric residual before each bolus or every <span class="lyte">4–6 hours</span> for continuous. Hold if &gt; <span class="lyte">250–500 mL</span> (per policy). Return aspirate to stomach.</li>
+    <li><strong>Flush:</strong> With <span class="lyte">30 mL</span> warm water before/after feeding and every <span class="lyte">4 hours</span> for continuous (prevents clogging)</li>
+    <li><strong>Hang time:</strong> Open system formula — max <span class="lyte">4–8 hours</span>. Closed system — max <span class="lyte">24–48 hours</span>.</li>
+    <li><strong>Diarrhea management:</strong> Assess rate (too fast?), temperature (should be room temp), contamination, medications (sorbitol-containing), osmolality</li>
+  </ul>
+
+  <div class="priority-box pbox-red">
+    <strong>🔴 Tube Feeding Complications:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li><strong>Aspiration:</strong> #1 complication. Maintain HOB elevation. Check placement. Monitor for cough, crackles, ↓ SpO₂.</li>
+      <li><strong>Clogging:</strong> Flush regularly. Do NOT mix medications with formula. Crush meds and flush between each.</li>
+      <li><strong>Diarrhea:</strong> Slow rate, check osmolality, rule out <em>C. diff</em>, assess medications.</li>
+      <li><strong>Refeeding syndrome:</strong> In severely malnourished patients — monitor <span class="lyte">K⁺</span>, <span class="lyte">Mg²⁺</span>, <span class="lyte">PO₄</span> (all drop dangerously). Start feeds slowly.</li>
+      <li><strong>Dumping syndrome:</strong> (post-pyloric feeds) — nausea, cramping, diarrhea, diaphoresis. Slow rate. Small, frequent feeds.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ==================== SECTION 6 ==================== -->
+<div id="sec-tpn" class="section-hdr sh-tpn">💉 Section 6 — Parenteral Nutrition (TPN)</div>
+<div class="content-block">
+
+  <h3>Total Parenteral Nutrition (TPN)</h3>
+  <p>IV nutrition given when the GI tract is non-functional or cannot be used. Contains: dextrose, amino acids, lipids, electrolytes, vitamins, minerals, trace elements.</p>
+
+  <table class="info-table">
+    <tr><th>Feature</th><th>PPN (Peripheral)</th><th>TPN (Central)</th></tr>
+    <tr><td><strong>Dextrose concentration</strong></td><td>≤ <span class="lyte">10%</span></td><td>Up to <span class="lyte">70%</span></td></tr>
+    <tr><td><strong>Osmolarity</strong></td><td>Lower (&lt; <span class="lyte">900 mOsm/L</span>)</td><td>Higher (requires central line)</td></tr>
+    <tr><td><strong>Duration</strong></td><td>Short-term (&lt; <span class="lyte">2 weeks</span>)</td><td>Long-term (can be indefinite)</td></tr>
+    <tr><td><strong>Access</strong></td><td>Peripheral IV</td><td>Central venous catheter (PICC, subclavian, internal jugular)</td></tr>
+    <tr><td><strong>Caloric density</strong></td><td>Lower</td><td>Higher — can meet full nutritional needs</td></tr>
+  </table>
+
+  <h3>TPN Nursing Management</h3>
+  <ul>
+    <li><strong>Administration:</strong> Via infusion pump. Dedicated central line lumen (no piggybacking other meds).</li>
+    <li><strong>Blood glucose monitoring:</strong> Every <span class="lyte">4–6 hours</span> initially (high dextrose → hyperglycemia). <span class="drug">Insulin</span> may be added to TPN or given separately.</li>
+    <li><strong>Rate changes:</strong> NEVER abruptly stop TPN (risk of rebound hypoglycemia). If must stop, taper or infuse <span class="drug">D10W</span> at same rate.</li>
+    <li><strong>Filter:</strong> Use 0.22-micron filter for dextrose/amino acids; 1.2-micron for lipids.</li>
+    <li><strong>Lipid infusion:</strong> May run separately. Hang for max <span class="lyte">12 hours</span>. Monitor triglycerides.</li>
+    <li><strong>Labs:</strong> Daily weights, I&amp;O, <span class="lyte">BMP (electrolytes, glucose, BUN/Cr)</span>, liver function, triglycerides, prealbumin.</li>
+  </ul>
+
+  <div class="priority-box pbox-red">
+    <strong>🔴 TPN Complications:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li><strong>Hyperglycemia:</strong> Most common. Monitor BG. Administer <span class="drug">insulin</span> as ordered.</li>
+      <li><strong>Infection/sepsis:</strong> Strict aseptic technique for line care. Change tubing per policy. Monitor for fever, ↑ WBC.</li>
+      <li><strong>Air embolism:</strong> Clamp tubing when changing bags. Position patient in left Trendelenburg if suspected.</li>
+      <li><strong>Refeeding syndrome:</strong> ↓ <span class="lyte">K⁺</span>, ↓ <span class="lyte">Mg²⁺</span>, ↓ <span class="lyte">PO₄</span> as malnourished cells take up nutrients. Start TPN slowly. Monitor electrolytes closely.</li>
+      <li><strong>Fluid overload:</strong> Monitor I&amp;O, daily weights, lung sounds, edema.</li>
+    </ul>
+  </div>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: If TPN runs out or must be stopped emergently, hang <span class="drug">D10W</span> at the same rate to prevent rebound hypoglycemia. NEVER stop TPN abruptly.
+  </div>
+</div>
+
+<!-- ==================== SECTION 7 ==================== -->
+<div id="sec-spec" class="section-hdr sh-spec">👶 Section 7 — Special Populations</div>
+<div class="content-block">
+
+  <h3>Pregnancy Nutrition</h3>
+  <ul>
+    <li><strong>Calorie increase:</strong> +<span class="lyte">340 kcal/day</span> (2nd trimester), +<span class="lyte">452 kcal/day</span> (3rd trimester)</li>
+    <li><strong>Weight gain (normal BMI):</strong> <span class="lyte">25–35 lbs</span> total</li>
+    <li><strong>Folic acid:</strong> <span class="lyte">600 mcg/day</span> (prevents neural tube defects — start before conception ideally)</li>
+    <li><strong>Iron:</strong> <span class="lyte">27 mg/day</span> (double non-pregnant needs; blood volume ↑ 50%)</li>
+    <li><strong>Calcium:</strong> <span class="lyte">1000–1300 mg/day</span></li>
+    <li><strong>DHA:</strong> Important for fetal brain development (fatty fish, supplements)</li>
+    <li><strong>Avoid:</strong> Raw fish/meat, high-mercury fish (swordfish, shark, king mackerel), unpasteurized dairy, deli meats (listeria risk), alcohol, excess caffeine (&lt; <span class="lyte">200 mg/day</span>), liver (excess vitamin A = teratogenic)</li>
+  </ul>
+
+  <h3>Pediatric Nutrition</h3>
+  <table class="info-table">
+    <tr><th>Age</th><th>Nutrition Needs</th><th>Key Points</th></tr>
+    <tr><td><strong>0–6 months</strong></td><td>Breast milk or formula exclusively</td><td>No water, juice, or solids. Breast milk is ideal. <span class="drug">Vitamin D</span> supplement (<span class="lyte">400 IU/day</span>) for breastfed infants.</td></tr>
+    <tr><td><strong>6–12 months</strong></td><td>Introduce solids (iron-fortified cereal first)</td><td>Single-ingredient foods, one at a time (wait <span class="lyte">3–5 days</span> between new foods for allergy monitoring). No honey &lt; 1 year (botulism risk).</td></tr>
+    <tr><td><strong>1–2 years</strong></td><td>Whole milk (not skim), table foods</td><td>No choking hazards: hot dogs, grapes (cut), popcorn, nuts, raw carrots. Limit juice to <span class="lyte">4 oz/day</span>.</td></tr>
+    <tr><td><strong>Toddlers/Preschool</strong></td><td>3 meals + 2 snacks</td><td>Small portions. Don't force eating. Iron &amp; calcium important for growth. Limit screen time during meals.</td></tr>
+  </table>
+
+  <h3>Older Adult Nutrition</h3>
+  <ul>
+    <li>↓ caloric needs but ↑ nutrient density needed</li>
+    <li>↑ protein (<span class="lyte">1.0–1.2 g/kg/day</span>) to prevent sarcopenia</li>
+    <li>↑ calcium (<span class="lyte">1200 mg/day</span>) + vitamin D (<span class="lyte">800–1000 IU/day</span>) for osteoporosis prevention</li>
+    <li>↑ fiber + fluids for constipation prevention</li>
+    <li>B12 supplementation often needed (↓ intrinsic factor with age)</li>
+    <li>Screen for food insecurity, dentition problems, dysphagia, depression-related appetite loss</li>
+  </ul>
+
+  <h3>Diabetes Nutrition</h3>
+  <ul>
+    <li><strong>Carb counting:</strong> 1 carb choice = <span class="lyte">15 g</span> carbohydrates</li>
+    <li>Consistent carbohydrate distribution across meals</li>
+    <li>Monitor BG before and <span class="lyte">2 hours</span> after meals</li>
+    <li>Hypoglycemia rule of 15: If <span class="lyte">BG &lt; 70 mg/dL</span> → give <span class="lyte">15 g</span> fast-acting carbs → recheck in <span class="lyte">15 min</span> → repeat if still &lt; 70</li>
+    <li>Glycemic index awareness: low-GI foods provide steadier glucose control</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 8 ==================== -->
+<div id="sec-mem" class="section-hdr sh-mem">🧠 Section 8 — Memory Anchors &amp; Key Rules</div>
+<div class="content-block">
+
+  <h3>Key Mnemonics</h3>
+
+  <div class="mnemonic-box">
+    <div class="title">💊 Fat-Soluble Vitamins — "ADEK"</div>
+    <div class="letters">
+      <span>A</span> (vision) · <span>D</span> (calcium/bones) · <span>E</span> (antioxidant) · <span>K</span> (Klotting)
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🧪 Pellagra (B3 Deficiency) — "4 D's"</div>
+    <div class="letters">
+      <span>D</span>ermatitis · <span>D</span>iarrhea · <span>D</span>ementia · <span>D</span>eath
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🩸 Iron Administration Tips</div>
+    <div class="letters">
+      <span>E</span>mpty stomach · with <span>V</span>itamin C · <span>A</span>void dairy/tea/antacids · <span>S</span>tools turn black · <span>Z</span>-track for IM
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">⚡ Refeeding Syndrome — Watch These Labs Drop</div>
+    <div class="letters">
+      <span>K</span>⁺ (potassium) · <span>M</span>g²⁺ (magnesium) · <span>P</span>O₄ (phosphorus) — all plummet. Start feeds slowly in malnourished patients.
+    </div>
+  </div>
+
+  <h3>NCLEX Nutrition Quick-Reference Rules</h3>
+  <table class="info-table">
+    <tr><th>Rule</th><th>Application</th></tr>
+    <tr><td><strong>Prealbumin = best acute marker</strong></td><td>Half-life 2–3 days. More sensitive to recent changes than albumin.</td></tr>
+    <tr><td><strong>HOB 30–45° for tube feeding</strong></td><td>During and 30–60 min after. Aspiration prevention.</td></tr>
+    <tr><td><strong>Never stop TPN abruptly</strong></td><td>Hang D10W at same rate if TPN must stop. Prevents rebound hypoglycemia.</td></tr>
+    <tr><td><strong>Verify NG placement</strong></td><td>X-ray for initial. pH ≤ 5.5 ongoing. NEVER auscultation alone.</td></tr>
+    <tr><td><strong>Vitamin K → warfarin consistency</strong></td><td>Don't avoid it — keep intake consistent. ↑ K → ↓ INR. ↓ K → ↑ INR.</td></tr>
+    <tr><td><strong>B1 before glucose in alcoholics</strong></td><td>Glucose without thiamine → Wernicke's encephalopathy. Give thiamine FIRST.</td></tr>
+    <tr><td><strong>Folate for childbearing women</strong></td><td>400 mcg/day for all women of childbearing age. Prevents NTDs.</td></tr>
+    <tr><td><strong>No honey &lt; 1 year</strong></td><td>Infant botulism risk (Clostridium botulinum spores).</td></tr>
+    <tr><td><strong>Rule of 15 for hypoglycemia</strong></td><td>BG &lt; 70 → 15 g fast carbs → recheck 15 min → repeat if needed.</td></tr>
+    <tr><td><strong>Refeeding syndrome</strong></td><td>Start feeds slowly in malnourished. Monitor K⁺, Mg²⁺, PO₄ closely.</td></tr>
+  </table>
+
+  <h3>Common NCLEX Nutrition Traps</h3>
+  <ul>
+    <li><strong>Trap:</strong> "Albumin is the best indicator of nutritional status" — For ACUTE changes, prealbumin is better. Albumin reflects CHRONIC status.</li>
+    <li><strong>Trap:</strong> "Auscultate to verify NG tube placement" — This is NO LONGER considered reliable. X-ray (initial) or pH testing (ongoing) is required.</li>
+    <li><strong>Trap:</strong> "The patient on warfarin should avoid green vegetables" — WRONG. They should maintain CONSISTENT intake, not avoid vitamin K.</li>
+    <li><strong>Trap:</strong> "Give orange juice to a patient with potassium of 6.2 mEq/L" — That's hyperkalemia! OJ is HIGH in potassium. They need potassium-lowering interventions.</li>
+    <li><strong>Trap:</strong> "Start TPN at full rate immediately" — In malnourished patients, start slowly to prevent refeeding syndrome.</li>
+  </ul>
+</div>
+
+</div>
+<script>
+document.querySelectorAll('.drug').forEach(function(el){
+  el.style.cursor='pointer';
+  el.title='Click to view drug card';
+  el.addEventListener('click',function(){
+    var name=this.textContent.trim();
+    if(window.parent&&window.parent!==window){
+      window.parent.postMessage({type:'showDrugCard',drug:name},'*');
+    }
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pharmacology — High-Alert Meds</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ac:#a21caf;--dk:#701a75;--lt:#f5d0fe;--bg1:#120a14;--bg2:#1e1028;--txt:#f0e6ff;--sub:#c9b8e0;--bdr:rgba(162,28,175,0.25)}
+body{font-family:'Nunito',sans-serif;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--txt);line-height:1.6;padding:0.75rem;min-height:100vh}
+.gc{max-width:900px;margin:0 auto}
+.hb{text-align:center;padding:1.5rem 1rem 1rem;margin-bottom:1rem}
+.hb h1{font-size:1.5rem;font-weight:800;color:var(--lt);margin-bottom:0.25rem}
+.hb p{color:var(--sub);font-size:0.85rem}
+/* Badge nav */
+.bn{display:flex;flex-wrap:wrap;gap:0.4rem;justify-content:center;margin-bottom:1.25rem}
+.bn a{text-decoration:none;font-size:0.7rem;font-weight:700;padding:0.3rem 0.6rem;border-radius:1rem;transition:all 0.2s;border:1px solid var(--bdr)}
+.b-pri{background:rgba(162,28,175,0.15);color:#e879f9}.b-pri:hover{background:rgba(162,28,175,0.35)}
+.b-acg{background:rgba(220,38,38,0.15);color:#fca5a5}.b-acg:hover{background:rgba(220,38,38,0.35)}
+.b-ins{background:rgba(37,99,235,0.15);color:#93c5fd}.b-ins:hover{background:rgba(37,99,235,0.35)}
+.b-opi{background:rgba(217,119,6,0.15);color:#fcd34d}.b-opi:hover{background:rgba(217,119,6,0.35)}
+.b-cvh{background:rgba(225,29,72,0.15);color:#fda4af}.b-cvh:hover{background:rgba(225,29,72,0.35)}
+.b-chm{background:rgba(5,150,105,0.15);color:#6ee7b7}.b-chm:hover{background:rgba(5,150,105,0.35)}
+.b-lyt{background:rgba(8,145,178,0.15);color:#67e8f9}.b-lyt:hover{background:rgba(8,145,178,0.35)}
+.b-mem{background:rgba(124,58,237,0.15);color:#c4b5fd}.b-mem:hover{background:rgba(124,58,237,0.35)}
+/* Sections */
+.sh{font-size:1.2rem;font-weight:800;color:var(--lt);margin:1.5rem 0 0.75rem;padding-bottom:0.4rem;border-bottom:2px solid var(--ac)}
+.cb{background:rgba(162,28,175,0.08);border:1px solid var(--bdr);border-radius:0.5rem;padding:0.75rem;margin-bottom:0.75rem}
+.cb h3{font-size:0.95rem;font-weight:700;color:#e879f9;margin-bottom:0.4rem}
+.cb p,.cb li{font-size:0.82rem;color:var(--sub);line-height:1.55}
+.cb ul{padding-left:1.1rem;margin-top:0.25rem}
+.cb li{margin-bottom:0.2rem}
+/* Compare grid */
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-bottom:0.75rem}
+@media(max-width:500px){.cg{grid-template-columns:1fr}}
+.cc{border-radius:0.45rem;padding:0.6rem;font-size:0.8rem}
+.cc h4{font-size:0.82rem;font-weight:700;margin-bottom:0.3rem}
+.cc-l{background:rgba(225,29,72,0.1);border:1px solid rgba(225,29,72,0.25);color:#fecdd3}
+.cc-l h4{color:#fda4af}
+.cc-r{background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.25);color:#bbf7d0}
+.cc-r h4{color:#86efac}
+/* Alert boxes */
+.ab{border-radius:0.45rem;padding:0.6rem 0.7rem;margin-bottom:0.6rem;font-size:0.8rem;line-height:1.5}
+.ab-d{background:rgba(239,68,68,0.12);border-left:3px solid #ef4444;color:#fecaca}
+.ab-w{background:rgba(234,179,8,0.12);border-left:3px solid #eab308;color:#fef08a}
+.ab-i{background:rgba(59,130,246,0.12);border-left:3px solid #3b82f6;color:#bfdbfe}
+.ab-s{background:rgba(34,197,94,0.12);border-left:3px solid #22c55e;color:#bbf7d0}
+/* Key rules */
+.kr{background:rgba(162,28,175,0.12);border:1px solid rgba(162,28,175,0.3);border-radius:0.4rem;padding:0.5rem 0.65rem;margin-bottom:0.5rem;font-size:0.8rem;color:var(--lt)}
+.kr strong{color:#e879f9}
+/* Mnemonic */
+.mb{background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(162,28,175,0.15));border:1px solid rgba(162,28,175,0.3);border-radius:0.5rem;padding:0.65rem;margin-bottom:0.65rem;font-size:0.82rem}
+.mb .mt{font-weight:800;color:#c4b5fd;margin-bottom:0.25rem;font-size:0.85rem}
+/* Info table */
+.it{width:100%;border-collapse:collapse;margin-bottom:0.65rem;font-size:0.78rem}
+.it th{background:rgba(162,28,175,0.2);color:#e879f9;padding:0.4rem;text-align:left;font-weight:700;border:1px solid var(--bdr)}
+.it td{padding:0.35rem 0.4rem;border:1px solid var(--bdr);color:var(--sub)}
+.it tr:nth-child(even) td{background:rgba(162,28,175,0.05)}
+/* Drug clickable */
+.drug{color:#e879f9;cursor:pointer;border-bottom:1px dotted #e879f9;font-weight:600;transition:color 0.15s}
+.drug:hover{color:#f0abfc}
+/* Range bar */
+.rb{display:flex;align-items:center;gap:0.4rem;margin:0.3rem 0;font-size:0.75rem;color:var(--sub)}
+.rb-bar{flex:1;height:6px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden}
+.rb-fill{height:100%;border-radius:3px}
+</style>
+</head><body>
+<div class="gc">
+
+<div class="hb">
+<h1>💊 Pharmacology — High-Alert Meds</h1>
+<p>ISMP high-alert drugs, critical monitoring, antidotes & safety protocols</p>
+</div>
+
+<nav class="bn">
+<a href="#sec-pri" class="b-pri">⚠️ Principles</a>
+<a href="#sec-acg" class="b-acg">🩸 Anticoagulants</a>
+<a href="#sec-ins" class="b-ins">💉 Insulin</a>
+<a href="#sec-opi" class="b-opi">💊 Opioids</a>
+<a href="#sec-cvh" class="b-cvh">❤️ Cardiac</a>
+<a href="#sec-chm" class="b-chm">🧪 Chemo</a>
+<a href="#sec-lyt" class="b-lyt">💧 IV Lytes</a>
+<a href="#sec-mem" class="b-mem">🧠 Anchors</a>
+</nav>
+
+<!-- ===== SECTION 1: HIGH-ALERT PRINCIPLES ===== -->
+<h2 class="sh" id="sec-pri">⚠️ High-Alert Medication Principles</h2>
+
+<div class="ab ab-d">⚡ <strong>High-alert medications</strong> bear a heightened risk of significant patient harm when used in error. They may NOT be the most common error sources, but the consequences are devastating.</div>
+
+<div class="cb">
+<h3>ISMP High-Alert Categories</h3>
+<ul>
+<li><strong>Anticoagulants</strong> — <span class="drug">heparin</span>, <span class="drug">warfarin</span>, <span class="drug">enoxaparin</span>, DOACs</li>
+<li><strong>Insulins</strong> — all formulations, especially concentrated (U-500)</li>
+<li><strong>Opioids</strong> — IV, transdermal, and oral concentrated forms</li>
+<li><strong>Chemotherapy agents</strong> — IV and oral antineoplastics</li>
+<li><strong>Electrolyte concentrates</strong> — IV potassium, hypertonic saline, IV magnesium</li>
+<li><strong>Neuromuscular blocking agents</strong> — <span class="drug">succinylcholine</span>, <span class="drug">vecuronium</span></li>
+<li><strong>Sedation agents</strong> — <span class="drug">propofol</span>, <span class="drug">midazolam</span>, <span class="drug">ketamine</span></li>
+<li><strong>Cardioplegic solutions</strong> and parenteral nutrition</li>
+</ul>
+</div>
+
+<div class="cb">
+<h3>Independent Double-Check Process</h3>
+<p>Two qualified clinicians <strong>independently</strong> verify high-alert medications before administration:</p>
+<ul>
+<li>✅ Right drug, dose, route, rate, patient, concentration</li>
+<li>✅ Pump settings verified separately (not reading over each other's shoulder)</li>
+<li>✅ Required for: insulin drips, heparin drips, PCA pumps, chemotherapy, epidurals</li>
+<li>❌ Does NOT replace barcode scanning — use BOTH systems</li>
+</ul>
+</div>
+
+<div class="cb">
+<h3>Tall Man Lettering (LASA Pairs)</h3>
+<p>Capital letters highlight differences in look-alike/sound-alike drug names:</p>
+<table class="it">
+<tr><th>Drug A</th><th>Drug B</th><th>Key Difference</th></tr>
+<tr><td><span class="drug">DOBUTamine</span></td><td><span class="drug">DOPamine</span></td><td>Inotrope vs vasopressor</td></tr>
+<tr><td>hydrALAZINE</td><td>hydrOXYzine</td><td>Antihypertensive vs antihistamine</td></tr>
+<tr><td>predniSONE</td><td>prednisoLONE</td><td>Oral steroid vs ophthalmic</td></tr>
+<tr><td>vinCRIStine</td><td>vinBLAStine</td><td>Both chemo — different toxicities</td></tr>
+<tr><td>cePHALexin</td><td>ceFAZolin</td><td>Oral 1st-gen vs IV 1st-gen cephalosporin</td></tr>
+<tr><td>glyBURIDE</td><td>glipiZIDE</td><td>Both sulfonylureas — different potency</td></tr>
+</table>
+</div>
+
+<div class="kr"><strong>🎯 Six Rights + Three Checks:</strong> Right patient, drug, dose, route, time, documentation — check at withdrawal, preparation, and administration.</div>
+
+<!-- ===== SECTION 2: ANTICOAGULANTS ===== -->
+<h2 class="sh" id="sec-acg">🩸 Anticoagulants & Thrombolytics</h2>
+
+<table class="it">
+<tr><th>Drug</th><th>Monitor</th><th>Therapeutic Range</th><th>Antidote</th></tr>
+<tr><td><span class="drug">Heparin</span> (UFH)</td><td>aPTT</td><td>1.5–2.5× control (60–80 sec)</td><td><span class="drug">Protamine sulfate</span></td></tr>
+<tr><td><span class="drug">Enoxaparin</span> (LMWH)</td><td>Anti-Xa (if needed)</td><td>0.5–1.0 IU/mL</td><td>Protamine (partial)</td></tr>
+<tr><td><span class="drug">Warfarin</span></td><td>PT/INR</td><td>INR 2.0–3.0 (valve: 2.5–3.5)</td><td><span class="drug">Vitamin K</span> (phytonadione)</td></tr>
+<tr><td><span class="drug">Dabigatran</span></td><td>Thrombin time</td><td>No routine monitoring</td><td><span class="drug">Idarucizumab</span> (Praxbind)</td></tr>
+<tr><td><span class="drug">Rivaroxaban</span>/<span class="drug">Apixaban</span></td><td>Anti-Xa (if needed)</td><td>No routine monitoring</td><td><span class="drug">Andexanet alfa</span></td></tr>
+</table>
+
+<div class="cg">
+<div class="cc cc-l">
+<h4>🩸 Heparin Safety</h4>
+<ul>
+<li>Never abbreviate "U" for units — write out</li>
+<li>aPTT drawn 6 hrs after dose change</li>
+<li>HIT: platelet count drops >50% → stop ALL heparin</li>
+<li>SQ injection: abdomen, do NOT aspirate, do NOT rub</li>
+<li>Protamine: 1 mg per 100 units heparin</li>
+</ul>
+</div>
+<div class="cc cc-r">
+<h4>💊 Warfarin Safety</h4>
+<ul>
+<li>INR checked frequently until stable, then monthly</li>
+<li>Vitamin K foods: consistent intake, don't eliminate</li>
+<li>Avoid NSAIDs (↑ bleeding risk)</li>
+<li>Takes 3–5 days for full effect (bridge with heparin)</li>
+<li>Teratogenic — Category X in pregnancy</li>
+</ul>
+</div>
+</div>
+
+<div class="ab ab-d">🚨 <strong>Heparin-Induced Thrombocytopenia (HIT):</strong> Platelets drop >50% within 5–10 days of heparin. Paradoxically causes <em>thrombosis</em>, not bleeding. Stop ALL heparin (including flushes). Switch to <span class="drug">argatroban</span> or <span class="drug">bivalirudin</span>.</div>
+
+<div class="cb">
+<h3>Thrombolytics (Fibrinolytics)</h3>
+<ul>
+<li><span class="drug">Alteplase</span> (tPA): MI within 12 hrs, stroke within 3–4.5 hrs, PE</li>
+<li>Risk: hemorrhage — monitor neuro checks, bleeding sites</li>
+<li>Contraindications: active bleeding, recent surgery (14 days), uncontrolled HTN, history hemorrhagic stroke</li>
+<li>No IM injections, arterial punctures, or invasive procedures for 24 hrs</li>
+<li>Aminocaproic acid (<span class="drug">Amicar</span>) reverses if needed</li>
+</ul>
+</div>
+
+<div class="kr"><strong>🩸 Bleeding precautions for ALL anticoagulants:</strong> Soft toothbrush, electric razor, avoid contact sports, report dark stool/hematuria/unusual bruising, wear medical alert bracelet.</div>
+
+<!-- ===== SECTION 3: INSULIN ===== -->
+<h2 class="sh" id="sec-ins">💉 Insulin</h2>
+
+<table class="it">
+<tr><th>Type</th><th>Example</th><th>Onset</th><th>Peak</th><th>Duration</th></tr>
+<tr><td><strong>Rapid</strong></td><td><span class="drug">Lispro</span> (Humalog), <span class="drug">Aspart</span> (NovoLog)</td><td>10–15 min</td><td>1–2 hr</td><td>3–5 hr</td></tr>
+<tr><td><strong>Short</strong></td><td><span class="drug">Regular</span> (Humulin R)</td><td>30 min</td><td>2–4 hr</td><td>6–8 hr</td></tr>
+<tr><td><strong>Intermediate</strong></td><td><span class="drug">NPH</span> (Humulin N)</td><td>1–2 hr</td><td>4–12 hr</td><td>18–24 hr</td></tr>
+<tr><td><strong>Long</strong></td><td><span class="drug">Glargine</span> (Lantus), <span class="drug">Detemir</span> (Levemir)</td><td>1–2 hr</td><td>No peak</td><td>24 hr</td></tr>
+</table>
+
+<div class="ab ab-w">⚡ <strong>Only Regular insulin can be given IV.</strong> All others are SQ only. Regular insulin is also the ONLY insulin that is clear AND can be mixed with NPH.</div>
+
+<div class="cg">
+<div class="cc cc-l">
+<h4>Mixing Rules</h4>
+<ul>
+<li>"Clear before Cloudy" — draw Regular first, then NPH</li>
+<li>NEVER mix <span class="drug">glargine</span> or <span class="drug">detemir</span> with anything</li>
+<li>Gently roll NPH vial — never shake</li>
+<li>Once mixed, administer immediately</li>
+</ul>
+</div>
+<div class="cc cc-r">
+<h4>Storage & Admin</h4>
+<ul>
+<li>Unopened: refrigerate. In-use: room temp 28 days</li>
+<li>Rotate injection sites (abdomen fastest absorption)</li>
+<li>Use insulin syringes only — never TB syringes</li>
+<li>Pen needles: single use, never share pens</li>
+</ul>
+</div>
+</div>
+
+<div class="cb">
+<h3>Hypoglycemia Management — Rule of 15</h3>
+<ul>
+<li><strong>BG &lt; 70:</strong> 15g fast-acting carbs → recheck in 15 min → repeat if still &lt; 70</li>
+<li><strong>Conscious:</strong> 4 oz juice, glucose tablets, hard candy</li>
+<li><strong>Unconscious:</strong> <span class="drug">Glucagon</span> IM/SQ or <span class="drug">Dextrose 50%</span> IV push</li>
+<li><strong>On acarbose/miglitol:</strong> Use pure glucose only (these block sugar digestion)</li>
+<li>Symptoms: tremor, diaphoresis, tachycardia, confusion, irritability</li>
+</ul>
+</div>
+
+<div class="ab ab-i">📋 <strong>DKA vs HHS:</strong> DKA = Type 1, rapid onset, Kussmaul breathing, fruity breath, BG 300–800. HHS = Type 2, gradual onset, severe dehydration, BG >600 (often >1000). Both need IV fluids + <span class="drug">Regular insulin</span> drip. Monitor K⁺ closely — insulin drives K⁺ into cells.</div>
+
+<!-- ===== SECTION 4: OPIOIDS & SEDATION ===== -->
+<h2 class="sh" id="sec-opi">💊 Opioids & Sedation</h2>
+
+<table class="it">
+<tr><th>Opioid</th><th>Route</th><th>Relative Potency</th><th>Key Points</th></tr>
+<tr><td><span class="drug">Morphine</span></td><td>PO/IV/IM</td><td>1× (reference)</td><td>Histamine release → hypotension, itching</td></tr>
+<tr><td><span class="drug">Hydromorphone</span></td><td>PO/IV</td><td>5–7× morphine</td><td>Preferred in renal failure</td></tr>
+<tr><td><span class="drug">Fentanyl</span></td><td>IV/patch/lozenge</td><td>80–100× morphine</td><td>Patch: 12–24 hr onset, fever ↑ absorption</td></tr>
+<tr><td><span class="drug">Oxycodone</span></td><td>PO only</td><td>1.5× morphine</td><td>Often combined with acetaminophen</td></tr>
+<tr><td><span class="drug">Meperidine</span></td><td>PO/IV/IM</td><td>0.1× morphine</td><td>Avoid: normeperidine → seizures</td></tr>
+<tr><td><span class="drug">Methadone</span></td><td>PO</td><td>Variable</td><td>Long QT risk; used for opioid use disorder</td></tr>
+</table>
+
+<div class="ab ab-d">🚨 <strong>Respiratory Depression = Priority #1:</strong> RR &lt; 12 → hold dose & notify provider. RR &lt; 8 or unresponsive → <span class="drug">Naloxone</span> (Narcan) 0.4–2 mg IV, may repeat q2–3 min. Monitor 1–2 hrs post-naloxone (shorter half-life than most opioids).</div>
+
+<div class="cb">
+<h3>PCA Pump Safety</h3>
+<ul>
+<li>Only the <strong>patient</strong> presses the button — NEVER family/visitors ("PCA by proxy" = unsafe)</li>
+<li>Lockout interval prevents overdose (typically 6–10 min)</li>
+<li>Independent double-check at initiation and rate changes</li>
+<li>Monitor: sedation level, RR, O₂ sat, pain score</li>
+<li>Sedation scale (Pasero): S = sleep/easy to arouse → 4 = unarousable → STOP PCA</li>
+</ul>
+</div>
+
+<div class="cb">
+<h3>Non-Opioid Adjuncts</h3>
+<ul>
+<li><span class="drug">Ketorolac</span> (Toradol): NSAID, max 5 days IV/IM, GI bleeding risk</li>
+<li><span class="drug">Gabapentin</span>/<span class="drug">Pregabalin</span>: neuropathic pain, dizziness/drowsiness</li>
+<li><span class="drug">Acetaminophen</span>: max 4g/day (2g if liver disease), no anti-inflammatory effect</li>
+<li><span class="drug">Lidocaine</span> patch: topical for post-herpetic neuralgia</li>
+</ul>
+</div>
+
+<div class="kr"><strong>🚫 Meperidine (Demerol):</strong> Avoid in elderly and renal impairment. Metabolite normeperidine accumulates → seizures, CNS excitation. Not recommended for chronic pain.</div>
+
+<!-- ===== SECTION 5: CARDIAC HIGH-ALERT ===== -->
+<h2 class="sh" id="sec-cvh">❤️ Cardiac High-Alert Drugs</h2>
+
+<div class="cb">
+<h3>Digoxin (Lanoxin)</h3>
+<ul>
+<li>Therapeutic range: <strong>0.5–2.0 ng/mL</strong></li>
+<li>Check apical HR × 60 sec — <strong>hold if &lt; 60 BPM</strong> (adult) or &lt; 100 (infant)</li>
+<li>Hypokalemia ↑ toxicity risk — maintain K⁺ 3.5–5.0</li>
+<li>Toxicity signs: N/V, anorexia, visual changes (halos), bradycardia, dysrhythmias</li>
+<li>Antidote: <span class="drug">Digoxin immune Fab</span> (Digibind)</li>
+<li>Avoid with <span class="drug">amiodarone</span>, <span class="drug">verapamil</span> (↑ dig levels)</li>
+</ul>
+</div>
+
+<div class="cg">
+<div class="cc cc-l">
+<h4>Dopamine (dose-dependent)</h4>
+<ul>
+<li><strong>Low (1–5 mcg/kg/min):</strong> renal vasodilation</li>
+<li><strong>Moderate (5–10):</strong> ↑ cardiac output (β₁)</li>
+<li><strong>High (10–20):</strong> vasoconstriction (α₁)</li>
+<li>Extravasation → tissue necrosis; antidote: <span class="drug">phentolamine</span></li>
+</ul>
+</div>
+<div class="cc cc-r">
+<h4>Dobutamine</h4>
+<ul>
+<li>Positive <strong>inotrope</strong> (↑ contractility)</li>
+<li>Heart failure with low cardiac output</li>
+<li>May ↓ BP (vasodilation)</li>
+<li>NOT for hypovolemic shock (correct volume first)</li>
+</ul>
+</div>
+</div>
+
+<div class="cb">
+<h3>Amiodarone (Cordarone)</h3>
+<ul>
+<li>Class III antiarrhythmic — V-tach, V-fib, A-fib</li>
+<li><strong>Pulmonary toxicity:</strong> monitor CXR, PFTs, cough/dyspnea</li>
+<li><strong>Thyroid dysfunction:</strong> contains iodine — hypo or hyperthyroidism</li>
+<li><strong>Hepatotoxicity:</strong> monitor LFTs</li>
+<li><strong>Photosensitivity:</strong> blue-gray skin discoloration</li>
+<li>Long half-life (40–55 days) — effects persist weeks after stopping</li>
+<li>IV: use filter, give via central line preferred, monitor BP closely</li>
+</ul>
+</div>
+
+<div class="cb">
+<h3>Nitroglycerin & Nitroprusside</h3>
+<ul>
+<li><span class="drug">Nitroglycerin</span>: SL q5min × 3, headache expected, no PDE5 inhibitors (sildenafil)</li>
+<li>IV NTG: glass bottles, non-PVC tubing (drug absorbs into plastic)</li>
+<li><span class="drug">Nitroprusside</span>: powerful vasodilator, <strong>cyanide toxicity</strong> risk with prolonged use</li>
+<li>Protect nitroprusside from light (wrap in foil), monitor thiocyanate levels</li>
+<li>Both cause hypotension — monitor BP q5min during titration</li>
+</ul>
+</div>
+
+<div class="ab ab-w">⚡ <strong>Adenosine:</strong> Given by <strong>rapid IV push</strong> (1–2 sec) followed by immediate NS flush. Causes brief asystole (warn patient). Half-life 6 seconds. Used for SVT only.</div>
+
+<!-- ===== SECTION 6: CHEMOTHERAPY SAFETY ===== -->
+<h2 class="sh" id="sec-chm">🧪 Chemotherapy Safety</h2>
+
+<div class="cb">
+<h3>Safe Handling & Administration</h3>
+<ul>
+<li><strong>PPE:</strong> Double gloves (chemo-rated), gown, eye protection, closed-system transfer devices</li>
+<li>Prepare in biological safety cabinet (BSC)</li>
+<li>Spill kit immediately available, clean with detergent (not alcohol)</li>
+<li>Body fluids hazardous for 48 hrs — double-flush toilet, wear gloves for linen</li>
+<li>Pregnant nurses should NOT handle chemotherapy</li>
+<li>Oral chemo: do not crush, break, or chew — handle with gloves</li>
+</ul>
+</div>
+
+<div class="cg">
+<div class="cc cc-l">
+<h4>Vesicants</h4>
+<ul>
+<li><span class="drug">Doxorubicin</span> (red): cardiotoxicity, max lifetime dose</li>
+<li><span class="drug">Vincristine</span>: neurotoxicity — IV ONLY, never intrathecal</li>
+<li>Extravasation → severe tissue necrosis</li>
+<li>Protocol: <strong>STOP infusion</strong>, aspirate, apply cold (most) or heat (vinca alkaloids)</li>
+<li>Antidote: <span class="drug">dexrazoxane</span> (doxorubicin)</li>
+</ul>
+</div>
+<div class="cc cc-r">
+<h4>Nadir & Neutropenia</h4>
+<ul>
+<li><strong>Nadir:</strong> lowest WBC/platelet count, typically 7–14 days post-chemo</li>
+<li>Neutropenic precautions when ANC &lt; 500</li>
+<li>No fresh flowers, raw fruits/vegetables (neutropenic diet)</li>
+<li>Avoid rectal temps, suppositories, IM injections</li>
+<li><span class="drug">Filgrastim</span> (Neupogen): boosts WBC, bone pain expected</li>
+</ul>
+</div>
+</div>
+
+<div class="ab ab-d">🚨 <strong>Tumor Lysis Syndrome:</strong> Rapid cell death releases contents → ↑K⁺, ↑phosphate, ↑uric acid, ↓Ca²⁺. Prevent with <span class="drug">allopurinol</span>/<span class="drug">rasburicase</span> + aggressive IV hydration. Can cause fatal cardiac arrhythmias from hyperkalemia.</div>
+
+<div class="kr"><strong>🔴 Doxorubicin cardiotoxicity:</strong> Cumulative lifetime dose limit (450–550 mg/m²). Monitor ejection fraction (ECHO/MUGA). Red-orange urine is expected (not blood).</div>
+
+<!-- ===== SECTION 7: ELECTROLYTE IV THERAPY ===== -->
+<h2 class="sh" id="sec-lyt">💧 IV Electrolyte Therapy</h2>
+
+<table class="it">
+<tr><th>Electrolyte</th><th>Max Rate</th><th>Route</th><th>Critical Rule</th></tr>
+<tr><td><strong>Potassium (KCl)</strong></td><td>10 mEq/hr (peripheral)<br>20 mEq/hr (central)</td><td>IV piggyback<br>NEVER push</td><td>Cardiac monitor required; burns at IV site</td></tr>
+<tr><td><strong>Magnesium (MgSO₄)</strong></td><td>1–2 g/hr</td><td>IV piggyback</td><td>Check DTRs, RR ≥12, UO ≥30 mL/hr</td></tr>
+<tr><td><strong>Calcium gluconate</strong></td><td>Slow IV push or piggyback</td><td>Peripheral OK</td><td>Monitor for bradycardia; dig interaction</td></tr>
+<tr><td><strong>Calcium chloride</strong></td><td>Slow IV</td><td>Central line only</td><td>3× more elemental Ca; tissue necrosis if infiltrates</td></tr>
+<tr><td><strong>Phosphorus (Na/K phos)</strong></td><td>Slow infusion over 4–6 hrs</td><td>IV piggyback</td><td>Monitor Ca²⁺ (inverse relationship)</td></tr>
+</table>
+
+<div class="ab ab-d">🚨 <strong>NEVER IV push potassium.</strong> Can cause fatal cardiac arrest. Always dilute and infuse on a pump with cardiac monitoring. Max concentration: 40 mEq/L peripheral, 80 mEq/L central.</div>
+
+<div class="cb">
+<h3>Magnesium Sulfate Safety</h3>
+<ul>
+<li><strong>Before each dose:</strong> check DTRs (absent = toxicity), RR ≥ 12, UO ≥ 30 mL/hr</li>
+<li>Therapeutic level: 4–7 mEq/L (preeclampsia), 1.5–2.5 mEq/L (normal)</li>
+<li><strong>Toxicity progression:</strong> Loss of DTRs → respiratory depression → cardiac arrest</li>
+<li><strong>Antidote:</strong> <span class="drug">Calcium gluconate</span> at bedside</li>
+<li>Used for: preeclampsia/eclampsia, torsades de pointes, severe hypomagnesemia</li>
+</ul>
+</div>
+
+<div class="cb">
+<h3>Hypertonic Saline (3% NaCl)</h3>
+<ul>
+<li>Used for <strong>severe hyponatremia</strong> (Na⁺ &lt; 120 with symptoms)</li>
+<li>Administer via <strong>central line</strong> with infusion pump</li>
+<li>Monitor Na⁺ q2h — raise no faster than <strong>8–12 mEq/24 hrs</strong></li>
+<li>Risk of <strong>osmotic demyelination syndrome</strong> (central pontine myelinolysis) if corrected too fast</li>
+<li>Assess for fluid overload: crackles, JVD, I&O, daily weights</li>
+</ul>
+</div>
+
+<div class="kr"><strong>💉 Blood product safety:</strong> Two-nurse verification at bedside. Use Y-tubing with NS only (no LR/dextrose). Stay with patient first 15 min. If reaction → STOP, NS wide open, send blood bag to lab.</div>
+
+<!-- ===== SECTION 8: MEMORY ANCHORS ===== -->
+<h2 class="sh" id="sec-mem">🧠 Memory Anchors</h2>
+
+<div class="mb">
+<div class="mt">🗝️ Drug–Antidote Pairs</div>
+<table class="it">
+<tr><th>Drug/Toxin</th><th>Antidote</th></tr>
+<tr><td><span class="drug">Heparin</span></td><td><span class="drug">Protamine sulfate</span></td></tr>
+<tr><td><span class="drug">Warfarin</span></td><td><span class="drug">Vitamin K</span> (phytonadione)</td></tr>
+<tr><td><span class="drug">Benzodiazepines</span></td><td><span class="drug">Flumazenil</span></td></tr>
+<tr><td><span class="drug">Opioids</span></td><td><span class="drug">Naloxone</span> (Narcan)</td></tr>
+<tr><td><span class="drug">Digoxin</span></td><td><span class="drug">Digoxin Immune Fab</span></td></tr>
+<tr><td><span class="drug">Acetaminophen</span></td><td><span class="drug">N-acetylcysteine</span> (Mucomyst)</td></tr>
+<tr><td><span class="drug">Magnesium sulfate</span></td><td><span class="drug">Calcium gluconate</span></td></tr>
+<tr><td><span class="drug">Methotrexate</span></td><td><span class="drug">Leucovorin</span></td></tr>
+<tr><td>Organophosphates</td><td><span class="drug">Atropine</span> + <span class="drug">Pralidoxime</span></td></tr>
+<tr><td>Lead</td><td><span class="drug">Succimer</span> (DMSA) or EDTA</td></tr>
+<tr><td>Iron</td><td><span class="drug">Deferoxamine</span></td></tr>
+</table>
+</div>
+
+<div class="mb">
+<div class="mt">📊 Lab Monitoring Quick-Reference</div>
+<table class="it">
+<tr><th>Drug</th><th>Monitor</th><th>Therapeutic / Critical</th></tr>
+<tr><td><span class="drug">Heparin</span></td><td>aPTT</td><td>1.5–2.5× control</td></tr>
+<tr><td><span class="drug">Warfarin</span></td><td>INR</td><td>2.0–3.0 (valve 2.5–3.5)</td></tr>
+<tr><td><span class="drug">Digoxin</span></td><td>Dig level + K⁺</td><td>0.5–2.0 ng/mL</td></tr>
+<tr><td><span class="drug">Lithium</span></td><td>Lithium level + Na⁺</td><td>0.6–1.2 mEq/L</td></tr>
+<tr><td><span class="drug">Vancomycin</span></td><td>Trough level</td><td>15–20 mcg/mL</td></tr>
+<tr><td><span class="drug">Aminoglycosides</span></td><td>Peak &amp; trough + BUN/Cr</td><td>Trough &lt; 2 (gentamicin)</td></tr>
+<tr><td><span class="drug">Phenytoin</span></td><td>Drug level + albumin</td><td>10–20 mcg/mL</td></tr>
+<tr><td><span class="drug">Theophylline</span></td><td>Drug level</td><td>10–20 mcg/mL</td></tr>
+</table>
+</div>
+
+<div class="mb">
+<div class="mt">🧠 High-Yield Mnemonics</div>
+<ul>
+<li><strong>"Warfarin = Wed-INR-sday"</strong> — Warfarin monitored by INR (extrinsic pathway → PT/INR)</li>
+<li><strong>"HIT = Heparin Is Thrombotic"</strong> — HIT causes clotting, not bleeding</li>
+<li><strong>"Clear before Cloudy"</strong> — Draw Regular (clear) before NPH (cloudy)</li>
+<li><strong>"Never push K"</strong> — IV potassium = always diluted, always on a pump</li>
+<li><strong>"Dig and Check"</strong> — Digoxin → check level AND check HR before giving</li>
+<li><strong>"Low and Slow for Mag"</strong> — Check DTRs, RR, UO → calcium gluconate at bedside</li>
+<li><strong>"Red Man from Vanc"</strong> — Infuse slowly (&gt; 60 min) to prevent Red Man Syndrome</li>
+<li><strong>"Amino = Ears + Kidneys"</strong> — Aminoglycosides → ototoxicity + nephrotoxicity</li>
+</ul>
+</div>
+
+<div class="ab ab-s">✅ <strong>NCLEX Priority:</strong> High-alert questions test SAFETY. Think: What could KILL the patient? Anticoagulant bleeding, insulin hypoglycemia, opioid respiratory depression, K⁺ cardiac arrest, chemo extravasation — these are the situations you intervene FIRST.</div>
+
+</div>
+
+<script>
+document.querySelectorAll('.drug').forEach(function(el){
+el.addEventListener('click', function(e){
+e.stopPropagation();
+var name = el.textContent.trim();
+if(window.parent && window.parent !== window){
+window.parent.postMessage({type:'showDrugCard',drug:name},'*');
+}
+});
+});
+</script>
+</body></html>

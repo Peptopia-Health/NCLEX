@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yellow Fever — NCLEX Crib Notes</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --pri-bg-from: #1a1400;
+  --pri-bg-mid: #2d2308;
+  --pri-bg-to: #3d3112;
+  --pri-accent: #d97706;
+  --pri-accent-light: #fbbf24;
+  --pri-text: #e8ecf4;
+  --pri-text-muted: #94a3b8;
+  --pri-gold: #fbbf24;
+  --pri-border: #f59e0b;
+  --pri-card-bg: rgba(255,255,255,0.04);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(160deg, var(--pri-bg-from) 0%, var(--pri-bg-mid) 45%, var(--pri-bg-to) 100%);
+  color: var(--pri-text); min-height: 100vh; padding: 0; line-height: 1.6; font-size: 1.02rem;
+}
+body::before {
+  content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 15%, rgba(217,119,6,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 85% 80%, rgba(245,158,11,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+.guide-container { max-width: 920px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #1a1200 0%, #332400 40%, #4a3510 100%);
+  border-radius: 1.25rem; padding: 2rem 1.75rem 1.75rem; margin-bottom: 2rem;
+  border: 2px solid var(--pri-accent); overflow: hidden;
+}
+.hero::before { content: ''; position: absolute; top: -40%; right: -15%; width: 280px; height: 280px; background: radial-gradient(circle, rgba(251,191,36,0.12), transparent 70%); pointer-events: none; }
+.hero::after { content: '🦟'; position: absolute; top: 1rem; right: 1.25rem; font-size: 2.8rem; opacity: 0.12; pointer-events: none; }
+.hero h1 { font-size: 2rem; font-weight: 800; color: #fff; letter-spacing: -0.01em; margin-bottom: 0.5rem; text-shadow: 0 2px 12px rgba(217,119,6,0.3); }
+.hero .subtitle { font-size: 1.05rem; color: #fde68a; line-height: 1.6; font-weight: 400; }
+.hero .badge-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.85rem; }
+.hero .badge { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.25rem 0.65rem; border-radius: 2rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; backdrop-filter: blur(4px); cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; text-decoration: none; }
+.hero .badge:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+.badge-etio  { background: rgba(217,119,6,0.2); color: #fde68a; border: 1px solid rgba(217,119,6,0.4); }
+.badge-path  { background: rgba(220,38,38,0.2); color: #fca5a5; border: 1px solid rgba(220,38,38,0.4); }
+.badge-dx    { background: rgba(59,130,246,0.2); color: #93c5fd; border: 1px solid rgba(59,130,246,0.4); }
+.badge-tx    { background: rgba(16,185,129,0.2); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.4); }
+.badge-nurs  { background: rgba(168,85,247,0.2); color: #d8b4fe; border: 1px solid rgba(168,85,247,0.4); }
+.badge-vax   { background: rgba(245,158,11,0.2); color: #fcd34d; border: 1px solid rgba(245,158,11,0.4); }
+.badge-glob  { background: rgba(14,165,233,0.2); color: #7dd3fc; border: 1px solid rgba(14,165,233,0.4); }
+.badge-mem   { background: rgba(148,163,184,0.2); color: #cbd5e1; border: 1px solid rgba(148,163,184,0.4); }
+
+.section-hdr { position: relative; margin: 2.5rem 0 0; padding: 0.85rem 1.15rem; border-radius: 0.75rem 0.75rem 0 0; font-family: 'Inter', system-ui, sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.01em; }
+.sh-etio { background: #78350f; color: #fef3c7; }
+.sh-path { background: #7f1d1d; color: #fecaca; }
+.sh-dx   { background: #1e3a5f; color: #bfdbfe; }
+.sh-tx   { background: #064e3b; color: #a7f3d0; }
+.sh-nurs { background: #4a1d96; color: #e9d5ff; }
+.sh-vax  { background: #713f12; color: #fef3c7; }
+.sh-glob { background: #0c4a6e; color: #bae6fd; }
+.sh-mem  { background: #1e293b; color: #e2e8f0; }
+
+.content-block { background: var(--pri-card-bg); border: 1px solid rgba(255,255,255,0.06); border-top: none; border-radius: 0 0 0.75rem 0.75rem; padding: 1.25rem 1.15rem 1.5rem; margin-bottom: 0.5rem; }
+.content-block h3 { font-size: 1.1rem; font-weight: 700; color: var(--pri-accent-light); margin: 1.4rem 0 0.5rem; }
+.content-block h3:first-child { margin-top: 0; }
+.content-block p { margin: 0.4rem 0 0.7rem; color: var(--pri-text); line-height: 1.65; }
+.content-block ul, .content-block ol { margin: 0.4rem 0 0.8rem 1.3rem; color: var(--pri-text); }
+.content-block li { margin-bottom: 0.35rem; line-height: 1.55; }
+.content-block li strong { color: #fff; }
+.drug { color: #93c5fd; font-weight: 700; }
+.lyte { color: #ffa040; font-weight: 700; }
+
+.info-table { width: 100%; border-collapse: collapse; margin: 0.75rem 0 1rem; font-size: 0.95rem; }
+.info-table th { background: rgba(217,119,6,0.15); color: var(--pri-accent-light); padding: 0.55rem 0.7rem; text-align: left; font-weight: 700; border-bottom: 2px solid rgba(217,119,6,0.3); }
+.info-table td { padding: 0.5rem 0.7rem; border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top; }
+.info-table tr:last-child td { border-bottom: none; }
+.info-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+.priority-box { border-radius: 0.6rem; padding: 0.85rem 1rem; margin: 0.75rem 0; border-left: 4px solid; }
+.pbox-red { background: rgba(220,38,38,0.08); border-color: #dc2626; }
+.pbox-amber { background: rgba(245,158,11,0.08); border-color: #f59e0b; }
+.pbox-green { background: rgba(16,185,129,0.08); border-color: #10b981; }
+.pbox-blue { background: rgba(59,130,246,0.08); border-color: #3b82f6; }
+.pbox-purple { background: rgba(139,92,246,0.08); border-color: #8b5cf6; }
+
+.mnemonic-box { background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.2); border-radius: 0.6rem; padding: 0.85rem 1rem; margin: 0.75rem 0; }
+.mnemonic-box .title { font-weight: 700; color: var(--pri-accent-light); font-size: 1rem; margin-bottom: 0.3rem; }
+.mnemonic-box .letters { font-size: 0.95rem; }
+.mnemonic-box .letters span { color: var(--pri-gold); font-weight: 800; }
+.key-rule { background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.25); border-radius: 0.6rem; padding: 0.75rem 1rem; margin: 0.6rem 0; font-weight: 600; color: var(--pri-gold); font-size: 0.95rem; }
+.key-rule .rule-icon { margin-right: 0.4rem; }
+
+.decision-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin: 0.75rem 0; font-weight: 700; font-size: 0.95rem; }
+.flow-step { background: rgba(217,119,6,0.12); border: 1px solid rgba(217,119,6,0.3); color: #fde68a; padding: 0.4rem 0.75rem; border-radius: 0.5rem; }
+.flow-arrow { color: var(--pri-text-muted); font-size: 1.1rem; }
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.55rem; }
+  .guide-container { padding: 1rem 0.65rem 2rem; }
+  .content-block { padding: 1rem 0.85rem 1.2rem; }
+  .info-table { font-size: 0.85rem; }
+  .info-table th, .info-table td { padding: 0.4rem 0.5rem; }
+}
+</style>
+</head>
+<body>
+<div class="guide-container">
+
+<div class="hero">
+  <h1>🦟 Yellow Fever</h1>
+  <div class="subtitle">Flavivirus transmission, Faget sign, clinical phases, toxic phase management, vaccination, global prevention &amp; arboviral disease nursing for NCLEX mastery.</div>
+  <div class="badge-row">
+    <a class="badge badge-etio" href="#sec-etio">🦠 Etiology</a>
+    <a class="badge badge-path" href="#sec-path">🔬 Pathophysiology</a>
+    <a class="badge badge-dx" href="#sec-dx">🧪 Diagnosis</a>
+    <a class="badge badge-tx" href="#sec-tx">💊 Treatment</a>
+    <a class="badge badge-nurs" href="#sec-nurs">🩺 Nursing Care</a>
+    <a class="badge badge-vax" href="#sec-vax">💉 Vaccination</a>
+    <a class="badge badge-glob" href="#sec-glob">🌍 Global Health</a>
+    <a class="badge badge-mem" href="#sec-mem">🧠 Memory</a>
+  </div>
+</div>
+
+<!-- ==================== SECTION 1 ==================== -->
+<div id="sec-etio" class="section-hdr sh-etio">🦠 Section 1 — Etiology &amp; Transmission</div>
+<div class="content-block">
+
+  <h3>Yellow Fever Virus</h3>
+  <ul>
+    <li><strong>Agent:</strong> Yellow fever virus — a single-stranded RNA virus of the family <em>Flaviviridae</em>, genus <em>Flavivirus</em></li>
+    <li><strong>Related viruses:</strong> Dengue, Zika, West Nile, Japanese encephalitis — all flaviviruses transmitted by mosquitoes</li>
+    <li><strong>Reservoir:</strong> Primates (monkeys) in jungle/sylvatic cycle; humans in urban cycle</li>
+    <li><strong>Vector:</strong> <em>Aedes aegypti</em> mosquito (urban cycle) — same mosquito that transmits dengue, Zika, and chikungunya</li>
+    <li><em>Haemagogus</em> and <em>Sabethes</em> mosquitoes in the jungle/sylvatic cycle (South America)</li>
+  </ul>
+
+  <h3>Transmission Cycles</h3>
+  <table class="info-table">
+    <tr><th>Cycle</th><th>Vector</th><th>Hosts</th><th>Setting</th></tr>
+    <tr><td><strong>Sylvatic (Jungle)</strong></td><td><em>Haemagogus</em>, <em>Aedes africanus</em></td><td>Monkeys → humans (incidental)</td><td>Tropical forest. Workers entering jungle (loggers, farmers).</td></tr>
+    <tr><td><strong>Intermediate (Savanna)</strong></td><td><em>Aedes</em> spp.</td><td>Monkeys ↔ humans</td><td>Semi-domestic mosquitoes. Small outbreaks in African villages near forests.</td></tr>
+    <tr><td><strong>Urban</strong></td><td><em>Aedes aegypti</em></td><td>Humans → humans</td><td>Cities and towns. Large epidemics. Most dangerous from public health perspective.</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> Key Fact: Yellow fever is NOT transmitted person-to-person through casual contact, respiratory droplets, or body fluids. The mosquito vector is REQUIRED for transmission.
+  </div>
+
+  <h3>Epidemiology</h3>
+  <ul>
+    <li><strong>Endemic areas:</strong> Tropical regions of Africa (90% of cases) and South America</li>
+    <li><strong>NOT present in Asia</strong> — despite <em>Aedes aegypti</em> abundance (reasons debated)</li>
+    <li>Estimated <span class="lyte">200,000 cases/year</span> worldwide (WHO); <span class="lyte">30,000–60,000 deaths/year</span></li>
+    <li>Incubation period: <span class="lyte">3–6 days</span> after mosquito bite</li>
+    <li>Period of viremia (infectious to mosquitoes): approximately <span class="lyte">3–5 days</span> after symptom onset</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 2 ==================== -->
+<div id="sec-path" class="section-hdr sh-path">🔬 Section 2 — Pathophysiology &amp; Clinical Phases</div>
+<div class="content-block">
+
+  <h3>Pathophysiology</h3>
+  <ul>
+    <li>Virus enters via mosquito bite → replicates in regional lymph nodes → viremia → targets the <strong>liver</strong> (primary target organ), kidneys, heart, and immune system</li>
+    <li><strong>Liver damage:</strong> Councilman bodies (eosinophilic necrosis of hepatocytes) — pathognomonic finding on liver biopsy. Mid-zone necrosis pattern (spares portal areas).</li>
+    <li><strong>Kidney damage:</strong> Acute tubular necrosis → oliguria → renal failure</li>
+    <li><strong>Coagulopathy:</strong> ↓ clotting factor synthesis (liver failure) + DIC → hemorrhage</li>
+    <li><strong>Jaundice:</strong> From hepatocellular damage — gives the disease its name ("yellow")</li>
+  </ul>
+
+  <h3>Clinical Phases</h3>
+  <table class="info-table">
+    <tr><th>Phase</th><th>Timing</th><th>Symptoms</th><th>Key Features</th></tr>
+    <tr><td><strong>1. Infection (Acute/Viremic)</strong></td><td>Days <span class="lyte">1–3</span></td><td>Sudden fever (<span class="lyte">39–40°C</span>), headache, myalgia, nausea, photophobia, facial flushing</td><td>Viremia is present. Patient is infectious to mosquitoes. Resembles many other febrile illnesses.</td></tr>
+    <tr><td><strong>2. Remission</strong></td><td>Days <span class="lyte">3–4</span></td><td>Fever breaks, symptoms improve</td><td>Lasts <span class="lyte">24–48 hours</span>. ~85% of patients recover here. <strong>Does NOT mean the patient is cured — 15% progress to toxic phase.</strong></td></tr>
+    <tr><td><strong>3. Toxic Phase (Intoxication)</strong></td><td>Days <span class="lyte">4–7+</span></td><td>High fever returns, jaundice, hemorrhage, hematemesis ("black vomit"), oliguria, delirium, seizures</td><td>Multi-organ failure. <strong>Faget sign</strong> (fever with relative bradycardia). Case fatality rate: <span class="lyte">20–50%</span> in toxic phase.</td></tr>
+  </table>
+
+  <div class="priority-box pbox-red">
+    <strong>🔴 Faget Sign — Pathognomonic Clinical Finding:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li><strong>Definition:</strong> Fever with paradoxical bradycardia (pulse-temperature dissociation)</li>
+      <li><strong>Normal response:</strong> HR increases ~10 bpm for each 1°F of fever</li>
+      <li><strong>Faget sign:</strong> Temperature <span class="lyte">&gt; 102°F (39°C)</span> but HR remains <span class="lyte">&lt; 100 bpm</span> or even decreases</li>
+      <li><strong>Cause:</strong> Direct viral myocarditis affecting the SA node</li>
+      <li><strong>Also seen in:</strong> Typhoid fever, Legionnaires' disease, drug fever, beta-blocker use — but classically associated with yellow fever</li>
+    </ul>
+  </div>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: The remission phase is DECEPTIVE. A patient who initially improves may deteriorate rapidly into the toxic phase. Close monitoring must continue through the remission period.
+  </div>
+
+  <h3>"Black Vomit" — Hematemesis</h3>
+  <p>Coffee-ground or black vomitus (hematemesis) during the toxic phase is a <strong>classic and ominous sign</strong> of yellow fever. It results from GI hemorrhage secondary to coagulopathy and liver failure. The term "vómito negro" (black vomit) was historically used to describe yellow fever outbreaks.</p>
+</div>
+
+<!-- ==================== SECTION 3 ==================== -->
+<div id="sec-dx" class="section-hdr sh-dx">🧪 Section 3 — Diagnosis &amp; Laboratory Findings</div>
+<div class="content-block">
+
+  <h3>Diagnostic Tests</h3>
+  <table class="info-table">
+    <tr><th>Test</th><th>Method</th><th>Timing</th><th>Notes</th></tr>
+    <tr><td><strong>RT-PCR</strong></td><td>Detects viral RNA in blood</td><td>First <span class="lyte">3–5 days</span> (viremic phase)</td><td>Most specific early test. Confirms active infection.</td></tr>
+    <tr><td><strong>IgM ELISA</strong></td><td>Detects IgM antibodies</td><td>After day <span class="lyte">5–7</span></td><td>May cross-react with other flaviviruses (dengue, Zika). Requires confirmation.</td></tr>
+    <tr><td><strong>PRNT (Plaque Reduction Neutralization Test)</strong></td><td>Most specific serological test</td><td>Convalescent phase</td><td>Differentiates yellow fever from other flavivirus infections. Gold standard for confirmation.</td></tr>
+    <tr><td><strong>Liver biopsy</strong></td><td>Histopathology</td><td>Post-mortem or diagnostic</td><td>Councilman bodies (pathognomonic). <strong>Contraindicated during acute illness</strong> due to hemorrhage risk.</td></tr>
+  </table>
+
+  <h3>Laboratory Findings During Toxic Phase</h3>
+  <table class="info-table">
+    <tr><th>Lab</th><th>Expected Finding</th><th>Significance</th></tr>
+    <tr><td><span class="lyte">AST/ALT</span></td><td>Markedly elevated (AST &gt; ALT)</td><td>Hepatocellular damage. AST elevates more due to myocardial &amp; skeletal muscle involvement.</td></tr>
+    <tr><td><span class="lyte">Bilirubin</span></td><td>Elevated (total &amp; direct)</td><td>Jaundice. Reflects degree of hepatic damage.</td></tr>
+    <tr><td><span class="lyte">PT/INR</span></td><td>Prolonged</td><td>↓ clotting factor synthesis by damaged liver.</td></tr>
+    <tr><td><span class="lyte">Platelet count</span></td><td>Decreased (thrombocytopenia)</td><td>Consumption in DIC + ↓ production.</td></tr>
+    <tr><td><span class="lyte">BUN/Creatinine</span></td><td>Elevated</td><td>Acute renal failure (acute tubular necrosis).</td></tr>
+    <tr><td><span class="lyte">Albumin</span></td><td>Decreased</td><td>↓ hepatic synthesis + third-spacing.</td></tr>
+    <tr><td><span class="lyte">WBC</span></td><td>Leukopenia (initially), then leukocytosis</td><td>Early leukopenia is characteristic. Leukocytosis may indicate secondary infection.</td></tr>
+    <tr><td><span class="lyte">Urinalysis</span></td><td>Proteinuria, hematuria</td><td>Renal involvement. Proteinuria may precede overt renal failure.</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> Key Distinction: In yellow fever, AST rises MORE than ALT (AST &gt; ALT pattern) — unlike typical hepatitis where ALT &gt; AST. This is because yellow fever also damages cardiac and skeletal muscle.
+  </div>
+</div>
+
+<!-- ==================== SECTION 4 ==================== -->
+<div id="sec-tx" class="section-hdr sh-tx">💊 Section 4 — Treatment &amp; Management</div>
+<div class="content-block">
+
+  <h3>Treatment — Supportive Care Only</h3>
+  <p><strong>There is NO specific antiviral treatment for yellow fever.</strong> Management is entirely supportive, focused on symptom management and preventing complications.</p>
+
+  <table class="info-table">
+    <tr><th>Complication</th><th>Management</th></tr>
+    <tr><td><strong>Dehydration &amp; fever</strong></td><td>IV fluid resuscitation. <span class="drug">Acetaminophen</span> for fever/pain. <strong>AVOID <span class="drug">aspirin</span> and <span class="drug">NSAIDs</span></strong> (↑ bleeding risk).</td></tr>
+    <tr><td><strong>Hemorrhage</strong></td><td>Blood products: FFP for coagulopathy, platelets if thrombocytopenic, PRBCs for significant blood loss. Vitamin K if indicated.</td></tr>
+    <tr><td><strong>Hepatic failure</strong></td><td>Monitor <span class="lyte">LFTs</span>, <span class="lyte">INR</span>, <span class="lyte">ammonia</span>. Low-protein diet if encephalopathy. <span class="drug">Lactulose</span> for hepatic encephalopathy. Avoid hepatotoxic drugs.</td></tr>
+    <tr><td><strong>Renal failure</strong></td><td>Aggressive IV hydration. Monitor <span class="lyte">I&amp;O</span>, <span class="lyte">BUN/Cr</span>, electrolytes. Dialysis if indicated.</td></tr>
+    <tr><td><strong>DIC</strong></td><td>Treat underlying cause. Blood products as needed. Monitor coagulation studies.</td></tr>
+    <tr><td><strong>Secondary infection</strong></td><td>Broad-spectrum antibiotics for bacterial superinfection. Culture-guided therapy.</td></tr>
+    <tr><td><strong>Seizures / Encephalopathy</strong></td><td>Benzodiazepines for acute seizures. Monitor neurological status. Correct metabolic derangements.</td></tr>
+  </table>
+
+  <div class="priority-box pbox-red">
+    <strong>🔴 NEVER Give These to Yellow Fever Patients:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li><span class="drug">Aspirin</span> — ↑ bleeding (antiplatelet effect + Reye syndrome risk)</li>
+      <li><span class="drug">NSAIDs</span> (ibuprofen, naproxen) — ↑ GI bleeding risk, ↓ platelet function</li>
+      <li><strong>IM injections</strong> — ↑ hematoma risk in coagulopathic patients</li>
+      <li><strong>Hepatotoxic drugs</strong> — <span class="drug">acetaminophen</span> caution (limit dose if hepatic impairment; use cautiously)</li>
+    </ul>
+  </div>
+
+  <h3>ICU-Level Monitoring</h3>
+  <ul>
+    <li>Continuous cardiac monitoring (Faget sign, dysrhythmias)</li>
+    <li>Strict <span class="lyte">I&amp;O</span> with hourly urine output monitoring (target &gt; <span class="lyte">0.5 mL/kg/hr</span>)</li>
+    <li>Serial labs: <span class="lyte">CBC</span>, <span class="lyte">CMP</span>, <span class="lyte">LFTs</span>, <span class="lyte">coagulation panel</span>, <span class="lyte">lactate</span></li>
+    <li>Neurological assessment: Glasgow Coma Scale, pupil response, orientation</li>
+    <li>Hemorrhage monitoring: stool guaiac, NG aspirate, skin assessment for petechiae/ecchymosis</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 5 ==================== -->
+<div id="sec-nurs" class="section-hdr sh-nurs">🩺 Section 5 — Nursing Care &amp; Infection Prevention</div>
+<div class="content-block">
+
+  <h3>Nursing Priorities</h3>
+  <table class="info-table">
+    <tr><th>Priority</th><th>Interventions</th></tr>
+    <tr><td><strong>1. Fluid balance</strong></td><td>IV access (large bore). Fluid resuscitation per provider order. Strict I&amp;O. Daily weights. Monitor for fluid overload vs. dehydration.</td></tr>
+    <tr><td><strong>2. Hemorrhage surveillance</strong></td><td>Assess for bleeding: gums, nose, injection sites, GI tract (hematemesis, melena, hematochezia). Avoid unnecessary venipunctures. Apply pressure to all puncture sites × <span class="lyte">5+ minutes</span>.</td></tr>
+    <tr><td><strong>3. Neuro monitoring</strong></td><td>Level of consciousness, orientation, seizure precautions, GCS assessment. Report acute changes immediately.</td></tr>
+    <tr><td><strong>4. Mosquito protection</strong></td><td>Bed net over patient during viremic period (<span class="lyte">first 5 days</span> of illness). Eliminate standing water. Screen windows. DEET-based repellent on exposed skin.</td></tr>
+    <tr><td><strong>5. Liver-protective care</strong></td><td>Low-protein diet if hepatic encephalopathy risk. Avoid hepatotoxic drugs. Monitor ammonia levels. Assess for asterixis (liver flap).</td></tr>
+    <tr><td><strong>6. Renal support</strong></td><td>Monitor urine output hourly. Report output &lt; <span class="lyte">30 mL/hr</span>. Adjust IV fluids. Prepare for possible dialysis. Monitor <span class="lyte">K⁺</span> (hyperkalemia risk in renal failure).</td></tr>
+  </table>
+
+  <div class="priority-box pbox-amber">
+    <strong>🟡 Infection Control for Yellow Fever:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li><strong>Standard precautions</strong> for blood/body fluid contact</li>
+      <li>NOT airborne, droplet, or direct contact transmission — mosquito vector required</li>
+      <li>Blood precautions: careful handling of blood samples (virus present in blood during viremia)</li>
+      <li><strong>Mosquito prevention is the key infection control measure:</strong> bed nets, screens, DEET repellent, eliminate breeding sites</li>
+      <li>No isolation room required (unlike TB or measles) — but protect from mosquitoes during viremic phase to prevent urban transmission</li>
+    </ul>
+  </div>
+
+  <h3>Patient &amp; Family Teaching</h3>
+  <ul>
+    <li>Explain the disease course and the deceptive remission phase</li>
+    <li>Importance of mosquito avoidance even after feeling better (prevent transmission)</li>
+    <li>Signs of worsening: jaundice, dark urine, bleeding from any site, decreased urine output, confusion</li>
+    <li>After recovery: lifelong immunity develops (reinfection does not occur)</li>
+    <li>Emotional support: toxic phase is frightening — provide honest, compassionate communication</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 6 ==================== -->
+<div id="sec-vax" class="section-hdr sh-vax">💉 Section 6 — Vaccination</div>
+<div class="content-block">
+
+  <h3>Yellow Fever Vaccine (17D)</h3>
+  <table class="info-table">
+    <tr><th>Feature</th><th>Details</th></tr>
+    <tr><td><strong>Type</strong></td><td>Live attenuated virus vaccine (strain 17D)</td></tr>
+    <tr><td><strong>Dose</strong></td><td>Single SubQ injection</td></tr>
+    <tr><td><strong>Onset of protection</strong></td><td><span class="lyte">10 days</span> after vaccination (antibodies develop)</td></tr>
+    <tr><td><strong>Duration</strong></td><td>Lifelong immunity (WHO position since 2013 — single dose is sufficient)</td></tr>
+    <tr><td><strong>Administration</strong></td><td>Only at authorized Yellow Fever Vaccination Centers (stamped on International Certificate of Vaccination)</td></tr>
+    <tr><td><strong>International Certificate</strong></td><td>Valid <span class="lyte">10 days</span> after vaccination. Required for entry to many countries in endemic zones.</td></tr>
+    <tr><td><strong>Efficacy</strong></td><td>&gt; <span class="lyte">99%</span> effective. One of the most successful vaccines ever developed.</td></tr>
+  </table>
+
+  <h3>Contraindications</h3>
+  <div class="priority-box pbox-red">
+    <strong>🔴 Do NOT Vaccinate (Live Vaccine Contraindications):</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li><strong>Infants &lt; <span class="lyte">6 months</span></strong> — absolute contraindication (risk of encephalitis)</li>
+      <li><strong>Infants 6–8 months</strong> — avoid unless high-risk exposure</li>
+      <li><strong>Immunocompromised:</strong> HIV with CD4 &lt; <span class="lyte">200</span>, active cancer therapy, high-dose corticosteroids, organ transplant recipients</li>
+      <li><strong>Thymus disorders:</strong> History of thymectomy or thymoma</li>
+      <li><strong>Severe egg allergy:</strong> Vaccine is grown in chicken embryo cells (skin testing available)</li>
+      <li><strong>Pregnancy</strong> — theoretical risk to fetus (defer if possible; risk-benefit discussion if travel unavoidable)</li>
+      <li><strong>Age &gt; 60 years</strong> — ↑ risk of vaccine-associated viscerotropic disease (first-time vaccination; benefits vs. risks assessment)</li>
+    </ul>
+  </div>
+
+  <h3>Vaccine Adverse Events</h3>
+  <table class="info-table">
+    <tr><th>Reaction</th><th>Incidence</th><th>Description</th></tr>
+    <tr><td><strong>Mild</strong></td><td>~25%</td><td>Low-grade fever, headache, myalgia, injection site soreness — days <span class="lyte">5–10</span> post-vaccine. Self-limited.</td></tr>
+    <tr><td><strong>YEL-AND (Neurotropic disease)</strong></td><td>~1 in <span class="lyte">125,000</span></td><td>Encephalitis, Guillain-Barré, ADEM. Higher risk in infants &lt; 6 months and elderly &gt; 60.</td></tr>
+    <tr><td><strong>YEL-AVD (Viscerotropic disease)</strong></td><td>~1 in <span class="lyte">250,000</span></td><td>Multi-organ failure resembling wild-type yellow fever. Mortality ~60%. Higher risk in elderly, thymus disease.</td></tr>
+    <tr><td><strong>Anaphylaxis</strong></td><td>~1 in <span class="lyte">131,000</span></td><td>Immediate hypersensitivity (egg protein, gelatin). Treat with <span class="drug">epinephrine</span>.</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: Yellow fever vaccine is a LIVE vaccine. Never give to immunocompromised patients. Administer at least <span class="lyte">4 weeks</span> before travel (10 days for immunity + safety margin). Lifelong immunity from one dose.
+  </div>
+</div>
+
+<!-- ==================== SECTION 7 ==================== -->
+<div id="sec-glob" class="section-hdr sh-glob">🌍 Section 7 — Global Health &amp; Prevention</div>
+<div class="content-block">
+
+  <h3>WHO Eliminate Yellow Fever Epidemics (EYE) Strategy</h3>
+  <ul>
+    <li><strong>Goal:</strong> Eliminate yellow fever epidemics by 2026</li>
+    <li><strong>Three pillars:</strong>
+      <ol>
+        <li>Protect at-risk populations (mass vaccination campaigns)</li>
+        <li>Prevent international spread (vaccination requirements for travelers, stockpile management)</li>
+        <li>Contain outbreaks rapidly (surveillance, rapid response, reactive vaccination)</li>
+      </ol>
+    </li>
+    <li>Global vaccine stockpile of <span class="lyte">6 million doses</span> maintained for emergency response</li>
+  </ul>
+
+  <h3>Vector Control — Community-Level Prevention</h3>
+  <table class="info-table">
+    <tr><th>Strategy</th><th>Implementation</th></tr>
+    <tr><td><strong>Eliminate breeding sites</strong></td><td>Remove standing water (tires, flower pots, containers, gutters). Cover water storage. Weekly inspection.</td></tr>
+    <tr><td><strong>Personal protection</strong></td><td>DEET-based repellents. Long sleeves/pants during peak mosquito activity (dawn/dusk). Permethrin-treated clothing.</td></tr>
+    <tr><td><strong>Physical barriers</strong></td><td>Window/door screens. Bed nets (insecticide-treated). Air conditioning (reduces mosquito exposure).</td></tr>
+    <tr><td><strong>Insecticide application</strong></td><td>Indoor residual spraying. Ultra-low volume (ULV) fogging during outbreaks. Larvicides in water containers.</td></tr>
+    <tr><td><strong>Surveillance</strong></td><td>Sentinel surveillance sites. Rapid case reporting. Epi-linked outbreak investigation within <span class="lyte">48 hours</span>.</td></tr>
+  </table>
+
+  <h3>Comparison with Other Arboviral Diseases</h3>
+  <table class="info-table">
+    <tr><th>Disease</th><th>Virus</th><th>Vector</th><th>Distinguishing Features</th></tr>
+    <tr><td><strong>Yellow Fever</strong></td><td>Flavivirus</td><td><em>Aedes aegypti</em></td><td>Jaundice, hemorrhage, Faget sign, black vomit. Vaccine available.</td></tr>
+    <tr><td><strong>Dengue</strong></td><td>Flavivirus</td><td><em>Aedes aegypti</em></td><td>"Breakbone fever." Severe myalgia. Hemorrhagic form with plasma leakage. No jaundice typically.</td></tr>
+    <tr><td><strong>Zika</strong></td><td>Flavivirus</td><td><em>Aedes aegypti</em></td><td>Often mild. Congenital Zika syndrome (microcephaly). Also sexually transmitted. Conjunctivitis characteristic.</td></tr>
+    <tr><td><strong>Chikungunya</strong></td><td>Alphavirus</td><td><em>Aedes aegypti</em></td><td>Severe, debilitating polyarthralgia. "Stooped posture." Joint pain can persist months.</td></tr>
+    <tr><td><strong>Malaria</strong></td><td>Plasmodium (parasite)</td><td><em>Anopheles</em></td><td>Cyclical fevers (48–72 hr). NOT a virus. Thick/thin smear diagnosis. Antimalarial treatment available.</td></tr>
+    <tr><td><strong>West Nile</strong></td><td>Flavivirus</td><td><em>Culex</em></td><td>Most asymptomatic. Neuroinvasive in &lt; 1%. Encephalitis/meningitis in severe cases.</td></tr>
+  </table>
+
+  <h3>Travel Health Nursing</h3>
+  <ul>
+    <li>Assess travel itinerary for yellow fever risk zones</li>
+    <li>Ensure vaccination ≥ <span class="lyte">10 days</span> before departure</li>
+    <li>Issue International Certificate of Vaccination or Prophylaxis (ICVP)</li>
+    <li>Provide mosquito avoidance education</li>
+    <li>Advise to seek care if febrile illness develops within <span class="lyte">2 weeks</span> of returning from endemic area</li>
+    <li>Report suspected cases to public health authorities</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 8 ==================== -->
+<div id="sec-mem" class="section-hdr sh-mem">🧠 Section 8 — Memory Anchors &amp; Key Rules</div>
+<div class="content-block">
+
+  <h3>Key Mnemonics</h3>
+
+  <div class="mnemonic-box">
+    <div class="title">🦟 Yellow Fever 3 Phases</div>
+    <div class="letters">
+      <span>I</span>nfection (acute fever) → <span>R</span>emission (false recovery) → <span>T</span>oxic (organ failure, hemorrhage, death)
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">💛 YELLOW — Key Features</div>
+    <div class="letters">
+      <span>Y</span>ellow skin (jaundice) · <span>E</span>mesis (black vomit) · <span>L</span>iver failure · <span>L</span>ow pulse + fever (Faget sign) · <span>O</span>liguria (renal failure) · <span>W</span>orldwide prevention (vaccine)
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🔴 Faget Sign = Fever + Bradycardia</div>
+    <div class="letters">
+      Temperature UP ↑ but heart rate stays DOWN ↓ or doesn't rise as expected. Think: <span>F</span>aget = <span>F</span>ever without Fast heart rate
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🚫 Vaccine Contraindications — "IET"</div>
+    <div class="letters">
+      <span>I</span>mmunocompromised · <span>E</span>gg allergy (severe) · <span>T</span>hymus disorders — Plus: infants &lt; 6 mo, pregnancy
+    </div>
+  </div>
+
+  <h3>NCLEX Yellow Fever Quick-Reference Rules</h3>
+  <table class="info-table">
+    <tr><th>Rule</th><th>Application</th></tr>
+    <tr><td><strong>Faget sign = yellow fever hallmark</strong></td><td>Fever with paradoxical bradycardia. Classic pulse-temperature dissociation.</td></tr>
+    <tr><td><strong>Remission phase is deceptive</strong></td><td>Patient appears to improve, then may crash into toxic phase. Continue monitoring.</td></tr>
+    <tr><td><strong>No antiviral treatment exists</strong></td><td>Management is 100% supportive. Focus on fluids, bleeding control, organ support.</td></tr>
+    <tr><td><strong>NEVER give aspirin or NSAIDs</strong></td><td>↑ bleeding risk in coagulopathic patients. Use acetaminophen cautiously for fever.</td></tr>
+    <tr><td><strong>Mosquito protection = infection control</strong></td><td>Bed net during viremic period. Eliminate standing water. DEET repellent. Screen windows.</td></tr>
+    <tr><td><strong>Vaccine = live attenuated</strong></td><td>Single dose, lifelong immunity. Give ≥ 10 days before travel. No immunocompromised patients.</td></tr>
+    <tr><td><strong>AST &gt; ALT pattern</strong></td><td>Unlike typical hepatitis. Reflects multi-organ damage (liver + muscle + heart).</td></tr>
+    <tr><td><strong>Not person-to-person</strong></td><td>Requires mosquito vector. Standard precautions + mosquito prevention. No respiratory isolation.</td></tr>
+    <tr><td><strong>Councilman bodies</strong></td><td>Pathognomonic liver finding on biopsy. Eosinophilic hepatocyte necrosis.</td></tr>
+    <tr><td><strong>Endemic: Africa &amp; South America</strong></td><td>NOT Asia despite Aedes aegypti presence. 90% of cases in Africa.</td></tr>
+  </table>
+
+  <h3>Common NCLEX Yellow Fever Traps</h3>
+  <ul>
+    <li><strong>Trap:</strong> "Place the patient in airborne isolation" — Yellow fever is NOT airborne. Mosquito-borne. Standard precautions + mosquito protection.</li>
+    <li><strong>Trap:</strong> "Administer ibuprofen for fever" — NEVER. Use acetaminophen only. NSAIDs ↑ bleeding.</li>
+    <li><strong>Trap:</strong> "The patient is improving (remission phase), discharge planning" — No! 15% of patients progress to lethal toxic phase. Continue close monitoring.</li>
+    <li><strong>Trap:</strong> "Administer the yellow fever vaccine to the HIV+ patient with CD4 of 150" — Contraindicated. Live vaccine + immunocompromised = dangerous.</li>
+    <li><strong>Trap:</strong> "Start antiviral therapy" — No specific antiviral exists for yellow fever. Treatment is supportive only.</li>
+  </ul>
+</div>
+
+</div>
+<script>
+document.querySelectorAll('.drug').forEach(function(el){
+  el.style.cursor='pointer';
+  el.title='Click to view drug card';
+  el.addEventListener('click',function(){
+    var name=this.textContent.trim();
+    if(window.parent&&window.parent!==window){
+      window.parent.postMessage({type:'showDrugCard',drug:name},'*');
+    }
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerontology — NCLEX Crib Notes</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --pri-bg-from: #0f0d18;
+  --pri-bg-mid: #1a1528;
+  --pri-bg-to: #2a2242;
+  --pri-accent: #8b5cf6;
+  --pri-accent-light: #c084fc;
+  --pri-text: #e8ecf4;
+  --pri-text-muted: #94a3b8;
+  --pri-gold: #fbbf24;
+  --pri-border: #7c3aed;
+  --pri-card-bg: rgba(255,255,255,0.04);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(160deg, var(--pri-bg-from) 0%, var(--pri-bg-mid) 45%, var(--pri-bg-to) 100%);
+  color: var(--pri-text); min-height: 100vh; padding: 0; line-height: 1.6; font-size: 1.02rem;
+}
+body::before {
+  content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 15%, rgba(139,92,246,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 85% 80%, rgba(124,58,237,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+.guide-container { max-width: 920px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #0d0a18 0%, #1e1535 40%, #352860 100%);
+  border-radius: 1.25rem; padding: 2rem 1.75rem 1.75rem; margin-bottom: 2rem;
+  border: 2px solid var(--pri-accent); overflow: hidden;
+}
+.hero::before { content: ''; position: absolute; top: -40%; right: -15%; width: 280px; height: 280px; background: radial-gradient(circle, rgba(192,132,252,0.12), transparent 70%); pointer-events: none; }
+.hero::after { content: '🧓'; position: absolute; top: 1rem; right: 1.25rem; font-size: 2.8rem; opacity: 0.12; pointer-events: none; }
+.hero h1 { font-size: 2rem; font-weight: 800; color: #fff; letter-spacing: -0.01em; margin-bottom: 0.5rem; text-shadow: 0 2px 12px rgba(139,92,246,0.3); }
+.hero .subtitle { font-size: 1.05rem; color: #d8b4fe; line-height: 1.6; font-weight: 400; }
+.hero .badge-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.85rem; }
+.hero .badge { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.25rem 0.65rem; border-radius: 2rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; backdrop-filter: blur(4px); cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; text-decoration: none; }
+.hero .badge:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+.badge-age   { background: rgba(139,92,246,0.2); color: #d8b4fe; border: 1px solid rgba(139,92,246,0.4); }
+.badge-cog   { background: rgba(59,130,246,0.2); color: #93c5fd; border: 1px solid rgba(59,130,246,0.4); }
+.badge-fall  { background: rgba(220,38,38,0.2); color: #fca5a5; border: 1px solid rgba(220,38,38,0.4); }
+.badge-poly  { background: rgba(245,158,11,0.2); color: #fcd34d; border: 1px solid rgba(245,158,11,0.4); }
+.badge-func  { background: rgba(16,185,129,0.2); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.4); }
+.badge-pain  { background: rgba(225,29,72,0.2); color: #fda4af; border: 1px solid rgba(225,29,72,0.4); }
+.badge-eol   { background: rgba(168,85,247,0.2); color: #d8b4fe; border: 1px solid rgba(168,85,247,0.4); }
+.badge-mem   { background: rgba(148,163,184,0.2); color: #cbd5e1; border: 1px solid rgba(148,163,184,0.4); }
+
+.section-hdr { position: relative; margin: 2.5rem 0 0; padding: 0.85rem 1.15rem; border-radius: 0.75rem 0.75rem 0 0; font-family: 'Inter', system-ui, sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.01em; }
+.sh-age  { background: #2e1065; color: #e9d5ff; }
+.sh-cog  { background: #1e3a5f; color: #bfdbfe; }
+.sh-fall { background: #7f1d1d; color: #fecaca; }
+.sh-poly { background: #78350f; color: #fef3c7; }
+.sh-func { background: #064e3b; color: #a7f3d0; }
+.sh-pain { background: #881337; color: #fecdd3; }
+.sh-eol  { background: #4a1d96; color: #e9d5ff; }
+.sh-mem  { background: #1e293b; color: #e2e8f0; }
+
+.content-block { background: var(--pri-card-bg); border: 1px solid rgba(255,255,255,0.06); border-top: none; border-radius: 0 0 0.75rem 0.75rem; padding: 1.25rem 1.15rem 1.5rem; margin-bottom: 0.5rem; }
+.content-block h3 { font-size: 1.1rem; font-weight: 700; color: var(--pri-accent-light); margin: 1.4rem 0 0.5rem; }
+.content-block h3:first-child { margin-top: 0; }
+.content-block p { margin: 0.4rem 0 0.7rem; color: var(--pri-text); line-height: 1.65; }
+.content-block ul, .content-block ol { margin: 0.4rem 0 0.8rem 1.3rem; color: var(--pri-text); }
+.content-block li { margin-bottom: 0.35rem; line-height: 1.55; }
+.content-block li strong { color: #fff; }
+.drug { color: #93c5fd; font-weight: 700; }
+.lyte { color: #ffa040; font-weight: 700; }
+
+.info-table { width: 100%; border-collapse: collapse; margin: 0.75rem 0 1rem; font-size: 0.95rem; }
+.info-table th { background: rgba(139,92,246,0.15); color: var(--pri-accent-light); padding: 0.55rem 0.7rem; text-align: left; font-weight: 700; border-bottom: 2px solid rgba(139,92,246,0.3); }
+.info-table td { padding: 0.5rem 0.7rem; border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top; }
+.info-table tr:last-child td { border-bottom: none; }
+.info-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+.priority-box { border-radius: 0.6rem; padding: 0.85rem 1rem; margin: 0.75rem 0; border-left: 4px solid; }
+.pbox-red { background: rgba(220,38,38,0.08); border-color: #dc2626; }
+.pbox-amber { background: rgba(245,158,11,0.08); border-color: #f59e0b; }
+.pbox-green { background: rgba(16,185,129,0.08); border-color: #10b981; }
+.pbox-blue { background: rgba(59,130,246,0.08); border-color: #3b82f6; }
+.pbox-purple { background: rgba(139,92,246,0.08); border-color: #8b5cf6; }
+
+.mnemonic-box { background: rgba(139,92,246,0.06); border: 1px solid rgba(139,92,246,0.2); border-radius: 0.6rem; padding: 0.85rem 1rem; margin: 0.75rem 0; }
+.mnemonic-box .title { font-weight: 700; color: var(--pri-accent-light); font-size: 1rem; margin-bottom: 0.3rem; }
+.mnemonic-box .letters { font-size: 0.95rem; }
+.mnemonic-box .letters span { color: var(--pri-gold); font-weight: 800; }
+.key-rule { background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.25); border-radius: 0.6rem; padding: 0.75rem 1rem; margin: 0.6rem 0; font-weight: 600; color: var(--pri-gold); font-size: 0.95rem; }
+.key-rule .rule-icon { margin-right: 0.4rem; }
+
+.decision-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin: 0.75rem 0; font-weight: 700; font-size: 0.95rem; }
+.flow-step { background: rgba(139,92,246,0.12); border: 1px solid rgba(139,92,246,0.3); color: #d8b4fe; padding: 0.4rem 0.75rem; border-radius: 0.5rem; }
+.flow-arrow { color: var(--pri-text-muted); font-size: 1.1rem; }
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.55rem; }
+  .guide-container { padding: 1rem 0.65rem 2rem; }
+  .content-block { padding: 1rem 0.85rem 1.2rem; }
+  .info-table { font-size: 0.85rem; }
+  .info-table th, .info-table td { padding: 0.4rem 0.5rem; }
+}
+</style>
+</head>
+<body>
+<div class="guide-container">
+
+<div class="hero">
+  <h1>🧓 Gerontology</h1>
+  <div class="subtitle">Age-related physiological changes, cognitive decline, fall prevention, polypharmacy, functional assessment, pain management &amp; end-of-life care in the older adult.</div>
+  <div class="badge-row">
+    <a class="badge badge-age" href="#sec-age">🧬 Aging Changes</a>
+    <a class="badge badge-cog" href="#sec-cog">🧠 Cognition</a>
+    <a class="badge badge-fall" href="#sec-fall">⚠️ Falls</a>
+    <a class="badge badge-poly" href="#sec-poly">💊 Polypharmacy</a>
+    <a class="badge badge-func" href="#sec-func">📊 Function</a>
+    <a class="badge badge-pain" href="#sec-pain">🩺 Pain/Skin</a>
+    <a class="badge badge-eol" href="#sec-eol">🕊️ End of Life</a>
+    <a class="badge badge-mem" href="#sec-mem">🧠 Memory</a>
+  </div>
+</div>
+
+<!-- ==================== SECTION 1 ==================== -->
+<div id="sec-age" class="section-hdr sh-age">🧬 Section 1 — Normal Aging Changes</div>
+<div class="content-block">
+
+  <h3>System-by-System Age-Related Changes</h3>
+  <table class="info-table">
+    <tr><th>System</th><th>Normal Aging Change</th><th>Nursing Implications</th></tr>
+    <tr><td><strong>Cardiovascular</strong></td><td>↓ cardiac output, ↑ peripheral vascular resistance, stiffened arteries, ↓ baroreceptor sensitivity</td><td>Orthostatic hypotension risk. Rise slowly. Monitor BP in multiple positions. ↑ risk of isolated systolic HTN.</td></tr>
+    <tr><td><strong>Respiratory</strong></td><td>↓ lung elasticity, ↓ vital capacity, weaker cough reflex, ↓ ciliary function</td><td>↑ risk of pneumonia &amp; atelectasis. Encourage incentive spirometry, deep breathing, flu/pneumonia vaccines.</td></tr>
+    <tr><td><strong>Renal</strong></td><td>↓ GFR (~1% per year after 40), ↓ renal blood flow, ↓ concentrating ability</td><td>Drug accumulation risk (adjust renally cleared meds). Dehydration risk. <span class="lyte">Creatinine may appear normal</span> despite ↓ GFR (less muscle mass).</td></tr>
+    <tr><td><strong>GI</strong></td><td>↓ saliva, ↓ gastric acid, ↓ peristalsis, ↓ liver metabolism</td><td>Constipation common. Drug metabolism slower. Encourage fiber, fluids, activity. Assess for malnutrition.</td></tr>
+    <tr><td><strong>Musculoskeletal</strong></td><td>↓ bone density, ↓ muscle mass (sarcopenia), ↓ joint flexibility, ↓ height (vertebral compression)</td><td>Fracture risk (especially hip). Weight-bearing exercise. Calcium + vitamin D. Fall prevention essential.</td></tr>
+    <tr><td><strong>Neurological</strong></td><td>↓ reaction time, ↓ deep sleep, ↓ short-term memory, ↓ neurotransmitters</td><td>Allow extra time for responses. Sleep pattern changes are NORMAL (not insomnia). Distinguish normal aging from pathology.</td></tr>
+    <tr><td><strong>Sensory</strong></td><td>Presbyopia (near vision ↓), presbycusis (high-frequency hearing ↓), ↓ taste/smell</td><td>Larger print. Speak clearly, lower pitch (NOT louder). Season food safely. Safety hazards (can't smell gas/smoke).</td></tr>
+    <tr><td><strong>Integumentary</strong></td><td>↓ subcutaneous fat, ↓ elasticity, ↓ sweat glands, thinning skin, slower wound healing</td><td>Skin tears easily. Pressure injury risk. Thermoregulation impaired (hypothermia risk). Avoid tape on fragile skin.</td></tr>
+    <tr><td><strong>Immune</strong></td><td>↓ T-cell function, ↓ antibody response, chronic low-grade inflammation</td><td>↑ infection risk. Fever response may be blunted — <span class="lyte">a temp of 99°F may indicate infection</span>. Vaccines critical.</td></tr>
+    <tr><td><strong>Endocrine</strong></td><td>↓ insulin sensitivity, ↓ thyroid function, ↓ estrogen/testosterone</td><td>Type 2 DM risk increases. Screen for hypothyroidism. Osteoporosis risk (↓ estrogen).</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: Know the difference between NORMAL aging and PATHOLOGY. Confusion is NOT normal aging — it always warrants investigation (UTI, medications, dehydration, infection, stroke).
+  </div>
+</div>
+
+<!-- ==================== SECTION 2 ==================== -->
+<div id="sec-cog" class="section-hdr sh-cog">🧠 Section 2 — Cognitive Changes &amp; Neurodegenerative Disorders</div>
+<div class="content-block">
+
+  <h3>Delirium vs. Dementia vs. Depression</h3>
+  <table class="info-table">
+    <tr><th>Feature</th><th>Delirium</th><th>Dementia</th><th>Depression</th></tr>
+    <tr><td><strong>Onset</strong></td><td>Sudden (hours to days)</td><td>Gradual (months to years)</td><td>Variable (weeks)</td></tr>
+    <tr><td><strong>Duration</strong></td><td>Hours to weeks (reversible)</td><td>Progressive, irreversible</td><td>Weeks to months (treatable)</td></tr>
+    <tr><td><strong>Attention</strong></td><td>Impaired, fluctuating</td><td>Relatively intact early</td><td>Difficulty concentrating</td></tr>
+    <tr><td><strong>Consciousness</strong></td><td>Altered (clouded)</td><td>Clear until late stages</td><td>Clear</td></tr>
+    <tr><td><strong>Hallucinations</strong></td><td>Common (visual)</td><td>Less common (late stage)</td><td>Rare</td></tr>
+    <tr><td><strong>Reversible?</strong></td><td>YES — treat the cause</td><td>NO — manage symptoms</td><td>YES — with treatment</td></tr>
+    <tr><td><strong>Common causes</strong></td><td>Infection (UTI #1 in elderly), medications, dehydration, hypoxia, pain</td><td>Alzheimer's (#1), vascular, Lewy body</td><td>Loss, isolation, chronic illness, medications</td></tr>
+  </table>
+
+  <div class="priority-box pbox-red">
+    <strong>🔴 Delirium = Medical Emergency — Find and Treat the Cause:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>UTI is the #1 cause of acute confusion in the elderly</li>
+      <li>Check medications (anticholinergics, benzodiazepines, opioids)</li>
+      <li>Assess for dehydration, electrolyte imbalance, constipation, pain</li>
+      <li>Rule out hypoxia, infection, MI, stroke</li>
+      <li>Maintain calm, well-lit environment. Reorient frequently. Avoid restraints.</li>
+    </ul>
+  </div>
+
+  <h3>Alzheimer's Disease — Stages</h3>
+  <table class="info-table">
+    <tr><th>Stage</th><th>Characteristics</th><th>Nursing Care</th></tr>
+    <tr><td><strong>Early (Mild)</strong></td><td>Short-term memory loss, word-finding difficulty, getting lost in familiar places, poor judgment</td><td>Maintain routine. Calendars, lists, labels. Safety assessment. Discuss advance directives while patient can participate.</td></tr>
+    <tr><td><strong>Middle (Moderate)</strong></td><td>Wandering, sundowning, agitation, personality changes, inability to perform ADLs, incontinence begins</td><td>Structured routine. Redirection (not confrontation). Wandering precautions (ID bracelet, door alarms). Toileting schedule. Caregiver support.</td></tr>
+    <tr><td><strong>Late (Severe)</strong></td><td>Non-verbal, bedbound, total dependence, dysphagia, loss of recognition</td><td>Comfort care. Aspiration precautions. Skin care. Palliative approach. Family support and hospice referral.</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: For agitated dementia patients — REDIRECT, don't argue or confront. Use validation therapy. Never say "Don't you remember?" or correct their reality. Meet them where they are.
+  </div>
+
+  <h3>Dementia Medications</h3>
+  <ul>
+    <li><span class="drug">Donepezil (Aricept)</span> — Cholinesterase inhibitor. Slows cognitive decline (does not cure). Give at bedtime. Side effects: N/V, diarrhea, bradycardia.</li>
+    <li><span class="drug">Memantine (Namenda)</span> — NMDA receptor antagonist. For moderate-to-severe Alzheimer's. Can be combined with donepezil. Side effects: dizziness, headache, confusion.</li>
+  </ul>
+
+  <h3>Sundowning</h3>
+  <ul>
+    <li>Increased confusion/agitation in late afternoon and evening</li>
+    <li><strong>Interventions:</strong> Structured daily routine, adequate daytime lighting, limit caffeine, calm evening environment, night light, reduce stimulation before bed, assess for pain or hunger</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 3 ==================== -->
+<div id="sec-fall" class="section-hdr sh-fall">⚠️ Section 3 — Fall Prevention &amp; Safety</div>
+<div class="content-block">
+
+  <h3>Fall Risk Factors in Older Adults</h3>
+  <table class="info-table">
+    <tr><th>Category</th><th>Risk Factors</th></tr>
+    <tr><td><strong>Intrinsic</strong></td><td>Age &gt; 65, history of falls, gait/balance impairment, visual/hearing deficits, orthostatic hypotension, cognitive impairment, urinary urgency/incontinence, arthritis, neuropathy, deconditioning</td></tr>
+    <tr><td><strong>Extrinsic</strong></td><td>Wet floors, poor lighting, throw rugs, cluttered pathways, ill-fitting footwear, lack of grab bars, unfamiliar environment (hospital)</td></tr>
+    <tr><td><strong>Medications</strong></td><td>Sedatives/hypnotics, opioids, antihypertensives, diuretics, antihistamines, antipsychotics, benzodiazepines, antidepressants (any drug causing dizziness, sedation, or orthostatic hypotension)</td></tr>
+  </table>
+
+  <h3>Fall Prevention Interventions</h3>
+  <ul>
+    <li>Bed in <strong>lowest position</strong> with wheels locked</li>
+    <li>Call light within reach — answer promptly</li>
+    <li>Non-skid footwear (not socks alone)</li>
+    <li>Adequate lighting (night light in bathroom)</li>
+    <li>Bed alarm for high-risk patients</li>
+    <li>Two side rails up (all four = restraint)</li>
+    <li>Hourly rounding — assess needs (toileting, pain, positioning)</li>
+    <li>Assistive devices within reach (walker, cane, glasses, hearing aids)</li>
+    <li>Toileting schedule — don't make patients wait</li>
+    <li>Exercise programs to improve strength and balance (tai chi, PT referral)</li>
+  </ul>
+
+  <div class="priority-box pbox-amber">
+    <strong>🟡 Orthostatic Hypotension Prevention:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>Dangle at bedside before standing (sit for <span class="lyte">1–2 minutes</span>)</li>
+      <li>Rise slowly from lying → sitting → standing</li>
+      <li>Check orthostatic BP: lying → sitting → standing (drop of <span class="lyte">SBP ≥ 20</span> or <span class="lyte">DBP ≥ 10</span> = positive)</li>
+      <li>Adequate hydration. Review medications contributing to orthostasis.</li>
+    </ul>
+  </div>
+
+  <h3>Hip Fracture — Common Geriatric Emergency</h3>
+  <ul>
+    <li><strong>Signs:</strong> Shortened, externally rotated affected leg; pain in groin/hip; inability to bear weight</li>
+    <li><strong>Pre-op:</strong> Buck's traction (skin traction) for comfort. Pain management. Pre-op teaching. Assess circulation distal to fracture.</li>
+    <li><strong>Post-op (total hip replacement):</strong> Avoid hip flexion &gt; <span class="lyte">90°</span>, adduction past midline, and internal rotation. Abduction pillow between legs. Elevated toilet seat. Avoid crossing legs.</li>
+    <li><strong>Complications:</strong> DVT (prophylaxis with <span class="drug">enoxaparin</span>), PE, infection, fat embolism (long bone fractures)</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 4 ==================== -->
+<div id="sec-poly" class="section-hdr sh-poly">💊 Section 4 — Polypharmacy &amp; Medication Safety</div>
+<div class="content-block">
+
+  <h3>Polypharmacy — The #1 Medication Risk in Elderly</h3>
+  <p>Polypharmacy = taking <strong>5+ medications</strong> concurrently. Older adults take more medications and are more vulnerable to adverse effects due to age-related pharmacokinetic changes.</p>
+
+  <table class="info-table">
+    <tr><th>Pharmacokinetic Change</th><th>Effect in Elderly</th><th>Clinical Impact</th></tr>
+    <tr><td><strong>↓ Absorption</strong></td><td>↓ gastric acid, ↓ GI motility, ↓ blood flow to gut</td><td>Delayed onset of oral meds. Some drugs may have ↓ absorption.</td></tr>
+    <tr><td><strong>↑ Distribution</strong></td><td>↑ body fat, ↓ lean mass, ↓ total body water, ↓ albumin</td><td>Fat-soluble drugs (diazepam) have longer duration. ↓ albumin → more free drug → ↑ toxicity.</td></tr>
+    <tr><td><strong>↓ Metabolism</strong></td><td>↓ liver blood flow, ↓ hepatic enzyme activity</td><td>First-pass effect reduced → higher drug levels. Longer half-lives.</td></tr>
+    <tr><td><strong>↓ Excretion</strong></td><td>↓ GFR, ↓ renal blood flow</td><td>Drug accumulation. Adjust doses for <span class="lyte">CrCl/GFR</span>. Monitor renally cleared drugs closely.</td></tr>
+  </table>
+
+  <h3>Beers Criteria — Potentially Inappropriate Medications in Elderly</h3>
+  <div class="priority-box pbox-red">
+    <strong>🔴 HIGH-RISK Medications to AVOID in Older Adults:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li><span class="drug">Benzodiazepines</span> (diazepam, alprazolam) — ↑ fall risk, cognitive impairment, paradoxical agitation</li>
+      <li><span class="drug">Anticholinergics</span> (diphenhydramine, oxybutynin) — confusion, urinary retention, constipation, dry mouth, blurred vision</li>
+      <li><span class="drug">Meperidine (Demerol)</span> — neurotoxic metabolite causes seizures</li>
+      <li><span class="drug">Long-acting sulfonylureas</span> (glyburide) — prolonged hypoglycemia</li>
+      <li><span class="drug">Muscle relaxants</span> (cyclobenzaprine) — anticholinergic effects, sedation</li>
+      <li><span class="drug">Non-COX selective NSAIDs</span> (indomethacin) — GI bleeding, renal toxicity</li>
+      <li><span class="drug">First-generation antihistamines</span> (diphenhydramine) — highly anticholinergic</li>
+      <li><span class="drug">Barbiturates</span> — high dependence, tolerance, overdose risk</li>
+    </ul>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🚫 Anticholinergic Side Effects — "Can't see, can't pee, can't spit, can't sh*t"</div>
+    <div class="letters">
+      <span>B</span>lurred vision · <span>U</span>rinary retention · <span>D</span>ry mouth · <span>C</span>onstipation · Also: confusion, tachycardia, hyperthermia
+    </div>
+  </div>
+
+  <h3>Medication Reconciliation</h3>
+  <ul>
+    <li>Review ALL medications (prescription, OTC, herbal, supplements) at every transition of care</li>
+    <li>Use "brown bag" method — have patient bring ALL bottles/containers to appointment</li>
+    <li>"Start low, go slow" — begin at lowest dose and titrate gradually</li>
+    <li>Assess for drug-drug, drug-food, and drug-disease interactions</li>
+    <li>Simplify regimens where possible (once-daily dosing, combination pills)</li>
+    <li>Assess ability to open bottles, read labels, and self-administer correctly</li>
+  </ul>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: When an older adult develops NEW confusion, urinary retention, constipation, or falls — ALWAYS consider medications as a cause. Review the med list first.
+  </div>
+</div>
+
+<!-- ==================== SECTION 5 ==================== -->
+<div id="sec-func" class="section-hdr sh-func">📊 Section 5 — Functional Assessment &amp; Nutrition</div>
+<div class="content-block">
+
+  <h3>Functional Assessment Tools</h3>
+  <table class="info-table">
+    <tr><th>Tool</th><th>What It Measures</th><th>Components</th></tr>
+    <tr><td><strong>Katz ADL Index</strong></td><td>Basic Activities of Daily Living (ADLs)</td><td>Bathing, Dressing, Toileting, Transferring, Continence, Feeding — score 0–6 (6 = independent)</td></tr>
+    <tr><td><strong>Lawton IADL Scale</strong></td><td>Instrumental Activities of Daily Living (IADLs)</td><td>Phone use, shopping, food prep, housekeeping, laundry, transportation, medications, finances</td></tr>
+    <tr><td><strong>Braden Scale</strong></td><td>Pressure injury risk</td><td>Sensory perception, moisture, activity, mobility, nutrition, friction/shear — lower score = higher risk (≤ <span class="lyte">18</span> = at risk)</td></tr>
+    <tr><td><strong>Morse Fall Scale</strong></td><td>Fall risk</td><td>History of falls, secondary diagnosis, ambulatory aid, IV/heparin lock, gait, mental status — higher score = higher risk</td></tr>
+    <tr><td><strong>Mini-Mental State Exam (MMSE)</strong></td><td>Cognitive function</td><td>Orientation, registration, attention, recall, language — score 0–30 (≤ <span class="lyte">24</span> = cognitive impairment)</td></tr>
+    <tr><td><strong>GDS (Geriatric Depression Scale)</strong></td><td>Depression screening</td><td>15 or 30 yes/no questions. Simple, reliable for older adults. Score ≥ <span class="lyte">5</span> (short form) suggests depression.</td></tr>
+  </table>
+
+  <h3>Nutrition in the Older Adult</h3>
+  <ul>
+    <li><strong>Caloric needs decrease</strong> with age (↓ metabolism, ↓ activity) but nutrient needs remain the same or increase</li>
+    <li><strong>Protein needs increase</strong> slightly — <span class="lyte">1.0–1.2 g/kg/day</span> to prevent sarcopenia</li>
+    <li><strong>Calcium:</strong> <span class="lyte">1200 mg/day</span> (women &gt; 50, men &gt; 70) for osteoporosis prevention</li>
+    <li><strong>Vitamin D:</strong> <span class="lyte">800–1000 IU/day</span> (many elderly are deficient — ↓ sun exposure, ↓ skin synthesis)</li>
+    <li><strong>Vitamin B12:</strong> Absorption decreases with age (↓ intrinsic factor). Screen for deficiency. Supplements may be needed.</li>
+    <li><strong>Fiber:</strong> <span class="lyte">25–30 g/day</span> with adequate fluids to prevent constipation</li>
+    <li><strong>Hydration:</strong> ↓ thirst sensation with age. Encourage fluids. Monitor for dehydration (poor skin turgor on forehead/sternum is more reliable than arm in elderly).</li>
+  </ul>
+
+  <div class="priority-box pbox-amber">
+    <strong>🟡 Malnutrition Warning Signs in Elderly:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>Unintentional weight loss &gt; <span class="lyte">5% in 1 month</span> or &gt; <span class="lyte">10% in 6 months</span></li>
+      <li><span class="lyte">BMI &lt; 18.5</span> or <span class="lyte">albumin &lt; 3.5 g/dL</span> or <span class="lyte">prealbumin &lt; 15 mg/dL</span></li>
+      <li>Difficulty chewing (poor dentition), dysphagia, loss of appetite</li>
+      <li>Social isolation, depression, poverty, inability to shop/cook</li>
+      <li>Refer to dietitian, assess for Meals on Wheels or community resources</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ==================== SECTION 6 ==================== -->
+<div id="sec-pain" class="section-hdr sh-pain">🩺 Section 6 — Pain Management &amp; Skin Integrity</div>
+<div class="content-block">
+
+  <h3>Pain Assessment in Older Adults</h3>
+  <ul>
+    <li>Pain is NOT a normal part of aging — always assess and treat</li>
+    <li>Older adults may underreport pain (fear of being a burden, belief that pain is expected)</li>
+    <li>Use validated tools: numeric (0–10), FACES scale, or behavioral tools (PAINAD) for cognitively impaired patients</li>
+    <li>Non-verbal cues: grimacing, guarding, restlessness, withdrawal, moaning, resisting care</li>
+    <li><strong>Start low, go slow</strong> with analgesics. Monitor closely for adverse effects.</li>
+  </ul>
+
+  <div class="priority-box pbox-blue">
+    <strong>Pain Management in Elderly — Preferred Approach:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li><span class="drug">Acetaminophen</span> — first-line for mild-moderate pain (max <span class="lyte">2000–3000 mg/day</span> in elderly)</li>
+      <li>Topical agents (<span class="drug">lidocaine patches</span>, <span class="drug">diclofenac gel</span>) — fewer systemic side effects</li>
+      <li>Non-pharmacological: heat/cold, massage, positioning, relaxation, distraction, PT</li>
+      <li><strong>AVOID</strong> <span class="drug">meperidine</span> (seizures), long-acting opioids as first-line, and <span class="drug">NSAIDs</span> long-term (GI/renal risks)</li>
+      <li>If opioids needed: start at <span class="lyte">25–50%</span> of standard adult dose. Monitor respiratory status.</li>
+    </ul>
+  </div>
+
+  <h3>Pressure Injuries (Pressure Ulcers)</h3>
+  <table class="info-table">
+    <tr><th>Stage</th><th>Description</th><th>Appearance</th></tr>
+    <tr><td><strong>Stage 1</strong></td><td>Intact skin with non-blanchable redness</td><td>Skin intact but red area doesn't blanch with pressure</td></tr>
+    <tr><td><strong>Stage 2</strong></td><td>Partial-thickness skin loss</td><td>Shallow open ulcer, blister, or abrasion. Pink wound bed. No slough.</td></tr>
+    <tr><td><strong>Stage 3</strong></td><td>Full-thickness skin loss</td><td>Subcutaneous fat visible. Slough may be present. No bone/tendon exposed.</td></tr>
+    <tr><td><strong>Stage 4</strong></td><td>Full-thickness tissue loss</td><td>Bone, tendon, or muscle exposed. Slough or eschar may be present.</td></tr>
+    <tr><td><strong>Unstageable</strong></td><td>Base covered by slough/eschar</td><td>Cannot determine depth until debrided.</td></tr>
+    <tr><td><strong>DTI (Deep Tissue Injury)</strong></td><td>Intact skin with deep tissue damage</td><td>Purple or maroon discolored area. May evolve to reveal a deep wound.</td></tr>
+  </table>
+
+  <h3>Pressure Injury Prevention</h3>
+  <ul>
+    <li>Reposition every <span class="lyte">2 hours</span> (use a turning schedule)</li>
+    <li>Keep skin clean and dry. Moisture barrier cream for incontinence.</li>
+    <li>Adequate nutrition (protein, vitamin C, zinc for wound healing)</li>
+    <li>Use pressure-redistribution surfaces (specialty mattresses)</li>
+    <li>Avoid shearing forces — lift, don't drag. Use draw sheets.</li>
+    <li>Float heels off the bed (pillow under calves, NOT under knees)</li>
+    <li>Braden Scale assessment on admission and regularly thereafter</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 7 ==================== -->
+<div id="sec-eol" class="section-hdr sh-eol">🕊️ Section 7 — End-of-Life Care</div>
+<div class="content-block">
+
+  <h3>Hospice &amp; Palliative Care</h3>
+  <table class="info-table">
+    <tr><th>Feature</th><th>Palliative Care</th><th>Hospice</th></tr>
+    <tr><td><strong>Eligibility</strong></td><td>Any stage of serious illness</td><td>Prognosis of ≤ <span class="lyte">6 months</span> if disease runs its natural course</td></tr>
+    <tr><td><strong>Goal</strong></td><td>Symptom management + curative treatment may continue</td><td>Comfort only. Curative treatment stops.</td></tr>
+    <tr><td><strong>Focus</strong></td><td>Quality of life, symptom control, goals of care</td><td>Dignified death, comfort, family support</td></tr>
+    <tr><td><strong>Setting</strong></td><td>Hospital, clinic, home</td><td>Home, hospice facility, or inpatient unit</td></tr>
+  </table>
+
+  <h3>Signs of Approaching Death</h3>
+  <ul>
+    <li><strong>Weeks before:</strong> ↓ appetite, ↑ sleeping, withdrawal from activities, ↓ interest in surroundings</li>
+    <li><strong>Days before:</strong> Cheyne-Stokes breathing, mottled skin, cool extremities, ↓ urine output, terminal restlessness</li>
+    <li><strong>Hours before:</strong> "Death rattle" (pooled secretions), Cheyne-Stokes → irregular breathing, cyanosis, unresponsive</li>
+  </ul>
+
+  <div class="priority-box pbox-purple">
+    <strong>End-of-Life Nursing Priorities:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li><strong>Comfort above all:</strong> Pain management (do NOT withhold opioids due to respiratory depression — comfort is the goal)</li>
+      <li><strong>Oral care:</strong> Mouth swabs, lip moisturizer (even when NPO)</li>
+      <li><strong>Position:</strong> HOB elevated for dyspnea. Side-lying for secretions.</li>
+      <li><strong>Emotional support:</strong> Allow family presence. Active listening. Respect cultural/spiritual practices.</li>
+      <li><strong>Do NOT</strong> suction the "death rattle" (distressing to patient). Reposition and use <span class="drug">glycopyrrolate</span> or <span class="drug">atropine drops</span>.</li>
+      <li>Hearing is the <strong>last sense to go</strong> — always speak to the patient as if they can hear.</li>
+    </ul>
+  </div>
+
+  <h3>Grief &amp; Bereavement</h3>
+  <table class="info-table">
+    <tr><th>Type</th><th>Description</th></tr>
+    <tr><td><strong>Anticipatory grief</strong></td><td>Grieving begins before the actual loss (e.g., terminal diagnosis). Allow expression.</td></tr>
+    <tr><td><strong>Normal grief</strong></td><td>Sadness, crying, anger, guilt, sleep/appetite changes. Resolves over months.</td></tr>
+    <tr><td><strong>Complicated grief</strong></td><td>Prolonged, severe, interferes with daily function &gt; 12 months. Requires professional support.</td></tr>
+    <tr><td><strong>Disenfranchised grief</strong></td><td>Loss not openly acknowledged (e.g., miscarriage, pet loss, ex-spouse). Validate the loss.</td></tr>
+  </table>
+
+  <h3>Post-Mortem Care</h3>
+  <ul>
+    <li>Verify death with provider. Note time of death.</li>
+    <li>Follow facility policy for body preparation. Respect cultural/religious practices.</li>
+    <li>Allow family time with the body if desired</li>
+    <li>Remove tubes/lines per policy (unless medical examiner case — leave everything in place)</li>
+    <li>Can be delegated to UAP (supervised by RN)</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 8 ==================== -->
+<div id="sec-mem" class="section-hdr sh-mem">🧠 Section 8 — Memory Anchors &amp; Key Rules</div>
+<div class="content-block">
+
+  <h3>Key Mnemonics</h3>
+
+  <div class="mnemonic-box">
+    <div class="title">🧓 SPICES — Common Geriatric Syndromes</div>
+    <div class="letters">
+      <span>S</span>leep disorders · <span>P</span>roblems with eating/feeding · <span>I</span>ncontinence · <span>C</span>onfusion · <span>E</span>vidence of falls · <span>S</span>kin breakdown
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🚫 BEERS — Avoid in Elderly</div>
+    <div class="letters">
+      <span>B</span>enzodiazepines · anticholinErgics · <span>E</span>lderly-inappropriate NSAIDs · <span>R</span>elaxants (muscle) · <span>S</span>edative-hypnotics
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">💡 DELIRIUMS — Delirium Causes</div>
+    <div class="letters">
+      <span>D</span>rugs · <span>E</span>lectrolyte imbalance · <span>L</span>ack of drugs (withdrawal) · <span>I</span>nfection (UTI #1) · <span>R</span>educed sensory input · <span>I</span>ntracranial events · <span>U</span>rinary/fecal retention · <span>M</span>yocardial/pulmonary · <span>S</span>leep deprivation
+    </div>
+  </div>
+
+  <h3>NCLEX Gerontology Quick-Reference Rules</h3>
+  <table class="info-table">
+    <tr><th>Rule</th><th>Application</th></tr>
+    <tr><td><strong>Confusion ≠ normal aging</strong></td><td>Always investigate. Most common cause in elderly: UTI, medications, dehydration.</td></tr>
+    <tr><td><strong>Atypical presentations</strong></td><td>Elderly may not present with classic symptoms: MI without chest pain, infection without high fever, pneumonia without cough.</td></tr>
+    <tr><td><strong>Start low, go slow</strong></td><td>Lower doses, slower titration for all medications in elderly.</td></tr>
+    <tr><td><strong>Fall prevention = safety priority</strong></td><td>Assess risk, modify environment, review medications, exercise programs.</td></tr>
+    <tr><td><strong>Beers Criteria</strong></td><td>Avoid benzodiazepines, anticholinergics, meperidine, long-acting sulfonylureas in elderly.</td></tr>
+    <tr><td><strong>Pain is NOT normal aging</strong></td><td>Assess using appropriate tools. Use multimodal approach. Acetaminophen first-line.</td></tr>
+    <tr><td><strong>Hearing is last sense to go</strong></td><td>Always speak to the dying patient. Assume they can hear.</td></tr>
+    <tr><td><strong>Redirect, don't argue</strong></td><td>For dementia agitation: validation therapy, redirection, calm environment — never confrontation.</td></tr>
+    <tr><td><strong>Advance directives early</strong></td><td>Discuss while patient has capacity. Revisit at transitions of care.</td></tr>
+    <tr><td><strong>Delirium is reversible</strong></td><td>Unlike dementia, delirium has a treatable cause. Find it and fix it.</td></tr>
+  </table>
+
+  <h3>Common NCLEX Gerontology Traps</h3>
+  <ul>
+    <li><strong>Trap:</strong> "Confusion is expected in a 90-year-old" — WRONG. Acute confusion is always abnormal. Investigate the cause.</li>
+    <li><strong>Trap:</strong> "Give diphenhydramine (Benadryl) for insomnia" — AVOID in elderly per Beers Criteria. Highly anticholinergic.</li>
+    <li><strong>Trap:</strong> "Apply restraints for the wandering patient" — Restraints are LAST resort. Use redirection, companionship, wandering alarms first.</li>
+    <li><strong>Trap:</strong> "Withhold opioids because RR is 14" — RR 14 is normal. Withhold at RR &lt; 12. In end-of-life care, comfort is priority.</li>
+    <li><strong>Trap:</strong> "Normal creatinine means normal kidney function" — In elderly, ↓ muscle mass means creatinine may be falsely normal despite ↓ GFR. Always check GFR/CrCl.</li>
+  </ul>
+</div>
+
+</div>
+<script>
+document.querySelectorAll('.drug').forEach(function(el){
+  el.style.cursor='pointer';
+  el.title='Click to view drug card';
+  el.addEventListener('click',function(){
+    var name=this.textContent.trim();
+    if(window.parent&&window.parent!==window){
+      window.parent.postMessage({type:'showDrugCard',drug:name},'*');
+    }
+  });
+});
+</script>
+</body>
+</html>

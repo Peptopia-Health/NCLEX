@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundamentals — NCLEX Crib Notes</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --pri-bg-from: #0f1214;
+  --pri-bg-mid: #1a1e24;
+  --pri-bg-to: #252c36;
+  --pri-accent: #64748b;
+  --pri-accent-light: #94a3b8;
+  --pri-text: #e8ecf4;
+  --pri-text-muted: #94a3b8;
+  --pri-gold: #fbbf24;
+  --pri-border: #475569;
+  --pri-card-bg: rgba(255,255,255,0.04);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(160deg, var(--pri-bg-from) 0%, var(--pri-bg-mid) 45%, var(--pri-bg-to) 100%);
+  color: var(--pri-text);
+  min-height: 100vh;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 1.02rem;
+}
+body::before {
+  content: '';
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 15%, rgba(100,116,139,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 85% 80%, rgba(71,85,105,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.guide-container { max-width: 920px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #0f1318 0%, #1a2030 40%, #2a3548 100%);
+  border-radius: 1.25rem;
+  padding: 2rem 1.75rem 1.75rem;
+  margin-bottom: 2rem;
+  border: 2px solid var(--pri-border);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -40%; right: -15%; width: 280px; height: 280px;
+  background: radial-gradient(circle, rgba(148,163,184,0.12), transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '📋';
+  position: absolute; top: 1rem; right: 1.25rem; font-size: 2.8rem; opacity: 0.12;
+  pointer-events: none;
+}
+.hero h1 {
+  font-size: 2rem; font-weight: 800; color: #fff;
+  letter-spacing: -0.01em; margin-bottom: 0.5rem;
+  text-shadow: 0 2px 12px rgba(100,116,139,0.3);
+}
+.hero .subtitle { font-size: 1.05rem; color: #cbd5e1; line-height: 1.6; font-weight: 400; }
+.hero .badge-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.85rem; }
+.hero .badge {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.25rem 0.65rem; border-radius: 2rem;
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.03em; text-transform: uppercase;
+  backdrop-filter: blur(4px); cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s; text-decoration: none;
+}
+.hero .badge:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+.badge-np    { background: rgba(100,116,139,0.25); color: #cbd5e1; border: 1px solid rgba(100,116,139,0.4); }
+.badge-safe  { background: rgba(220,38,38,0.2); color: #fca5a5; border: 1px solid rgba(220,38,38,0.4); }
+.badge-inf   { background: rgba(16,185,129,0.2); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.4); }
+.badge-comm  { background: rgba(59,130,246,0.2); color: #93c5fd; border: 1px solid rgba(59,130,246,0.4); }
+.badge-doc   { background: rgba(168,85,247,0.2); color: #d8b4fe; border: 1px solid rgba(168,85,247,0.4); }
+.badge-deleg { background: rgba(99,102,241,0.2); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.4); }
+.badge-ethic { background: rgba(245,158,11,0.2); color: #fcd34d; border: 1px solid rgba(245,158,11,0.4); }
+.badge-mem   { background: rgba(148,163,184,0.2); color: #cbd5e1; border: 1px solid rgba(148,163,184,0.4); }
+
+/* ========== SECTION HEADERS ========== */
+.section-hdr {
+  position: relative; margin: 2.5rem 0 0; padding: 0.85rem 1.15rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.25rem; font-weight: 700; letter-spacing: 0.01em;
+}
+.sh-np    { background: #1e293b; color: #e2e8f0; }
+.sh-safe  { background: #7f1d1d; color: #fecaca; }
+.sh-inf   { background: #064e3b; color: #a7f3d0; }
+.sh-comm  { background: #1e3a5f; color: #bfdbfe; }
+.sh-doc   { background: #4a1d96; color: #e9d5ff; }
+.sh-deleg { background: #312e81; color: #c7d2fe; }
+.sh-ethic { background: #78350f; color: #fef3c7; }
+.sh-mem   { background: #1e293b; color: #e2e8f0; }
+
+/* ========== CONTENT BLOCKS ========== */
+.content-block {
+  background: var(--pri-card-bg); border: 1px solid rgba(255,255,255,0.06);
+  border-top: none; border-radius: 0 0 0.75rem 0.75rem;
+  padding: 1.25rem 1.15rem 1.5rem; margin-bottom: 0.5rem;
+}
+.content-block h3 { font-size: 1.1rem; font-weight: 700; color: var(--pri-accent-light); margin: 1.4rem 0 0.5rem; }
+.content-block h3:first-child { margin-top: 0; }
+.content-block p { margin: 0.4rem 0 0.7rem; color: var(--pri-text); line-height: 1.65; }
+.content-block ul, .content-block ol { margin: 0.4rem 0 0.8rem 1.3rem; color: var(--pri-text); }
+.content-block li { margin-bottom: 0.35rem; line-height: 1.55; }
+.content-block li strong { color: #fff; }
+
+.drug { color: #93c5fd; font-weight: 700; }
+.lyte { color: #ffa040; font-weight: 700; }
+
+/* ========== TABLES ========== */
+.info-table { width: 100%; border-collapse: collapse; margin: 0.75rem 0 1rem; font-size: 0.95rem; }
+.info-table th {
+  background: rgba(100,116,139,0.15); color: var(--pri-accent-light);
+  padding: 0.55rem 0.7rem; text-align: left; font-weight: 700;
+  border-bottom: 2px solid rgba(100,116,139,0.3);
+}
+.info-table td { padding: 0.5rem 0.7rem; border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top; }
+.info-table tr:last-child td { border-bottom: none; }
+.info-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+/* ========== PRIORITY BOXES ========== */
+.priority-box { border-radius: 0.6rem; padding: 0.85rem 1rem; margin: 0.75rem 0; border-left: 4px solid; }
+.pbox-red    { background: rgba(220,38,38,0.08); border-color: #dc2626; }
+.pbox-amber  { background: rgba(245,158,11,0.08); border-color: #f59e0b; }
+.pbox-green  { background: rgba(16,185,129,0.08); border-color: #10b981; }
+.pbox-blue   { background: rgba(59,130,246,0.08); border-color: #3b82f6; }
+.pbox-purple { background: rgba(139,92,246,0.08); border-color: #8b5cf6; }
+
+/* ========== MNEMONIC / KEY RULE ========== */
+.mnemonic-box {
+  background: rgba(100,116,139,0.06); border: 1px solid rgba(100,116,139,0.2);
+  border-radius: 0.6rem; padding: 0.85rem 1rem; margin: 0.75rem 0;
+}
+.mnemonic-box .title { font-weight: 700; color: var(--pri-accent-light); font-size: 1rem; margin-bottom: 0.3rem; }
+.mnemonic-box .letters { font-size: 0.95rem; }
+.mnemonic-box .letters span { color: var(--pri-gold); font-weight: 800; }
+.key-rule {
+  background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.25);
+  border-radius: 0.6rem; padding: 0.75rem 1rem; margin: 0.6rem 0;
+  font-weight: 600; color: var(--pri-gold); font-size: 0.95rem;
+}
+.key-rule .rule-icon { margin-right: 0.4rem; }
+
+/* ========== DECISION FLOW ========== */
+.decision-flow {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem;
+  margin: 0.75rem 0; font-weight: 700; font-size: 0.95rem;
+}
+.flow-step {
+  background: rgba(100,116,139,0.12); border: 1px solid rgba(100,116,139,0.3);
+  color: #cbd5e1; padding: 0.4rem 0.75rem; border-radius: 0.5rem;
+}
+.flow-arrow { color: var(--pri-text-muted); font-size: 1.1rem; }
+
+/* ========== SCOPE GRID ========== */
+.scope-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.75rem; margin: 0.75rem 0 1rem;
+}
+.scope-card {
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 0.65rem; padding: 0.85rem 1rem;
+}
+.scope-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; padding-bottom: 0.35rem; border-bottom: 2px solid; }
+.scope-card ul { list-style: none; margin: 0; padding: 0; }
+.scope-card li { padding: 0.2rem 0; padding-left: 1.2rem; position: relative; font-size: 0.93rem; }
+.scope-card li::before { content: '✓'; position: absolute; left: 0; font-weight: 700; }
+.sc-blue h4 { color: #60a5fa; border-color: #3b82f6; }
+.sc-blue li::before { color: #60a5fa; }
+.sc-green h4 { color: #34d399; border-color: #10b981; }
+.sc-green li::before { color: #34d399; }
+.sc-amber h4 { color: #fbbf24; border-color: #f59e0b; }
+.sc-amber li::before { color: #fbbf24; }
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.55rem; }
+  .guide-container { padding: 1rem 0.65rem 2rem; }
+  .content-block { padding: 1rem 0.85rem 1.2rem; }
+  .scope-grid { grid-template-columns: 1fr; }
+  .info-table { font-size: 0.85rem; }
+  .info-table th, .info-table td { padding: 0.4rem 0.5rem; }
+}
+</style>
+</head>
+<body>
+<div class="guide-container">
+
+<!-- ==================== HERO ==================== -->
+<div class="hero">
+  <h1>📋 Fundamentals</h1>
+  <div class="subtitle">Nursing process, patient safety, infection control, therapeutic communication, documentation, delegation, ethics &amp; legal practice for NCLEX success.</div>
+  <div class="badge-row">
+    <a class="badge badge-np" href="#sec-np">📋 Nursing Process</a>
+    <a class="badge badge-safe" href="#sec-safe">🛡️ Safety</a>
+    <a class="badge badge-inf" href="#sec-inf">🦠 Infection</a>
+    <a class="badge badge-comm" href="#sec-comm">💬 Communication</a>
+    <a class="badge badge-doc" href="#sec-doc">📝 Documentation</a>
+    <a class="badge badge-deleg" href="#sec-deleg">👥 Delegation</a>
+    <a class="badge badge-ethic" href="#sec-ethic">⚖️ Ethics &amp; Law</a>
+    <a class="badge badge-mem" href="#sec-mem">🧠 Memory</a>
+  </div>
+</div>
+
+<!-- ==================== SECTION 1: Nursing Process ==================== -->
+<div id="sec-np" class="section-hdr sh-np">📋 Section 1 — The Nursing Process (ADPIE)</div>
+<div class="content-block">
+
+  <h3>Five Steps of the Nursing Process</h3>
+  <div class="decision-flow">
+    <span class="flow-step">A — Assessment</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">D — Diagnosis</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">P — Planning</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">I — Implementation</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">E — Evaluation</span>
+  </div>
+
+  <table class="info-table">
+    <tr><th>Step</th><th>What the Nurse Does</th><th>NCLEX Application</th></tr>
+    <tr><td><strong>Assessment</strong></td><td>Collect subjective &amp; objective data. Health history, physical exam, vital signs, lab review.</td><td>Assessment is almost always the FIRST correct action. "Assess" or "check" answers are usually right unless there's an emergency.</td></tr>
+    <tr><td><strong>Diagnosis</strong></td><td>Identify actual or potential nursing problems based on assessment data.</td><td>Nursing diagnosis ≠ medical diagnosis. "Risk for..." identifies potential problems. "Impaired..." identifies actual problems.</td></tr>
+    <tr><td><strong>Planning</strong></td><td>Set SMART goals (Specific, Measurable, Attainable, Realistic, Time-bound). Establish priorities.</td><td>Outcomes must be patient-centered and measurable. "Patient will ambulate 50 feet by discharge" — not "Nurse will encourage ambulation."</td></tr>
+    <tr><td><strong>Implementation</strong></td><td>Carry out the care plan. Direct care, teaching, medication administration, coordination.</td><td>Independent nursing actions don't require a provider order. Dependent actions DO require an order.</td></tr>
+    <tr><td><strong>Evaluation</strong></td><td>Determine if goals were met. Reassess and modify the plan as needed.</td><td>If the goal is NOT met → reassess, NOT re-implement the same intervention. Go back to Assessment.</td></tr>
+  </table>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: When in doubt, ASSESS FIRST. The only exceptions: CPR, choking (Heimlich), active hemorrhage (direct pressure), anaphylaxis (epinephrine), and witnessed VF (defibrillate).
+  </div>
+
+  <h3>Types of Assessment Data</h3>
+  <ul>
+    <li><strong>Subjective data:</strong> What the patient TELLS you — "I feel dizzy," "My pain is 8/10," "I haven't slept in 3 days"</li>
+    <li><strong>Objective data:</strong> What the nurse OBSERVES/MEASURES — <span class="lyte">BP 180/110</span>, diaphoresis, wound drainage, <span class="lyte">SpO₂ 88%</span></li>
+    <li><strong>Primary source:</strong> The patient themselves (most reliable)</li>
+    <li><strong>Secondary sources:</strong> Family, medical records, other healthcare providers</li>
+  </ul>
+
+  <h3>Clinical Judgment — NCSBN Model</h3>
+  <p>The NCLEX Next Generation (NGN) uses the <strong>Clinical Judgment Measurement Model (CJMM)</strong>:</p>
+  <div class="decision-flow">
+    <span class="flow-step">Recognize Cues</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Analyze Cues</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Prioritize Hypotheses</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Generate Solutions</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Take Action</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Evaluate Outcomes</span>
+  </div>
+</div>
+
+<!-- ==================== SECTION 2: Patient Safety ==================== -->
+<div id="sec-safe" class="section-hdr sh-safe">🛡️ Section 2 — Patient Safety &amp; Risk Management</div>
+<div class="content-block">
+
+  <h3>Fall Prevention</h3>
+  <ul>
+    <li><strong>Risk factors:</strong> Age &gt; 65, medications (sedatives, diuretics, opioids, antihypertensives), cognitive impairment, gait instability, history of falls, environmental hazards</li>
+    <li><strong>Interventions:</strong> Bed in lowest position, call light within reach, bed alarm activated, non-skid footwear, adequate lighting, side rails up ×2 (not all four — that's restraint), hourly rounding</li>
+    <li><strong>Post-fall:</strong> Assess patient FIRST (not the environment). Check for injury, neuro status, vital signs. Notify provider. Document and complete incident report.</li>
+  </ul>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: Assess the PATIENT first after a fall, not the environment. Even if the question asks "What should the nurse do FIRST?" — assess the patient's injury status.
+  </div>
+
+  <h3>Restraints — Use as LAST Resort</h3>
+  <table class="info-table">
+    <tr><th>Type</th><th>Order Renewal</th><th>Key Requirements</th></tr>
+    <tr><td><strong>Non-violent (medical)</strong></td><td>Every <span class="lyte">24 hours</span></td><td>Confused patient pulling at lines/tubes. Try alternatives first (sitter, redirection, mittens).</td></tr>
+    <tr><td><strong>Violent (behavioral)</strong></td><td>Adults: every <span class="lyte">4 hours</span><br>Adolescents 9–17: every <span class="lyte">2 hours</span><br>Children &lt; 9: every <span class="lyte">1 hour</span></td><td>Acute agitation/danger to self or others. Remove ASAP when patient is calm.</td></tr>
+  </table>
+
+  <div class="priority-box pbox-red">
+    <strong>🔴 Restraint Safety Rules:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>Check circulation, sensation, and movement (CMS) every <span class="lyte">1–2 hours</span></li>
+      <li>Release restraints every <span class="lyte">2 hours</span> for ROM, toileting, nutrition, and repositioning</li>
+      <li>Tie knots with <strong>quick-release</strong> knots to a part of the bed frame that moves with the HOB</li>
+      <li>1–2 fingers should fit between restraint and skin</li>
+      <li>NEVER tie to side rails. NEVER use as punishment. NEVER leave patient unmonitored.</li>
+      <li>Standing PRN order for restraints is NOT acceptable — must be individualized</li>
+    </ul>
+  </div>
+
+  <h3>Seizure Precautions</h3>
+  <ul>
+    <li><strong>During seizure:</strong> Stay with patient. Time the seizure. Turn to side (if possible). Protect head (pad if needed). Do NOT restrain. Do NOT put anything in mouth. Suction and O₂ at bedside.</li>
+    <li><strong>After seizure (postictal):</strong> Maintain airway (lateral position). Assess LOC, orientation, breathing. Perform neuro check. Document seizure type, duration, and post-ictal behavior.</li>
+    <li><strong>Call for help if:</strong> Seizure lasts &gt; <span class="lyte">5 minutes</span> (status epilepticus), repeated seizures without regaining consciousness, or injury occurs.</li>
+  </ul>
+
+  <h3>Fire Safety — RACE &amp; PASS</h3>
+  <div class="decision-flow">
+    <span class="flow-step">R — Rescue</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">A — Alarm</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">C — Contain</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">E — Extinguish / Evacuate</span>
+  </div>
+  <p style="margin-top:0.5rem"><strong>Evacuation order:</strong> Ambulatory patients first → wheelchair patients → bed-bound patients. Move horizontally first (same floor), then vertically (downstairs). Use stairs, NEVER elevators.</p>
+
+  <h3>Incident Reports</h3>
+  <ul>
+    <li>Complete for ANY unexpected event: falls, medication errors, near-misses, equipment malfunction, adverse reactions</li>
+    <li>Document <strong>what happened factually</strong> in the patient's chart — do NOT write "incident report filed" in the chart</li>
+    <li>The incident report is an <strong>internal quality improvement document</strong> — not part of the medical record</li>
+    <li>Report within <span class="lyte">24 hours</span>. No blame — focus on facts and system improvement.</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 3: Infection Control ==================== -->
+<div id="sec-inf" class="section-hdr sh-inf">🦠 Section 3 — Infection Control Essentials</div>
+<div class="content-block">
+
+  <h3>Chain of Infection — Break Any Link to Prevent Spread</h3>
+  <div class="decision-flow">
+    <span class="flow-step">Infectious Agent</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Reservoir</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Portal of Exit</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Mode of Transmission</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Portal of Entry</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Susceptible Host</span>
+  </div>
+
+  <h3>Standard Precautions — For ALL Patients</h3>
+  <ul>
+    <li>Hand hygiene (most important single measure to prevent infection)</li>
+    <li>Gloves for contact with blood, body fluids, mucous membranes, non-intact skin</li>
+    <li>Gown if splash/spray risk or contact with contaminated surfaces</li>
+    <li>Mask + eye protection if splash/spray of blood/body fluids</li>
+    <li>Sharps disposal — never recap needles (activate safety mechanism, dispose immediately)</li>
+    <li>Respiratory hygiene/cough etiquette for anyone with respiratory symptoms</li>
+  </ul>
+
+  <h3>Transmission-Based Precautions</h3>
+  <table class="info-table">
+    <tr><th>Type</th><th>PPE</th><th>Room</th><th>Conditions (My Chicken Hez TB)</th></tr>
+    <tr><td><strong>Airborne</strong></td><td>N95 respirator (fit-tested)</td><td>Negative-pressure room, door closed</td><td>TB, measles (rubeola), varicella (chickenpox), disseminated herpes zoster</td></tr>
+    <tr><td><strong>Droplet</strong></td><td>Surgical mask within <span class="lyte">3–6 feet</span></td><td>Private room (no negative pressure needed)</td><td>Influenza, pertussis, meningococcal meningitis, mumps, rubella, diphtheria, RSV, COVID-19</td></tr>
+    <tr><td><strong>Contact</strong></td><td>Gloves + gown</td><td>Private room, dedicated equipment</td><td>MRSA, VRE, C. diff, scabies, lice, wound infections, RSV</td></tr>
+  </table>
+
+  <div class="mnemonic-box">
+    <div class="title">🎯 "My Chicken Hez TB" — Airborne Precautions</div>
+    <div class="letters">
+      <span>M</span>easles · Chicken<span>p</span>ox (varicella) · <span>H</span>erpes zoster (disseminated) · <span>TB</span>
+    </div>
+  </div>
+
+  <h3>Surgical Asepsis (Sterile Technique)</h3>
+  <div class="priority-box pbox-green">
+    <strong>🟢 Sterile Field Rules:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>A <span class="lyte">1-inch border</span> around the sterile field is considered contaminated</li>
+      <li>Items below the waist are considered contaminated</li>
+      <li>If you turn your back on the sterile field → contaminated</li>
+      <li>If a sterile item gets wet (strike-through) → contaminated</li>
+      <li>When in doubt → it IS contaminated. Start over.</li>
+      <li>Open sterile packages: flap away from you first, then sides, then toward you last</li>
+      <li>Pour solutions from <span class="lyte">4–6 inches</span> above the container</li>
+    </ul>
+  </div>
+
+  <h3>Hand Hygiene</h3>
+  <ul>
+    <li><strong>Alcohol-based rub:</strong> Preferred for routine hand hygiene (minimum <span class="lyte">20 seconds</span>). NOT effective against <em>C. difficile</em> spores or <em>Norovirus</em>.</li>
+    <li><strong>Soap and water:</strong> Required when hands are visibly soiled, after caring for <em>C. diff</em> patient, and before/after eating.</li>
+    <li><strong>When to perform:</strong> Before and after patient contact, before aseptic procedures, after body fluid exposure, after touching patient surroundings (WHO 5 Moments).</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 4: Therapeutic Communication ==================== -->
+<div id="sec-comm" class="section-hdr sh-comm">💬 Section 4 — Therapeutic Communication</div>
+<div class="content-block">
+
+  <h3>Therapeutic Techniques</h3>
+  <table class="info-table">
+    <tr><th>Technique</th><th>Example</th><th>Purpose</th></tr>
+    <tr><td><strong>Open-ended questions</strong></td><td>"Tell me about your pain."</td><td>Encourages patient to elaborate. Gathers comprehensive data.</td></tr>
+    <tr><td><strong>Reflection</strong></td><td>"You seem worried about the surgery."</td><td>Mirrors patient's feelings. Shows empathy and understanding.</td></tr>
+    <tr><td><strong>Restating/Paraphrasing</strong></td><td>"So you're saying the pain is worse at night?"</td><td>Verifies understanding. Encourages clarification.</td></tr>
+    <tr><td><strong>Silence</strong></td><td>(Allowing time to process)</td><td>Gives patient time to think. Shows patience and respect.</td></tr>
+    <tr><td><strong>Focusing</strong></td><td>"Let's talk more about your breathing difficulty."</td><td>Directs conversation to priority concern.</td></tr>
+    <tr><td><strong>Clarifying</strong></td><td>"What do you mean by 'feeling funny'?"</td><td>Seeks specifics when information is vague.</td></tr>
+    <tr><td><strong>Summarizing</strong></td><td>"Today we discussed your diet changes and new medication schedule."</td><td>Reviews key points. Provides closure.</td></tr>
+    <tr><td><strong>Offering self</strong></td><td>"I'll sit with you for a while."</td><td>Shows presence and concern without conditions.</td></tr>
+    <tr><td><strong>Validating</strong></td><td>"It's understandable to feel anxious before surgery."</td><td>Acknowledges patient's feelings as normal and acceptable.</td></tr>
+  </table>
+
+  <h3>Non-Therapeutic Responses — AVOID These</h3>
+  <div class="priority-box pbox-red">
+    <strong>🔴 Blocks to Communication:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li><strong>False reassurance:</strong> "Don't worry, everything will be fine." — Dismisses concerns.</li>
+      <li><strong>Giving advice:</strong> "I think you should…" — Takes away patient autonomy.</li>
+      <li><strong>Changing the subject:</strong> Redirecting when the patient is expressing feelings.</li>
+      <li><strong>Asking "Why?":</strong> "Why did you stop taking your medication?" — Sounds accusatory.</li>
+      <li><strong>Agreeing/Disagreeing:</strong> "You're right, that doctor is terrible." — Not objective.</li>
+      <li><strong>Using clichés:</strong> "God only gives you what you can handle." — Not helpful.</li>
+      <li><strong>Defensive response:</strong> "The nurses here are excellent." — Dismisses patient's concern.</li>
+    </ul>
+  </div>
+
+  <div class="key-rule">
+    <span class="rule-icon">⚡</span> NCLEX Rule: On communication questions, ALWAYS choose the response that addresses the patient's FEELINGS first. If a patient says "I'm scared," the best response acknowledges the fear, not the facts.
+  </div>
+
+  <h3>Cultural Competence</h3>
+  <ul>
+    <li>Use professional interpreters (not family members) for non-English-speaking patients</li>
+    <li>Respect dietary preferences, religious practices, and health beliefs</li>
+    <li>Some cultures prefer same-sex caregivers — ask and accommodate</li>
+    <li>Eye contact norms vary — some cultures consider direct eye contact disrespectful</li>
+    <li>Ask about folk remedies or traditional medicine use — assess for interactions</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 5: Documentation & Reporting ==================== -->
+<div id="sec-doc" class="section-hdr sh-doc">📝 Section 5 — Documentation &amp; Reporting</div>
+<div class="content-block">
+
+  <h3>Documentation Principles</h3>
+  <ul>
+    <li><strong>Timely:</strong> Document as close to the event as possible. Late entries should be noted as such.</li>
+    <li><strong>Accurate:</strong> Use exact quotes for subjective data. Record objective measurements precisely.</li>
+    <li><strong>Complete:</strong> Include assessment, intervention, and patient response.</li>
+    <li><strong>Objective:</strong> Avoid opinions. Write "Patient crying, stated 'I feel hopeless'" — NOT "Patient is depressed."</li>
+    <li><strong>Legal:</strong> The medical record is a legal document. If it wasn't documented, it wasn't done.</li>
+  </ul>
+
+  <div class="priority-box pbox-amber">
+    <strong>🟡 Documentation DON'Ts:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>NEVER use whiteout, erasure, or write over errors — single line through, initial, date, time</li>
+      <li>NEVER leave blank spaces in documentation</li>
+      <li>NEVER chart for someone else or before care is given</li>
+      <li>NEVER document "incident report filed" in the patient chart</li>
+      <li>NEVER use unapproved abbreviations (refer to facility's "Do Not Use" list)</li>
+    </ul>
+  </div>
+
+  <h3>SBAR Communication</h3>
+  <table class="info-table">
+    <tr><th>Letter</th><th>Component</th><th>Content</th></tr>
+    <tr><td><strong>S</strong></td><td>Situation</td><td>What is happening RIGHT NOW? Why are you calling?</td></tr>
+    <tr><td><strong>B</strong></td><td>Background</td><td>Relevant history, diagnosis, current treatment, allergies</td></tr>
+    <tr><td><strong>A</strong></td><td>Assessment</td><td>What do you think the problem is? Current vitals, change from baseline</td></tr>
+    <tr><td><strong>R</strong></td><td>Recommendation</td><td>What do you want the provider to do? Specific order requests.</td></tr>
+  </table>
+
+  <h3>Telephone / Verbal Orders</h3>
+  <ul>
+    <li><strong>Write</strong> down the order as it is given</li>
+    <li><strong>Read back</strong> the order verbatim to the provider</li>
+    <li><strong>Receive confirmation</strong> — "That's correct"</li>
+    <li>Provider must <strong>co-sign</strong> within the facility's required timeframe (typically <span class="lyte">24 hours</span>)</li>
+  </ul>
+
+  <h3>Change-of-Shift Report (Handoff)</h3>
+  <ul>
+    <li>Report at the bedside when possible (promotes patient involvement and safety)</li>
+    <li>Include: name, age, diagnosis, current status, recent changes, pending tests/procedures, IV/medications, dietary needs, safety concerns, code status</li>
+    <li>Do NOT include opinions, gossip, or judgmental statements</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 6: Delegation & Leadership ==================== -->
+<div id="sec-deleg" class="section-hdr sh-deleg">👥 Section 6 — Delegation &amp; Leadership</div>
+<div class="content-block">
+
+  <h3>Scope of Practice</h3>
+  <div class="scope-grid">
+    <div class="scope-card sc-blue">
+      <h4>🩺 RN Only</h4>
+      <ul>
+        <li>Initial assessment &amp; reassessment</li>
+        <li>Nursing diagnosis &amp; care planning</li>
+        <li>Patient/family teaching (initiation)</li>
+        <li>Evaluation of outcomes</li>
+        <li>IV push medications</li>
+        <li>Blood product administration</li>
+        <li>Unstable patient care</li>
+        <li>Telephone/verbal orders</li>
+        <li>Central line care</li>
+        <li>Discharge planning</li>
+      </ul>
+    </div>
+    <div class="scope-card sc-green">
+      <h4>💉 LPN/LVN Can Do</h4>
+      <ul>
+        <li>Stable, predictable patients</li>
+        <li>Data collection (not initial assessment)</li>
+        <li>Oral &amp; IM medications</li>
+        <li>SubQ injections (insulin, heparin)</li>
+        <li>Dressing changes (non-complex)</li>
+        <li>Foley insertion &amp; care</li>
+        <li>NG tube feedings</li>
+        <li>Suctioning</li>
+        <li>Reinforce teaching (NOT initiate)</li>
+        <li>Vital signs &amp; documentation</li>
+      </ul>
+    </div>
+    <div class="scope-card sc-amber">
+      <h4>🤝 UAP Can Do</h4>
+      <ul>
+        <li>ADLs: bathing, grooming, dressing</li>
+        <li>Vital signs (stable patients only)</li>
+        <li>Ambulation &amp; positioning</li>
+        <li>Intake &amp; output</li>
+        <li>Feeding (no swallowing issues)</li>
+        <li>Specimen collection</li>
+        <li>Weight measurement</li>
+        <li>Comfort measures</li>
+        <li>CPR (if certified)</li>
+        <li>Transport</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Five Rights of Delegation</h3>
+  <table class="info-table">
+    <tr><th>Right</th><th>Question</th></tr>
+    <tr><td><strong>Right Task</strong></td><td>Can this legally be delegated? (Assessment, Teaching, Evaluation, Nursing judgment = NEVER delegate)</td></tr>
+    <tr><td><strong>Right Circumstance</strong></td><td>Is the patient stable? Is the situation appropriate? Is it within the person's scope?</td></tr>
+    <tr><td><strong>Right Person</strong></td><td>Is this person competent and trained for this specific task?</td></tr>
+    <tr><td><strong>Right Direction</strong></td><td>Did I give clear, specific instructions including parameters to report?</td></tr>
+    <tr><td><strong>Right Supervision</strong></td><td>Am I following up and evaluating the outcome?</td></tr>
+  </table>
+
+  <div class="mnemonic-box">
+    <div class="title">🚫 ATEN — NEVER Delegate These</div>
+    <div class="letters">
+      <span>A</span>ssessment · <span>T</span>eaching · <span>E</span>valuation · <span>N</span>ursing Judgment
+    </div>
+  </div>
+
+  <h3>Leadership &amp; Management Styles</h3>
+  <table class="info-table">
+    <tr><th>Style</th><th>Description</th><th>Best Used When</th></tr>
+    <tr><td><strong>Autocratic</strong></td><td>Leader makes decisions unilaterally. "Do it this way."</td><td>Emergencies (code blue, disaster, rapid response). New employees needing clear direction.</td></tr>
+    <tr><td><strong>Democratic</strong></td><td>Leader involves team in decisions. Encourages collaboration.</td><td>Experienced team. Quality improvement projects. Policy development.</td></tr>
+    <tr><td><strong>Laissez-faire</strong></td><td>Leader is hands-off. Staff self-direct.</td><td>Highly experienced, self-motivated teams. Research environments.</td></tr>
+    <tr><td><strong>Transformational</strong></td><td>Inspires through vision, motivation, and intellectual stimulation.</td><td>Organizational change. Long-term improvements. Staff empowerment.</td></tr>
+  </table>
+
+  <h3>Charge Nurse Assignments</h3>
+  <ul>
+    <li>Most complex patients → most experienced RN</li>
+    <li>Stable, predictable patients → LPN/LVN or new graduate</li>
+    <li>Routine ADLs → UAP</li>
+    <li>Float/agency nurses → patients that don't require specialized unit knowledge</li>
+    <li>Same-acuity patients → balanced distribution across staff</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 7: Ethics & Legal ==================== -->
+<div id="sec-ethic" class="section-hdr sh-ethic">⚖️ Section 7 — Ethics &amp; Legal Practice</div>
+<div class="content-block">
+
+  <h3>Ethical Principles</h3>
+  <table class="info-table">
+    <tr><th>Principle</th><th>Definition</th><th>Nursing Example</th></tr>
+    <tr><td><strong>Autonomy</strong></td><td>Patient's right to make their own decisions</td><td>Respecting a patient's refusal of treatment, even if you disagree. Informed consent.</td></tr>
+    <tr><td><strong>Beneficence</strong></td><td>Do good; act in patient's best interest</td><td>Providing pain management. Advocating for patient needs.</td></tr>
+    <tr><td><strong>Nonmaleficence</strong></td><td>Do no harm</td><td>Checking allergies before administering medications. Safe medication practices.</td></tr>
+    <tr><td><strong>Justice</strong></td><td>Fair &amp; equal treatment for all</td><td>Triage decisions based on acuity, not personal factors. Equal resource allocation.</td></tr>
+    <tr><td><strong>Fidelity</strong></td><td>Faithfulness; keeping promises</td><td>Following through on commitments. "I'll be back to check on you in 30 minutes."</td></tr>
+    <tr><td><strong>Veracity</strong></td><td>Truth-telling</td><td>Honest disclosure about diagnosis, prognosis, and treatment options.</td></tr>
+  </table>
+
+  <h3>Informed Consent</h3>
+  <ul>
+    <li><strong>Who obtains consent:</strong> The PROVIDER performing the procedure (not the nurse)</li>
+    <li><strong>Nurse's role:</strong> Witness the signature. Verify patient understanding. Clarify questions. Advocate if patient seems confused or coerced.</li>
+    <li><strong>Requirements:</strong> Patient must be competent, informed (risks, benefits, alternatives), and consent must be voluntary</li>
+    <li><strong>Cannot consent:</strong> Minors (parent/guardian), unconscious patients (implied consent for emergencies), patients under influence of sedatives</li>
+    <li><strong>Emancipated minors CAN consent:</strong> Married, in military, self-supporting, pregnant, or court-declared</li>
+  </ul>
+
+  <h3>Advance Directives &amp; End-of-Life</h3>
+  <ul>
+    <li><strong>Living will:</strong> Documents patient's wishes for end-of-life care (before incapacity)</li>
+    <li><strong>Durable Power of Attorney for Healthcare:</strong> Designates a person to make healthcare decisions if patient cannot</li>
+    <li><strong>DNR (Do Not Resuscitate):</strong> No CPR if patient stops breathing or heart stops. Does NOT mean "do not treat." Continue all other care.</li>
+    <li><strong>Nurse's duty:</strong> Ask about advance directives on admission. Document. Follow them regardless of personal beliefs.</li>
+  </ul>
+
+  <h3>Legal Concepts</h3>
+  <table class="info-table">
+    <tr><th>Term</th><th>Definition</th><th>Example</th></tr>
+    <tr><td><strong>Negligence</strong></td><td>Failure to meet standard of care (unintentional)</td><td>Forgetting to raise side rails for a patient on opioids who then falls.</td></tr>
+    <tr><td><strong>Malpractice</strong></td><td>Professional negligence; requires 4 D's: Duty, Dereliction, Damages, Direct cause</td><td>Nurse fails to check blood sugar before insulin → severe hypoglycemia → brain injury.</td></tr>
+    <tr><td><strong>Assault</strong></td><td>Threat of unwanted contact</td><td>"If you don't take this medication, I'll hold you down and inject it."</td></tr>
+    <tr><td><strong>Battery</strong></td><td>Actual unwanted contact</td><td>Performing a procedure without consent.</td></tr>
+    <tr><td><strong>False imprisonment</strong></td><td>Restraining someone's freedom without justification</td><td>Keeping a competent patient in the hospital against their will. Improper restraint use.</td></tr>
+    <tr><td><strong>Defamation</strong></td><td>Making false statements that damage reputation</td><td>Sharing patient's HIV status with non-care staff (also HIPAA violation).</td></tr>
+  </table>
+
+  <h3>HIPAA &amp; Confidentiality</h3>
+  <div class="priority-box pbox-purple">
+    <strong>HIPAA Key Rules:</strong>
+    <ul style="margin-top:0.3rem;margin-bottom:0;">
+      <li>Share patient information only on a <strong>need-to-know</strong> basis with the healthcare team</li>
+      <li>Do NOT discuss patients in public areas (elevators, cafeteria, hallways)</li>
+      <li>Avoid social media posts about patients — even without names (identifying details can violate HIPAA)</li>
+      <li>Log off computers when stepping away. Face screens away from visitors.</li>
+      <li>Patient can request to see their medical records and request corrections</li>
+      <li><strong>Exceptions to confidentiality:</strong> Mandatory reporting (child/elder abuse, communicable diseases, gunshot wounds, threats of harm to self or others)</li>
+    </ul>
+  </div>
+
+  <h3>Mandatory Reporting</h3>
+  <ul>
+    <li>Suspected child abuse or neglect</li>
+    <li>Suspected elder abuse or neglect</li>
+    <li>Communicable/reportable diseases (TB, STIs, food-borne illness)</li>
+    <li>Gunshot and stab wounds</li>
+    <li>Impaired healthcare worker (substance abuse on duty)</li>
+    <li>Threats of harm to self (suicidal ideation) or others (Tarasoff duty to warn)</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 8: Memory Anchors ==================== -->
+<div id="sec-mem" class="section-hdr sh-mem">🧠 Section 8 — Memory Anchors &amp; Key Rules</div>
+<div class="content-block">
+
+  <h3>Key Mnemonics</h3>
+
+  <div class="mnemonic-box">
+    <div class="title">📋 ADPIE — Nursing Process</div>
+    <div class="letters">
+      <span>A</span>ssessment · <span>D</span>iagnosis · <span>P</span>lanning · <span>I</span>mplementation · <span>E</span>valuation
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🚫 ATEN — Never Delegate</div>
+    <div class="letters">
+      <span>A</span>ssessment · <span>T</span>eaching · <span>E</span>valuation · <span>N</span>ursing Judgment
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">📞 SBAR — Communication</div>
+    <div class="letters">
+      <span>S</span>ituation · <span>B</span>ackground · <span>A</span>ssessment · <span>R</span>ecommendation
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🚨 RACE — Fire Response</div>
+    <div class="letters">
+      <span>R</span>escue · <span>A</span>larm · <span>C</span>ontain · <span>E</span>xtinguish/Evacuate
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🧯 PASS — Fire Extinguisher</div>
+    <div class="letters">
+      <span>P</span>ull pin · <span>A</span>im at base · <span>S</span>queeze · <span>S</span>weep
+    </div>
+  </div>
+
+  <div class="mnemonic-box">
+    <div class="title">🩺 4 D's of Malpractice</div>
+    <div class="letters">
+      <span>D</span>uty · <span>D</span>ereliction · <span>D</span>amages · <span>D</span>irect cause
+    </div>
+  </div>
+
+  <h3>NCLEX Fundamentals Quick-Reference Rules</h3>
+  <table class="info-table">
+    <tr><th>Rule</th><th>Application</th></tr>
+    <tr><td><strong>Assess first, always</strong></td><td>Unless CPR, airway obstruction, active hemorrhage, or anaphylaxis</td></tr>
+    <tr><td><strong>Address feelings first</strong></td><td>Therapeutic communication: acknowledge feelings before providing information</td></tr>
+    <tr><td><strong>Patient safety #1</strong></td><td>Fall prevention, restraint safety, seizure precautions — safety always takes priority</td></tr>
+    <tr><td><strong>Never delegate ATEN</strong></td><td>Assessment, Teaching, Evaluation, Nursing Judgment → RN only</td></tr>
+    <tr><td><strong>Informed consent = provider</strong></td><td>Nurse witnesses, verifies understanding, and advocates — does NOT obtain consent</td></tr>
+    <tr><td><strong>Standard precautions for ALL</strong></td><td>Hand hygiene, gloves for body fluids — every patient, every time</td></tr>
+    <tr><td><strong>Airborne = N95 + negative pressure</strong></td><td>TB, measles, varicella, disseminated herpes zoster</td></tr>
+    <tr><td><strong>Document factually</strong></td><td>Objective language. Exact quotes. Never chart "incident report filed."</td></tr>
+    <tr><td><strong>HIPAA: need-to-know only</strong></td><td>Share only with healthcare team members directly involved in care</td></tr>
+    <tr><td><strong>Mandatory reporting overrides confidentiality</strong></td><td>Child/elder abuse, communicable diseases, gunshot wounds, threats of harm</td></tr>
+  </table>
+
+  <h3>Common NCLEX Fundamentals Traps</h3>
+  <ul>
+    <li><strong>Trap:</strong> "Notify the provider" — Often not the first action. Assess and stabilize first.</li>
+    <li><strong>Trap:</strong> "Document the finding" — Documentation is important but NEVER the first action during a patient emergency.</li>
+    <li><strong>Trap:</strong> The question asks about teaching → "Reinforce" is the LPN answer, "Initiate" is the RN answer. Know who is asking.</li>
+    <li><strong>Trap:</strong> "Restrain the patient" for safety → Restraints are LAST resort. Try alternatives first (sitter, redirection, environmental modification).</li>
+    <li><strong>Trap:</strong> A competent patient refuses treatment → You must respect autonomy even if you disagree. Document the refusal and educate on consequences.</li>
+  </ul>
+</div>
+
+</div><!-- end guide-container -->
+<script>
+document.querySelectorAll('.drug').forEach(function(el){
+  el.style.cursor='pointer';
+  el.title='Click to view drug card';
+  el.addEventListener('click',function(){
+    var name=this.textContent.trim();
+    if(window.parent&&window.parent!==window){
+      window.parent.postMessage({type:'showDrugCard',drug:name},'*');
+    }
+  });
+});
+</script>
+</body>
+</html>
