@@ -83,6 +83,8 @@ html.dark #peptopia-klimek-guide .gold-rules-card{border-color:#d97706}
 html.dark #peptopia-klimek-guide .gold-rules-card .home-card-header{background:linear-gradient(135deg,#451a03,#78350f) !important;color:#fde68a !important}
 html.dark #peptopia-klimek-guide .gold-rules-card .home-card-desc{color:#fbbf24 !important}
 html:not(.dark) #peptopia-klimek-guide .gold-rules-card .home-card-desc{color:#92400e !important}
+/* Quiz loading spinner */
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 </style>
 </head><body>
 <script>if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -178,7 +180,7 @@ var loadingEl = document.getElementById('home-dashboard');
 if (loadingEl) loadingEl.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-900);font-weight:600;">Loading study data...</div>';
 var GH_CDN = 'https://cdn.jsdelivr.net/gh/Peptopia/NCLEX@main/';
 var GH_PAGES = 'https://peptopia.github.io/NCLEX/';
-var CACHE_BUST = '?v=9.0';
+var CACHE_BUST = '?v=11.0';
 fetch(GH_CDN + 'mnt_studydata.json' + CACHE_BUST)
 .then(function(r) {
 if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -212,7 +214,7 @@ loadingEl.innerHTML =
 'Error: Study data failed to load.' +
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
-var APP_VERSION = '10.0';
+var APP_VERSION = '11.0';
 var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100 };
 var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1 };
 var GH_AUDIO = 'https://github.com/Peptopia/NCLEX/releases/download/audio-v1/';
@@ -1069,15 +1071,15 @@ quizSectionTitle = title;
 quizSectionKey = className ? 'wp_' + className : secKey;
 document.getElementById('quiz-modal').style.display = 'block';
 initQuizTheme();
-document.getElementById('quiz-title').textContent = title;
-document.getElementById('quiz-question-area').style.display = 'block';
 document.getElementById('quiz-completion').classList.remove('visible');
+_showQuizLoading(title);
+fetchGitHubQuiz(secKey).then(function(result) {
+var quizQs = result.questions || [];
+if (quizQs.length === 0) {
+_showQuizError(title, secKey, result.error || 'No questions returned');
+return;
+}
 document.getElementById('quiz-score-bar').style.display = 'flex';
-document.getElementById('q-text').textContent = '';
-document.getElementById('q-options').innerHTML = '';
-document.getElementById('q-rationale').classList.remove('visible');
-document.getElementById('next-btn').style.display = 'none';
-fetchGitHubQuiz(secKey).then(function(quizQs) {
 var filtered = quizQs;
 if (className) {
 filtered = quizQs.filter(function(q) {
@@ -1088,7 +1090,9 @@ r.indexOf('belongs to the ' + className) !== -1;
 });
 }
 if (filtered.length === 0) {
-document.getElementById('quiz-title').textContent = 'No questions available';
+document.getElementById('quiz-title').textContent = 'No questions for this class';
+document.getElementById('q-text').innerHTML = '<div style="text-align:center;padding:1.5rem;color:#94a3b8;">No questions matched the drug class <strong>' + (className || 'unknown') + '</strong>.</div>';
+document.getElementById('q-options').innerHTML = '';
 return;
 }
 quizIndex = 0; quizScore = 0; quizWrong = 0;
@@ -2234,20 +2238,54 @@ else { row.classList.remove('wp-starred-row'); }
 }
 }
 }
-function fetchGitHubQuiz(sectionKey) {
-if (ghQuizCache[sectionKey]) return Promise.resolve(ghQuizCache[sectionKey]);
-var url = GH_CDN + 'mnt_quiz_json_' + sectionKey + '.json' + CACHE_BUST;
-return fetch(url).then(function(r) {
-if (!r.ok) throw new Error('HTTP ' + r.status);
-return r.json();
-}).then(function(j) {
+function _parseQuizJson(j) {
 var raw = Array.isArray(j) ? j : (j.questions || []);
-var qs = raw.map(function(item, idx) {
+if (!raw.length) return [];
+return raw.map(function(item, idx) {
 return { q: item.q || item.question, a: item.options || item.a, correct: item.correct !== undefined ? item.correct : item.answer, rationale: item.rationale || '', origIdx: idx };
 });
+}
+function _fetchWithTimeout(url, ms) {
+return new Promise(function(resolve, reject) {
+var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+var timer = setTimeout(function() { if (ctrl) ctrl.abort(); reject(new Error('Timeout')); }, ms || 12000);
+fetch(url, ctrl ? { signal: ctrl.signal } : {}).then(function(r) {
+clearTimeout(timer);
+if (!r.ok) throw new Error('HTTP ' + r.status);
+return r.json();
+}).then(resolve).catch(function(e) { clearTimeout(timer); reject(e); });
+});
+}
+function fetchGitHubQuiz(sectionKey) {
+if (ghQuizCache[sectionKey]) return Promise.resolve({ error: null, questions: ghQuizCache[sectionKey] });
+var fname = 'mnt_quiz_json_' + sectionKey + '.json';
+var sources = [
+GH_CDN + fname + CACHE_BUST,
+GH_PAGES + fname + CACHE_BUST,
+'https://raw.githubusercontent.com/Peptopia/NCLEX/main/' + fname
+];
+var lastErr = '';
+function trySource(i) {
+if (i >= sources.length) {
+_log('Quiz fetch FAILED all sources for [' + sectionKey + ']: ' + lastErr);
+return Promise.resolve({ error: lastErr || 'All sources failed', questions: [] });
+}
+return _fetchWithTimeout(sources[i], 15000).then(function(j) {
+var qs = _parseQuizJson(j);
+if (qs.length > 0) {
 ghQuizCache[sectionKey] = qs;
-return qs;
-}).catch(function() { return []; });
+if (i > 0) _log('Quiz [' + sectionKey + '] loaded from fallback source #' + (i + 1));
+return { error: null, questions: qs };
+}
+lastErr = 'Source ' + (i + 1) + ' returned empty data';
+return trySource(i + 1);
+}).catch(function(e) {
+lastErr = e.message || 'Unknown error';
+_log('Quiz source #' + (i + 1) + ' failed for [' + sectionKey + ']: ' + lastErr);
+return trySource(i + 1);
+});
+}
+return trySource(0);
 }
 function updateScoreBar() {
 var answered = quizScore + quizWrong;
@@ -2257,25 +2295,62 @@ document.getElementById('qsb-incorrect').textContent = quizWrong;
 document.getElementById('qsb-answered').textContent = answered;
 document.getElementById('qsb-percent').textContent = pct;
 }
+function _showQuizLoading(title) {
+document.getElementById('quiz-title').textContent = title;
+document.getElementById('quiz-question-area').style.display = 'block';
+document.getElementById('quiz-score-bar').style.display = 'none';
+document.getElementById('q-rationale').classList.remove('visible');
+document.getElementById('next-btn').style.display = 'none';
+document.getElementById('q-options').innerHTML = '';
+document.getElementById('q-text').innerHTML =
+'<div style="text-align:center;padding:2rem 0;">' +
+'<div style="display:inline-block;width:36px;height:36px;border:3px solid rgba(129,140,248,0.3);border-top-color:#818cf8;border-radius:50%;animation:spin 0.8s linear infinite;"></div>' +
+'<div style="margin-top:1rem;color:#94a3b8;font-size:0.95rem;">Loading questions\u2026</div></div>';
+}
+var _lastFailedQuizTitle = '';
+var _lastFailedQuizKey = '';
+window._retryQuiz = function() {
+delete ghQuizCache[_lastFailedQuizKey];
+initQuizUI(_lastFailedQuizTitle, _lastFailedQuizKey);
+};
+window._closeQuizError = function() {
+document.getElementById('quiz-modal').style.display = 'none';
+};
+function _showQuizError(title, secKey, errMsg) {
+_lastFailedQuizTitle = title;
+_lastFailedQuizKey = secKey;
+document.getElementById('quiz-title').textContent = title;
+document.getElementById('quiz-score-bar').style.display = 'none';
+document.getElementById('q-text').innerHTML =
+'<div style="text-align:center;padding:1.5rem 0;">' +
+'<div style="font-size:2rem;margin-bottom:0.75rem;">\u26A0\uFE0F</div>' +
+'<div style="color:#f87171;font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">Failed to Load Questions</div>' +
+'<div style="color:#94a3b8;font-size:0.85rem;margin-bottom:1.25rem;line-height:1.5;">' +
+'All 3 data sources were tried.<br>' +
+(errMsg ? '<span style="font-family:monospace;font-size:0.8rem;opacity:0.7;">(' + errMsg.replace(/</g,'&lt;') + ')</span><br>' : '') +
+'This is usually a temporary CDN issue.</div>' +
+'<button onclick="_retryQuiz()" ' +
+'style="background:#6366f1;color:#fff;border:none;padding:0.65rem 1.5rem;border-radius:0.5rem;font-size:0.95rem;font-weight:600;cursor:pointer;margin:0 0.35rem;">' +
+'\uD83D\uDD04 Retry Now</button>' +
+'<button onclick="_closeQuizError()" ' +
+'style="background:rgba(100,116,139,0.25);color:#cbd5e1;border:none;padding:0.65rem 1.5rem;border-radius:0.5rem;font-size:0.95rem;font-weight:600;cursor:pointer;margin:0 0.35rem;">' +
+'Close</button></div>';
+document.getElementById('q-options').innerHTML = '';
+}
 function initQuizUI(title, secKey) {
 quizSectionTitle = title;
 quizSectionKey = secKey;
 document.getElementById('quiz-modal').style.display = 'block';
 initQuizTheme();
-document.getElementById('quiz-title').textContent = title;
-document.getElementById('quiz-question-area').style.display = 'block';
 document.getElementById('quiz-completion').classList.remove('visible');
-document.getElementById('quiz-score-bar').style.display = 'flex';
-document.getElementById('q-text').textContent = '';
-document.getElementById('q-options').innerHTML = '';
-document.getElementById('q-rationale').classList.remove('visible');
-document.getElementById('next-btn').style.display = 'none';
-fetchGitHubQuiz(secKey).then(function(quizQs) {
+_showQuizLoading(title);
+fetchGitHubQuiz(secKey).then(function(result) {
+var quizQs = result.questions || [];
 if (quizQs.length === 0) {
-document.getElementById('quiz-title').textContent = 'Questions loading — try refreshing';
-document.getElementById('q-text').textContent = 'The quiz data may still be syncing with the CDN. Please refresh the page or try again in a moment.';
+_showQuizError(title, secKey, result.error || 'No questions returned');
 return;
 }
+document.getElementById('quiz-score-bar').style.display = 'flex';
 var saved = loadQuizSession(secKey);
 if (saved && (saved.score + saved.wrong) < saved.order.length) {
 _pendingQuizKey = secKey;
@@ -2685,6 +2760,8 @@ categories: [
 { title: 'Full Notes - 92 Pages', file: 'Lecture Notes - 92 Pages.pdf', emoji: '\uD83D\uDCD3' },
 { title: 'Graphics - 29 Pages', file: 'Lecture Notes - Graphics 29 Pages.pdf', emoji: '\uD83C\uDFA8' },
 { title: 'Yellow Review', file: 'Yellow Review.pdf', emoji: '\uD83D\uDD30' },
+{ title: 'Blue Review', file: 'Blue Book Question Set.pdf', emoji: '\uD83D\uDCD8' },
+{ title: '\u21B3 Quiz (Coming Soon)', file: '', emoji: '\uD83D\uDCDD', sub: true, disabled: true },
 { title: 'Prioritization & Delegation', file: 'NCLEX_Prioritization_Delegation_Guide.pdf', emoji: '\uD83C\uDFAF' },
 { title: 'Addiction', file: 'NCLEX_Addiction_Toxicology_Guide.pdf', emoji: '\uD83E\uDDEA' }
 ]},
@@ -2808,11 +2885,16 @@ html += '<div class="pdf-sidebar-item themed-item' + subCls + '" data-file="' + 
 } else {
 var itemEmoji = item.emoji || '\uD83D\uDCC4';
 var subCls2 = item.sub ? ' info-sub' : '';
+if (item.disabled) {
+html += '<div class="pdf-sidebar-item' + subCls2 + '" style="opacity:0.45;cursor:default;pointer-events:none;font-style:italic;">' +
+itemEmoji + ' ' + item.title + '</div>';
+} else {
 var itemOnclick = item.isHtml
 ? 'openGuideHtml(decodeURIComponent(this.getAttribute(\'data-file\')), this)'
 : 'selectPdf(this, decodeURIComponent(this.getAttribute(\'data-file\')))';
 html += '<div class="pdf-sidebar-item' + subCls2 + '" data-file="' + encodeURIComponent(item.file) + '" onclick="' + itemOnclick + '">' +
 itemEmoji + ' ' + item.title + '</div>';
+}
 }
 }
 html += '</div>';
