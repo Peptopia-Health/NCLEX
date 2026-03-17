@@ -1,0 +1,1102 @@
+[
+  {
+    "q": "A nurse is performing an admission assessment on a client who was admitted for pneumonia. Which action represents the first step of the nursing process?",
+    "options": [
+      "A. Collecting data about the client's respiratory status",
+      "B. Developing a plan of care for impaired gas exchange",
+      "C. Administering the prescribed antibiotic therapy",
+      "D. Evaluating the client's response to oxygen therapy"
+    ],
+    "correct": 0,
+    "rationale": "Assessment is the first step of the nursing process (ADPIE). Before planning, implementing, or evaluating, the nurse must collect comprehensive data about the client's condition."
+  },
+  {
+    "q": "A nurse identifies that a postoperative client has not voided in 8 hours and has a distended bladder. Which nursing diagnosis is most appropriate?",
+    "options": [
+      "A. Risk for infection related to urinary stasis",
+      "B. Urinary retention related to effects of anesthesia",
+      "C. Impaired urinary elimination related to decreased fluid intake",
+      "D. Acute pain related to bladder distention"
+    ],
+    "correct": 1,
+    "rationale": "Urinary retention related to the effects of anesthesia is the most appropriate diagnosis because it directly addresses the actual problem (inability to void) and the likely etiology (anesthesia effects on bladder function)."
+  },
+  {
+    "q": "A nurse is caring for a client with a new diagnosis of heart failure. The client states, 'I don't understand why I need to weigh myself every day.' Which response by the nurse best demonstrates the evaluation phase of the nursing process?",
+    "options": [
+      "A. 'Let me explain why daily weights are important for your condition.'",
+      "B. 'I will add daily weight education to your care plan.'",
+      "C. 'Can you tell me what you already know about managing heart failure?'",
+      "D. 'You were taught about daily weights yesterday. Can you explain why they are important?'"
+    ],
+    "correct": 3,
+    "rationale": "Evaluation involves determining whether expected outcomes have been met. By asking the client to explain what was previously taught, the nurse is evaluating the effectiveness of prior education."
+  },
+  {
+    "q": "A nurse is prioritizing care for four clients at the start of a shift. Which client should the nurse assess first?",
+    "options": [
+      "A. A client with chronic kidney disease who has a potassium level of 3.8 mEq/L",
+      "B. A client with diabetes mellitus who has a blood glucose of 180 mg/dL",
+      "C. A client with pneumonia who has a new oxygen saturation of 85%",
+      "D. A client with a hip fracture who is requesting pain medication"
+    ],
+    "correct": 2,
+    "rationale": "An oxygen saturation of 85% indicates significant hypoxemia and requires immediate assessment. Using the ABCs (Airway, Breathing, Circulation) framework, breathing concerns take priority over the other stable or less urgent findings."
+  },
+  {
+    "q": "A nurse is developing a care plan for a client with impaired mobility following a stroke. Which goal statement is correctly written?",
+    "options": [
+      "A. The client will feel better about mobility limitations by discharge",
+      "B. The nurse will assist the client with range-of-motion exercises daily",
+      "C. The client will transfer from bed to chair with standby assistance within 3 days",
+      "D. The client will understand the importance of physical therapy"
+    ],
+    "correct": 2,
+    "rationale": "A properly written goal is client-centered, measurable, achievable, realistic, and time-bound. This option specifies the client action, the level of assistance, and a timeframe, making it measurable and evaluable."
+  },
+  {
+    "q": "A nurse is using clinical judgment to analyze assessment findings for a client reporting chest pain. Which action demonstrates the 'Analyze Cues' step of the NCSBN Clinical Judgment Measurement Model?",
+    "options": [
+      "A. Obtaining the client's vital signs and oxygen saturation",
+      "B. Linking the client's diaphoresis and jaw pain to possible myocardial infarction",
+      "C. Calling the rapid response team immediately",
+      "D. Documenting the client's pain level on a 0-10 scale"
+    ],
+    "correct": 1,
+    "rationale": "Analyzing cues involves linking assessment data to potential conditions or complications. Connecting symptoms like diaphoresis and jaw pain to a possible myocardial infarction represents clinical reasoning and pattern recognition."
+  },
+  {
+    "q": "A nurse determines that a client's pain level has decreased from 8 to 3 after administering an analgesic. This finding is part of which phase of the nursing process?",
+    "options": [
+      "A. Assessment",
+      "B. Planning",
+      "C. Implementation",
+      "D. Evaluation"
+    ],
+    "correct": 3,
+    "rationale": "Evaluation involves comparing the client's current status with the expected outcomes. Determining that pain decreased from 8 to 3 after an intervention reflects evaluation of the effectiveness of that intervention."
+  },
+  {
+    "q": "A nurse is conducting a focused assessment on a client who reports sudden onset of shortness of breath. Which assessment technique should the nurse use first?",
+    "options": [
+      "A. Inspection of the chest for symmetry and respiratory effort",
+      "B. Palpation of the chest wall for tenderness",
+      "C. Percussion of the lung fields for dullness",
+      "D. Auscultation of breath sounds bilaterally"
+    ],
+    "correct": 0,
+    "rationale": "The correct order of physical assessment for most body systems is inspection, palpation, percussion, and auscultation. Inspection is always performed first to observe for visible abnormalities such as asymmetry, retractions, or increased work of breathing."
+  },
+  {
+    "q": "A nurse is implementing a nursing intervention for a client with a nursing diagnosis of Imbalanced Nutrition: Less Than Body Requirements. Which action is most appropriate?",
+    "options": [
+      "A. Weigh the client weekly and document trends",
+      "B. Collaborate with the dietitian to develop a high-calorie meal plan",
+      "C. Evaluate the client's caloric intake at the end of each shift",
+      "D. Identify the client's food preferences and cultural dietary needs"
+    ],
+    "correct": 1,
+    "rationale": "Implementation involves carrying out the planned interventions. Collaborating with the dietitian to develop a meal plan is a direct nursing intervention that addresses the nutritional deficit. The other options reflect assessment or evaluation activities."
+  },
+  {
+    "q": "A nurse is caring for four clients and must prioritize assessments based on Maslow's hierarchy of needs. Which client need should be addressed first?",
+    "options": [
+      "A. A client who is anxious about a scheduled surgery tomorrow",
+      "B. A client who reports feeling isolated due to contact precautions",
+      "C. A client who has a blood pressure of 78/50 mmHg",
+      "D. A client who is requesting information about a support group"
+    ],
+    "correct": 2,
+    "rationale": "According to Maslow's hierarchy, physiological needs take highest priority. A blood pressure of 78/50 mmHg indicates hemodynamic instability, which is a physiological threat requiring immediate intervention before addressing psychosocial needs."
+  },
+  {
+    "q": "A nurse is planning care using evidence-based practice. Which action best reflects the integration of current best evidence into clinical decision-making?",
+    "options": [
+      "A. Following the unit routine that has been in place for 10 years",
+      "B. Applying findings from a recent systematic review to the client's wound care protocol",
+      "C. Consulting only with senior nurses about the best approach",
+      "D. Using the nurse's personal clinical experience as the sole guide"
+    ],
+    "correct": 1,
+    "rationale": "Evidence-based practice integrates the best current research evidence, clinical expertise, and client preferences. Applying findings from a systematic review directly incorporates high-quality research evidence into care planning."
+  },
+  {
+    "q": "A nurse recognizes that a client's condition is deteriorating based on a pattern of declining vital signs over the past 4 hours. This ability to identify the pattern represents which component of clinical judgment?",
+    "options": [
+      "A. Noticing",
+      "B. Interpreting",
+      "C. Responding",
+      "D. Reflecting"
+    ],
+    "correct": 0,
+    "rationale": "Noticing is the perceptual ability to recognize that something has changed or is significant about a client's condition. Identifying a trend in declining vital signs over time demonstrates the nurse's ability to notice relevant changes."
+  },
+  {
+    "q": "A nurse is planning discharge teaching for a client with newly diagnosed type 2 diabetes. Which expected outcome best demonstrates the client's readiness for self-management?",
+    "options": [
+      "A. The client will state an understanding of the disease process",
+      "B. The client will express willingness to learn about the disease",
+      "C. The client will correctly demonstrate blood glucose monitoring technique",
+      "D. The client will read the pamphlet about diabetes management"
+    ],
+    "correct": 2,
+    "rationale": "Return demonstration is the most reliable method to evaluate psychomotor learning. A client who can correctly demonstrate blood glucose monitoring shows competency in a critical self-management skill, which is more measurable than stating understanding."
+  },
+  {
+    "q": "A nurse discovers that a client who is at high risk for falls has gotten out of bed without calling for assistance. Which is the nurse's priority action?",
+    "options": [
+      "A. Document the incident in the client's medical record",
+      "B. Remind the client to use the call light before getting up",
+      "C. Ensure the client's immediate safety and assess for injury",
+      "D. Apply a bed alarm to prevent future occurrences"
+    ],
+    "correct": 2,
+    "rationale": "The nurse's first priority is always client safety. Before documenting, educating, or implementing new safety measures, the nurse must ensure the client is safe and assess for any injuries that may have occurred."
+  },
+  {
+    "q": "A nurse is caring for a client who has been placed in bilateral soft wrist restraints. Which assessment finding requires the nurse to remove the restraints immediately?",
+    "options": [
+      "A. The client is pulling at the restraints intermittently",
+      "B. The client's fingers are cyanotic and cool to the touch",
+      "C. The client is requesting to have the restraints removed",
+      "D. The client's family is upset about the use of restraints"
+    ],
+    "correct": 1,
+    "rationale": "Cyanotic and cool fingers indicate impaired circulation distal to the restraints, which is a serious complication requiring immediate restraint removal. Neurovascular compromise can lead to permanent tissue damage if not promptly addressed."
+  },
+  {
+    "q": "A nurse is implementing seizure precautions for a client with a history of tonic-clonic seizures. Which intervention is appropriate?",
+    "options": [
+      "A. Placing a padded tongue blade at the bedside for insertion during a seizure",
+      "B. Keeping the bed in the lowest position with padded side rails raised",
+      "C. Restraining the client's extremities to prevent injury during a seizure",
+      "D. Dimming the lights and placing the client in a private room"
+    ],
+    "correct": 1,
+    "rationale": "Keeping the bed in the lowest position with padded side rails reduces the risk of injury during a seizure. Objects should never be placed in the mouth during a seizure, and extremities should not be restrained, as this can cause fractures."
+  },
+  {
+    "q": "A nurse hears a fire alarm on the unit. A client in the room closest to the fire is on supplemental oxygen. What is the nurse's priority action?",
+    "options": [
+      "A. Close all doors and windows on the unit",
+      "B. Attempt to extinguish the fire using the nearest fire extinguisher",
+      "C. Rescue the client by removing them from the immediate danger",
+      "D. Call the fire department and report the location of the fire"
+    ],
+    "correct": 2,
+    "rationale": "Using the RACE mnemonic (Rescue, Alarm, Contain, Extinguish), the first priority is to rescue clients in immediate danger. The client near the fire on supplemental oxygen is at greatest risk and must be moved to safety first."
+  },
+  {
+    "q": "A nurse is assessing a client's room for fall risk factors. Which environmental modification should the nurse prioritize?",
+    "options": [
+      "A. Ensuring the overbed table is within the client's reach",
+      "B. Placing the call light within the client's reach and orienting the client to its use",
+      "C. Providing non-skid slippers at the bedside",
+      "D. Adjusting the room temperature to the client's preference"
+    ],
+    "correct": 1,
+    "rationale": "Ensuring the call light is within reach and that the client knows how to use it is the most critical fall prevention measure. Clients who cannot reach or do not know how to use the call light are more likely to attempt to get up unassisted."
+  },
+  {
+    "q": "A nurse is caring for a client with restraints. How frequently must the nurse assess the client's circulation, sensation, and movement in the restrained extremities?",
+    "options": [
+      "A. Every 4 hours",
+      "B. Every 2 hours",
+      "C. Every 1 to 2 hours or per facility policy",
+      "D. Every 30 minutes"
+    ],
+    "correct": 2,
+    "rationale": "National guidelines and most facility policies require assessment of circulation, sensation, and movement in restrained extremities every 1 to 2 hours. This frequency allows early detection of neurovascular compromise while ensuring client safety."
+  },
+  {
+    "q": "A nurse is teaching a client about home safety after discharge. The client takes an anticoagulant and antihypertensive medications. Which instruction is most important for preventing injury?",
+    "options": [
+      "A. 'Use an electric razor instead of a straight razor for shaving.'",
+      "B. 'Install grab bars in the bathroom and use a nonslip bath mat.'",
+      "C. 'Avoid eating foods high in vitamin K.'",
+      "D. 'Take your blood pressure daily and record the results.'"
+    ],
+    "correct": 1,
+    "rationale": "A client taking both anticoagulants and antihypertensives is at increased risk for falls (orthostatic hypotension) and bleeding. Installing grab bars and using nonslip mats addresses the highest-risk safety concern by preventing falls that could lead to hemorrhagic injury."
+  },
+  {
+    "q": "A nurse is preparing to use a fire extinguisher. Which technique should the nurse use?",
+    "options": [
+      "A. Pull the pin, Aim at the top of the flames, Squeeze the handle, Sweep side to side",
+      "B. Pull the pin, Aim at the base of the fire, Squeeze the handle, Sweep side to side",
+      "C. Squeeze the handle, Pull the pin, Aim at the base, Sweep up and down",
+      "D. Aim at the base of the fire, Pull the pin, Sweep side to side, Squeeze the handle"
+    ],
+    "correct": 1,
+    "rationale": "The PASS mnemonic guides proper fire extinguisher use: Pull the pin, Aim at the base of the fire (not the flames), Squeeze the handle, and Sweep from side to side. Aiming at the base targets the fuel source of the fire."
+  },
+  {
+    "q": "A nurse is caring for a client on a medical-surgical unit who is confused and attempting to pull out an IV line. Which intervention should the nurse implement first before considering restraints?",
+    "options": [
+      "A. Administer a sedative medication as prescribed",
+      "B. Call the healthcare provider to obtain a restraint order",
+      "C. Apply bilateral soft wrist restraints to protect the IV site",
+      "D. Attempt redirection, reorientation, and have a family member sit with the client"
+    ],
+    "correct": 3,
+    "rationale": "Least restrictive interventions must always be attempted before applying restraints. Redirection, reorientation, and the presence of a familiar person are non-restraint alternatives that should be tried first to manage the client's behavior safely."
+  },
+  {
+    "q": "During a seizure, a nurse notes that the client has fallen to the floor from a chair. What is the nurse's immediate action?",
+    "options": [
+      "A. Attempt to insert an oral airway to maintain a patent airway",
+      "B. Restrain the client's arms and legs to prevent further injury",
+      "C. Protect the client's head and move nearby objects away",
+      "D. Time the seizure and call the healthcare provider immediately"
+    ],
+    "correct": 2,
+    "rationale": "During an active seizure, the priority is to protect the client from injury. The nurse should cushion the head and remove nearby objects that could cause harm. Nothing should be inserted into the mouth, and extremities should not be restrained."
+  },
+  {
+    "q": "A nurse is caring for a client who has a latex allergy. Which precaution is most important?",
+    "options": [
+      "A. Placing the client in a negative-pressure isolation room",
+      "B. Ensuring all equipment and supplies in the room are latex-free",
+      "C. Requiring all visitors to wear gowns and gloves",
+      "D. Placing a latex allergy band on the client and using standard precautions only"
+    ],
+    "correct": 1,
+    "rationale": "For a client with a latex allergy, the most critical intervention is ensuring that all equipment, gloves, and supplies in the client's environment are latex-free to prevent a potentially life-threatening allergic reaction."
+  },
+  {
+    "q": "A nurse is providing care to a client on contact precautions. Which action by the nurse demonstrates correct technique?",
+    "options": [
+      "A. Wearing gloves and a gown upon entering the room and removing them before exiting",
+      "B. Wearing an N95 respirator, gloves, and gown when entering the room",
+      "C. Wearing gloves only when providing direct care to the client",
+      "D. Donning a surgical mask and gloves before entering the room"
+    ],
+    "correct": 0,
+    "rationale": "Contact precautions require the use of gloves and gown upon entry into the client's room. These are removed before leaving the room, followed by hand hygiene. An N95 respirator is required for airborne precautions, not contact precautions."
+  },
+  {
+    "q": "A nurse is admitting a client with suspected tuberculosis. Which type of precautions should the nurse implement in addition to standard precautions?",
+    "options": [
+      "A. Contact precautions with a private room",
+      "B. Droplet precautions with a surgical mask",
+      "C. Airborne precautions with a negative-pressure room and N95 respirator",
+      "D. Protective environment precautions with positive-pressure airflow"
+    ],
+    "correct": 2,
+    "rationale": "Tuberculosis is transmitted via airborne nuclei that remain suspended in the air. Airborne precautions require a negative-pressure isolation room and an N95 or higher-level respirator for healthcare workers entering the room."
+  },
+  {
+    "q": "A nurse is preparing to perform a sterile wound dressing change. Which action contaminates the sterile field?",
+    "options": [
+      "A. Pouring sterile saline from a height of 6 inches onto the sterile field",
+      "B. Opening the outermost flap of the sterile package away from the body first",
+      "C. Reaching across the sterile field to place supplies on the opposite side",
+      "D. Keeping all sterile supplies within the 1-inch border of the sterile drape"
+    ],
+    "correct": 2,
+    "rationale": "Reaching across a sterile field contaminates it because the arm is not sterile and passes over the field. The nurse should add items to the sterile field without reaching over it, placing items by dropping them onto the field from the package edge."
+  },
+  {
+    "q": "A nurse is performing hand hygiene with an alcohol-based hand rub. Which situation requires the nurse to wash hands with soap and water instead?",
+    "options": [
+      "A. Before inserting a urinary catheter",
+      "B. After removing gloves used during a dressing change",
+      "C. When caring for a client with Clostridioides difficile infection",
+      "D. Before administering oral medications"
+    ],
+    "correct": 2,
+    "rationale": "Alcohol-based hand rubs are not effective against Clostridioides difficile spores. Soap and water with friction are required to physically remove the spores from the hands. This is a critical infection control measure for C. difficile."
+  },
+  {
+    "q": "A nurse is donning personal protective equipment (PPE) before entering a client's room. Which is the correct order for putting on PPE?",
+    "options": [
+      "A. Gown, mask or respirator, goggles or face shield, gloves",
+      "B. Gloves, gown, mask or respirator, goggles or face shield",
+      "C. Mask or respirator, goggles or face shield, gown, gloves",
+      "D. Goggles or face shield, mask or respirator, gloves, gown"
+    ],
+    "correct": 0,
+    "rationale": "The correct donning sequence is gown first, then mask or respirator, then goggles or face shield, and finally gloves. This order ensures that each layer of protection is applied correctly and the gloves can overlap the gown cuffs."
+  },
+  {
+    "q": "A nurse is caring for a client with meningococcal meningitis. Which type of transmission-based precautions should the nurse implement?",
+    "options": [
+      "A. Airborne precautions with a negative-pressure room",
+      "B. Droplet precautions with a surgical mask within 3 to 6 feet",
+      "C. Contact precautions with gown and gloves",
+      "D. Standard precautions only with strict hand hygiene"
+    ],
+    "correct": 1,
+    "rationale": "Meningococcal meningitis is transmitted via respiratory droplets. Droplet precautions require a surgical mask when within 3 to 6 feet of the client, a private room, and standard precautions. Airborne precautions are not necessary for this organism."
+  },
+  {
+    "q": "A nurse is teaching nursing students about the chain of infection. A student asks about the most effective way to break the chain. Which response by the nurse is correct?",
+    "options": [
+      "A. 'Using standard precautions and proper hand hygiene is the single most effective method.'",
+      "B. 'Administering prophylactic antibiotics to all hospitalized clients breaks the chain.'",
+      "C. 'Isolation of all clients on admission prevents the spread of infection.'",
+      "D. 'Sterilizing all surfaces in the hospital every hour eliminates pathogens.'"
+    ],
+    "correct": 0,
+    "rationale": "Hand hygiene is recognized as the single most effective method to prevent the transmission of infections in healthcare settings. Standard precautions, which include hand hygiene, are applied to all clients regardless of diagnosis."
+  },
+  {
+    "q": "A nurse is preparing to administer an intramuscular injection. Which action best demonstrates surgical asepsis?",
+    "options": [
+      "A. Washing hands before preparing the injection",
+      "B. Wearing clean gloves during the injection",
+      "C. Cleaning the injection site with an antiseptic swab using a circular motion from center outward",
+      "D. Recapping the needle after administration using the scoop method"
+    ],
+    "correct": 2,
+    "rationale": "Cleaning the injection site with an antiseptic using a circular motion from the center outward is a principle of surgical asepsis. This technique moves microorganisms away from the injection site, reducing the risk of introducing pathogens."
+  },
+  {
+    "q": "A nurse is teaching a client about proper use of incentive spirometry to prevent postoperative pneumonia. Which statement by the client indicates correct understanding?",
+    "options": [
+      "A. 'I will exhale forcefully into the device as many times as possible.'",
+      "B. 'I will seal my lips around the mouthpiece and inhale slowly and deeply.'",
+      "C. 'I will use the device once a day before bedtime.'",
+      "D. 'I will use the device only when I feel short of breath.'"
+    ],
+    "correct": 1,
+    "rationale": "Proper incentive spirometry technique involves sealing the lips around the mouthpiece and inhaling slowly and deeply to maximize lung expansion. The device encourages sustained maximal inspiration, which helps prevent atelectasis and pneumonia."
+  },
+  {
+    "q": "A nurse is removing PPE after caring for a client on contact precautions. Which is the correct order for removing PPE?",
+    "options": [
+      "A. Gloves, gown, goggles or face shield, mask or respirator",
+      "B. Mask or respirator, goggles or face shield, gown, gloves",
+      "C. Gown, gloves, mask or respirator, goggles or face shield",
+      "D. Goggles or face shield, gloves, gown, mask or respirator"
+    ],
+    "correct": 0,
+    "rationale": "The correct doffing sequence is gloves first (most contaminated), then gown, then goggles or face shield, and finally the mask or respirator. Gloves are removed first because they have the most contact with contaminated surfaces."
+  },
+  {
+    "q": "A client tells the nurse, 'I'm so scared about my surgery tomorrow. What if I don't wake up?' Which response by the nurse demonstrates the best therapeutic communication?",
+    "options": [
+      "A. 'Don't worry, your surgeon is one of the best. You'll be fine.'",
+      "B. 'It sounds like you are feeling frightened about the surgery. Tell me more about your concerns.'",
+      "C. 'I had the same surgery last year and everything went great.'",
+      "D. 'Why are you worried? The statistics show this is a very safe procedure.'"
+    ],
+    "correct": 1,
+    "rationale": "Reflecting the client's feelings and using an open-ended statement encourages the client to express concerns. This validates the client's emotions without offering false reassurance, minimizing feelings, or shifting focus to the nurse's experience."
+  },
+  {
+    "q": "A nurse is caring for a client from a cultural background that values modesty. The client needs a complete bed bath. Which action by the nurse is most culturally sensitive?",
+    "options": [
+      "A. Assign a same-gender nursing assistant to perform the bath",
+      "B. Explain that all nurses are professionals and modesty should not be a concern",
+      "C. Ask the client about their preferences for bathing and gender of caregiver",
+      "D. Skip the bath to avoid causing the client distress"
+    ],
+    "correct": 2,
+    "rationale": "Asking the client directly about preferences demonstrates cultural sensitivity and respect for autonomy. The nurse should not assume preferences based on culture but rather ask the individual client how they would like their care provided."
+  },
+  {
+    "q": "A nurse is communicating with a client who speaks limited English. Which action is most appropriate to ensure effective communication?",
+    "options": [
+      "A. Speak louder and slower to help the client understand",
+      "B. Ask a family member who is bilingual to interpret medical information",
+      "C. Use a professional medical interpreter for important healthcare discussions",
+      "D. Use hand gestures and simple words to convey the message"
+    ],
+    "correct": 2,
+    "rationale": "Professional medical interpreters are trained to accurately convey medical terminology and maintain confidentiality. Using family members can lead to errors, omissions, or breaches of privacy. Speaking louder does not improve comprehension of a different language."
+  },
+  {
+    "q": "A client who has just been diagnosed with terminal cancer says to the nurse, 'This can't be right. The lab must have mixed up my results.' Which stage of grief is the client most likely experiencing?",
+    "options": [
+      "A. Denial",
+      "B. Anger",
+      "C. Bargaining",
+      "D. Depression"
+    ],
+    "correct": 0,
+    "rationale": "Denial is characterized by disbelief and refusal to accept the reality of a situation. The client's statement about results being mixed up suggests an inability to accept the diagnosis, which is consistent with the denial stage of the Kubler-Ross grief model."
+  },
+  {
+    "q": "A nurse is leading a group therapy session and notices that one client dominates the conversation while others remain silent. Which therapeutic communication technique should the nurse use?",
+    "options": [
+      "A. Tell the dominant client to stop talking so others can participate",
+      "B. End the session early to prevent further group imbalance",
+      "C. Redirect the conversation by inviting quiet members to share their thoughts",
+      "D. Allow the dominant client to continue since they are engaged in therapy"
+    ],
+    "correct": 2,
+    "rationale": "Redirecting the conversation by inviting quieter members to participate promotes group interaction and ensures all clients benefit from the session. This technique maintains a therapeutic environment without singling out or criticizing any participant."
+  },
+  {
+    "q": "A nurse is caring for an older adult client who appears withdrawn and tearful. Which statement by the nurse best promotes a therapeutic relationship?",
+    "options": [
+      "A. 'Cheer up! Things will get better soon.'",
+      "B. 'I can see you're upset. Would you like to talk about what's bothering you?'",
+      "C. 'Let me call your family so they can cheer you up.'",
+      "D. 'You should try watching TV to take your mind off things.'"
+    ],
+    "correct": 1,
+    "rationale": "Acknowledging the client's emotional state and offering an opportunity to talk demonstrates empathy, active listening, and a client-centered approach. This response validates feelings without dismissing them or offering unsolicited solutions."
+  },
+  {
+    "q": "A nurse is performing a health history interview with a new client. Which question is an example of an open-ended question?",
+    "options": [
+      "A. 'Do you have any allergies?'",
+      "B. 'Have you had surgery before?'",
+      "C. 'What brings you to the hospital today?'",
+      "D. 'Is your pain a 5 on a scale of 0 to 10?'"
+    ],
+    "correct": 2,
+    "rationale": "Open-ended questions cannot be answered with a simple yes or no and encourage the client to provide more detailed information. Asking what brings the client to the hospital allows the client to describe their concerns in their own words."
+  },
+  {
+    "q": "A nurse is caring for a client who practices Islam and requests a halal diet. Which action by the nurse is most appropriate?",
+    "options": [
+      "A. Explain that the hospital cannot accommodate special dietary requests",
+      "B. Encourage the client to eat whatever is available to maintain nutrition",
+      "C. Contact the dietary department to arrange for halal meals",
+      "D. Ask the client's family to bring food from home as the only option"
+    ],
+    "correct": 2,
+    "rationale": "Contacting the dietary department to arrange halal meals respects the client's cultural and religious practices while ensuring proper nutrition. Hospitals are expected to accommodate reasonable dietary requests related to cultural or religious beliefs."
+  },
+  {
+    "q": "A client says to the nurse, 'My doctor never explains anything to me.' Which response by the nurse uses the technique of paraphrasing?",
+    "options": [
+      "A. 'You feel that your doctor doesn't communicate enough with you about your care.'",
+      "B. 'Why do you feel that way about your doctor?'",
+      "C. 'I'll speak to your doctor about spending more time with you.'",
+      "D. 'Your doctor is very busy but I'm sure they care about you.'"
+    ],
+    "correct": 0,
+    "rationale": "Paraphrasing involves restating the client's message in the nurse's own words to confirm understanding. This response reflects the client's concern without changing the meaning, encouraging further dialogue and showing active listening."
+  },
+  {
+    "q": "A nurse is providing end-of-life care to a client. The client's family members are from a culture that values large family gatherings at the bedside. The unit policy limits visitors to two at a time. What should the nurse do?",
+    "options": [
+      "A. Strictly enforce the two-visitor policy without exception",
+      "B. Ignore the policy and allow unlimited visitors",
+      "C. Advocate for the family by discussing the situation with the charge nurse to explore flexible visitation",
+      "D. Tell the family they must choose only two members to stay"
+    ],
+    "correct": 2,
+    "rationale": "Advocating for the client and family while working within the healthcare system demonstrates cultural competence and compassion. Discussing the situation with the charge nurse may allow for flexible arrangements during end-of-life care."
+  },
+  {
+    "q": "A nurse is communicating with a client who has a hearing impairment. Which technique should the nurse use to enhance communication?",
+    "options": [
+      "A. Shout clearly so the client can hear each word",
+      "B. Stand behind the client and speak directly into their ear",
+      "C. Face the client, speak clearly at a normal volume, and reduce background noise",
+      "D. Write all communication on paper and avoid speaking"
+    ],
+    "correct": 2,
+    "rationale": "Facing the client allows for lip reading and visual cues, speaking clearly at a normal volume prevents distortion, and reducing background noise improves audibility. Shouting distorts sound, and writing only may not be necessary or preferred by all hearing-impaired clients."
+  },
+  {
+    "q": "A nurse is documenting a client's wound assessment. Which entry demonstrates proper objective documentation?",
+    "options": [
+      "A. 'Client has a large, nasty-looking wound on the left leg.'",
+      "B. 'Client's wound appears to be getting worse and is probably infected.'",
+      "C. 'Left lower leg wound measures 3 cm x 2 cm x 0.5 cm with serous drainage and pink wound bed.'",
+      "D. 'Client seems to be in a lot of pain from the wound.'"
+    ],
+    "correct": 2,
+    "rationale": "Objective documentation includes measurable, factual data without subjective interpretation. Describing wound dimensions, drainage type, and wound bed color provides specific, quantifiable information that can be compared over time to track healing."
+  },
+  {
+    "q": "A nurse is preparing to give a handoff report using the SBAR format. Which information should be communicated in the 'B' (Background) section?",
+    "options": [
+      "A. The client's current vital signs and assessment findings",
+      "B. The client's pertinent medical history, current diagnosis, and relevant treatments",
+      "C. The nurse's recommendation for the plan of care",
+      "D. The client's name, room number, and reason for admission"
+    ],
+    "correct": 1,
+    "rationale": "The Background section of SBAR includes pertinent medical history, current diagnosis, and relevant treatments that provide context for the client's current situation. Situation covers the current concern, Assessment covers current findings, and Recommendation covers suggested actions."
+  },
+  {
+    "q": "A nurse discovers that a medication error occurred when a client received the wrong dose of insulin. What is the nurse's first action?",
+    "options": [
+      "A. Complete an incident report immediately",
+      "B. Notify the charge nurse and healthcare provider",
+      "C. Assess the client for signs and symptoms of hypoglycemia",
+      "D. Document the error in the client's medical record"
+    ],
+    "correct": 2,
+    "rationale": "The nurse's first priority is always client safety. Assessing the client for adverse effects of the wrong insulin dose allows for immediate intervention if hypoglycemia is present. Notification and documentation follow the initial client assessment."
+  },
+  {
+    "q": "A nurse is completing an incident report after a client fall. Which information should be included in the incident report?",
+    "options": [
+      "A. The nurse's opinion about why the fall occurred",
+      "B. An objective description of the event, client assessment findings, and actions taken",
+      "C. A statement that the incident report was filed in the client's medical record",
+      "D. The names of witnesses and a recommendation for disciplinary action"
+    ],
+    "correct": 1,
+    "rationale": "Incident reports should contain objective, factual information including what happened, the client's condition, and interventions performed. Opinions, blame, and disciplinary recommendations are not appropriate. Incident reports are not placed in the medical record."
+  },
+  {
+    "q": "A nurse receives a telephone order from a healthcare provider. Which action ensures safe documentation of the order?",
+    "options": [
+      "A. Implement the order immediately and document it at the end of the shift",
+      "B. Write the order down, read it back to the provider, and receive confirmation",
+      "C. Ask another nurse to listen to the order on speakerphone for verification",
+      "D. Document the order from memory after hanging up the phone"
+    ],
+    "correct": 1,
+    "rationale": "The read-back method is a patient safety practice that reduces errors in telephone orders. The nurse writes the order, reads it back verbatim to the prescriber, and receives verbal confirmation of accuracy before implementing it."
+  },
+  {
+    "q": "A nurse is documenting in the medical record and realizes an error was made in a previous entry. Which action is correct?",
+    "options": [
+      "A. Use correction fluid to cover the error and rewrite the entry",
+      "B. Draw a single line through the error, write 'mistaken entry,' date, time, and initial it",
+      "C. Remove the page and rewrite the entire entry on a new page",
+      "D. Add an addendum at the end of the chart without referencing the error"
+    ],
+    "correct": 1,
+    "rationale": "The correct way to correct a documentation error is to draw a single line through the incorrect entry so it remains legible, label it as a mistaken entry, and add the date, time, and initials. This maintains the integrity of the legal record."
+  },
+  {
+    "q": "A nurse is preparing to transfer a client to another unit. Which communication method best promotes continuity of care during the handoff?",
+    "options": [
+      "A. Leaving a written note at the nurses' station on the receiving unit",
+      "B. Sending an email to the receiving nurse with the client's information",
+      "C. Providing a verbal bedside report to the receiving nurse using a standardized handoff tool",
+      "D. Asking the client to relay their own medical history to the new nurse"
+    ],
+    "correct": 2,
+    "rationale": "A verbal bedside handoff using a standardized tool such as SBAR allows for two-way communication, verification of information, and the opportunity for the receiving nurse to ask questions and visually assess the client, promoting safe continuity of care."
+  },
+  {
+    "q": "A nurse is reviewing documentation guidelines with a new graduate nurse. Which statement by the new nurse indicates correct understanding?",
+    "options": [
+      "A. 'I should document the care I plan to provide at the beginning of each shift.'",
+      "B. 'I should use approved abbreviations and document care as soon as possible after it is provided.'",
+      "C. 'I should include my personal opinions about the client's prognosis in the notes.'",
+      "D. 'I should chart the same information in multiple places to ensure completeness.'"
+    ],
+    "correct": 1,
+    "rationale": "Documentation should use only approved abbreviations and be completed as close to the time of care as possible to ensure accuracy. Documenting planned care, personal opinions, or redundant entries does not meet documentation standards."
+  },
+  {
+    "q": "A nurse is reporting a change in a client's condition to the healthcare provider using SBAR. Which statement belongs in the 'R' (Recommendation) component?",
+    "options": [
+      "A. 'The client's blood pressure has dropped to 82/54 mmHg.'",
+      "B. 'The client was admitted yesterday for dehydration and has a history of renal insufficiency.'",
+      "C. 'I believe the client is showing signs of hypovolemic shock.'",
+      "D. 'I recommend a bolus of normal saline and a stat complete metabolic panel.'"
+    ],
+    "correct": 3,
+    "rationale": "The Recommendation component of SBAR is where the nurse suggests a course of action based on the assessment. Recommending specific interventions such as fluid administration and laboratory tests demonstrates clinical judgment and proactive advocacy."
+  },
+  {
+    "q": "A registered nurse (RN) is delegating tasks to an unlicensed assistive personnel (UAP). Which task is appropriate to delegate?",
+    "options": [
+      "A. Measuring and recording a stable client's vital signs",
+      "B. Assessing a newly admitted client's neurological status",
+      "C. Developing the nursing care plan for a client with heart failure",
+      "D. Educating a client with diabetes about insulin administration"
+    ],
+    "correct": 0,
+    "rationale": "Measuring and recording vital signs on a stable client is a routine task within the UAP's scope. Assessment, care planning, and client education require clinical judgment and are within the RN's scope of practice and cannot be delegated."
+  },
+  {
+    "q": "A charge nurse is making shift assignments. A licensed practical nurse (LPN) is on the team. Which client assignment is most appropriate for the LPN?",
+    "options": [
+      "A. A client who was just admitted with unstable angina requiring cardiac monitoring",
+      "B. A client with a chronic wound requiring sterile dressing changes and wound assessment",
+      "C. A stable postoperative client requiring routine vital signs and medication administration",
+      "D. A client who needs discharge teaching for newly diagnosed chronic obstructive pulmonary disease"
+    ],
+    "correct": 2,
+    "rationale": "An LPN can provide care to stable, predictable clients including routine vital signs and medication administration. Clients who are unstable, need complex assessment, or require extensive teaching should be assigned to an RN."
+  },
+  {
+    "q": "A nurse has delegated the task of ambulating a client to a UAP. The UAP reports that the client became dizzy during ambulation. What is the nurse's best response?",
+    "options": [
+      "A. Tell the UAP to try ambulating the client again in one hour",
+      "B. Ask the UAP to document the dizziness in the medical record",
+      "C. Go to the client's room and assess the client personally",
+      "D. Instruct the UAP to take the client's blood pressure and report back"
+    ],
+    "correct": 2,
+    "rationale": "When a change in a client's condition is reported, the RN must personally assess the client. Assessment cannot be delegated and requires the nurse's clinical judgment to determine the cause of dizziness and appropriate interventions."
+  },
+  {
+    "q": "A nurse is working with a team that includes an RN, LPN, and UAP. A newly admitted client requires an initial nursing assessment. Which team member should perform this task?",
+    "options": [
+      "A. The UAP, since they can collect baseline data",
+      "B. The LPN, since they can perform focused assessments",
+      "C. Either the RN or LPN, depending on who is available",
+      "D. The RN, since initial assessment requires comprehensive clinical judgment"
+    ],
+    "correct": 3,
+    "rationale": "The initial comprehensive nursing assessment of a newly admitted client must be performed by the RN. This task requires clinical judgment to establish the baseline and identify actual or potential health problems that guide the plan of care."
+  },
+  {
+    "q": "A nurse is considering delegating blood glucose monitoring to a UAP for a stable diabetic client. Before delegating, which of the Five Rights of Delegation must the nurse consider?",
+    "options": [
+      "A. Right task, right circumstance, right person, right direction, right supervision",
+      "B. Right client, right dose, right time, right route, right medication",
+      "C. Right assessment, right diagnosis, right intervention, right evaluation, right documentation",
+      "D. Right authority, right compensation, right staffing, right experience, right certification"
+    ],
+    "correct": 0,
+    "rationale": "The Five Rights of Delegation are right task, right circumstance, right person, right direction/communication, and right supervision/evaluation. These principles guide the nurse in making safe delegation decisions."
+  },
+  {
+    "q": "A charge nurse observes that an RN consistently fails to complete client assessments on time. Which leadership action is most appropriate?",
+    "options": [
+      "A. Report the RN to the state board of nursing immediately",
+      "B. Reassign the RN's clients to other team members permanently",
+      "C. Meet privately with the RN to discuss the concern and develop an improvement plan",
+      "D. Document the behavior in the RN's personnel file without discussion"
+    ],
+    "correct": 2,
+    "rationale": "Effective leadership involves addressing performance issues directly through private discussion and collaborative problem-solving. Meeting with the nurse to discuss concerns and develop an improvement plan supports professional growth and accountability."
+  },
+  {
+    "q": "A nurse is working on a unit that is short-staffed. The supervisor asks the nurse to take on two additional clients, bringing the total assignment to an unsafe level. What should the nurse do?",
+    "options": [
+      "A. Accept the assignment under protest, document concerns, and notify the supervisor in writing",
+      "B. Accept the assignment without question to be a team player",
+      "C. Refuse the assignment and leave the unit immediately",
+      "D. Delegate all assessments to the LPN to manage the workload"
+    ],
+    "correct": 0,
+    "rationale": "When faced with an unsafe assignment, the nurse should accept the assignment under protest to avoid client abandonment, document concerns, and formally notify the supervisor. Refusing and leaving constitutes abandonment, while silently accepting provides no documentation of the unsafe situation."
+  },
+  {
+    "q": "A nurse is delegating tasks at the beginning of the shift. Which task is outside the scope of practice for a UAP?",
+    "options": [
+      "A. Interpreting a client's telemetry rhythm and reporting abnormalities",
+      "B. Performing oral suctioning on a client with excessive secretions",
+      "C. Obtaining a client's weight and recording intake and output",
+      "D. Assisting a client with bathing and personal hygiene"
+    ],
+    "correct": 0,
+    "rationale": "Interpreting telemetry rhythms requires clinical judgment and specialized knowledge that is beyond the UAP's training and scope of practice. This task must be performed by a licensed nurse. UAPs can perform routine tasks like weights, I&O, suctioning, and hygiene assistance."
+  },
+  {
+    "q": "A nurse manager is implementing a change in the unit's wound care protocol based on new evidence. Several nurses resist the change. Which leadership approach is most effective?",
+    "options": [
+      "A. Mandate the change and discipline nurses who do not comply",
+      "B. Involve the staff in reviewing the evidence and participating in the decision-making process",
+      "C. Delay the change until all nurses agree voluntarily",
+      "D. Implement the change only for new staff members"
+    ],
+    "correct": 1,
+    "rationale": "Involving staff in reviewing evidence and participating in the change process uses a participative leadership style that increases buy-in and reduces resistance. Evidence-based changes are more readily accepted when staff understand the rationale and have a voice in implementation."
+  },
+  {
+    "q": "A nurse witnesses a colleague make a medication error. The colleague asks the nurse not to report it because no harm was done to the client. What is the nurse's ethical and legal obligation?",
+    "options": [
+      "A. Report the error through the proper channels regardless of whether harm occurred",
+      "B. Report the error only if the client shows adverse effects",
+      "C. Respect the colleague's request since no harm occurred",
+      "D. Discuss the error privately with the colleague and leave the decision to them"
+    ],
+    "correct": 0,
+    "rationale": "All medication errors must be reported regardless of whether harm occurred. Reporting allows for system-wide analysis to prevent future errors and is a legal and ethical obligation. Failure to report can result in disciplinary action and jeopardizes client safety."
+  },
+  {
+    "q": "A client refuses a blood transfusion based on religious beliefs. The healthcare team believes the transfusion is necessary to save the client's life. Which ethical principle supports the client's right to refuse?",
+    "options": [
+      "A. Beneficence",
+      "B. Justice",
+      "C. Fidelity",
+      "D. Autonomy"
+    ],
+    "correct": 3,
+    "rationale": "Autonomy is the ethical principle that supports a competent client's right to make decisions about their own care, including the right to refuse treatment. Even when the healthcare team believes the treatment is beneficial, the client's autonomous decision must be respected."
+  },
+  {
+    "q": "A nurse is caring for a client who asks to see their medical record. Which response by the nurse is legally correct?",
+    "options": [
+      "A. 'Only your doctor can give you permission to view your record.'",
+      "B. 'I can help you submit a request to access your medical record through the proper process.'",
+      "C. 'Medical records are confidential and cannot be shared with clients.'",
+      "D. 'You can only see your record after you are discharged.'"
+    ],
+    "correct": 1,
+    "rationale": "Under HIPAA, clients have the legal right to access their medical records. The nurse should help the client follow the facility's process for requesting access. Medical records belong to the facility, but the information belongs to the client."
+  },
+  {
+    "q": "A nurse is caring for a client who signed an informed consent form for surgery. Just before being transported to the operating room, the client states, 'I've changed my mind. I don't want the surgery.' What should the nurse do?",
+    "options": [
+      "A. Notify the surgeon and document that the client has withdrawn consent",
+      "B. Administer the preoperative sedation as ordered to help calm the client",
+      "C. Explain that the consent has already been signed and cannot be withdrawn",
+      "D. Ask the client's family to convince the client to proceed with surgery"
+    ],
+    "correct": 0,
+    "rationale": "A competent client has the right to withdraw consent at any time, even after signing the consent form. The nurse must advocate for the client by notifying the surgeon immediately and documenting the client's decision. No procedure can proceed without valid consent."
+  },
+  {
+    "q": "A nurse is caring for an unconscious client who arrives at the emergency department without identification or family. The client requires emergency surgery. Which legal concept allows treatment to proceed?",
+    "options": [
+      "A. Implied consent based on the emergency doctrine",
+      "B. Informed consent obtained from the hospital administrator",
+      "C. Advance directive assumed to exist",
+      "D. Verbal consent provided by the paramedics"
+    ],
+    "correct": 0,
+    "rationale": "The emergency doctrine allows implied consent for emergency treatment when a client is unable to give consent and no authorized representative is available. It is assumed that a reasonable person would consent to life-saving treatment under such circumstances."
+  },
+  {
+    "q": "A nurse accidentally shares a client's HIV-positive status with a visitor who is not authorized to receive the information. Which legal violation has occurred?",
+    "options": [
+      "A. Breach of confidentiality under HIPAA",
+      "B. Negligence",
+      "C. Defamation of character",
+      "D. Assault"
+    ],
+    "correct": 0,
+    "rationale": "Sharing a client's protected health information, including HIV status, with an unauthorized person is a breach of confidentiality under HIPAA. This violation can result in legal consequences for the nurse and the healthcare facility."
+  },
+  {
+    "q": "A client with end-stage liver disease has a do-not-resuscitate (DNR) order. The client goes into cardiac arrest. Which action should the nurse take?",
+    "options": [
+      "A. Provide comfort measures and do not initiate CPR per the DNR order",
+      "B. Call a code blue and await the response team",
+      "C. Begin CPR immediately because all cardiac arrests require intervention",
+      "D. Contact the family before making any decisions about resuscitation"
+    ],
+    "correct": 0,
+    "rationale": "A DNR order means that CPR and resuscitation should not be initiated in the event of cardiac or respiratory arrest. The nurse should provide comfort measures consistent with the client's wishes and the physician's order. A DNR does not prevent other treatments."
+  },
+  {
+    "q": "A nurse is explaining advance directives to a client. Which statement about a durable power of attorney for healthcare is correct?",
+    "options": [
+      "A. 'It allows your chosen person to make financial decisions for you.'",
+      "B. 'It only takes effect after you are declared legally deceased.'",
+      "C. 'It must be completed in the hospital with a physician's signature.'",
+      "D. 'It designates a person to make healthcare decisions for you if you become unable to do so.'"
+    ],
+    "correct": 3,
+    "rationale": "A durable power of attorney for healthcare designates a healthcare proxy to make medical decisions on behalf of the client when they are unable to do so themselves. It is not limited to financial decisions and does not require a physician's signature."
+  },
+  {
+    "q": "A nurse suspects that an older adult client is being physically abused by a family caregiver. Which action is the nurse legally required to take?",
+    "options": [
+      "A. Confront the family caregiver about the suspected abuse",
+      "B. Wait for conclusive evidence before taking any action",
+      "C. Discuss the suspicion with the client's other family members first",
+      "D. Report the suspected abuse to the appropriate authorities as mandated by law"
+    ],
+    "correct": 3,
+    "rationale": "Nurses are mandated reporters and are legally required to report suspected abuse to the appropriate authorities, such as adult protective services. The nurse does not need to have conclusive evidence; a reasonable suspicion is sufficient to trigger the reporting obligation."
+  },
+  {
+    "q": "A nurse is providing care to a client with a living will that states no mechanical ventilation. The client develops respiratory failure and the family demands the client be placed on a ventilator. What should the nurse do?",
+    "options": [
+      "A. Follow the family's wishes and initiate mechanical ventilation",
+      "B. Notify the healthcare provider and ethics committee about the conflict between the living will and family wishes",
+      "C. Ignore the living will because the family is present to make decisions",
+      "D. Discharge the client from the hospital since care cannot be agreed upon"
+    ],
+    "correct": 1,
+    "rationale": "When a conflict exists between the client's advance directive and the family's wishes, the nurse should notify the healthcare provider and involve the ethics committee. The client's documented wishes in the living will generally take precedence, but the situation requires appropriate mediation."
+  },
+  {
+    "q": "A student nurse accidentally administers a medication to the wrong client. The supervising nurse is informed. Which concept holds the supervising nurse legally accountable?",
+    "options": [
+      "A. Res ipsa loquitur",
+      "B. Respondeat superior",
+      "C. Quasi-intentional tort",
+      "D. Good Samaritan doctrine"
+    ],
+    "correct": 1,
+    "rationale": "Respondeat superior, meaning 'let the master answer,' holds the supervising nurse and the employer legally responsible for the actions of those under their supervision. The supervising nurse has a duty to ensure safe practice by those they supervise."
+  },
+  {
+    "q": "A nurse is caring for a client who has been prescribed physical restraints. Which action by the nurse demonstrates adherence to legal requirements?",
+    "options": [
+      "A. Obtaining a healthcare provider's order before applying the restraints",
+      "B. Keeping the restraints on continuously for the entire shift",
+      "C. Tying the restraints to the side rails in a fixed knot",
+      "D. Delegating all restraint assessments to the UAP"
+    ],
+    "correct": 0,
+    "rationale": "A healthcare provider's order is legally required before applying restraints. The order must specify the type of restraint, the reason for use, and the time limit. Restraints must be released periodically, tied with quick-release knots, and assessed by a licensed nurse."
+  },
+  {
+    "q": "A nurse is caring for a client in a long-term care facility. The client's daughter requests the client's medical information by phone. Which action by the nurse is appropriate?",
+    "options": [
+      "A. Provide the information since the daughter is a family member",
+      "B. Verify the identity of the caller and check the client's authorization for release of information",
+      "C. Refuse to provide any information over the phone under any circumstances",
+      "D. Provide only basic information such as the client's room number and diagnosis"
+    ],
+    "correct": 1,
+    "rationale": "Under HIPAA, the nurse must verify the caller's identity and check whether the client has authorized the release of information to that individual. Being a family member alone does not automatically grant access to protected health information."
+  },
+  {
+    "q": "A nurse is assessing a client who had abdominal surgery 24 hours ago. The client rates pain as 8 on a 0-10 scale and is reluctant to use the incentive spirometer. Which nursing action best integrates pain management with respiratory care?",
+    "options": [
+      "A. Encourage the client to use the spirometer despite the pain to prevent complications",
+      "B. Skip the incentive spirometry until the client reports no pain",
+      "C. Report the client's refusal to the healthcare provider",
+      "D. Administer the prescribed analgesic and have the client use the spirometer once the medication takes effect"
+    ],
+    "correct": 3,
+    "rationale": "Administering pain medication before respiratory exercises is a priority intervention that addresses both pain management and respiratory care. Adequate pain control allows the client to participate in deep breathing exercises and prevents pulmonary complications."
+  },
+  {
+    "q": "A nurse is caring for a client who is 2 days postoperative after knee replacement surgery. The client has been on bedrest. Which assessment finding should the nurse report to the healthcare provider immediately?",
+    "options": [
+      "A. Mild swelling around the surgical site",
+      "B. A temperature of 99.0 degrees Fahrenheit",
+      "C. Reports of incisional pain rated 4 out of 10",
+      "D. Unilateral calf tenderness, warmth, and redness in the nonsurgical leg"
+    ],
+    "correct": 3,
+    "rationale": "Unilateral calf tenderness, warmth, and redness are classic signs of deep vein thrombosis (DVT), a serious postoperative complication of immobility and surgery. This requires immediate reporting and further assessment, as DVT can lead to pulmonary embolism."
+  },
+  {
+    "q": "A nurse is caring for a client receiving a blood transfusion who develops chills, fever, and flank pain 15 minutes into the transfusion. What is the nurse's priority action?",
+    "options": [
+      "A. Slow the infusion rate and monitor the client closely",
+      "B. Administer acetaminophen as prescribed for the fever",
+      "C. Notify the blood bank to verify the blood type",
+      "D. Stop the transfusion immediately and maintain IV access with normal saline"
+    ],
+    "correct": 3,
+    "rationale": "The symptoms suggest a hemolytic transfusion reaction, which is a medical emergency. The nurse must stop the transfusion immediately to prevent further infusion of incompatible blood while maintaining IV access with normal saline for emergency treatment."
+  },
+  {
+    "q": "A nurse is reviewing a client's intake and output record. The client received 1000 mL IV fluid, drank 480 mL of water, and consumed 240 mL of broth during the shift. Urine output was 950 mL. Which total intake should the nurse document?",
+    "options": [
+      "A. 1480 mL",
+      "B. 1720 mL",
+      "C. 1000 mL",
+      "D. 2670 mL"
+    ],
+    "correct": 1,
+    "rationale": "Total intake includes all fluids: IV fluid (1000 mL) plus oral water (480 mL) plus broth (240 mL) equals 1720 mL. All routes of fluid intake must be calculated and documented for accurate fluid balance assessment."
+  },
+  {
+    "q": "A nurse is caring for four clients. Which situation should the nurse address first?",
+    "options": [
+      "A. A client with chronic obstructive pulmonary disease whose oxygen saturation is 90%",
+      "B. A client who is 1 day postoperative requesting pain medication",
+      "C. A client who is scheduled for discharge and is awaiting prescriptions",
+      "D. A client with diabetes whose blood glucose is 55 mg/dL and is diaphoretic"
+    ],
+    "correct": 3,
+    "rationale": "A blood glucose of 55 mg/dL with diaphoresis indicates symptomatic hypoglycemia, which can rapidly progress to seizures, loss of consciousness, and death if untreated. This is an acute, life-threatening condition requiring immediate intervention."
+  },
+  {
+    "q": "A client with a history of falls is admitted to the medical-surgical unit. The nurse implements a fall prevention protocol. Which intervention is most important to include?",
+    "options": [
+      "A. Keep the client on bedrest for the duration of the hospital stay",
+      "B. Administer sedatives at night to ensure the client sleeps through the night",
+      "C. Assign a UAP to sit at the nurses' station and watch the client on the monitor",
+      "D. Ensure the bed is in the lowest position, wheels locked, and call light within reach"
+    ],
+    "correct": 3,
+    "rationale": "Ensuring the bed is in the lowest position, wheels are locked, and the call light is within reach are evidence-based fall prevention measures. Bedrest increases deconditioning risk, and sedatives can increase confusion and fall risk."
+  },
+  {
+    "q": "A nurse is caring for a client in a semiprivate room. The client in the next bed has been diagnosed with influenza. Which action should the nurse take to protect the uninfected client?",
+    "options": [
+      "A. Administer a flu vaccine to the uninfected client immediately",
+      "B. Place the infected client on airborne precautions in a negative-pressure room",
+      "C. Keep the curtain pulled between the two beds as a sufficient barrier",
+      "D. Move one of the clients to a private room and implement droplet precautions for the infected client"
+    ],
+    "correct": 3,
+    "rationale": "Influenza is spread through respiratory droplets and requires droplet precautions, including a private room when possible. Separating the clients and implementing proper precautions protects the uninfected client from transmission."
+  },
+  {
+    "q": "A nurse is caring for a client who has a chest tube connected to a water-seal drainage system. Which finding requires immediate action?",
+    "options": [
+      "A. Continuous bubbling in the water-seal chamber",
+      "B. Gentle bubbling in the suction control chamber",
+      "C. Fluctuation (tidaling) in the water-seal chamber with respiration",
+      "D. Approximately 50 mL of serous drainage in the collection chamber over 4 hours"
+    ],
+    "correct": 0,
+    "rationale": "Continuous bubbling in the water-seal chamber indicates an air leak in the system, which requires immediate assessment. The nurse should check all connections and the insertion site. Gentle suction bubbling, tidaling, and moderate drainage are expected findings."
+  },
+  {
+    "q": "A nurse is caring for a client with a nasogastric tube connected to low intermittent suction. Which finding should the nurse report to the healthcare provider?",
+    "options": [
+      "A. The client reports mild throat irritation",
+      "B. Small amounts of green-tinged drainage in the collection container",
+      "C. The client has not had a bowel movement in 24 hours",
+      "D. The client's serum potassium level is 2.8 mEq/L"
+    ],
+    "correct": 3,
+    "rationale": "A potassium level of 2.8 mEq/L is critically low (hypokalemia) and can be caused by gastric suctioning, which removes potassium-containing fluids. Hypokalemia can lead to cardiac dysrhythmias and requires immediate notification and treatment."
+  },
+  {
+    "q": "A nurse is caring for a client who practices Jehovah's Witness faith and is scheduled for surgery. The client has signed a form refusing blood products. During surgery, the client experiences significant blood loss. Which action by the healthcare team is legally and ethically correct?",
+    "options": [
+      "A. Administer blood products because the client's life is at risk",
+      "B. Obtain consent from the next of kin to override the client's refusal",
+      "C. Wait until the client regains consciousness to re-confirm the refusal",
+      "D. Respect the client's documented refusal and use alternative volume expanders"
+    ],
+    "correct": 3,
+    "rationale": "A competent adult's informed refusal of treatment, including blood products, must be respected even in life-threatening situations. The healthcare team should use alternative treatments as available. Overriding the client's documented wishes would violate their autonomy and constitute battery."
+  },
+  {
+    "q": "A client is admitted to the hospital after a motor vehicle accident and is alert and oriented. The client asks the nurse, 'What are my rights as a patient here?' Which response by the nurse is most appropriate?",
+    "options": [
+      "A. 'You have the right to receive a copy of the Patient's Bill of Rights, which includes your right to participate in your care decisions.'",
+      "B. 'Your rights are limited while you are in the hospital for your safety.'",
+      "C. 'You should ask your doctor about your rights.'",
+      "D. 'Your rights depend on your insurance coverage.'"
+    ],
+    "correct": 0,
+    "rationale": "Clients have the right to receive information about the Patient's Bill of Rights upon admission, which includes the right to participate in care decisions, give informed consent, and receive respectful care. Hospitals are required to inform clients of these rights."
+  },
+  {
+    "q": "A nurse is reviewing a client's morning laboratory results and notices a critically high potassium level of 6.8 mEq/L. Which action should the nurse take first?",
+    "options": [
+      "A. Document the finding and recheck the level in 4 hours",
+      "B. Encourage the client to drink extra fluids to flush out the potassium",
+      "C. Place the client on a potassium-restricted diet",
+      "D. Notify the healthcare provider immediately of the critical value"
+    ],
+    "correct": 3,
+    "rationale": "A potassium level of 6.8 mEq/L is critically elevated and can cause life-threatening cardiac dysrhythmias. The nurse must immediately notify the healthcare provider so that emergent interventions such as calcium gluconate, insulin with glucose, or sodium polystyrene can be initiated."
+  },
+  {
+    "q": "A nurse is admitting a client who presents with a productive cough, night sweats, and weight loss. A chest X-ray reveals upper lobe infiltrates. Until tuberculosis is confirmed or ruled out, which precautions should the nurse implement?",
+    "options": [
+      "A. Standard precautions only",
+      "B. Contact precautions with gown and gloves",
+      "C. Droplet precautions with a surgical mask",
+      "D. Airborne precautions with an N95 respirator and negative-pressure room"
+    ],
+    "correct": 3,
+    "rationale": "The client's symptoms and chest X-ray findings are highly suggestive of tuberculosis. Airborne precautions with an N95 respirator and negative-pressure isolation room must be initiated immediately, even before confirmation, to prevent potential transmission."
+  },
+  {
+    "q": "A nurse is caring for a client who speaks Mandarin and requires informed consent for a procedure. An interpreter service is unavailable for 2 hours. The client's bilingual 10-year-old child offers to interpret. What should the nurse do?",
+    "options": [
+      "A. Allow the child to interpret since they speak both languages",
+      "B. Proceed with the consent using gestures and simple English",
+      "C. Have the child interpret and have an adult family member co-sign the consent",
+      "D. Wait for the professional interpreter before obtaining informed consent"
+    ],
+    "correct": 3,
+    "rationale": "Informed consent requires that the client fully understand the procedure, risks, and alternatives. A child should not serve as an interpreter for medical discussions due to the complexity of information, potential emotional impact, and confidentiality concerns. A professional interpreter must be used."
+  },
+  {
+    "q": "A nurse is teaching a group of nursing assistants about proper hand hygiene technique when using alcohol-based hand rub. Which statement by a nursing assistant indicates correct understanding?",
+    "options": [
+      "A. 'I should rub my hands together for at least 5 seconds until they feel dry.'",
+      "B. 'I should apply the rub to one hand and wipe it on the other.'",
+      "C. 'I should rinse my hands with water after using the alcohol-based rub.'",
+      "D. 'I should apply the product to the palm and rub hands together covering all surfaces for at least 20 seconds until dry.'"
+    ],
+    "correct": 3,
+    "rationale": "Proper alcohol-based hand rub technique requires applying the product to the palm, rubbing hands together covering all surfaces including between fingers and fingertips for at least 20 seconds, and allowing hands to air dry. Rinsing with water negates the antimicrobial effect."
+  },
+  {
+    "q": "A nurse is caring for a postoperative client who has an order for ambulation twice daily. The client refuses to get out of bed stating, 'I'm in too much pain.' Which response by the nurse demonstrates respect for client autonomy while promoting recovery?",
+    "options": [
+      "A. 'I understand you're in pain. Let me give you pain medication, and we can try ambulating once you're more comfortable.'",
+      "B. 'You have to get up. It's doctor's orders.'",
+      "C. 'If you don't walk, you may develop blood clots and pneumonia.'",
+      "D. 'I'll document that you refused to ambulate today.'"
+    ],
+    "correct": 0,
+    "rationale": "This response acknowledges the client's pain, offers a solution (pain medication), and presents ambulation as a collaborative goal rather than a demand. It respects the client's autonomy while fulfilling the nurse's obligation to promote postoperative recovery."
+  },
+  {
+    "q": "A nurse is performing a focused respiratory assessment on a client with pneumonia. Which assessment finding should be reported to the healthcare provider immediately?",
+    "options": [
+      "A. Respiratory rate of 18 breaths per minute",
+      "B. Occasional productive cough with yellow sputum",
+      "C. Temperature of 100.2 degrees Fahrenheit",
+      "D. Diminished breath sounds bilaterally with oxygen saturation of 88% on room air"
+    ],
+    "correct": 3,
+    "rationale": "Diminished breath sounds combined with an oxygen saturation of 88% on room air indicates significant respiratory compromise requiring immediate intervention. This finding suggests worsening gas exchange and may necessitate supplemental oxygen or escalation of care."
+  },
+  {
+    "q": "A nurse is delegating morning care tasks to a UAP. The UAP reports that a client who is normally alert and oriented is now confused and agitated. What should the nurse do first?",
+    "options": [
+      "A. Ask the UAP to reorient the client and recheck in 30 minutes",
+      "B. Document the change and continue with morning care",
+      "C. Call the healthcare provider to report the change",
+      "D. Assess the client immediately for possible causes of the change in mental status"
+    ],
+    "correct": 3,
+    "rationale": "A sudden change in mental status requires immediate nursing assessment to identify potential causes such as hypoxia, infection, medication effects, or metabolic imbalances. The nurse must personally assess the client before delegating further care or notifying the provider."
+  },
+  {
+    "q": "A nurse is preparing a client for a lumbar puncture. Which position should the nurse assist the client into?",
+    "options": [
+      "A. Supine with legs extended",
+      "B. Prone with a pillow under the abdomen",
+      "C. High Fowler's with arms supported on the overbed table",
+      "D. Side-lying with knees drawn up to the chest and chin tucked"
+    ],
+    "correct": 3,
+    "rationale": "The side-lying fetal position with knees drawn up and chin tucked opens the intervertebral spaces, allowing easier access for needle insertion during a lumbar puncture. This is the most commonly used position for this procedure."
+  },
+  {
+    "q": "A nurse is providing therapeutic communication to a client who is crying after receiving a diagnosis of cancer. Which action by the nurse is most therapeutic?",
+    "options": [
+      "A. Leave the room to give the client privacy",
+      "B. Tell the client about the high survival rates for their type of cancer",
+      "C. Encourage the client to call a family member immediately",
+      "D. Sit quietly with the client and offer presence and tissues"
+    ],
+    "correct": 3,
+    "rationale": "Therapeutic presence, or simply being with a client during a difficult time, communicates empathy and caring without requiring words. Sitting quietly allows the client to process emotions at their own pace. Offering false reassurance or redirecting may minimize the client's feelings."
+  },
+  {
+    "q": "A nurse receives a laboratory report indicating a client's blood culture is positive for methicillin-resistant Staphylococcus aureus (MRSA). Which type of precautions should the nurse initiate?",
+    "options": [
+      "A. Airborne precautions with an N95 respirator",
+      "B. Droplet precautions with a surgical mask",
+      "C. Standard precautions only",
+      "D. Contact precautions with gown and gloves"
+    ],
+    "correct": 3,
+    "rationale": "MRSA is transmitted through direct contact. Contact precautions, which include wearing a gown and gloves upon entering the room and placing the client in a private room, are required in addition to standard precautions to prevent the spread of MRSA."
+  },
+  {
+    "q": "A nurse overhears two nursing assistants discussing a client's diagnosis in the elevator with visitors present. What is the nurse's best action?",
+    "options": [
+      "A. Immediately and discreetly remind the nursing assistants that client information must not be discussed in public areas",
+      "B. Ignore the conversation because the nurse was not involved",
+      "C. Report the nursing assistants to the state board of nursing",
+      "D. Wait until the end of the shift to address the issue in a staff meeting"
+    ],
+    "correct": 0,
+    "rationale": "The nurse has an obligation to intervene immediately to protect client confidentiality. Discreetly reminding the staff stops the breach promptly while maintaining professionalism. Delaying the intervention allows the violation to continue, and ignoring it is a failure of professional responsibility."
+  },
+  {
+    "q": "A nurse is monitoring a client who is receiving total parenteral nutrition (TPN). Which assessment finding indicates a potential complication that requires immediate nursing intervention?",
+    "options": [
+      "A. Blood glucose of 320 mg/dL",
+      "B. Weight gain of 1 pound over 1 week",
+      "C. Urine output of 60 mL per hour",
+      "D. Serum albumin of 3.8 g/dL"
+    ],
+    "correct": 0,
+    "rationale": "A blood glucose of 320 mg/dL indicates hyperglycemia, a common and potentially dangerous complication of TPN due to the high dextrose concentration. This requires immediate intervention, typically with insulin, and adjustment of the TPN infusion rate."
+  },
+  {
+    "q": "A nurse is conducting a safety check on a client's room. Which finding poses the greatest fire hazard?",
+    "options": [
+      "A. An oxygen concentrator running next to a client's personal space heater that was brought from home",
+      "B. A get-well card on the windowsill",
+      "C. A vase of flowers on the bedside table",
+      "D. Multiple photos taped to the wall above the bed"
+    ],
+    "correct": 0,
+    "rationale": "Oxygen supports combustion and significantly increases fire risk. A personal space heater near an oxygen concentrator creates an extremely dangerous fire hazard. Personal heating devices should never be used near oxygen equipment in any healthcare or home health setting."
+  }
+]

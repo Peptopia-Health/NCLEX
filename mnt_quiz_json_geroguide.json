@@ -1,0 +1,1102 @@
+[
+  {
+    "q": "A 78-year-old client reports difficulty reading small print and needs brighter lighting. The nurse recognizes this as which normal aging change?",
+    "options": [
+      "A. Presbyopia due to decreased lens elasticity",
+      "B. Macular degeneration requiring immediate referral",
+      "C. Cataracts requiring surgical intervention",
+      "D. Glaucoma causing peripheral vision loss"
+    ],
+    "correct": 0,
+    "rationale": "Presbyopia is a normal age-related change caused by loss of lens elasticity and smaller pupil size, requiring brighter lighting and reading glasses. Macular degeneration, cataracts, and glaucoma are pathological conditions, not normal aging."
+  },
+  {
+    "q": "A nurse is assessing an 80-year-old client and notes a resting heart rate of 68 bpm with a slower-than-expected heart rate increase during exercise. Which statement best explains this finding?",
+    "options": [
+      "A. The client likely has an undiagnosed cardiac arrhythmia",
+      "B. Aging causes decreased cardiac responsiveness to catecholamines, resulting in a blunted heart rate response to stress",
+      "C. This indicates the client is in excellent cardiovascular shape",
+      "D. The client is likely taking a beta-blocker medication"
+    ],
+    "correct": 1,
+    "rationale": "With normal aging, the heart becomes less responsive to catecholamines (epinephrine and norepinephrine), leading to a diminished heart rate response during exercise or stress. This is a well-documented cardiovascular aging change."
+  },
+  {
+    "q": "A 75-year-old client has a serum creatinine within the normal reference range. The nurse understands that this value may be misleading because:",
+    "options": [
+      "A. Older adults typically have elevated creatinine due to kidney aging",
+      "B. Lab reference ranges are not applicable to older adults",
+      "C. Decreased muscle mass in older adults produces less creatinine, masking reduced glomerular filtration rate",
+      "D. Serum creatinine is not a valid indicator of kidney function at any age"
+    ],
+    "correct": 2,
+    "rationale": "Older adults lose muscle mass with aging, which means less creatinine is produced. A 'normal' serum creatinine may therefore mask significant decline in GFR. Creatinine clearance or eGFR is a more accurate measure of renal function in older adults."
+  },
+  {
+    "q": "A nurse is educating a 72-year-old client about normal respiratory changes with aging. Which statement by the client indicates correct understanding?",
+    "options": [
+      "A. 'I should expect to develop a chronic cough as I age.'",
+      "B. 'My lungs will get larger and more efficient over time.'",
+      "C. 'I will need supplemental oxygen because my lungs are aging.'",
+      "D. 'My chest wall is becoming stiffer, so I may notice decreased exercise tolerance.'"
+    ],
+    "correct": 3,
+    "rationale": "Normal aging causes calcification of costal cartilage and decreased chest wall compliance, reducing respiratory efficiency and exercise tolerance. Chronic cough, lung enlargement, and need for supplemental oxygen are not normal aging changes."
+  },
+  {
+    "q": "An 82-year-old client's skin tears easily during routine care. The nurse attributes this to which normal aging change?",
+    "options": [
+      "A. Thinning of the dermis and decreased subcutaneous fat, making skin more fragile",
+      "B. An allergic reaction to hospital linens",
+      "C. A coagulation disorder requiring immediate workup",
+      "D. Poor nutritional intake during hospitalization"
+    ],
+    "correct": 0,
+    "rationale": "Normal aging causes thinning of the dermis, loss of subcutaneous fat, and decreased collagen, making the skin more fragile and susceptible to tears and bruising. This is an expected integumentary change of aging."
+  },
+  {
+    "q": "A 76-year-old client complains of constipation. The nurse understands that the most common contributing factor related to aging is:",
+    "options": [
+      "A. Increased gastric acid production",
+      "B. Decreased gastrointestinal motility and reduced physical activity",
+      "C. Malabsorption syndrome",
+      "D. Gallbladder dysfunction"
+    ],
+    "correct": 1,
+    "rationale": "Normal aging causes decreased GI motility, and many older adults have reduced physical activity and fluid intake, all of which contribute to constipation. Gastric acid actually decreases with age, not increases."
+  },
+  {
+    "q": "A nurse assessing an older adult notes a gradual height loss of 2 inches over the past 20 years. This is most likely due to:",
+    "options": [
+      "A. Osteomalacia from vitamin D deficiency",
+      "B. Pathological vertebral compression fractures",
+      "C. Thinning of intervertebral discs and increased thoracic kyphosis as normal aging changes",
+      "D. Paget's disease of the bone"
+    ],
+    "correct": 2,
+    "rationale": "Gradual height loss of 1-3 inches is a normal aging change caused by thinning of intervertebral discs, vertebral bone loss, and increased thoracic kyphosis. Sudden or significant height loss may indicate pathological compression fractures."
+  },
+  {
+    "q": "A 79-year-old client takes longer to respond to questions during a health history interview. The nurse should interpret this as:",
+    "options": [
+      "A. A sign of early dementia requiring cognitive screening",
+      "B. Hearing impairment that was not previously identified",
+      "C. Noncompliance with the interview process",
+      "D. A normal aging change reflecting slowed processing speed, not diminished intelligence"
+    ],
+    "correct": 3,
+    "rationale": "Slowed processing speed is a normal cognitive change of aging. Older adults may take longer to respond but can still reason and answer accurately. This should not be confused with dementia or hearing loss without further assessment."
+  },
+  {
+    "q": "A 70-year-old client reports needing to urinate more frequently, especially at night. After ruling out infection, the nurse explains this is related to:",
+    "options": [
+      "A. Decreased bladder capacity and changes in circadian secretion of antidiuretic hormone with aging",
+      "B. Early-stage renal failure",
+      "C. Prostate cancer in all male clients",
+      "D. Psychological stress from hospitalization"
+    ],
+    "correct": 0,
+    "rationale": "Normal aging causes decreased bladder capacity, weakened detrusor muscle, and altered circadian ADH secretion, leading to nocturia and increased urinary frequency. These changes are expected and not necessarily pathological."
+  },
+  {
+    "q": "An 85-year-old client's body temperature is 97.4\u00b0F (36.3\u00b0C). The nurse recognizes that this finding is significant because:",
+    "options": [
+      "A. It confirms the client has hypothyroidism",
+      "B. Older adults have a lower baseline temperature, so even a low-grade fever could indicate serious infection",
+      "C. The thermometer is likely inaccurate and should be replaced",
+      "D. This is a normal reading with no clinical significance"
+    ],
+    "correct": 1,
+    "rationale": "Older adults commonly have lower baseline body temperatures due to decreased metabolic rate and impaired thermoregulation. A temperature that appears 'normal' (e.g., 99\u00b0F) may actually represent a significant fever in an older adult."
+  },
+  {
+    "q": "A nurse is assessing immune function in a 77-year-old client. Which finding is consistent with normal age-related immune changes?",
+    "options": [
+      "A. Elevated white blood cell count at baseline",
+      "B. Increased susceptibility to autoimmune disorders only",
+      "C. Decreased T-cell function leading to increased susceptibility to infections and diminished vaccine response",
+      "D. Complete loss of humoral immunity"
+    ],
+    "correct": 2,
+    "rationale": "Immunosenescence involves decreased T-cell function and a blunted immune response, making older adults more vulnerable to infections and less responsive to vaccines. WBC counts typically remain normal, and complete loss of humoral immunity does not occur."
+  },
+  {
+    "q": "A 74-year-old client with no cognitive history is brought to the emergency department after becoming acutely confused and agitated over the past 6 hours. The nurse's priority assessment should focus on:",
+    "options": [
+      "A. Reviewing the client's family history of Alzheimer's disease",
+      "B. Assessing medication list, recent vital signs, and potential infection or metabolic causes",
+      "C. Beginning a long-term dementia care plan",
+      "D. Administering a sedative to calm the client"
+    ],
+    "correct": 1,
+    "rationale": "Acute onset of confusion is characteristic of delirium, which is a medical emergency often caused by infection, medications, metabolic imbalances, or pain. Identifying and treating the underlying cause is the priority."
+  },
+  {
+    "q": "A nurse is differentiating delirium from dementia. Which characteristic is most indicative of delirium?",
+    "options": [
+      "A. Gradual onset over months to years",
+      "B. Progressive decline in short-term memory",
+      "C. Fluctuating level of consciousness with acute onset",
+      "D. Stable cognitive baseline with slow functional decline"
+    ],
+    "correct": 2,
+    "rationale": "Delirium is characterized by acute onset, fluctuating consciousness, inattention, and disorganized thinking. Dementia has a gradual onset and progressive course without fluctuating consciousness levels."
+  },
+  {
+    "q": "An older adult with moderate Alzheimer's disease becomes increasingly agitated and confused every evening around sunset. The nurse identifies this pattern as:",
+    "options": [
+      "A. A medication side effect that occurs after the evening dose",
+      "B. An indication of acute delirium requiring emergency intervention",
+      "C. A psychiatric emergency requiring immediate restraints",
+      "D. Sundowning, a common phenomenon in dementia characterized by increased confusion in late afternoon and evening"
+    ],
+    "correct": 3,
+    "rationale": "Sundowning is increased confusion, agitation, and behavioral disturbances that occur in the late afternoon and evening in clients with dementia. Environmental modifications such as reducing stimulation and providing adequate lighting can help manage symptoms."
+  },
+  {
+    "q": "A client in the early stage of Alzheimer's disease is most likely to exhibit which symptom?",
+    "options": [
+      "A. Recent memory loss with difficulty learning new information while remote memory remains intact",
+      "B. Inability to recognize family members",
+      "C. Complete dependence in all activities of daily living",
+      "D. Loss of bowel and bladder control"
+    ],
+    "correct": 0,
+    "rationale": "Early-stage Alzheimer's disease is characterized by impairment in recent (short-term) memory while remote memory and social skills are relatively preserved. Failure to recognize family, total ADL dependence, and incontinence occur in later stages."
+  },
+  {
+    "q": "A nurse is caring for a client with late-stage Alzheimer's disease. Which nursing intervention is most appropriate?",
+    "options": [
+      "A. Providing detailed verbal instructions for self-care activities",
+      "B. Focusing on comfort measures, skin integrity, aspiration prevention, and maintaining dignity",
+      "C. Encouraging the client to make complex decisions about their care",
+      "D. Restricting family visits to prevent patient overstimulation"
+    ],
+    "correct": 1,
+    "rationale": "In late-stage Alzheimer's, the focus shifts to comfort care, prevention of complications such as aspiration and pressure injuries, and maintaining dignity. Clients at this stage cannot follow complex instructions or make decisions independently."
+  },
+  {
+    "q": "A 68-year-old client presents with depressed mood, weight loss, psychomotor retardation, and reports of memory difficulty. The nurse suspects depression rather than dementia primarily because:",
+    "options": [
+      "A. The client denies any cognitive problems",
+      "B. The client complains loudly about memory problems and gives 'I don't know' answers on testing",
+      "C. The cognitive changes developed gradually over several years",
+      "D. The client is unable to learn new information even with cueing"
+    ],
+    "correct": 1,
+    "rationale": "Depressed older adults often complain about memory problems and may give 'I don't know' answers, showing lack of effort. In dementia, clients typically minimize or are unaware of deficits and confabulate rather than say 'I don't know.'"
+  },
+  {
+    "q": "A nurse is developing a care plan for a client with middle-stage Alzheimer's disease who wanders. Which intervention is most appropriate?",
+    "options": [
+      "A. Applying physical restraints to prevent wandering",
+      "B. Keeping the client sedated during waking hours",
+      "C. Locking the client in their room for safety",
+      "D. Providing a safe, enclosed walking area and using identification bracelets and door alarms"
+    ],
+    "correct": 3,
+    "rationale": "Safe wandering paths, identification bracelets, and door alarms allow mobility while ensuring safety. Restraints increase agitation and injury risk, sedation causes further cognitive decline, and room confinement violates autonomy and increases agitation."
+  },
+  {
+    "q": "When communicating with a client who has moderate dementia, the nurse should:",
+    "options": [
+      "A. Use simple, one-step directions and a calm, reassuring tone",
+      "B. Speak loudly to ensure comprehension",
+      "C. Provide lengthy explanations so the client fully understands",
+      "D. Correct the client immediately when they make factual errors"
+    ],
+    "correct": 0,
+    "rationale": "Simple, short sentences and one-step directions reduce confusion and anxiety. Speaking loudly can be perceived as aggressive, lengthy explanations increase confusion, and correcting errors increases frustration and agitation."
+  },
+  {
+    "q": "A client with known dementia develops sudden-onset worsening confusion, visual hallucinations, and inability to focus attention. The nurse should first:",
+    "options": [
+      "A. Document this as expected disease progression",
+      "B. Increase the client's dementia medications",
+      "C. Assess for delirium superimposed on dementia by checking for infection, medication changes, or metabolic abnormalities",
+      "D. Request a psychiatric consultation for new-onset psychosis"
+    ],
+    "correct": 2,
+    "rationale": "Delirium can be superimposed on dementia and presents with acute worsening of cognitive function. The nurse must assess for reversible causes such as UTI, medication changes, dehydration, or electrolyte imbalances. This is not simply disease progression."
+  },
+  {
+    "q": "The nurse is teaching a family about the difference between delirium and depression in their 80-year-old parent. Which statement is accurate?",
+    "options": [
+      "A. Delirium develops slowly over weeks, while depression has a sudden onset",
+      "B. Both conditions are irreversible once they develop in older adults",
+      "C. Depression typically shows a consistent mood disturbance, while delirium fluctuates throughout the day",
+      "D. Delirium is best treated with long-term antidepressant therapy"
+    ],
+    "correct": 2,
+    "rationale": "Depression presents with persistent low mood and consistent symptoms. Delirium has an acute onset with fluctuating symptoms, including altered consciousness. Delirium is treated by addressing the underlying cause, not with antidepressants."
+  },
+  {
+    "q": "A nursing assistant reports that an older adult client with dementia has been refusing meals for the past two days. The nurse's best initial action is to:",
+    "options": [
+      "A. Insert a nasogastric tube for enteral feeding",
+      "B. Notify the provider immediately for IV fluid orders",
+      "C. Request a speech therapy evaluation",
+      "D. Assess for possible causes such as oral pain, medication side effects, depression, or difficulty with the dining environment"
+    ],
+    "correct": 3,
+    "rationale": "Before invasive interventions, the nurse should assess for treatable causes of decreased intake, including oral pain, medication side effects, constipation, depression, or environmental factors that may be affecting the client's ability or willingness to eat."
+  },
+  {
+    "q": "A nurse is educating nursing students about the leading cause of nonfatal injuries in adults over age 65. The correct answer is:",
+    "options": [
+      "A. Falls",
+      "B. Motor vehicle accidents",
+      "C. Burns from cooking",
+      "D. Medication overdoses"
+    ],
+    "correct": 0,
+    "rationale": "Falls are the leading cause of nonfatal injuries and injury-related deaths in adults 65 and older. Fall prevention is a critical nursing priority in gerontological care."
+  },
+  {
+    "q": "A 77-year-old client reports dizziness when standing up from a seated position. The nurse suspects orthostatic hypotension and should:",
+    "options": [
+      "A. Tell the client to stand up quickly to get past the dizzy spell",
+      "B. Measure blood pressure and heart rate in lying, sitting, and standing positions with 1-3 minutes between position changes",
+      "C. Administer IV fluids without further assessment",
+      "D. Recommend the client remain on strict bed rest indefinitely"
+    ],
+    "correct": 1,
+    "rationale": "Orthostatic hypotension is diagnosed by a drop of 20 mmHg systolic or 10 mmHg diastolic upon position change. Serial measurements in lying, sitting, and standing positions are the correct assessment approach."
+  },
+  {
+    "q": "A client with orthostatic hypotension asks the nurse how to prevent dizziness when getting out of bed. Which instruction is most appropriate?",
+    "options": [
+      "A. Take a warm bath immediately before getting up",
+      "B. Skip morning medications to prevent low blood pressure",
+      "C. Dangle feet at the bedside for 1-2 minutes before standing, and rise slowly",
+      "D. Drink a glass of wine before bed to relax blood vessels"
+    ],
+    "correct": 2,
+    "rationale": "Dangling feet at the bedside before standing allows the cardiovascular system time to adjust to position changes. Rising slowly helps prevent blood pressure drops. Warm baths can worsen vasodilation, and alcohol worsens orthostatic hypotension."
+  },
+  {
+    "q": "A nurse is conducting a fall risk assessment on a 73-year-old client admitted to the hospital. Which combination of factors places this client at highest risk?",
+    "options": [
+      "A. History of one fall in the past year, takes a multivitamin, and has 20/30 vision",
+      "B. No fall history, independent ambulation, and oriented to person, place, and time",
+      "C. Takes three medications and has mild arthritis but uses no assistive device",
+      "D. History of multiple falls, takes sedative-hypnotics, has urinary urgency, and uses an assistive device"
+    ],
+    "correct": 3,
+    "rationale": "Multiple falls history, psychoactive medications, urinary urgency, and use of assistive devices are all significant fall risk factors. The combination of these factors creates the highest level of risk."
+  },
+  {
+    "q": "An older adult client has sustained a hip fracture after a fall. The nurse knows that the most common type of hip fracture in older adults is:",
+    "options": [
+      "A. Intertrochanteric fracture of the femur",
+      "B. Pelvic ring fracture",
+      "C. Femoral shaft fracture",
+      "D. Tibial plateau fracture"
+    ],
+    "correct": 0,
+    "rationale": "Intertrochanteric and femoral neck fractures are the most common hip fractures in older adults, typically resulting from low-energy falls combined with osteoporotic bone. Pelvic ring, femoral shaft, and tibial plateau fractures are less common presentations."
+  },
+  {
+    "q": "Following surgical repair of a hip fracture, the nurse's priority intervention on the first postoperative day is:",
+    "options": [
+      "A. Keeping the client on strict bed rest for 72 hours to prevent dislocation",
+      "B. Initiating early mobilization with physical therapy as ordered to prevent complications of immobility",
+      "C. Administering prophylactic antibiotics for 30 days",
+      "D. Applying skeletal traction to the operative extremity"
+    ],
+    "correct": 1,
+    "rationale": "Early mobilization after hip fracture repair is essential to prevent complications such as DVT, pneumonia, pressure injuries, and deconditioning. Prolonged bed rest increases the risk of these potentially fatal complications."
+  },
+  {
+    "q": "A nurse is assessing an older adult who fell at home. The client states, 'I tripped on the bathroom rug.' Which home safety modification should the nurse recommend?",
+    "options": [
+      "A. Install wall-to-wall carpeting throughout the home",
+      "B. Place additional throw rugs near the toilet for cushioning",
+      "C. Remove loose rugs, install grab bars in the bathroom, and ensure adequate lighting",
+      "D. Recommend the client avoid using the bathroom independently"
+    ],
+    "correct": 2,
+    "rationale": "Removing loose rugs, installing grab bars, and ensuring adequate lighting are evidence-based environmental modifications that reduce fall risk. Throw rugs are a leading cause of falls in the home."
+  },
+  {
+    "q": "An older adult taking an antihypertensive and a benzodiazepine falls in the hospital. The nurse should prioritize which intervention to prevent future falls?",
+    "options": [
+      "A. Applying bilateral wrist restraints at night",
+      "B. Moving the client to a room closer to the nursing station",
+      "C. Increasing the benzodiazepine dose to ensure the client sleeps through the night",
+      "D. Communicating with the provider about reviewing the medication regimen for fall-risk-increasing drugs"
+    ],
+    "correct": 3,
+    "rationale": "Benzodiazepines are strongly associated with falls in older adults and are listed on the Beers Criteria as potentially inappropriate. Medication review to consider dose reduction or discontinuation is the priority intervention."
+  },
+  {
+    "q": "A nurse is teaching a community group about fall prevention for older adults. Which statement by a participant indicates a need for further teaching?",
+    "options": [
+      "A. 'I should have my vision checked at least once a year.'",
+      "B. 'Wearing sturdy, low-heeled shoes can help prevent falls.'",
+      "C. 'I should avoid exercise because it might cause me to fall.'",
+      "D. 'I will make sure my home is well-lit, especially stairways.'"
+    ],
+    "correct": 2,
+    "rationale": "Regular exercise, particularly balance and strength training, is one of the most effective fall prevention strategies. Avoiding exercise actually increases fall risk by promoting deconditioning and weakness."
+  },
+  {
+    "q": "After a hip fracture repair, the nurse assesses the client for deep vein thrombosis. Which finding would be most concerning?",
+    "options": [
+      "A. Unilateral calf swelling, warmth, and tenderness in the operative leg",
+      "B. Bilateral ankle edema that resolves with elevation",
+      "C. Mild bruising around the surgical site",
+      "D. A temperature of 99.0\u00b0F on postoperative day one"
+    ],
+    "correct": 0,
+    "rationale": "Unilateral calf swelling, warmth, and tenderness are classic signs of DVT, a common complication after hip fracture surgery. Bilateral ankle edema, surgical bruising, and low-grade postoperative fever have other explanations."
+  },
+  {
+    "q": "A 78-year-old client is prescribed 12 different medications by multiple providers. The nurse is most concerned about this situation because:",
+    "options": [
+      "A. Medicare does not cover more than 10 medications",
+      "B. The client will not be able to open the medication bottles due to arthritis",
+      "C. Polypharmacy increases the risk of adverse drug reactions, drug interactions, and falls in older adults",
+      "D. All medications must be taken at the same time for maximum effectiveness"
+    ],
+    "correct": 2,
+    "rationale": "Polypharmacy, commonly defined as taking five or more medications, significantly increases the risk of adverse drug reactions, drug-drug interactions, nonadherence, and falls. Medication reconciliation across providers is essential."
+  },
+  {
+    "q": "The nurse is reviewing the Beers Criteria for a 74-year-old client's medication list. Which medication is most likely to be flagged as potentially inappropriate?",
+    "options": [
+      "A. Acetaminophen 500 mg as needed for pain",
+      "B. Lisinopril 10 mg daily for hypertension",
+      "C. Metformin 500 mg twice daily for type 2 diabetes",
+      "D. Diphenhydramine 25 mg at bedtime for insomnia"
+    ],
+    "correct": 3,
+    "rationale": "Diphenhydramine is a first-generation antihistamine with strong anticholinergic properties listed on the Beers Criteria as potentially inappropriate for older adults due to risk of confusion, sedation, urinary retention, constipation, and falls."
+  },
+  {
+    "q": "A nurse is providing medication education to an older adult client taking warfarin. Which instruction is most important?",
+    "options": [
+      "A. Maintain a consistent intake of vitamin K-containing foods rather than eliminating them entirely",
+      "B. Double the dose if a dose is missed",
+      "C. Take aspirin along with warfarin for added protection",
+      "D. Discontinue warfarin if any bruising occurs"
+    ],
+    "correct": 0,
+    "rationale": "Clients on warfarin should maintain consistent vitamin K intake rather than avoiding it, as sudden changes in vitamin K can cause dangerous fluctuations in INR. Missing doses should not be doubled, and aspirin increases bleeding risk."
+  },
+  {
+    "q": "An older adult is prescribed a new medication. The nurse knows that age-related pharmacokinetic changes affect drug metabolism primarily through:",
+    "options": [
+      "A. Increased gastric acid production enhancing absorption",
+      "B. Decreased liver mass and hepatic blood flow, resulting in slower drug metabolism",
+      "C. Increased renal clearance requiring higher doses",
+      "D. Enhanced first-pass metabolism requiring lower doses"
+    ],
+    "correct": 1,
+    "rationale": "Aging decreases liver mass, hepatic blood flow, and phase I metabolism enzyme activity, resulting in slower drug metabolism and higher drug levels. This often necessitates lower doses and longer intervals between doses."
+  },
+  {
+    "q": "A nurse is conducting medication reconciliation for an older adult admitted from a skilled nursing facility. The most important reason for this process is to:",
+    "options": [
+      "A. Ensure the pharmacy has an accurate medication list for billing purposes",
+      "B. Satisfy a regulatory requirement without clinical significance",
+      "C. Identify and resolve medication discrepancies that could cause adverse events during care transitions",
+      "D. Determine which medications can be discontinued to save costs"
+    ],
+    "correct": 2,
+    "rationale": "Medication reconciliation during care transitions is critical to identifying discrepancies, duplications, omissions, and potential interactions that could cause serious adverse events. It is a key patient safety intervention."
+  },
+  {
+    "q": "An older adult client is prescribed an NSAID for chronic arthritis pain. The nurse should monitor for which age-specific adverse effect?",
+    "options": [
+      "A. Hair loss",
+      "B. Weight gain from increased appetite",
+      "C. Increased bone density",
+      "D. Gastrointestinal bleeding and renal impairment"
+    ],
+    "correct": 3,
+    "rationale": "NSAIDs pose increased risk of GI bleeding and renal impairment in older adults due to age-related decrease in protective prostaglandins, reduced GFR, and thinner gastric mucosa. The Beers Criteria recommend caution with chronic NSAID use."
+  },
+  {
+    "q": "A 72-year-old client recently started on a new antihypertensive experiences a fall. The nurse notes the client's blood pressure is 100/58 mmHg. The most likely medication-related cause is:",
+    "options": [
+      "A. The medication is ineffective and should be changed",
+      "B. The client has developed an allergy to the medication",
+      "C. The antihypertensive dose may be too high, causing hypotension and increasing fall risk",
+      "D. The client needs an additional antihypertensive for better control"
+    ],
+    "correct": 2,
+    "rationale": "Over-aggressive blood pressure lowering in older adults can cause symptomatic hypotension and falls. The 'start low and go slow' principle applies to antihypertensive dosing in the elderly population."
+  },
+  {
+    "q": "A nurse is reviewing a hospitalized older adult's medication list and identifies both an opioid and a benzodiazepine prescribed simultaneously. The nurse's primary concern is:",
+    "options": [
+      "A. The medications will cancel each other's effects",
+      "B. Combined CNS depression increasing the risk of respiratory depression, sedation, and falls",
+      "C. The client will develop tolerance to both medications within 24 hours",
+      "D. The combination will cause hypertension"
+    ],
+    "correct": 1,
+    "rationale": "Concurrent use of opioids and benzodiazepines causes additive CNS depression, significantly increasing the risk of respiratory depression, excessive sedation, and falls, especially in older adults with decreased drug metabolism."
+  },
+  {
+    "q": "The nurse is teaching an older adult about the 'brown bag' medication review. This involves:",
+    "options": [
+      "A. Placing all medications including OTC drugs, supplements, and herbals in a bag and bringing them to each provider visit for comprehensive review",
+      "B. Sorting medications by color for easier identification",
+      "C. Disposing of expired medications in a brown paper bag",
+      "D. Storing all medications together in one container for convenience"
+    ],
+    "correct": 0,
+    "rationale": "The brown bag review asks clients to bring all medications (prescription, OTC, supplements, herbals) to appointments so the provider can conduct a thorough medication reconciliation. This helps identify polypharmacy, duplications, and interactions."
+  },
+  {
+    "q": "A nurse is concerned about anticholinergic burden in an older adult taking multiple medications. Which combination of side effects suggests high anticholinergic burden?",
+    "options": [
+      "A. Diarrhea, excessive salivation, and miosis",
+      "B. Bradycardia, hypotension, and bronchospasm",
+      "C. Dry mouth, constipation, urinary retention, and confusion",
+      "D. Tremor, muscle rigidity, and shuffling gait"
+    ],
+    "correct": 2,
+    "rationale": "Anticholinergic effects include dry mouth, constipation, urinary retention, blurred vision, tachycardia, and confusion. Cumulative anticholinergic burden from multiple medications is a significant concern in older adults and can precipitate delirium."
+  },
+  {
+    "q": "A nurse is using the Katz Index of Independence in Activities of Daily Living to assess an 80-year-old client. Which activities are evaluated by this tool?",
+    "options": [
+      "A. Cooking, shopping, managing finances, and driving",
+      "B. Bathing, dressing, toileting, transferring, continence, and feeding",
+      "C. Cognitive function, orientation, and memory recall",
+      "D. Pain level, sleep quality, and emotional well-being"
+    ],
+    "correct": 1,
+    "rationale": "The Katz Index assesses six basic ADLs: bathing, dressing, toileting, transferring, continence, and feeding. It measures the client's ability to perform fundamental self-care tasks independently. IADLs such as cooking and shopping are assessed by the Lawton scale."
+  },
+  {
+    "q": "A nurse is assessing an older adult's ability to live independently using the Lawton Instrumental Activities of Daily Living (IADL) Scale. Which activity is assessed by this tool?",
+    "options": [
+      "A. Bathing independently",
+      "B. Feeding oneself with utensils",
+      "C. Ability to use the telephone, manage medications, and handle finances",
+      "D. Transferring from bed to chair"
+    ],
+    "correct": 2,
+    "rationale": "The Lawton IADL Scale assesses higher-level functions needed for independent community living, including using the telephone, shopping, food preparation, housekeeping, laundry, transportation, medication management, and finances."
+  },
+  {
+    "q": "A nurse uses the Mini-Mental State Examination (MMSE) to screen an older adult for cognitive impairment. A score of 18 out of 30 indicates:",
+    "options": [
+      "A. Normal cognitive function",
+      "B. Severe cognitive impairment",
+      "C. Mild cognitive impairment requiring monitoring",
+      "D. Moderate cognitive impairment warranting further evaluation"
+    ],
+    "correct": 3,
+    "rationale": "MMSE scores range from 0-30. A score of 24-30 is generally considered normal, 18-23 suggests mild to moderate impairment, and below 18 indicates severe impairment. A score of 18 falls at the boundary of moderate impairment and warrants comprehensive evaluation."
+  },
+  {
+    "q": "A nurse is using the Braden Scale to assess a bedbound older adult's risk for pressure injuries. Which subscale score would indicate the highest risk?",
+    "options": [
+      "A. A total Braden score of 22",
+      "B. A total Braden score of 18",
+      "C. A total Braden score of 10",
+      "D. A total Braden score of 15"
+    ],
+    "correct": 2,
+    "rationale": "The Braden Scale ranges from 6-23; lower scores indicate higher risk. A score of 10 indicates very high risk for pressure injury development. Scores of 15-18 indicate mild risk, and scores above 18 suggest minimal risk."
+  },
+  {
+    "q": "An older adult client has a Braden Scale score of 14. Which nursing intervention is most appropriate?",
+    "options": [
+      "A. No special interventions are needed at this score",
+      "B. Reposition the client every 2 hours, use a pressure-redistribution mattress, and ensure adequate nutrition",
+      "C. Apply a wound VAC to prevent pressure injuries",
+      "D. Limit the client's fluid intake to reduce edema"
+    ],
+    "correct": 1,
+    "rationale": "A Braden score of 14 indicates moderate risk. Interventions include regular repositioning every 2 hours, using pressure-redistribution surfaces, optimizing nutrition, keeping skin clean and dry, and minimizing friction and shear."
+  },
+  {
+    "q": "A nurse is assessing the nutritional status of a 76-year-old client. Which finding is most indicative of malnutrition?",
+    "options": [
+      "A. BMI of 24 kg/m\u00b2",
+      "B. Albumin level of 4.0 g/dL",
+      "C. Unintentional weight loss of 10% in 6 months with serum albumin of 2.8 g/dL",
+      "D. Occasional skipping of breakfast"
+    ],
+    "correct": 2,
+    "rationale": "Unintentional weight loss exceeding 5% in one month or 10% in six months, combined with low serum albumin (below 3.5 g/dL), are significant indicators of malnutrition in older adults requiring nutritional intervention."
+  },
+  {
+    "q": "A nurse is planning meals for an older adult with dysphagia. Which dietary modification is most appropriate?",
+    "options": [
+      "A. Providing thin liquids to ensure adequate hydration",
+      "B. Offering large portions to encourage caloric intake",
+      "C. Providing dry, crumbly foods that are easy to chew",
+      "D. Offering thickened liquids and pureed or mechanically soft foods as recommended by speech therapy"
+    ],
+    "correct": 3,
+    "rationale": "Clients with dysphagia require modified diet textures and thickened liquids as determined by a speech-language pathologist to reduce aspiration risk. Thin liquids, large portions, and dry foods increase choking and aspiration risk."
+  },
+  {
+    "q": "When using the Mini Nutritional Assessment (MNA) for an older adult, a score indicating malnutrition risk should prompt the nurse to:",
+    "options": [
+      "A. Refer the client to a registered dietitian for comprehensive nutritional assessment and intervention",
+      "B. Immediately start the client on total parenteral nutrition",
+      "C. Restrict the client's caloric intake to prevent obesity",
+      "D. Document the finding and reassess in 6 months"
+    ],
+    "correct": 0,
+    "rationale": "An MNA score indicating malnutrition risk warrants prompt referral to a registered dietitian for comprehensive assessment and individualized nutrition intervention. Delaying action for 6 months can lead to worsening nutritional status and complications."
+  },
+  {
+    "q": "A nurse is assessing dehydration risk in an older adult. Which factor increases this client's vulnerability to dehydration?",
+    "options": [
+      "A. Living in a cool climate",
+      "B. Drinking 8 glasses of water daily",
+      "C. Decreased thirst perception, reduced total body water, and impaired renal concentrating ability with aging",
+      "D. Taking a daily multivitamin"
+    ],
+    "correct": 2,
+    "rationale": "Older adults have decreased thirst perception, reduced total body water, and impaired renal concentrating ability, all of which increase dehydration risk. Nurses should encourage fluid intake proactively rather than relying on the client's thirst."
+  },
+  {
+    "q": "A nurse is assessing an older adult using the Braden Scale and notes the client is completely immobile, has poor nutritional intake, and has moist skin due to incontinence. The nurse should assign which category for moisture?",
+    "options": [
+      "A. Rarely moist",
+      "B. Occasionally moist",
+      "C. Consistently moist, requiring linen changes with each assessment",
+      "D. Very moist, with skin almost constantly exposed to moisture"
+    ],
+    "correct": 3,
+    "rationale": "The Braden Scale moisture subscale rates skin exposure to moisture. A client with incontinence whose skin is almost constantly moist would receive the lowest score (1 = constantly moist), indicating highest risk in that category."
+  },
+  {
+    "q": "A nurse is assessing an older adult for functional decline after a 2-week hospitalization. The most appropriate initial assessment is to:",
+    "options": [
+      "A. Compare current Katz ADL and Lawton IADL scores with pre-hospitalization baseline scores",
+      "B. Order a complete metabolic panel",
+      "C. Obtain a chest X-ray",
+      "D. Request a cardiology consultation"
+    ],
+    "correct": 0,
+    "rationale": "Comparing current functional status with pre-hospitalization baseline using standardized tools like the Katz ADL and Lawton IADL scales identifies specific functional declines that occurred during hospitalization and guides targeted rehabilitation."
+  },
+  {
+    "q": "A nurse is caring for a 79-year-old client who reports pain as 'aching all over' but denies pain when asked directly. Which assessment strategy is most appropriate?",
+    "options": [
+      "A. Accept the denial and document that the client has no pain",
+      "B. Use only the 0-10 numeric pain scale for assessment",
+      "C. Observe for nonverbal pain indicators such as guarding, grimacing, and restlessness, and use alternative pain descriptors",
+      "D. Administer pain medication without further assessment"
+    ],
+    "correct": 2,
+    "rationale": "Older adults may underreport pain or use different terms like 'aching' or 'soreness.' Nurses should observe for nonverbal cues and use alternative descriptors. Many older adults believe pain is a normal part of aging and may deny it when asked directly."
+  },
+  {
+    "q": "A nurse is selecting a pain assessment tool for a cognitively impaired older adult who cannot self-report. The most appropriate tool is:",
+    "options": [
+      "A. The 0-10 numeric rating scale",
+      "B. The Visual Analog Scale (VAS)",
+      "C. The McGill Pain Questionnaire",
+      "D. The Pain Assessment in Advanced Dementia (PAINAD) Scale"
+    ],
+    "correct": 3,
+    "rationale": "The PAINAD Scale is specifically designed for clients with advanced dementia who cannot self-report pain. It uses behavioral indicators such as breathing, vocalization, facial expression, body language, and consolability to assess pain."
+  },
+  {
+    "q": "An older adult client with chronic osteoarthritis pain asks the nurse about non-pharmacological pain management. Which intervention should the nurse recommend?",
+    "options": [
+      "A. Complete bed rest to prevent joint stress",
+      "B. Application of heat therapy, gentle exercise, and physical therapy",
+      "C. Drinking herbal teas as a replacement for all medications",
+      "D. Ignoring the pain since it is a normal part of aging"
+    ],
+    "correct": 1,
+    "rationale": "Non-pharmacological approaches including heat/cold therapy, gentle exercise, physical therapy, massage, and joint protection techniques are effective adjuncts for managing chronic osteoarthritis pain. Complete rest leads to deconditioning and increased stiffness."
+  },
+  {
+    "q": "A nurse is assessing a Stage 2 pressure injury on an older adult's sacrum. Which description is consistent with Stage 2?",
+    "options": [
+      "A. Intact skin with a non-blanchable area of redness",
+      "B. Full-thickness skin loss with visible subcutaneous fat",
+      "C. Partial-thickness skin loss presenting as a shallow open ulcer or intact or ruptured blister",
+      "D. Full-thickness tissue loss with exposed muscle or bone"
+    ],
+    "correct": 2,
+    "rationale": "Stage 2 pressure injuries involve partial-thickness loss of the dermis, presenting as a shallow open ulcer with a red-pink wound bed or as an intact or ruptured serum-filled blister. No granulation tissue, slough, or eschar is present."
+  },
+  {
+    "q": "The nurse is repositioning a bedbound older adult to prevent pressure injuries. The correct repositioning schedule and technique is:",
+    "options": [
+      "A. Reposition every 4-6 hours using a dragging technique",
+      "B. Reposition only when the client requests it",
+      "C. Reposition once per nursing shift while documenting skin assessment",
+      "D. Reposition at least every 2 hours using a 30-degree lateral position and lifting devices to reduce friction and shear"
+    ],
+    "correct": 3,
+    "rationale": "Evidence-based guidelines recommend repositioning at least every 2 hours, using a 30-degree lateral tilt to offload bony prominences, and using lifting devices to reduce friction and shear forces that damage skin."
+  },
+  {
+    "q": "An older adult with diabetes has a Stage 3 pressure injury on the heel. The nurse understands that healing may be delayed because:",
+    "options": [
+      "A. Heel wounds always require amputation",
+      "B. Stage 3 injuries always heal within one week regardless of comorbidities",
+      "C. Diabetes impairs circulation, immune function, and wound healing, prolonging recovery time",
+      "D. Pressure injuries on the heel are not clinically significant"
+    ],
+    "correct": 2,
+    "rationale": "Diabetes impairs peripheral circulation, immune response, and cellular repair mechanisms, all of which delay wound healing. Heel pressure injuries in diabetic clients require vigilant monitoring and comprehensive wound care management."
+  },
+  {
+    "q": "A nurse is implementing pain management for an older adult using a multimodal approach. This means:",
+    "options": [
+      "A. Using only opioid medications at increasing doses",
+      "B. Alternating between ice and heat therapy exclusively",
+      "C. Combining pharmacological and non-pharmacological interventions targeting different pain mechanisms to improve relief and reduce side effects",
+      "D. Trying one intervention at a time over several months"
+    ],
+    "correct": 2,
+    "rationale": "Multimodal pain management combines different pharmacological agents (e.g., acetaminophen, low-dose NSAIDs) with non-pharmacological approaches (e.g., physical therapy, heat) to target multiple pain pathways, improving efficacy and reducing reliance on any single medication."
+  },
+  {
+    "q": "An older adult with chronic pain is prescribed a long-acting opioid. The nurse should prioritize which assessment?",
+    "options": [
+      "A. Monitoring for constipation and implementing a prophylactic bowel regimen",
+      "B. Assessing for weight gain",
+      "C. Checking for hair loss",
+      "D. Monitoring for hyperglycemia"
+    ],
+    "correct": 0,
+    "rationale": "Constipation is the most common and persistent side effect of opioid use. Unlike other opioid side effects, tolerance to constipation does not develop. A prophylactic bowel regimen should be initiated whenever opioid therapy begins."
+  },
+  {
+    "q": "A nurse is documenting a pressure injury that has exposed bone at the wound base. This injury is classified as:",
+    "options": [
+      "A. Stage 1",
+      "B. Stage 2",
+      "C. Unstageable",
+      "D. Stage 4"
+    ],
+    "correct": 3,
+    "rationale": "Stage 4 pressure injuries involve full-thickness tissue loss with exposed bone, tendon, or muscle. Undermining and tunneling may also be present. This is the most severe stage of pressure injury classification."
+  },
+  {
+    "q": "A 70-year-old client with terminal cancer has a life expectancy of approximately 4 months. The client asks about hospice care. The nurse explains that hospice eligibility typically requires:",
+    "options": [
+      "A. A life expectancy of 6 months or less as certified by a physician, with the client choosing comfort over curative treatment",
+      "B. A life expectancy of 2 weeks or less",
+      "C. The client must be in a hospital setting",
+      "D. The client must have no family support system"
+    ],
+    "correct": 0,
+    "rationale": "Hospice care is available to clients with a physician-certified prognosis of 6 months or less who choose comfort-focused care over curative treatment. Hospice can be provided in the home, facility, or inpatient setting and does not require lack of family support."
+  },
+  {
+    "q": "A family member asks the nurse what signs indicate that death is imminent for their terminally ill parent. Which response by the nurse is most accurate?",
+    "options": [
+      "A. 'Your parent will likely become more alert and talkative in the final hours.'",
+      "B. 'Common signs include Cheyne-Stokes breathing, mottled extremities, decreased urine output, and decreased responsiveness.'",
+      "C. 'There are no reliable signs that death is approaching.'",
+      "D. 'Your parent's vital signs will remain stable until the moment of death.'"
+    ],
+    "correct": 1,
+    "rationale": "Imminent signs of death include Cheyne-Stokes or irregular breathing, mottling of extremities, decreased urine output, decreased responsiveness, and sometimes a death rattle from pooled secretions. Educating families about these signs reduces fear and anxiety."
+  },
+  {
+    "q": "A nurse is caring for a dying client who is experiencing terminal restlessness. The most appropriate nursing intervention is to:",
+    "options": [
+      "A. Apply physical restraints for safety",
+      "B. Increase environmental stimulation to reorient the client",
+      "C. Provide a calm, quiet environment, administer prescribed comfort medications, and offer reassurance to the client and family",
+      "D. Transfer the client to the intensive care unit"
+    ],
+    "correct": 2,
+    "rationale": "Terminal restlessness is managed through a calm environment, comfort medications (often benzodiazepines or haloperidol), reassuring presence, and family support. Restraints and excessive stimulation worsen agitation, and ICU transfer is not consistent with comfort goals."
+  },
+  {
+    "q": "A client with a terminal illness has completed an advance directive specifying no resuscitation. The client's adult child demands that 'everything be done.' The nurse should:",
+    "options": [
+      "A. Follow the family member's wishes and initiate CPR if needed",
+      "B. Ignore both the advance directive and the family member",
+      "C. Inform security to remove the family member from the facility",
+      "D. Respect the client's advance directive, notify the provider, and offer emotional support and education to the family member"
+    ],
+    "correct": 3,
+    "rationale": "The client's advance directive reflects their autonomous decision and takes legal precedence over family wishes. The nurse should uphold the directive, communicate with the healthcare team, and provide compassionate support and education to the family."
+  },
+  {
+    "q": "A nurse is supporting a client who recently lost a spouse of 50 years. Which grief response would the nurse recognize as expected and normal?",
+    "options": [
+      "A. Reporting occasional conversations with the deceased spouse and vivid dreams about them",
+      "B. Making plans for the future within the first week",
+      "C. Showing no emotional response whatsoever to the loss",
+      "D. Immediately forming a new romantic relationship"
+    ],
+    "correct": 0,
+    "rationale": "Sensing the presence of or having conversations with the deceased is a common and normal grief response. Vivid dreams about the deceased are also expected. These experiences typically decrease over time as grief is processed."
+  },
+  {
+    "q": "A hospice nurse is managing dyspnea in a dying client. Which intervention is most appropriate?",
+    "options": [
+      "A. Administer high-flow oxygen at 15 L/min via non-rebreather mask",
+      "B. Position the client in low Fowler's with a fan directed at the face and administer low-dose morphine as prescribed",
+      "C. Perform aggressive chest physiotherapy",
+      "D. Intubate the client for mechanical ventilation"
+    ],
+    "correct": 1,
+    "rationale": "Low-dose opioids such as morphine reduce the sensation of dyspnea, positioning in low to high Fowler's facilitates breathing, and a fan directed at the face stimulates trigeminal nerve receptors to ease breathlessness. Aggressive interventions are inconsistent with comfort care."
+  },
+  {
+    "q": "A nurse is educating a family about the purpose of palliative care. Which statement best describes palliative care?",
+    "options": [
+      "A. It is only provided in the last days of life",
+      "B. It replaces all curative treatments immediately",
+      "C. It focuses on improving quality of life and relieving suffering and can be provided alongside curative treatment at any stage of serious illness",
+      "D. It is the same as hospice care"
+    ],
+    "correct": 2,
+    "rationale": "Palliative care focuses on relief of suffering and improvement of quality of life for clients with serious illness. Unlike hospice, it can be provided at any stage of illness and alongside curative treatments."
+  },
+  {
+    "q": "An older adult client tells the nurse, 'I don't want to be kept alive on machines.' The nurse should:",
+    "options": [
+      "A. Document the statement and take no further action",
+      "B. Tell the client this is not an appropriate conversation topic",
+      "C. Encourage the client to discuss their wishes with the provider and consider completing an advance directive",
+      "D. Promise the client that machines will never be used"
+    ],
+    "correct": 2,
+    "rationale": "When a client expresses wishes about end-of-life care, the nurse should encourage formal documentation through advance directives and facilitate discussions with the healthcare provider and family members to ensure wishes are known and respected."
+  },
+  {
+    "q": "A nurse is assessing an older adult using the 'Get Up and Go' test. This test evaluates:",
+    "options": [
+      "A. Cognitive function and memory",
+      "B. Nutritional status",
+      "C. Hearing acuity",
+      "D. Mobility, balance, and fall risk by observing the client rise from a chair, walk, turn, and return to sitting"
+    ],
+    "correct": 3,
+    "rationale": "The Timed Get Up and Go (TUG) test assesses mobility and balance by timing how long it takes a client to stand from a chair, walk 10 feet, turn, walk back, and sit down. Times over 12 seconds indicate increased fall risk."
+  },
+  {
+    "q": "A key geriatric principle states 'start low and go slow' regarding medication dosing. This principle exists because older adults:",
+    "options": [
+      "A. Have increased hepatic metabolism and renal clearance",
+      "B. Have decreased body water, increased body fat, reduced hepatic metabolism, and decreased renal clearance, altering drug pharmacokinetics",
+      "C. Are more likely to be noncompliant with higher doses",
+      "D. Have enhanced drug absorption requiring smaller doses"
+    ],
+    "correct": 1,
+    "rationale": "Age-related changes in body composition and organ function alter drug distribution, metabolism, and excretion. Decreased body water increases concentration of water-soluble drugs, increased body fat extends half-life of lipid-soluble drugs, and reduced liver and kidney function slow drug clearance."
+  },
+  {
+    "q": "The nurse recalls that the mnemonic 'DELIRIUMS' helps identify common causes of delirium in older adults. The 'D' stands for:",
+    "options": [
+      "A. Diabetes only",
+      "B. Dementia diagnosis",
+      "C. Drugs (medications), which are one of the most common causes of delirium in older adults",
+      "D. Dehydration only"
+    ],
+    "correct": 2,
+    "rationale": "In the DELIRIUMS mnemonic, D stands for Drugs. Medications, especially anticholinergics, benzodiazepines, and opioids, are among the most common reversible causes of delirium in older adults. The full mnemonic covers multiple causes including infections, reduced sensory input, and urinary/fecal issues."
+  },
+  {
+    "q": "A geriatric nurse remembers the rule: 'When an older adult shows sudden behavior change, always think...'",
+    "options": [
+      "A. Delirium until proven otherwise",
+      "B. Normal aging process",
+      "C. Psychiatric illness first",
+      "D. Medication noncompliance"
+    ],
+    "correct": 0,
+    "rationale": "Any sudden change in behavior or cognition in an older adult should be considered delirium until proven otherwise. Delirium is a medical emergency with a treatable underlying cause that must be identified and addressed promptly."
+  },
+  {
+    "q": "A nurse remembers that urinary tract infections (UTIs) in older adults often present differently than in younger adults. The most common atypical presentation is:",
+    "options": [
+      "A. Acute confusion or change in mental status without typical urinary symptoms",
+      "B. Burning with urination and urinary frequency",
+      "C. High fever and flank pain",
+      "D. Blood in the urine with no other symptoms"
+    ],
+    "correct": 0,
+    "rationale": "In older adults, UTIs frequently present atypically with acute confusion, behavioral changes, or functional decline rather than the classic symptoms of dysuria and frequency. Altered mental status should prompt evaluation for UTI."
+  },
+  {
+    "q": "A nurse is teaching about the concept of 'geriatric syndromes.' These syndromes are best described as:",
+    "options": [
+      "A. Diseases that only occur after age 85",
+      "B. Multifactorial conditions common in older adults that do not fit neatly into single disease categories, such as falls, delirium, incontinence, and frailty",
+      "C. Genetic disorders diagnosed in childhood that worsen with age",
+      "D. Infections that are unique to residents of long-term care facilities"
+    ],
+    "correct": 1,
+    "rationale": "Geriatric syndromes are multifactorial conditions prevalent in older adults that involve multiple organ systems and contributing factors. They include falls, delirium, incontinence, frailty, and functional decline and require comprehensive multidisciplinary management."
+  },
+  {
+    "q": "The nurse knows that the acronym 'SPICES' is used in geriatric assessment. SPICES stands for:",
+    "options": [
+      "A. Sleep, Pain, Incontinence, Confusion, Evidence of falls, Skin breakdown",
+      "B. Sensory, Pulmonary, Infection, Cardiac, Endocrine, Stroke assessment",
+      "C. Social, Physical, Intellectual, Cultural, Environmental, Spiritual domains",
+      "D. Screening, Planning, Implementing, Coordinating, Evaluating, Sustaining care"
+    ],
+    "correct": 0,
+    "rationale": "SPICES is a geriatric assessment framework: Sleep disorders, Problems with eating/feeding, Incontinence, Confusion, Evidence of falls, and Skin breakdown. It helps nurses quickly identify common geriatric problems requiring intervention."
+  },
+  {
+    "q": "A key rule in gerontological nursing states that restraint use in older adults should be avoided because restraints:",
+    "options": [
+      "A. Increase agitation, injury, strangulation risk, pressure injuries, and functional decline",
+      "B. Require a court order to implement",
+      "C. Are too expensive for most healthcare facilities",
+      "D. Have no effect on patient behavior or safety"
+    ],
+    "correct": 0,
+    "rationale": "Physical restraints increase the risk of serious harm including strangulation, circulation compromise, pressure injuries, aspiration, increased agitation, and functional decline. Evidence-based alternatives should always be attempted first."
+  },
+  {
+    "q": "A nurse is caring for an 82-year-old client who was recently widowed and shows signs of social isolation. Which intervention is most appropriate?",
+    "options": [
+      "A. Refer the client to community resources such as senior centers, support groups, and social services",
+      "B. Prescribe antidepressant medication immediately",
+      "C. Tell the client that isolation is a normal part of aging and will resolve on its own",
+      "D. Limit visitors to prevent the client from becoming overwhelmed"
+    ],
+    "correct": 0,
+    "rationale": "Social isolation increases risk for depression, cognitive decline, and mortality in older adults. Connecting clients with community resources, support groups, and social services addresses isolation and promotes well-being."
+  },
+  {
+    "q": "A nurse recalls that the 'cascade iatrogenesis' concept in geriatrics refers to:",
+    "options": [
+      "A. A waterfall-type exercise program for older adults",
+      "B. A series of complications triggered by a single medical intervention, where each treatment causes a new problem",
+      "C. The progression of Alzheimer's disease through its stages",
+      "D. The natural decline of all body systems with aging"
+    ],
+    "correct": 1,
+    "rationale": "Cascade iatrogenesis occurs when a medical intervention triggers a complication, which is then treated with another intervention that causes yet another complication, creating a cascade of events. This is particularly dangerous in frail older adults."
+  },
+  {
+    "q": "A nurse is caring for a 74-year-old client with diabetes and peripheral neuropathy who reports no foot pain. The nurse should:",
+    "options": [
+      "A. Assume the feet are healthy since the client reports no pain",
+      "B. Perform a comprehensive foot assessment because neuropathy can mask pain from injuries, ulcers, or infections",
+      "C. Refer the client to podiatry only if visible wounds are present",
+      "D. Document that the client denies foot problems and move on"
+    ],
+    "correct": 1,
+    "rationale": "Peripheral neuropathy from diabetes diminishes pain sensation, so clients may not feel injuries, pressure ulcers, or infections. Comprehensive foot assessments including visual inspection and monofilament testing are essential regardless of pain reports."
+  },
+  {
+    "q": "An older adult client in a long-term care facility is being assessed for depression using the Geriatric Depression Scale (GDS). Which statement about the GDS is accurate?",
+    "options": [
+      "A. It relies primarily on somatic symptoms to detect depression",
+      "B. It requires the client to draw geometric shapes",
+      "C. It can only be administered by a psychiatrist",
+      "D. It was designed specifically for older adults and focuses on psychological symptoms rather than somatic symptoms that may overlap with normal aging"
+    ],
+    "correct": 3,
+    "rationale": "The GDS was specifically developed for older adults and emphasizes psychological and mood-related symptoms rather than somatic complaints, which often overlap with normal aging or chronic illness. It uses a simple yes/no format and can be administered by nurses."
+  },
+  {
+    "q": "A nurse notices that an older adult client consistently underdoses prescribed pain medication and states, 'I don't want to become addicted.' The nurse's best response is:",
+    "options": [
+      "A. 'That's wise; you should take as little medication as possible.'",
+      "B. 'Addiction is very common in older adults, so your concern is justified.'",
+      "C. 'You should stop taking the medication entirely if you're worried.'",
+      "D. 'Addiction is rare when pain medication is taken as prescribed for genuine pain. Undertreating pain can lead to decreased function and depression.'"
+    ],
+    "correct": 3,
+    "rationale": "Fear of addiction is a common barrier to adequate pain management in older adults. Nurses should educate clients that physical dependence differs from addiction, and undertreated pain can lead to depression, functional decline, and decreased quality of life."
+  },
+  {
+    "q": "A nurse is planning discharge for an older adult following a hip replacement. The most important component of the discharge plan is:",
+    "options": [
+      "A. Ensuring the client has a comprehensive plan including home safety modifications, follow-up appointments, physical therapy, medication management, and caregiver support",
+      "B. Providing written discharge instructions only",
+      "C. Scheduling a follow-up appointment in 6 months",
+      "D. Recommending the client return to all previous activities immediately"
+    ],
+    "correct": 0,
+    "rationale": "Comprehensive discharge planning for older adults after hip replacement should address home safety, follow-up care, rehabilitation, medication management, and caregiver education to prevent complications and hospital readmission."
+  },
+  {
+    "q": "A nurse is assessing a Stage 1 pressure injury. Which characteristic defines this stage?",
+    "options": [
+      "A. An open ulcer with a red wound bed",
+      "B. Full-thickness tissue loss with exposed fat",
+      "C. A wound covered entirely by slough or eschar",
+      "D. Intact skin with a localized area of non-blanchable redness over a bony prominence"
+    ],
+    "correct": 3,
+    "rationale": "Stage 1 pressure injuries present as intact skin with non-blanchable erythema over a bony prominence. The area may be painful, firm, soft, or warmer or cooler than adjacent tissue. In darkly pigmented skin, color changes may differ."
+  },
+  {
+    "q": "An older adult client on a medical-surgical unit develops acute confusion at 10 PM. Earlier that day, the client was oriented and alert. The nurse's priority action is to:",
+    "options": [
+      "A. Assess vital signs, oxygen saturation, blood glucose, and recent medication administration to identify a reversible cause of delirium",
+      "B. Assume the client has sundowner's syndrome and dim the lights",
+      "C. Administer a sedative to help the client sleep",
+      "D. Call the family to discuss long-term care placement"
+    ],
+    "correct": 0,
+    "rationale": "Acute-onset confusion in a previously oriented client is delirium until proven otherwise. The nurse must immediately assess for reversible causes including hypoxia, hypoglycemia, infection, medication effects, urinary retention, and pain."
+  },
+  {
+    "q": "A nurse is caring for a 71-year-old client who has been prescribed amitriptyline for insomnia. The nurse should question this order because:",
+    "options": [
+      "A. Amitriptyline is not available in oral form",
+      "B. Tricyclic antidepressants like amitriptyline are on the Beers Criteria due to strong anticholinergic and sedative effects that are particularly dangerous in older adults",
+      "C. Amitriptyline is only effective for clients under age 50",
+      "D. The medication must be given intravenously in older adults"
+    ],
+    "correct": 1,
+    "rationale": "Amitriptyline is a tricyclic antidepressant with strong anticholinergic properties listed on the Beers Criteria as potentially inappropriate for older adults. It can cause confusion, orthostatic hypotension, cardiac arrhythmias, urinary retention, and falls."
+  },
+  {
+    "q": "A 76-year-old client with Alzheimer's disease is prescribed a cholinesterase inhibitor (donepezil). The nurse educates the family that this medication:",
+    "options": [
+      "A. Cures Alzheimer's disease and reverses brain damage",
+      "B. Prevents all further cognitive decline",
+      "C. Is only effective in the late stages of dementia",
+      "D. May temporarily slow cognitive decline and improve daily functioning but does not cure or stop the progression of the disease"
+    ],
+    "correct": 3,
+    "rationale": "Cholinesterase inhibitors like donepezil may temporarily slow cognitive decline and improve function in mild to moderate Alzheimer's by increasing acetylcholine levels. They do not cure the disease or halt its progression."
+  },
+  {
+    "q": "An older adult client is admitted with pneumonia and becomes restless and pulls at IV lines. Before considering any restraints, the nurse should first:",
+    "options": [
+      "A. Ask a family member to hold the client's hands down",
+      "B. Immediately apply bilateral wrist restraints for safety",
+      "C. Medicate the client with a benzodiazepine",
+      "D. Attempt alternatives such as reorientation, addressing underlying causes (pain, hypoxia, full bladder), providing a sitter, and using mittens if necessary"
+    ],
+    "correct": 3,
+    "rationale": "Restraint-free interventions must be attempted first. The nurse should address underlying causes of restlessness, try reorientation, provide 1:1 observation, use diversional activities, and consider mittens before any restraint application."
+  },
+  {
+    "q": "During a home visit, a nurse observes an older adult has multiple expired medications in the medicine cabinet. The most appropriate action is to:",
+    "options": [
+      "A. Educate the client about the importance of medication disposal and help organize a current medication review with their provider",
+      "B. Dispose of all medications immediately without the client's permission",
+      "C. Ignore the expired medications as they are likely still effective",
+      "D. Recommend the client take double the dose of expired medications to compensate for reduced potency"
+    ],
+    "correct": 0,
+    "rationale": "Expired medications may be ineffective or potentially harmful. The nurse should educate the client about proper medication disposal, help organize current medications, and facilitate a comprehensive medication review with the prescribing provider."
+  },
+  {
+    "q": "A nurse is implementing the TIDE approach for managing behavioral symptoms in dementia. The 'T' stands for:",
+    "options": [
+      "A. Transfer the client to a different unit",
+      "B. Tolerate the behavior if it is not harmful to the client or others",
+      "C. Terminate all visitor access",
+      "D. Test cognitive function daily"
+    ],
+    "correct": 1,
+    "rationale": "The TIDE approach stands for Tolerate, Investigate, Divert, and End (the trigger). If a behavior is not dangerous, it may be tolerated. If intervention is needed, investigate the cause, try diversion, and modify or remove the trigger."
+  },
+  {
+    "q": "A nurse assessing an older adult's pain selects the Faces Pain Scale-Revised (FPS-R) instead of a numeric rating scale. This choice is most appropriate when the client:",
+    "options": [
+      "A. Has a doctoral degree and prefers objective measures",
+      "B. Is a cognitively intact younger adult",
+      "C. Is completely unresponsive",
+      "D. Has mild cognitive impairment or difficulty with abstract numerical concepts"
+    ],
+    "correct": 3,
+    "rationale": "The Faces Pain Scale-Revised is appropriate for clients with mild cognitive impairment or those who have difficulty conceptualizing numeric scales. For unresponsive clients, behavioral observation tools like PAINAD are more appropriate."
+  },
+  {
+    "q": "A nurse is caring for a dying client whose family is present. The nurse hears a gurgling sound with each breath. The nurse should explain to the family that:",
+    "options": [
+      "A. The client is choking and needs immediate suctioning",
+      "B. This 'death rattle' is caused by secretion pooling in the airway and is not distressing to the client; gentle repositioning may help",
+      "C. The client needs emergency intubation",
+      "D. The sound indicates pneumonia requiring antibiotic treatment"
+    ],
+    "correct": 1,
+    "rationale": "The death rattle is caused by secretions pooling in the oropharynx as the client loses the ability to swallow and cough. It sounds distressing to families but typically does not cause discomfort to the client. Gentle repositioning and anticholinergic medications can reduce secretions."
+  },
+  {
+    "q": "An older adult client takes multiple medications and asks the nurse about using a pill organizer. The nurse should recommend:",
+    "options": [
+      "A. A weekly pill organizer filled at the same time each week, with a medication list kept for reference and provider review",
+      "B. Keeping all medications in their original bottles and pouring them out as needed",
+      "C. Having a family member memorize the medication schedule",
+      "D. Taking all medications at bedtime to simplify the routine"
+    ],
+    "correct": 0,
+    "rationale": "Weekly pill organizers improve medication adherence and reduce errors. Filling them at a consistent time with a current medication list helps clients manage polypharmacy. Combining this with regular provider review ensures safety and appropriateness."
+  },
+  {
+    "q": "A nurse is conducting a fall risk assessment using the Morse Fall Scale. Which factor receives the highest point value on this scale?",
+    "options": [
+      "A. Having an intravenous line in place",
+      "B. A history of falling within the past 3 months",
+      "C. Being oriented to time, place, and person",
+      "D. Having a secondary diagnosis"
+    ],
+    "correct": 1,
+    "rationale": "On the Morse Fall Scale, a history of falling receives the highest point value (25 points), as past falls are the strongest predictor of future falls. Other factors scored include secondary diagnosis, ambulatory aid use, IV therapy, gait, and mental status."
+  },
+  {
+    "q": "A 78-year-old client is prescribed zolpidem for insomnia. The nurse should advocate for an alternative because:",
+    "options": [
+      "A. Zolpidem is too expensive for older adults",
+      "B. Sedative-hypnotics like zolpidem are on the Beers Criteria and increase the risk of falls, cognitive impairment, and delirium in older adults",
+      "C. Zolpidem is only available as an injection",
+      "D. Older adults do not experience insomnia"
+    ],
+    "correct": 1,
+    "rationale": "Zolpidem and other sedative-hypnotics are listed on the Beers Criteria as potentially inappropriate for older adults due to increased sensitivity causing excessive sedation, confusion, falls, and fractures. Non-pharmacological sleep interventions should be tried first."
+  },
+  {
+    "q": "A nurse is caring for a client receiving hospice care at home. The client's spouse asks, 'Is it okay to stop giving food and water?' The nurse should respond:",
+    "options": [
+      "A. 'You must continue to force food and water to prevent suffering.'",
+      "B. 'Decreasing interest in food and fluid is a natural part of the dying process. Offer small amounts if desired but do not force intake, as it can cause discomfort.'",
+      "C. 'We should start IV fluids immediately.'",
+      "D. 'You should feel guilty if you don't keep trying to feed your spouse.'"
+    ],
+    "correct": 1,
+    "rationale": "Decreased appetite and thirst are natural parts of the dying process. Forcing food or fluids can cause aspiration, edema, and increased discomfort. Offering small amounts if the client desires while providing mouth care is appropriate comfort-focused care."
+  },
+  {
+    "q": "A nurse is caring for a 90-year-old client who requires a surgical procedure. The nurse understands that surgical risk in this client is primarily determined by:",
+    "options": [
+      "A. Chronological age alone, which makes surgery contraindicated after age 85",
+      "B. The client's weight and height measurements",
+      "C. The number of previous surgeries the client has had",
+      "D. Overall physiological status, comorbidities, and functional reserve rather than chronological age alone"
+    ],
+    "correct": 3,
+    "rationale": "Surgical risk in older adults is determined by overall physiological status, comorbidities, functional reserve, and nutritional status rather than chronological age alone. Advanced age is a risk factor but does not automatically contraindicate surgery."
+  },
+  {
+    "q": "A nurse is using the Confusion Assessment Method (CAM) to screen a hospitalized older adult. A positive CAM screen requires the presence of:",
+    "options": [
+      "A. Acute onset with fluctuating course and inattention, plus either disorganized thinking or altered level of consciousness",
+      "B. Chronic memory loss and personality changes",
+      "C. Depressed mood and appetite changes",
+      "D. Gradual cognitive decline over several months"
+    ],
+    "correct": 0,
+    "rationale": "The CAM requires: (1) acute onset and fluctuating course AND (2) inattention, PLUS either (3) disorganized thinking OR (4) altered level of consciousness. It is the most widely used tool for delirium screening in hospitalized older adults."
+  },
+  {
+    "q": "A nurse is teaching about elder abuse. Which type of elder abuse involves the misuse or theft of an older adult's financial resources?",
+    "options": [
+      "A. Physical abuse",
+      "B. Emotional abuse",
+      "C. Neglect",
+      "D. Financial exploitation"
+    ],
+    "correct": 3,
+    "rationale": "Financial exploitation involves the illegal or improper use of an older adult's funds, property, or assets. It includes theft, forgery, misuse of power of attorney, and scams. Nurses are mandatory reporters of suspected elder abuse."
+  }
+]

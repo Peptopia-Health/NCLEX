@@ -1,0 +1,602 @@
+[
+  {
+    "q": "A nurse is assessing the nutritional status of a patient admitted with chronic malnutrition. Which laboratory value best reflects the patient's long-term nutritional status?",
+    "options": ["A. Albumin (half-life 20 days)", "B. Prealbumin (half-life 2-3 days)", "C. Total lymphocyte count", "D. Blood glucose level"],
+    "correct": 0,
+    "rationale": "Albumin has a half-life of 20 days, making it the best indicator of chronic/long-term nutritional status. Normal albumin is 3.5-5.0 g/dL. Prealbumin with a half-life of 2-3 days is better for acute changes."
+  },
+  {
+    "q": "How many kilocalories per gram does carbohydrate provide?",
+    "options": ["A. 4 kcal/g", "B. 7 kcal/g", "C. 9 kcal/g", "D. 2 kcal/g"],
+    "correct": 0,
+    "rationale": "Carbohydrates provide 4 kcal/g and serve as the primary energy source. Protein also provides 4 kcal/g. Fat provides 9 kcal/g, making it the most calorie-dense macronutrient."
+  },
+  {
+    "q": "A patient is receiving warfarin therapy. Which instruction should the nurse provide regarding vitamin K intake?",
+    "options": ["A. Keep vitamin K intake consistent from day to day", "B. Avoid all green leafy vegetables completely", "C. Increase vitamin K intake to boost clotting", "D. Only eat vitamin K foods on alternating days"],
+    "correct": 0,
+    "rationale": "Patients on warfarin should maintain CONSISTENT vitamin K intake, not avoid it entirely. Sudden increases lower INR (increased clotting risk), and sudden decreases raise INR (increased bleeding risk)."
+  },
+  {
+    "q": "A nurse is caring for an infant born 2 hours ago. Which vitamin is administered intramuscularly to the newborn to prevent hemorrhagic disease?",
+    "options": ["A. Vitamin K (phytonadione)", "B. Vitamin D", "C. Vitamin C", "D. Vitamin E"],
+    "correct": 0,
+    "rationale": "Vitamin K (phytonadione) is given IM to all newborns at birth because neonates have sterile GI tracts and cannot synthesize vitamin K, putting them at risk for hemorrhagic disease of the newborn."
+  },
+  {
+    "q": "Which BMI range is classified as normal weight for an adult?",
+    "options": ["A. 18.5-24.9", "B. 25.0-29.9", "C. 15.0-18.4", "D. 30.0-34.9"],
+    "correct": 0,
+    "rationale": "A BMI of 18.5-24.9 is considered normal weight. Below 18.5 is underweight, 25-29.9 is overweight, and 30 or above is obese."
+  },
+  {
+    "q": "A nurse is preparing to administer an intermittent bolus tube feeding via a nasogastric tube. Before administering the feeding, what should the nurse check?",
+    "options": ["A. Gastric residual volume", "B. Pupil response", "C. Blood pressure in both arms", "D. Capillary refill time"],
+    "correct": 0,
+    "rationale": "Gastric residual volume should be checked before each bolus feeding. If residual is greater than 250-500 mL (per facility policy), the feeding should be held to reduce aspiration risk."
+  },
+  {
+    "q": "A patient with celiac disease asks the nurse which grains are safe to eat. Which response is correct?",
+    "options": ["A. Rice and corn are safe for you to eat", "B. Wheat bread is acceptable in small amounts", "C. Barley cereal is fine if well-cooked", "D. Regular oats are always safe for celiac patients"],
+    "correct": 0,
+    "rationale": "Rice and corn are gluten-free and safe for patients with celiac disease. Wheat, barley, and rye must be strictly avoided. Oats are only safe if certified gluten-free."
+  },
+  {
+    "q": "Which sign is characteristic of iron deficiency anemia?",
+    "options": ["A. Spoon-shaped nails (koilonychia)", "B. Excessive bruising", "C. Night blindness", "D. Peripheral neuropathy"],
+    "correct": 0,
+    "rationale": "Koilonychia (spoon nails) is a classic sign of iron deficiency anemia. Other signs include pallor, fatigue, and pica (craving non-food substances)."
+  },
+  {
+    "q": "A breastfed infant requires supplementation of which vitamin starting at birth?",
+    "options": ["A. Vitamin D (400 IU/day)", "B. Vitamin C (50 mg/day)", "C. Vitamin B12 (1 mcg/day)", "D. Vitamin A (1000 IU/day)"],
+    "correct": 0,
+    "rationale": "Breastfed infants should receive vitamin D supplementation of 400 IU/day because breast milk contains insufficient vitamin D for bone development."
+  },
+  {
+    "q": "A patient on TPN develops sudden respiratory distress, chest pain, and a churning heart murmur when the central line tubing is changed. What is the priority nursing action?",
+    "options": ["A. Position the patient in left-lateral Trendelenburg position", "B. Administer a bolus of normal saline", "C. Increase the TPN infusion rate", "D. Elevate the head of bed to 90 degrees"],
+    "correct": 0,
+    "rationale": "These signs indicate air embolism, a TPN complication. The priority action is to position the patient in left-lateral Trendelenburg to trap air in the right atrium and prevent it from entering pulmonary circulation."
+  },
+  {
+    "q": "A nurse is assessing a patient with vitamin A deficiency. Which symptom would the nurse expect?",
+    "options": ["A. Night blindness and dry skin", "B. Bleeding gums and loose teeth", "C. Bone pain and fractures", "D. Peripheral neuropathy and ataxia"],
+    "correct": 0,
+    "rationale": "Vitamin A is essential for vision (especially night vision), skin integrity, and immune function. Deficiency causes night blindness, xerophthalmia, dry skin, and increased infection risk. Excess vitamin A is teratogenic in pregnancy."
+  },
+  {
+    "q": "Which mineral should be supplemented in patients with burns, malnutrition, and alcoholism to promote wound healing?",
+    "options": ["A. Zinc", "B. Iron", "C. Calcium", "D. Phosphorus"],
+    "correct": 0,
+    "rationale": "Zinc is crucial for wound healing, immune function, and taste/smell perception. It should be supplemented in patients with burns, malnutrition, and alcoholism. Dairy should be avoided when taking zinc supplements."
+  },
+  {
+    "q": "A patient on a DASH diet for hypertension asks which food group should be emphasized. What should the nurse recommend?",
+    "options": ["A. Fruits, vegetables, whole grains, and low-fat dairy", "B. Red meats and full-fat dairy products", "C. Processed foods and canned soups", "D. High-sodium condiments and deli meats"],
+    "correct": 0,
+    "rationale": "The DASH diet emphasizes fruits, vegetables, whole grains, and low-fat dairy. It is low in saturated fat and sodium, and rich in potassium, magnesium, and calcium to help reduce blood pressure."
+  },
+  {
+    "q": "During pregnancy, how many additional calories per day are recommended in the second trimester?",
+    "options": ["A. 340 kcal/day", "B. 452 kcal/day", "C. 200 kcal/day", "D. 600 kcal/day"],
+    "correct": 0,
+    "rationale": "During pregnancy, an additional 340 kcal/day is recommended in the second trimester and 452 kcal/day in the third trimester."
+  },
+  {
+    "q": "A nurse is teaching a patient about vitamin E. Which statement is correct?",
+    "options": ["A. Vitamin E acts as an antioxidant and protects cell membranes", "B. Vitamin E is necessary for blood clotting", "C. Vitamin E deficiency causes night blindness", "D. Vitamin E is a water-soluble vitamin excreted in urine"],
+    "correct": 0,
+    "rationale": "Vitamin E is a fat-soluble antioxidant that protects cell membranes and RBC integrity. Deficiency can cause hemolytic anemia in newborns and peripheral neuropathy. High doses increase bleeding risk with anticoagulants."
+  },
+  {
+    "q": "The nurse is reviewing dietary recommendations for a patient with diverticulosis (NOT in acute flare). Which diet is appropriate?",
+    "options": ["A. High-fiber diet (25-30 g/day)", "B. Low-residue, low-fiber diet", "C. Clear liquid diet", "D. High-protein, low-carbohydrate diet"],
+    "correct": 0,
+    "rationale": "Patients with diverticulosis (not actively flaring) should follow a high-fiber diet of 25-30 g/day with adequate fluids. During a diverticulitis flare, a low-residue/low-fiber diet is appropriate until inflammation resolves."
+  },
+  {
+    "q": "What is the normal serum albumin range?",
+    "options": ["A. 3.5-5.0 g/dL", "B. 15-36 mg/dL", "C. 200-400 mg/dL", "D. 8.5-10.5 mg/dL"],
+    "correct": 0,
+    "rationale": "Normal serum albumin is 3.5-5.0 g/dL. Values below 3.5 g/dL indicate malnutrition risk. Albumin has a half-life of 20 days and reflects long-term nutritional status."
+  },
+  {
+    "q": "Protein provides how many kilocalories per gram?",
+    "options": ["A. 4 kcal/g", "B. 9 kcal/g", "C. 7 kcal/g", "D. 2 kcal/g"],
+    "correct": 0,
+    "rationale": "Protein provides 4 kcal/g, the same as carbohydrates. Protein is essential for tissue repair, immune function, enzyme production, and hormone synthesis."
+  },
+  {
+    "q": "Vitamin K is essential for the synthesis of which clotting factors?",
+    "options": ["A. Factors II, VII, IX, and X", "B. Factors I, III, V, and VIII", "C. Factors XI, XII, and XIII", "D. Only Factor VIII"],
+    "correct": 0,
+    "rationale": "Vitamin K is required for the synthesis of clotting factors II (prothrombin), VII, IX, and X. Deficiency leads to bleeding, bruising, and prolonged PT/INR. Vitamin K antagonizes warfarin's anticoagulant effect."
+  },
+  {
+    "q": "The normal serum magnesium range is which of the following?",
+    "options": ["A. 1.5-2.5 mEq/L", "B. 3.5-5.0 mEq/L", "C. 8.5-10.5 mEq/L", "D. 0.5-1.0 mEq/L"],
+    "correct": 0,
+    "rationale": "Normal serum magnesium is 1.5-2.5 mEq/L. Magnesium deficiency causes tremors, hyperreflexia, seizures, and torsades de pointes. Low magnesium also prevents correction of low potassium."
+  },
+  {
+    "q": "A patient asks why salt substitutes should be avoided on a low-potassium renal diet. The nurse's best response is:",
+    "options": ["A. Salt substitutes contain potassium chloride, which can raise your potassium to dangerous levels", "B. Salt substitutes taste unpleasant with a renal diet", "C. Salt substitutes contain excess sodium", "D. Salt substitutes interfere with phosphate binders"],
+    "correct": 0,
+    "rationale": "Salt substitutes typically contain potassium chloride (KCl) instead of sodium chloride. For patients on a low-potassium renal diet, these can cause dangerous hyperkalemia."
+  },
+  {
+    "q": "Which complication of enteral feeding is considered the number one concern?",
+    "options": ["A. Aspiration", "B. Diarrhea", "C. Tube clogging", "D. Electrolyte imbalance"],
+    "correct": 0,
+    "rationale": "Aspiration is the number one complication of enteral tube feeding. Prevention includes maintaining HOB elevation at 30-45 degrees during and 30-60 minutes after feeding, verifying tube placement, and monitoring for cough and crackles."
+  },
+  {
+    "q": "A nurse is assessing a malnourished patient's immune status. Which lab value reflects immune function affected by malnutrition?",
+    "options": ["A. Total lymphocyte count (normal > 1500/mm3)", "B. Hemoglobin A1C", "C. Serum sodium level", "D. Platelet count"],
+    "correct": 0,
+    "rationale": "Total lymphocyte count decreases with malnutrition, reflecting impaired immune function. A count below 1500/mm3 suggests immunocompromise related to nutritional deficiency."
+  },
+  {
+    "q": "What is the normal range for serum transferrin?",
+    "options": ["A. 200-400 mg/dL", "B. 100-150 mg/dL", "C. 3.5-5.0 g/dL", "D. 15-36 mg/dL"],
+    "correct": 0,
+    "rationale": "Normal serum transferrin is 200-400 mg/dL. It is an intermediate nutritional marker and also reflects iron status. Transferrin falls between albumin and prealbumin in responsiveness to nutritional changes."
+  },
+  {
+    "q": "A nurse is caring for a patient with a dysphagia diet. At what minimum angle should the head of bed be elevated during meals?",
+    "options": ["A. 10 degrees", "B. 30 degrees or higher", "C. Flat (0 degrees)", "D. 15 degrees"],
+    "correct": 1,
+    "rationale": "Patients with dysphagia should eat with the head of bed elevated at least 30 degrees. They should also receive thickened liquids and pureed/minced foods as recommended by speech therapy to prevent aspiration."
+  },
+  {
+    "q": "Which vitamin deficiency causes pellagra, characterized by the 4 D's: dermatitis, diarrhea, dementia, and death?",
+    "options": ["A. Vitamin B1 (Thiamine)", "B. Vitamin B3 (Niacin)", "C. Vitamin B6 (Pyridoxine)", "D. Vitamin B12 (Cobalamin)"],
+    "correct": 1,
+    "rationale": "Niacin (B3) deficiency causes pellagra, remembered by the 4 D's: Dermatitis, Diarrhea, Dementia, and Death. High-dose niacin can cause flushing, managed by taking aspirin 30 minutes before."
+  },
+  {
+    "q": "A patient with chronic kidney disease (CKD) has elevated phosphorus levels. The nurse expects which medication to be prescribed?",
+    "options": ["A. Potassium supplements", "B. Phosphate binders taken with meals", "C. Calcium channel blockers", "D. Vitamin K supplements"],
+    "correct": 1,
+    "rationale": "Phosphate binders (such as sevelamer or calcium acetate) are taken WITH meals to bind dietary phosphorus in the GI tract and prevent absorption. In CKD, elevated phosphorus leads to decreased calcium."
+  },
+  {
+    "q": "The nurse is preparing to verify placement of a nasogastric tube. Which method is the gold standard for initial placement verification?",
+    "options": ["A. Auscultation of air bolus over the epigastrium", "B. X-ray confirmation", "C. Measuring the pH of gastric aspirate", "D. Observing for coughing during insertion"],
+    "correct": 1,
+    "rationale": "X-ray is the gold standard for verifying initial NG tube placement. Auscultation alone is no longer considered reliable. After initial verification, pH testing (gastric pH 5.5 or less) can be used for ongoing checks."
+  },
+  {
+    "q": "A nurse is caring for a patient on continuous enteral tube feeding. How often should gastric residual volume be checked?",
+    "options": ["A. Every 1-2 hours", "B. Every 4-6 hours", "C. Every 8-12 hours", "D. Only once per shift"],
+    "correct": 1,
+    "rationale": "For continuous tube feeding, gastric residual volume should be checked every 4-6 hours. For bolus feedings, it should be checked before each feeding."
+  },
+  {
+    "q": "A nurse is teaching a patient about iron supplementation. Which instruction is correct?",
+    "options": ["A. Take iron with milk to reduce stomach upset", "B. Take iron on an empty stomach with vitamin C to enhance absorption", "C. Take iron with antacids to prevent GI side effects", "D. Take iron with calcium supplements for best results"],
+    "correct": 1,
+    "rationale": "Iron should be taken on an empty stomach with vitamin C to enhance absorption. Dairy, tea, antacids, and calcium inhibit iron absorption. Black stools are an expected side effect."
+  },
+  {
+    "q": "What is the recommended daily folic acid intake for all women of childbearing age?",
+    "options": ["A. 200 mcg/day", "B. 400 mcg/day", "C. 800 mcg/day", "D. 1000 mcg/day"],
+    "correct": 1,
+    "rationale": "All women of childbearing age should consume 400 mcg/day of folic acid to prevent neural tube defects. During pregnancy, the recommendation increases to 600 mcg/day."
+  },
+  {
+    "q": "Which type of feeding tube requires continuous feeding only and cannot be used for bolus feedings?",
+    "options": ["A. Nasogastric (NG) tube", "B. Jejunostomy (J-tube)", "C. Gastrostomy (G-tube)", "D. Percutaneous endoscopic gastrostomy (PEG)"],
+    "correct": 1,
+    "rationale": "J-tubes deliver feeding directly to the jejunum, which cannot tolerate large bolus volumes. Continuous feeding is required. J-tubes also carry less aspiration risk compared to gastric tubes."
+  },
+  {
+    "q": "A patient with alcoholism is admitted to the hospital. The nurse should ensure which vitamin is administered BEFORE any glucose-containing IV fluids?",
+    "options": ["A. Vitamin B12", "B. Vitamin B1 (Thiamine)", "C. Vitamin C", "D. Vitamin B6"],
+    "correct": 1,
+    "rationale": "Thiamine (B1) must be given BEFORE glucose in alcoholic patients. Glucose metabolism requires thiamine; giving glucose without thiamine can precipitate Wernicke's encephalopathy."
+  },
+  {
+    "q": "A nurse is providing dietary teaching to a patient with heart failure. What is the recommended daily sodium limit?",
+    "options": ["A. 4,000 mg/day or less", "B. 2,000 mg/day or less", "C. 500 mg/day or less", "D. 3,500 mg/day or less"],
+    "correct": 1,
+    "rationale": "Patients with heart failure, hypertension, or renal disease should limit sodium to 2,000 mg/day or less. They should avoid processed foods, canned soups, deli meats, and soy sauce."
+  },
+  {
+    "q": "Which clinical sign indicates hypocalcemia?",
+    "options": ["A. Flushed, warm skin", "B. Positive Trousseau sign (carpopedal spasm)", "C. Elevated blood pressure", "D. Decreased deep tendon reflexes"],
+    "correct": 1,
+    "rationale": "Trousseau sign (carpopedal spasm when blood pressure cuff is inflated) and Chvostek sign are classic indicators of hypocalcemia. Other signs include tetany, numbness, seizures, and prolonged QT interval."
+  },
+  {
+    "q": "Which statement about prealbumin is correct regarding nutritional assessment?",
+    "options": ["A. Prealbumin has a half-life of 20 days", "B. Prealbumin is the best indicator for acute/recent nutritional changes", "C. Prealbumin is only useful in pediatric patients", "D. Prealbumin levels are unaffected by inflammation"],
+    "correct": 1,
+    "rationale": "Prealbumin has a half-life of 2-3 days, making it the best indicator for acute or recent nutritional changes. Both albumin and prealbumin are affected by inflammation and hydration."
+  },
+  {
+    "q": "Which food should the nurse instruct a patient with phenylketonuria (PKU) to avoid?",
+    "options": ["A. Rice and corn products", "B. Diet soda containing aspartame (NutraSweet)", "C. Fresh fruits and vegetables", "D. Gluten-free bread"],
+    "correct": 1,
+    "rationale": "Patients with PKU must restrict phenylalanine intake. Aspartame (NutraSweet) is metabolized to phenylalanine and must be avoided. High-protein foods are also restricted."
+  },
+  {
+    "q": "What is the maximum recommended hang time for an open-system enteral feeding formula?",
+    "options": ["A. 1-2 hours", "B. 4-8 hours", "C. 12-16 hours", "D. 24-48 hours"],
+    "correct": 1,
+    "rationale": "Open-system enteral formulas should hang for a maximum of 4-8 hours to prevent bacterial contamination. Closed-system formulas can hang for 24-48 hours."
+  },
+  {
+    "q": "Which food is the nurse most concerned about when a parent reports giving it to a 9-month-old?",
+    "options": ["A. Mashed sweet potatoes", "B. Honey in warm water", "C. Iron-fortified rice cereal", "D. Pureed bananas"],
+    "correct": 1,
+    "rationale": "Honey should NEVER be given to infants under 1 year old due to the risk of infant botulism caused by Clostridium botulinum spores."
+  },
+  {
+    "q": "A nurse is caring for an elderly patient at risk for osteoporosis. Which daily calcium intake is recommended?",
+    "options": ["A. 500 mg/day", "B. 1200 mg/day", "C. 2000 mg/day", "D. 800 mg/day"],
+    "correct": 1,
+    "rationale": "Older adults need 1200 mg/day of calcium along with 800-1000 IU/day of vitamin D for osteoporosis prevention. Calcium should be taken with vitamin D for optimal absorption."
+  },
+  {
+    "q": "Which vitamin deficiency causes Wernicke-Korsakoff syndrome?",
+    "options": ["A. Vitamin B12", "B. Vitamin B1 (Thiamine)", "C. Vitamin B9 (Folate)", "D. Vitamin C"],
+    "correct": 1,
+    "rationale": "Thiamine (B1) deficiency causes beriberi and Wernicke-Korsakoff syndrome, commonly seen in chronic alcoholism. Thiamine is essential for carbohydrate metabolism and nerve function."
+  },
+  {
+    "q": "A nurse is reviewing the lab results of a patient receiving TPN. Which electrolyte panel is most critical to monitor for refeeding syndrome?",
+    "options": ["A. Sodium, chloride, and bicarbonate", "B. Potassium, magnesium, and phosphorus", "C. Calcium, albumin, and glucose", "D. BUN, creatinine, and uric acid"],
+    "correct": 1,
+    "rationale": "Refeeding syndrome causes dangerous drops in potassium, magnesium, and phosphorus as malnourished cells rapidly take up these electrolytes. TPN should be started slowly in malnourished patients."
+  },
+  {
+    "q": "What is the recommended folic acid intake during pregnancy?",
+    "options": ["A. 400 mcg/day", "B. 600 mcg/day", "C. 800 mcg/day", "D. 200 mcg/day"],
+    "correct": 1,
+    "rationale": "During pregnancy, 600 mcg/day of folic acid is recommended to prevent neural tube defects. For all women of childbearing age, 400 mcg/day is recommended. Ideally, supplementation should begin before conception."
+  },
+  {
+    "q": "Which patient is at highest risk for vitamin B12 deficiency?",
+    "options": ["A. A teenager on a high-carbohydrate diet", "B. A strict vegan who does not take supplements", "C. A patient who eats fish twice a week", "D. A patient taking multivitamins daily"],
+    "correct": 1,
+    "rationale": "Strict vegans are at high risk for B12 deficiency because B12 is found primarily in animal products. Other at-risk groups include post-gastric bypass patients and elderly patients with decreased intrinsic factor."
+  },
+  {
+    "q": "A patient with chronic kidney disease is prescribed sevelamer. When should this medication be taken?",
+    "options": ["A. At bedtime on an empty stomach", "B. With meals to bind dietary phosphorus", "C. Two hours before eating", "D. Only when phosphorus levels are critically high"],
+    "correct": 1,
+    "rationale": "Sevelamer is a phosphate binder that must be taken WITH meals to bind dietary phosphorus in the GI tract and prevent absorption. In CKD, elevated phosphorus leads to decreased calcium and bone loss."
+  },
+  {
+    "q": "Calcium should NOT be administered IV to a patient taking which medication due to cardiac arrest risk?",
+    "options": ["A. Metformin", "B. Digoxin", "C. Metoprolol", "D. Lisinopril"],
+    "correct": 1,
+    "rationale": "IV calcium should NOT be given to patients taking digoxin because the combination can precipitate fatal cardiac arrhythmias and cardiac arrest."
+  },
+  {
+    "q": "Which B vitamin can cause peripheral neuropathy when taken in megadoses?",
+    "options": ["A. B1 (Thiamine)", "B. B6 (Pyridoxine)", "C. B9 (Folate)", "D. B12 (Cobalamin)"],
+    "correct": 1,
+    "rationale": "While water-soluble vitamins are generally safe, B6 (pyridoxine) is an exception. Megadoses of B6 can cause peripheral neuropathy, making it one of the few water-soluble vitamins that can reach toxic levels."
+  },
+  {
+    "q": "A nasogastric tube is considered a short-term feeding tube. What is the maximum recommended duration of use?",
+    "options": ["A. 1 week", "B. 4 weeks", "C. 8 weeks", "D. 12 weeks"],
+    "correct": 1,
+    "rationale": "Nasogastric tubes are intended for short-term use, up to 4 weeks. For long-term feeding (greater than 4 weeks), a gastrostomy (G-tube/PEG) or jejunostomy (J-tube) should be placed."
+  },
+  {
+    "q": "A patient receiving TPN has a blood glucose level of 320 mg/dL. Which action does the nurse anticipate?",
+    "options": ["A. Discontinuing the TPN immediately", "B. Increasing the rate of TPN to dilute the glucose", "C. Administering insulin as prescribed", "D. Switching to enteral feeding"],
+    "correct": 2,
+    "rationale": "Hyperglycemia is the most common complication of TPN due to high dextrose content. The nurse should administer insulin as prescribed. TPN should never be stopped abruptly due to risk of rebound hypoglycemia."
+  },
+  {
+    "q": "A nurse is educating parents about introducing solid foods to their 6-month-old infant. Which food should be introduced first?",
+    "options": ["A. Mashed bananas", "B. Whole cow's milk", "C. Iron-fortified cereal", "D. Scrambled eggs"],
+    "correct": 2,
+    "rationale": "Iron-fortified cereal is the recommended first solid food at 6 months. New single-ingredient foods should be introduced one at a time, waiting 3-5 days between new foods for allergy monitoring."
+  },
+  {
+    "q": "A nurse is caring for a malnourished patient who is about to begin tube feeding. Which nursing intervention is most important to prevent refeeding syndrome?",
+    "options": ["A. Start feedings at the full prescribed rate", "B. Administer a bolus of D50W before feeding", "C. Start feeds slowly and monitor potassium, magnesium, and phosphorus levels closely", "D. Restrict all oral fluids during tube feeding"],
+    "correct": 2,
+    "rationale": "Refeeding syndrome occurs in severely malnourished patients when nutrition is restarted too quickly. Potassium, magnesium, and phosphorus drop dangerously. Feeds should be started slowly with close electrolyte monitoring."
+  },
+  {
+    "q": "Which vitamin is essential for collagen synthesis, wound healing, and enhances iron absorption?",
+    "options": ["A. Vitamin D", "B. Vitamin B12", "C. Vitamin C (Ascorbic acid)", "D. Vitamin E"],
+    "correct": 2,
+    "rationale": "Vitamin C is essential for collagen synthesis, wound healing, and acts as an antioxidant. It enhances iron absorption and should be taken with iron supplements. Deficiency causes scurvy."
+  },
+  {
+    "q": "A patient with a gastrostomy (G-tube) is receiving continuous tube feeding. What position should the patient be maintained in during and after feeding?",
+    "options": ["A. Supine position", "B. Right lateral recumbent", "C. Head of bed elevated at least 30-45 degrees", "D. Prone position"],
+    "correct": 2,
+    "rationale": "The head of bed should be elevated at least 30-45 degrees during feeding and for 30-60 minutes after to prevent aspiration, which is the number one complication of tube feeding."
+  },
+  {
+    "q": "A patient taking isoniazid (INH) for tuberculosis should receive supplementation with which vitamin to prevent peripheral neuropathy?",
+    "options": ["A. Vitamin B1 (Thiamine)", "B. Vitamin B3 (Niacin)", "C. Vitamin B6 (Pyridoxine)", "D. Vitamin B9 (Folate)"],
+    "correct": 2,
+    "rationale": "Vitamin B6 (pyridoxine) is given with isoniazid (INH) to prevent peripheral neuropathy, a common side effect of INH therapy."
+  },
+  {
+    "q": "Which diet is appropriate for a patient with chronic kidney disease?",
+    "options": ["A. High-protein, high-sodium diet", "B. High-potassium, high-fiber diet", "C. Low-protein, low-sodium, low-potassium, low-phosphorus diet", "D. Unrestricted diet with extra dairy products"],
+    "correct": 2,
+    "rationale": "The renal diet restricts protein, sodium, potassium, and phosphorus. Fluid restriction is also common. Dairy is limited due to its phosphorus content."
+  },
+  {
+    "q": "A patient with vitamin D deficiency is an older adult. Which condition is most likely to develop?",
+    "options": ["A. Scurvy", "B. Pellagra", "C. Osteomalacia", "D. Beriberi"],
+    "correct": 2,
+    "rationale": "Vitamin D deficiency in adults causes osteomalacia (soft bones). In children, it causes rickets. Elderly patients are at high risk due to decreased sun exposure. Recommended intake is 800-1000 IU/day."
+  },
+  {
+    "q": "When caring for a patient receiving IV magnesium sulfate (MgSO4), which assessment finding requires the nurse to HOLD the infusion?",
+    "options": ["A. Heart rate of 88 bpm", "B. Blood pressure of 130/80 mmHg", "C. Respiratory rate less than 12 breaths/min", "D. Temperature of 99.0 F"],
+    "correct": 2,
+    "rationale": "A respiratory rate below 12 breaths/min indicates magnesium toxicity and the infusion should be held. The nurse should monitor deep tendon reflexes and have calcium gluconate (the antidote) available."
+  },
+  {
+    "q": "Which mineral deficiency is associated with goiter and cretinism?",
+    "options": ["A. Iron", "B. Zinc", "C. Iodine", "D. Calcium"],
+    "correct": 2,
+    "rationale": "Iodine is essential for thyroid hormone synthesis. Deficiency causes goiter and hypothyroidism. Maternal iodine deficiency during pregnancy can cause cretinism (congenital hypothyroidism with intellectual disability)."
+  },
+  {
+    "q": "A nurse is caring for a patient on TPN. Which laboratory value should be monitored every 4-6 hours initially?",
+    "options": ["A. Serum calcium", "B. Hemoglobin", "C. Blood glucose", "D. Serum albumin"],
+    "correct": 2,
+    "rationale": "Blood glucose should be monitored every 4-6 hours initially because TPN contains high dextrose concentrations that can cause hyperglycemia. Insulin may be added to the TPN or given separately."
+  },
+  {
+    "q": "A patient has a phosphorus level of 5.8 mg/dL and calcium level of 7.2 mg/dL. The nurse understands this is due to which relationship?",
+    "options": ["A. Phosphorus and calcium rise together", "B. Phosphorus and calcium are unrelated", "C. Phosphorus and calcium have an inverse relationship", "D. Only phosphorus affects calcium, not vice versa"],
+    "correct": 2,
+    "rationale": "Calcium and phosphorus have an inverse relationship: when one goes up, the other goes down. In CKD, elevated phosphorus leads to decreased calcium, triggering secondary hyperparathyroidism and bone loss."
+  },
+  {
+    "q": "A patient is experiencing hypoglycemia with a blood glucose of 62 mg/dL. Using the Rule of 15, what should the nurse do?",
+    "options": ["A. Administer 30 g of fast-acting carbohydrates and recheck in 30 minutes", "B. Administer 5 g of protein and recheck in 5 minutes", "C. Administer 15 g of fast-acting carbohydrates and recheck in 15 minutes", "D. Administer regular insulin immediately"],
+    "correct": 2,
+    "rationale": "The Rule of 15 states: if BG < 70 mg/dL, give 15 g of fast-acting carbohydrates, recheck blood glucose in 15 minutes, and repeat if still below 70."
+  },
+  {
+    "q": "Which NG tube placement verification method is NO LONGER considered reliable?",
+    "options": ["A. X-ray confirmation", "B. pH testing of aspirate", "C. Auscultation of air bolus over the epigastrium alone", "D. CO2 detector method"],
+    "correct": 2,
+    "rationale": "Auscultation (listening for air over the epigastrium) is no longer considered a reliable method for verifying NG tube placement. X-ray is the gold standard for initial placement, and pH testing is used for ongoing verification."
+  },
+  {
+    "q": "A nurse is planning nutrition education for an older adult. Which nutrient intake should be increased to prevent sarcopenia?",
+    "options": ["A. Carbohydrates", "B. Fat", "C. Protein (1.0-1.2 g/kg/day)", "D. Simple sugars"],
+    "correct": 2,
+    "rationale": "Older adults need increased protein intake of 1.0-1.2 g/kg/day to prevent sarcopenia (age-related loss of muscle mass). Despite decreased caloric needs, nutrient density should increase."
+  },
+  {
+    "q": "A patient on loop diuretics is at risk for hypokalemia. Which dietary modification should the nurse suggest?",
+    "options": ["A. Decrease intake of all fruits", "B. Use salt substitutes containing sodium chloride", "C. Increase intake of bananas, oranges, potatoes, and raisins", "D. Restrict fluid intake to 1 liter per day"],
+    "correct": 2,
+    "rationale": "Loop diuretics cause potassium loss. The patient should eat potassium-rich foods including bananas, oranges, potatoes, raisins, beans, spinach, and avocado to prevent hypokalemia."
+  },
+  {
+    "q": "The nurse is caring for a patient with a serum magnesium level of 1.0 mEq/L and a serum potassium of 3.0 mEq/L. Which electrolyte should be corrected first?",
+    "options": ["A. Potassium", "B. Sodium", "C. Magnesium", "D. Calcium"],
+    "correct": 2,
+    "rationale": "Low magnesium causes refractory hypokalemia. Potassium cannot be corrected until magnesium is repleted first. The rule is: treat magnesium first, then potassium will respond to replacement."
+  },
+  {
+    "q": "What type of filter should be used for TPN lipid infusions?",
+    "options": ["A. 0.22-micron filter", "B. 0.10-micron filter", "C. 1.2-micron filter", "D. No filter is needed for lipids"],
+    "correct": 2,
+    "rationale": "A 1.2-micron filter is used for lipid infusions, while a 0.22-micron filter is used for dextrose/amino acid solutions. Lipid emulsions should hang for a maximum of 12 hours."
+  },
+  {
+    "q": "A patient with hyperkalemia (K+ 6.2 mEq/L) asks for orange juice. What is the nurse's best response?",
+    "options": ["A. Orange juice will help lower your potassium", "B. You can have a small glass with your meal", "C. Orange juice is high in potassium and should be avoided right now", "D. Orange juice is fine as long as you limit it to 4 ounces"],
+    "correct": 2,
+    "rationale": "Orange juice is high in potassium. A patient with hyperkalemia needs to avoid high-potassium foods and beverages and needs potassium-lowering interventions instead."
+  },
+  {
+    "q": "Vitamin B2 (Riboflavin) deficiency presents with which symptoms?",
+    "options": ["A. Night blindness and xerophthalmia", "B. Beriberi and ataxia", "C. Cheilosis (cracked lips), glossitis, and photosensitivity", "D. Bleeding gums and petechiae"],
+    "correct": 2,
+    "rationale": "Riboflavin (B2) deficiency causes cheilosis (cracked lips), glossitis, and photosensitivity. Riboflavin is found in dairy, eggs, and green vegetables. It may turn urine bright yellow."
+  },
+  {
+    "q": "Which statement about PPN (Peripheral Parenteral Nutrition) is correct?",
+    "options": ["A. PPN can deliver dextrose concentrations up to 70%", "B. PPN is used for long-term nutritional support", "C. PPN has an osmolarity less than 900 mOsm/L and uses a peripheral IV", "D. PPN requires a central venous catheter"],
+    "correct": 2,
+    "rationale": "PPN is delivered through a peripheral IV with lower osmolarity (< 900 mOsm/L) and dextrose concentrations of 10% or less. It is for short-term use (< 2 weeks). TPN uses a central line for higher concentrations."
+  },
+  {
+    "q": "A nurse is administering iron dextran intravenously. What is the most important initial nursing action?",
+    "options": ["A. Infuse the full dose rapidly to minimize discomfort", "B. Mix the iron with the TPN solution", "C. Give a test dose first and monitor for anaphylaxis", "D. Administer an antacid before the infusion"],
+    "correct": 2,
+    "rationale": "IV iron dextran carries a risk of anaphylaxis, so a test dose must be given first with the patient monitored closely for allergic reactions. Emergency equipment should be readily available."
+  },
+  {
+    "q": "A nurse is caring for a child with a new diagnosis of celiac disease. The parent asks what gluten is. Which grains contain gluten?",
+    "options": ["A. Rice, corn, and potatoes", "B. Quinoa, millet, and buckwheat", "C. Wheat, barley, and rye", "D. Tapioca, sorghum, and amaranth"],
+    "correct": 2,
+    "rationale": "Gluten is found in wheat, barley, and rye. Patients with celiac disease must follow a strict gluten-free diet. Rice, corn, potatoes, quinoa, and other listed alternatives are gluten-free."
+  },
+  {
+    "q": "Which action should the nurse take when administering medications through a feeding tube?",
+    "options": ["A. Mix all medications together with the formula", "B. Crush all medications including enteric-coated tablets", "C. Flush with water between each individual medication", "D. Administer medications only when the feeding is running"],
+    "correct": 2,
+    "rationale": "Each medication should be administered separately with water flushes between to prevent clogging and drug interactions. Medications should NOT be mixed with formula. Enteric-coated and sustained-release medications should not be crushed."
+  },
+  {
+    "q": "A patient with type 2 diabetes asks about the glycemic index. Which statement by the nurse is accurate?",
+    "options": ["A. High-glycemic index foods are best for blood sugar control", "B. The glycemic index is irrelevant for diabetic patients", "C. Low-glycemic index foods provide steadier glucose control", "D. All carbohydrates have the same glycemic index"],
+    "correct": 2,
+    "rationale": "Low-glycemic index foods are digested and absorbed more slowly, providing steadier blood glucose control. This is beneficial for diabetic patients in maintaining consistent blood sugar levels."
+  },
+  {
+    "q": "Which vitamin deficiency is characterized by bleeding gums, petechiae, and poor wound healing?",
+    "options": ["A. Vitamin A deficiency", "B. Vitamin E deficiency", "C. Vitamin K deficiency", "D. Vitamin C deficiency (scurvy)"],
+    "correct": 3,
+    "rationale": "Scurvy (vitamin C deficiency) presents with bleeding gums, petechiae, poor wound healing, and loose teeth. Vitamin C is essential for collagen synthesis. Smokers have increased needs."
+  },
+  {
+    "q": "A patient on a renal diet asks what foods to avoid. Which food should the nurse recommend the patient limit?",
+    "options": ["A. White rice", "B. Apple slices", "C. Cranberry juice", "D. Bananas and oranges"],
+    "correct": 3,
+    "rationale": "Bananas and oranges are high in potassium and should be limited on a renal diet. White rice, apples, and cranberries are generally lower in potassium and acceptable."
+  },
+  {
+    "q": "A patient with pernicious anemia cannot absorb vitamin B12 orally. Which route of administration is most appropriate?",
+    "options": ["A. Oral supplementation with food", "B. Sublingual tablets only", "C. Rectal suppository", "D. Intramuscular (IM) injection of cyanocobalamin"],
+    "correct": 3,
+    "rationale": "Pernicious anemia results from lack of intrinsic factor needed for B12 absorption. IM cyanocobalamin bypasses the GI tract. This condition is common in strict vegans, post-gastric bypass, and elderly patients."
+  },
+  {
+    "q": "Which nursing action is appropriate when TPN must be abruptly discontinued?",
+    "options": ["A. Switch to an oral diet immediately", "B. Administer a bolus of normal saline", "C. Slowly decrease the rate over 24 hours", "D. Hang D10W at the same rate as the TPN"],
+    "correct": 3,
+    "rationale": "If TPN must be stopped emergently, D10W should be infused at the same rate to prevent rebound hypoglycemia. TPN should never be stopped abruptly."
+  },
+  {
+    "q": "A patient with suspected malnutrition has weight loss of 15% over 6 months, muscle wasting, and edema. The edema is most likely due to which condition?",
+    "options": ["A. Excessive sodium intake", "B. Vitamin D deficiency", "C. Iron deficiency", "D. Severe protein deficiency (kwashiorkor)"],
+    "correct": 3,
+    "rationale": "Kwashiorkor is severe protein deficiency that causes edema due to decreased albumin and oncotic pressure. Other signs include muscle wasting, fatty liver, and weakened immunity."
+  },
+  {
+    "q": "Which vitamin can become teratogenic when consumed in excess during pregnancy?",
+    "options": ["A. Vitamin C", "B. Vitamin D", "C. Vitamin E", "D. Vitamin A"],
+    "correct": 3,
+    "rationale": "Excess vitamin A is teratogenic (causes birth defects). Pregnant women should avoid liver and excessive supplementation. Fat-soluble vitamins can accumulate to toxic levels because they are stored in fat tissue."
+  },
+  {
+    "q": "What is the antidote for magnesium sulfate toxicity?",
+    "options": ["A. Sodium bicarbonate", "B. Protamine sulfate", "C. Naloxone", "D. Calcium gluconate"],
+    "correct": 3,
+    "rationale": "Calcium gluconate is the antidote for magnesium sulfate toxicity. Signs of toxicity include respiratory depression (RR < 12), absent deep tendon reflexes, and cardiac arrest."
+  },
+  {
+    "q": "When introducing solid foods to an infant, why should only one new food be introduced at a time?",
+    "options": ["A. To prevent overfeeding the infant", "B. To ensure adequate weight gain", "C. To reduce the risk of choking", "D. To identify potential food allergies"],
+    "correct": 3,
+    "rationale": "Single-ingredient foods should be introduced one at a time, waiting 3-5 days between new foods, to monitor for allergic reactions. This makes it easier to identify which food caused any adverse reaction."
+  },
+  {
+    "q": "A nurse is teaching a diabetic patient about carbohydrate counting. How many grams of carbohydrates equal one carb choice?",
+    "options": ["A. 5 grams", "B. 10 grams", "C. 20 grams", "D. 15 grams"],
+    "correct": 3,
+    "rationale": "One carb choice equals 15 grams of carbohydrates. Diabetic patients should maintain consistent carbohydrate distribution across meals for stable blood glucose levels."
+  },
+  {
+    "q": "A patient receiving continuous tube feeding should have the tube flushed with how much warm water every 4 hours?",
+    "options": ["A. 10 mL", "B. 60 mL", "C. 100 mL", "D. 30 mL"],
+    "correct": 3,
+    "rationale": "Enteral feeding tubes should be flushed with 30 mL of warm water before and after feedings, and every 4 hours during continuous feeding to prevent clogging."
+  },
+  {
+    "q": "Which is the most common complication of TPN?",
+    "options": ["A. Air embolism", "B. Refeeding syndrome", "C. Fluid overload", "D. Hyperglycemia"],
+    "correct": 3,
+    "rationale": "Hyperglycemia is the most common complication of TPN due to high dextrose concentrations. Blood glucose should be monitored every 4-6 hours initially, and insulin may be required."
+  },
+  {
+    "q": "Fat provides how many kilocalories per gram?",
+    "options": ["A. 2 kcal/g", "B. 4 kcal/g", "C. 7 kcal/g", "D. 9 kcal/g"],
+    "correct": 3,
+    "rationale": "Fat provides 9 kcal/g, more than double the energy provided by carbohydrates (4 kcal/g) or protein (4 kcal/g). This makes fat the most calorie-dense macronutrient."
+  },
+  {
+    "q": "A pregnant patient in her first trimester asks about dietary changes. The nurse advises which dietary recommendation?",
+    "options": ["A. Double caloric intake starting immediately", "B. Eliminate all seafood from the diet", "C. Restrict protein to prevent excessive weight gain", "D. Avoid raw fish, deli meats, and high-mercury fish"],
+    "correct": 3,
+    "rationale": "Pregnant women should avoid raw fish/meat, high-mercury fish (swordfish, shark, king mackerel), unpasteurized dairy, deli meats (listeria risk), alcohol, and excess caffeine (< 200 mg/day)."
+  },
+  {
+    "q": "Which TPN complication requires strict aseptic technique for prevention?",
+    "options": ["A. Hyperglycemia", "B. Rebound hypoglycemia", "C. Fluid overload", "D. Central line infection and sepsis"],
+    "correct": 3,
+    "rationale": "Infection and sepsis are serious TPN complications prevented by strict aseptic technique for all central line care, regular tubing changes per policy, and monitoring for fever and elevated WBC."
+  },
+  {
+    "q": "For patients receiving nasojejunal (NJ) tube feedings, what is the expected pH of aspirate?",
+    "options": ["A. pH less than 3", "B. pH of exactly 5.5", "C. pH less than 5", "D. pH greater than 6"],
+    "correct": 3,
+    "rationale": "Intestinal (post-pyloric) aspirate has a pH greater than 6, while gastric aspirate has a pH of 5.5 or less. NJ tubes are post-pyloric and are used when aspiration risk is high."
+  },
+  {
+    "q": "What is the recommended weight gain during pregnancy for a woman with a normal pre-pregnancy BMI?",
+    "options": ["A. 10-15 lbs", "B. 15-20 lbs", "C. 35-45 lbs", "D. 25-35 lbs"],
+    "correct": 3,
+    "rationale": "For women with a normal pre-pregnancy BMI (18.5-24.9), the recommended total weight gain during pregnancy is 25-35 lbs."
+  },
+  {
+    "q": "TPN must be administered through which type of vascular access?",
+    "options": ["A. Peripheral IV in the hand", "B. Butterfly needle", "C. Intraosseous access", "D. Central venous catheter (PICC, subclavian, or internal jugular)"],
+    "correct": 3,
+    "rationale": "TPN has high osmolarity and must be administered through a central venous catheter. It requires a dedicated lumen with no piggybacking of other medications. PPN (lower osmolarity) can use peripheral IV."
+  },
+  {
+    "q": "A nurse is monitoring a patient receiving IV lipid emulsion as part of TPN therapy. What is the maximum hang time for lipid infusions?",
+    "options": ["A. 4 hours", "B. 8 hours", "C. 24 hours", "D. 12 hours"],
+    "correct": 3,
+    "rationale": "IV lipid emulsions should hang for a maximum of 12 hours to prevent bacterial growth. Triglyceride levels should be monitored during lipid infusion."
+  },
+  {
+    "q": "Which vitamin's deficiency can cause hemolytic anemia in newborns?",
+    "options": ["A. Vitamin A", "B. Vitamin D", "C. Vitamin K", "D. Vitamin E"],
+    "correct": 3,
+    "rationale": "Vitamin E deficiency can cause hemolytic anemia in newborns because vitamin E protects red blood cell membranes from oxidative damage. It can also cause peripheral neuropathy in adults."
+  },
+  {
+    "q": "The nurse is reviewing nutritional needs for older adults. Which vitamin commonly requires supplementation due to decreased intrinsic factor production with aging?",
+    "options": ["A. Vitamin A", "B. Vitamin C", "C. Vitamin D", "D. Vitamin B12"],
+    "correct": 3,
+    "rationale": "Older adults often need B12 supplementation because intrinsic factor production decreases with age, impairing B12 absorption. B12 deficiency can cause pernicious anemia and neurological symptoms."
+  },
+  {
+    "q": "Normal serum calcium range is which of the following?",
+    "options": ["A. 3.5-5.0 mg/dL", "B. 15-36 mg/dL", "C. 1.5-2.5 mEq/L", "D. 8.5-10.5 mg/dL"],
+    "correct": 3,
+    "rationale": "Normal serum calcium is 8.5-10.5 mg/dL. Hypocalcemia presents with tetany, Trousseau and Chvostek signs, numbness, seizures, and prolonged QT interval."
+  },
+  {
+    "q": "A patient with niacin (B3) therapy for hyperlipidemia reports facial flushing after taking the medication. What should the nurse advise?",
+    "options": ["A. Take aspirin 30 minutes before the niacin dose to reduce flushing", "B. Discontinue niacin immediately", "C. Take niacin with a high-fat meal", "D. Double the dose to build tolerance faster"],
+    "correct": 0,
+    "rationale": "High-dose niacin commonly causes flushing. Taking aspirin 30 minutes before the niacin dose helps reduce this side effect. Flushing is expected and not a reason to discontinue therapy."
+  },
+  {
+    "q": "A nurse is providing discharge teaching to a patient starting oral iron supplements. Which expected side effect should the nurse include?",
+    "options": ["A. Bright red blood in the stool", "B. Black or dark-colored stools", "C. Pale yellow stools", "D. Green-tinged stools"],
+    "correct": 1,
+    "rationale": "Black or dark-colored stools are an expected and harmless side effect of oral iron supplementation. Patients should be informed so they do not mistake this for GI bleeding. Constipation is also a common side effect."
+  },
+  {
+    "q": "A nurse is caring for a patient with chronic liver disease who develops peripheral neuropathy, glossitis, and megaloblastic anemia. Which vitamin deficiency does the nurse suspect?",
+    "options": ["A. Vitamin A", "B. Vitamin C", "C. Vitamin K", "D. Vitamin B12"],
+    "correct": 3,
+    "rationale": "Peripheral neuropathy combined with glossitis and megaloblastic anemia is characteristic of vitamin B12 deficiency. B12 is required for DNA synthesis, myelin sheath formation, and RBC production. Neurological symptoms distinguish B12 from folate deficiency."
+  },
+  {
+    "q": "Which clinical finding is a sign of malnutrition affecting the skin?",
+    "options": ["A. Excessive sweating", "B. Acne vulgaris", "C. Skin hyperpigmentation", "D. Dry, flaky skin and brittle hair/nails"],
+    "correct": 3,
+    "rationale": "Signs of malnutrition include dry, flaky skin, brittle hair and nails, and angular cheilitis (cracking at mouth corners). Unintentional weight loss greater than 10% in 6 months is also a significant indicator."
+  },
+  {
+    "q": "The PKU diet for an infant requires which specialized nutritional approach?",
+    "options": ["A. High-protein formula", "B. Regular cow's milk formula", "C. Soy-based formula only", "D. Special low-phenylalanine formula"],
+    "correct": 3,
+    "rationale": "Infants with PKU require a special formula that is low in phenylalanine. Standard formulas and breast milk contain phenylalanine from protein, so specialized PKU formulas are essential to prevent intellectual disability."
+  },
+  {
+    "q": "A patient on a diabetic diet should be taught to do what with meals to maintain blood glucose stability?",
+    "options": ["A. Skip breakfast and eat large lunch and dinner", "B. Eat one large meal per day", "C. Fast for 16 hours daily", "D. Spread meals evenly throughout the day with consistent carbohydrate intake"],
+    "correct": 3,
+    "rationale": "Diabetic patients should distribute meals evenly throughout the day with consistent carbohydrate intake at each meal. This prevents large blood glucose fluctuations and helps maintain stable glycemic control."
+  }
+]
