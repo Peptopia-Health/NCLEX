@@ -24,10 +24,10 @@
 #peptopia-klimek-guide .quiz-theme-toggle{position:static;background:none;border:none;color:#fbbf24;cursor:pointer;font-size:1.3rem;display:inline-flex;align-items:center;justify-content:center;transition:color 0.2s,transform 0.2s;padding:0.25rem;flex-shrink:0;-webkit-tap-highlight-color:transparent}
 #peptopia-klimek-guide .quiz-theme-toggle:hover{transform:scale(1.15)}
 /* Quiz overlay forced visibility — guarantees modal shows in all modes */
-#peptopia-klimek-guide .quiz-overlay[style*="display"]{position:fixed !important;top:0 !important;left:0 !important;width:100% !important;height:100% !important;z-index:9999 !important;overflow-y:auto !important;-webkit-overflow-scrolling:touch}
+#peptopia-klimek-guide .quiz-overlay[style*="display:block"]{position:fixed !important;top:0 !important;left:0 !important;width:100% !important;height:100% !important;z-index:9999 !important;overflow-y:auto !important;-webkit-overflow-scrolling:touch !important;visibility:visible !important;opacity:1 !important;pointer-events:auto !important}
 /* Quiz light mode — uses --ql-* custom props set by JS per topic */
 #peptopia-klimek-guide .quiz-overlay.quiz-light{background:var(--ql-bg,#f5f3ff)}
-#peptopia-klimek-guide .quiz-overlay.quiz-light .quiz-box{color:#1e293b}
+#peptopia-klimek-guide .quiz-overlay.quiz-light .quiz-box{color:#1e293b;background:transparent}#peptopia-klimek-guide .quiz-overlay.quiz-light .q-card{background:#fff !important;border-color:#e2e8f0 !important}#peptopia-klimek-guide .quiz-overlay.quiz-light #q-text{color:#1e293b !important}#peptopia-klimek-guide .quiz-overlay.quiz-light .q-opt:not(.correct):not(.wrong){background:#fafafa !important;border-color:#d1d5db !important;color:#1e293b !important}
 #peptopia-klimek-guide .quiz-overlay.quiz-light .quiz-hdr{background:linear-gradient(135deg,var(--ql-hdr-from,#eef2ff),var(--ql-hdr-to,#e0e7ff));border-color:var(--ql-accent,#6366f1)}
 #peptopia-klimek-guide .quiz-overlay.quiz-light .quiz-hdr-title{color:var(--ql-accent-dk,#312e81);text-shadow:none}
 #peptopia-klimek-guide .quiz-overlay.quiz-light .quiz-theme-toggle{color:#93c5fd}
@@ -164,6 +164,12 @@ geroguide:     {bg:'#f5f3ff',accent:'#7c3aed',dk:'#4c1d95',lt:'#ede9fe',hf:'#ede
 nutrguide:     {bg:'#ecfdf5',accent:'#059669',dk:'#064e3b',lt:'#d1fae5',hf:'#d1fae5',ht:'#a7f3d0'},
 yfguide:       {bg:'#fffbeb',accent:'#b45309',dk:'#78350f',lt:'#fef3c7',hf:'#fef3c7',ht:'#fde68a'}
 };
+(function() {
+var _wpCats = ['Musculoskeletal','Anti-Infective','Cardiovascular','Psychiatric / Mental Health','Endocrine','Respiratory','Immune / Lymphatic','Renal / Urinary','Nervous System','Integumentary','Digestive / GI','Sensory / Ophthalmic','Nutritional Support'];
+for (var _i = 0; _i < _wpCats.length; _i++) {
+QUIZ_LIGHT_THEMES['wp_' + _wpCats[_i]] = QUIZ_LIGHT_THEMES.workpharm;
+}
+})();
 var QUIZ_LIGHT_DEFAULT = {bg:'#f0f4ff',accent:'#6366f1',dk:'#3730a3',lt:'#e0e7ff',hf:'#eef2ff',ht:'#e0e7ff'};
 function applyQuizLightProps() {
 var modal = document.getElementById('quiz-modal');
@@ -190,6 +196,21 @@ modal.classList.toggle('quiz-light');
 applyQuizLightProps();
 syncQuizToggleBtn(modal);
 };
+function _openQuizModal() {
+var _qm = document.getElementById('quiz-modal');
+if (!_qm) return null;
+initQuizTheme();
+var _isDk = document.documentElement.classList.contains('dark');
+var _bgVal = 'rgba(0,0,0,0.92)';
+if (!_isDk) {
+var _lt = QUIZ_LIGHT_THEMES[quizSectionKey] || QUIZ_LIGHT_DEFAULT;
+_bgVal = _lt.bg || '#f5f3ff';
+}
+_qm.style.cssText = 'display:block !important;position:fixed !important;top:0 !important;left:0 !important;width:100% !important;height:100% !important;z-index:9999 !important;background:' + _bgVal + ' !important;overflow-y:auto !important;-webkit-overflow-scrolling:touch;';
+applyQuizLightProps();
+void _qm.offsetHeight;
+return _qm;
+}
 function initQuizTheme() {
 var modal = document.getElementById('quiz-modal');
 if (!modal) return;
@@ -214,7 +235,7 @@ var loadingEl = document.getElementById('home-dashboard');
 if (loadingEl) loadingEl.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-900);font-weight:600;">Loading study data...</div>';
 var GH_CDN = 'https://cdn.jsdelivr.net/gh/Peptopia/NCLEX@main/';
 var GH_PAGES = 'https://peptopia.github.io/NCLEX/';
-var CACHE_BUST = '?v=16.0';
+var CACHE_BUST = '?v=17.0';
 fetch(GH_CDN + 'mnt_studydata.json' + CACHE_BUST)
 .then(function(r) {
 if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -248,7 +269,7 @@ loadingEl.innerHTML =
 'Error: Study data failed to load.' +
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
-var APP_VERSION = '16.0';
+var APP_VERSION = '17.0';
 var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:100 };
 var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1 };
 var GH_AUDIO = 'https://github.com/Peptopia/NCLEX/releases/download/audio-v1/';
@@ -1077,7 +1098,8 @@ renderWpPicker();
 document.getElementById('wp-picker').style.display = 'flex';
 };
 window.closeWpPicker = function() {
-document.getElementById('wp-picker').style.display = 'none';
+var _wpp = document.getElementById('wp-picker');
+if (_wpp) _wpp.style.display = 'none';
 };
 window.openWpCards = function(className) {
 closeWpPicker();
@@ -1097,17 +1119,15 @@ renderCardInModal(deck[0], data, 0, deck.length);
 document.getElementById('card-modal').style.display = 'flex';
 };
 window.startWpClassQuiz = function(className) {
-closeWpPicker();
+var _wpPicker = document.getElementById('wp-picker');
+if (_wpPicker) _wpPicker.style.display = 'none';
 currentTab = 'workpharm';
 var title = className ? className + ' Quiz' : 'Work Pharm Quiz';
 var secKey = 'workpharm';
 quizSectionTitle = title;
 quizSectionKey = className ? 'wp_' + className : secKey;
-var _qm = document.getElementById('quiz-modal');
+var _qm = _openQuizModal();
 if (!_qm) return;
-initQuizTheme();
-_qm.style.cssText = 'display:block !important;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;';
-void _qm.offsetHeight;
 document.getElementById('quiz-completion').classList.remove('visible');
 _showQuizLoading(title);
 fetchGitHubQuiz(secKey).then(function(result) {
@@ -1119,11 +1139,29 @@ return;
 document.getElementById('quiz-score-bar').style.display = 'flex';
 var filtered = quizQs;
 if (className) {
+var _wpDrugNames = [];
+var _wpData = contentData.workpharm;
+if (_wpData && _wpData.data) {
+for (var _wd = 0; _wd < _wpData.data.length; _wd++) {
+if (_wpData.data[_wd].drugClass === className) {
+var _rawTopic = (_wpData.data[_wd].topic || '').toLowerCase();
+if (_rawTopic) _wpDrugNames.push(_rawTopic);
+var _parts = _rawTopic.replace(/[()\[\]]/g, ' ').split(/[,\/;\u2013\u2014&]+/);
+for (var _pp = 0; _pp < _parts.length; _pp++) {
+var _pt = _parts[_pp].replace(/^\s+|\s+$/g, '');
+if (_pt.length >= 3) _wpDrugNames.push(_pt);
+}
+}
+}
+}
+var _clsLower = className.toLowerCase();
 filtered = quizQs.filter(function(q) {
-var r = q.rationale || '';
-return r.indexOf('Drug class: ' + className) !== -1 ||
-r.indexOf('classified as ' + className) !== -1 ||
-r.indexOf('belongs to the ' + className) !== -1;
+var _searchText = ((q.q || '') + ' ' + (q.rationale || '') + ' ' + ((q.a || q.options || []).join(' '))).toLowerCase();
+if (_searchText.indexOf(_clsLower) !== -1) return true;
+for (var _dn = 0; _dn < _wpDrugNames.length; _dn++) {
+if (_wpDrugNames[_dn].length >= 4 && _searchText.indexOf(_wpDrugNames[_dn]) !== -1) return true;
+}
+return false;
 });
 }
 if (filtered.length === 0) {
@@ -1353,7 +1391,7 @@ if (key === 'endo') {
 var endoCompCard = '<div class="home-card" data-section="endocompare" style="animation-delay:' + ((idx + 0.5) * 0.04) + 's; border-color:#b45309;" onclick="openEndoGuide()">' +
 '<div class="home-card-header" style="background-color:#fef3c7; color:#92400e;">' +
 '<span class="home-card-emoji">\u2697\uFE0F</span><span>Endo Comparisons</span></div>' +
-'<div class="home-card-body"><div class="home-card-desc" style="color:#92400e;">Thyroid, adrenal, ADH &amp; parathyroid comparisons with crisis management.</div></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:var(--amber-800);">Thyroid, adrenal, ADH &amp; parathyroid comparisons with crisis management.</div></div>' +
 '<div class="home-card-footer">' +
 '<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openEndoGuide();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
 '<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchEndoCompareQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
@@ -1365,28 +1403,28 @@ idx++;
 var infCtrlCard = '<div class="home-card" data-section="infctrl" style="animation-delay:' + ((idx + 2) * 0.04) + 's; border-color:#c2870a;" onclick="openInfCtrlGuide()">' +
 '<div class="home-card-header" style="background-color:#fdf0d5; color:#3d2200;">' +
 '<span class="home-card-emoji">\uD83E\uDDA0</span><span>Infection Control</span></div>' +
-'<div class="home-card-body"><div class="home-card-desc" style="color:#3d2200;">Precautions, sterile technique, HAIs, TB, bloodborne pathogens &amp; neutropenic care.</div></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:var(--amber-800);">Precautions, sterile technique, HAIs, TB, bloodborne pathogens &amp; neutropenic care.</div></div>' +
 '<div class="home-card-footer">' +
 '<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openInfCtrlGuide();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
 '<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchInfCtrlQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
 var priorityCard = '<div class="home-card" data-section="priority" style="animation-delay:' + ((idx + 2.5) * 0.04) + 's; border-color:#dc2626;" onclick="openPriorityGuide()">' +
 '<div class="home-card-header" style="background-color:#fecaca; color:#7f1d1d;">' +
 '<span class="home-card-emoji">\uD83D\uDEA8</span><span>Prioritization</span></div>' +
-'<div class="home-card-body"><div class="home-card-desc" style="color:#7f1d1d;">ABCs, Maslow\u2019s, delegation, triage, SBAR &amp; emergency protocols.</div></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:var(--red-800);">ABCs, Maslow\u2019s, delegation, triage, SBAR &amp; emergency protocols.</div></div>' +
 '<div class="home-card-footer">' +
 '<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openPriorityGuide();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
 '<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchPriorityQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
 var fluidsCard = '<div class="home-card" data-section="fluids" style="animation-delay:' + ((idx + 3) * 0.04) + 's; border-color:#0891b2;" onclick="openFluidsGuide()">' +
 '<div class="home-card-header" style="background-color:#a5f3fc; color:#164e63;">' +
 '<span class="home-card-emoji">\uD83D\uDCA7</span><span>Fluid &amp; Electrolytes</span></div>' +
-'<div class="home-card-body"><div class="home-card-desc" style="color:#164e63;">Na\u207A, K\u207A, Ca\u00B2\u207A, Mg\u00B2\u207A, PO\u2084, IV solutions &amp; electrolyte emergencies.</div></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:var(--cyan-800);">Na\u207A, K\u207A, Ca\u00B2\u207A, Mg\u00B2\u207A, PO\u2084, IV solutions &amp; electrolyte emergencies.</div></div>' +
 '<div class="home-card-footer">' +
 '<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openFluidsGuide();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
 '<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchFluidsQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
 var cardiacCard = '<div class="home-card" data-section="cardiac" style="animation-delay:' + ((idx + 3.5) * 0.04) + 's; border-color:#e11d48;" onclick="openCardiacGuide()">' +
 '<div class="home-card-header" style="background-color:#fecdd3; color:#4c0519;">' +
 '<span class="home-card-emoji">\u2764\uFE0F</span><span>Cardiac</span></div>' +
-'<div class="home-card-body"><div class="home-card-desc" style="color:#4c0519;">HF, CAD, MI, dysrhythmias, hemodynamic monitoring &amp; cardiac pharmacology.</div></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:var(--rose-800);">HF, CAD, MI, dysrhythmias, hemodynamic monitoring &amp; cardiac pharmacology.</div></div>' +
 '<div class="home-card-footer">' +
 '<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openCardiacGuide();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
 '<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchCardiacQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
@@ -1418,9 +1456,9 @@ var comp2Card = '<div class="home-card" data-section="comprehensive2" style="ani
 '<div class="home-card-footer">' +
 '<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchComprehensive2Quiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 72</span></button></div></div>';
 var comp3Card = '<div class="home-card" data-section="fullexam" style="animation-delay:' + ((idx + 3) * 0.04) + 's; border-color:var(--blue-800,#1e40af);" onclick="launchFullExamQuiz()">' +
-'<div class="home-card-header" style="background-color:#dbeafe; color:#1e3a5f;">' +
+'<div class="home-card-header" style="background-color:var(--blue-100,#dbeafe); color:var(--blue-800,#1e3a5f);">' +
 '<span class="home-card-emoji">\uD83D\uDCDD</span><span>Comprehensive III</span></div>' +
-'<div class="home-card-body"><div class="home-card-desc" style="color:#1e3a5f;">341 exam-style questions spanning all topics.</div></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:var(--blue-800);">341 exam-style questions spanning all topics.</div></div>' +
 '<div class="home-card-footer">' +
 '<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchFullExamQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 341</span></button></div></div>';
 var compGroupHtml = '<div class="coll-row"><div class="coll-group">' +
@@ -1428,16 +1466,16 @@ var compGroupHtml = '<div class="coll-row"><div class="coll-group">' +
 '<div class="coll-cards">' + compCard + comp2Card + comp3Card + '</div></div></div>';
 foundationsHtml += compGroupHtml;
 var obHtnCard = '<div class="home-card" data-section="obhtn" style="animation-delay:' + ((idx + 3) * 0.04) + 's; border-color:#5a8aad;" onclick="openObHtnGuide()">' +
-'<div class="home-card-header" style="background-color:#d0e4f0; color:#1a2840;">' +
+'<div class="home-card-header" style="background-color:var(--blue-100,#d0e4f0); color:var(--blue-800,#1a2840);">' +
 '<span class="home-card-emoji">\uD83E\uDD30</span><span>OB Hypertension</span></div>' +
-'<div class="home-card-body"><div class="home-card-desc" style="color:#1a2840;">Preeclampsia, Eclampsia &amp; HELLP — diagnostics, MgSO4 &amp; nursing priorities.</div></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:var(--blue-800);">Preeclampsia, Eclampsia &amp; HELLP — diagnostics, MgSO4 &amp; nursing priorities.</div></div>' +
 '<div class="home-card-footer">' +
 '<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openObHtnGuide();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
 '<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchObHtnQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
 var obMatNbCard = '<div class="home-card" data-section="obmatnb" style="animation-delay:' + ((idx + 3.5) * 0.04) + 's; border-color:#4a9a7d;" onclick="openObMatNbGuide()">' +
-'<div class="home-card-header" style="background-color:#c8e6d8; color:#0f2e24;">' +
+'<div class="home-card-header" style="background-color:var(--emerald-100,#c8e6d8); color:var(--emerald-800,#0f2e24);">' +
 '<span class="home-card-emoji">\uD83D\uDC76</span><span>OB - Newborn</span></div>' +
-'<div class="home-card-body"><div class="home-card-desc" style="color:#0f2e24;">Antepartum, L&amp;D, fetal monitoring, PPH, newborn care &amp; OB medications.</div></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:var(--emerald-800);">Antepartum, L&amp;D, fetal monitoring, PPH, newborn care &amp; OB medications.</div></div>' +
 '<div class="home-card-footer">' +
 '<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openObMatNbGuide();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
 '<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchObMatNbQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
@@ -1519,7 +1557,7 @@ html += '<div class="home-card klimek-card" style="animation-delay:' + delay + '
 html += '<div class="home-card gold-rules-card" style="animation-delay:' + ((KLIMEK_LECTURES.length) * 0.04) + 's; cursor:pointer; border-color:#d97706;" onclick="openGoldRulesGuide()">' +
 '<div class="home-card-header" style="background:linear-gradient(135deg,#fef3c7,#fde68a);color:#92400e;">' +
 '<span class="home-card-emoji">\uD83C\uDFC6</span><span>The Gold Rules</span></div>' +
-'<div class="home-card-body"><div class="home-card-desc" style="color:#b45309;">Core test strategies, guessing rules, triage priorities, psych anchors &amp; med-surg essentials.</div></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:var(--amber-800,#b45309);">Core test strategies, guessing rules, triage priorities, psych anchors &amp; med-surg essentials.</div></div>' +
 '<div class="home-card-footer">' +
 '<button class="home-card-btn study-btn" style="background:#92400e;color:#fff;" onclick="event.stopPropagation(); openGoldRulesGuide();"><span class="quiz-icon">\uD83C\uDFC6</span></button></div></div>';
 var el = document.getElementById('home-grid-lectures');
@@ -2140,13 +2178,8 @@ window.showWpHome = function() {
 renderWpCards();
 };
 window._openWpCatCards = function(categoryName) {
-var data = contentData.workpharm;
-if (!data) return;
-wpFilteredDeck = [];
-for (var i = 0; i < data.data.length; i++) {
-if (data.data[i].drugClass === categoryName) wpFilteredDeck.push(data.data[i]);
-}
-if (wpFilteredDeck.length > 0) openCards(0);
+currentTab = 'workpharm';
+openWpCards(categoryName);
 };
 window._startWpCatQuiz = function(categoryName) {
 startWpClassQuiz(categoryName);
@@ -2421,11 +2454,8 @@ document.getElementById('q-options').innerHTML = '';
 function initQuizUI(title, secKey) {
 quizSectionTitle = title;
 quizSectionKey = secKey;
-var _qm = document.getElementById('quiz-modal');
+var _qm = _openQuizModal();
 if (!_qm) return;
-initQuizTheme();
-_qm.style.cssText = 'display:block !important;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;';
-void _qm.offsetHeight;
 document.getElementById('quiz-completion').classList.remove('visible');
 _showQuizLoading(title);
 fetchGitHubQuiz(secKey).then(function(result) {
@@ -2609,6 +2639,21 @@ optHTML += '<button class="q-opt" onclick="checkAnswer(' + i + ', ' + item.corre
 }
 document.getElementById('q-options').innerHTML = optHTML;
 var _qm2 = document.getElementById('quiz-modal');
+if (_qm2 && _qm2.classList.contains('quiz-light')) {
+var _ltT = QUIZ_LIGHT_THEMES[quizSectionKey] || QUIZ_LIGHT_DEFAULT;
+var _qBox = _qm2.querySelector('.quiz-box');
+if (_qBox) _qBox.style.color = '#1e293b';
+var _qCard = _qm2.querySelector('.q-card');
+if (_qCard) { _qCard.style.background = '#fff'; _qCard.style.borderColor = '#e2e8f0'; }
+var _qText = document.getElementById('q-text');
+if (_qText) _qText.style.color = '#1e293b';
+var _opts = _qm2.querySelectorAll('.q-opt');
+for (var _oi = 0; _oi < _opts.length; _oi++) {
+_opts[_oi].style.background = '#fafafa';
+_opts[_oi].style.borderColor = '#d1d5db';
+_opts[_oi].style.color = '#1e293b';
+}
+}
 _qm2.scrollTop = 0;
 void _qm2.offsetHeight;
 }
@@ -2833,7 +2878,9 @@ showQuestion();
 };
 window.closeQuiz = function() {
 updateNavbarExamBar();
-var _cm = document.getElementById('quiz-modal'); _cm.style.cssText = ''; _cm.style.display = 'none';
+var _cm = document.getElementById('quiz-modal');
+_cm.classList.remove('quiz-light');
+_cm.style.cssText = 'display:none;';
 document.getElementById('quiz-resume-modal').style.display = 'none';
 isRetestMode = false; origQuizData = null; retestHistory = [];
 };
