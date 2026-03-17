@@ -58,6 +58,8 @@ body::before {
 .badge-pain  { background: rgba(225,29,72,0.2); color: #fda4af; border: 1px solid rgba(225,29,72,0.4); }
 .badge-eol   { background: rgba(168,85,247,0.2); color: #d8b4fe; border: 1px solid rgba(168,85,247,0.4); }
 .badge-mem   { background: rgba(148,163,184,0.2); color: #cbd5e1; border: 1px solid rgba(148,163,184,0.4); }
+.guide-quiz-btn{display:inline-flex;align-items:center;gap:0.4rem;padding:0.5rem 1.1rem;border-radius:2rem;font-size:0.85rem;font-weight:700;border:2px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.12);color:#fff;cursor:pointer;backdrop-filter:blur(4px);transition:all 0.15s;margin-top:0.75rem;text-transform:uppercase;letter-spacing:0.03em}
+.guide-quiz-btn:hover{background:rgba(255,255,255,0.25);transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
 
 .section-hdr { position: relative; margin: 2.5rem 0 0; padding: 0.85rem 1.15rem; border-radius: 0.75rem 0.75rem 0 0; font-family: 'Inter', system-ui, sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.01em; }
 .sh-age  { background: #2e1065; color: #e9d5ff; }
@@ -128,6 +130,7 @@ body::before {
     <a class="badge badge-eol" href="#sec-eol">🕊️ End of Life</a>
     <a class="badge badge-mem" href="#sec-mem">🧠 Memory</a>
   </div>
+  <button class="guide-quiz-btn" onclick="window.parent.postMessage({type:'launchGuideQuiz',key:'geroguide'},'*')">📝 100 Questions</button>
 </div>
 
 <!-- ==================== SECTION 1 ==================== -->

@@ -88,6 +88,8 @@ body::before {
 .badge-deleg { background: rgba(99,102,241,0.2); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.4); }
 .badge-ethic { background: rgba(245,158,11,0.2); color: #fcd34d; border: 1px solid rgba(245,158,11,0.4); }
 .badge-mem   { background: rgba(148,163,184,0.2); color: #cbd5e1; border: 1px solid rgba(148,163,184,0.4); }
+.guide-quiz-btn{display:inline-flex;align-items:center;gap:0.4rem;padding:0.5rem 1.1rem;border-radius:2rem;font-size:0.85rem;font-weight:700;border:2px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.12);color:#fff;cursor:pointer;backdrop-filter:blur(4px);transition:all 0.15s;margin-top:0.75rem;text-transform:uppercase;letter-spacing:0.03em}
+.guide-quiz-btn:hover{background:rgba(255,255,255,0.25);transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
 
 /* ========== SECTION HEADERS ========== */
 .section-hdr {
@@ -213,6 +215,7 @@ body::before {
     <a class="badge badge-ethic" href="#sec-ethic">⚖️ Ethics &amp; Law</a>
     <a class="badge badge-mem" href="#sec-mem">🧠 Memory</a>
   </div>
+  <button class="guide-quiz-btn" onclick="window.parent.postMessage({type:'launchGuideQuiz',key:'fundguide'},'*')">📝 100 Questions</button>
 </div>
 
 <!-- ==================== SECTION 1: Nursing Process ==================== -->
