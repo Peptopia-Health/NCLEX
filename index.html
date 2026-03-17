@@ -130,7 +130,17 @@ yellowfever:   {bg:'#fffbeb',accent:'#b45309',dk:'#78350f',lt:'#fef3c7',hf:'#fef
 comprehensive: {bg:'#f5f3ff',accent:'#6d28d9',dk:'#4c1d95',lt:'#ede9fe',hf:'#ede9fe',ht:'#ddd6fe'},
 comprehensive2:{bg:'#faf5ff',accent:'#7e22ce',dk:'#581c87',lt:'#f3e8ff',hf:'#f3e8ff',ht:'#e9d5ff'},
 fullexam:      {bg:'#f0f4ff',accent:'#4f46e5',dk:'#312e81',lt:'#e0e7ff',hf:'#eef2ff',ht:'#e0e7ff'},
-workpharm:     {bg:'#f5f3ff',accent:'#6d28d9',dk:'#4c1d95',lt:'#ede9fe',hf:'#ede9fe',ht:'#ddd6fe'}
+workpharm:     {bg:'#f5f3ff',accent:'#6d28d9',dk:'#4c1d95',lt:'#ede9fe',hf:'#ede9fe',ht:'#ddd6fe'},
+obpeds:        {bg:'#fdf2f8',accent:'#ec4899',dk:'#831843',lt:'#fce7f3',hf:'#fce7f3',ht:'#fbcfe8'},
+pharm:         {bg:'#eef2ff',accent:'#4f46e5',dk:'#312e81',lt:'#e0e7ff',hf:'#eef2ff',ht:'#c7d2fe'},
+fund:          {bg:'#f0fdf4',accent:'#16a34a',dk:'#14532d',lt:'#dcfce7',hf:'#dcfce7',ht:'#bbf7d0'},
+gero:          {bg:'#f5f3ff',accent:'#7c3aed',dk:'#4c1d95',lt:'#ede9fe',hf:'#ede9fe',ht:'#ddd6fe'},
+nutr:          {bg:'#ecfdf5',accent:'#059669',dk:'#064e3b',lt:'#d1fae5',hf:'#d1fae5',ht:'#a7f3d0'},
+pharmguide:    {bg:'#eef2ff',accent:'#4f46e5',dk:'#312e81',lt:'#e0e7ff',hf:'#eef2ff',ht:'#c7d2fe'},
+fundguide:     {bg:'#f0fdf4',accent:'#16a34a',dk:'#14532d',lt:'#dcfce7',hf:'#dcfce7',ht:'#bbf7d0'},
+geroguide:     {bg:'#f5f3ff',accent:'#7c3aed',dk:'#4c1d95',lt:'#ede9fe',hf:'#ede9fe',ht:'#ddd6fe'},
+nutrguide:     {bg:'#ecfdf5',accent:'#059669',dk:'#064e3b',lt:'#d1fae5',hf:'#d1fae5',ht:'#a7f3d0'},
+yfguide:       {bg:'#fffbeb',accent:'#b45309',dk:'#78350f',lt:'#fef3c7',hf:'#fef3c7',ht:'#fde68a'}
 };
 var QUIZ_LIGHT_DEFAULT = {bg:'#f0f4ff',accent:'#6366f1',dk:'#3730a3',lt:'#e0e7ff',hf:'#eef2ff',ht:'#e0e7ff'};
 function applyQuizLightProps() {
@@ -182,7 +192,7 @@ var loadingEl = document.getElementById('home-dashboard');
 if (loadingEl) loadingEl.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-900);font-weight:600;">Loading study data...</div>';
 var GH_CDN = 'https://cdn.jsdelivr.net/gh/Peptopia/NCLEX@main/';
 var GH_PAGES = 'https://peptopia.github.io/NCLEX/';
-var CACHE_BUST = '?v=14.1';
+var CACHE_BUST = '?v=15.0';
 fetch(GH_CDN + 'mnt_studydata.json' + CACHE_BUST)
 .then(function(r) {
 if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -216,7 +226,7 @@ loadingEl.innerHTML =
 'Error: Study data failed to load.' +
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
-var APP_VERSION = '14.1';
+var APP_VERSION = '15.0';
 var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:100 };
 var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1 };
 var GH_AUDIO = 'https://github.com/Peptopia/NCLEX/releases/download/audio-v1/';
@@ -998,8 +1008,7 @@ closeCards();
 if (wpClass) {
 startWpClassQuiz(wpClass);
 } else {
-switchTab(tab);
-setTimeout(startQuiz, 120);
+launchSectionQuiz(tab);
 }
 };
 window.deckEndBack = function() {
@@ -1072,8 +1081,13 @@ var title = className ? className + ' Quiz' : 'Work Pharm Quiz';
 var secKey = 'workpharm';
 quizSectionTitle = title;
 quizSectionKey = className ? 'wp_' + className : secKey;
-initQuizTheme();
 var _qm = document.getElementById('quiz-modal');
+if (!_qm) return;
+initQuizTheme();
+_qm.style.display = 'block';
+void _qm.offsetHeight;
+_qm.style.display = 'none';
+void _qm.offsetHeight;
 _qm.style.display = 'block';
 void _qm.offsetHeight;
 document.getElementById('quiz-completion').classList.remove('visible');
@@ -1308,7 +1322,7 @@ cardHtml = '<div class="home-card" data-section="' + key + '" style="animation-d
 '<div class="home-card-body"><div class="home-card-desc" style="color:' + descClr + ';">' + (sectionSummaries[key] || sec.description) + '</div></div>' +
 '<div class="home-card-footer">' +
 '<button class="home-card-btn study-btn" onclick="event.stopPropagation(); switchTab(\'' + key + '\'); openCards();"><span class="card-count-badge">' + sec.data.length + '</span><span class="btn-text"> Cards</span></button>' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); ' + (key === 'workpharm' ? 'launchWorkPharmQuiz()' : 'switchTab(\'' + key + '\'); setTimeout(startQuiz, 100)') + ';"><span class="quiz-icon">\uD83E\uDDE0</span><span class="btn-text">' + (key === 'workpharm' ? ' 341 Quiz' : ' Quiz') + '</span></button></div></div>';
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchSectionQuiz(\'' + key + '\');"><span class="quiz-icon">\uD83E\uDDE0</span><span class="btn-text"> ' + (QUIZ_COUNTS[key] || '') + ' Quiz</span></button></div></div>';
 }
 if (key === 'obpeds') {
 obpedsCard = cardHtml;
@@ -1466,17 +1480,22 @@ var KLIMEK_LECTURES = [
 { num: 12, title: 'Pediatrics & Growth', emoji: '\uD83D\uDC76', desc: 'Piaget\'s stages, age-appropriate play, immunizations and developmental milestones.', file: 'Guides/Klimek-12.html' },
 { num: 13, title: 'Psych & Test Tips', emoji: '\uD83E\uDDE0', desc: 'Therapeutic communication, nurse-patient relationships and NCLEX test-taking strategies.', file: 'Guides/Klimek-13.html' }
 ];
+var LECTURE_QUIZ_MAP = ['resp','psych','cardio','musc','endo','pharm','endo','hemonc','psych','obpeds','fund','obpeds','psych'];
 function renderLectureCards() {
 var html = '<div class="klimek-banner">\uD83C\uDF93 Lecture Series</div>';
 for (var i = 0; i < KLIMEK_LECTURES.length; i++) {
 var lec = KLIMEK_LECTURES[i];
 var delay = (i * 0.04) + 's';
+var lecQuizKey = LECTURE_QUIZ_MAP[i] || '';
+var lecQuizCount = lecQuizKey ? (QUIZ_COUNTS[lecQuizKey] || '') : '';
 html += '<div class="home-card klimek-card" style="animation-delay:' + delay + '; cursor:pointer;" onclick="openLecture(' + i + ')">' +
 '<div class="home-card-header klimek-card-hdr">' +
 '<span class="home-card-emoji">' + lec.emoji + '</span><span>' + lec.title + '</span></div>' +
 '<div class="home-card-body"><div class="home-card-desc klimek-card-desc">' + (lec.desc || 'Interactive lecture notes with built-in mini-quizzes.') + '</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;display:flex;align-items:center;justify-content:center;gap:0.35rem;" onclick="event.stopPropagation(); openLecture(' + i + ');"><span class="quiz-icon">' + lec.emoji + '</span><span class="btn-text"> Go</span></button></div></div>';
+'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openLecture(' + i + ');"><span class="quiz-icon">' + lec.emoji + '</span><span class="btn-text"> Go</span></button>' +
+(lecQuizKey ? '<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchSectionQuiz(\'' + lecQuizKey + '\');"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> ' + lecQuizCount + ' Quiz</span></button>' : '') +
+'</div></div>';
 }
 html += '<div class="home-card gold-rules-card" style="animation-delay:' + ((KLIMEK_LECTURES.length) * 0.04) + 's; cursor:pointer; border-color:#d97706;" onclick="openGoldRulesGuide()">' +
 '<div class="home-card-header" style="background:linear-gradient(135deg,#fef3c7,#fde68a);color:#92400e;">' +
@@ -2111,13 +2130,7 @@ if (data.data[i].drugClass === categoryName) wpFilteredDeck.push(data.data[i]);
 if (wpFilteredDeck.length > 0) openCards(0);
 };
 window._startWpCatQuiz = function(categoryName) {
-var data = contentData.workpharm;
-if (!data) return;
-wpFilteredDeck = [];
-for (var i = 0; i < data.data.length; i++) {
-if (data.data[i].drugClass === categoryName) wpFilteredDeck.push(data.data[i]);
-}
-if (wpFilteredDeck.length > 0) setTimeout(startQuiz, 100);
+startWpClassQuiz(categoryName);
 };
 var _wpSearchTimeout = null;
 window.wpSearchDrugs = function(query) {
@@ -2381,8 +2394,13 @@ document.getElementById('q-options').innerHTML = '';
 function initQuizUI(title, secKey) {
 quizSectionTitle = title;
 quizSectionKey = secKey;
-initQuizTheme();
 var _qm = document.getElementById('quiz-modal');
+if (!_qm) return;
+initQuizTheme();
+_qm.style.display = 'block';
+void _qm.offsetHeight;
+_qm.style.display = 'none';
+void _qm.offsetHeight;
 _qm.style.display = 'block';
 void _qm.offsetHeight;
 document.getElementById('quiz-completion').classList.remove('visible');
@@ -2419,6 +2437,25 @@ initQuizUI((data.title || 'Section') + ' Quiz', currentTab);
 };
 window.launchWorkPharmQuiz = function() {
 initQuizUI('Work Pharm Quiz', 'workpharm');
+};
+window.launchSectionQuiz = function(key) {
+var labels = {
+cardio:'Cardiac Quiz',resp:'Respiratory Quiz',neuro:'Neurology Quiz',gi:'GI Quiz',
+obpeds:'OB/Peds Quiz',endo:'Endocrine Quiz',musc:'Musculoskeletal Quiz',
+psych:'Psych Quiz',hemonc:'Hem/Onc Quiz',integ:'Integumentary Quiz',
+pharm:'Pharmacology Quiz',fund:'Fundamentals Quiz',gero:'Gerontology Quiz',
+nutr:'Nutrition Quiz',workpharm:'Work Pharm Quiz',yellowfever:'Yellow Fever Quiz',
+comprehensive:'Comprehensive Quiz',comprehensive2:'Comprehensive II Quiz',
+fullexam:'Comprehensive III Quiz',endocompare:'Endo Comparisons Quiz',
+infctrl:'Infection Control Quiz',priority:'Prioritization Quiz',
+fluids:'Fluid & Electrolytes Quiz',cardiac:'Cardiac Quiz',
+obhtn:'OB Hypertension Quiz',obmatnb:'OB - Newborn Quiz',
+pharmguide:'Pharmacology Guide Quiz',fundguide:'Fundamentals Guide Quiz',
+geroguide:'Gerontology Guide Quiz',nutrguide:'Nutrition Guide Quiz',
+yfguide:'Yellow Fever Guide Quiz'
+};
+var title = labels[key] || ((SECTION_LABELS[key] || key) + ' Quiz');
+initQuizUI(title, key);
 };
 window.showFullExam = function() {
 initQuizUI('Comprehensive III Quiz', 'fullexam');
@@ -2528,7 +2565,7 @@ if (key === 'geroguide') { launchGeroGuideQuiz(); return; }
 if (key === 'nutrguide') { launchNutrGuideQuiz(); return; }
 if (key === 'yfguide') { launchYFGuideQuiz(); return; }
 if (key === 'workpharm') { launchWorkPharmQuiz(); return; }
-if (contentData[key]) { switchTab(key); setTimeout(startQuiz, 120); }
+launchSectionQuiz(key);
 };
 function showQuestion() {
 var item = currentQuizData[quizIndex];
