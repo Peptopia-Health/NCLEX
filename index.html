@@ -3,6 +3,8 @@
 #peptopia-klimek-guide .quiz-overlay .quiz-hdr{display:flex;align-items:center;justify-content:center;gap:0.5rem}
 #peptopia-klimek-guide .quiz-theme-toggle{position:static;background:none;border:none;color:#fbbf24;cursor:pointer;font-size:1.3rem;display:inline-flex;align-items:center;justify-content:center;transition:color 0.2s,transform 0.2s;padding:0.25rem;flex-shrink:0;-webkit-tap-highlight-color:transparent}
 #peptopia-klimek-guide .quiz-theme-toggle:hover{transform:scale(1.15)}
+/* Quiz overlay forced visibility — guarantees modal shows in all modes */
+#peptopia-klimek-guide .quiz-overlay[style*="display"]{position:fixed !important;top:0 !important;left:0 !important;width:100% !important;height:100% !important;z-index:9999 !important;overflow-y:auto !important;-webkit-overflow-scrolling:touch}
 /* Quiz light mode — uses --ql-* custom props set by JS per topic */
 #peptopia-klimek-guide .quiz-overlay.quiz-light{background:var(--ql-bg,#f5f3ff)}
 #peptopia-klimek-guide .quiz-overlay.quiz-light .quiz-box{color:#1e293b}
@@ -192,7 +194,7 @@ var loadingEl = document.getElementById('home-dashboard');
 if (loadingEl) loadingEl.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-900);font-weight:600;">Loading study data...</div>';
 var GH_CDN = 'https://cdn.jsdelivr.net/gh/Peptopia/NCLEX@main/';
 var GH_PAGES = 'https://peptopia.github.io/NCLEX/';
-var CACHE_BUST = '?v=15.0';
+var CACHE_BUST = '?v=16.0';
 fetch(GH_CDN + 'mnt_studydata.json' + CACHE_BUST)
 .then(function(r) {
 if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -226,7 +228,7 @@ loadingEl.innerHTML =
 'Error: Study data failed to load.' +
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
-var APP_VERSION = '15.0';
+var APP_VERSION = '16.0';
 var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:100 };
 var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1 };
 var GH_AUDIO = 'https://github.com/Peptopia/NCLEX/releases/download/audio-v1/';
@@ -1084,11 +1086,7 @@ quizSectionKey = className ? 'wp_' + className : secKey;
 var _qm = document.getElementById('quiz-modal');
 if (!_qm) return;
 initQuizTheme();
-_qm.style.display = 'block';
-void _qm.offsetHeight;
-_qm.style.display = 'none';
-void _qm.offsetHeight;
-_qm.style.display = 'block';
+_qm.style.cssText = 'display:block !important;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;';
 void _qm.offsetHeight;
 document.getElementById('quiz-completion').classList.remove('visible');
 _showQuizLoading(title);
@@ -1312,17 +1310,18 @@ cardHtml = '<div class="home-card" data-section="' + key + '" style="animation-d
 '<span class="home-card-emoji">' + emoji + '</span><span>' + sec.title + '</span></div>' +
 '<div class="home-card-body"><div class="home-card-desc" style="color:' + descClr + ';">' + (sectionSummaries[key] || sec.description) + '</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn study-btn" onclick="event.stopPropagation(); switchTab(\'' + key + '\'); openCards();"><span class="card-count-badge">' + sec.data.length + '</span><span class="btn-text"> Cards</span></button>' +
-'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); ' + _fgOpen + '();"><span class="quiz-icon">\uD83D\uDCD6</span><span class="btn-text"> Go</span></button>' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); ' + _fgQuiz + '();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100 Q</span></button></div></div>';
+'<button class="home-card-btn study-btn" onclick="event.stopPropagation(); switchTab(\'' + key + '\'); openCards();"><span class="card-count-badge">' + sec.data.length + '</span></button>' +
+'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); ' + _fgOpen + '();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); ' + _fgQuiz + '();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> ' + (QUIZ_COUNTS[key + 'guide'] || '') + '</span></button></div></div>';
 } else {
 cardHtml = '<div class="home-card" data-section="' + key + '" style="animation-delay:' + (idx * 0.04) + 's; border-color:' + borderClr + ';" onclick="switchTab(\'' + key + '\')">' +
 '<div class="home-card-header" style="background-color:' + headerBg + '; color:' + headerClr + ';">' +
 '<span class="home-card-emoji">' + emoji + '</span><span>' + sec.title + '</span></div>' +
 '<div class="home-card-body"><div class="home-card-desc" style="color:' + descClr + ';">' + (sectionSummaries[key] || sec.description) + '</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn study-btn" onclick="event.stopPropagation(); switchTab(\'' + key + '\'); openCards();"><span class="card-count-badge">' + sec.data.length + '</span><span class="btn-text"> Cards</span></button>' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchSectionQuiz(\'' + key + '\');"><span class="quiz-icon">\uD83E\uDDE0</span><span class="btn-text"> ' + (QUIZ_COUNTS[key] || '') + ' Quiz</span></button></div></div>';
+'<button class="home-card-btn study-btn" onclick="event.stopPropagation(); switchTab(\'' + key + '\'); openCards();"><span class="card-count-badge">' + sec.data.length + '</span></button>' +
+'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); switchTab(\'' + key + '\');"><span class="quiz-icon">\uD83D\uDCCB</span></button>' +
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchSectionQuiz(\'' + key + '\');"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> ' + (QUIZ_COUNTS[key] || '') + '</span></button></div></div>';
 }
 if (key === 'obpeds') {
 obpedsCard = cardHtml;
@@ -1334,10 +1333,10 @@ if (key === 'endo') {
 var endoCompCard = '<div class="home-card" data-section="endocompare" style="animation-delay:' + ((idx + 0.5) * 0.04) + 's; border-color:#b45309;" onclick="openEndoGuide()">' +
 '<div class="home-card-header" style="background-color:#fef3c7; color:#92400e;">' +
 '<span class="home-card-emoji">\u2697\uFE0F</span><span>Endo Comparisons</span></div>' +
-'<div class="home-card-body"><div class="home-card-desc" style="color:#fef3c7;">Thyroid, adrenal, ADH &amp; parathyroid comparisons with crisis management.</div></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:#92400e;">Thyroid, adrenal, ADH &amp; parathyroid comparisons with crisis management.</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openEndoGuide();"><span class="quiz-icon">\uD83D\uDCD6</span><span class="btn-text"> Go</span></button>' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchEndoCompareQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100 Questions</span></button></div></div>';
+'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openEndoGuide();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchEndoCompareQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
 systemsHtml += endoCompCard;
 }
 }
@@ -1346,31 +1345,31 @@ idx++;
 var infCtrlCard = '<div class="home-card" data-section="infctrl" style="animation-delay:' + ((idx + 2) * 0.04) + 's; border-color:#c2870a;" onclick="openInfCtrlGuide()">' +
 '<div class="home-card-header" style="background-color:#fdf0d5; color:#3d2200;">' +
 '<span class="home-card-emoji">\uD83E\uDDA0</span><span>Infection Control</span></div>' +
-'<div class="home-card-body"><div class="home-card-desc" style="color:#fdf0d5;">Precautions, sterile technique, HAIs, TB, bloodborne pathogens &amp; neutropenic care.</div></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:#3d2200;">Precautions, sterile technique, HAIs, TB, bloodborne pathogens &amp; neutropenic care.</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openInfCtrlGuide();"><span class="quiz-icon">\uD83D\uDCD6</span><span class="btn-text"> Go</span></button>' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchInfCtrlQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100 Questions</span></button></div></div>';
+'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openInfCtrlGuide();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchInfCtrlQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
 var priorityCard = '<div class="home-card" data-section="priority" style="animation-delay:' + ((idx + 2.5) * 0.04) + 's; border-color:#dc2626;" onclick="openPriorityGuide()">' +
 '<div class="home-card-header" style="background-color:#fecaca; color:#7f1d1d;">' +
 '<span class="home-card-emoji">\uD83D\uDEA8</span><span>Prioritization</span></div>' +
-'<div class="home-card-body"><div class="home-card-desc" style="color:#fecaca;">ABCs, Maslow\u2019s, delegation, triage, SBAR &amp; emergency protocols.</div></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:#7f1d1d;">ABCs, Maslow\u2019s, delegation, triage, SBAR &amp; emergency protocols.</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openPriorityGuide();"><span class="quiz-icon">\uD83D\uDCD6</span><span class="btn-text"> Go</span></button>' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchPriorityQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100 Questions</span></button></div></div>';
+'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openPriorityGuide();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchPriorityQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
 var fluidsCard = '<div class="home-card" data-section="fluids" style="animation-delay:' + ((idx + 3) * 0.04) + 's; border-color:#0891b2;" onclick="openFluidsGuide()">' +
 '<div class="home-card-header" style="background-color:#a5f3fc; color:#164e63;">' +
 '<span class="home-card-emoji">\uD83D\uDCA7</span><span>Fluid &amp; Electrolytes</span></div>' +
-'<div class="home-card-body"><div class="home-card-desc" style="color:#a5f3fc;">Na\u207A, K\u207A, Ca\u00B2\u207A, Mg\u00B2\u207A, PO\u2084, IV solutions &amp; electrolyte emergencies.</div></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:#164e63;">Na\u207A, K\u207A, Ca\u00B2\u207A, Mg\u00B2\u207A, PO\u2084, IV solutions &amp; electrolyte emergencies.</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openFluidsGuide();"><span class="quiz-icon">\uD83D\uDCD6</span><span class="btn-text"> Go</span></button>' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchFluidsQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100 Questions</span></button></div></div>';
+'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openFluidsGuide();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchFluidsQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
 var cardiacCard = '<div class="home-card" data-section="cardiac" style="animation-delay:' + ((idx + 3.5) * 0.04) + 's; border-color:#e11d48;" onclick="openCardiacGuide()">' +
 '<div class="home-card-header" style="background-color:#fecdd3; color:#4c0519;">' +
 '<span class="home-card-emoji">\u2764\uFE0F</span><span>Cardiac</span></div>' +
-'<div class="home-card-body"><div class="home-card-desc" style="color:#fecdd3;">HF, CAD, MI, dysrhythmias, hemodynamic monitoring &amp; cardiac pharmacology.</div></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:#4c0519;">HF, CAD, MI, dysrhythmias, hemodynamic monitoring &amp; cardiac pharmacology.</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openCardiacGuide();"><span class="quiz-icon">\uD83D\uDCD6</span><span class="btn-text"> Go</span></button>' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchCardiacQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100 Questions</span></button></div></div>';
+'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openCardiacGuide();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchCardiacQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
 var foundationsHtml = '';
 for (var fi = 0; fi < GROUPS.foundations.length; fi++) {
 var fkey = GROUPS.foundations[fi];
@@ -1383,27 +1382,27 @@ var yfCard = '<div class="home-card" data-section="yellowfever" style="animation
 '<span class="home-card-emoji">\uD83E\uDDA0</span><span>Yellow Fever</span></div>' +
 '<div class="home-card-body"><div class="home-card-desc" style="color:var(--amber-800);">Flavivirus transmission, Faget sign, toxicity phases &amp; vaccination.</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openYFGuide();"><span class="quiz-icon">\uD83D\uDCD6</span><span class="btn-text"> Go</span></button>' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchYFGuideQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100 Questions</span></button></div></div>';
+'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openYFGuide();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchYFGuideQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
 foundationsHtml += yfCard;
 var compCard = '<div class="home-card" data-section="comprehensive" style="animation-delay:' + ((idx + 1) * 0.04) + 's; border-color:var(--indigo-800);" onclick="launchComprehensiveQuiz()">' +
 '<div class="home-card-header" style="background-color:var(--indigo-100); color:var(--indigo-800);">' +
 '<span class="home-card-emoji">\uD83C\uDF93</span><span>Comprehensive</span></div>' +
 '<div class="home-card-body"><div class="home-card-desc" style="color:var(--indigo-800);">171 questions across all 13 study lectures.</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchComprehensiveQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 171 Questions</span></button></div></div>';
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchComprehensiveQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 171</span></button></div></div>';
 var comp2Card = '<div class="home-card" data-section="comprehensive2" style="animation-delay:' + ((idx + 2) * 0.04) + 's; border-color:var(--purple-800);" onclick="launchComprehensive2Quiz()">' +
 '<div class="home-card-header" style="background-color:var(--purple-100); color:var(--purple-800);">' +
 '<span class="home-card-emoji">\uD83D\uDCDA</span><span>Comprehensive II</span></div>' +
 '<div class="home-card-body"><div class="home-card-desc" style="color:var(--purple-800);">72 supplemental questions across all 13 lectures.</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchComprehensive2Quiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 72 Questions</span></button></div></div>';
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchComprehensive2Quiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 72</span></button></div></div>';
 var comp3Card = '<div class="home-card" data-section="fullexam" style="animation-delay:' + ((idx + 3) * 0.04) + 's; border-color:var(--blue-800,#1e40af);" onclick="launchFullExamQuiz()">' +
 '<div class="home-card-header" style="background-color:#dbeafe; color:#1e3a5f;">' +
 '<span class="home-card-emoji">\uD83D\uDCDD</span><span>Comprehensive III</span></div>' +
 '<div class="home-card-body"><div class="home-card-desc" style="color:#1e3a5f;">341 exam-style questions spanning all topics.</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchFullExamQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 341 Questions</span></button></div></div>';
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchFullExamQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 341</span></button></div></div>';
 var compGroupHtml = '<div class="coll-row"><div class="coll-group">' +
 '<div class="coll-label">\uD83C\uDF93 Comprehensive Quizzes</div>' +
 '<div class="coll-cards">' + compCard + comp2Card + comp3Card + '</div></div></div>';
@@ -1413,15 +1412,15 @@ var obHtnCard = '<div class="home-card" data-section="obhtn" style="animation-de
 '<span class="home-card-emoji">\uD83E\uDD30</span><span>OB Hypertension</span></div>' +
 '<div class="home-card-body"><div class="home-card-desc" style="color:#1a2840;">Preeclampsia, Eclampsia &amp; HELLP — diagnostics, MgSO4 &amp; nursing priorities.</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openObHtnGuide();"><span class="quiz-icon">\uD83D\uDCD6</span><span class="btn-text"> Go</span></button>' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchObHtnQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100 Questions</span></button></div></div>';
+'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openObHtnGuide();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchObHtnQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
 var obMatNbCard = '<div class="home-card" data-section="obmatnb" style="animation-delay:' + ((idx + 3.5) * 0.04) + 's; border-color:#4a9a7d;" onclick="openObMatNbGuide()">' +
 '<div class="home-card-header" style="background-color:#c8e6d8; color:#0f2e24;">' +
 '<span class="home-card-emoji">\uD83D\uDC76</span><span>OB - Newborn</span></div>' +
 '<div class="home-card-body"><div class="home-card-desc" style="color:#0f2e24;">Antepartum, L&amp;D, fetal monitoring, PPH, newborn care &amp; OB medications.</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openObMatNbGuide();"><span class="quiz-icon">\uD83D\uDCD6</span><span class="btn-text"> Go</span></button>' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchObMatNbQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100 Questions</span></button></div></div>';
+'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openObMatNbGuide();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchObMatNbQuiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
 var matPedsHtml = '<div class="coll-row"><div class="coll-group mat-peds-group">' +
 '<div class="coll-label">\uD83D\uDC76 Maternal &amp; Pediatric</div>' +
 '<div class="coll-cards">' + obpedsCard + obHtnCard + obMatNbCard + '</div></div></div>';
@@ -1493,8 +1492,8 @@ html += '<div class="home-card klimek-card" style="animation-delay:' + delay + '
 '<span class="home-card-emoji">' + lec.emoji + '</span><span>' + lec.title + '</span></div>' +
 '<div class="home-card-body"><div class="home-card-desc klimek-card-desc">' + (lec.desc || 'Interactive lecture notes with built-in mini-quizzes.') + '</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openLecture(' + i + ');"><span class="quiz-icon">' + lec.emoji + '</span><span class="btn-text"> Go</span></button>' +
-(lecQuizKey ? '<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchSectionQuiz(\'' + lecQuizKey + '\');"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> ' + lecQuizCount + ' Quiz</span></button>' : '') +
+'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); openLecture(' + i + ');"><span class="quiz-icon">' + lec.emoji + '</span></button>' +
+(lecQuizKey ? '<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchSectionQuiz(\'' + lecQuizKey + '\');"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> ' + lecQuizCount + '</span></button>' : '') +
 '</div></div>';
 }
 html += '<div class="home-card gold-rules-card" style="animation-delay:' + ((KLIMEK_LECTURES.length) * 0.04) + 's; cursor:pointer; border-color:#d97706;" onclick="openGoldRulesGuide()">' +
@@ -1502,7 +1501,7 @@ html += '<div class="home-card gold-rules-card" style="animation-delay:' + ((KLI
 '<span class="home-card-emoji">\uD83C\uDFC6</span><span>The Gold Rules</span></div>' +
 '<div class="home-card-body"><div class="home-card-desc" style="color:#b45309;">Core test strategies, guessing rules, triage priorities, psych anchors &amp; med-surg essentials.</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn study-btn" style="background:#92400e;color:#fff;display:flex;align-items:center;justify-content:center;gap:0.35rem;" onclick="event.stopPropagation(); openGoldRulesGuide();"><span class="quiz-icon">\uD83C\uDFC6</span><span class="btn-text"> Go</span></button></div></div>';
+'<button class="home-card-btn study-btn" style="background:#92400e;color:#fff;" onclick="event.stopPropagation(); openGoldRulesGuide();"><span class="quiz-icon">\uD83C\uDFC6</span></button></div></div>';
 var el = document.getElementById('home-grid-lectures');
 if (el) el.innerHTML = html;
 adjustCardButtons();
@@ -2072,9 +2071,9 @@ cardsHtml += '<div class="home-card wp-cat-card" style="animation-delay:' + (gi 
 '<span class="home-card-emoji">' + catMeta.emoji + '</span><span>' + (catMeta.displayName || gName) + '</span></div>' +
 '<div class="home-card-body"><div class="home-card-desc" style="color:' + descClr + ';">' + catMeta.desc + '</div></div>' +
 '<div class="home-card-footer">' +
-'<button class="home-card-btn study-btn" onclick="event.stopPropagation(); showWpCategory(\'' + gName.replace(/'/g, "\\'") + '\');"><span class="quiz-icon">' + catMeta.emoji + '</span><span class="btn-text"> Go</span></button>' +
-'<button class="home-card-btn study-btn" onclick="event.stopPropagation(); _openWpCatCards(\'' + gName.replace(/'/g, "\\'") + '\');"><span class="card-count-badge">' + gItems.length + '</span><span class="btn-text"> Cards</span></button>' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); _startWpCatQuiz(\'' + gName.replace(/'/g, "\\'") + '\');"><span class="quiz-icon">\uD83E\uDDE0</span><span class="btn-text"> Quiz</span></button>' +
+'<button class="home-card-btn study-btn" onclick="event.stopPropagation(); _openWpCatCards(\'' + gName.replace(/'/g, "\\'") + '\');"><span class="card-count-badge">' + gItems.length + '</span></button>' +
+'<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); showWpCategory(\'' + gName.replace(/'/g, "\\'") + '\');"><span class="quiz-icon">\uD83D\uDCCB</span></button>' +
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); _startWpCatQuiz(\'' + gName.replace(/'/g, "\\'") + '\');"><span class="quiz-icon">\uD83E\uDDE0</span></button>' +
 '</div></div>';
 }
 cardsHtml += '</div>';
@@ -2356,10 +2355,14 @@ document.getElementById('quiz-score-bar').style.display = 'none';
 document.getElementById('q-rationale').classList.remove('visible');
 document.getElementById('next-btn').style.display = 'none';
 document.getElementById('q-options').innerHTML = '';
+var _isLt = document.getElementById('quiz-modal').classList.contains('quiz-light');
+var _ldClr = _isLt ? '#475569' : '#94a3b8';
+var _spBrd = _isLt ? 'rgba(79,70,229,0.3)' : 'rgba(129,140,248,0.3)';
+var _spTop = _isLt ? '#4f46e5' : '#818cf8';
 document.getElementById('q-text').innerHTML =
 '<div style="text-align:center;padding:2rem 0;">' +
-'<div style="display:inline-block;width:36px;height:36px;border:3px solid rgba(129,140,248,0.3);border-top-color:#818cf8;border-radius:50%;animation:spin 0.8s linear infinite;"></div>' +
-'<div style="margin-top:1rem;color:#94a3b8;font-size:0.95rem;">Loading questions\u2026</div></div>';
+'<div style="display:inline-block;width:36px;height:36px;border:3px solid ' + _spBrd + ';border-top-color:' + _spTop + ';border-radius:50%;animation:spin 0.8s linear infinite;"></div>' +
+'<div style="margin-top:1rem;color:' + _ldClr + ';font-size:0.95rem;">Loading questions\u2026</div></div>';
 }
 var _lastFailedQuizTitle = '';
 var _lastFailedQuizKey = '';
@@ -2368,18 +2371,22 @@ delete ghQuizCache[_lastFailedQuizKey];
 initQuizUI(_lastFailedQuizTitle, _lastFailedQuizKey);
 };
 window._closeQuizError = function() {
-document.getElementById('quiz-modal').style.display = 'none';
+var _m = document.getElementById('quiz-modal'); _m.style.cssText = ''; _m.style.display = 'none';
 };
 function _showQuizError(title, secKey, errMsg) {
 _lastFailedQuizTitle = title;
 _lastFailedQuizKey = secKey;
 document.getElementById('quiz-title').textContent = title;
 document.getElementById('quiz-score-bar').style.display = 'none';
+var _isLt = document.getElementById('quiz-modal').classList.contains('quiz-light');
+var _descClr = _isLt ? '#475569' : '#94a3b8';
+var _closeBg = _isLt ? 'rgba(100,116,139,0.15)' : 'rgba(100,116,139,0.25)';
+var _closeClr = _isLt ? '#334155' : '#cbd5e1';
 document.getElementById('q-text').innerHTML =
 '<div style="text-align:center;padding:1.5rem 0;">' +
 '<div style="font-size:2rem;margin-bottom:0.75rem;">\u26A0\uFE0F</div>' +
-'<div style="color:#f87171;font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">Failed to Load Questions</div>' +
-'<div style="color:#94a3b8;font-size:0.85rem;margin-bottom:1.25rem;line-height:1.5;">' +
+'<div style="color:#ef4444;font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;">Failed to Load Questions</div>' +
+'<div style="color:' + _descClr + ';font-size:0.85rem;margin-bottom:1.25rem;line-height:1.5;">' +
 'All 3 data sources were tried.<br>' +
 (errMsg ? '<span style="font-family:monospace;font-size:0.8rem;opacity:0.7;">(' + errMsg.replace(/</g,'&lt;') + ')</span><br>' : '') +
 'This is usually a temporary CDN issue.</div>' +
@@ -2387,7 +2394,7 @@ document.getElementById('q-text').innerHTML =
 'style="background:#6366f1;color:#fff;border:none;padding:0.65rem 1.5rem;border-radius:0.5rem;font-size:0.95rem;font-weight:600;cursor:pointer;margin:0 0.35rem;">' +
 '\uD83D\uDD04 Retry Now</button>' +
 '<button onclick="_closeQuizError()" ' +
-'style="background:rgba(100,116,139,0.25);color:#cbd5e1;border:none;padding:0.65rem 1.5rem;border-radius:0.5rem;font-size:0.95rem;font-weight:600;cursor:pointer;margin:0 0.35rem;">' +
+'style="background:' + _closeBg + ';color:' + _closeClr + ';border:none;padding:0.65rem 1.5rem;border-radius:0.5rem;font-size:0.95rem;font-weight:600;cursor:pointer;margin:0 0.35rem;">' +
 'Close</button></div>';
 document.getElementById('q-options').innerHTML = '';
 }
@@ -2397,11 +2404,7 @@ quizSectionKey = secKey;
 var _qm = document.getElementById('quiz-modal');
 if (!_qm) return;
 initQuizTheme();
-_qm.style.display = 'block';
-void _qm.offsetHeight;
-_qm.style.display = 'none';
-void _qm.offsetHeight;
-_qm.style.display = 'block';
+_qm.style.cssText = 'display:block !important;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;';
 void _qm.offsetHeight;
 document.getElementById('quiz-completion').classList.remove('visible');
 _showQuizLoading(title);
@@ -2810,7 +2813,7 @@ showQuestion();
 };
 window.closeQuiz = function() {
 updateNavbarExamBar();
-document.getElementById('quiz-modal').style.display = 'none';
+var _cm = document.getElementById('quiz-modal'); _cm.style.cssText = ''; _cm.style.display = 'none';
 document.getElementById('quiz-resume-modal').style.display = 'none';
 isRetestMode = false; origQuizData = null; retestHistory = [];
 };
