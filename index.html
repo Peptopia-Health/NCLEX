@@ -171,10 +171,11 @@ QUIZ_LIGHT_THEMES['wp_' + _wpCats[_i]] = QUIZ_LIGHT_THEMES.workpharm;
 }
 })();
 var QUIZ_LIGHT_DEFAULT = {bg:'#f0f4ff',accent:'#6366f1',dk:'#3730a3',lt:'#e0e7ff',hf:'#eef2ff',ht:'#e0e7ff'};
-function applyQuizLightProps() {
+function applyQuizLightProps(key) {
 var modal = document.getElementById('quiz-modal');
 if (!modal || !modal.classList.contains('quiz-light')) return;
-var t = QUIZ_LIGHT_THEMES[quizSectionKey] || QUIZ_LIGHT_DEFAULT;
+var _qsk = key || (typeof quizSectionKey !== 'undefined' ? quizSectionKey : '');
+var t = QUIZ_LIGHT_THEMES[_qsk] || QUIZ_LIGHT_DEFAULT;
 modal.style.setProperty('--ql-bg', t.bg);
 modal.style.setProperty('--ql-accent', t.accent);
 modal.style.setProperty('--ql-accent-dk', t.dk);
@@ -196,14 +197,14 @@ modal.classList.toggle('quiz-light');
 applyQuizLightProps();
 syncQuizToggleBtn(modal);
 };
-function _openQuizModal() {
+function _openQuizModal(secKey) {
 var _qm = document.getElementById('quiz-modal');
 if (!_qm) return null;
 initQuizTheme();
 var _isDk = document.documentElement.classList.contains('dark');
 var _bgVal = 'rgba(0,0,0,0.92)';
 if (!_isDk) {
-var _lt = QUIZ_LIGHT_THEMES[quizSectionKey] || QUIZ_LIGHT_DEFAULT;
+var _lt = (secKey && QUIZ_LIGHT_THEMES[secKey]) || QUIZ_LIGHT_DEFAULT;
 _bgVal = _lt.bg || '#f5f3ff';
 }
 _qm.style.cssText = 'display:block !important;position:fixed !important;top:0 !important;left:0 !important;width:100% !important;height:100% !important;z-index:9999 !important;background:' + _bgVal + ' !important;overflow-y:auto !important;-webkit-overflow-scrolling:touch;';
@@ -655,6 +656,9 @@ document.getElementById('quiz-resume-info').textContent =
 'You answered ' + answered + ' of ' + total + ' questions (Score: ' + pct + '%)';
 document.getElementById('quiz-resume-stats').textContent =
 'Session saved ' + quizSessionTimeAgo(saved.ts);
+document.getElementById('q-text').innerHTML = '';
+document.getElementById('q-options').innerHTML = '';
+document.getElementById('quiz-question-area').style.display = 'none';
 document.getElementById('quiz-resume-modal').style.display = 'flex';
 }
 window.quizResumeResume = function() {
@@ -1126,7 +1130,7 @@ var title = className ? className + ' Quiz' : 'Work Pharm Quiz';
 var secKey = 'workpharm';
 quizSectionTitle = title;
 quizSectionKey = className ? 'wp_' + className : secKey;
-var _qm = _openQuizModal();
+var _qm = _openQuizModal(quizSectionKey);
 if (!_qm) return;
 document.getElementById('quiz-completion').classList.remove('visible');
 _showQuizLoading(title);
@@ -2454,7 +2458,7 @@ document.getElementById('q-options').innerHTML = '';
 function initQuizUI(title, secKey) {
 quizSectionTitle = title;
 quizSectionKey = secKey;
-var _qm = _openQuizModal();
+var _qm = _openQuizModal(secKey);
 if (!_qm) return;
 document.getElementById('quiz-completion').classList.remove('visible');
 _showQuizLoading(title);
@@ -2621,6 +2625,7 @@ if (key === 'workpharm') { launchWorkPharmQuiz(); return; }
 launchSectionQuiz(key);
 };
 function showQuestion() {
+document.getElementById('quiz-question-area').style.display = 'block';
 var item = currentQuizData[quizIndex];
 var letters = ['A', 'B', 'C', 'D'];
 var letterCls = ['la', 'lb', 'lc', 'ld'];
