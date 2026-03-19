@@ -1,0 +1,1102 @@
+[
+  {
+    "question": "An 18 year-old client is admitted to intensive care from the emergency room following a diving accident. The injury is suspected to be at the level of the 2nd cervical vertebrae. The nurse's priority assessment should be the client\u2019s",
+    "options": [
+      "response to stimuli",
+      "bladder control",
+      "respiratory function",
+      "muscle weakness"
+    ],
+    "correct": 2,
+    "rationale": "respiratory function. Spinal injury at the C-2 level results in quadriplegia. While the client will experience all of the problems identified, respiratory assessment is a priority."
+  },
+  {
+    "question": "A client has been admitted to the coronary care unit with a myocardial infarction. Which nursing diagnosis should have priority?",
+    "options": [
+      "pain related to ischemia",
+      "risk for altered elimination: constipation",
+      "risk for complication: dysrhythmias",
+      "anxiety related to pain"
+    ],
+    "correct": 0,
+    "rationale": "pain related to ischemia. Pain is related to ischemia of the heart muscle, and relief of pain will decrease myocardial oxygen demands, reduce blood pressure and heart rate and relieve anxiety. Pain also stimulates the sympathetic nervous system and increased preload, further increasing myocardial demands."
+  },
+  {
+    "question": "The nurse is caring for a client with a distal tibia fracture. The client has had a closed reduction and application of a toe to groin cast. 36 hours after surgery, the client suddenly becomes confused, short of breath and spikes a temperature of 103 degrees Fahrenheit. The first assessment the nurse should perform is",
+    "options": [
+      "orientation to time, place and person",
+      "pulse oximetry",
+      "circulation to casted extremity",
+      "blood pressure"
+    ],
+    "correct": 1,
+    "rationale": "pulse oximetry. Restlessness, confusion, irritability and disorientation may be the first signs of fat embolism syndrome followed by a very high temperature. The nurse needs to confirm hypoxia first."
+  },
+  {
+    "question": "The nurse is assessing a client with a Stage 2 skin ulcer. Which of the following treatments is most effective to promote healing?",
+    "options": [
+      "Covering the wound with a dry dressing",
+      "Using hydrogen peroxide soak",
+      "Leaving the area open to dry",
+      "Applying a hydrocolloid or foam dressing"
+    ],
+    "correct": 3,
+    "rationale": "Applying a hydrocolloid or foam dressing. While the previously accepted treatment was a transparent cover, evidence now indicates that the foam (DuoDerm) dressings work best."
+  },
+  {
+    "question": "A client is recovering from a thyroidectomy. While monitoring the client's initial post-operative condition, which of the following should the nurse report immediately?",
+    "options": [
+      "Tetany and paresthesia",
+      "Mild stridor and hoarseness",
+      "Irritability and insomnia",
+      "Headache and nausea"
+    ],
+    "correct": 0,
+    "rationale": "Tetany and paresthesia. Because the parathyroid gland may be damaged in this surgery, secondary hypocalcemia may occur. Findings of hypoparathyroidism include tetany, paresthesia, muscle cramps and seizures."
+  },
+  {
+    "question": "A client is scheduled for an intravenous pyelogram (IVP). Which of the following data from the client\u2019s history indicate a potential hazard for this test?",
+    "options": [
+      "Reflex incontinence",
+      "Allergy to shellfish",
+      "Claustrophobia",
+      "Hypertension"
+    ],
+    "correct": 1,
+    "rationale": "Allergy to shellfish. It is important to know if the client has an allergy to iodine or shellfish. If the client does, they may have an allergic reaction to the IVP contrast dye injected during the procedure."
+  },
+  {
+    "question": "A client enters the emergency department unconscious via ambulance. What document should be given priority to guide the direction of care for this client?",
+    "options": [
+      "The statement of client rights and the client self determination act",
+      "Orders written by the provider",
+      "A notarized original of advance directives brought in by the partner",
+      "The clinical pathway protocol of the agency and the emergency department"
+    ],
+    "correct": 2,
+    "rationale": "A notarized original of advance directives brought in by the partner. This document specifies the client''s wishes."
+  },
+  {
+    "question": "A client diagnosed with hepatitis C discusses his health history with the admitting nurse. The nurse should recognize which statement by the client as the most important?",
+    "options": [
+      "I got back from Central America a few weeks ago",
+      "I had the best raw oysters last week",
+      "I have many different sex partners",
+      "I had a blood transfusion 15 years ago"
+    ],
+    "correct": 3,
+    "rationale": "I had a blood transfusion 15 years ago.. The client who was transfused prior to blood screening for hepatitis C may show findings many years later. Options B and C are associated with risk of hepatitis B."
+  },
+  {
+    "question": "Which of these children at the site of a disaster at a child day care center would the triage nurse put in the \"treat last\" category?",
+    "options": [
+      "An infant with intermittent bulging anterior fontanel between crying episodes",
+      "A toddler with severe deep abrasions over 98% of the body",
+      "A preschooler with a lower leg fracture on one side and an upper leg fracture on the other",
+      "A school-age child with singed eyebrows and hair on the arms"
+    ],
+    "correct": 1,
+    "rationale": "A toddler with severe deep abrasions over 98% of the body. This child has the least chance of survival. Severe deep abrasions should be thought of as second and third degree burns. The child has great risk of both shock and infection combined."
+  },
+  {
+    "question": "A client has returned to the unit following a renal biopsy. Which of the following nursing interventions is appropriate?",
+    "options": [
+      "Ambulate the client 4 hours after procedure",
+      "Maintain client on NPO status for 24 hours",
+      "Monitor vital signs",
+      "Change dressing every 8 hours"
+    ],
+    "correct": 2,
+    "rationale": "Monitor vital signs. The potential complication of this procedure is internal hemorrhage. Monitoring vital signs is critical to detect early indications of bleeding."
+  },
+  {
+    "question": "The nurse is providing instructions for a client with asthma. Which of the following should the client monitor on a daily basis?",
+    "options": [
+      "Respiratory rate",
+      "Peak air flow volumes",
+      "Pulse oximetry",
+      "Skin color"
+    ],
+    "correct": 1,
+    "rationale": "Peak air flow volumes. The peak airflow volume decreases about 24 hours before clinical manifestations of exacerbation of asthma."
+  },
+  {
+    "question": "A client with a documented pulmonary embolism has the following arterial blood gases: PO2 - 70 mm hg, PCO2 - 32 mm hg, pH - 7.45, SaO2 - 87%, HCO3 - 22. Based on these data, what is the first nursing action?",
+    "options": [
+      "Review other lab data",
+      "Notify the health care provider",
+      "Administer oxygen",
+      "Calm the client"
+    ],
+    "correct": 2,
+    "rationale": "Administer oxygen. The client has a low PCO2 due to increased respiratory rate from the hypoxemia and signs of respiratory alkalosis. Immediate intervention is indicated."
+  },
+  {
+    "question": "The nurse is teaching a newly diagnosed asthma client on how to use a peak flow meter. The nurse explains that this should be used to",
+    "options": [
+      "determine oxygen saturation",
+      "measure forced expiratory volume",
+      "monitor atmosphere for presence of allergens",
+      "provide metered doses for inhaled bronchodilator"
+    ],
+    "correct": 1,
+    "rationale": "measure forced expiratory volume. The peak flow meter is used to measure peak expiratory flow volume. It provides useful information about the presence and/or severity of airway obstruction."
+  },
+  {
+    "question": "The nurse is assessing a 55 year-old female client who is scheduled for abdominal surgery. Which of the following information would indicate that the client is at risk for thrombus formation in the post-operative period?",
+    "options": [
+      "Estrogen replacement therapy",
+      "10% less than ideal body weight",
+      "Hypersensitivity to heparin",
+      "History of hepatitis"
+    ],
+    "correct": 0,
+    "rationale": "Estrogen replacement therapy. Estrogen increases the hypercoagulability of the blood and increased the risk for development of thrombophlebitis."
+  },
+  {
+    "question": "During the check up of a 2 month-old infant at a well baby clinic, the mother expresses concern to the nurse because a flat pink birthmark on the baby's forehead and eyelid has not gone away. What is an appropriate response by the nurse?",
+    "options": [
+      "\"Mongolian spots are a normal finding in dark-skinned children.\"",
+      "\"Port wine stains are often associated with other malformations.\"",
+      "\"Telangiectatic nevi are normal and will disappear as the baby grows.\"",
+      "\"The child is too young for consideration of surgical removal of these at this time.\""
+    ],
+    "correct": 2,
+    "rationale": "Telangiectatic nevi, salmon patch or stork bite birthmarks, are a normal variation and the facial nevi will generally disappear by ages 1 to 2 years."
+  },
+  {
+    "question": "A 3 year-old child diagnosed as having celiac disease attends a day care center. Which of the following would be an appropriate snack?",
+    "options": [
+      "Cheese crackers",
+      "Peanut butter sandwich",
+      "Potato chips",
+      "Vanilla cookies"
+    ],
+    "correct": 2,
+    "rationale": "Children with celiac disease should eat a gluten free diet. Gluten is found mainly in grains of wheat and rye and in smaller quantities in barley and oats. Corn, rice, soybeans and potatoes are digestible by persons with celiac disease.: F.A. Davis Company."
+  },
+  {
+    "question": "A nurse assigned to a manipulative client for 5 days becomes aware of feelings of reluctance to interact with the client. The next action by the nurse should be to",
+    "options": [
+      "Discuss the feeling of reluctance with an objective peer or supervisor",
+      "Limit contacts with the client to avoid reinforcement of the manipulative behavior",
+      "Confront the client about the negative effects of behaviors on other clients and staff",
+      "Develop a behavior modification plan that will promote more functional behavior"
+    ],
+    "correct": 0,
+    "rationale": "Discuss the feeling of reluctance with an objective peer or supervisor. The nurse who experiences stress in the therapeutic relationship can gain objectivity through supervision. The nurse must attempt to discover attitudes and feelings in the self that influence the nurse-client relationship."
+  },
+  {
+    "question": "A client is being treated for paranoid schizophrenia. When the client became loud and boisterous, the nurse immediately placed him in seclusion as a precautionary measure. The client willingly complied. The nurse\u2019s action",
+    "options": [
+      "may result in charges of unlawful seclusion and restraint",
+      "leaves the nurse vulnerable for charges of assault and battery",
+      "was appropriate in view of a client history of violence",
+      "was necessary to maintain the therapeutic milieu of the unit"
+    ],
+    "correct": 0,
+    "rationale": "may result in charges of unlawful seclusion and restraint. Seclusion should only be used when there is an immediate threat of violence or threatening behavior toward the staff, the other clients, or the client himself."
+  },
+  {
+    "question": "The provisions of the law for the Americans with Disabilities Act require nurse managers to",
+    "options": [
+      "Maintain an environment free from associated hazards",
+      "Provide reasonable accommodations for disabled individuals",
+      "Make all necessary accommodations for disabled individuals",
+      "Consider both mental and physical disabilities"
+    ],
+    "correct": 1,
+    "rationale": "Provide reasonable accommodations for disabled individuals. The law is designed to permit persons with disabilities access to job opportunities. Employers must evaluate an applicant\u2019s ability to perform the job and not discriminate on the basis of a disability. Employers also must make \"reasonable accommodations.\""
+  },
+  {
+    "question": "Upon completing the admission documents, the nurse learns that the 87 year-old client does not have an advance directive. What action should the nurse take?",
+    "options": [
+      "Record the information on the chart",
+      "Give information about advance directives",
+      "Assume that this client wishes a full code",
+      "Refer this issue to the unit secretary"
+    ],
+    "correct": 1,
+    "rationale": "Give information about advance directives. For each admission, nurses should request a copy of the current advance directive. If there is none, the nurse must offer information about what an advance directive implies. It is then the client\u2019s choice to sign it. In option 1 just recording the information is not sufficient. In option 3 the nurse should not assume that the client has been informed of choices for emergency care. In option 4 this represents an inappropriate delegation approach."
+  },
+  {
+    "question": "A client with a diagnosis of Methicillin resistant Staphylococcus aureus (MRSA) has died. Which type of precautions is appropriate to use when performing postmortem care?",
+    "options": [
+      "Airborne precautions",
+      "Droplet precautions",
+      "Contact precautions",
+      "Compromised host precautions"
+    ],
+    "correct": 2,
+    "rationale": "Contact precautions. The resistant bacteria remain alive for up to 3 days after the client dies. Therefore, contact precautions must still be implemented. The body should also be labeled as MRSA-contaminated so that the funeral home staff can protect themselves as well. Gown and gloves are required."
+  },
+  {
+    "question": "An 8 year-old client is admitted to the hospital for surgery. The child\u2019s parent reports the allergies listed below. Which of these allergies should all health care personnel be aware of?",
+    "options": [
+      "Shellfish",
+      "Molds",
+      "Balloons",
+      "Perfumed soap"
+    ],
+    "correct": 2,
+    "rationale": "Balloons. Allergy to balloons indicates a latex allergy. All personnel in contact with the child will need to be aware of this condition and use non-latex gloves."
+  },
+  {
+    "question": "A nurse is stuck in the hand by an exposed used hypodermic needle. What immediate action should the nurse take?",
+    "options": [
+      "Look up the policy on needle sticks",
+      "Contact employee health services",
+      "Immediately wash the hands with vigor",
+      "Notify the supervisor and risk management"
+    ],
+    "correct": 2,
+    "rationale": "Immediately wash the hands with vigor. The immediate action of vigorously washing will help remove possible contamination. Then the sequence would be options D, A, B."
+  },
+  {
+    "question": "The nurse is having difficulty reading the health care provider's written order that was left just before the shift change. What action should be taken?",
+    "options": [
+      "Leave the order for the oncoming staff to follow-up on",
+      "Contact the charge nurse for an interpretation",
+      "Ask the pharmacy for assistance in the interpretation",
+      "Call the provider for clarification"
+    ],
+    "correct": 3,
+    "rationale": "Call the provider for clarification. Relying on anyone else''s interpretation is very risky. When in doubt, check it out with the person who wrote the difficult-to-read order. Order entry systems help to minimize this problem."
+  },
+  {
+    "question": "When admitting a client to an acute care facility, an identification bracelet is sent up with the admission form. In the event these do not match, the nurse\u2019s best action is to",
+    "options": [
+      "change whichever item is incorrect to the correct information",
+      "use the bracelet and admission form until a replacement is supplied",
+      "notify the admissions office and wait to apply the bracelet",
+      "make a corrected identification bracelet for the client"
+    ],
+    "correct": 2,
+    "rationale": "notify the admissions office and wait to apply the bracelet. The Admissions Office has the responsibility to verify the client\u2019s identity and keep all the records in the system consistent. Making the changes puts the client at risk for misidentification. Using an incorrect identification bracelet is unsafe."
+  },
+  {
+    "question": "The nurse is planning discharge for a 90 year-old client with musculo-skeletal weakness. Which intervention should be included in the plan that would be most effective for the prevention of falls?",
+    "options": [
+      "Place nightlights in the bedroom",
+      "Wear eyeglasses at all times",
+      "Install grab bars in the bathroom",
+      "Teach muscle strengthening exercises"
+    ],
+    "correct": 0,
+    "rationale": "Place nightlights in the bedroom. Because more falls occur in the bedroom than any other location, begin there. However, work in partnership with the client and family so they are willing to move furniture, lamp cords, and storage areas, add lighting, remove throw rugs, and eliminate other environmental hazards."
+  },
+  {
+    "question": "An 8 year-old child is hospitalized during the edema phase of minimal change nephrotic syndrome. The nurse is assisting in choosing the lunch menu. Which menu is the best choice?",
+    "options": [
+      "Bologna sandwich, pudding, milk",
+      "Frankfurter, baked potato, milk",
+      "Chicken strips, corn on the cob, milk",
+      "Grilled cheese sandwich, apple, milk"
+    ],
+    "correct": 2,
+    "rationale": "Chicken strips, corn on the cob, milk. This menu is lowest in sodium. Ideally, low fat milk would be available."
+  },
+  {
+    "question": "The nurse is teaching a client with non-insulin dependent diabetes mellitus about the prescribed diet. The nurse should teach the client to",
+    "options": [
+      "maintain previous calorie intake",
+      "keep a candy bar available at all times",
+      "reduce carbohydrates intake to 25% of total calories",
+      "keep a regular schedule of meals and snacks"
+    ],
+    "correct": 3,
+    "rationale": "keep a regular schedule of meals and snacks. Currently, calorie-controlled diets with strict meal plans are rarely suggested for clients who have diabetes. Try to incorporate schedule or food changes into clients'' existing dietary patterns. Help clients learn to read labels and identify specific canned foods, frozen entrees, or other foods which are acceptable and those which should be avoided."
+  },
+  {
+    "question": "A depressed client in an assisted living facility tells the nurse that \"life isn't worth living anymore.\" What is the best response to this statement?",
+    "options": [
+      "\"Come on, it is not that bad.\"",
+      "\"Have you thought about hurting yourself?\"",
+      "\"Did you tell that to your family?\"",
+      "\"Think of the many positive things in life.\""
+    ],
+    "correct": 1,
+    "rationale": "\"Have you thought about hurting yourself?\". It is appropriate and necessary to determine if someone who has voiced thoughts about death is considering a suicidal act. This response is most therapeutic in the circumstances. Options A and D deny the validity of the client\u2019s statement, and the purpose of option C is unclear and it lacks client focus."
+  },
+  {
+    "question": "The nurse is observing a client with an obsessive-compulsive disorder in an inpatient setting. Which behavior is consistent with this diagnosis?",
+    "options": [
+      "Repeatedly checking that the door is locked",
+      "Verbalized suspicions about thefts",
+      "Preference for consistent caregivers",
+      "Repetitive, involuntary movements"
+    ],
+    "correct": 0,
+    "rationale": "Repeatedly checking that the door is locked. Behaviors that are repeated are symptomatic of obsessive-compulsive disorders. These behaviors, performed to reduced feelings of anxiety, often interfere with normal function and employment."
+  },
+  {
+    "question": "A female client is admitted for a breast biopsy. She says, tearfully to the nurse, \"If this turns out to be cancer and I have to have my breast removed, my partner will never come near me.\" The nurse's best response would be which of these statements?",
+    "options": [
+      "\"I hear you saying that you have a fear for the loss of love.\"",
+      "\"You sound concerned that your partner will reject you.\"",
+      "\"Are you wondering about the effects on your sexuality?\"",
+      "\"Are you worried that the surgery will lead to changes?\""
+    ],
+    "correct": 3,
+    "rationale": "\"Are you worried that the surgery will lead to changes?\". This is a general lead in type of response that encourages further discussion without focusing on an area that the nurse, but possibly not the client, feels is a problem."
+  },
+  {
+    "question": "A client is admitted for treatment of a right upper lobe infiltrate and to rule out tuberculosis. Which of these would be the most appropriate self-protective action by the nurse ?",
+    "options": [
+      "Provide negative room ventilation",
+      "Wear a face mask with shield",
+      "Wear a particulate respirator mask",
+      "Institute airborne precautions"
+    ],
+    "correct": 2,
+    "rationale": "Wear a particulate respirator mask. Tight fitting, high-efficiency masks are required when caring for clients who have a suspected communicable disease of the airborne variety."
+  },
+  {
+    "question": "The charge nurse has a health care team that consists of 1 practical nurse (PN), 1 unlicensed assistive personnel (UAP) and 1 PN nursing student. Which assignment should be questioned by the nurse manager?",
+    "options": [
+      "An admission at the change of shifts with atrial fibrillation and heart failure - PN",
+      "Client who had a major stroke 6 days ago - PN nursing student",
+      "A child with burns who has packed cells and albumin IV running - charge nurse",
+      "An elderly client who had a myocardial infarction a week ago \u2013 UAP"
+    ],
+    "correct": 0,
+    "rationale": "An admission at the change of shifts with atrial fibrillation and heart failure - PN. The care for a new admissions should be performed by an RN. Since the client was admitted at the change of shifts, the stability of the client would not have been established. The charge nurse should take this client. The PN could monitor the IV fluids in option C. Tasks that do not require independent judgment should be delegated. The nurse may delegate the care for a stable client to a UAP."
+  },
+  {
+    "question": "The nurse is teaching an elderly client how to use MDI's (multi-dose inhalers). The nurse is concerned that the client is unable to coordinate the release of the medication with the inhalation phase. What is the nurse's best recommendation to improve delivery of the medication?",
+    "options": [
+      "Nebulized treatments for home care",
+      "Adding a spacer device to the MDI canister",
+      "Asking a family member to assist the client with the MDI",
+      "Request a visiting nurse to follow the client at home"
+    ],
+    "correct": 1,
+    "rationale": "Adding a spacer device to the MDI canister. If the client is not using the MDI properly, the medication can get trapped in the upper airway, resulting in dry mouth and throat irritation. Using a spacer will allow more drug to be deposited in the lungs and less in the mouth. It is especially useful in the elderly because it allows more time to inhale and requires less eye-hand coordination."
+  },
+  {
+    "question": "The nurse is teaching a client newly diagnosed with asthma how to use the metered-dose inhaler (MDI). The client asks when they will know the canister is empty. The best response is",
+    "options": [
+      "Drop the canister in water to observe floating",
+      "Estimate how many doses are usually in the canister",
+      "Count the number of doses as the inhaler is used",
+      "Shake the canister to detect any fluid movement"
+    ],
+    "correct": 0,
+    "rationale": "Drop the canister in water to observe floating. Dropping the canister into a bowl of water assesses the amount of medications remaining in a metered-dose inhaler. The client should obtain a refill when the inhaler rises to the surface and begins to tip over. Some of the newer canisters have counters."
+  },
+  {
+    "question": "A client has an order for 1000 ml of D5W over an 8 hour period. The nurse discovers that 800 ml has been infused after 4 hours. What is the priority nursing action?",
+    "options": [
+      "Ask the client if there are any breathing problems",
+      "Have the client void as much as possible",
+      "Check the vital signs",
+      "Auscultate the lungs"
+    ],
+    "correct": 3,
+    "rationale": "Auscultate the lungs. All of the options would be part of the evaluation for the effects of the large amount of fluid in a short period of time. However the worst result is heart failure with lung congestion so the auscultation of the lungs is the priority action. The sequence of actions would be D, A, C, B."
+  },
+  {
+    "question": "A nurse observes a family member administer a rectal suppository by having the client lie on the left side for the administration. The family member pushed the suppository until the finger went up to the second knuckle. After 10 minutes the client was told by the family member to turn to the right side and the client did this. What is the appropriate comment for the nurse to make?",
+    "options": [
+      "Why don\u2019t we now have the client turn back to the left side",
+      "That was done correctly. Did you have any problems with the insertion?",
+      "Let\u2019s check to see if the suppository is in far enough",
+      "Did you feel any stool in the intestinal tract?"
+    ],
+    "correct": 1,
+    "rationale": "That was done correctly. Did you have any problems with the insertion?. Left side-lying position is the optimal position for the client receiving rectal medications. Due to the position of the descending colon, left side-lying allows the medication to be inserted and move along the natural curve of the intestine and facilitates retention of the medication. After a short time it will not hurt the client to turn in any manner. The suppository should be somewhat melted after 10 to 15 minutes. Th..."
+  },
+  {
+    "question": "As the nurse observes the student nurse during the administration of a narcotic analgesic IM injection, the nurse notes that the student begins to give the medication without first aspirating. What should the nurse do?",
+    "options": [
+      "Ask the student: \"What did you forget to do?\u201d",
+      "Stop. Tell me why aspiration is needed",
+      "Loudly state: \u201cYou forgot to aspirate.\u201d",
+      "Walk up and whisper in the student\u2019s ear \u201cStop. Aspirate. Then inject.\u201d"
+    ],
+    "correct": 3,
+    "rationale": "Walk up and whisper in the student\u2019s ear \u201cStop. Aspirate. Then inject.\u201d. This action is a direct threat to the client if the medication enters into the blood stream instead of the muscle. The purpose of aspiration with IM injections is to prevent the injection of the drug directly into the blood stream. Option 4 protects the client and is the most professional."
+  },
+  {
+    "question": "An adult client is found to be unresponsive on morning rounds. After checking for responsiveness and calling for help, the next action that should be taken by the nurse is to:",
+    "options": [
+      "check the carotid pulse",
+      "deliver 5 abdominal thrusts",
+      "give 2 rescue breaths",
+      "ensure an open airway"
+    ],
+    "correct": 3,
+    "rationale": "ensure an open airway. According to the ABCs of CPR the first step in rescuing an unresponsive victim after checking responsiveness and calling for help is to open the victims airway. The airway must be opened appropriately before the need for rescue breaths can be determined. The pulse is assessed, after breathing is evaluated. The need for abdominal thrusts is determined by inability to achieve chest rise when ventilation is attempted."
+  },
+  {
+    "question": "A practical nurse (PN) is assigned to care for a newborn with a neural tube defect. Which dressing, if applied by the PN, would need no further intervention by the charge nurse?",
+    "options": [
+      "Telfa dressing with antibiotic ointment",
+      "Moist sterile nonadherent dressing",
+      "Dry sterile dressing that is occlusive",
+      "Sterile occlusive pressure dressing"
+    ],
+    "correct": 1,
+    "rationale": "Moist sterile nonadherent dressing. Before surgical closure, the sac is prevented from drying by the application of a sterile, moist, nonadherent dressing over the defect. Dressings are changed frequently to keep them moist."
+  },
+  {
+    "question": "A parent brings her 3 month-old into the clinic, reporting that the child seems to be spitting up all the time and has a lot of gas. The nurse expects to find which of the following on the initial history and physical assessment?",
+    "options": [
+      "increased temperature and lethargy",
+      "restlessness and increased mucus production",
+      "increased sleeping and listlessness",
+      "diarrhea and poor skin turgor"
+    ],
+    "correct": 1,
+    "rationale": "restlessness and increased mucus production. This infant could be experiencing gastroesophageal reflux, or could be allergic to the formula. Restlessness, irritability and increased mucus production can develop if an allergy is present. Soy based formula is often recommended."
+  },
+  {
+    "question": "The nurse manager hears a provider loudly criticize one of the staff nurses within the hearing range of others. The nurse manager's next action should be to",
+    "options": [
+      "Walk up to the provider and quietly state: \"Stop this unacceptable behavior.\"",
+      "Allow the staff nurse to handle this situation without interference",
+      "Notify the of the other administrative persons of a breech of professional conduct",
+      "Request an immediate private meeting with the provider and staff nurse"
+    ],
+    "correct": 3,
+    "rationale": "Request an immediate private meeting with the provider and staff nurse. Assertive communication respects the needs of all parties to express themselves, but not at the expense of others. The nurse manager needs first to protect clients and other staff from this display and come to the assistance of the nurse employee."
+  },
+  {
+    "question": "The charge nurse is planning assignments on a medical unit. The client with _______should be assigned to the unlicensed assistive personnel (UAP).",
+    "options": [
+      "d ifficulty swallowing after a mild stroke",
+      "an order of enemas until clear prior to colonoscopy",
+      "an order for a post-op abdominal dressing change",
+      "transfer orders to a long term facility"
+    ],
+    "correct": 1,
+    "rationale": "an order of enemas until clear prior to colonoscopy. The UAP can be assigned routine tasks which have predictable outcomes."
+  },
+  {
+    "question": "The nurse manager has been using a block scheduling plan to staff the nursing unit. However, staff have asked for many changes and exceptions to the schedule over the past few months. The manager considers self-scheduling knowing that this method will",
+    "options": [
+      "Improve the quality of care",
+      "Decrease staff turnover",
+      "Minimize the amount of overtime payouts",
+      "Improve team morale"
+    ],
+    "correct": 3,
+    "rationale": "Improve team morale. Nurses are more satisfied when opportunities exist for autonomy and control. The nurse manager becomes the facilitator of scheduling rather than the decision-maker of the schedule when self-scheduling exists."
+  },
+  {
+    "question": "A client is admitted to a voluntary hospital mental health unit due to suicidal ideation. The client has been on the unit for 2 days and now states \u201cI demand to be released now!\u201d The appropriate from the nurse is",
+    "options": [
+      "You cannot be released because you are still suicidal",
+      "You can be released only if you sign a no suicide contract",
+      "Let\u2019s discuss your decision to leave and then we can prepare you for discharge",
+      "You have a right to sign out as soon as we get the provider's discharge order"
+    ],
+    "correct": 2,
+    "rationale": "Let\u2019s discuss your decision to leave and then we can prepare you for discharge.. Clients voluntarily admitted to the hospital have a right to demand and obtain release. Discussing the decision initially allows an opportunity for other interventions."
+  },
+  {
+    "question": "The nurse is caring for a client who is post-op following a thoracotomy. The client has 2 chest tubes in place, connected to 1 chest drain. The nursing assessment reveals bubbling in the water seal chamber when the client coughs. What is the most appropriate nursing action?",
+    "options": [
+      "Clamp the chest tube",
+      "Call the surgeon immediately",
+      "Continue to monitor the client to see if the bubbling increases",
+      "Instruct the client to try to avoid coughing"
+    ],
+    "correct": 2,
+    "rationale": "Continue to monitor the client to see if the bubbling increases. Bubbling associated with coughing after lung surgery is to be expected as small amounts of air escape the pleural space when pressures inside the chest increase with coughing. Monitoring is the only nursing action required at this time."
+  },
+  {
+    "question": "A newly admitted elderly client is severely dehydrated. When planning care for this client, which task is appropriate to assign to an unlicensed assistive personnel (UAP)?",
+    "options": [
+      "Converse with the client to determine if the mucous membranes are impaired",
+      "Report hourly outputs of less than 30 ml/hr",
+      "Monitor client's ability for movement in the bed",
+      "Check skin turgor every 4 hours"
+    ],
+    "correct": 1,
+    "rationale": "Report hourly outputs of less than 30 ml/hr. When directing a UAP, the nurse must communicate clearly about each delegated task with specific instructions on what must be reported. Because the RN is responsible for all care-related decisions, only implementation tasks should be assigned because they do not require independent judgment."
+  },
+  {
+    "question": "Which statement best describes time management strategies applied to the role of a nurse manager?",
+    "options": [
+      "Schedule staff efficiently to cover the anticipated needs on the managed unit",
+      "Assume a fair share of direct client care as a role model",
+      "Set daily goals with a prioritization of the work",
+      "Delegate tasks to reduce work load associated with direct care and meetings"
+    ],
+    "correct": 2,
+    "rationale": "Set daily goals with a prioritization of the work. Time management strategies include setting goals and prioritization . This is similar to time management of direct care for clients"
+  },
+  {
+    "question": "The charge nurse on the night shift at an urgent care center has to deal with admitting clients of a higher acuity than usual because of a large fire in the area. Which style of leadership and decision-making would be best in this circumstance?",
+    "options": [
+      "Assume a decision-making role",
+      "Seek input from staff",
+      "Use a non-directive approach",
+      "Shared decision-making with others"
+    ],
+    "correct": 0,
+    "rationale": "Assume a decision-making role. Authoritarian leadership assumes that decision-making is the role of the leader with little input by subordinates. This style is best used in emergency situations or as a triage nurse."
+  },
+  {
+    "question": "Which activity can the RN ask an unlicensed assistive personnel (UAP) to perform?",
+    "options": [
+      "Take a history on a newly admitted client",
+      "Adjust the rate of a gastric tube feeding",
+      "Check the blood pressure of a 2 hours post operative client",
+      "Check on a client receiving chemotherapy"
+    ],
+    "correct": 2,
+    "rationale": "Check the blood pressure of a 2 hours post operative client. UAPs must be assigned tasks that require no nursing judgment or decision making situations. Vital signs on stable clients are commonly assigned to unlicensed staff. Management of Care"
+  },
+  {
+    "question": "The nurse receives a report on an older adult client with middle stage dementia. What information suggests the nurse should do immediate follow up rather than delegate care to the nursing assistant? The client",
+    "options": [
+      "has had a change in respiratory rate by an increase of 2 breaths",
+      "has had a change in heart rate by an increase of 10 beats",
+      "was minimally responsive to voice and touch",
+      "has had a blood pressure change by a drop in 8 mmHg systolic"
+    ],
+    "correct": 2,
+    "rationale": "was minimally responsive to voice and touch. A change in level of consciousness indicates delirium related to acute illness. This would require the assessment of a nurse. The other changes could occur within the range of normal fluctuations."
+  },
+  {
+    "question": "A client tells the nurse, \"I have something very important to tell you if you promise not to tell.\" The best response by the nurse is",
+    "options": [
+      "\"I must document and report any information.\"",
+      "\"I can\u2019t make such a promise.\"",
+      "\"That depends on what you tell me.\"",
+      "\"I must report everything to the treatment team.\""
+    ],
+    "correct": 1,
+    "rationale": "\"I can\u2019t make such a promise.\" Secrets are inappropriate in therapeutic relationships and are counter productive to the therapeutic efforts of the interdisciplinary team. Secrets may be related to risk for harm to self or others. The nurse honors and helps clients to understand rights, limitations, and boundaries regarding confidentiality."
+  },
+  {
+    "question": "The nurse is caring for a 69 year-old client with a diagnosis of hyperglycemia. Which tasks could the nurse delegate to the unlicensed assistive personnel (UAP)?",
+    "options": [
+      "Test blood sugar every 2 hours by Accu-Check",
+      "Review with family and client signs of hyperglycemia",
+      "Monitor for mental status changes",
+      "Check skin condition of lower extremities"
+    ],
+    "correct": 0,
+    "rationale": "Test blood sugar every 2 hours by Accu-Check. The UAP can do standard, unchanging procedures."
+  },
+  {
+    "question": "A nurse from the maternity unit is floated to the critical care unit because of staff shortage on the evening shift. Which client would be appropriate to assign to this nurse? A client with",
+    "options": [
+      "a Dopamine drip IV with vital signs monitored every 5 minutes",
+      "a myocardial infarction that is free from pain and dysrhythmias",
+      "a tracheotomy of 24 hours in some respiratory distress",
+      "a pacemaker inserted this morning with intermittent capture"
+    ],
+    "correct": 1,
+    "rationale": "A myocardial infarction that is free from pain and dysrhythmias. This client is the most stable with minimal risk of complications or instability. The nurse can utilize basic nursing skills to care for this client."
+  },
+  {
+    "question": "Which task could be safely delegated by the nurse to an unlicensed assistive personnel (UAP)?",
+    "options": [
+      "Be with a client who self-administers insulin",
+      "Cleanse and dress a small decubitus ulcer",
+      "Monitor a client's response to passive range of motion exercises",
+      "Apply and care for a client's rectal pouch"
+    ],
+    "correct": 3,
+    "rationale": "Apply and care for a client''s rectal pouch. The RN may delegate the application and care of rectal pouches to a UAP. This is an uncomplicated, routine task."
+  },
+  {
+    "question": "The unlicensed assistive personnel (UAP) reports a sudden increase in temperature to 101 degrees Fahrenheit for a post surgical client. The nurse checks on the client\u2019s condition and observes a cup of steaming coffee at the bedside. What instructions are appropriate to give to the UAP?",
+    "options": [
+      "Encourage oral fluids to prevent dehydration",
+      "Recheck temperature 15 minutes after removing hot liquids from the bedside",
+      "Ask the client to drink only cold water and juices",
+      "Chart this temperature elevation on the flow sheet"
+    ],
+    "correct": 1,
+    "rationale": "Recheck temperature 15 minutes after removing hot liquids from the bedside. Recheck temperature to eliminate possible artificial elevation of temperature. Hot liquids, smoking, eating, chewing gum, and talking can all elevate temperature. Waiting to take the temperature for 15 minutes will help the temperature return to its normal, in order to get an accurate reading. Avoid premature assumptions about explanations for findings. The other options are incorrect."
+  },
+  {
+    "question": "A client has a nasogastric tube after colon surgery. Which one of these tasks can be safely delegated to an unlicensed assistive personnel (UAP)?",
+    "options": [
+      "To observe the type and amount of nasogastric tube drainage",
+      "Monitor the client for nausea or other complications",
+      "Irrigate the nasogastric tube with the ordered irrigant",
+      "Perform nostril and mouth care"
+    ],
+    "correct": 3,
+    "rationale": "Perform nostril and mouth care. Skin care around a nasogastric tube is a routine task that is appropriate for UAPs. The other tasks would be appropriate for a PN or RN to do since they are advanced skills or require evaluation."
+  },
+  {
+    "question": "A client asks the nurse to call the police and states: \u201cI need to report that I am being abused by a nurse.\u201d The nurse should first",
+    "options": [
+      "focus on reality orientation to place and person",
+      "assist with the report of the client\u2019s complaint to the police",
+      "obtain more details of the client\u2019s claim of abuse",
+      "document the statement on the client\u2019s chart with a report to the manager"
+    ],
+    "correct": 2,
+    "rationale": "Obtain more details of the client\u2019s claim of abuse. The advocacy role of the professional nurse as well as the legal duty of the reasonable prudent nurse requires the investigation of claims of abuse or violation of rights. The nurse is legally accountable for actions delegated to others. The application of the nursing process requires that the nurse gather more information, further assessment, before documentation or the reporting of the complaint."
+  },
+  {
+    "question": "When assessing a client, it is important for the nurse to be informed about cultural issues related to the client's background because",
+    "options": [
+      "normal patterns of behavior may be labeled as deviant, immoral, or insane",
+      "the meaning of the client's behavior can be derived from conventional wisdom",
+      "personal values will guide the interaction between persons from 2 cultures",
+      "the nurse should rely on her knowledge of different developmental mental stages"
+    ],
+    "correct": 0,
+    "rationale": "Normal patterns of behavior may be labeled as deviant, immoral, or insane. Culture is an important variable in the assessment of individuals. To work effectively with clients, the nurse must be aware of a cultural distinctive qualities."
+  },
+  {
+    "question": "The nursing student is discussing with a preceptor the delegation of tasks to an unlicensed assistive personnel (UAP). Assigning which of these tasks to a UAP indicates the student needs further teaching about the delegation process?",
+    "options": [
+      "Assist a client post cerebral vascular accident to ambulate",
+      "Feed a 2 year-old in balanced skeletal traction",
+      "Care for a client with discharge orders",
+      "Collect a sputum specimen for acid fast bacillus"
+    ],
+    "correct": 2,
+    "rationale": "Care for a client with discharge orders. A registered nurse (RN) is the best person to do teaching or evaluation that is needed at time of discharge."
+  },
+  {
+    "question": "The nurse is responsible for several elderly clients, including a client on bed rest with a skin tear and hematoma from a fall 2 days ago. What is the best care assignment for this client?",
+    "options": [
+      "Assign an RN to provide total care of the client",
+      "Assign a nursing assistant to help the client with self-care activities",
+      "Delegate complete care to an unlicensed assistive personnel",
+      "Supervise a nursing assistant for skin care"
+    ],
+    "correct": 3,
+    "rationale": "Supervise a nursing assistant for skin care. The nursing assistant can inspect the skin while giving hygiene care, but the nurse should supervise skin care since assessment and analysis are needed."
+  },
+  {
+    "question": "A client continuously calls out to the nursing staff when anyone passes the client\u2019s door and asks them to do something in the room. The best response by the charge nurse would be to",
+    "options": [
+      "keep the client\u2019s room door cracked to minimize the distractions",
+      "assign 1 of the nursing staff to visit the client regularly",
+      "reassure the client that 1 staff person will check frequently if the client needs anything",
+      "arrange for each staff member to go into the client\u2019s room to check on needs every hour on the hour"
+    ],
+    "correct": 1,
+    "rationale": "Assign 1 of the nursing staff to visit the client regularly. Regular, frequent, planned contact by 1 staff member provides continuity of care and communicates to the client that care will be available when needed."
+  },
+  {
+    "question": "A client is admitted with a diagnosis of schizophrenia. The client refuses to take medication and states \u201cI don\u2019t think I need those medications. They make me too sleepy and drowsy. I insist that you explain their use and side effects.\u201d The nurse should understand that",
+    "options": [
+      "a referral is needed to the psychiatrist who is to provide the client with answers",
+      "the client has a right to know about the prescribed medications",
+      "such education is an independent decision of the individual nurse whether or not to teach clients about their medications",
+      "clients with schizophrenia are at a higher risk of psychosocial complications when they know about their medication side effects"
+    ],
+    "correct": 1,
+    "rationale": "The client has a right to know about the prescribed medications. Clients have a right to informed consent which includes information about medications, treatments, and diagnostic studies."
+  },
+  {
+    "question": "The charge nurse is planning assignments on a medical unit. Which client should be assigned to the practical nurse (PN)?",
+    "options": [
+      "Test a stool specimen for occult blood",
+      "Assist with the ambulation of a client with a chest tube system",
+      "Irrigate and redress a leg wound",
+      "Admit a client from the emergency room"
+    ],
+    "correct": 2,
+    "rationale": "Irrigate and redress a leg wound. The PN is a licensed provider and can perform this complex task. Options A and B could be delegated to an unlicensed assistive personnel (UAP), and option D requires an RN."
+  },
+  {
+    "question": "An unlicensed assistive personnel (UAP), who usually works on a surgical unit is assigned to float to a pediatric unit. Which question by the charge nurse would be most appropriate when making delegation decisions?",
+    "options": [
+      "\"How long have you been a UAP and what units you have worked on?\"",
+      "\"What type of care do you give on the surgical unit and what ages of clients?\"",
+      "\"What is your comfort level in caring for children and at what ages?\"",
+      "\"Have you reviewed the list of expected skills you might need on this unit?\""
+    ],
+    "correct": 3,
+    "rationale": "\"Have you reviewed the list of expected skills you might need on this unit?\". The UAP must be competent to accept the delegated task. Review of skills needed versus level of performance is the most efficient and effective way to determine this."
+  },
+  {
+    "question": "A client with a diagnosis of bipolar disorder has been referred to a local boarding home for consideration for placement. The social worker telephoned the hospital unit for information about the client\u2019s mental status and adjustment. The appropriate response of the nurse should be which of these statements?",
+    "options": [
+      "\"I am sorry. Referral information can only be provided by the client\u2019s providers\"",
+      "\"I can never give any information out by telephone. How do I know who you are?\"",
+      "\"Since this is a referral, I can give you this information\"",
+      "\"I need to get the client\u2019s written consent before I release any information to you\""
+    ],
+    "correct": 3,
+    "rationale": "In order to release information about a client there must be a signed consent form with designation of to whom information can be given, and what information can be shared."
+  },
+  {
+    "question": "A client frequently admitted to the locked psychiatric unit repeatedly compliments and invites one of the nurses to go out on a date. The nurse\u2019s response should be to",
+    "options": [
+      "ask to not be assigned to this client or to work on another unit",
+      "tell the client that such behavior is inappropriate",
+      "inform the client that hospital policy prohibits staff to date clients",
+      "discuss the boundaries of the therapeutic relationship with the client"
+    ],
+    "correct": 3,
+    "rationale": "Discuss the boundaries of the therapeutic relationship with the client. The nurse-client relationship is one with professional not social boundaries. Consistent adherence to the limits of the professional relationship builds trust."
+  },
+  {
+    "question": "Which statement by the nurse is appropriate when directing an unlicensed assistive personnel (UAP) to assist a 69 year-old surgical client to ambulate for the first time?",
+    "options": [
+      "\"Have the client sit on the side of the bed for at least 2 minutes before helping him stand.\"",
+      "\"If the client is dizzy on standing, ask him to take some deep breaths.\"",
+      "\"Assist the client to the bathroom at least twice on this shift.\"",
+      "\"After you assist him to the chair, let me know how he feels.\""
+    ],
+    "correct": 0,
+    "rationale": "Give clear information to the UAP about what is expected for client safety."
+  },
+  {
+    "question": "After working with a client, an unlicensed assistive personnel (UAP) tells the nurse, \"I have had it with that demanding client. I just can\u2019t do anything that pleases him. I\u2019m not going in there again.\" The nurse should respond by saying",
+    "options": [
+      "\"He has a lot of problems. You need to have patience with him.\"",
+      "\"I will talk with him and try to figure out what to do.\"",
+      "\"He may be scared and taking it out on you. Let's talk to figure out what to do.\"",
+      "\"Ignore him and get the rest of your work done. Someone else can take care of him for the rest of the day.\""
+    ],
+    "correct": 2,
+    "rationale": "\"He may be scared and taking it out on you. Let''s talk to figure out what to do.\" This response explains the client''s behavior without belittling the UAP\u2019s feelings. The UAP is encouraged to contribute to the plan of care to help solve the problem."
+  },
+  {
+    "question": "A nurse is working with one licensed practical nurse (PN), a student nurse and an unlicensed assistive personnel (UAP). Which newly admitted clients would be most appropriate to assign to the UAP?",
+    "options": [
+      "A 76-year-old client with severe depression",
+      "A middle-aged client with an obsessive compulsive disorder",
+      "An adolescent with dehydration and anorexia",
+      "A young adult who is a heroin addict in withdrawal with hallucinations"
+    ],
+    "correct": 1,
+    "rationale": "A middle-aged client with an obsessive compulsive disorder. The UAP can be assigned to care for a client with a chronic condition after an initial assessment by the nurse. This client has minimal risk of instability of condition. Delegation"
+  },
+  {
+    "question": "Which statement by the nurse is appropriate when giving an assignment to an unlicensed assistive personnel (UAP) to help a client ambulate for the first time after a colon resection?",
+    "options": [
+      "\"Have the client sit on the side of the bed before helping the client to walk.\"",
+      "\"If the client is dizzy ask the client to take some slow, deep breaths.\"",
+      "\"Help the client to walk in the room as often as the client wishes.\"",
+      "\"When you help the client to walk, ask if any pain occurs.\""
+    ],
+    "correct": 0,
+    "rationale": "This statement gives clear directions to the UAP about the task and is most closely associated with the information provided in the stem that this is the client''s first time out of bed after surgery."
+  },
+  {
+    "question": "A nurse is caring for a client receiving IV potassium chloride replacement. Which finding requires the nurse to stop the infusion immediately?",
+    "options": [
+      "Burning sensation at the IV site",
+      "Serum potassium level of 3.8 mEq/L",
+      "Client reports mild nausea",
+      "Heart rate of 88 beats per minute"
+    ],
+    "correct": 0,
+    "rationale": "Burning at the IV site during potassium infusion suggests infiltration or phlebitis, which requires stopping the infusion immediately. Potassium is a vesicant and can cause tissue necrosis if it infiltrates."
+  },
+  {
+    "question": "A client with heart failure is prescribed furosemide 40 mg IV. Which laboratory value should the nurse monitor most closely?",
+    "options": [
+      "Serum calcium",
+      "Serum potassium",
+      "Serum sodium",
+      "Blood urea nitrogen"
+    ],
+    "correct": 1,
+    "rationale": "Furosemide is a loop diuretic that causes significant potassium loss. Hypokalemia can lead to dangerous cardiac dysrhythmias, making potassium the most critical lab value to monitor."
+  },
+  {
+    "question": "A nurse is teaching a client about warfarin therapy. Which statement by the client indicates a need for further teaching?",
+    "options": [
+      "I will have my blood tested regularly",
+      "I should use an electric razor for shaving",
+      "I can take aspirin for my headaches",
+      "I will wear a medical alert bracelet"
+    ],
+    "correct": 2,
+    "rationale": "Aspirin has antiplatelet effects and should not be taken with warfarin as it significantly increases the risk of bleeding. The client should use acetaminophen instead and consult the healthcare provider before taking any OTC medications."
+  },
+  {
+    "question": "A client is admitted with diabetic ketoacidosis (DKA). Which set of arterial blood gas values would the nurse expect?",
+    "options": [
+      "pH 7.48, PaCO2 30 mmHg, HCO3 26 mEq/L",
+      "pH 7.22, PaCO2 28 mmHg, HCO3 14 mEq/L",
+      "pH 7.50, PaCO2 48 mmHg, HCO3 32 mEq/L",
+      "pH 7.35, PaCO2 40 mmHg, HCO3 24 mEq/L"
+    ],
+    "correct": 1,
+    "rationale": "DKA causes metabolic acidosis characterized by low pH, low HCO3, and compensatory low PaCO2 (respiratory compensation through Kussmaul respirations). The accumulation of ketone bodies depletes bicarbonate."
+  },
+  {
+    "question": "During assessment of a newborn, the nurse notes a tuft of hair over the lower spine. This finding is most suggestive of:",
+    "options": [
+      "Spina bifida occulta",
+      "Normal newborn variation",
+      "Meningocele",
+      "Hydrocephalus"
+    ],
+    "correct": 0,
+    "rationale": "A tuft of hair over the lower spine is a hallmark sign of spina bifida occulta, the mildest form of spina bifida where the vertebral arch fails to close but the spinal cord and meninges remain intact."
+  },
+  {
+    "question": "A nurse is caring for a client with chronic kidney disease. Which dietary instruction is most appropriate?",
+    "options": [
+      "Increase protein intake to prevent muscle wasting",
+      "Limit phosphorus and potassium intake",
+      "Add extra salt to meals to maintain fluid balance",
+      "Drink at least 3 liters of fluid daily"
+    ],
+    "correct": 1,
+    "rationale": "Clients with CKD must limit phosphorus (to prevent renal osteodystrophy) and potassium (to prevent hyperkalemia and cardiac dysrhythmias). The kidneys can no longer adequately excrete these electrolytes."
+  },
+  {
+    "question": "A client with major depressive disorder has been taking fluoxetine (Prozac) for 3 days and tells the nurse, 'This medicine isn't working.' What is the best nursing response?",
+    "options": [
+      "Let me contact your doctor to change the medication",
+      "SSRIs typically take 2 to 4 weeks to reach full therapeutic effect",
+      "You should double the dose until you feel better",
+      "Depression sometimes cannot be treated with medication"
+    ],
+    "correct": 1,
+    "rationale": "SSRIs like fluoxetine require 2-4 weeks to achieve full therapeutic effect due to the time needed for serotonin receptor down-regulation. Client education about this expected timeline is essential to promote medication adherence."
+  },
+  {
+    "question": "The nurse is caring for a client immediately after a liver biopsy. Which position should the nurse place the client in?",
+    "options": [
+      "Left lateral with a pillow under the right costal margin",
+      "Right lateral with a pillow under the puncture site",
+      "Supine with the head of bed elevated 45 degrees",
+      "Prone with arms above the head"
+    ],
+    "correct": 1,
+    "rationale": "After a liver biopsy, the client is positioned on the right side with a pillow or rolled towel placed under the puncture site. This position applies pressure to the liver capsule against the chest wall, helping to prevent hemorrhage."
+  },
+  {
+    "question": "A nurse is assessing a client with suspected appendicitis. Which finding is most consistent with this diagnosis?",
+    "options": [
+      "Diffuse abdominal pain that improves after eating",
+      "Rebound tenderness at McBurney's point",
+      "Left lower quadrant pain with guarding",
+      "Epigastric pain radiating to the back"
+    ],
+    "correct": 1,
+    "rationale": "McBurney's point (located one-third the distance from the right anterior superior iliac spine to the umbilicus) is the classic location for appendicitis pain. Rebound tenderness at this point is a hallmark finding."
+  },
+  {
+    "question": "A nurse is caring for an elderly client who is at risk for falls. Which intervention is most important to include in the plan of care?",
+    "options": [
+      "Keep all four side rails raised at all times",
+      "Apply a vest restraint during nighttime hours",
+      "Keep the bed in the lowest position with the call light within reach",
+      "Administer a sedative at bedtime to promote sleep"
+    ],
+    "correct": 2,
+    "rationale": "Keeping the bed in the lowest position and the call light within reach are essential fall-prevention strategies. Raised side rails can actually increase fall risk (client may climb over them), restraints require a physician order and are a last resort, and sedatives increase fall risk."
+  },
+  {
+    "question": "A nurse is assessing a client with hyperthyroidism. Which manifestation would the nurse expect to find?",
+    "options": [
+      "Bradycardia and constipation",
+      "Weight gain and cold intolerance",
+      "Heat intolerance and tachycardia",
+      "Dry skin and periorbital edema"
+    ],
+    "correct": 2,
+    "rationale": "Hyperthyroidism causes a hypermetabolic state resulting in heat intolerance, tachycardia, weight loss, diarrhea, and warm moist skin. The other options describe hypothyroidism."
+  },
+  {
+    "question": "A client is receiving total parenteral nutrition (TPN). The current bag is empty and the next bag is not yet available from pharmacy. What should the nurse do?",
+    "options": [
+      "Discontinue the central line",
+      "Hang a bag of normal saline until the new TPN arrives",
+      "Hang a bag of D10W at the same rate",
+      "Wait for the new bag before taking any action"
+    ],
+    "correct": 2,
+    "rationale": "When TPN is interrupted, D10W (10% dextrose in water) should be infused at the same rate to prevent rebound hypoglycemia. The high glucose concentration of TPN causes increased insulin production, and abrupt discontinuation can cause a dangerous drop in blood glucose."
+  },
+  {
+    "question": "A nurse is providing discharge teaching to a client who had a thyroidectomy. Which instruction is most important?",
+    "options": [
+      "Take thyroid replacement medication as prescribed for life",
+      "Avoid all dairy products",
+      "Report any signs of increased energy",
+      "Return for suture removal in 2 weeks"
+    ],
+    "correct": 0,
+    "rationale": "After a total thyroidectomy, the client will need lifelong thyroid hormone replacement (levothyroxine) because the body can no longer produce thyroid hormone. This is the most critical teaching point for safe discharge."
+  },
+  {
+    "question": "A client with a history of alcohol abuse is admitted for acute pancreatitis. Which position would provide the most comfort?",
+    "options": [
+      "Supine with legs extended",
+      "Side-lying with knees flexed toward the chest",
+      "High Fowler's with legs dangling",
+      "Prone with a pillow under the abdomen"
+    ],
+    "correct": 1,
+    "rationale": "The fetal position (side-lying with knees flexed toward the chest) reduces tension on the abdominal muscles and decreases pressure on the inflamed pancreas, providing the most pain relief."
+  },
+  {
+    "question": "A nurse is caring for a client with a chest tube connected to a water-seal drainage system. Which observation indicates an air leak?",
+    "options": [
+      "Fluctuation (tidaling) in the water-seal chamber during breathing",
+      "Continuous bubbling in the water-seal chamber",
+      "Bloody drainage in the collection chamber",
+      "The suction control chamber has gentle bubbling"
+    ],
+    "correct": 1,
+    "rationale": "Continuous bubbling in the water-seal chamber indicates an air leak in the system. Intermittent bubbling is normal (especially with coughing or exhalation), but continuous bubbling requires investigation of all connections and the insertion site."
+  },
+  {
+    "question": "A client is receiving a blood transfusion and develops fever, chills, and flank pain within the first 15 minutes. The nurse should first:",
+    "options": [
+      "Slow the transfusion rate and monitor the client",
+      "Administer acetaminophen as prescribed",
+      "Stop the transfusion immediately and keep the vein open with normal saline",
+      "Obtain a urine specimen and send it to the lab"
+    ],
+    "correct": 2,
+    "rationale": "These symptoms suggest an acute hemolytic transfusion reaction, which is life-threatening. The first priority is to stop the transfusion immediately while keeping the IV line open with normal saline. The blood bank and physician should then be notified."
+  },
+  {
+    "question": "A nurse is teaching a prenatal client about warning signs to report during pregnancy. Which symptom requires immediate medical attention?",
+    "options": [
+      "Ankle edema at the end of the day",
+      "Increased frequency of urination in the first trimester",
+      "Sudden gush of fluid from the vagina",
+      "Occasional mild heartburn after meals"
+    ],
+    "correct": 2,
+    "rationale": "A sudden gush of fluid from the vagina indicates premature rupture of membranes (PROM), which requires immediate medical evaluation due to the risk of infection, cord prolapse, and preterm labor."
+  },
+  {
+    "question": "Which nursing action is most appropriate when caring for a client with a nasogastric tube connected to low intermittent suction?",
+    "options": [
+      "Irrigate the tube with sterile water every 2 hours",
+      "Monitor intake and output and electrolyte levels",
+      "Keep the client in a supine position at all times",
+      "Encourage the client to drink fluids freely"
+    ],
+    "correct": 1,
+    "rationale": "NG suction removes gastric contents including fluid and electrolytes (especially potassium, sodium, and hydrogen ions). Monitoring I&O and electrolyte levels is essential to prevent dehydration and metabolic alkalosis."
+  },
+  {
+    "question": "A nurse is caring for a client with Addison's disease. Which finding would the nurse expect during assessment?",
+    "options": [
+      "Moon face and buffalo hump",
+      "Hypertension and hyperglycemia",
+      "Bronze skin pigmentation and hypotension",
+      "Weight gain and purple striae"
+    ],
+    "correct": 2,
+    "rationale": "Addison's disease (adrenal insufficiency) is characterized by bronze skin hyperpigmentation (from elevated ACTH stimulating melanocytes), hypotension (from decreased aldosterone), fatigue, and weight loss. Moon face, buffalo hump, and purple striae are signs of Cushing's syndrome."
+  },
+  {
+    "question": "A client with a spinal cord injury at the T4 level suddenly develops a severe headache, profuse sweating above the injury, and a blood pressure of 220/120 mmHg. The nurse should first:",
+    "options": [
+      "Administer prescribed antihypertensive medication",
+      "Place the client in a sitting position and check for bladder distention",
+      "Apply a cold compress to the forehead",
+      "Notify the healthcare provider immediately"
+    ],
+    "correct": 1,
+    "rationale": "These symptoms indicate autonomic dysreflexia, a life-threatening emergency. The first nursing action is to sit the client up (to lower BP via orthostatic effect) and identify the trigger, most commonly a distended bladder. The most common cause is a kinked or blocked catheter."
+  },
+  {
+    "question": "A nurse is preparing to administer digoxin to an adult client. Which assessment finding would cause the nurse to withhold the medication?",
+    "options": [
+      "Blood pressure of 130/80 mmHg",
+      "Respiratory rate of 18 breaths per minute",
+      "Apical heart rate of 56 beats per minute",
+      "Temperature of 99.0\u00b0F (37.2\u00b0C)"
+    ],
+    "correct": 2,
+    "rationale": "Digoxin should be withheld and the provider notified if the apical pulse is below 60 bpm in adults (below 70 in children, below 90-110 in infants). A rate of 56 indicates bradycardia, which is a sign of digoxin toxicity."
+  },
+  {
+    "question": "A nurse is caring for a client with cirrhosis who has developed ascites. Which dietary modification is most important?",
+    "options": [
+      "High-protein diet",
+      "Sodium-restricted diet",
+      "Low-fiber diet",
+      "Increased fluid intake"
+    ],
+    "correct": 1,
+    "rationale": "Sodium restriction (typically 2g/day or less) is the primary dietary intervention for ascites. Sodium causes fluid retention, and the impaired liver cannot adequately metabolize aldosterone, leading to further sodium and water retention."
+  },
+  {
+    "question": "A nurse is monitoring a client after a cardiac catheterization performed via the femoral artery. Which finding requires immediate intervention?",
+    "options": [
+      "Mild soreness at the puncture site",
+      "Pedal pulses palpable bilaterally",
+      "Expanding hematoma at the groin site",
+      "Blood pressure of 128/76 mmHg"
+    ],
+    "correct": 2,
+    "rationale": "An expanding hematoma at the groin site indicates active bleeding from the femoral artery and requires immediate intervention. The nurse should apply direct pressure and notify the physician immediately, as this can lead to hemorrhagic shock."
+  },
+  {
+    "question": "A nurse is teaching a client newly diagnosed with type 1 diabetes about insulin administration. Which statement by the client indicates correct understanding?",
+    "options": [
+      "I will always inject insulin into the same spot on my abdomen",
+      "I should rotate injection sites within the same body region",
+      "I can skip my insulin if I am not planning to eat",
+      "I should vigorously shake the insulin vial before drawing it up"
+    ],
+    "correct": 1,
+    "rationale": "Rotating injection sites within the same body region (such as different areas within the abdomen) promotes consistent absorption while preventing lipodystrophy. Using the exact same spot causes lipohypertrophy, and rotating between different body regions causes variable absorption rates."
+  },
+  {
+    "question": "A nurse is caring for a client who has been on prolonged bedrest. Which intervention is most important to prevent deep vein thrombosis?",
+    "options": [
+      "Encourage deep breathing exercises every 2 hours",
+      "Apply sequential compression devices and encourage ankle pumps",
+      "Maintain the client in a flat supine position",
+      "Restrict oral fluid intake to prevent edema"
+    ],
+    "correct": 1,
+    "rationale": "Sequential compression devices (SCDs) and active ankle pump exercises promote venous return and prevent blood stasis, which is a primary factor in DVT formation (Virchow's triad). Adequate hydration and mobility are also important preventive measures."
+  },
+  {
+    "question": "A nurse is providing nutrition education to an older adult client taking warfarin. Which instruction is most important regarding diet?",
+    "options": [
+      "Eliminate all foods containing vitamin K from the diet",
+      "Maintain a consistent daily intake of vitamin K-rich foods",
+      "Increase consumption of green leafy vegetables",
+      "Take a daily vitamin K supplement"
+    ],
+    "correct": 1,
+    "rationale": "Clients on warfarin should maintain consistent vitamin K intake rather than eliminating or increasing it. Vitamin K is the antidote to warfarin, so sudden changes in intake can either increase bleeding risk (less vitamin K) or decrease anticoagulation effectiveness (more vitamin K)."
+  },
+  {
+    "question": "A nurse is assessing a client 2 hours after a subtotal thyroidectomy. Which finding is the priority to report to the surgeon?",
+    "options": [
+      "Sore throat and mild hoarseness",
+      "Tingling and numbness around the mouth and fingertips",
+      "Pain level of 4 on a 0-10 scale",
+      "Slight swelling at the incision site"
+    ],
+    "correct": 1,
+    "rationale": "Tingling and numbness around the mouth and fingertips (circumoral and peripheral paresthesias) are signs of hypocalcemia, indicating possible accidental removal of or damage to the parathyroid glands during thyroidectomy. This is a positive Chvostek's or Trousseau's sign precursor and requires immediate calcium replacement."
+  },
+  {
+    "question": "A nurse is caring for a client with acute glomerulonephritis. Which assessment finding is most characteristic of this condition?",
+    "options": [
+      "Polyuria and glycosuria",
+      "Smoky or cola-colored urine and periorbital edema",
+      "Clear urine with increased specific gravity",
+      "Flank pain radiating to the groin"
+    ],
+    "correct": 1,
+    "rationale": "Acute glomerulonephritis presents with smoky or cola-colored (tea-colored) urine due to hematuria, periorbital edema (especially in the morning), hypertension, and oliguria. It often follows a streptococcal infection by 1-3 weeks."
+  },
+  {
+    "question": "A client with myasthenia gravis is experiencing increased muscle weakness. The provider orders an edrophonium (Tensilon) test. If symptoms improve after the injection, this indicates:",
+    "options": [
+      "The client is experiencing a cholinergic crisis",
+      "The client needs a decreased dose of anticholinesterase medication",
+      "The client is experiencing a myasthenic crisis and needs more medication",
+      "The medication should be discontinued immediately"
+    ],
+    "correct": 2,
+    "rationale": "If muscle weakness improves after edrophonium (a short-acting anticholinesterase), it indicates a myasthenic crisis (undermedication). The client needs an increased dose of their anticholinesterase medication. If symptoms worsen, it indicates cholinergic crisis (overmedication)."
+  }
+]
