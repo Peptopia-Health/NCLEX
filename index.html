@@ -307,7 +307,7 @@ loadingEl.innerHTML =
 'Error: Study data failed to load.' +
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
-var APP_VERSION = '17.1';
+var APP_VERSION = '17.2';
 var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:100 };
 var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1 };
 var GH_AUDIO = 'https://github.com/Peptopia/NCLEX/releases/download/audio-v1/';
@@ -392,6 +392,21 @@ if (btns) btns.style.display = 'none';
 function getSecProgress(d, key) {
 if (!d.sections[key]) d.sections[key] = { q: {}, best: 0, runs: 0 };
 return d.sections[key];
+}
+function getQuizProgressForKey(key) {
+var total = QUIZ_COUNTS[key] || 0;
+if (!total) return { seen: 0, total: 0, mastered: 0, pct: 0 };
+var d = loadProgress();
+var sec = d.sections[key];
+var seen = 0, mastered = 0;
+if (sec && sec.q) {
+var qks = Object.keys(sec.q);
+seen = qks.length;
+for (var j = 0; j < qks.length; j++) {
+if (sec.q[qks[j]][0] >= 4) mastered++;
+}
+}
+return { seen: seen, total: total, mastered: mastered, pct: total > 0 ? Math.round((seen / total) * 100) : 0 };
 }
 function getFlagKey(secKey, idx) { return secKey + ':' + idx; }
 function loadFlags() { var d = loadProgress(); return d.flags || {}; }
@@ -1402,6 +1417,9 @@ var descClr = isWP ? '#e2e8f0' : 'var(--' + cBase + '-800)';
 var borderClr = isWP ? '#6d28d9' : 'var(--' + cBase + '-800)';
 var _fgOpen = key==='pharm'?'openPharmGuide':key==='fund'?'openFundGuide':key==='gero'?'openGeroGuide':key==='nutr'?'openNutrGuide':'';
 /* guide quiz accessible from within guide; dashboard card uses section quiz */
+var _qp = getQuizProgressForKey(key);
+var _qpLabel = _qp.seen > 0 ? ' ' + _qp.seen + '/' + _qp.total : ' ' + (_qp.total || '');
+var _qpStyle = _qp.seen > 0 && _qp.seen >= _qp.total ? 'background:#16a34a;color:#fff;' : '';
 var cardHtml;
 if (_fgOpen) {
 cardHtml = '<div class="home-card" data-section="' + key + '" style="animation-delay:' + (idx * 0.04) + 's; border-color:' + borderClr + ';" onclick="switchTab(\'' + key + '\')">' +
@@ -1411,7 +1429,7 @@ cardHtml = '<div class="home-card" data-section="' + key + '" style="animation-d
 '<div class="home-card-footer">' +
 '<button class="home-card-btn study-btn" onclick="event.stopPropagation(); switchTab(\'' + key + '\'); openCards();"><span class="card-count-badge">' + sec.data.length + '</span></button>' +
 '<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); ' + _fgOpen + '();"><span class="quiz-icon">\uD83D\uDCD6</span></button>' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchSectionQuiz(\'' + key + '\');"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> ' + (QUIZ_COUNTS[key] || '') + '</span></button></div></div>';
+'<button class="home-card-btn quiz-btn" style="' + _qpStyle + '" onclick="event.stopPropagation(); launchSectionQuiz(\'' + key + '\');"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label">' + _qpLabel + '</span></button></div></div>';
 } else {
 cardHtml = '<div class="home-card" data-section="' + key + '" style="animation-delay:' + (idx * 0.04) + 's; border-color:' + borderClr + ';" onclick="switchTab(\'' + key + '\')">' +
 '<div class="home-card-header" style="background-color:' + headerBg + '; color:' + headerClr + ';">' +
@@ -1420,7 +1438,7 @@ cardHtml = '<div class="home-card" data-section="' + key + '" style="animation-d
 '<div class="home-card-footer">' +
 '<button class="home-card-btn study-btn" onclick="event.stopPropagation(); switchTab(\'' + key + '\'); openCards();"><span class="card-count-badge">' + sec.data.length + '</span></button>' +
 '<button class="home-card-btn study-btn" style="background:#166534;color:#fff;" onclick="event.stopPropagation(); switchTab(\'' + key + '\');"><span class="quiz-icon">\uD83D\uDCCB</span></button>' +
-'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchSectionQuiz(\'' + key + '\');"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> ' + (QUIZ_COUNTS[key] || '') + '</span></button></div></div>';
+'<button class="home-card-btn quiz-btn" style="' + _qpStyle + '" onclick="event.stopPropagation(); launchSectionQuiz(\'' + key + '\');"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label">' + _qpLabel + '</span></button></div></div>';
 }
 if (key === 'obpeds') {
 obpedsCard = cardHtml;
@@ -2843,6 +2861,16 @@ document.getElementById('qc-retest').style.display = 'none';
 }
 if (quizSectionKey && answered > 0) {
 recordQuizRun(quizSectionKey, pct);
+/* Auto-mark section complete in Plan when all questions answered with perfect score */
+if (unanswered === 0 && pct === 100) {
+var _autoQp = getQuizProgressForKey(quizSectionKey);
+if (_autoQp.mastered >= _autoQp.total && _autoQp.total > 0) {
+/* Already fully mastered — no action needed */
+} else {
+/* Mark complete: sets all questions to mastered state */
+markSectionComplete(quizSectionKey, null);
+}
+}
 }
 document.getElementById('quiz-completion').classList.add('visible');
 document.getElementById('quiz-modal').scrollTop = 0;
