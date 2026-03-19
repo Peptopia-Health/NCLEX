@@ -314,6 +314,7 @@ comprehensive: {bg:'#f5f3ff',accent:'#6d28d9',dk:'#4c1d95',lt:'#ede9fe',hf:'#ede
 comprehensive2:{bg:'#faf5ff',accent:'#7e22ce',dk:'#581c87',lt:'#f3e8ff',hf:'#f3e8ff',ht:'#e9d5ff'},
 comprehensive4:{bg:'#fef3c7',accent:'#b45309',dk:'#78350f',lt:'#fef3c7',hf:'#fffbeb',ht:'#fde68a'},
 comprehensive5:{bg:'#ccfbf1',accent:'#0d9488',dk:'#115e59',lt:'#ccfbf1',hf:'#f0fdfa',ht:'#99f6e4'},
+comprehensive6:{bg:'#ffe4e6',accent:'#e11d48',dk:'#9f1239',lt:'#ffe4e6',hf:'#fff1f2',ht:'#fecdd3'},
 fullexam:      {bg:'#f0f4ff',accent:'#4f46e5',dk:'#312e81',lt:'#e0e7ff',hf:'#eef2ff',ht:'#e0e7ff'},
 workpharm:     {bg:'#f5f3ff',accent:'#6d28d9',dk:'#4c1d95',lt:'#ede9fe',hf:'#ede9fe',ht:'#ddd6fe'},
 obpeds:        {bg:'#fdf2f8',accent:'#ec4899',dk:'#831843',lt:'#fce7f3',hf:'#fce7f3',ht:'#fbcfe8'},
@@ -436,7 +437,7 @@ var loadingEl = document.getElementById('home-dashboard');
 if (loadingEl) loadingEl.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-900);font-weight:600;">Loading study data...</div>';
 var GH_CDN = 'https://cdn.jsdelivr.net/gh/Peptopia/NCLEX@main/';
 var GH_PAGES = 'https://peptopia.github.io/NCLEX/';
-var CACHE_BUST = '?v=18.0'; /* bump this when uploading new quiz files */
+var CACHE_BUST = '?v=18.1'; /* bump this when uploading new quiz files */
 fetch(GH_CDN + 'mnt_studydata.json' + CACHE_BUST)
 .then(function(r) {
 if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -470,9 +471,9 @@ loadingEl.innerHTML =
 'Error: Study data failed to load.' +
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
-var APP_VERSION = '18.0';
-var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:100 };
-var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1 };
+var APP_VERSION = '18.1';
+var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:100 };
+var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1 };
 var GH_AUDIO = 'https://github.com/Peptopia/NCLEX/releases/download/audio-v1/';
 var PDF_AUDIO_MAP = {
 'Cardiovascular.pdf':  [{ title: 'Cardiovascular', src: GH_AUDIO + 'Cardiovascular.mp3' }],
@@ -752,7 +753,7 @@ document.getElementById('home-footer').textContent = buildBannerText();
 var sectionEmojis = {
 cardio: '\u2764\uFE0F', resp: '\uD83D\uDCA8', neuro: '\uD83E\uDDE0', gi: '\uD83C\uDF7D\uFE0F', obpeds: '\uD83D\uDC76',
 endo: '\u2697\uFE0F', musc: '\uD83E\uDDB4', psych: '\uD83E\uDDD8', hemonc: '\uD83E\uDE78', integ: '\uD83E\uDE79', pharm: '\uD83D\uDC8A',
-fund: '\uD83D\uDCCB', gero: '\uD83E\uDDD3', nutr: '\uD83E\uDD57', workpharm: '\uD83E\uDDEC', yellowfever: '\uD83E\uDDA0', comprehensive: '\uD83C\uDF93', comprehensive2: '\uD83D\uDCDA', comprehensive4: '\uD83C\uDFC6', comprehensive5: '\uD83C\uDFAF', fullexam: '\uD83D\uDCDD',
+fund: '\uD83D\uDCCB', gero: '\uD83E\uDDD3', nutr: '\uD83E\uDD57', workpharm: '\uD83E\uDDEC', yellowfever: '\uD83E\uDDA0', comprehensive: '\uD83C\uDF93', comprehensive2: '\uD83D\uDCDA', comprehensive4: '\uD83C\uDFC6', comprehensive5: '\uD83C\uDFAF', comprehensive6: '\uD83D\uDD2C', fullexam: '\uD83D\uDCDD',
 endocompare: '\u2697\uFE0F', infctrl: '\uD83E\uDDA0', priority: '\uD83D\uDEA8', fluids: '\uD83D\uDCA7', cardiac: '\u2764\uFE0F', obhtn: '\uD83E\uDD30', obmatnb: '\uD83D\uDC76',
 pharmguide: '\uD83D\uDC8A', fundguide: '\uD83D\uDCCB', geroguide: '\uD83E\uDDD3', nutrguide: '\uD83E\uDD57', yfguide: '\uD83E\uDDA0'
 };
@@ -782,7 +783,7 @@ var colorBaseMap = {
 };
 var GROUPS = {
 systems: ['cardio','resp','neuro','gi','endo','psych','hemonc','musc','integ'],
-foundations: ['workpharm','pharm','fund','gero','nutr','yellowfever','comprehensive','comprehensive2','comprehensive4','comprehensive5','fullexam'],
+foundations: ['workpharm','pharm','fund','gero','nutr','yellowfever','comprehensive','comprehensive2','comprehensive4','comprehensive5','comprehensive6','fullexam'],
 workpharm: []
 };
 var activeFilter = 'all';
@@ -1693,10 +1694,16 @@ var comp5Card = '<div class="home-card" data-section="comprehensive5" style="ani
 '<div class="home-card-body"><div class="home-card-desc" style="color:var(--teal-800,#115e59);">Review Series \u2014 100 questions across all NCLEX content.</div></div>' +
 '<div class="home-card-footer">' +
 '<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchComprehensive5Quiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
+var comp6Card = '<div class="home-card" data-section="comprehensive6" style="animation-delay:' + ((idx + 6) * 0.04) + 's; border-color:var(--rose-800,#9f1239);" onclick="launchComprehensive6Quiz()">' +
+'<div class="home-card-header" style="background-color:var(--rose-100,#ffe4e6); color:var(--rose-800,#9f1239);">' +
+'<span class="home-card-emoji">\uD83D\uDD2C</span><span>Comprehensive VI</span></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:var(--rose-800,#9f1239);">NGN Review Series \u2014 150 questions across all NCLEX content.</div></div>' +
+'<div class="home-card-footer">' +
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchComprehensive6Quiz();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 150</span></button></div></div>';
 var compGroupHtml = '<div class="coll-row"><div class="coll-group">' +
 '<div class="coll-label">\uD83C\uDF93 Comprehensive Quizzes</div>' +
 '<div class="coll-cards">' + compCard + comp2Card + comp3Card + '</div>' +
-'<div class="coll-cards">' + comp4Card + comp5Card + '</div></div></div>';
+'<div class="coll-cards">' + comp4Card + comp5Card + comp6Card + '</div></div></div>';
 foundationsHtml += compGroupHtml;
 var obHtnCard = '<div class="home-card" data-section="obhtn" style="animation-delay:' + ((idx + 3) * 0.04) + 's; border-color:#5a8aad;" onclick="openObHtnGuide()">' +
 '<div class="home-card-header" style="background-color:var(--blue-100,#d0e4f0); color:var(--blue-800,#1a2840);">' +
@@ -2750,7 +2757,7 @@ obpeds:'OB/Peds Quiz',endo:'Endocrine Quiz',musc:'Musculoskeletal Quiz',
 psych:'Psych Quiz',hemonc:'Hem/Onc Quiz',integ:'Integumentary Quiz',
 pharm:'Pharmacology Quiz',fund:'Fundamentals Quiz',gero:'Gerontology Quiz',
 nutr:'Nutrition Quiz',workpharm:'Work Pharm Quiz',yellowfever:'Yellow Fever Quiz',
-comprehensive:'Comprehensive Quiz',comprehensive2:'Comprehensive II Quiz',comprehensive4:'Comprehensive IV Quiz',comprehensive5:'Comprehensive V Quiz',
+comprehensive:'Comprehensive Quiz',comprehensive2:'Comprehensive II Quiz',comprehensive4:'Comprehensive IV Quiz',comprehensive5:'Comprehensive V Quiz',comprehensive6:'Comprehensive VI Quiz',
 fullexam:'Comprehensive III Quiz',endocompare:'Endo Comparisons Quiz',
 infctrl:'Infection Control Quiz',priority:'Prioritization Quiz',
 fluids:'Fluid & Electrolytes Quiz',cardiac:'Cardiac Quiz',
@@ -2782,6 +2789,9 @@ initQuizUI('Comprehensive IV Quiz', 'comprehensive4');
 };
 window.launchComprehensive5Quiz = function() {
 initQuizUI('Comprehensive V Quiz', 'comprehensive5');
+};
+window.launchComprehensive6Quiz = function() {
+initQuizUI('Comprehensive VI Quiz', 'comprehensive6');
 };
 window.launchEndoCompareQuiz = function() {
 initQuizUI('Endo Comparisons Quiz', 'endocompare');
@@ -2865,6 +2875,7 @@ if (key === 'comprehensive') { launchComprehensiveQuiz(); return; }
 if (key === 'comprehensive2') { launchComprehensive2Quiz(); return; }
 if (key === 'comprehensive4') { launchComprehensive4Quiz(); return; }
 if (key === 'comprehensive5') { launchComprehensive5Quiz(); return; }
+if (key === 'comprehensive6') { launchComprehensive6Quiz(); return; }
 if (key === 'endocompare') { launchEndoCompareQuiz(); return; }
 if (key === 'obhtn') { launchObHtnQuiz(); return; }
 if (key === 'obmatnb') { launchObMatNbQuiz(); return; }
@@ -3998,6 +4009,7 @@ SECTION_LABELS.comprehensive = 'Comprehensive';
 SECTION_LABELS.comprehensive2 = 'Comprehensive II';
 SECTION_LABELS.comprehensive4 = 'Comprehensive IV';
 SECTION_LABELS.comprehensive5 = 'Comprehensive V';
+SECTION_LABELS.comprehensive6 = 'Comprehensive VI';
 SECTION_LABELS.endocompare = 'Endo Comparisons';
 SECTION_LABELS.infctrl = 'Infection Control';
 SECTION_LABELS.priority = 'Prioritization';
@@ -4025,7 +4037,7 @@ renderProgressDashboard();
 function renderProgressDashboard() {
 var d = loadProgress();
 var now = Date.now();
-var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1 };
+var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1 };
 var totalQ = 0, totalSeen = 0, totalMastered = 0;
 var sectionKeys = Object.keys(QUIZ_COUNTS);
 for (var i = 0; i < sectionKeys.length; i++) {
@@ -4281,6 +4293,7 @@ comprehensive:{bg:'rgba(109,40,217,0.12)',border:'rgba(109,40,217,0.35)',accent:
 comprehensive2:{bg:'rgba(126,34,206,0.12)',border:'rgba(126,34,206,0.35)',accent:'#c084fc',label:'#e9d5ff'},
 comprehensive4:{bg:'rgba(180,83,9,0.12)',border:'rgba(180,83,9,0.35)',accent:'#fbbf24',label:'#fde68a'},
 comprehensive5:{bg:'rgba(13,148,136,0.12)',border:'rgba(13,148,136,0.35)',accent:'#2dd4bf',label:'#99f6e4'},
+comprehensive6:{bg:'rgba(225,29,72,0.12)',border:'rgba(225,29,72,0.35)',accent:'#fb7185',label:'#fecdd3'},
 fullexam:{bg:'rgba(79,70,229,0.12)',border:'rgba(79,70,229,0.35)',accent:'#818cf8',label:'#c7d2fe'},
 endocompare:{bg:'rgba(194,65,12,0.12)',border:'rgba(194,65,12,0.35)',accent:'#fb923c',label:'#fed7aa'},
 infctrl:{bg:'rgba(139,94,15,0.12)',border:'rgba(139,94,15,0.35)',accent:'#fbbf24',label:'#fdf0d5'},
@@ -4316,6 +4329,7 @@ comprehensive:{bg:'rgba(109,40,217,0.07)',border:'rgba(109,40,217,0.25)',accent:
 comprehensive2:{bg:'rgba(126,34,206,0.07)',border:'rgba(126,34,206,0.25)',accent:'#7e22ce',label:'#581c87'},
 comprehensive4:{bg:'rgba(180,83,9,0.07)',border:'rgba(180,83,9,0.25)',accent:'#b45309',label:'#92400e'},
 comprehensive5:{bg:'rgba(13,148,136,0.07)',border:'rgba(13,148,136,0.25)',accent:'#0d9488',label:'#115e59'},
+comprehensive6:{bg:'rgba(225,29,72,0.07)',border:'rgba(225,29,72,0.25)',accent:'#e11d48',label:'#9f1239'},
 fullexam:{bg:'rgba(79,70,229,0.07)',border:'rgba(79,70,229,0.25)',accent:'#4338ca',label:'#312e81'},
 endocompare:{bg:'rgba(194,65,12,0.07)',border:'rgba(194,65,12,0.25)',accent:'#c2410c',label:'#9a3412'},
 infctrl:{bg:'rgba(139,94,15,0.07)',border:'rgba(139,94,15,0.25)',accent:'#a16207',label:'#854d0e'},
@@ -4336,7 +4350,7 @@ var d = loadProgress();
 var now = Date.now();
 var today = new Date();
 var studyKeys = Object.keys(QUIZ_COUNTS);
-var EXCLUDED_SP = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1 };
+var EXCLUDED_SP = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1 };
 var totalQ = 0;
 var sections = [];
 for (var i = 0; i < studyKeys.length; i++) {

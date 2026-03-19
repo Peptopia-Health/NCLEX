@@ -1,0 +1,1652 @@
+[
+  {
+    "question": "A charge nurse is making assignments on a medical-surgical unit. Which client should be assigned to the most experienced registered nurse?",
+    "options": [
+      "A 55-year-old client with pneumonia requiring IV antibiotics every 6 hours",
+      "A 68-year-old client with heart failure receiving diuretics and monitoring daily weights",
+      "A 72-year-old client with new-onset atrial fibrillation on continuous cardiac monitoring and IV heparin infusion",
+      "A 45-year-old client 3 days post-cholecystectomy ready for discharge teaching"
+    ],
+    "correct": 2,
+    "rationale": "The client with new-onset atrial fibrillation on IV heparin requires close monitoring for complications such as hemodynamic instability, bleeding, and potential stroke. This client has the highest acuity and should be assigned to the most experienced nurse."
+  },
+  {
+    "question": "A nurse is preparing to administer medications to four clients. Which medication should the nurse verify with the healthcare provider before administering?",
+    "options": [
+      "Metoprolol 25 mg PO to a client with heart rate 62 bpm",
+      "Furosemide 40 mg IV to a client with potassium 3.1 mEq/L",
+      "Heparin 5000 units subcutaneous to a client with aPTT 55 seconds",
+      "Acetaminophen 650 mg PO to a client with temperature 38.5\u00b0C (101.3\u00b0F)"
+    ],
+    "correct": 1,
+    "rationale": "Furosemide is a loop diuretic that causes further potassium loss. Administering it to a client with hypokalemia (K+ <3.5 mEq/L) could precipitate cardiac dysrhythmias. The nurse should verify this order and anticipate potassium replacement."
+  },
+  {
+    "question": "A client is receiving a blood transfusion. Thirty minutes after initiation, the client reports chills, flank pain, and appears flushed with hypotension. Which type of reaction is the client most likely experiencing, and what is the priority nursing action?",
+    "options": [
+      "Febrile reaction; administer antipyretics and slow the infusion",
+      "Allergic reaction; administer diphenhydramine and continue the infusion",
+      "Hemolytic transfusion reaction; stop the transfusion immediately",
+      "Circulatory overload; elevate the head of bed and administer diuretics"
+    ],
+    "correct": 2,
+    "rationale": "Chills, flank pain, flushing, and hypotension indicate a hemolytic transfusion reaction from ABO incompatibility. The priority is to stop the transfusion immediately, then notify the provider and maintain IV access with normal saline."
+  },
+  {
+    "question": "A nurse working in the emergency department is triaging clients following a bus accident. Which client should be assigned the highest priority (red tag)?",
+    "options": [
+      "A client with a fractured tibia and palpable distal pulses",
+      "A client with second-degree burns on 15% of the body, conscious and talking",
+      "A client with an open chest wound and respiratory distress",
+      "A client with multiple abrasions and lacerations, awake and ambulatory"
+    ],
+    "correct": 2,
+    "rationale": "In mass casualty triage, red tag (immediate) clients have life-threatening conditions but high probability of survival with intervention. An open chest wound with respiratory distress is immediately life-threatening and requires immediate intervention."
+  },
+  {
+    "question": "A nurse is delegating tasks to an unlicensed assistive personnel (UAP) and a licensed practical nurse (LPN). Which task should the nurse assign to the LPN?",
+    "options": [
+      "Ambulating a client who is post-operative day 3 following hip replacement",
+      "Administering oral medications to stable clients",
+      "Obtaining vital signs on all clients",
+      "Feeding a client with no swallowing difficulties"
+    ],
+    "correct": 1,
+    "rationale": "LPNs are licensed to administer medications to stable clients. UAP can perform ambulation, vital signs, and feeding of stable clients without swallowing difficulties."
+  },
+  {
+    "question": "A nurse discovers that a medication error occurred and the client received an incorrect dose of insulin. The client is diaphoretic, tremulous, and confused. What is the nurse's priority action?",
+    "options": [
+      "Complete an incident report",
+      "Notify the healthcare provider",
+      "Check the client's blood glucose level",
+      "Document the error in the medical record"
+    ],
+    "correct": 2,
+    "rationale": "The priority is client safety. The client is showing signs of hypoglycemia. The nurse must check blood glucose immediately and intervene if necessary. After ensuring client stability, the nurse should notify the provider and complete an incident report."
+  },
+  {
+    "question": "A nurse is preparing to discharge a client who speaks a different language than the nurse. The client's family member offers to translate. Which action is most appropriate?",
+    "options": [
+      "Accept the family member's offer to translate",
+      "Use a certified medical interpreter for discharge instructions",
+      "Provide written instructions in English only",
+      "Speak slowly and use gestures to ensure understanding"
+    ],
+    "correct": 1,
+    "rationale": "Using a certified medical interpreter ensures accurate communication and is required by federal law for meaningful access to healthcare. Family members may not accurately translate medical information and may violate client privacy."
+  },
+  {
+    "question": "A charge nurse observes a new graduate nurse preparing to administer medications. Which action by the new graduate requires immediate intervention?",
+    "options": [
+      "Scanning the client's identification band before removing medications",
+      "Removing medications for all assigned clients at once to save time",
+      "Checking the medication against the MAR at the bedside",
+      "Documenting administration immediately after giving the medication"
+    ],
+    "correct": 1,
+    "rationale": "Removing medications for multiple clients at once increases the risk of medication errors. Medications should be removed immediately before administration to the specific client."
+  },
+  {
+    "question": "A nurse is caring for a client who has a living will that specifies no artificial nutrition. The client's family insists that a feeding tube be inserted. Which action should the nurse take?",
+    "options": [
+      "Insert the feeding tube as requested by the family",
+      "Explain that the living will is a legal document that must be honored",
+      "Contact the ethics committee before taking any action",
+      "Ask the healthcare provider to speak with the family"
+    ],
+    "correct": 1,
+    "rationale": "A living will is a legal document that specifies the client's wishes. Healthcare providers and family are legally and ethically bound to honor these wishes. The nurse should explain this to the family with empathy."
+  },
+  {
+    "question": "A nurse is prioritizing care for four clients. Which client should the nurse assess first?",
+    "options": [
+      "A client with a chest tube that has continuous bubbling in the water seal chamber",
+      "A client post-operative day 2 with pain rated 3 on a 0-10 scale",
+      "A client with a urinary catheter who has not urinated in 4 hours",
+      "A client with a blood glucose of 180 mg/dL receiving insulin"
+    ],
+    "correct": 0,
+    "rationale": "Continuous bubbling indicates an air leak, which requires immediate assessment to determine if it's from the client or the system. This could compromise lung re-expansion."
+  },
+  {
+    "question": "A nurse is receiving a telephone order from a healthcare provider. After writing the order, what is the nurse's priority action?",
+    "options": [
+      "Sign the order with the provider's name",
+      "Repeat the order back to the provider for verification",
+      "Implement the order immediately",
+      "Document the time of the call"
+    ],
+    "correct": 1,
+    "rationale": "Read-back verification (repeating the order) is a critical safety step to ensure accuracy of telephone orders. This should be done before ending the call."
+  },
+  {
+    "question": "A charge nurse is evaluating infection control practices. Which action by a staff nurse indicates a need for additional teaching?",
+    "options": [
+      "Wearing gloves when emptying a urinary drainage bag",
+      "Performing hand hygiene before and after client contact",
+      "Wearing a mask within 3 feet of a client with meningococcal meningitis",
+      "Removing an N95 respirator inside the room of a client with tuberculosis"
+    ],
+    "correct": 3,
+    "rationale": "For airborne precautions, the N95 respirator should be removed after leaving the client's room. Removing it inside exposes the nurse to contaminants."
+  },
+  {
+    "question": "A nurse is preparing to obtain informed consent for a surgical procedure. The client appears confused and asks several questions. Which action is most appropriate?",
+    "options": [
+      "Have the client sign the form and proceed with surgery",
+      "Notify the healthcare provider that the client needs further explanation",
+      "Explain the procedure to the best of the nurse's ability",
+      "Ask a family member to sign the consent form"
+    ],
+    "correct": 1,
+    "rationale": "The nurse's role in informed consent is to witness the signature and ensure the client has been informed. If the client has questions or appears confused, the provider must provide additional explanation."
+  },
+  {
+    "question": "A nurse working in a long-term care facility suspects a colleague is abusing a resident. What is the nurse's priority action?",
+    "options": [
+      "Confront the colleague immediately",
+      "Report the suspicion to the charge nurse",
+      "Document the observation in the resident's chart",
+      "Protect the resident from further harm"
+    ],
+    "correct": 3,
+    "rationale": "The priority is client safety. The nurse must first protect the resident from immediate harm. After ensuring safety, the nurse should report according to facility policy and mandatory reporting laws."
+  },
+  {
+    "question": "A client with a do-not-resuscitate (DNR) order is found unresponsive and not breathing. Which action should the nurse take?",
+    "options": [
+      "Begin CPR and call a code",
+      "Provide comfort measures only",
+      "Call the healthcare provider for clarification",
+      "Ask the family if they want resuscitation"
+    ],
+    "correct": 1,
+    "rationale": "A DNR order means that CPR should not be initiated. The nurse should provide comfort measures and support to the client and family."
+  },
+  {
+    "question": "2026 NCLEX-RN Update: Care Coordination and Transition Management** A nurse is coordinating discharge for a client with heart failure. Which action best demonstrates effective care coordination and transition management?",
+    "options": [
+      "Providing the client with written discharge instructions",
+      "Scheduling a follow-up appointment before discharge",
+      "Communicating with the home health agency and ensuring medication reconciliation",
+      "Telling the client to call if problems occur"
+    ],
+    "correct": 2,
+    "rationale": "Effective care coordination involves interprofessional communication, medication reconciliation, and ensuring continuity of care. This reduces readmission rates and improves outcomes."
+  },
+  {
+    "question": "A nurse is preparing to transfer a client from the bed to a stretcher. Which action is essential to prevent injury?",
+    "options": [
+      "Position the stretcher slightly higher than the bed",
+      "Lock the wheels on both the bed and stretcher",
+      "Ask the client to assist by pulling on the nurse",
+      "Transfer the client alone to save time"
+    ],
+    "correct": 1,
+    "rationale": "Locking wheels prevents movement during transfer, reducing fall and injury risk. The stretcher should be at the same height."
+  },
+  {
+    "question": "A nurse receives a report that a client has a new order for restraints due to agitation. Which action should the nurse take first?",
+    "options": [
+      "Apply the restraints as ordered",
+      "Try alternative measures to calm the client",
+      "Obtain a signed consent from the family",
+      "Document the reason for restraint use"
+    ],
+    "correct": 1,
+    "rationale": "Restraints should only be used after all alternative measures have been attempted and failed. The nurse should first try de-escalation techniques."
+  },
+  {
+    "question": "A nurse is caring for a client who requests to see their medical record. Which response by the nurse is most appropriate?",
+    "options": [
+      "\"Medical records are confidential and cannot be viewed by clients.\"",
+      "\"You have the right to access your medical record. I can help you request it.\"",
+      "\"You'll need to speak with your healthcare provider about that.\"",
+      "\"The medical record is property of the hospital.\""
+    ],
+    "correct": 1,
+    "rationale": "Under HIPAA, clients have the right to access their medical records. The nurse should inform the client of this right and assist with the process."
+  },
+  {
+    "question": "A nurse is participating in a root cause analysis after a medication error. What is the purpose of this process?",
+    "options": [
+      "To identify who is responsible for the error",
+      "To discipline the nurse involved in the error",
+      "To determine underlying system factors that contributed to the error",
+      "To document the error for legal purposes"
+    ],
+    "correct": 2,
+    "rationale": "Root cause analysis focuses on identifying system factors (policies, procedures, environmental factors) that contributed to an error, not on blaming individuals."
+  },
+  {
+    "question": "A nurse is caring for a client with Clostridium difficile infection. Which hand hygiene method is required?",
+    "options": [
+      "Alcohol-based hand rub",
+      "Soap and water",
+      "Either soap and water or alcohol-based rub",
+      "Antiseptic hand wipes"
+    ],
+    "correct": 1,
+    "rationale": "Alcohol-based hand rubs are not effective against C. difficile spores. Hand hygiene must be performed with soap and water."
+  },
+  {
+    "question": "A nurse is preparing to clean a client's wound. Which action demonstrates proper surgical aseptic technique?",
+    "options": [
+      "Opening sterile packages before performing hand hygiene",
+      "Keeping the sterile field within line of sight at all times",
+      "Reaching over the sterile field to obtain supplies",
+      "Considering the outer 2 inches as contaminated"
+    ],
+    "correct": 1,
+    "rationale": "The sterile field must remain within the nurse's line of sight to prevent accidental contamination. Hand hygiene should be performed first. Never reach over a sterile field."
+  },
+  {
+    "question": "A nurse is caring for a client on droplet precautions. Which personal protective equipment is required?",
+    "options": [
+      "Gloves only",
+      "Gloves and gown",
+      "Gloves and surgical mask",
+      "Gloves, gown, and N95 respirator"
+    ],
+    "correct": 2,
+    "rationale": "Droplet precautions require a surgical mask within 3 feet of the client and gloves for contact with secretions."
+  },
+  {
+    "question": "A nurse is reviewing isolation precautions for assigned clients. Which client condition is correctly matched with the required type of precautions?",
+    "options": [
+      "Influenza \u2014 airborne precautions",
+      "MRSA wound infection \u2014 droplet precautions",
+      "Pulmonary tuberculosis \u2014 airborne precautions",
+      "Varicella (chickenpox) \u2014 contact precautions only"
+    ],
+    "correct": 2,
+    "rationale": "Pulmonary tuberculosis requires airborne precautions (negative-pressure room, N95 respirator). Varicella requires both airborne AND contact precautions. Influenza requires droplet precautions. MRSA requires contact precautions."
+  },
+  {
+    "question": "A nurse discovers a small fire in a client's room. Using the RACE acronym, what is the priority action?",
+    "options": [
+      "Extinguish the fire",
+      "Alarm: activate the fire alarm",
+      "Contain: close doors and windows",
+      "Rescue: remove clients from immediate danger"
+    ],
+    "correct": 3,
+    "rationale": "RACE: Rescue (remove clients), Alarm (activate alarm), Contain (close doors), Extinguish (attempt to put out fire). Client safety is always the priority."
+  },
+  {
+    "question": "A nurse is preparing to use a fire extinguisher. Which sequence is correct according to the PASS technique?",
+    "options": [
+      "Pull, Aim, Squeeze, Sweep",
+      "Point, Aim, Squeeze, Spray",
+      "Pull, Activate, Squeeze, Spray",
+      "Point, Activate, Squeeze, Sweep"
+    ],
+    "correct": 0,
+    "rationale": "PASS: Pull the pin, Aim at the base, Squeeze the handle, Sweep from side to side."
+  },
+  {
+    "question": "A nurse is caring for a client with a radiation implant for cervical cancer. Which finding requires immediate intervention?",
+    "options": [
+      "The client reports fatigue",
+      "The implant is found in the bed",
+      "The client requests pain medication",
+      "The client's urinary output is 40 mL/hour"
+    ],
+    "correct": 1,
+    "rationale": "A dislodged radiation implant is a radiation safety emergency. The nurse should use long-handled forceps to place it in a lead container, never touching it directly."
+  },
+  {
+    "question": "A nurse is caring for a client with a latex allergy. Which action is essential?",
+    "options": [
+      "Use non-latex gloves for client care",
+      "Place a sign on the client's door indicating the allergy",
+      "Avoid using any equipment that contains latex",
+      "All of the above"
+    ],
+    "correct": 3,
+    "rationale": "A comprehensive approach is needed: non-latex gloves, allergy alerts, and avoiding all latex-containing equipment."
+  },
+  {
+    "question": "A nurse is preparing to administer medications through a client's nasogastric tube. Which action is essential to prevent aspiration?",
+    "options": [
+      "Verify tube placement before administering medications",
+      "Flush the tube with 30 mL of water after medications",
+      "Elevate the head of the bed 30-45 degrees",
+      "All of the above"
+    ],
+    "correct": 3,
+    "rationale": "Preventing aspiration requires multiple steps: verify placement, elevate HOB, and flush before and after medications."
+  },
+  {
+    "question": "A nurse is caring for a client receiving oxygen therapy at 4 L/min via nasal cannula. Which safety precaution is most important?",
+    "options": [
+      "Post \"No Smoking\" signs in the client's room",
+      "Place the client in a private room",
+      "Apply petroleum jelly to the client's nares",
+      "Use only cotton blankets"
+    ],
+    "correct": 0,
+    "rationale": "Oxygen supports combustion. \"No Smoking\" signs should be posted. Petroleum jelly is flammable and should not be used."
+  },
+  {
+    "question": "A nurse is preparing to insert an indwelling urinary catheter. Which technique is correct for maintaining sterility?",
+    "options": [
+      "Open the sterile kit before donning sterile gloves",
+      "Place the sterile drape with the waterproof side down",
+      "Cleanse the meatus using a circular motion from meatus outward",
+      "Inflate the balloon before insertion"
+    ],
+    "correct": 0,
+    "rationale": "Sterile kits should be opened before donning sterile gloves to maintain glove sterility. Cleansing should be from meatus outward. The balloon should never be inflated before insertion."
+  },
+  {
+    "question": "A nurse is caring for a client on airborne precautions. Which personal protective equipment is required?",
+    "options": [
+      "Surgical mask",
+      "N95 respirator",
+      "Surgical mask and gloves",
+      "N95 respirator and gloves"
+    ],
+    "correct": 3,
+    "rationale": "Airborne precautions require an N95 respirator and gloves. Surgical masks are for droplet precautions."
+  },
+  {
+    "question": "A nurse is preparing to dispose of a contaminated needle. Which action is correct?",
+    "options": [
+      "Recap the needle before disposal",
+      "Break the needle to prevent reuse",
+      "Discard the needle in a sharps container",
+      "Place the needle in a red biohazard bag"
+    ],
+    "correct": 2,
+    "rationale": "Needles should be discarded immediately in a puncture-resistant sharps container. Never recap, bend, or break needles."
+  },
+  {
+    "question": "A nurse is caring for a client receiving radiation therapy with an internal implant. Which action should the nurse take to ensure safety?",
+    "options": [
+      "Limit time spent in the room to 30 minutes per shift",
+      "Wear a lead apron while in the client's room",
+      "Place the client in a private room with a lead-lined door",
+      "All of the above"
+    ],
+    "correct": 3,
+    "rationale": "Internal radiation requires a private room with lead shielding, limited time near the client, and lead aprons when providing care."
+  },
+  {
+    "question": "A nurse is preparing to administer an intramuscular injection to an adult. At what angle should the needle be inserted?",
+    "options": [
+      "15 degrees",
+      "45 degrees",
+      "90 degrees",
+      "180 degrees"
+    ],
+    "correct": 2,
+    "rationale": "Intramuscular injections should be given at a 90-degree angle to reach the muscle tissue."
+  },
+  {
+    "question": "A nurse is providing prenatal education to a client at 12 weeks gestation. Which immunization is safe to administer during pregnancy?",
+    "options": [
+      "Measles, mumps, rubella (MMR)",
+      "Varicella",
+      "Tetanus, diphtheria, pertussis (Tdap)",
+      "Human papillomavirus (HPV)"
+    ],
+    "correct": 2,
+    "rationale": "Tdap is recommended during each pregnancy. Live vaccines (MMR, varicella, HPV) are contraindicated during pregnancy."
+  },
+  {
+    "question": "A nurse is assessing a client at 34 weeks gestation who reports a sudden gush of fluid from the vagina. What should the nurse do first?",
+    "options": [
+      "Assess the fetal heart rate",
+      "Check the fluid for nitrazine paper color change",
+      "Prepare the client for delivery",
+      "Notify the healthcare provider"
+    ],
+    "correct": 0,
+    "rationale": "After rupture of membranes, the priority is to assess fetal well-being and check for umbilical cord prolapse."
+  },
+  {
+    "question": "A nurse is assessing a newborn 1 minute after birth. The newborn has a heart rate of 110 bpm, slow irregular respirations, some flexion of extremities, grimaces to suctioning, and is pink with blue extremities. What is the Apgar score?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correct": 1,
+    "rationale": "Apgar: Heart rate 110 = 2, Respirations slow/irregular = 1, Some flexion = 1, Grimace = 1, Acrocyanosis = 1. Total = 6."
+  },
+  {
+    "question": "A postpartum client is experiencing heavy bleeding with a boggy uterus that does not respond to fundal massage. Which medication should the nurse anticipate administering?",
+    "options": [
+      "Magnesium sulfate",
+      "Methylergonovine",
+      "Terbutaline",
+      "Betamethasone"
+    ],
+    "correct": 1,
+    "rationale": "Methylergonovine (Methergine) causes sustained uterine contraction and is used for postpartum hemorrhage unresponsive to oxytocin."
+  },
+  {
+    "question": "A nurse is providing discharge teaching to a postpartum client about newborn care. Which statement by the client indicates understanding of safe sleep practices?",
+    "options": [
+      "\"I'll put my baby to sleep on their stomach to prevent choking.\"",
+      "\"I'll place my baby on their back for every sleep.\"",
+      "\"I'll use soft blankets to keep my baby warm.\"",
+      "\"I can put stuffed animals in the crib for comfort.\""
+    ],
+    "correct": 1,
+    "rationale": "The \"Back to Sleep\" campaign recommends placing infants on their backs to reduce SIDS risk. Soft bedding should be avoided."
+  },
+  {
+    "question": "A nurse is assessing a 4-month-old infant. Which finding indicates normal development?",
+    "options": [
+      "Sits without support",
+      "Rolls from back to side",
+      "Pulls to stand",
+      "Waves bye-bye"
+    ],
+    "correct": 1,
+    "rationale": "By 4 months, infants typically roll from back to side. Sitting occurs around 6-8 months."
+  },
+  {
+    "question": "A 6-month-old infant is being evaluated for growth and development. The nurse collects the following data: | Assessment | 2 months | 4 months | 6 months | |------------|----------|----------|----------| | Weight (kg) | 5.0 | 6.2 | 6.8 | | Length (cm) | 55 | 60 | 63 | | Head circumference (cm) | 38 | 41 | 43 | Based on the trend data, which conclusion is most accurate?",
+    "options": [
+      "The infant is failing to thrive",
+      "The infant's growth is within expected parameters",
+      "The infant's head circumference is too large",
+      "The infant needs nutritional supplementation"
+    ],
+    "correct": 1,
+    "rationale": "The infant is showing consistent growth in weight, length, and head circumference. All measurements are within normal ranges for age."
+  },
+  {
+    "question": "A nurse is providing anticipatory guidance to parents of a toddler. Which injury prevention topic is most important at this age?",
+    "options": [
+      "Car seat safety",
+      "Poisoning prevention",
+      "Sun protection",
+      "Drowning prevention"
+    ],
+    "correct": 1,
+    "rationale": "Toddlers are at high risk for poisoning due to increased mobility and oral exploration."
+  },
+  {
+    "question": "A nurse is teaching a group of parents about immunizations. Which vaccine is typically administered at birth?",
+    "options": [
+      "Hepatitis B",
+      "DTaP",
+      "MMR",
+      "Varicella"
+    ],
+    "correct": 0,
+    "rationale": "Hepatitis B vaccine is typically given at birth, with subsequent doses at 1-2 months and 6-18 months."
+  },
+  {
+    "question": "A nurse is assessing the fine motor skills of a 3-year-old child. Which skill should the child be able to perform?",
+    "options": [
+      "Copy a circle",
+      "Draw a person with 3 parts",
+      "Use scissors to cut on a line",
+      "Button clothing"
+    ],
+    "correct": 0,
+    "rationale": "By age 3, children can copy a circle. Drawing a person with parts develops around age 4-5."
+  },
+  {
+    "question": "A nurse is providing education about recommended health screenings for a 55-year-old female client. Which screening should the nurse include?",
+    "options": [
+      "Mammogram every 2 years",
+      "Colonoscopy every 5 years",
+      "Bone density scan annually",
+      "PSA blood test annually"
+    ],
+    "correct": 0,
+    "rationale": "Current guidelines recommend mammography every 2 years for women ages 50- 74. Colonoscopy is recommended every 10 years."
+  },
+  {
+    "question": "A nurse is teaching a group of older adults about fall prevention. Which intervention is most effective?",
+    "options": [
+      "Wear reading glasses when walking",
+      "Remove throw rugs from the home",
+      "Walk on freshly waxed floors",
+      "Use a step stool to reach high items"
+    ],
+    "correct": 1,
+    "rationale": "Removing throw rugs eliminates a common fall hazard. Reading glasses can distort distance vision."
+  },
+  {
+    "question": "A nurse is providing education about hypertension screening. At what age should screening begin for adults with normal risk?",
+    "options": [
+      "Age 18",
+      "Age 30",
+      "Age 40",
+      "Age 50"
+    ],
+    "correct": 0,
+    "rationale": "Hypertension screening should begin at age 18, with screening at least every 2 years if blood pressure is normal."
+  },
+  {
+    "question": "A nurse is providing education about prostate cancer screening. Which statement by the client indicates understanding?",
+    "options": [
+      "\"I need annual PSA testing starting at age 40.\"",
+      "\"An elevated PSA always means cancer.\"",
+      "\"I should discuss risks and benefits with my provider.\"",
+      "\"Digital rectal exam is no longer used.\""
+    ],
+    "correct": 2,
+    "rationale": "Prostate cancer screening decisions should be individualized after discussing risks and benefits."
+  },
+  {
+    "question": "A nurse is reinforcing teaching with a client about testicular self-examination. Which instruction is correct?",
+    "options": [
+      "Perform the examination weekly",
+      "Examine after a warm shower",
+      "Palpate the testicles with one hand",
+      "Perform the examination before showering"
+    ],
+    "correct": 1,
+    "rationale": "Testicular self-examination should be performed monthly after a warm shower when the scrotum is relaxed."
+  },
+  {
+    "question": "A nurse is caring for a client who just received a diagnosis of terminal cancer. The client states, \"This can't be happening. There must be a mistake.\" Which stage of grief is the client experiencing?",
+    "options": [
+      "Anger",
+      "Denial",
+      "Bargaining",
+      "Depression"
+    ],
+    "correct": 1,
+    "rationale": "Denial is a common initial reaction to bad news, serving as a buffer before the client can begin to cope."
+  },
+  {
+    "question": "A nurse is caring for a client who is crying and states, \"I can't believe my husband left me. I feel so alone.\" Which response is most therapeutic?",
+    "options": [
+      "\"You'll feel better soon. Time heals all wounds.\"",
+      "\"At least you have your health and your job.\"",
+      "\"It sounds like you're feeling very alone right now.\"",
+      "\"Have you considered joining a support group?\""
+    ],
+    "correct": 2,
+    "rationale": "This response uses reflection and validation, acknowledging the client's feelings without judgment."
+  },
+  {
+    "question": "A nurse is caring for a client with schizophrenia who is experiencing auditory hallucinations. The client shouts, \"Stop telling me to hurt myself!\" What is the priority nursing action?",
+    "options": [
+      "Ask the client what the voices are saying",
+      "Administer PRN antipsychotic medication",
+      "Ensure client safety by staying close",
+      "Place the client in seclusion"
+    ],
+    "correct": 2,
+    "rationale": "Command hallucinations for self-harm require immediate safety measures. The nurse should stay with the client and ensure constant observation."
+  },
+  {
+    "question": "A nurse is assessing a client with bipolar disorder who is in the manic phase. Which finding is most consistent with mania?",
+    "options": [
+      "Flat affect and social withdrawal",
+      "Pressured speech and grandiosity",
+      "Psychomotor retardation",
+      "Excessive sleeping"
+    ],
+    "correct": 1,
+    "rationale": "Mania is characterized by elevated mood, pressured speech, grandiosity, and decreased need for sleep."
+  },
+  {
+    "question": "A nurse is caring for a client with anxiety disorder who is experiencing a panic attack. Which intervention is most helpful?",
+    "options": [
+      "Leave the client alone to calm down",
+      "Speak in short, simple sentences",
+      "Ask the client to explain what triggered the attack",
+      "Encourage deep, rapid breathing"
+    ],
+    "correct": 1,
+    "rationale": "During a panic attack, cognitive function is impaired. Short, simple sentences are easier to process."
+  },
+  {
+    "question": "A nurse is assessing a client with post-traumatic stress disorder (PTSD). Which finding is most consistent with this diagnosis?",
+    "options": [
+      "Difficulty falling asleep",
+      "Recurrent nightmares about the traumatic event",
+      "Decreased startle response",
+      "Feeling detached from others"
+    ],
+    "correct": 1,
+    "rationale": "Re-experiencing symptoms (nightmares, flashbacks) are hallmark features of PTSD."
+  },
+  {
+    "question": "A nurse is caring for a client with obsessive-compulsive disorder (OCD) who performs hand- washing rituals. Which intervention is most appropriate?",
+    "options": [
+      "Interrupt the ritual to save time",
+      "Allow time for the ritual initially",
+      "Tell the client the behavior is irrational",
+      "Restrict access to soap and water"
+    ],
+    "correct": 1,
+    "rationale": "Initially, rituals should not be interrupted as they serve an anxiety-reducing function."
+  },
+  {
+    "question": "A nurse is assessing a client with anorexia nervosa. Which finding is most consistent with this diagnosis?",
+    "options": [
+      "Binge eating followed by purging",
+      "Intense fear of gaining weight",
+      "Body weight below 85% of expected",
+      "Both B and C"
+    ],
+    "correct": 3,
+    "rationale": "Anorexia nervosa is characterized by intense fear of weight gain and significantly low body weight."
+  },
+  {
+    "question": "A nurse is assessing a client for risk of suicide. Which question is most important to ask?",
+    "options": [
+      "\"Do you ever feel sad?\"",
+      "\"Have you thought about how you would kill yourself?\"",
+      "\"Do you have a supportive family?\"",
+      "\"Have you ever seen a therapist before?\""
+    ],
+    "correct": 1,
+    "rationale": "Assessing for a specific plan and means is critical for determining immediate risk."
+  },
+  {
+    "question": "A nurse is caring for a client with alcohol use disorder who is in denial. Which response is most therapeutic?",
+    "options": [
+      "\"You're an alcoholic and need to accept that.\"",
+      "\"I'm concerned about how much you've been drinking.\"",
+      "\"If you don't admit you have a problem, you'll never get better.\"",
+      "\"Your family is very worried about you.\""
+    ],
+    "correct": 1,
+    "rationale": "Expressing concern in a nonjudgmental way can help the client begin to acknowledge the problem."
+  },
+  {
+    "question": "A nurse is caring for a client experiencing alcohol withdrawal. Which assessment finding indicates progression to delirium tremens?",
+    "options": [
+      "Fine hand tremors",
+      "Diaphoresis",
+      "Visual hallucinations",
+      "Tachycardia"
+    ],
+    "correct": 2,
+    "rationale": "Delirium tremens is characterized by hallucinations, severe confusion, agitation, and autonomic instability."
+  },
+  {
+    "question": "A nurse is providing education to a client starting lithium for bipolar disorder. Which instruction is most important?",
+    "options": [
+      "\"Take the medication on an empty stomach.\"",
+      "\"Maintain a consistent salt and fluid intake.\"",
+      "\"You can stop taking it once you feel better.\"",
+      "\"Avoid all physical activity.\""
+    ],
+    "correct": 1,
+    "rationale": "Lithium levels are affected by sodium intake. Dehydration or sodium depletion can increase lithium levels to toxicity."
+  },
+  {
+    "question": "A nurse is caring for a client with PTSD who experiences flashbacks. Which intervention is most helpful during a flashback?",
+    "options": [
+      "Touch the client to provide comfort",
+      "Speak loudly to get the client's attention",
+      "Orient the client to the present environment",
+      "Leave the client alone until the flashback passes"
+    ],
+    "correct": 2,
+    "rationale": "Gentle orientation to the present (e.g., \"You are in the hospital, you are safe\") helps ground them."
+  },
+  {
+    "question": "A nurse is communicating with a client who is culturally different from the nurse. Which action is most important?",
+    "options": [
+      "Speak loudly and slowly",
+      "Maintain direct eye contact at all times",
+      "Be aware of own cultural biases",
+      "Avoid asking about cultural practices"
+    ],
+    "correct": 2,
+    "rationale": "Self-awareness of cultural biases is essential for providing culturally competent care."
+  },
+  {
+    "question": "2026 NCLEX-RN Update: Addressing Substance Use Disorder Stigma** A nurse is caring for a client with opioid use disorder who is in severe post-operative pain. Which statement by the nurse best demonstrates addressing stigma associated with substance use disorder?",
+    "options": [
+      "\"I'll give you pain medication, but we need to be careful because of your history.\"",
+      "\"You have a legitimate reason to be in pain, and I will advocate for adequate pain relief.\"",
+      "\"The provider may be hesitant to give you strong pain medication.\"",
+      "\"Let's try non-pharmacological pain interventions first.\""
+    ],
+    "correct": 1,
+    "rationale": "This response validates the client's pain experience and advocates for equitable treatment, avoiding stigmatizing language."
+  },
+  {
+    "question": "A nurse is providing dietary teaching to a client with hypertension. Which food should the client avoid due to high sodium content?",
+    "options": [
+      "Fresh apple",
+      "Grilled chicken breast",
+      "Canned vegetable soup",
+      "Steamed broccoli"
+    ],
+    "correct": 2,
+    "rationale": "Canned soups are typically high in sodium. Fresh foods are naturally low in sodium."
+  },
+  {
+    "question": "A nurse is caring for a client with dysphagia. Which intervention is most important during mealtime?",
+    "options": [
+      "Place the client in supine position",
+      "Encourage the client to eat quickly",
+      "Have the client sit upright at 90 degrees",
+      "Offer thin liquids to prevent choking"
+    ],
+    "correct": 2,
+    "rationale": "Upright positioning during meals reduces aspiration risk. Thickened liquids are often easier to manage."
+  },
+  {
+    "question": "A nurse is calculating the body mass index (BMI) of a client who weighs 70 kg and is 1.75 meters tall. What is the BMI?",
+    "options": [
+      "20.0",
+      "22.9",
+      "25.5",
+      "28.6"
+    ],
+    "correct": 1,
+    "rationale": "BMI = weight (kg) / height (m)\u00b2 = 70 / (1.75)\u00b2 = 70 / 3.0625 = 22.9."
+  },
+  {
+    "question": "A nurse is providing education to a client with osteoporosis. Which food is highest in calcium?",
+    "options": [
+      "Apple",
+      "Chicken breast",
+      "Yogurt",
+      "Bread"
+    ],
+    "correct": 2,
+    "rationale": "Dairy products are excellent sources of calcium. Fruits, meats, and grains contain minimal calcium."
+  },
+  {
+    "question": "A nurse is caring for a client receiving continuous tube feeding. Which action is essential to prevent aspiration?",
+    "options": [
+      "Check gastric residual every 4 hours",
+      "Elevate head of bed 30-45 degrees",
+      "Flush tube with water every shift",
+      "Administer feeding at cold temperature"
+    ],
+    "correct": 1,
+    "rationale": "Continuous elevation of the head of the bed during tube feeding is the most important intervention to prevent aspiration."
+  },
+  {
+    "question": "A nurse is assessing a client for malnutrition. Which finding is most indicative of protein deficiency?",
+    "options": [
+      "Dry skin",
+      "Edema",
+      "Brittle nails",
+      "Hair loss"
+    ],
+    "correct": 1,
+    "rationale": "Severe protein deficiency can cause edema due to decreased oncotic pressure from low albumin."
+  },
+  {
+    "question": "A nurse is providing dietary teaching to a client with chronic kidney disease. Which nutrient should be restricted?",
+    "options": [
+      "Carbohydrates",
+      "Protein",
+      "Vitamin C",
+      "Fiber"
+    ],
+    "correct": 1,
+    "rationale": "In chronic kidney disease, protein may be restricted to reduce the workload on the kidneys."
+  },
+  {
+    "question": "A nurse is caring for a client with nausea and vomiting. Which dietary intervention is most appropriate?",
+    "options": [
+      "Encourage large, heavy meals",
+      "Offer clear liquids and bland foods",
+      "Serve foods with strong odors",
+      "Limit fluid intake"
+    ],
+    "correct": 1,
+    "rationale": "Clear liquids and bland foods are better tolerated during nausea."
+  },
+  {
+    "question": "A nurse is calculating intake and output. The client drank 8 oz of coffee, 4 oz of juice, and 6 oz of water. What is the total intake in mL? (1 oz = 30 mL)",
+    "options": [
+      "180 mL",
+      "240 mL",
+      "480 mL",
+      "540 mL"
+    ],
+    "correct": 3,
+    "rationale": "Total ounces = 8 + 4 + 6 = 18 oz. 18 \u00d7 30 = 540 mL."
+  },
+  {
+    "question": "A nurse is caring for a client with a urinary tract infection. Which finding is most consistent with this diagnosis?",
+    "options": [
+      "Polyuria",
+      "Dysuria",
+      "Hematuria",
+      "Both B and C"
+    ],
+    "correct": 3,
+    "rationale": "Dysuria (painful urination) and hematuria (blood in urine) are common symptoms of UTI."
+  },
+  {
+    "question": "A nurse is preparing to administer oral medications to a client with a nasogastric tube. Which action is correct?",
+    "options": [
+      "Crush all medications and mix together",
+      "Flush the tube with 30 mL water before and after medications",
+      "Administer medications with continuous tube feeding running",
+      "Place medications in the tube and flush with air"
+    ],
+    "correct": 1,
+    "rationale": "Flushing before and after ensures tube patency and prevents interactions."
+  },
+  {
+    "question": "A nurse is administering an intradermal injection. Which angle of insertion should the nurse use?",
+    "options": [
+      "10-15 degrees",
+      "45 degrees",
+      "60 degrees",
+      "90 degrees"
+    ],
+    "correct": 0,
+    "rationale": "Intradermal injections are given at a 10-15 degree angle to create a wheal."
+  },
+  {
+    "question": "A nurse is preparing to administer insulin. Which action is correct?",
+    "options": [
+      "Shake the vial vigorously before withdrawing insulin",
+      "Administer insulin that appears cloudy (for clear insulin)",
+      "Rotate injection sites within the same region",
+      "Massage the site after injection"
+    ],
+    "correct": 2,
+    "rationale": "Rotating sites promotes consistent absorption. Vials should be gently rolled, not shaken. Sites should not be massaged."
+  },
+  {
+    "question": "A nurse is administering eye drops. Which action is correct?",
+    "options": [
+      "Drop medication directly onto the cornea",
+      "Apply pressure to the inner canthus after administration",
+      "Have the client squeeze eyes shut after drops",
+      "Use the same bottle for multiple clients"
+    ],
+    "correct": 1,
+    "rationale": "Applying pressure to the inner canthus prevents systemic absorption."
+  },
+  {
+    "question": "A nurse is preparing to administer a subcutaneous injection to a client with low body fat. Which needle size and angle is most appropriate?",
+    "options": [
+      "1-inch needle at 90 degrees",
+      "5/8-inch needle at 45 degrees",
+      "1/2-inch needle at 90 degrees",
+      "1/4-inch needle at 15 degrees"
+    ],
+    "correct": 1,
+    "rationale": "A shorter needle at a 45-degree angle ensures subcutaneous deposition without injecting into muscle."
+  },
+  {
+    "question": "A nurse is administering ear drops to an adult. Which action is correct?",
+    "options": [
+      "Pull the pinna down and back",
+      "Pull the pinna up and back",
+      "Place the dropper directly against the ear canal",
+      "Have the client lie on the affected side afterward"
+    ],
+    "correct": 1,
+    "rationale": "For adults, pull the pinna up and back to straighten the ear canal. For children under 3, pull down and back."
+  },
+  {
+    "question": "A nurse is preparing to administer a medication through a peripheral IV line. Which action is essential?",
+    "options": [
+      "Check for blood return before administering",
+      "Administer medication regardless of site appearance",
+      "Flush with 10 mL normal saline before and after",
+      "Both A and C"
+    ],
+    "correct": 3,
+    "rationale": "Check for blood return to confirm patency and flush before and after to ensure delivery and prevent incompatibilities."
+  },
+  {
+    "question": "A nurse is preparing to administer a controlled substance. Which action is required by law?",
+    "options": [
+      "Count the controlled substance with another nurse",
+      "Document administration immediately",
+      "Discard unused portion with a witness",
+      "All of the above"
+    ],
+    "correct": 3,
+    "rationale": "Controlled substance regulations require counting, immediate documentation, and wasting with a witness."
+  },
+  {
+    "question": "A nurse is administering a medication that is available as 250 mg/5 mL. The ordered dose is 375 mg. How many mL should the nurse administer?",
+    "options": [
+      "5 mL",
+      "6.5 mL",
+      "7.5 mL",
+      "10 mL"
+    ],
+    "correct": 2,
+    "rationale": "250 mg/5 mL = 50 mg/mL. 375 mg \u00f7 50 mg/mL = 7.5 mL."
+  },
+  {
+    "question": "A nurse is preparing to administer an IV push medication. Which action is correct?",
+    "options": [
+      "Administer rapidly to save time",
+      "Use the port closest to the client",
+      "Administer without checking compatibility",
+      "Check the client's IV site before administration"
+    ],
+    "correct": 3,
+    "rationale": "The IV site should be assessed for patency and signs of infiltration/phlebitis before medication administration."
+  },
+  {
+    "question": "A nurse is administering a transdermal patch. Which action is correct?",
+    "options": [
+      "Apply the patch to the same site each time",
+      "Remove the old patch before applying the new one",
+      "Cut the patch in half for a lower dose",
+      "Apply the patch to hairy areas for better adhesion"
+    ],
+    "correct": 1,
+    "rationale": "Old patches should be removed to prevent overdose. Patches should never be cut."
+  },
+  {
+    "question": "A nurse is preparing to administer an injection using the Z-track method. For which medication is this method most appropriate?",
+    "options": [
+      "Insulin",
+      "Heparin",
+      "Iron dextran",
+      "Lidocaine"
+    ],
+    "correct": 2,
+    "rationale": "Z-track method is used for medications that are irritating to tissues or can stain skin."
+  },
+  {
+    "question": "A nurse is initiating IV therapy on an adult client. Which site is preferred for peripheral IV insertion?",
+    "options": [
+      "Antecubital fossa",
+      "Hand veins",
+      "Forearm veins",
+      "Lower extremity veins"
+    ],
+    "correct": 2,
+    "rationale": "Forearm veins are preferred for stability and are less likely to be affected by joint movement. Lower extremity veins are avoided due to DVT risk."
+  },
+  {
+    "question": "A nurse is assessing a client's peripheral IV site. Which finding requires immediate discontinuation of the IV?",
+    "options": [
+      "Slight redness at the insertion site",
+      "Clear fluid leaking from the site",
+      "Pain, swelling, and coolness at the site",
+      "Small amount of dried blood on the dressing"
+    ],
+    "correct": 2,
+    "rationale": "Pain, swelling, and coolness indicate infiltration. The IV should be discontinued and restarted elsewhere."
+  },
+  {
+    "question": "A nurse is calculating the drip rate for an IV infusion. The order is for 1000 mL to infuse over 8 hours. The tubing delivers 15 gtt/mL. What is the drip rate in gtt/min?",
+    "options": [
+      "21 gtt/min",
+      "31 gtt/min",
+      "42 gtt/min",
+      "52 gtt/min"
+    ],
+    "correct": 1,
+    "rationale": "1000 mL / 8 hours = 125 mL/hour. 125 mL/hour \u00d7 15 gtt/mL = 1875 gtt/hour. 1875 \u00f7 60 = 31.25 gtt/min."
+  },
+  {
+    "question": "A nurse is caring for a client receiving IV fluids. Which assessment finding indicates fluid volume overload?",
+    "options": [
+      "Decreased blood pressure",
+      "Crackles in the lung bases",
+      "Increased urine output",
+      "Dry mucous membranes"
+    ],
+    "correct": 1,
+    "rationale": "Crackles indicate pulmonary congestion from fluid overload."
+  },
+  {
+    "question": "A nurse is preparing to administer IV potassium. Which action is essential for safety?",
+    "options": [
+      "Administer as an IV push over 5 minutes",
+      "Dilute in appropriate solution and infuse via pump",
+      "Administer undiluted through a central line",
+      "Infuse at maximum rate of 20 mEq/hour"
+    ],
+    "correct": 1,
+    "rationale": "IV potassium must always be diluted. Maximum peripheral rate is 10 mEq/hour."
+  },
+  {
+    "question": "A client taking lisinopril reports a persistent dry cough. What should the nurse do?",
+    "options": [
+      "Advise the client to take cough medicine",
+      "Tell the client this is expected and will go away",
+      "Document the finding and notify the healthcare provider",
+      "Stop the medication immediately"
+    ],
+    "correct": 2,
+    "rationale": "Dry cough is a common side effect of ACE inhibitors and may require switching to an ARB."
+  },
+  {
+    "question": "A client taking warfarin has an INR of 5.2. Which assessment finding is most concerning?",
+    "options": [
+      "Bruising on both arms",
+      "Blood in the urine",
+      "Confusion and weakness on one side",
+      "Bleeding gums when brushing"
+    ],
+    "correct": 2,
+    "rationale": "Neurological symptoms may indicate intracranial hemorrhage, a life-threatening emergency."
+  },
+  {
+    "question": "A client receiving IV vancomycin develops flushing, rash, and itching on the neck and upper torso during the infusion. What is the priority action?",
+    "options": [
+      "Stop the infusion immediately",
+      "Slow the infusion rate",
+      "Administer diphenhydramine",
+      "Notify the healthcare provider"
+    ],
+    "correct": 0,
+    "rationale": "This describes \"red man syndrome.\" The infusion should be stopped immediately."
+  },
+  {
+    "question": "A nurse is assessing a client's blood pressure. The cuff is too small for the client's arm. How will this affect the reading?",
+    "options": [
+      "Falsely low reading",
+      "Falsely high reading",
+      "No effect on reading",
+      "Erratic reading"
+    ],
+    "correct": 1,
+    "rationale": "Using a cuff that is too small requires higher pressure to occlude the artery, resulting in a falsely high reading."
+  },
+  {
+    "question": "A nurse is preparing a client for an abdominal ultrasound. Which instruction is correct?",
+    "options": [
+      "\"You need to drink contrast medium before the test.\"",
+      "\"Fast for 8-12 hours before the test.\"",
+      "\"You'll need a full bladder for the test.\"",
+      "\"The test involves radiation.\""
+    ],
+    "correct": 1,
+    "rationale": "Abdominal ultrasound requires fasting to reduce gas. Ultrasound does not use radiation."
+  },
+  {
+    "question": "A nurse is reviewing a client's complete blood count. Which finding indicates infection?",
+    "options": [
+      "Hemoglobin 14 g/dL",
+      "Platelets 250,000/mm\u00b3",
+      "White blood cells 15,000/mm\u00b3",
+      "Hematocrit 42%"
+    ],
+    "correct": 2,
+    "rationale": "Normal WBC is 4,500-11,000/mm\u00b3. 15,000 indicates leukocytosis."
+  },
+  {
+    "question": "A nurse is preparing a client for a colonoscopy. Which instruction is most important?",
+    "options": [
+      "\"You can eat a light breakfast the morning of the test.\"",
+      "\"You'll need to complete the bowel preparation as ordered.\"",
+      "\"You can drive yourself home after the test.\"",
+      "\"The test takes about 15 minutes.\""
+    ],
+    "correct": 1,
+    "rationale": "Adequate bowel preparation is essential for visualizing the colon. Clients need a driver after sedation."
+  },
+  {
+    "question": "A nurse is reviewing a client's electrolyte levels. Which finding requires immediate intervention?",
+    "options": [
+      "Sodium 135 mEq/L",
+      "Potassium 3.5 mEq/L",
+      "Calcium 8.5 mg/dL",
+      "Potassium 6.2 mEq/L"
+    ],
+    "correct": 3,
+    "rationale": "Potassium 6.2 indicates hyperkalemia, which can cause life-threatening cardiac dysrhythmias."
+  },
+  {
+    "question": "A nurse is preparing a client for an MRI. Which question is most important to ask?",
+    "options": [
+      "\"Have you ever had surgery?\"",
+      "\"Do you have any metal implants or devices?\"",
+      "\"What medications do you take?\"",
+      "\"Have you eaten anything today?\""
+    ],
+    "correct": 1,
+    "rationale": "Metal implants are contraindications for MRI due to the strong magnetic field."
+  },
+  {
+    "question": "A nurse is assessing a client's oxygen saturation. The reading is 88% on room air. What should the nurse do first?",
+    "options": [
+      "Recheck in 30 minutes",
+      "Notify the healthcare provider",
+      "Apply supplemental oxygen",
+      "Check the client's respiratory status"
+    ],
+    "correct": 3,
+    "rationale": "Before intervening, assess the client's overall respiratory status and report findings."
+  },
+  {
+    "question": "A nurse is reviewing a client's cardiac enzyme results. Which finding is most specific for myocardial infarction?",
+    "options": [
+      "Elevated CK-MB",
+      "Elevated troponin",
+      "Elevated LDH",
+      "Elevated AST"
+    ],
+    "correct": 1,
+    "rationale": "Troponin is the most specific cardiac marker for myocardial infarction."
+  },
+  {
+    "question": "A nurse is preparing a client for a lumbar puncture. Which position should the nurse assist the client into?",
+    "options": [
+      "Supine with legs extended",
+      "Prone with arms at sides",
+      "Side-lying with knees to chest",
+      "Sitting upright leaning forward"
+    ],
+    "correct": 2,
+    "rationale": "The fetal position maximizes space between vertebrae for needle insertion."
+  },
+  {
+    "question": "A nurse is reviewing a client's coagulation studies. Which finding indicates therapeutic anticoagulation with warfarin?",
+    "options": [
+      "aPTT 60 seconds",
+      "INR 2.5",
+      "Platelets 150,000/mm\u00b3",
+      "PT 12 seconds"
+    ],
+    "correct": 1,
+    "rationale": "Therapeutic INR for most indications is 2-3. aPTT monitors heparin."
+  },
+  {
+    "question": "A nurse is preparing a client for a CT scan with contrast. Which question is most important to ask?",
+    "options": [
+      "\"Have you ever had surgery?\"",
+      "\"Do you have any allergies?\"",
+      "\"What is your date of birth?\"",
+      "\"Have you eaten today?\""
+    ],
+    "correct": 1,
+    "rationale": "Allergy to contrast media is a critical safety concern."
+  },
+  {
+    "question": "A nurse is reviewing a client's arterial blood gas results: pH 7.32, PaCO2 50 mm Hg, HCO3 24 mEq/L. Which acid-base imbalance is present?",
+    "options": [
+      "Respiratory acidosis",
+      "Respiratory alkalosis",
+      "Metabolic acidosis",
+      "Metabolic alkalosis"
+    ],
+    "correct": 0,
+    "rationale": "pH <7.35 indicates acidosis. PaCO2 >45 indicates respiratory cause."
+  },
+  {
+    "question": "A nurse is preparing a client for a paracentesis. Which intervention is most important?",
+    "options": [
+      "Have the client void before the procedure",
+      "Position the client supine",
+      "Administer sedative as ordered",
+      "Start an IV line"
+    ],
+    "correct": 0,
+    "rationale": "An empty bladder reduces risk of bladder puncture during paracentesis."
+  },
+  {
+    "question": "A nurse is reviewing a client's complete blood count. Which finding indicates anemia?",
+    "options": [
+      "WBC 8,000/mm\u00b3",
+      "Hemoglobin 10 g/dL",
+      "Platelets 200,000/mm\u00b3",
+      "Hematocrit 45%"
+    ],
+    "correct": 1,
+    "rationale": "Normal hemoglobin is 12-16 g/dL for women and 14-18 g/dL for men. 10 g/dL indicates anemia."
+  },
+  {
+    "question": "A nurse is reviewing a client's potassium level of 3.2 mEq/L. Which assessment finding is most consistent with this level?",
+    "options": [
+      "Peaked T waves",
+      "Muscle weakness",
+      "Hyperactive reflexes",
+      "Constipation"
+    ],
+    "correct": 1,
+    "rationale": "Hypokalemia causes muscle weakness, fatigue, and dysrhythmias."
+  },
+  {
+    "question": "A nurse is reviewing a client's sodium level of 152 mEq/L. Which condition is most consistent with this finding?",
+    "options": [
+      "Hypervolemia",
+      "Dehydration",
+      "SIADH",
+      "Heart failure"
+    ],
+    "correct": 1,
+    "rationale": "Hypernatremia indicates sodium excess or water deficit, often from dehydration."
+  },
+  {
+    "question": "A nurse is reviewing a client's blood glucose level of 45 mg/dL. Which assessment finding is most concerning?",
+    "options": [
+      "Diaphoresis",
+      "Tremors",
+      "Unresponsiveness",
+      "Tachycardia"
+    ],
+    "correct": 2,
+    "rationale": "Severe hypoglycemia can cause unconsciousness, requiring immediate intervention."
+  },
+  {
+    "question": "A nurse is reviewing a client's BUN and creatinine levels. BUN is 45 mg/dL, creatinine is 2.5 mg/dL. Which condition is most likely?",
+    "options": [
+      "Dehydration",
+      "Liver disease",
+      "Kidney impairment",
+      "Malnutrition"
+    ],
+    "correct": 2,
+    "rationale": "Both BUN and creatinine are elevated, indicating kidney impairment."
+  },
+  {
+    "question": "A nurse is reviewing a client's hemoglobin A1c level of 8.5%. What is the estimated average blood glucose?",
+    "options": [
+      "154 mg/dL",
+      "170 mg/dL",
+      "197 mg/dL",
+      "240 mg/dL"
+    ],
+    "correct": 2,
+    "rationale": "eAG = (28.7 \u00d7 A1c) - 46.7 = (28.7 \u00d7 8.5) - 46.7 = 197 mg/dL."
+  },
+  {
+    "question": "A nurse is caring for a client after a cardiac catheterization via the femoral artery. Which assessment finding requires immediate intervention?",
+    "options": [
+      "Client reports thirst",
+      "Pedal pulses +2 bilaterally",
+      "Large swelling at the insertion site",
+      "Small amount of blood on the dressing"
+    ],
+    "correct": 2,
+    "rationale": "Large swelling indicates bleeding or hematoma formation requiring immediate pressure and provider notification."
+  },
+  {
+    "question": "A nurse is caring for a client after a lumbar puncture. Which position is most appropriate?",
+    "options": [
+      "Supine for several hours",
+      "Prone with head turned",
+      "Sitting upright immediately",
+      "Trendelenburg position"
+    ],
+    "correct": 0,
+    "rationale": "Lying flat helps prevent post-dural puncture headache."
+  },
+  {
+    "question": "A nurse is caring for a client after a thoracentesis. Which assessment finding requires immediate intervention?",
+    "options": [
+      "Client reports shortness of breath",
+      "Small amount of bloody sputum",
+      "Pain at the puncture site",
+      "Dry dressing with slight spotting"
+    ],
+    "correct": 0,
+    "rationale": "Shortness of breath may indicate pneumothorax."
+  },
+  {
+    "question": "A nurse is caring for a client after a liver biopsy. Which position is most appropriate?",
+    "options": [
+      "Supine with head elevated",
+      "Right side-lying with a pillow under the biopsy site",
+      "Left side-lying with legs extended",
+      "Prone"
+    ],
+    "correct": 1,
+    "rationale": "This position applies pressure to the site and reduces bleeding risk."
+  },
+  {
+    "question": "A nurse is reviewing a client's platelet count of 20,000/mm\u00b3. Which nursing intervention is most important?",
+    "options": [
+      "Monitor for signs of infection",
+      "Assist with ambulation",
+      "Provide oral care with a soft toothbrush",
+      "Encourage high-protein foods"
+    ],
+    "correct": 2,
+    "rationale": "Severe thrombocytopenia increases bleeding risk. A soft toothbrush minimizes gum trauma."
+  },
+  {
+    "question": "A nurse is reviewing a client's INR of 4.5. The client is taking warfarin. Which assessment finding is most important to report?",
+    "options": [
+      "Bruising on both arms",
+      "Blood in the urine",
+      "Confusion and weakness on one side",
+      "Bleeding gums when brushing"
+    ],
+    "correct": 2,
+    "rationale": "Neurological symptoms may indicate intracranial hemorrhage."
+  },
+  {
+    "question": "A nurse is caring for a client with heart failure. Which finding indicates worsening condition?",
+    "options": [
+      "Weight loss of 1 kg in 24 hours",
+      "Increased appetite",
+      "Crackles in the lung bases",
+      "Clear breath sounds"
+    ],
+    "correct": 2,
+    "rationale": "Crackles indicate pulmonary congestion from worsening heart failure."
+  },
+  {
+    "question": "A nurse is caring for a client with diabetic ketoacidosis. Which finding indicates a complication of treatment?",
+    "options": [
+      "Blood glucose decreasing from 600 to 400 mg/dL",
+      "Serum potassium decreasing from 5.0 to 3.2 mEq/L",
+      "Client reports thirst",
+      "Urine output 50 mL/hour"
+    ],
+    "correct": 1,
+    "rationale": "During DKA treatment, potassium shifts intracellularly, causing hypokalemia requiring replacement."
+  },
+  {
+    "question": "A nurse is caring for a client with cirrhosis. Which finding indicates liver failure?",
+    "options": [
+      "Hyperglycemia",
+      "Increased albumin",
+      "Coagulopathy",
+      "Hypertension"
+    ],
+    "correct": 2,
+    "rationale": "The liver produces clotting factors. Coagulopathy indicates liver failure."
+  },
+  {
+    "question": "A nurse is caring for a client with syndrome of inappropriate antidiuretic hormone (SIADH). Which electrolyte imbalance is expected?",
+    "options": [
+      "Hypernatremia",
+      "Hyponatremia",
+      "Hyperkalemia",
+      "Hypokalemia"
+    ],
+    "correct": 1,
+    "rationale": "SIADH causes water retention and dilutional hyponatremia."
+  },
+  {
+    "question": "A nurse is caring for a client with Addison's disease. Which electrolyte imbalance is expected?",
+    "options": [
+      "Hypernatremia",
+      "Hyponatremia",
+      "Hypokalemia",
+      "Hypercalcemia"
+    ],
+    "correct": 1,
+    "rationale": "Addison's disease causes mineralocorticoid deficiency, leading to sodium loss."
+  },
+  {
+    "question": "A nurse is caring for a client with Cushing's syndrome. Which finding is expected?",
+    "options": [
+      "Hypotension",
+      "Hypoglycemia",
+      "Hyperkalemia",
+      "Hyperglycemia"
+    ],
+    "correct": 3,
+    "rationale": "Cortisol excess causes hyperglycemia, hypertension, and hypokalemia."
+  },
+  {
+    "question": "A nurse is caring for a client with a pulmonary embolism. Which finding is most concerning?",
+    "options": [
+      "Heart rate 104 bpm",
+      "Respiratory rate 24 breaths/min",
+      "Oxygen saturation 88%",
+      "Client reports anxiety"
+    ],
+    "correct": 2,
+    "rationale": "Hypoxemia requires immediate intervention."
+  },
+  {
+    "question": "A nurse is caring for a client with increased intracranial pressure. Which finding indicates worsening ICP?",
+    "options": [
+      "Heart rate 68 bpm",
+      "Pupils equal and reactive",
+      "Cushing's triad",
+      "Glasgow Coma Scale 15"
+    ],
+    "correct": 2,
+    "rationale": "Cushing's triad (hypertension, bradycardia, irregular respirations) is a late sign of increased ICP."
+  },
+  {
+    "question": "A nurse is caring for a client with hypovolemic shock. Which compensatory mechanism occurs initially?",
+    "options": [
+      "Bradycardia",
+      "Vasodilation",
+      "Tachycardia",
+      "Decreased cardiac output"
+    ],
+    "correct": 2,
+    "rationale": "The sympathetic nervous system compensates with tachycardia and vasoconstriction."
+  },
+  {
+    "question": "A nurse is caring for a client with hyperthyroidism. Which finding indicates thyroid storm?",
+    "options": [
+      "Bradycardia",
+      "Hypothermia",
+      "Hypertension",
+      "Hyperthermia"
+    ],
+    "correct": 3,
+    "rationale": "Thyroid storm is characterized by hyperthermia, tachycardia, and altered mental status."
+  },
+  {
+    "question": "A nurse is caring for a client with acute kidney injury. During the oliguric phase, which finding is expected?",
+    "options": [
+      "Polyuria",
+      "Hyperkalemia",
+      "Hypokalemia",
+      "Metabolic alkalosis"
+    ],
+    "correct": 1,
+    "rationale": "During the oliguric phase, the kidneys cannot excrete potassium."
+  },
+  {
+    "question": "A nurse is caring for a client with meningitis. Which finding indicates increased ICP?",
+    "options": [
+      "Nuchal rigidity",
+      "Positive Kernig's sign",
+      "Bradycardia and hypertension",
+      "Photophobia"
+    ],
+    "correct": 2,
+    "rationale": "Bradycardia and hypertension (Cushing's response) indicate increased ICP."
+  },
+  {
+    "question": "A nurse is caring for a client with myasthenia gravis. Which finding indicates a cholinergic crisis?",
+    "options": [
+      "Muscle weakness",
+      "Pupil dilation",
+      "Muscle twitching and diarrhea",
+      "Tachycardia"
+    ],
+    "correct": 2,
+    "rationale": "Cholinergic crisis results from excessive acetylcholine medication."
+  },
+  {
+    "question": "A nurse is caring for a client with disseminated intravascular coagulation (DIC). Which finding requires immediate intervention?",
+    "options": [
+      "Bruising on both arms",
+      "Oozing from IV sites",
+      "Client reports headache",
+      "Confusion and oliguria"
+    ],
+    "correct": 3,
+    "rationale": "Confusion and oliguria may indicate organ damage from microvascular thrombosis."
+  },
+  {
+    "question": "A nurse is caring for a client with hyponatremia. Which assessment finding is most concerning?",
+    "options": [
+      "Muscle cramps",
+      "Headache",
+      "Seizures",
+      "Nausea"
+    ],
+    "correct": 2,
+    "rationale": "Severe hyponatremia can cause cerebral edema, leading to seizures."
+  },
+  {
+    "question": "A nurse is caring for a client with hyperkalemia. Which electrocardiogram change is most characteristic?",
+    "options": [
+      "Flattened T waves",
+      "U waves",
+      "Peaked T waves",
+      "ST elevation"
+    ],
+    "correct": 2,
+    "rationale": "Hyperkalemia causes peaked T waves, widened QRS, and prolonged PR interval."
+  },
+  {
+    "question": "A nurse is caring for a client with hypocalcemia. Which assessment finding is expected?",
+    "options": [
+      "Positive Trousseau's sign",
+      "Decreased deep tendon reflexes",
+      "Lethargy",
+      "Hypotension"
+    ],
+    "correct": 0,
+    "rationale": "Hypocalcemia causes neuromuscular irritability."
+  },
+  {
+    "question": "A nurse is caring for a client with hypermagnesemia. Which assessment finding is most concerning?",
+    "options": [
+      "Hyperactive reflexes",
+      "Respiratory depression",
+      "Muscle cramps",
+      "Hypertension"
+    ],
+    "correct": 1,
+    "rationale": "Severe hypermagnesemia causes respiratory depression."
+  },
+  {
+    "question": "A nurse is caring for a client with dehydration. Which assessment finding indicates severe dehydration?",
+    "options": [
+      "Thirst",
+      "Dry mucous membranes",
+      "Orthostatic hypotension",
+      "Oliguria"
+    ],
+    "correct": 2,
+    "rationale": "Orthostatic hypotension indicates significant fluid loss."
+  },
+  {
+    "question": "A nurse finds a client unresponsive and not breathing. What is the priority action?",
+    "options": [
+      "Check for a pulse",
+      "Call for help",
+      "Start chest compressions",
+      "Open the airway"
+    ],
+    "correct": 1,
+    "rationale": "In the hospital setting, call for help (code blue) immediately."
+  },
+  {
+    "question": "A client with a known peanut allergy is exposed to peanuts and develops stridor and difficulty breathing. What is the priority action?",
+    "options": [
+      "Administer diphenhydramine",
+      "Start an IV line",
+      "Administer epinephrine",
+      "Apply oxygen"
+    ],
+    "correct": 2,
+    "rationale": "Stridor and difficulty breathing indicate anaphylaxis. Epinephrine is first-line treatment."
+  },
+  {
+    "question": "A client with a seizure disorder has a generalized tonic-clonic seizure. What is the priority nursing action?",
+    "options": [
+      "Insert a bite block",
+      "Restrain the client",
+      "Protect the client from injury",
+      "Administer IV diazepam"
+    ],
+    "correct": 2,
+    "rationale": "During a seizure, the priority is to protect the client from injury."
+  },
+  {
+    "question": "A client with a spinal cord injury at T6 suddenly develops a severe headache, hypertension, and bradycardia. What is the priority action?",
+    "options": [
+      "Administer antihypertensive medication",
+      "Place the client in Trendelenburg position",
+      "Check for bladder distention or fecal impaction",
+      "Notify the healthcare provider"
+    ],
+    "correct": 2,
+    "rationale": "These symptoms indicate autonomic dysreflexia. The priority is to identify and remove the noxious stimulus."
+  },
+  {
+    "question": "A client receiving a blood transfusion develops dyspnea, hypotension, and back pain. What is the priority action?",
+    "options": [
+      "Stop the transfusion",
+      "Notify the healthcare provider",
+      "Administer epinephrine",
+      "Obtain vital signs"
+    ],
+    "correct": 0,
+    "rationale": "These symptoms indicate a hemolytic reaction. Stop the transfusion immediately."
+  },
+  {
+    "question": "A client with a history of heart failure reports sudden onset of severe shortness of breath and pink, frothy sputum. What is the priority action?",
+    "options": [
+      "Place the client in high-Fowler's position",
+      "Administer furosemide IV",
+      "Apply oxygen",
+      "Notify the healthcare provider"
+    ],
+    "correct": 0,
+    "rationale": "Pink, frothy sputum indicates acute pulmonary edema. Position upright immediately."
+  },
+  {
+    "question": "A client with a pulmonary embolism suddenly becomes more dyspneic and hypotensive. What is the priority action?",
+    "options": [
+      "Increase oxygen flow rate",
+      "Prepare for thrombolytic therapy",
+      "Notify the healthcare provider immediately",
+      "Elevate the head of the bed"
+    ],
+    "correct": 2,
+    "rationale": "Acute deterioration requires immediate notification."
+  },
+  {
+    "question": "A client with an epidural hematoma after head trauma has a Glasgow Coma Scale score of 6. What is the priority action?",
+    "options": [
+      "Prepare for surgery",
+      "Administer mannitol",
+      "Maintain airway",
+      "Notify neurosurgeon"
+    ],
+    "correct": 2,
+    "rationale": "GCS 8 or less indicates inability to protect airway. Airway is the priority."
+  },
+  {
+    "question": "A client receiving IV potassium develops chest pain and ECG changes. What is the priority action?",
+    "options": [
+      "Slow the infusion",
+      "Stop the infusion",
+      "Administer calcium gluconate",
+      "Obtain a STAT potassium level"
+    ],
+    "correct": 1,
+    "rationale": "Chest pain and ECG changes may indicate hyperkalemia. Stop the infusion immediately."
+  },
+  {
+    "question": "A client receiving total parenteral nutrition (TPN) develops fever and chills. What is the priority action?",
+    "options": [
+      "Stop the TPN",
+      "Change the tubing",
+      "Obtain blood cultures",
+      "Notify the healthcare provider"
+    ],
+    "correct": 0,
+    "rationale": "Fever may indicate line infection or sepsis. Stop the TPN immediately."
+  },
+  {
+    "question": "A client receiving IV morphine via PCA is somnolent with a respiratory rate of 8. What is the priority action?",
+    "options": [
+      "Stimulate the client",
+      "Stop the PCA",
+      "Administer naloxone",
+      "Notify the healthcare provider"
+    ],
+    "correct": 1,
+    "rationale": "Respiratory depression is an emergency. Stop the PCA immediately."
+  }
+]
