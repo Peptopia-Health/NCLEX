@@ -1,0 +1,1269 @@
+{
+  "questions": [
+    {
+      "q": "A 19-year-old female patient reports vaginal discharge and dysuria. She tests positive for Chlamydia trachomatis. Which medication should the nurse expect to administer?",
+      "opts": [
+        "A) Penicillin G benzathine 2.4 million units IM",
+        "B) Doxycycline 100 mg PO BID for 7 days",
+        "C) Acyclovir 400 mg PO TID for 7-10 days",
+        "D) Metronidazole 2 g PO single dose"
+      ],
+      "a": 1,
+      "rat": "Doxycycline 100 mg PO BID for 7 days is the first-line treatment for chlamydia. Azithromycin 1 g PO single dose is an alternative if compliance is a concern. Penicillin treats syphilis, acyclovir treats herpes, and metronidazole treats trichomoniasis."
+    },
+    {
+      "q": "A nurse is teaching a patient diagnosed with genital herpes simplex virus (HSV-2). Which statement by the patient indicates correct understanding?",
+      "opts": [
+        "A) \"I should take antibiotics when I have an outbreak.\"",
+        "B) \"This infection can be cured with antiviral medications.\"",
+        "C) \"I can still transmit the virus even when I don't have blisters.\"",
+        "D) \"I should stop my medication once the lesions heal.\""
+      ],
+      "a": 2,
+      "rat": "HSV can be transmitted through asymptomatic viral shedding even without visible lesions. Herpes is a viral infection (requires antivirals, not antibiotics), is incurable, and requires lifelong management. Suppressive therapy continues daily for those with frequent recurrences."
+    },
+    {
+      "q": "A patient presents with a painless, indurated ulcer on the genitals. The nurse suspects primary syphilis. Which diagnostic tests confirm this diagnosis?",
+      "opts": [
+        "A) NAAT for Chlamydia trachomatis",
+        "B) Non-treponemal test (RPR) followed by treponemal test (FTA-ABS)",
+        "C) Viral culture of the lesion",
+        "D) Wet mount microscopy"
+      ],
+      "a": 1,
+      "rat": "Syphilis is diagnosed using non-treponemal tests (RPR or VDRL) for screening, followed by confirmatory treponemal tests (FTA-ABS or TP-PA). The painless chancre is characteristic of primary syphilis, distinguishing it from herpes which causes painful vesicular lesions."
+    },
+    {
+      "q": "Which patient teaching is MOST important for a patient taking metronidazole for trichomoniasis?",
+      "opts": [
+        "A) \"Take this medication with food to reduce nausea.\"",
+        "B) \"Avoid alcohol while taking this medication and for 24 hours after completion.\"",
+        "C) \"You may experience photosensitivity, so wear sunscreen daily.\"",
+        "D) \"Your sexual partners do not need treatment if they are asymptomatic.\""
+      ],
+      "a": 1,
+      "rat": "Metronidazole causes a disulfiram-like reaction with alcohol, resulting in severe nausea, vomiting, headache, and flushing. All sexual partners should be treated simultaneously, even if asymptomatic, to prevent reinfection (ping-pong effect)."
+    },
+    {
+      "q": "A nurse is assessing a patient with suspected pelvic inflammatory disease (PID). Which finding is MOST characteristic?",
+      "opts": [
+        "A) Painless vaginal bleeding",
+        "B) Cervical motion tenderness (chandelier sign)",
+        "C) Thick white cottage cheese-like discharge",
+        "D) Vesicular lesions on the vulva"
+      ],
+      "a": 1,
+      "rat": "Cervical motion tenderness (chandelier sign - patient reaches for the ceiling due to pain) is a hallmark of PID, along with uterine and adnexal tenderness. Combined with lower abdominal pain in a sexually active woman, empiric treatment should be initiated immediately due to serious complications like infertility."
+    },
+    {
+      "q": "A pregnant woman at 28 weeks gestation tests positive for syphilis (RPR positive, confirmed with FTA-ABS). What is the priority nursing action?",
+      "opts": [
+        "A) Schedule a cesarean section delivery",
+        "B) Administer benzathine penicillin G 2.4 million units IM as prescribed",
+        "C) Advise the patient to discontinue breastfeeding",
+        "D) Start acyclovir suppressive therapy"
+      ],
+      "a": 1,
+      "rat": "Benzathine penicillin G is the only effective treatment for preventing congenital syphilis. Treatment during pregnancy can prevent vertical transmission and devastating fetal consequences. Cesarean section is not indicated for syphilis. Acyclovir treats herpes, not syphilis."
+    },
+    {
+      "q": "A 23-year-old woman is diagnosed with gonorrhea. Which antibiotic regimen is appropriate?",
+      "opts": [
+        "A) Ciprofloxacin 500 mg PO single dose",
+        "B) Amoxicillin 500 mg PO TID for 7 days",
+        "C) Ceftriaxone 500 mg IM single dose",
+        "D) Doxycycline 100 mg PO BID for 7 days"
+      ],
+      "a": 2,
+      "rat": "Ceftriaxone 500 mg IM single dose is currently the ONLY recommended first-line treatment for gonorrhea. Fluoroquinolones like ciprofloxacin are no longer recommended due to widespread antibiotic resistance. Doxycycline should also be added if chlamydia is not ruled out, as co-infection is common."
+    },
+    {
+      "q": "A patient with HIV has a CD4 count of 180 cells/mm³. Which opportunistic infection should the nurse monitor for MOST closely?",
+      "opts": [
+        "A) Influenza",
+        "B) Pneumocystis jirovecii pneumonia (PCP)",
+        "C) Streptococcal pharyngitis",
+        "D) Urinary tract infection"
+      ],
+      "a": 1,
+      "rat": "When CD4 count drops below 200 cells/mm³, the patient has progressed to AIDS and is at high risk for opportunistic infections like PCP. PCP prophylaxis (trimethoprim-sulfamethoxazole) should be initiated. Normal CD4 count is 500-1,500 cells/mm³."
+    },
+    {
+      "q": "Which statement about HPV vaccination is correct?",
+      "opts": [
+        "A) The vaccine is only recommended for females ages 9-26.",
+        "B) The vaccine is most effective when given before sexual activity begins.",
+        "C) The vaccine provides protection against all strains of HPV.",
+        "D) The vaccine can cure existing HPV infections."
+      ],
+      "a": 1,
+      "rat": "HPV vaccine (Gardasil 9) is most effective when administered before sexual debut, ideally at ages 11-12. It's recommended for both males and females. The vaccine protects against 9 HPV strains (including high-risk types 16, 18 and low-risk types 6, 11) but not all strains. It does not cure existing infections."
+    },
+    {
+      "q": "A patient develops fever, chills, headache, and myalgia 12 hours after receiving penicillin for syphilis. What is the MOST likely explanation?",
+      "opts": [
+        "A) Anaphylactic reaction to penicillin",
+        "B) Jarisch-Herxheimer reaction",
+        "C) Secondary syphilis progression",
+        "D) Treatment failure"
+      ],
+      "a": 1,
+      "rat": "Jarisch-Herxheimer reaction occurs within 24 hours of syphilis treatment due to release of toxins from dying spirochetes. It's self-limiting, resolves in 24 hours, and is NOT an allergic reaction. Treat symptomatically with antipyretics. This is not a contraindication to continuing penicillin therapy."
+    },
+    {
+      "q": "Which finding is characteristic of secondary syphilis?",
+      "opts": [
+        "A) Painless chancre on genitals",
+        "B) Maculopapular rash involving palms and soles",
+        "C) Gummas on skin and bones",
+        "D) Tabes dorsalis and general paresis"
+      ],
+      "a": 1,
+      "rat": "A maculopapular rash involving the palms and soles is classic for secondary syphilis, occurring 4-10 weeks after the primary chancre. Other features include condyloma lata, mucous patches, and generalized lymphadenopathy. This is the most contagious stage. Painless chancre = primary; gummas = tertiary; neurologic symptoms = neurosyphilis/tertiary."
+    },
+    {
+      "q": "A patient with trichomoniasis asks why their partner needs treatment when they have no symptoms. What is the nurse's BEST response?",
+      "opts": [
+        "A) \"Your partner may develop symptoms later, so treatment is preventive.\"",
+        "B) \"Most infected men are asymptomatic but can still transmit the infection.\"",
+        "C) \"Treatment is only recommended if your partner develops symptoms.\"",
+        "D) \"This is required by law for all sexually transmitted infections.\""
+      ],
+      "a": 1,
+      "rat": "Most men with trichomoniasis are asymptomatic carriers who can transmit the infection. Simultaneous partner treatment prevents the 'ping-pong' effect of reinfection. Up to 70% of women and most men with trichomoniasis are asymptomatic, making partner treatment essential."
+    },
+    {
+      "q": "Which population requires annual screening for chlamydia and gonorrhea?",
+      "opts": [
+        "A) All sexually active women aged 35-45",
+        "B) All sexually active women younger than 25 years",
+        "C) Only women with multiple sexual partners",
+        "D) Only pregnant women"
+      ],
+      "a": 1,
+      "rat": "Annual screening for chlamydia and gonorrhea is recommended for all sexually active women younger than 25 years, as this is the highest risk group. Women 25 and older should be screened if they have risk factors (new/multiple partners, partner with STI, inconsistent condom use)."
+    },
+    {
+      "q": "A patient diagnosed with bacterial vaginosis (BV) asks if their partner needs treatment. What should the nurse explain?",
+      "opts": [
+        "A) \"Yes, all partners need simultaneous treatment to prevent reinfection.\"",
+        "B) \"No, bacterial vaginosis is not considered a sexually transmitted infection.\"",
+        "C) \"Only if your partner develops symptoms.\"",
+        "D) \"Yes, but only female partners require treatment.\""
+      ],
+      "a": 1,
+      "rat": "BV is a polymicrobial syndrome caused by overgrowth of anaerobic bacteria, not a true STI. Partner treatment is NOT recommended. However, BV is sexually associated and can increase susceptibility to STIs. Treatment focuses on restoring normal vaginal flora with metronidazole or clindamycin."
+    },
+    {
+      "q": "Which laboratory finding confirms a diagnosis of bacterial vaginosis using Amsel criteria?",
+      "opts": [
+        "A) Vaginal pH less than 4.5",
+        "B) Presence of clue cells on wet mount",
+        "C) Negative whiff test",
+        "D) Thick white discharge"
+      ],
+      "a": 1,
+      "rat": "Clue cells (epithelial cells covered with bacteria) on wet mount are one of the Amsel criteria. BV diagnosis requires 3 of 4 criteria: thin gray-white discharge, pH >4.5, positive whiff test (fishy odor with KOH), and clue cells. Normal vaginal pH is 3.8-4.5."
+    },
+    {
+      "q": "A patient with genital warts asks about treatment options. What should the nurse explain?",
+      "opts": [
+        "A) \"Antibiotics will cure the warts and the virus.\"",
+        "B) \"Treatment removes visible warts but doesn't eliminate the HPV virus.\"",
+        "C) \"Once warts are removed, you cannot transmit HPV to partners.\"",
+        "D) \"All genital warts will eventually become cancer without treatment.\""
+      ],
+      "a": 1,
+      "rat": "Treatment for genital warts (caused by low-risk HPV types 6 and 11) removes visible lesions but does not eliminate the virus. Options include cryotherapy, TCA, surgical removal, imiquimod, or podofilox. Warts may recur. Low-risk HPV types cause warts but not cancer; high-risk types (16, 18) cause cancer but not warts."
+    },
+    {
+      "q": "Which medication is contraindicated during pregnancy for treating chlamydia?",
+      "opts": [
+        "A) Azithromycin",
+        "B) Amoxicillin",
+        "C) Doxycycline",
+        "D) Erythromycin"
+      ],
+      "a": 2,
+      "rat": "Doxycycline is contraindicated in pregnancy due to risk of teeth staining and bone growth issues in the fetus. Azithromycin 1 g PO single dose is the treatment of choice for chlamydia in pregnancy. Doxycycline is also contraindicated in children under 8 years."
+    },
+    {
+      "q": "A nurse is educating a patient about HIV transmission. Which statement is CORRECT?",
+      "opts": [
+        "A) \"HIV can be transmitted through mosquito bites.\"",
+        "B) \"Sharing eating utensils can transmit HIV.\"",
+        "C) \"HIV can be transmitted through breast milk.\"",
+        "D) \"HIV is transmitted through casual contact like hugging.\""
+      ],
+      "a": 2,
+      "rat": "HIV can be transmitted through breast milk (vertical transmission). HIV is transmitted through sexual contact, blood exposure, and vertical transmission (pregnancy, delivery, breastfeeding). HIV is NOT transmitted by casual contact, insect bites, saliva, tears, sweat, or sharing eating utensils."
+    },
+    {
+      "q": "Which STI is characterized by profuse, frothy, yellow-green vaginal discharge with a foul odor?",
+      "opts": [
+        "A) Bacterial vaginosis",
+        "B) Candidiasis",
+        "C) Trichomoniasis",
+        "D) Chlamydia"
+      ],
+      "a": 2,
+      "rat": "Trichomoniasis causes frothy, yellow-green discharge with a foul odor. The 'strawberry cervix' (petechiae) is classic but only seen in 2% of cases. BV causes thin gray-white discharge with fishy odor. Candidiasis causes thick white cottage cheese discharge. Chlamydia often causes mucopurulent discharge or is asymptomatic."
+    },
+    {
+      "q": "A patient with PID asks about long-term complications. Which complication should the nurse emphasize?",
+      "opts": [
+        "A) Increased risk of cervical cancer",
+        "B) Infertility due to tubal scarring",
+        "C) Chronic urinary tract infections",
+        "D) Development of genital warts"
+      ],
+      "a": 1,
+      "rat": "PID can cause tubal scarring leading to infertility (12-18% after one episode, increases with subsequent episodes), ectopic pregnancy (10x increased risk), and chronic pelvic pain. Early treatment is crucial to prevent these serious complications. This is why there's a low threshold to treat suspected PID."
+    },
+    {
+      "q": "Which finding distinguishes herpes from syphilis on physical examination?",
+      "opts": [
+        "A) Herpes lesions are painless; syphilis lesions are painful",
+        "B) Herpes lesions are painful vesicles; syphilis chancre is painless",
+        "C) Herpes causes a single lesion; syphilis causes multiple lesions",
+        "D) Herpes resolves without treatment; syphilis does not"
+      ],
+      "a": 1,
+      "rat": "The key distinguishing feature is pain: herpes causes painful vesicular lesions (often multiple, grouped), while primary syphilis causes a painless, indurated chancre (usually single). Memory aid: Herpes = 'Hurts'; Syphilis = 'Silent.' Both can resolve spontaneously but require treatment."
+    },
+    {
+      "q": "A patient starting antiretroviral therapy (ART) for HIV asks about the goal of treatment. What is the nurse's BEST response?",
+      "opts": [
+        "A) \"The goal is to cure the HIV infection completely.\"",
+        "B) \"The goal is to achieve an undetectable viral load.\"",
+        "C) \"The goal is to increase your CD4 count to normal levels only.\"",
+        "D) \"The goal is to prevent all opportunistic infections.\""
+      ],
+      "a": 1,
+      "rat": "The primary goal of ART is to achieve and maintain an undetectable viral load, which preserves immune function and prevents transmission (U=U: Undetectable = Untransmittable). While ART cannot cure HIV, it allows patients to live near-normal lifespans. Secondary goals include increasing CD4 count and preventing opportunistic infections."
+    },
+    {
+      "q": "Which STI must be reported to the public health department?",
+      "opts": [
+        "A) Genital herpes (HSV-2)",
+        "B) Human papillomavirus (HPV)",
+        "C) Gonorrhea",
+        "D) Bacterial vaginosis"
+      ],
+      "a": 2,
+      "rat": "Gonorrhea is a reportable disease that must be reported to local/state health departments. Other reportable STIs include chlamydia, syphilis, HIV/AIDS, and hepatitis B. Herpes, HPV, trichomoniasis, and bacterial vaginosis are generally not reportable (though this varies by state for trichomoniasis)."
+    },
+    {
+      "q": "A patient with hepatitis B asks how the infection is transmitted. Which mode of transmission should the nurse include?",
+      "opts": [
+        "A) Fecal-oral route",
+        "B) Sexual contact and blood exposure",
+        "C) Respiratory droplets",
+        "D) Contaminated food and water"
+      ],
+      "a": 1,
+      "rat": "Hepatitis B is transmitted through sexual contact, blood exposure (needles, transfusions), and vertical transmission (mother to child at birth). Hepatitis B is more infectious than HIV. Hepatitis A is transmitted via fecal-oral route; Hepatitis C primarily through blood. Vaccination provides long-term immunity."
+    },
+    {
+      "q": "A newborn's mother tests positive for hepatitis B surface antigen (HBsAg). What should be administered within 12 hours of birth?",
+      "opts": [
+        "A) Hepatitis B vaccine only",
+        "B) Hepatitis B immune globulin (HBIG) only",
+        "C) Both HBIG and hepatitis B vaccine",
+        "D) Wait for infant testing before treatment"
+      ],
+      "a": 2,
+      "rat": "Infants born to HBsAg-positive mothers must receive BOTH hepatitis B immune globulin (HBIG) and the first dose of hepatitis B vaccine within 12 hours of birth. This combination is highly effective (85-95%) at preventing vertical transmission. The vaccine series should be completed on schedule."
+    },
+    {
+      "q": "Which statement about PrEP (pre-exposure prophylaxis) for HIV is correct?",
+      "opts": [
+        "A) PrEP is taken after potential HIV exposure occurs.",
+        "B) PrEP is 99% effective when taken as prescribed daily.",
+        "C) PrEP eliminates the need for condom use.",
+        "D) PrEP is only for people already infected with HIV."
+      ],
+      "a": 1,
+      "rat": "PrEP (pre-exposure prophylaxis) is a daily medication (tenofovir/emtricitabine) for HIV-negative individuals at high risk, and it's 99% effective when taken consistently. PrEP does not protect against other STIs, so condoms are still recommended. PEP (post-exposure prophylaxis) is taken after exposure."
+    },
+    {
+      "q": "A patient asks about the 'window period' for HIV testing. What should the nurse explain?",
+      "opts": [
+        "A) The time between HIV infection and when antibodies become detectable",
+        "B) The time between HIV infection and development of AIDS",
+        "C) The time when HIV cannot be transmitted to others",
+        "D) The optimal time to start antiretroviral therapy"
+      ],
+      "a": 0,
+      "rat": "The window period is the time between HIV infection and when antibodies become detectable by testing (typically 3-12 weeks, but 4th generation tests can detect as early as 2-4 weeks). During this period, a person can test negative but still be infectious. Repeat testing may be needed if exposure was recent."
+    },
+    {
+      "q": "Which criterion indicates a patient has progressed from HIV to AIDS?",
+      "opts": [
+        "A) CD4 count of 350 cells/mm³",
+        "B) CD4 count less than 200 cells/mm³",
+        "C) Positive HIV antibody test",
+        "D) Undetectable viral load"
+      ],
+      "a": 1,
+      "rat": "AIDS is diagnosed when CD4 count drops below 200 cells/mm³ OR when an AIDS-defining illness (like PCP, CMV, Kaposi's sarcoma) develops. Normal CD4 count is 500-1,500 cells/mm³. With effective ART, many patients maintain high CD4 counts and never progress to AIDS."
+    },
+    {
+      "q": "A patient with chlamydia completed treatment one week ago. When should retesting be performed?",
+      "opts": [
+        "A) Immediately to confirm cure",
+        "B) One week after treatment completion",
+        "C) Three months after treatment",
+        "D) Retesting is not necessary if symptoms resolve"
+      ],
+      "a": 2,
+      "rat": "Retesting for chlamydia should be performed 3 months after treatment due to high reinfection rates (not to confirm cure). This screens for reinfection from untreated partners or new partners. Test of cure is not routinely recommended unless the patient is pregnant or symptoms persist."
+    },
+    {
+      "q": "A nurse is teaching about safer sex practices. Which practice provides the MOST protection against STI transmission?",
+      "opts": [
+        "A) Using spermicidal foam",
+        "B) Douching after sexual intercourse",
+        "C) Consistent and correct condom use",
+        "D) Oral contraceptive pills"
+      ],
+      "a": 2,
+      "rat": "Consistent and correct latex condom use provides the most protection against STI transmission, though not 100%. Spermicides do not prevent STIs. Douching disrupts normal vaginal flora and increases STI risk. Oral contraceptives prevent pregnancy but not STIs. Abstinence and mutual monogamy with tested partners are most effective."
+    },
+    {
+      "q": "Which patient education is MOST important when prescribing doxycycline?",
+      "opts": [
+        "A) \"Take this medication on an empty stomach.\"",
+        "B) \"You may experience increased sensitivity to sunlight.\"",
+        "C) \"This medication may turn your urine orange.\"",
+        "D) \"Avoid consuming dairy products while taking this medication.\""
+      ],
+      "a": 1,
+      "rat": "Doxycycline causes photosensitivity (increased sun sensitivity), so patients should use sunscreen and avoid prolonged sun exposure. While dairy can decrease absorption, the more critical teaching is about photosensitivity. Doxycycline is also contraindicated in pregnancy and children under 8 years (teeth staining)."
+    },
+    {
+      "q": "A patient presents with lower abdominal pain, fever, and cervical motion tenderness. Which nursing diagnosis has the HIGHEST priority?",
+      "opts": [
+        "A) Deficient knowledge related to disease process",
+        "B) Risk for infection transmission to sexual partners",
+        "C) Acute pain related to pelvic inflammation",
+        "D) Risk for infertility related to untreated infection"
+      ],
+      "a": 2,
+      "rat": "While all are relevant, acute pain is the priority based on Maslow's hierarchy (physiological needs). The patient likely has PID, which requires immediate treatment to manage pain and prevent complications. After addressing pain, focus on infection treatment, partner notification, and education about long-term complications."
+    },
+    {
+      "q": "Which statement about gonorrhea antibiotic resistance is correct?",
+      "opts": [
+        "A) Gonorrhea has not developed any antibiotic resistance.",
+        "B) Fluoroquinolones are the first-line treatment for gonorrhea.",
+        "C) Ceftriaxone IM is currently the only recommended first-line treatment.",
+        "D) Penicillin remains effective against all gonorrhea strains."
+      ],
+      "a": 2,
+      "rat": "Gonorrhea has developed extensive antibiotic resistance. Ceftriaxone IM is currently the ONLY recommended first-line treatment. Fluoroquinolones (ciprofloxacin) are no longer used due to widespread resistance. Penicillin and tetracyclines also have high resistance rates. This is a major public health concern."
+    },
+    {
+      "q": "A pregnant patient at 36 weeks gestation has recurrent genital herpes. What is the appropriate management?",
+      "opts": [
+        "A) No treatment is needed if lesions are not present at delivery",
+        "B) Start suppressive antiviral therapy and continue until delivery",
+        "C) Schedule immediate cesarean section",
+        "D) Administer acyclovir only if lesions appear during labor"
+      ],
+      "a": 1,
+      "rat": "Suppressive antiviral therapy (acyclovir or valacyclovir) starting at 36 weeks gestation reduces viral shedding and outbreak risk at delivery. If active lesions are present at delivery, cesarean section is indicated to prevent neonatal herpes (which can be fatal). Without active lesions, vaginal delivery is safe."
+    },
+    {
+      "q": "Which diagnostic test is used to differentiate between acute and chronic hepatitis B infection?",
+      "opts": [
+        "A) Hepatitis B surface antigen (HBsAg)",
+        "B) Hepatitis B surface antibody (anti-HBs)",
+        "C) IgM vs IgG anti-hepatitis B core antibody (anti-HBc)",
+        "D) Liver function tests (ALT, AST)"
+      ],
+      "a": 2,
+      "rat": "IgM anti-HBc indicates acute infection, while IgG anti-HBc indicates past or chronic infection. HBsAg indicates current infection (acute or chronic). Anti-HBs indicates immunity from past infection or vaccination. Understanding these serologic markers is crucial for interpreting hepatitis B status."
+    },
+    {
+      "q": "A patient asks why both partners must abstain from sex during STI treatment. What is the nurse's BEST response?",
+      "opts": [
+        "A) \"To allow the immune system to fight the infection more effectively.\"",
+        "B) \"To prevent reinfection between partners before treatment is complete.\"",
+        "C) \"To reduce pain and discomfort during sexual activity.\"",
+        "D) \"This is only necessary if both partners have symptoms.\""
+      ],
+      "a": 1,
+      "rat": "Abstaining from sex during treatment prevents the 'ping-pong effect' of reinfection between partners before both complete treatment. Both partners should abstain for 7 days after completing therapy and until symptoms resolve. This ensures effective treatment and prevents transmission."
+    },
+    {
+      "q": "Which clinical manifestation is associated with disseminated gonococcal infection (DGI)?",
+      "opts": [
+        "A) Painless genital ulcer",
+        "B) Petechial or pustular skin lesions and arthritis",
+        "C) Vesicular rash on palms and soles",
+        "D) Condyloma lata in warm, moist areas"
+      ],
+      "a": 1,
+      "rat": "Disseminated gonococcal infection presents with the classic triad of dermatitis (petechial/pustular skin lesions), tenosynovitis, and polyarthralgia/arthritis (septic joint). This occurs when gonorrhea spreads through the bloodstream. It requires hospitalization and IV antibiotics."
+    },
+    {
+      "q": "A patient with HIV has achieved an undetectable viral load. What should the nurse teach about transmission risk?",
+      "opts": [
+        "A) \"You can still transmit HIV sexually even with undetectable viral load.\"",
+        "B) \"Undetectable viral load means you cannot sexually transmit HIV to partners.\"",
+        "C) \"You no longer need to use condoms with any partners.\"",
+        "D) \"You should discontinue antiretroviral therapy.\""
+      ],
+      "a": 1,
+      "rat": "U=U (Undetectable = Untransmittable): When HIV viral load is consistently undetectable through ART adherence, sexual transmission does not occur. This is scientifically proven and important for reducing stigma. However, condoms are still recommended to prevent other STIs, and ART must be continued lifelong."
+    },
+    {
+      "q": "Which statement about condyloma acuminata (genital warts) is correct?",
+      "opts": [
+        "A) They are caused by high-risk HPV types 16 and 18.",
+        "B) They are caused by low-risk HPV types 6 and 11.",
+        "C) All genital warts will progress to cancer without treatment.",
+        "D) Antibiotic treatment can cure the HPV virus."
+      ],
+      "a": 1,
+      "rat": "Genital warts (condyloma acuminata) are caused by low-risk HPV types 6 and 11, which cause approximately 90% of genital warts but do NOT cause cancer. High-risk HPV types (16, 18, others) cause cervical and other cancers but not warts. Treatment removes warts but doesn't eliminate the virus."
+    },
+    {
+      "q": "A patient presents with right upper quadrant pain and is diagnosed with PID. Which complication should the nurse suspect?",
+      "opts": [
+        "A) Appendicitis",
+        "B) Fitz-Hugh-Curtis syndrome (perihepatitis)",
+        "C) Ectopic pregnancy",
+        "D) Tubo-ovarian abscess"
+      ],
+      "a": 1,
+      "rat": "Fitz-Hugh-Curtis syndrome is perihepatitis associated with PID (usually from chlamydia or gonorrhea), causing right upper quadrant pain that mimics gallbladder disease or hepatitis. The infection spreads to the liver capsule. Treatment is the same as for PID."
+    },
+    {
+      "q": "Which test result indicates immunity to hepatitis B from previous vaccination?",
+      "opts": [
+        "A) Positive HBsAg",
+        "B) Positive anti-HBs",
+        "C) Positive anti-HBc",
+        "D) Positive HBeAg"
+      ],
+      "a": 1,
+      "rat": "Positive anti-HBs (hepatitis B surface antibody) indicates immunity from either past infection OR vaccination. To differentiate: positive anti-HBs alone = vaccination immunity; positive anti-HBs + positive anti-HBc = immunity from past infection. HBsAg positive indicates current infection."
+    },
+    {
+      "q": "A patient diagnosed with PID asks about risk factors. Which factor significantly increases PID risk?",
+      "opts": [
+        "A) Use of oral contraceptives",
+        "B) Multiple sexual partners",
+        "C) Douching",
+        "D) History of urinary tract infections"
+      ],
+      "a": 2,
+      "rat": "While both B and C increase PID risk, douching is particularly significant because it disrupts normal vaginal flora and can push bacteria upward into the uterus and fallopian tubes. Other major risk factors include untreated chlamydia/gonorrhea, multiple partners, age <25, recent IUD insertion, and previous PID."
+    },
+    {
+      "q": "What is the most common complication of untreated chlamydia in women?",
+      "opts": [
+        "A) Cervical cancer",
+        "B) Pelvic inflammatory disease leading to infertility",
+        "C) Liver cirrhosis",
+        "D) Chronic kidney disease"
+      ],
+      "a": 1,
+      "rat": "Untreated chlamydia can ascend to cause PID, which leads to tubal scarring, infertility, ectopic pregnancy, and chronic pelvic pain. This is why chlamydia is called the 'silent disease' - it's often asymptomatic but can cause devastating reproductive consequences. Screening is crucial for prevention."
+    },
+    {
+      "q": "A patient with trichomoniasis has a vaginal pH of 5.5. Which finding would the nurse expect on wet mount microscopy?",
+      "opts": [
+        "A) Clue cells",
+        "B) Motile flagellated organisms",
+        "C) Pseudohyphae and spores",
+        "D) White blood cells only"
+      ],
+      "a": 1,
+      "rat": "Trichomoniasis shows motile, flagellated trichomonads on wet mount microscopy. The vaginal pH is typically >4.5 (normal is 3.8-4.5). NAAT is more sensitive than wet mount. Clue cells indicate BV; pseudohyphae indicate candidiasis."
+    },
+    {
+      "q": "Which stage of syphilis is characterized by gummas and cardiovascular complications?",
+      "opts": [
+        "A) Primary syphilis",
+        "B) Secondary syphilis",
+        "C) Latent syphilis",
+        "D) Tertiary syphilis"
+      ],
+      "a": 3,
+      "rat": "Tertiary syphilis (10-30 years after initial infection) is characterized by gummas (granulomatous lesions), cardiovascular disease (aortitis, aortic aneurysm), and neurosyphilis (tabes dorsalis, general paresis). This stage can be fatal. Untreated syphilis progresses through primary → secondary → latent → tertiary stages."
+    },
+    {
+      "q": "A patient taking suppressive therapy for recurrent herpes asks when to seek medical attention. Which symptom requires immediate evaluation?",
+      "opts": [
+        "A) Tingling sensation before outbreak",
+        "B) Severe headache with neck stiffness",
+        "C) Mild itching at the lesion site",
+        "D) Lesions healing within 7 days"
+      ],
+      "a": 1,
+      "rat": "Severe headache with neck stiffness suggests aseptic meningitis, a serious complication of herpes infection requiring immediate medical attention. Tingling (prodrome) is normal and indicates an outbreak is starting. Mild itching and healing within 7 days are expected with recurrent episodes."
+    },
+    {
+      "q": "Which patient requires hospitalization for PID treatment?",
+      "opts": [
+        "A) 22-year-old with mild lower abdominal pain and no fever",
+        "B) 28-year-old pregnant patient with PID diagnosis",
+        "C) 25-year-old who can tolerate oral antibiotics",
+        "D) 30-year-old with history of one previous PID episode"
+      ],
+      "a": 1,
+      "rat": "Pregnancy is an absolute indication for hospitalization and IV antibiotic treatment of PID due to risks to mother and fetus. Other indications include: tubo-ovarian abscess, severe illness/high fever, inability to tolerate oral medications, failed outpatient treatment, or when surgical emergency cannot be excluded."
+    },
+    {
+      "q": "What is the primary reason for the low threshold to treat suspected PID?",
+      "opts": [
+        "A) PID is highly contagious to others",
+        "B) Diagnostic tests are not reliable",
+        "C) Complications include infertility and ectopic pregnancy",
+        "D) Treatment is inexpensive and has no side effects"
+      ],
+      "a": 2,
+      "rat": "PID has a low threshold for empiric treatment because the complications (infertility, ectopic pregnancy, chronic pelvic pain) are severe and potentially life-altering. The minimum diagnostic criteria are: sexually active woman with pelvic pain and cervical motion/uterine/adnexal tenderness. Don't wait for definitive diagnosis."
+    },
+    {
+      "q": "A patient asks about the difference between PrEP and PEP for HIV. What should the nurse explain?",
+      "opts": [
+        "A) PrEP is taken before exposure; PEP is taken after exposure",
+        "B) PrEP is for HIV-positive patients; PEP is for HIV-negative patients",
+        "C) PrEP requires daily medication; PEP is a single dose",
+        "D) PrEP prevents all STIs; PEP prevents only HIV"
+      ],
+      "a": 0,
+      "rat": "PrEP (pre-exposure prophylaxis) is daily medication for HIV-negative individuals at high risk. PEP (post-exposure prophylaxis) is a 28-day course of ART started within 72 hours (ideally 2 hours) after potential HIV exposure. Both are for HIV prevention only, not other STIs."
+    },
+    {
+      "q": "Which finding on physical examination suggests secondary syphilis rather than primary syphilis?",
+      "opts": [
+        "A) Single painless ulcer on genitals",
+        "B) Diffuse rash involving palms and soles",
+        "C) Inguinal lymphadenopathy",
+        "D) Genital lesions that heal spontaneously"
+      ],
+      "a": 1,
+      "rat": "A diffuse maculopapular rash involving the palms and soles is pathognomonic for secondary syphilis. Other features include condyloma lata, mucous patches, and generalized lymphadenopathy. Primary syphilis presents with a painless chancre that heals spontaneously, often with regional lymphadenopathy."
+    },
+    {
+      "q": "A patient with gonorrhea and chlamydia co-infection asks why two different antibiotics are needed. What is the BEST explanation?",
+      "opts": [
+        "A) \"The infections are in different parts of your body.\"",
+        "B) \"Each infection requires a specific antibiotic for treatment.\"",
+        "C) \"Using two antibiotics prevents antibiotic resistance.\"",
+        "D) \"One antibiotic treats the infection; the other prevents complications.\""
+      ],
+      "a": 1,
+      "rat": "Gonorrhea and chlamydia are caused by different organisms requiring different antibiotics. Ceftriaxone treats gonorrhea; doxycycline treats chlamydia. Co-infection is common (up to 40% of gonorrhea cases), so concurrent treatment is recommended if chlamydia is not ruled out."
+    },
+    {
+      "q": "Which patient teaching is essential for someone starting acyclovir for genital herpes?",
+      "opts": [
+        "A) \"This medication will cure your herpes infection.\"",
+        "B) \"Take this medication at the first sign of tingling or burning.\"",
+        "C) \"You cannot transmit herpes while taking this medication.\"",
+        "D) \"Stop the medication once your blisters are healed.\""
+      ],
+      "a": 1,
+      "rat": "For recurrent herpes, starting antiviral medication at the first sign of prodrome (tingling, burning, itching) is most effective in reducing outbreak severity and duration. Antivirals do not cure herpes, and transmission is still possible. Suppressive therapy requires daily medication even without symptoms."
+    },
+    {
+      "q": "A patient presents with dysuria and urethral discharge. Gram stain shows gram-negative intracellular diplococci. Which diagnosis is MOST likely?",
+      "opts": [
+        "A) Chlamydia",
+        "B) Gonorrhea",
+        "C) Syphilis",
+        "D) Herpes"
+      ],
+      "a": 1,
+      "rat": "Gram-negative intracellular diplococci on Gram stain is diagnostic for gonorrhea (Neisseria gonorrhoeae). This test is highly specific in symptomatic men but less sensitive in women. NAAT testing is preferred for sensitivity. Chlamydia cannot be seen on Gram stain; syphilis shows spirochetes; herpes shows multinucleated giant cells."
+    },
+    {
+      "q": "Which intervention is MOST important when caring for a patient with HIV/AIDS in the hospital?",
+      "opts": [
+        "A) Implementing contact isolation precautions",
+        "B) Using standard precautions for all patient care",
+        "C) Restricting visitors to prevent infection",
+        "D) Wearing N95 respirator for all patient contact"
+      ],
+      "a": 1,
+      "rat": "Standard precautions are appropriate for HIV-positive patients. HIV is not transmitted through casual contact. Contact isolation, visitor restrictions, and N95 respirators are not indicated unless the patient has other infections requiring additional precautions (e.g., TB). Maintain confidentiality and provide non-judgmental care."
+    },
+    {
+      "q": "A patient with recurrent herpes outbreaks asks about suppressive therapy. What is the primary benefit?",
+      "opts": [
+        "A) It cures the herpes virus completely",
+        "B) It reduces outbreak frequency by 70-80%",
+        "C) It eliminates the risk of transmission to partners",
+        "D) It's only needed during symptomatic outbreaks"
+      ],
+      "a": 1,
+      "rat": "Suppressive therapy (daily antiviral medication) reduces herpes outbreaks by 70-80% and reduces transmission risk to partners, though transmission is still possible. It's taken daily regardless of symptoms. Herpes cannot be cured; the virus remains dormant in nerve ganglia for life."
+    },
+    {
+      "q": "Which test is used to confirm a reactive RPR test for syphilis?",
+      "opts": [
+        "A) VDRL",
+        "B) FTA-ABS",
+        "C) NAAT",
+        "D) Gram stain"
+      ],
+      "a": 1,
+      "rat": "FTA-ABS (fluorescent treponemal antibody absorption) or TP-PA (treponema pallidum particle agglutination) are treponemal tests used to confirm reactive non-treponemal tests (RPR or VDRL). Non-treponemal tests screen but can have false positives; treponemal tests confirm. Treponemal tests remain positive for life."
+    },
+    {
+      "q": "A patient diagnosed with chlamydia asks when they can resume sexual activity. What should the nurse recommend?",
+      "opts": [
+        "A) Immediately after starting antibiotics",
+        "B) When symptoms resolve, usually 3-4 days",
+        "C) Seven days after completing treatment",
+        "D) Only after retesting confirms cure"
+      ],
+      "a": 2,
+      "rat": "Patients should abstain from sexual activity for 7 days after completing treatment AND until symptoms resolve. Partners should be treated simultaneously. Retesting is done at 3 months to check for reinfection, not cure. Resuming sex too early can cause reinfection or transmission."
+    },
+    {
+      "q": "Which vaccine prevents a sexually transmitted infection that can cause cancer?",
+      "opts": [
+        "A) Hepatitis A vaccine",
+        "B) HPV vaccine (Gardasil 9)",
+        "C) Hepatitis C vaccine",
+        "D) HIV vaccine"
+      ],
+      "a": 1,
+      "rat": "Gardasil 9 prevents infection with HPV types that cause cervical, anal, oropharyngeal, and other cancers (types 16, 18, 31, 33, 45, 52, 58) as well as genital warts (types 6, 11). It's recommended for ages 11-12 but can be given from age 9-45. There is no vaccine for hepatitis C or HIV."
+    },
+    {
+      "q": "A patient with bacterial vaginosis asks why the discharge has a fishy odor. What is the physiological explanation?",
+      "opts": [
+        "A) The normal vaginal pH has become too acidic",
+        "B) Anaerobic bacteria produce amines that cause the odor",
+        "C) The infection is caused by a parasite",
+        "D) Lactobacilli overgrowth produces the odor"
+      ],
+      "a": 1,
+      "rat": "BV is caused by overgrowth of anaerobic bacteria (Gardnerella, Prevotella, Bacteroides) that replace normal lactobacilli. These anaerobes produce amines, which cause the characteristic fishy odor, especially when mixed with alkaline substances like KOH (whiff test) or semen. The vaginal pH rises above 4.5."
+    },
+    {
+      "q": "Which statement about HIV viral load testing is correct?",
+      "opts": [
+        "A) Viral load measures the number of CD4 cells",
+        "B) Undetectable viral load means HIV is cured",
+        "C) Viral load measures the amount of HIV RNA in the blood",
+        "D) Viral load testing is only done once at diagnosis"
+      ],
+      "a": 2,
+      "rat": "Viral load testing measures the amount of HIV RNA (copies) in the blood. It's used to monitor treatment effectiveness and disease progression. Goal is undetectable viral load (<20-50 copies/mL) with ART. CD4 count measures immune function. Undetectable doesn't mean cured - virus remains in reservoirs. Monitoring is ongoing."
+    },
+    {
+      "q": "A patient with PID is prescribed outpatient treatment. Which antibiotic regimen is appropriate?",
+      "opts": [
+        "A) Penicillin G benzathine IM",
+        "B) Ceftriaxone 500 mg IM plus doxycycline 100 mg PO BID x 14 days",
+        "C) Acyclovir 400 mg PO TID x 7 days",
+        "D) Metronidazole 2 g PO single dose"
+      ],
+      "a": 1,
+      "rat": "Outpatient PID treatment includes ceftriaxone 500 mg IM (for gonorrhea) PLUS doxycycline 100 mg PO BID for 14 days (for chlamydia) PLUS metronidazole 500 mg PO BID for 14 days (for anaerobes and BV). This covers the polymicrobial nature of PID. Hospitalize if severe or pregnant."
+    },
+    {
+      "q": "Which patient is at highest risk for developing tertiary syphilis?",
+      "opts": [
+        "A) A patient who received treatment during primary syphilis",
+        "B) A patient with untreated syphilis for 15 years",
+        "C) A patient currently in the secondary stage of syphilis",
+        "D) A patient who completed penicillin treatment for late latent syphilis"
+      ],
+      "a": 1,
+      "rat": "Untreated syphilis can progress to tertiary stage 10-30 years after initial infection, causing gummas, cardiovascular disease, and neurosyphilis. Early treatment with penicillin prevents progression. About one-third of untreated patients develop tertiary complications. Treatment at any stage prevents further progression."
+    },
+    {
+      "q": "A pregnant patient asks about vertical transmission of HIV. What percentage of transmission occurs during pregnancy, delivery, and breastfeeding WITHOUT treatment?",
+      "opts": [
+        "A) Less than 5%",
+        "B) 25-30%",
+        "C) 50-60%",
+        "D) Over 90%"
+      ],
+      "a": 1,
+      "rat": "Without intervention, vertical HIV transmission occurs in 25-30% of cases (pregnancy, delivery, breastfeeding). With comprehensive interventions (maternal ART during pregnancy, ART during labor, neonatal prophylaxis, avoiding breastfeeding), transmission rate drops to <1%. All pregnant women should be screened for HIV."
+    },
+    {
+      "q": "Which finding on wet mount microscopy confirms trichomoniasis?",
+      "opts": [
+        "A) Clue cells",
+        "B) Motile trichomonads with flagella",
+        "C) Pseudohyphae with budding yeast",
+        "D) Gram-negative diplococci"
+      ],
+      "a": 1,
+      "rat": "Motile trichomonads (flagellated protozoa) on wet mount confirm trichomoniasis, though sensitivity is only 60-70%. NAAT is more sensitive (>95%) and preferred. Clue cells = BV; pseudohyphae = candidiasis; diplococci = gonorrhea. Trichomonas is the only STI caused by a protozoan parasite."
+    },
+    {
+      "q": "A patient with genital herpes asks about transmission risk to their newborn. When is the risk HIGHEST?",
+      "opts": [
+        "A) When the mother has recurrent herpes throughout pregnancy",
+        "B) When the mother acquires primary herpes near the time of delivery",
+        "C) When the mother has a history of herpes before pregnancy",
+        "D) When the father has active herpes lesions"
+      ],
+      "a": 1,
+      "rat": "The highest risk of neonatal herpes transmission (30-50%) occurs with primary maternal infection near delivery, as there are no maternal antibodies and high viral shedding. Recurrent herpes at delivery has lower risk (1-3%). Women with primary herpes near delivery or active lesions at labor should have cesarean section."
+    },
+    {
+      "q": "Which laboratory test differentiates between bacterial vaginosis and trichomoniasis?",
+      "opts": [
+        "A) Vaginal pH (both have pH >4.5)",
+        "B) Whiff test (both can be positive)",
+        "C) Microscopy: clue cells vs. motile trichomonads",
+        "D) Both have identical laboratory findings"
+      ],
+      "a": 2,
+      "rat": "Microscopy differentiates the two: BV shows clue cells (epithelial cells covered with bacteria), while trichomoniasis shows motile flagellated trichomonads. Both have pH >4.5 and may have positive whiff test (fishy odor), though the discharge characteristics differ (gray-white thin for BV; frothy yellow-green for trichomoniasis)."
+    },
+    {
+      "q": "A patient starting ART for HIV asks about medication adherence. What level of adherence is required to prevent resistance?",
+      "opts": [
+        "A) Greater than 50%",
+        "B) Greater than 75%",
+        "C) Greater than 95%",
+        "D) 100% adherence required"
+      ],
+      "a": 2,
+      "rat": "Greater than 95% adherence to ART is critical to prevent drug resistance and maintain viral suppression. Missing even a few doses can lead to resistance. Use medication reminders, pill boxes, and address barriers to adherence. With modern ART regimens (single daily pill), adherence is more achievable."
+    },
+    {
+      "q": "Which symptom distinguishes gonorrhea from chlamydia in men?",
+      "opts": [
+        "A) Gonorrhea causes painful urination; chlamydia does not",
+        "B) Gonorrhea causes purulent yellow-green discharge; chlamydia causes clear to white discharge",
+        "C) Gonorrhea is always symptomatic; chlamydia is always asymptomatic",
+        "D) Gonorrhea has a longer incubation period than chlamydia"
+      ],
+      "a": 1,
+      "rat": "While both cause urethritis, gonorrhea typically causes more severe symptoms with purulent (thick, yellow-green) discharge and severe dysuria. Chlamydia often causes milder symptoms with clear to white discharge. However, 50% of men with chlamydia and some with gonorrhea can be asymptomatic. Both require testing."
+    },
+    {
+      "q": "A patient asks about the 'strawberry cervix' associated with trichomoniasis. What causes this finding?",
+      "opts": [
+        "A) Allergic reaction to the parasite",
+        "B) Petechiae (small hemorrhages) on the cervix",
+        "C) Fungal overgrowth",
+        "D) Normal anatomical variant"
+      ],
+      "a": 1,
+      "rat": "The 'strawberry cervix' (colpitis macularis) is caused by petechiae (small hemorrhages) on the cervix from trichomoniasis inflammation. However, it's only visible in about 2% of cases (more common with colposcopy). The frothy yellow-green discharge with foul odor is more characteristic and common."
+    },
+    {
+      "q": "Which statement about hepatitis B vaccination in newborns is correct?",
+      "opts": [
+        "A) Vaccination is optional and based on parental preference",
+        "B) The first dose should be given within 24 hours of birth",
+        "C) Vaccination should be delayed until age 2 months",
+        "D) Vaccination is only needed if the mother is HBsAg positive"
+      ],
+      "a": 1,
+      "rat": "All newborns should receive the first dose of hepatitis B vaccine within 24 hours of birth, regardless of maternal status. The series continues at 1-2 months and 6-18 months. If the mother is HBsAg positive, the infant must also receive HBIG within 12 hours of birth."
+    },
+    {
+      "q": "A patient with latent syphilis (>1 year duration) requires treatment. What is the appropriate regimen?",
+      "opts": [
+        "A) Benzathine penicillin G 2.4 million units IM single dose",
+        "B) Benzathine penicillin G 2.4 million units IM weekly for 3 weeks",
+        "C) Doxycycline 100 mg PO BID for 7 days",
+        "D) Ceftriaxone 500 mg IM single dose"
+      ],
+      "a": 1,
+      "rat": "Late latent syphilis (>1 year duration) or tertiary syphilis (without neurosyphilis) requires benzathine penicillin G 2.4 million units IM weekly for 3 consecutive weeks. Primary, secondary, or early latent syphilis (<1 year) requires only a single dose. Neurosyphilis requires IV penicillin for 10-14 days."
+    },
+    {
+      "q": "Which patient education is essential when starting HIV post-exposure prophylaxis (PEP)?",
+      "opts": [
+        "A) \"PEP should be started within 7 days of exposure.\"",
+        "B) \"PEP is a 28-day course that must be completed.\"",
+        "C) \"PEP provides permanent immunity to HIV.\"",
+        "D) \"PEP is only needed after occupational exposures.\""
+      ],
+      "a": 1,
+      "rat": "PEP must be started within 72 hours of exposure (ideally within 2 hours) and is a 28-day course of ART that must be completed for effectiveness. It's used for both occupational and non-occupational exposures. PEP does not provide immunity - it prevents infection from establishing. HIV testing is done at baseline, 6 weeks, and 3 months."
+    },
+    {
+      "q": "A patient presents with multiple painful vesicular lesions on the vulva, dysuria, and fever. Which initial nursing intervention is MOST appropriate?",
+      "opts": [
+        "A) Obtain a viral culture or PCR from an active lesion",
+        "B) Administer broad-spectrum antibiotics immediately",
+        "C) Prepare the patient for surgical drainage",
+        "D) Reassure the patient this will resolve without treatment"
+      ],
+      "a": 0,
+      "rat": "The presentation suggests primary genital herpes. Obtain viral culture or PCR from an active lesion for diagnosis (must sample while lesions present). Then start antiviral therapy (acyclovir, valacyclovir, or famciclovir). Primary herpes causes severe symptoms requiring treatment. Antibiotics don't treat viral infections."
+    },
+    {
+      "q": "Which complication of chlamydia infection is seen primarily in men?",
+      "opts": [
+        "A) Pelvic inflammatory disease",
+        "B) Ectopic pregnancy",
+        "C) Epididymitis",
+        "D) Cervicitis"
+      ],
+      "a": 2,
+      "rat": "Epididymitis (inflammation of the epididymis) is the main complication of chlamydia in men, causing testicular pain and swelling. Women experience PID, ectopic pregnancy, and infertility. Both sexes can develop reactive arthritis (Reiter's syndrome). Untreated epididymitis can lead to infertility in men."
+    },
+    {
+      "q": "A patient with HIV asks when they should start antiretroviral therapy. What is the current recommendation?",
+      "opts": [
+        "A) When CD4 count drops below 500 cells/mm³",
+        "B) When symptoms of AIDS develop",
+        "C) Immediately upon HIV diagnosis, regardless of CD4 count",
+        "D) Only if viral load exceeds 100,000 copies/mL"
+      ],
+      "a": 2,
+      "rat": "Current guidelines recommend starting ART immediately upon HIV diagnosis, regardless of CD4 count or viral load. Early treatment preserves immune function, prevents transmission (U=U), and improves long-term outcomes. Delaying treatment allows progressive immune damage and increases transmission risk."
+    },
+    {
+      "q": "Which medication is used for suppressive therapy in a patient with frequent herpes outbreaks?",
+      "opts": [
+        "A) Penicillin G",
+        "B) Valacyclovir daily",
+        "C) Metronidazole",
+        "D) Doxycycline"
+      ],
+      "a": 1,
+      "rat": "Daily valacyclovir (or acyclovir or famciclovir) is used for suppressive therapy in patients with frequent herpes recurrences (≥6 per year). Suppressive therapy reduces outbreaks by 70-80%, reduces viral shedding, and decreases transmission risk to partners. It's taken continuously, not just during outbreaks."
+    },
+    {
+      "q": "A patient diagnosed with gonorrhea reports a penicillin allergy. Which treatment is appropriate?",
+      "opts": [
+        "A) Ceftriaxone 500 mg IM (cephalosporin)",
+        "B) Azithromycin 2 g PO single dose",
+        "C) Ciprofloxacin 500 mg PO single dose",
+        "D) Amoxicillin 500 mg PO TID"
+      ],
+      "a": 0,
+      "rat": "Ceftriaxone (a cephalosporin) is still recommended even with penicillin allergy because cross-reactivity is low (<1%). True IgE-mediated severe penicillin allergy is rare. Ceftriaxone is the only recommended first-line treatment due to gonorrhea resistance. If true severe allergy, consult infectious disease specialist for alternative regimen (no reliably effective alternative currently)."
+    },
+    {
+      "q": "Which factor increases the risk of vertical transmission of HIV from mother to infant?",
+      "opts": [
+        "A) Maternal viral load of <50 copies/mL",
+        "B) High maternal viral load and low CD4 count",
+        "C) Cesarean section delivery",
+        "D) Avoiding breastfeeding"
+      ],
+      "a": 1,
+      "rat": "High maternal viral load and low CD4 count significantly increase vertical transmission risk. Factors that DECREASE transmission include: maternal ART (achieving undetectable viral load), elective cesarean if viral load >1,000, avoiding breastfeeding, and infant prophylaxis. With comprehensive interventions, transmission rate drops to <1%."
+    },
+    {
+      "q": "A patient with secondary syphilis presents with patchy hair loss. What is this finding called?",
+      "opts": [
+        "A) Gummas",
+        "B) Chancre",
+        "C) Alopecia areata (moth-eaten alopecia)",
+        "D) Condyloma acuminata"
+      ],
+      "a": 2,
+      "rat": "Patchy 'moth-eaten' alopecia is a manifestation of secondary syphilis, occurring with the rash, mucous patches, and condyloma lata. Secondary syphilis has diverse manifestations affecting skin, mucous membranes, and multiple organ systems. Hair typically regrows after treatment."
+    },
+    {
+      "q": "Which diagnostic test has the highest sensitivity for detecting chlamydia?",
+      "opts": [
+        "A) Gram stain",
+        "B) Culture",
+        "C) Nucleic acid amplification test (NAAT)",
+        "D) Wet mount microscopy"
+      ],
+      "a": 2,
+      "rat": "NAAT (nucleic acid amplification test) is the gold standard for chlamydia and gonorrhea detection with >95% sensitivity. It can be performed on urine, cervical, vaginal, urethral, rectal, or pharyngeal specimens. Chlamydia cannot be seen on Gram stain. Culture is less sensitive and rarely used."
+    },
+    {
+      "q": "A patient asks about risk factors for HPV-related cervical cancer. Which factor confers the HIGHEST risk?",
+      "opts": [
+        "A) Infection with low-risk HPV types 6 and 11",
+        "B) Infection with high-risk HPV types 16 and 18",
+        "C) Having multiple sexual partners",
+        "D) Smoking cigarettes"
+      ],
+      "a": 1,
+      "rat": "Persistent infection with high-risk HPV types, especially 16 and 18, causes approximately 70% of cervical cancers. Low-risk HPV (6, 11) causes genital warts but not cancer. Other risk factors include immunosuppression, smoking, and lack of screening, but high-risk HPV is the primary cause. Regular Pap smears detect precancerous changes."
+    },
+    {
+      "q": "Which manifestation indicates a patient has progressed from HIV infection to AIDS?",
+      "opts": [
+        "A) Positive HIV antibody test",
+        "B) CD4 count of 450 cells/mm³",
+        "C) Diagnosis of Pneumocystis jirovecii pneumonia (PCP)",
+        "D) Undetectable viral load"
+      ],
+      "a": 2,
+      "rat": "AIDS is diagnosed by CD4 <200 cells/mm³ OR presence of AIDS-defining illness. PCP is an AIDS-defining opportunistic infection. Other AIDS-defining illnesses include: disseminated MAC, CMV retinitis, toxoplasmosis, Kaposi's sarcoma, invasive cervical cancer, and disseminated fungal infections. A CD4 of 450 is still in the HIV (not AIDS) stage."
+    },
+    {
+      "q": "A patient with PID asks about long-term fertility effects. What should the nurse explain?",
+      "opts": [
+        "A) \"PID does not affect future fertility.\"",
+        "B) \"Each episode of PID increases the risk of infertility.\"",
+        "C) \"Fertility is only affected if you have three or more episodes.\"",
+        "D) \"Infertility is rare with appropriate antibiotic treatment.\""
+      ],
+      "a": 1,
+      "rat": "Each episode of PID increases infertility risk due to progressive tubal scarring. Risk is approximately 12-18% after one episode, 35-40% after two episodes, and 50-75% after three episodes. Ectopic pregnancy risk also increases. Early treatment is crucial, but even treated PID can cause permanent damage, which is why prevention is key."
+    },
+    {
+      "q": "Which patient teaching is essential when prescribing imiquimod cream for genital warts?",
+      "opts": [
+        "A) \"Apply the cream three times daily until warts disappear.\"",
+        "B) \"This cream is applied at bedtime 3 times per week and washed off in the morning.\"",
+        "C) \"This cream will cure your HPV infection permanently.\"",
+        "D) \"You must come to the clinic for application of this medication.\""
+      ],
+      "a": 1,
+      "rat": "Imiquimod 5% cream is a patient-applied treatment for genital warts. It's applied at bedtime 3 times per week, left on 6-10 hours, then washed off. It works by stimulating local immune response. It may take up to 16 weeks. It does not cure HPV infection, and warts may recur."
+    },
+    {
+      "q": "A patient with untreated HIV develops confusion, severe headache, and focal neurological deficits. Which opportunistic infection should the nurse suspect?",
+      "opts": [
+        "A) Pneumocystis jirovecii pneumonia",
+        "B) Toxoplasmosis encephalitis",
+        "C) Candidiasis",
+        "D) Mycobacterium avium complex"
+      ],
+      "a": 1,
+      "rat": "Toxoplasma gondii encephalitis presents with neurological symptoms (confusion, headache, seizures, focal deficits) in patients with advanced HIV (CD4 <100). CT/MRI shows ring-enhancing lesions. Other CNS infections in AIDS include cryptococcal meningitis and progressive multifocal leukoencephalopathy (PML). Prophylaxis starts when CD4 <100."
+    },
+    {
+      "q": "Which statement about condom effectiveness in preventing STI transmission is MOST accurate?",
+      "opts": [
+        "A) Condoms provide 100% protection against all STIs",
+        "B) Condoms are highly effective for preventing transmission of HIV, gonorrhea, and chlamydia",
+        "C) Condoms do not reduce risk of any STI transmission",
+        "D) Condoms only prevent pregnancy, not STIs"
+      ],
+      "a": 1,
+      "rat": "Latex condoms are highly effective (85-99%) at preventing STIs transmitted through genital fluids (HIV, gonorrhea, chlamydia). They are less effective against STIs transmitted by skin-to-skin contact (herpes, HPV, syphilis) because they don't cover all potentially infected areas. Consistent and correct use is essential."
+    },
+    {
+      "q": "A patient presents with lower abdominal pain and a purulent cervical discharge. The nurse notes cervical motion tenderness. What is the priority nursing diagnosis?",
+      "opts": [
+        "A) Risk for ineffective coping",
+        "B) Risk for infection related to sexual transmission",
+        "C) Acute pain related to pelvic inflammatory process",
+        "D) Deficient knowledge related to STI prevention"
+      ],
+      "a": 2,
+      "rat": "Using Maslow's hierarchy and nursing prioritization, acute pain (physiological need) takes priority in PID. The patient requires immediate pain management and antibiotic therapy. After addressing pain, focus on treating infection, partner notification, and education to prevent recurrence and complications."
+    },
+    {
+      "q": "Which test result pattern indicates past hepatitis B infection with recovery and immunity?",
+      "opts": [
+        "A) HBsAg positive, anti-HBs negative, anti-HBc negative",
+        "B) HBsAg negative, anti-HBs positive, anti-HBc negative",
+        "C) HBsAg negative, anti-HBs positive, anti-HBc positive",
+        "D) HBsAg positive, anti-HBs negative, anti-HBc positive"
+      ],
+      "a": 2,
+      "rat": "Past HBV infection with recovery shows: HBsAg negative (no current infection), anti-HBs positive (immunity), anti-HBc positive (evidence of past infection). Pattern B indicates vaccination immunity (anti-HBs positive but anti-HBc negative). Pattern A indicates acute infection. Pattern D indicates chronic infection."
+    },
+    {
+      "q": "A pregnant patient at 10 weeks gestation is diagnosed with primary herpes. What is the appropriate management?",
+      "opts": [
+        "A) No treatment needed - herpes only affects the baby if active at delivery",
+        "B) Start antiviral therapy now and continue through pregnancy",
+        "C) Schedule cesarean section immediately",
+        "D) Terminate pregnancy due to high risk of congenital defects"
+      ],
+      "a": 1,
+      "rat": "Primary herpes during pregnancy should be treated with antivirals. Suppressive therapy (acyclovir or valacyclovir) is started at 36 weeks to reduce risk of outbreak at delivery. If active lesions are present at labor onset, cesarean section is indicated. Herpes does not cause congenital malformations but neonatal herpes from peripartum transmission can be severe."
+    },
+    {
+      "q": "Which finding on physical exam is pathognomonic for secondary syphilis?",
+      "opts": [
+        "A) Painless genital ulcer",
+        "B) Rash on palms and soles with condyloma lata",
+        "C) Vesicular lesions on genitals",
+        "D) Cauliflower-like genital warts"
+      ],
+      "a": 1,
+      "rat": "Rash on palms and soles is highly characteristic (pathognomonic) of secondary syphilis. Condyloma lata (flat, moist, wart-like lesions in warm areas) are also specific to secondary syphilis, distinct from condyloma acuminata (HPV genital warts). Painless ulcer = primary syphilis; vesicular lesions = herpes; cauliflower warts = HPV."
+    },
+    {
+      "q": "A patient with chlamydia asks about re-infection risk. What percentage of patients become re-infected within 3-6 months?",
+      "opts": [
+        "A) Less than 5%",
+        "B") Approximately 15-20%",
+        "C) Approximately 30-40%",
+        "D) Over 75%"
+      ],
+      "a": 1,
+      "rat": "Re-infection rates for chlamydia are high (15-20% within 3-6 months), usually due to untreated partners or new partners. This is why retesting at 3 months is recommended, not to confirm cure but to screen for reinfection. Emphasize simultaneous partner treatment and abstaining from sex until both partners complete treatment."
+    },
+    {
+      "q": "Which manifestation suggests neurosyphilis rather than other stages of syphilis?",
+      "opts": [
+        "A) Painless chancre on genitals",
+        "B) Maculopapular rash on trunk",
+        "C) Tabes dorsalis with ataxia and loss of proprioception",
+        "D) Mucous patches in the mouth"
+      ],
+      "a": 2,
+      "rat": "Tabes dorsalis (damage to posterior columns of spinal cord causing ataxia, loss of proprioception, shooting pains) indicates neurosyphilis, a form of tertiary syphilis affecting the nervous system. Other neurosyphilis manifestations include general paresis, meningitis, and stroke. Requires CSF analysis and IV penicillin treatment."
+    },
+    {
+      "q": "A patient taking metronidazole for bacterial vaginosis consumes alcohol. Which reaction should the nurse expect?",
+      "opts": [
+        "A) Anaphylaxis",
+        "B) Disulfiram-like reaction with severe nausea, vomiting, and flushing",
+        "C) No reaction occurs",
+        "D) Increased effectiveness of the medication"
+      ],
+      "a": 1,
+      "rat": "Metronidazole causes a disulfiram-like reaction when combined with alcohol, resulting in severe nausea, vomiting, flushing, headache, and palpitations. Patients must avoid alcohol during treatment and for 24 hours after metronidazole (72 hours for tinidazole). This is crucial patient teaching."
+    },
+    {
+      "q": "Which laboratory finding confirms chronic hepatitis B infection?",
+      "opts": [
+        "A) HBsAg positive for more than 6 months",
+        "B) Anti-HBs positive",
+        "C) IgM anti-HBc positive",
+        "D) All hepatitis B markers negative"
+      ],
+      "a": 0,
+      "rat": "Chronic hepatitis B is defined as persistence of HBsAg for more than 6 months. These patients are at risk for cirrhosis and hepatocellular carcinoma and need regular monitoring. IgM anti-HBc indicates acute infection. Anti-HBs positive indicates immunity/recovery. Chronic HBV develops in 5-10% of infected adults, but 90% of infected infants."
+    },
+    {
+      "q": "A patient with HIV and a CD4 count of 150 cells/mm³ should receive prophylaxis for which opportunistic infection?",
+      "opts": [
+        "A) Influenza",
+        "B) Pneumocystis jirovecii pneumonia (PCP)",
+        "C) Common cold",
+        "D) Bacterial pneumonia"
+      ],
+      "a": 1,
+      "rat": "PCP prophylaxis (trimethoprim-sulfamethoxazole) should be started when CD4 count drops below 200 cells/mm³. At CD4 <100, add toxoplasmosis prophylaxis. At CD4 <50, add MAC (Mycobacterium avium complex) prophylaxis. These opportunistic infection prophylaxis regimens significantly improve survival in AIDS patients."
+    },
+    {
+      "q": "Which patient statement indicates a need for further teaching about genital herpes?",
+      "opts": [
+        "A) \"I can transmit herpes even when I don't have blisters.\"",
+        "B) \"I should start my antiviral medication when I feel tingling.\"",
+        "C) \"Once my blisters heal, I'm cured and can't get herpes again.\"",
+        "D) \"I should avoid sexual contact during outbreaks.\""
+      ],
+      "a": 2,
+      "rat": "This statement is incorrect and requires further teaching. Herpes is incurable - the virus remains dormant in nerve ganglia for life and can reactivate. While antivirals suppress symptoms, they don't eliminate the virus. Patients need to understand the chronic nature of herpes and the potential for recurrent outbreaks."
+    },
+    {
+      "q": "A male patient presents with urethral discharge and dysuria. NAAT testing is positive for both gonorrhea and chlamydia. What is the appropriate treatment?",
+      "opts": [
+        "A) Ceftriaxone 500 mg IM only",
+        "B) Doxycycline 100 mg PO BID for 7 days only",
+        "C) Ceftriaxone 500 mg IM plus doxycycline 100 mg PO BID for 7 days",
+        "D) Azithromycin 1 g PO single dose only"
+      ],
+      "a": 2,
+      "rat": "Co-infection with gonorrhea and chlamydia requires treatment for both: ceftriaxone 500 mg IM single dose (gonorrhea) PLUS doxycycline 100 mg PO BID for 7 days (chlamydia). Treat all partners, abstain from sex for 7 days after treatment completed, and retest in 3 months."
+    },
+    {
+      "q": "Which opportunistic infection is AIDS-defining and presents with white patches in the mouth that can be scraped off?",
+      "opts": [
+        "A) Oral hairy leukoplakia",
+        "B) Kaposi's sarcoma",
+        "C) Oral candidiasis (thrush)",
+        "D) Herpes stomatitis"
+      ],
+      "a": 2,
+      "rat": "Oral candidiasis (thrush) presents with white plaques on oral mucosa, tongue, or throat that can be scraped off, revealing red, raw mucosa. It's common in HIV/AIDS when CD4 <200. Treat with fluconazole. Oral hairy leukoplakia (EBV-related, white patches on tongue sides that cannot be scraped off) is not AIDS-defining."
+    },
+    {
+      "q": "A patient with trichomoniasis is allergic to metronidazole. Which alternative medication is appropriate?",
+      "opts": [
+        "A) Doxycycline",
+        "B) Tinidazole",
+        "C) Acyclovir",
+        "D) Clindamycin"
+      ],
+      "a": 1,
+      "rat": "Tinidazole is an alternative to metronidazole for trichomoniasis (also in the nitroimidazole class). However, if truly allergic to metronidazole, may have cross-reaction with tinidazole. In that case, desensitization may be necessary as there are no other effective alternatives. Both require avoiding alcohol."
+    },
+    {
+      "q": "Which statement about HIV testing and confidentiality is correct?",
+      "opts": [
+        "A) HIV results can be shared with family members without patient consent",
+        "B) Employers must be notified of positive HIV results",
+        "C) Strict confidentiality must be maintained; disclosure requires patient consent",
+        "D) HIV status must be documented prominently in the medical chart"
+      ],
+      "a": 2,
+      "rat": "Strict confidentiality is legally and ethically required for HIV status. Disclosure requires patient consent except for mandatory reporting to public health and partner notification programs. HIV status should not be prominently documented where it can be easily seen. Employers do not have a right to know. Maintain non-judgmental, private care."
+    },
+    {
+      "q": "A patient presents with multiple small, flesh-colored papules in the genital area. Which diagnostic test confirms HPV infection?",
+      "opts": [
+        "A) HPV DNA typing",
+        "B) Clinical visual examination (diagnosis is usually clinical)",
+        "C) Pap smear",
+        "D) Serologic antibody testing"
+      ],
+      "a": 1,
+      "rat": "Genital warts are usually diagnosed clinically by visual examination of characteristic lesions. Biopsy is only needed if diagnosis is uncertain, lesions don't respond to treatment, or to rule out malignancy. HPV DNA testing is not routinely performed for visible warts (used with Pap smears for cervical screening in women ≥30)."
+    },
+    {
+      "q": "A patient with bacterial vaginosis asks if this will affect pregnancy. What should the nurse explain?",
+      "opts": [
+        "A) \"BV does not affect pregnancy outcomes.\"",
+        "B) \"BV increases risk of preterm birth and should be treated in pregnancy.\"",
+        "C) \"BV should not be treated during pregnancy due to medication risks.\"",
+        "D) \"BV only affects pregnancy if symptoms are present.\""
+      ],
+      "a": 1,
+      "rat": "BV in pregnancy increases risk of preterm birth, preterm labor, chorioamnionitis, and postpartum endometritis. All pregnant women with symptomatic BV should be treated (metronidazole is safe). Some also recommend screening and treating asymptomatic pregnant women at high risk for preterm delivery."
+    },
+    {
+      "q": "Which assessment finding suggests a patient with HIV is developing Kaposi's sarcoma?",
+      "opts": [
+        "A) White patches in the mouth",
+        "B) Purple or red lesions on skin or mucous membranes",
+        "C) Persistent dry cough",
+        "D) Severe watery diarrhea"
+      ],
+      "a": 1,
+      "rat": "Kaposi's sarcoma presents with purple, red, or brown lesions on skin, mucous membranes, or internal organs. It's caused by HHV-8 (human herpesvirus 8) and is AIDS-defining. Most commonly affects skin, mouth, GI tract, and lungs. It has become less common since effective ART became available."
+    },
+    {
+      "q": "A patient asks when they can stop taking PrEP for HIV prevention. What is the appropriate response?",
+      "opts": [
+        "A) \"After 6 months of use, you develop permanent immunity.\"",
+        "B) \"PrEP should be continued as long as you remain at high risk for HIV.\"",
+        "C) \"Once you start PrEP, you must take it for life.\"",
+        "D) \"PrEP can be stopped at any time without consequences.\""
+      ],
+      "a": 1,
+      "rat": "PrEP should be continued as long as the person remains at high risk for HIV exposure. It can be discontinued if risk decreases (e.g., in mutually monogamous relationship with HIV-negative partner). PrEP does not provide immunity - protection only exists while taking medication consistently. Regular HIV testing (every 3 months) is required while on PrEP."
+    },
+    {
+      "q": "Which nursing intervention is MOST important when caring for a patient newly diagnosed with an STI?",
+      "opts": [
+        "A) Providing detailed written instructions about medication regimens",
+        "B) Discussing partner notification and treatment",
+        "C) Scheduling follow-up appointment",
+        "D) Documenting the patient's sexual history in detail"
+      ],
+      "a": 1,
+      "rat": "While all are important, partner notification and treatment is crucial to prevent reinfection and stop disease transmission in the community. Without treating partners, the patient will likely be reinfected (ping-pong effect), and the infection continues spreading. Approach this sensitively and offer public health assistance for partner notification."
+    },
+    {
+      "q": "A patient with gonorrhea asks about testing their partners. What should the nurse recommend?",
+      "opts": [
+        "A) \"Only test partners who have symptoms.\"",
+        "B) \"All partners from the past 60 days should be tested and treated.\"",
+        "C) \"Partners can wait and only be tested if they develop symptoms.\"",
+        "D) \"Partner testing is optional for gonorrhea.\""
+      ],
+      "a": 1,
+      "rat": "All sexual partners from the past 60 days (or last partner if more than 60 days) should be tested and treated for gonorrhea and chlamydia, even if asymptomatic. Many infected individuals are asymptomatic but can transmit the infection. Expedited partner therapy (treating without exam) may be offered where legally permitted."
+    },
+    {
+      "q": "Which patient is at HIGHEST risk for acquiring HIV?",
+      "opts": [
+        "A) Healthcare worker with needlestick from HIV-positive patient",
+        "B) Person who shares eating utensils with HIV-positive person",
+        "C) Person with multiple sexual partners and inconsistent condom use",
+        "D) Person who donates blood regularly"
+      ],
+      "a": 2,
+      "rat": "Multiple sexual partners with inconsistent condom use represents the highest ongoing risk for HIV acquisition, especially if partners have unknown HIV status. Receptive anal intercourse has the highest per-act transmission risk. Needlestick has low transmission risk (~0.3%). HIV is not transmitted through casual contact, saliva, or blood donation (sterile equipment used)."
+    },
+    {
+      "q": "A patient presents with jaundice, dark urine, and right upper quadrant pain. Testing reveals elevated liver enzymes and positive HBsAg. What is the priority nursing intervention?",
+      "opts": [
+        "A) Administer hepatitis B vaccine",
+        "B) Assess for other risk factors and provide supportive care",
+        "C) Prepare for immediate liver transplant",
+        "D) Start interferon therapy immediately"
+      ],
+      "a": 1,
+      "rat": "This patient has acute hepatitis B infection. Priority is assessing alcohol/drug use (avoid hepatotoxins), providing supportive care (rest, hydration, nutrition), monitoring liver function, and educating about prevention of transmission. Most adults recover without specific treatment. Vaccine doesn't help after infection. Antivirals are for chronic hepatitis B. Transplant is only for fulminant failure."
+    },
+    {
+      "q": "Which STI screening test should be performed annually for all sexually active women under age 25?",
+      "opts": [
+        "A) HIV antibody test",
+        "B) HSV-2 serology",
+        "C) Chlamydia and gonorrhea NAAT",
+        "D) Syphilis RPR"
+      ],
+      "a": 2,
+      "rat": "Annual screening for chlamydia and gonorrhea (via NAAT) is recommended for all sexually active women under 25 years, as this is the highest risk group. Women ≥25 should be screened if risk factors present. HIV screening should be done at least once (annually if high risk). Routine HSV serology screening is not recommended."
+    },
+    {
+      "q": "A patient with recurrent genital herpes asks about triggers. Which factor commonly triggers herpes outbreaks?",
+      "opts": [
+        "A) Eating spicy foods",
+        "B) Physical or emotional stress",
+        "C) Vitamin D deficiency",
+        "D) Caffeine consumption"
+      ],
+      "a": 1,
+      "rat": "Common herpes outbreak triggers include physical or emotional stress, illness, immunosuppression, menstruation, sun exposure, trauma to affected area, and fatigue. These factors can reactivate the dormant virus in nerve ganglia. Identifying and managing triggers, along with suppressive therapy if needed, helps reduce outbreak frequency."
+    },
+    {
+      "q": "Which medication class is used as the backbone of most HIV antiretroviral therapy regimens?",
+      "opts": [
+        "A) Integrase strand transfer inhibitors (INSTIs)",
+        "B) Protease inhibitors (PIs)",
+        "C) Nucleoside reverse transcriptase inhibitors (NRTIs)",
+        "D) Non-nucleoside reverse transcriptase inhibitors (NNRTIs)"
+      ],
+      "a": 0,
+      "rat": "While NRTIs have historically been the backbone, modern preferred regimens often use integrase strand transfer inhibitors (INSTIs) as anchor drugs due to high efficacy, tolerability, and fewer drug interactions. Regimens typically combine drugs from 2-3 classes. Examples include bictegravir/tenofovir/emtricitabine (single daily pill) or dolutegravir-based regimens."
+    },
+    {
+      "q": "A pregnant patient diagnosed with chlamydia asks if treatment is safe during pregnancy. What should the nurse explain?",
+      "opts": [
+        "A) \"Treatment should be delayed until after delivery to avoid fetal harm.\"",
+        "B) \"Azithromycin is safe and effective during pregnancy.\"",
+        "C) \"Only topical treatments can be used during pregnancy.\"",
+        "D) \"Doxycycline is the preferred treatment in pregnancy.\""
+      ],
+      "a": 1,
+      "rat": "Azithromycin 1 g PO single dose is the treatment of choice for chlamydia in pregnancy (safe and effective). Doxycycline is contraindicated in pregnancy. Untreated chlamydia can cause preterm birth, low birth weight, and neonatal infections (conjunctivitis, pneumonia). All pregnant women should be screened at first visit and third trimester."
+    },
+    {
+      "q": "Which statement about syphilis in pregnancy is MOST concerning?",
+      "opts": [
+        "A) \"Syphilis cannot cross the placenta to infect the fetus.\"",
+        "B) \"Untreated syphilis can cause stillbirth, neonatal death, and severe disabilities.\"",
+        "C) \"Syphilis treatment is contraindicated during pregnancy.\"",
+        "D) \"Syphilis screening is optional during pregnancy.\""
+      ],
+      "a": 1,
+      "rat": "Untreated maternal syphilis has devastating effects: stillbirth, neonatal death, prematurity, low birth weight, and congenital syphilis (bone abnormalities, hepatosplenomegaly, rash, neurologic damage). Treponema pallidum readily crosses the placenta. All pregnant women must be screened; treatment with penicillin during pregnancy prevents congenital syphilis."
+    },
+    {
+      "q": "A patient taking doxycycline for chlamydia develops a severe sunburn despite minimal sun exposure. What should the nurse teach?",
+      "opts": [
+        "A) \"This is a normal reaction and no precautions are needed.\"",
+        "B) \"Doxycycline causes photosensitivity; use high-SPF sunscreen and limit sun exposure.\"",
+        "C) \"Stop the medication immediately and do not complete the course.\"",
+        "D) \"Switch to tanning beds instead of sun exposure.\""
+      ],
+      "a": 1,
+      "rat": "Doxycycline causes photosensitivity (increased sensitivity to UV light), leading to severe sunburn with minimal exposure. Patients should use high-SPF sunscreen, wear protective clothing, avoid prolonged sun exposure, and avoid tanning beds. The medication should not be stopped (need to complete treatment), but sun protection is essential."
+    },
+    {
+      "q": "Which assessment finding indicates successful treatment of PID?",
+      "opts": [
+        "A) Resolution of fever and abdominal pain",
+        "B) Negative pregnancy test",
+        "C) Normal complete blood count",
+        "D) Positive cervical motion tenderness"
+      ],
+      "a": 0,
+      "rat": "Resolution of symptoms (fever, abdominal pain, cervical motion tenderness) indicates successful PID treatment. Patients should show clinical improvement within 48-72 hours of starting antibiotics. If no improvement, consider hospitalization, imaging for tubo-ovarian abscess, or alternative diagnoses. Complete the full antibiotic course even when symptoms resolve."
+    }
+  ]
+}
