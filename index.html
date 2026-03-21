@@ -441,7 +441,7 @@ var loadingEl = document.getElementById('home-dashboard');
 if (loadingEl) loadingEl.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-900);font-weight:600;">Loading study data...</div>';
 var GH_CDN = 'https://cdn.jsdelivr.net/gh/Peptopia/NCLEX@main/';
 var GH_PAGES = 'https://peptopia.github.io/NCLEX/';
-var CACHE_BUST = '?v=19.1'; /* bump this when uploading new quiz files */
+var CACHE_BUST = '?v=19.2'; /* bump this when uploading new quiz files */
 fetch(GH_CDN + 'mnt_studydata.json' + CACHE_BUST)
 .then(function(r) {
 if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -477,7 +477,7 @@ loadingEl.innerHTML =
 'Error: Study data failed to load.' +
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
-var APP_VERSION = '19.1';
+var APP_VERSION = '19.2';
 var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, comprehensive7:150, comprehensive8:150, comprehensive9:150, comprehensive10:1000, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:100 };
 var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, comprehensive7: 1, comprehensive8: 1, comprehensive9: 1, comprehensive10: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1 };
 var GH_AUDIO = 'https://github.com/Peptopia/NCLEX/releases/download/audio-v1/';
@@ -725,8 +725,8 @@ panel.innerHTML =
 (isConnected ? '<div style="font-size:0.82rem;color:#4ade80;font-weight:600;margin-bottom:0.5rem;">✓ Connected — Gist ID: <span style="font-family:monospace;font-size:0.75rem;">' + _ghGistId.slice(0, 8) + '...</span></div>' : '') +
 '<label style="font-size:0.8rem;font-weight:600;display:block;margin-bottom:0.25rem;">Personal Access Token</label>' +
 '<input id="gist-pat-input" type="password" value="' + (_ghToken || '') + '" placeholder="ghp_xxxxxxxxxxxx" style="width:100%;padding:0.4rem 0.6rem;border:1px solid ' + inputBorder + ';border-radius:0.4rem;background:' + inputBg + ';color:' + txt + ';font-size:0.85rem;font-family:monospace;box-sizing:border-box;margin-bottom:0.5rem;" />' +
-'<label style="font-size:0.8rem;font-weight:600;display:block;margin-bottom:0.25rem;">Gist ID <span style="font-weight:400;opacity:0.7;">(leave blank to create new)</span></label>' +
-'<input id="gist-id-input" type="text" value="' + (_ghGistId || '') + '" placeholder="e.g. a1b2c3d4e5f6..." style="width:100%;padding:0.4rem 0.6rem;border:1px solid ' + inputBorder + ';border-radius:0.4rem;background:' + inputBg + ';color:' + txt + ';font-size:0.85rem;font-family:monospace;box-sizing:border-box;margin-bottom:0.75rem;" />' +
+'<label style="font-size:0.8rem;font-weight:600;display:block;margin-bottom:0.25rem;">Your Name</label>' +
+'<input id="gist-id-input" type="text" value="' + (_ghGistId || '') + '" placeholder="Enter your name" style="width:100%;padding:0.4rem 0.6rem;border:1px solid ' + inputBorder + ';border-radius:0.4rem;background:' + inputBg + ';color:' + txt + ';font-size:0.85rem;box-sizing:border-box;margin-bottom:0.75rem;" />' +
 '<div style="display:flex;gap:0.5rem;flex-wrap:wrap;">' +
 '<button class="pd-btn" style="background:linear-gradient(135deg,#3b82f6,#2563eb);" onclick="saveGistSetup()">💾 Save & Sync</button>' +
 (isConnected ? '<button class="pd-btn" style="background:linear-gradient(135deg,#f59e0b,#d97706);" onclick="doFullSync(false)">🔄 Sync Now</button>' : '') +
@@ -745,32 +745,72 @@ var tokenInput = document.getElementById('gist-pat-input');
 var idInput = document.getElementById('gist-id-input');
 if (!tokenInput) return;
 var token = tokenInput.value.trim();
+var userName = idInput ? idInput.value.trim() : '';
 if (!token) { showProgressToast('A GitHub Personal Access Token is required.', 'error'); return; }
 _ghToken = token;
-var gistId = idInput ? idInput.value.trim() : '';
-if (gistId) {
-_ghGistId = gistId;
-_saveGistCreds();
-showProgressToast('Credentials saved. Syncing...', 'success');
-doFullSync(false).then(function() {
-var p = document.getElementById('gist-setup-panel');
-if (p) p.remove();
-renderProgressDashboard();
-});
-} else {
-/* Create a new Gist */
-_saveGistCreds();
-showProgressToast('Creating private Gist...', 'success');
-var local = loadProgress();
-gistCreateNew(local).then(function(gist) {
-showProgressToast('☁️ Gist created! ID: ' + gist.id.slice(0, 8) + '...', 'success');
-var p = document.getElementById('gist-setup-panel');
-if (p) p.remove();
-renderProgressDashboard();
-}).catch(function(err) {
-showProgressToast('Failed to create Gist: ' + err.message, 'error');
-});
+/* Show verifying state */
+var panel = document.getElementById('gist-setup-panel');
+if (panel) {
+var _pdLight = document.getElementById('progress-modal') && document.getElementById('progress-modal').classList.contains('panel-light');
+panel.innerHTML = '<div style="text-align:center;padding:1.5rem;">' +
+'<div style="font-size:1.5rem;margin-bottom:0.5rem;">⏳</div>' +
+'<div style="font-weight:600;font-size:0.9rem;color:' + (_pdLight ? '#475569' : '#cbd5e1') + ';">Verifying token...</div></div>';
 }
+/* Validate token by calling GitHub API */
+fetch('https://api.github.com/user', { headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' } })
+.then(function(r) {
+if (!r.ok) throw new Error(r.status === 401 ? 'Invalid token — please check and try again.' : 'GitHub error: ' + r.status);
+return r.json();
+})
+.then(function(user) {
+var displayName = userName || user.login;
+/* Token is valid — now create or connect Gist */
+if (_ghGistId) {
+_saveGistCreds();
+return doFullSync(false).then(function() { return { name: displayName, login: user.login, action: 'synced' }; });
+} else {
+_saveGistCreds();
+var local = loadProgress();
+return gistCreateNew(local).then(function(gist) { return { name: displayName, login: user.login, gistId: gist.id, action: 'created' }; });
+}
+})
+.then(function(info) {
+/* Show success confirmation */
+var p2 = document.getElementById('gist-setup-panel');
+var _pdLight2 = document.getElementById('progress-modal') && document.getElementById('progress-modal').classList.contains('panel-light');
+var successBg = _pdLight2 ? 'rgba(22,163,74,0.08)' : 'rgba(74,222,128,0.1)';
+var successBorder = _pdLight2 ? 'rgba(22,163,74,0.3)' : 'rgba(74,222,128,0.3)';
+var successTxt = _pdLight2 ? '#15803d' : '#4ade80';
+var subTxt = _pdLight2 ? '#475569' : '#94a3b8';
+if (p2) {
+p2.style.border = '1px solid ' + successBorder;
+p2.style.background = _pdLight2 ? '#f0fdf4' : 'rgba(22,163,74,0.06)';
+p2.innerHTML = '<div style="text-align:center;padding:1rem;">' +
+'<div style="font-size:2rem;margin-bottom:0.4rem;">✅</div>' +
+'<div style="font-weight:700;font-size:1rem;color:' + successTxt + ';margin-bottom:0.25rem;">Cloud Sync Connected!</div>' +
+'<div style="font-size:0.85rem;color:' + subTxt + ';margin-bottom:0.15rem;">Welcome, <strong>' + info.name + '</strong> (@' + info.login + ')</div>' +
+(info.gistId ? '<div style="font-size:0.78rem;color:' + subTxt + ';font-family:monospace;">Gist ID: ' + info.gistId.slice(0, 12) + '...</div>' : '<div style="font-size:0.78rem;color:' + subTxt + ';">Progress synced successfully.</div>') +
+'<div style="margin-top:0.75rem;">' +
+'<button class="pd-btn" style="background:linear-gradient(135deg,#22c55e,#16a34a);" onclick="document.getElementById(\'gist-setup-panel\').remove()">Done</button></div>' +
+'</div>';
+}
+renderProgressDashboard();
+})
+.catch(function(err) {
+/* Show error state */
+var p3 = document.getElementById('gist-setup-panel');
+var _pdLight3 = document.getElementById('progress-modal') && document.getElementById('progress-modal').classList.contains('panel-light');
+if (p3) {
+p3.style.border = '1px solid rgba(239,68,68,0.4)';
+p3.style.background = _pdLight3 ? '#fef2f2' : 'rgba(239,68,68,0.06)';
+p3.innerHTML = '<div style="text-align:center;padding:1rem;">' +
+'<div style="font-size:2rem;margin-bottom:0.4rem;">❌</div>' +
+'<div style="font-weight:700;font-size:1rem;color:#f87171;margin-bottom:0.25rem;">Connection Failed</div>' +
+'<div style="font-size:0.85rem;color:' + (_pdLight3 ? '#991b1b' : '#fca5a5') + ';margin-bottom:0.75rem;">' + err.message + '</div>' +
+'<button class="pd-btn" style="background:linear-gradient(135deg,#6b7280,#4b5563);" onclick="document.getElementById(\'gist-setup-panel\').remove(); showGistSetup();">Try Again</button></div>';
+}
+_ghToken = '';
+});
 };
 
 window.disconnectGist = function() {
