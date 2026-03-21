@@ -733,8 +733,11 @@ panel.innerHTML =
 (isConnected ? '<button class="pd-btn" style="background:linear-gradient(135deg,#ef4444,#dc2626);" onclick="disconnectGist()">Disconnect</button>' : '') +
 '<button class="pd-btn" style="background:linear-gradient(135deg,#6b7280,#4b5563);" onclick="document.getElementById(\'gist-setup-panel\').remove()">Close</button>' +
 '</div>';
-var actions = document.querySelector('.pd-actions');
-if (actions) { actions.parentNode.insertBefore(panel, actions.nextSibling); }
+var container = document.getElementById('progress-content');
+if (container) {
+container.appendChild(panel);
+setTimeout(function() { panel.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100);
+}
 }
 
 window.saveGistSetup = function() {
