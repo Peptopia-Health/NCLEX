@@ -441,7 +441,7 @@ var loadingEl = document.getElementById('home-dashboard');
 if (loadingEl) loadingEl.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-900);font-weight:600;">Loading study data...</div>';
 var GH_CDN = 'https://cdn.jsdelivr.net/gh/Peptopia/NCLEX@main/';
 var GH_PAGES = 'https://peptopia.github.io/NCLEX/';
-var CACHE_BUST = '?v=19.3'; /* bump this when uploading new quiz files */
+var CACHE_BUST = '?v=19.4'; /* bump this when uploading new quiz files */
 fetch(GH_CDN + 'mnt_studydata.json' + CACHE_BUST)
 .then(function(r) {
 if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -477,7 +477,7 @@ loadingEl.innerHTML =
 'Error: Study data failed to load.' +
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
-var APP_VERSION = '19.3';
+var APP_VERSION = '19.4';
 var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, comprehensive7:150, comprehensive8:150, comprehensive9:150, comprehensive10:1000, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:100 };
 var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, comprehensive7: 1, comprehensive8: 1, comprehensive9: 1, comprehensive10: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1 };
 var GH_AUDIO = 'https://github.com/Peptopia/NCLEX/releases/download/audio-v1/';
@@ -4469,7 +4469,7 @@ saveProgress(fresh);
 renderProgressDashboard();
 showProgressToast('All progress reset.', 'success');
 };
-function showProgressToast(msg, type) {
+window.showProgressToast = function(msg, type) {
 var toast = document.createElement('div');
 toast.style.cssText = 'position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);padding:0.75rem 1.5rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;z-index:3000;animation:fadeIn 0.3s;';
 toast.style.background = type === 'error' ? '#dc2626' : '#059669';
@@ -4478,7 +4478,7 @@ toast.textContent = msg;
 document.body.appendChild(toast);
 setTimeout(function() { toast.style.opacity = '0'; toast.style.transition = 'opacity 0.4s'; }, 2000);
 setTimeout(function() { toast.remove(); }, 2500);
-}
+};
 window.showStudyPlan = function() {
 renderStudyPlan();
 document.getElementById('studyplan-modal').style.display = 'block';
