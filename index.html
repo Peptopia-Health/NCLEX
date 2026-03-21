@@ -441,7 +441,7 @@ var loadingEl = document.getElementById('home-dashboard');
 if (loadingEl) loadingEl.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-900);font-weight:600;">Loading study data...</div>';
 var GH_CDN = 'https://cdn.jsdelivr.net/gh/Peptopia/NCLEX@main/';
 var GH_PAGES = 'https://peptopia.github.io/NCLEX/';
-var CACHE_BUST = '?v=19.4'; /* bump this when uploading new quiz files */
+var CACHE_BUST = '?v=19.5'; /* bump this when uploading new quiz files */
 fetch(GH_CDN + 'mnt_studydata.json' + CACHE_BUST)
 .then(function(r) {
 if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -477,7 +477,7 @@ loadingEl.innerHTML =
 'Error: Study data failed to load.' +
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
-var APP_VERSION = '19.4';
+var APP_VERSION = '19.5';
 var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, comprehensive7:150, comprehensive8:150, comprehensive9:150, comprehensive10:1000, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:100 };
 var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, comprehensive7: 1, comprehensive8: 1, comprehensive9: 1, comprehensive10: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1 };
 var GH_AUDIO = 'https://github.com/Peptopia/NCLEX/releases/download/audio-v1/';
@@ -4252,7 +4252,7 @@ var modal = document.getElementById('progress-modal');
 modal.classList.toggle('panel-light');
 renderProgressDashboard();
 };
-function renderProgressDashboard() {
+window.renderProgressDashboard = function() {
 var d = loadProgress();
 var now = Date.now();
 /* Uses global EXCLUDED_FROM_PCT defined at top */
@@ -4421,7 +4421,7 @@ html += '<div id="pd-reset-confirm" class="pd-confirm" style="display:none;">' +
 '<button class="pd-btn pd-btn-import" onclick="cancelResetProgress()">Cancel</button>' +
 '</div></div>';
 document.getElementById('progress-content').innerHTML = html;
-}
+};
 window.exportProgress = function() {
 var d = loadProgress();
 var json = JSON.stringify(d, null, 2);
@@ -4576,7 +4576,7 @@ SP_THEME_LIGHT.pharmguide = SP_THEME_LIGHT.fullexam;
 SP_THEME_LIGHT.fundguide = SP_THEME_LIGHT.fund;
 SP_THEME_LIGHT.geroguide = SP_THEME_LIGHT.gero;
 function _spTheme(key, light){var map = light ? SP_THEME_LIGHT : SP_THEME; return map[key]||(light ? {bg:'rgba(99,102,241,0.06)',border:'rgba(99,102,241,0.2)',accent:'#4338ca',label:'#1e293b'} : {bg:'rgba(99,102,241,0.1)',border:'rgba(99,102,241,0.3)',accent:'#a5b4fc',label:'#e0e7ff'});}
-function renderStudyPlan() {
+window.renderStudyPlan = function() {
 var d = loadProgress();
 var now = Date.now();
 var today = new Date();
@@ -4806,7 +4806,7 @@ html += '<div class="sp-day" style="padding:0.5rem 0.75rem; margin-bottom:0.3rem
 }
 }
 document.getElementById('studyplan-content').innerHTML = html;
-}
+};
 function formatDate(d) {
 var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 return months[d.getMonth()] + ' ' + d.getDate();
