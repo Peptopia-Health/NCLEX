@@ -441,7 +441,7 @@ var loadingEl = document.getElementById('home-dashboard');
 if (loadingEl) loadingEl.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-900);font-weight:600;">Loading study data...</div>';
 var GH_CDN = 'https://cdn.jsdelivr.net/gh/Peptopia/NCLEX@main/';
 var GH_PAGES = 'https://peptopia.github.io/NCLEX/';
-var CACHE_BUST = '?v=19.2'; /* bump this when uploading new quiz files */
+var CACHE_BUST = '?v=19.3'; /* bump this when uploading new quiz files */
 fetch(GH_CDN + 'mnt_studydata.json' + CACHE_BUST)
 .then(function(r) {
 if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -477,7 +477,7 @@ loadingEl.innerHTML =
 'Error: Study data failed to load.' +
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
-var APP_VERSION = '19.2';
+var APP_VERSION = '19.3';
 var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, comprehensive7:150, comprehensive8:150, comprehensive9:150, comprehensive10:1000, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:100 };
 var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, comprehensive7: 1, comprehensive8: 1, comprehensive9: 1, comprehensive10: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1 };
 var GH_AUDIO = 'https://github.com/Peptopia/NCLEX/releases/download/audio-v1/';
@@ -514,6 +514,8 @@ var GH_GIST_KEY = 'nclex85_gist_id';
 var GIST_FILENAME = 'nclex85_progress.json';
 var _ghToken = '';
 var _ghGistId = '';
+var _ghUserName = '';
+var GH_NAME_KEY = 'nclex85_gh_name';
 var _syncInFlight = false;
 var _lastSyncTime = 0;
 var _syncDebounceTimer = null;
@@ -523,12 +525,14 @@ function _loadGistCreds() {
 if (_storageOK) {
 try { _ghToken = _ls.getItem(GH_TOKEN_KEY) || ''; } catch(e) {}
 try { _ghGistId = _ls.getItem(GH_GIST_KEY) || ''; } catch(e) {}
+try { _ghUserName = _ls.getItem(GH_NAME_KEY) || ''; } catch(e) {}
 }
 }
 function _saveGistCreds() {
 if (_storageOK) {
 try { _ls.setItem(GH_TOKEN_KEY, _ghToken); } catch(e) {}
 try { _ls.setItem(GH_GIST_KEY, _ghGistId); } catch(e) {}
+try { _ls.setItem(GH_NAME_KEY, _ghUserName); } catch(e) {}
 }
 }
 function isGistSyncEnabled() { return !!(_ghToken && _ghGistId); }
@@ -569,8 +573,9 @@ return r.json();
 
 function gistCreateNew(data) {
 if (!_ghToken) return Promise.reject(new Error('No GitHub token'));
+var descName = _ghUserName ? ' (' + _ghUserName + ')' : '';
 var body = {
-description: 'Peptopia NCLEX Study Progress — auto-synced',
+description: 'Peptopia NCLEX Study Progress' + descName + ' — auto-synced',
 public: false,
 files: {}
 };
@@ -722,11 +727,11 @@ panel.innerHTML =
 '<div style="font-weight:700;font-size:0.95rem;margin-bottom:0.5rem;">☁️ GitHub Gist Cloud Sync</div>' +
 '<p style="font-size:0.8rem;margin:0 0 0.75rem;opacity:0.8;">Sync your progress across devices using a private GitHub Gist. ' +
 '<a href="https://github.com/settings/tokens/new?scopes=gist&description=Peptopia+NCLEX+Sync" target="_blank" rel="noopener" style="color:#818cf8;">Create a PAT with gist scope →</a></p>' +
-(isConnected ? '<div style="font-size:0.82rem;color:#4ade80;font-weight:600;margin-bottom:0.5rem;">✓ Connected — Gist ID: <span style="font-family:monospace;font-size:0.75rem;">' + _ghGistId.slice(0, 8) + '...</span></div>' : '') +
+(isConnected ? '<div style="font-size:0.82rem;color:#4ade80;font-weight:600;margin-bottom:0.5rem;">✓ Connected' + (_ghUserName ? ' — ' + _ghUserName : '') + '</div>' : '') +
 '<label style="font-size:0.8rem;font-weight:600;display:block;margin-bottom:0.25rem;">Personal Access Token</label>' +
 '<input id="gist-pat-input" type="password" value="' + (_ghToken || '') + '" placeholder="ghp_xxxxxxxxxxxx" style="width:100%;padding:0.4rem 0.6rem;border:1px solid ' + inputBorder + ';border-radius:0.4rem;background:' + inputBg + ';color:' + txt + ';font-size:0.85rem;font-family:monospace;box-sizing:border-box;margin-bottom:0.5rem;" />' +
 '<label style="font-size:0.8rem;font-weight:600;display:block;margin-bottom:0.25rem;">Your Name</label>' +
-'<input id="gist-id-input" type="text" value="' + (_ghGistId || '') + '" placeholder="Enter your name" style="width:100%;padding:0.4rem 0.6rem;border:1px solid ' + inputBorder + ';border-radius:0.4rem;background:' + inputBg + ';color:' + txt + ';font-size:0.85rem;box-sizing:border-box;margin-bottom:0.75rem;" />' +
+'<input id="gist-name-input" type="text" value="' + (_ghUserName || '') + '" placeholder="Enter your name" style="width:100%;padding:0.4rem 0.6rem;border:1px solid ' + inputBorder + ';border-radius:0.4rem;background:' + inputBg + ';color:' + txt + ';font-size:0.85rem;box-sizing:border-box;margin-bottom:0.75rem;" />' +
 '<div style="display:flex;gap:0.5rem;flex-wrap:wrap;">' +
 '<button class="pd-btn" style="background:linear-gradient(135deg,#3b82f6,#2563eb);" onclick="saveGistSetup()">💾 Save & Sync</button>' +
 (isConnected ? '<button class="pd-btn" style="background:linear-gradient(135deg,#f59e0b,#d97706);" onclick="doFullSync(false)">🔄 Sync Now</button>' : '') +
@@ -742,12 +747,13 @@ setTimeout(function() { panel.scrollIntoView({ behavior: 'smooth', block: 'cente
 
 window.saveGistSetup = function() {
 var tokenInput = document.getElementById('gist-pat-input');
-var idInput = document.getElementById('gist-id-input');
+var nameInput = document.getElementById('gist-name-input');
 if (!tokenInput) return;
 var token = tokenInput.value.trim();
-var userName = idInput ? idInput.value.trim() : '';
+var userName = nameInput ? nameInput.value.trim() : '';
 if (!token) { showProgressToast('A GitHub Personal Access Token is required.', 'error'); return; }
 _ghToken = token;
+_ghUserName = userName;
 /* Show verifying state */
 var panel = document.getElementById('gist-setup-panel');
 if (panel) {
@@ -764,6 +770,11 @@ return r.json();
 })
 .then(function(user) {
 var displayName = userName || user.login;
+/* Save userName into progress data */
+var d = loadProgress();
+d.userName = displayName;
+d.ghLogin = user.login;
+saveProgress(d);
 /* Token is valid — now create or connect Gist */
 if (_ghGistId) {
 _saveGistCreds();
@@ -816,9 +827,11 @@ _ghToken = '';
 window.disconnectGist = function() {
 _ghToken = '';
 _ghGistId = '';
+_ghUserName = '';
 if (_storageOK) {
 try { _ls.removeItem(GH_TOKEN_KEY); } catch(e) {}
 try { _ls.removeItem(GH_GIST_KEY); } catch(e) {}
+try { _ls.removeItem(GH_NAME_KEY); } catch(e) {}
 }
 showProgressToast('Cloud sync disconnected.', 'success');
 var p = document.getElementById('gist-setup-panel');
