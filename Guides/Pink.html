@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MK Short &ndash; Condensed Review</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* ===== CSS Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: #fdf2f8;
+  color: #831843;
+  line-height: 1.65;
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: linear-gradient(135deg, #be185d 0%, #9d174d 100%);
+  color: #fff;
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+  position: relative;
+}
+.hero h1 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+.hero .subtitle {
+  font-size: 1.05rem;
+  opacity: 0.88;
+  font-weight: 400;
+}
+.badge-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.hero-stat {
+  background: rgba(255,255,255,0.18);
+  border-radius: 2rem;
+  padding: 0.3rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+
+/* ===== Container ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+}
+
+/* ===== Accordion ===== */
+.accordion {
+  margin-bottom: 0.75rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(131,24,67,0.08);
+  border: 1px solid #fce7f3;
+}
+.accordion-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  user-select: none;
+  gap: 0.75rem;
+  background: #fff;
+  transition: background 0.2s;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  color: inherit;
+}
+.accordion-header:hover { background: #fdf2f8; }
+.accordion-header .sec-icon {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #db2777, #be185d);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.accordion-header .sec-title {
+  flex: 1;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #831843;
+}
+.accordion-header .sec-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #db2777;
+  opacity: 0.7;
+}
+.accordion-header .chevron {
+  font-size: 0.85rem;
+  color: #db2777;
+  transition: transform 0.3s;
+}
+.accordion.open .chevron { transform: rotate(180deg); }
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.accordion.open .accordion-body {
+  max-height: 50000px;
+}
+.accordion-content {
+  padding: 0.5rem 1.25rem 1.5rem;
+}
+
+/* ===== Content Elements ===== */
+h3 {
+  font-size: 1.05rem;
+  color: #9d174d;
+  margin: 1.25rem 0 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #fce7f3;
+}
+h3:first-child { margin-top: 0.5rem; }
+
+ul, ol {
+  margin: 0.5rem 0 0.75rem 1.5rem;
+}
+li { margin-bottom: 0.35rem; }
+
+/* ===== Drug Pill ===== */
+.drug {
+  display: inline-block;
+  background: #db2777;
+  color: #fff;
+  padding: 0.15rem 0.6rem;
+  border-radius: 2rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+  text-decoration: none;
+  line-height: 1.5;
+}
+.drug:hover {
+  background: #9d174d;
+  transform: scale(1.05);
+}
+
+/* ===== Mnemonic Callout ===== */
+.mnemonic {
+  background: linear-gradient(135deg, #fdf2f8, #fce7f3);
+  border-left: 4px solid #db2777;
+  border-radius: 0 10px 10px 0;
+  padding: 0.85rem 1.1rem;
+  margin: 0.75rem 0;
+  font-weight: 600;
+  color: #831843;
+  position: relative;
+}
+.mnemonic .mnemonic-icon {
+  color: #db2777;
+  margin-right: 0.5rem;
+}
+
+/* ===== Tables ===== */
+.table-wrap { overflow-x: auto; margin: 0.75rem 0; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+th {
+  background: linear-gradient(135deg, #db2777, #be185d);
+  color: #fff;
+  padding: 0.65rem 0.75rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+td {
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid #fce7f3;
+}
+tr:nth-child(even) td { background: #fdf2f8; }
+tr:hover td { background: #fce7f3; }
+
+/* ===== Key Point ===== */
+.key-point {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  margin: 0.5rem 0;
+  font-size: 0.93rem;
+}
+.key-point .kp-icon { color: #ea580c; margin-right: 0.4rem; }
+
+/* ===== Warning Box ===== */
+.warning {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-left: 4px solid #ef4444;
+  border-radius: 0 8px 8px 0;
+  padding: 0.65rem 1rem;
+  margin: 0.5rem 0;
+}
+.warning .warn-icon { color: #ef4444; margin-right: 0.4rem; }
+
+/* ===== Rule Box ===== */
+.rule-box {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-left: 4px solid #22c55e;
+  border-radius: 0 8px 8px 0;
+  padding: 0.65rem 1rem;
+  margin: 0.5rem 0;
+}
+
+/* ===== Comparison Grid ===== */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+.compare-card {
+  background: #fff;
+  border: 1px solid #fce7f3;
+  border-radius: 10px;
+  padding: 0.85rem;
+}
+.compare-card h4 {
+  font-size: 0.95rem;
+  color: #db2777;
+  margin-bottom: 0.4rem;
+}
+@media (max-width: 500px) {
+  .compare-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== DARK MODE ===== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1a0a12;
+    color: #fce7f3;
+  }
+  .hero {
+    background: linear-gradient(135deg, #831843 0%, #500724 100%);
+  }
+  .accordion {
+    background: #27111a;
+    border-color: #3b1529;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  }
+  .accordion-header {
+    background: #27111a;
+    color: #fce7f3;
+  }
+  .accordion-header:hover { background: #35111f; }
+  .accordion-header .sec-title { color: #fce7f3; }
+  h3 {
+    color: #f9a8d4;
+    border-bottom-color: #3b1529;
+  }
+  td { border-bottom-color: #3b1529; }
+  tr:nth-child(even) td { background: #1f0c15; }
+  tr:hover td { background: #35111f; }
+  th {
+    background: linear-gradient(135deg, #9d174d, #831843);
+  }
+  .mnemonic {
+    background: linear-gradient(135deg, #2a0f1e, #35111f);
+    border-left-color: #db2777;
+    color: #fce7f3;
+  }
+  .drug {
+    background: #be185d;
+  }
+  .drug:hover { background: #db2777; }
+  .key-point {
+    background: #2a1a0e;
+    border-color: #5c3a1e;
+    color: #fce7f3;
+  }
+  .warning {
+    background: #2a0e0e;
+    border-color: #5c1e1e;
+    border-left-color: #ef4444;
+    color: #fce7f3;
+  }
+  .rule-box {
+    background: #0e2a14;
+    border-color: #1e5c2e;
+    border-left-color: #22c55e;
+    color: #fce7f3;
+  }
+  .compare-card {
+    background: #27111a;
+    border-color: #3b1529;
+  }
+  .compare-card h4 { color: #f9a8d4; }
+  .hero-stat {
+    background: rgba(255,255,255,0.12);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .hero { padding: 1.75rem 1rem 1.5rem; }
+  .hero h1 { font-size: 1.5rem; }
+  .accordion-header { padding: 0.85rem 1rem; }
+  .accordion-content { padding: 0.5rem 1rem 1.25rem; }
+  .accordion-header .sec-icon { width: 32px; height: 32px; font-size: 0.88rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <h1><i class="fa-solid fa-book-medical"></i> MK Short &ndash; Condensed Review</h1>
+  <p class="subtitle">Mark Klimek NCLEX Study Guide &bull; All 19 Lectures Condensed</p>
+  <div class="badge-row">
+    <span class="hero-stat"><i class="fa-solid fa-list-check"></i> 19 Sections</span>
+    <span class="hero-stat"><i class="fa-solid fa-brain"></i> Mnemonics</span>
+    <span class="hero-stat"><i class="fa-solid fa-pills"></i> Drug Cards</span>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ============================================================ -->
+<!-- SECTION 1: Acid-Base Balance & Ventilators                   -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-lungs"></i></span>
+    <span class="sec-title">Acid-Base Balance &amp; Ventilators</span>
+    <span class="sec-num">01</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <h3><i class="fa-solid fa-scale-balanced"></i> The Rule of the B's</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> pH &amp; Bicarb go the <strong>same direction</strong> = <strong>Metabolic</strong>. Different directions = <strong>Respiratory</strong>.</div>
+
+    <div class="table-wrap"><table>
+      <tr><th>Lab</th><th>Normal Range</th><th>Notes</th></tr>
+      <tr><td>pH</td><td>7.35 &ndash; 7.45</td><td>&lt;7.35 = acidosis; &gt;7.45 = alkalosis</td></tr>
+      <tr><td>HCO<sub>3</sub> (Bicarb)</td><td>22 &ndash; 26</td><td>Metabolic marker</td></tr>
+      <tr><td>CO<sub>2</sub></td><td>35 &ndash; 45</td><td>Respiratory marker (inverse relationship)</td></tr>
+    </table></div>
+
+    <h3><i class="fa-solid fa-person"></i> "As the pH Goes, So Goes My Patient"</h3>
+    <p><strong>EXCEPT potassium</strong> &mdash; potassium is <em>inverse</em> to pH.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h4><i class="fa-solid fa-arrow-up"></i> Alkalosis (pH Up)</h4>
+        <ul>
+          <li>Irritability</li>
+          <li>Hyper-reflexia (3+ &amp; 4+)</li>
+          <li>Tachypnea</li>
+          <li>Tachycardia</li>
+          <li>Borborygmi (hyperactive bowels)</li>
+          <li>Seizure</li>
+        </ul>
+      </div>
+      <div class="compare-card">
+        <h4><i class="fa-solid fa-arrow-down"></i> Acidosis (pH Down)</h4>
+        <ul>
+          <li>Hypo-reflexia</li>
+          <li>Bradycardia</li>
+          <li>Lethargy</li>
+          <li>Paralytic ileus</li>
+          <li>Coma</li>
+          <li>Respiratory arrest</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>Kussmaul breathing = MAC</strong> &mdash; <strong>M</strong>etabolic <strong>AC</strong>idosis</div>
+
+    <h3><i class="fa-solid fa-stethoscope"></i> Clinical Scenarios</h3>
+    <ul>
+      <li>Ask: <strong>"Is it a lung problem?"</strong> &rarr; Yes = Respiratory. No = Metabolic.</li>
+      <li>Over-ventilating = <strong>Respiratory Alkalosis</strong></li>
+      <li>Under-ventilating = <strong>Respiratory Acidosis</strong></li>
+      <li>Prolonged gastric vomiting / suctioning = <strong>Metabolic Alkalosis</strong></li>
+      <li>Default guess (when unsure) = <strong>Metabolic Acidosis</strong></li>
+    </ul>
+
+    <h3><i class="fa-solid fa-wind"></i> Ventilator Alarms</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Alarm</th><th>Cause</th><th>Action</th><th>Resulting Imbalance</th></tr>
+      <tr><td><strong>High Pressure</strong></td><td>Obstruction</td><td>Check: Kink &rarr; Water in tubing &rarr; Mucus plug &rarr; Suction</td><td>Respiratory Alkalosis</td></tr>
+      <tr><td><strong>Low Pressure</strong></td><td>Disconnection</td><td>Reconnect immediately</td><td>Respiratory Acidosis</td></tr>
+    </table></div>
+
+    <div class="warning"><span class="warn-icon"><i class="fa-solid fa-triangle-exclamation"></i></span> <strong>Weaning:</strong> If ABGs show <strong>respiratory acidosis</strong>, <strong>HOLD the weaning order</strong> &amp; <strong>call the physician</strong>.</div>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 2: Alcoholism & Substance Abuse                      -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-wine-bottle"></i></span>
+    <span class="sec-title">Alcoholism &amp; Substance Abuse</span>
+    <span class="sec-num">02</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <h3><i class="fa-solid fa-1"></i> #1 Problem: Denial</h3>
+    <ul>
+      <li><strong>Alcoholism denial</strong> &rarr; <strong>Confront it</strong></li>
+      <li><strong>Loss &amp; Grief denial</strong> &rarr; <strong>Support it</strong></li>
+    </ul>
+
+    <h3><i class="fa-solid fa-2"></i> #2 Problem: Dependency / Co-dependency</h3>
+    <ul>
+      <li><strong>Set limits</strong></li>
+      <li>Learn to say <strong>NO</strong></li>
+    </ul>
+
+    <h3><i class="fa-solid fa-mask"></i> Manipulation</h3>
+    <p>Manipulation = dangerous / harmful acts. Differentiate from co-dependency behaviors.</p>
+
+    <h3><i class="fa-solid fa-brain"></i> Wernicke-Korsakoff Syndrome</h3>
+    <ul>
+      <li><strong>B1 (<span class="drug" onclick="drugCard('Thiamine')">Thiamine</span>) deficiency</strong></li>
+      <li>Amnesia with <strong>confabulation</strong> (making up stories) &rarr; <strong>Redirect</strong></li>
+      <li><strong>Preventable &amp; arrestable</strong>, but ~70% of damage is <strong>irreversible</strong></li>
+    </ul>
+
+    <h3><i class="fa-solid fa-pills"></i> Antabuse</h3>
+    <ul>
+      <li><span class="drug" onclick="drugCard('Disulfiram')">Antabuse (Disulfiram)</span>: Takes <strong>2 weeks to enter</strong> body / <strong>2 weeks to leave</strong></li>
+      <li>Avoid ALL alcohol-containing products (cough syrup, mouthwash, aftershave, perfume)</li>
+      <li><strong>CAN</strong> have red wine vinaigrette (vinegar, not alcohol)</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-arrow-up"></i> Uppers vs <i class="fa-solid fa-arrow-down"></i> Downers</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Category</th><th>Examples</th><th>Effects</th></tr>
+      <tr><td><strong>Uppers</strong></td><td>Cocaine, PCP, Meth, <span class="drug" onclick="drugCard('Adderall')">Adderall</span></td><td>Everything goes UP (HR, BP, RR, temp, pupils)</td></tr>
+      <tr><td><strong>Downers</strong></td><td>Heroin, Alcohol, Marijuana</td><td>Everything goes DOWN</td></tr>
+    </table></div>
+
+    <h3><i class="fa-solid fa-scale-balanced"></i> Overdose vs Withdrawal</h3>
+    <div class="table-wrap"><table>
+      <tr><th></th><th>Overdose (too much)</th><th>Withdrawal (too little)</th></tr>
+      <tr><td><strong>Upper</strong></td><td>UP signs</td><td>DOWN signs</td></tr>
+      <tr><td><strong>Downer</strong></td><td>DOWN signs</td><td>UP signs</td></tr>
+    </table></div>
+
+    <div class="warning"><span class="warn-icon"><i class="fa-solid fa-triangle-exclamation"></i></span> <strong>2 Highest Priority Situations:</strong><br>
+    1. <strong>Respiratory Depression</strong> (downer OD / upper withdrawal)<br>
+    2. <strong>Seizure</strong> (upper OD / downer withdrawal)</div>
+
+    <h3><i class="fa-solid fa-baby"></i> Newborn Addiction</h3>
+    <ul>
+      <li>Assume <strong>intoxication at birth</strong></li>
+      <li>Assume <strong>withdrawal after 24 hours</strong></li>
+    </ul>
+
+    <h3><i class="fa-solid fa-clock"></i> AWS vs DTS</h3>
+    <div class="table-wrap"><table>
+      <tr><th></th><th>AWS (Alcohol Withdrawal Syndrome)</th><th>DTS (Delirium Tremens)</th></tr>
+      <tr><td><strong>Onset</strong></td><td>24 hours</td><td>72 hours</td></tr>
+      <tr><td><strong>Stability</strong></td><td>Stable</td><td>Unstable / Deadly</td></tr>
+      <tr><td><strong>Diet</strong></td><td>Regular diet</td><td>NPO or clear liquids</td></tr>
+      <tr><td><strong>Room</strong></td><td>Semi-private</td><td>Private, near nurses&rsquo; station</td></tr>
+      <tr><td><strong>Activity</strong></td><td>Up ad lib</td><td>Vest / 2-point restraints</td></tr>
+    </table></div>
+
+    <div class="rule-box"><strong>Both AWS &amp; DTS receive:</strong> Antihypertensive + Tranquilizer + Multivitamin with <span class="drug" onclick="drugCard('Thiamine')">B1 (Thiamine)</span></div>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 3: Drugs - Aminoglycosides & Cardiac                 -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-capsules"></i></span>
+    <span class="sec-title">Drugs &ndash; Aminoglycosides &amp; Cardiac</span>
+    <span class="sec-num">03</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <h3><i class="fa-solid fa-bacterium"></i> Aminoglycosides</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>"A Mean Old Mycin"</strong> = serious gram-negative infections</div>
+
+    <ul>
+      <li>Examples: <span class="drug" onclick="drugCard('Gentamicin')">Gentamicin</span>, <span class="drug" onclick="drugCard('Tobramycin')">Tobramycin</span>, <span class="drug" onclick="drugCard('Amikacin')">Amikacin</span>, <span class="drug" onclick="drugCard('Neomycin')">Neomycin</span>, <span class="drug" onclick="drugCard('Streptomycin')">Streptomycin</span></li>
+      <li><strong>NOT</strong> mean old mycins (the &ldquo;thro&rdquo; = throw off the list): <span class="drug" onclick="drugCard('Erythromycin')">Erythromycin</span>, <span class="drug" onclick="drugCard('Azithromycin')">Azithromycin</span>, <span class="drug" onclick="drugCard('Clarithromycin')">Clarithromycin</span></li>
+    </ul>
+
+    <h3><i class="fa-solid fa-skull-crossbones"></i> Toxicities</h3>
+    <ul>
+      <li><strong>Ototoxic:</strong> hearing loss, tinnitus, vertigo (Cranial Nerve <strong>8</strong>)</li>
+      <li><strong>Nephrotoxic:</strong> monitor <strong>creatinine</strong></li>
+    </ul>
+
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>The Number 8:</strong> Cranial nerve <strong>8</strong>, administer every <strong>8</strong> hours, the <strong>8</strong> fits in a kidney shape</div>
+
+    <ul>
+      <li><strong>Route:</strong> IM or IV only</li>
+      <li><strong>Trough:</strong> 30 min before dose (any route)</li>
+      <li><strong>Peak:</strong> IV = 15&ndash;30 min after; IM = 30&ndash;60 min after</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-heart-pulse"></i> Calcium Channel Blockers</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>"Valium for the Heart"</strong> = negative inotropic, chronotropic, &amp; dromotropic</div>
+
+    <ul>
+      <li><strong>Treat:</strong> HTN, angina, atrial arrhythmias, SVT</li>
+      <li><strong>Drugs:</strong> Ends in <strong>-dipine</strong> (<span class="drug" onclick="drugCard('Amlodipine')">Amlodipine</span>, <span class="drug" onclick="drugCard('Nifedipine')">Nifedipine</span>) + <span class="drug" onclick="drugCard('Diltiazem')">Cardizem (Diltiazem)</span> &amp; <span class="drug" onclick="drugCard('Verapamil')">Verapamil</span></li>
+      <li><strong>Hold if:</strong> systolic BP &lt; 100</li>
+      <li><strong>Side effects:</strong> headache, hypotension</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-heart-crack"></i> Cardiac Arrhythmias</h3>
+    <p><strong>Know 4 patterns:</strong> NSR, V-fib, V-tach, Asystole + A-fib &amp; A-flutter</p>
+
+    <h3>PVCs (Premature Ventricular Contractions)</h3>
+    <ul>
+      <li>Usually <strong>low priority</strong></li>
+      <li><strong>High priority if:</strong> &gt;6/min, &gt;6 in a row, or falls on T wave (R-on-T)</li>
+    </ul>
+
+    <div class="table-wrap"><table>
+      <tr><th>Rhythm</th><th>Lethality</th><th>Treatment</th></tr>
+      <tr><td>PVCs</td><td>Potentially lethal (if criteria met)</td><td><span class="drug" onclick="drugCard('Amiodarone')">Amiodarone</span></td></tr>
+      <tr><td>V-tach</td><td>Potentially lethal</td><td><span class="drug" onclick="drugCard('Amiodarone')">Amiodarone</span></td></tr>
+      <tr><td>V-fib</td><td><strong>Lethal</strong> (no cardiac output)</td><td>Defibrillation</td></tr>
+      <tr><td>Asystole</td><td><strong>Lethal</strong> (no cardiac output)</td><td><span class="drug" onclick="drugCard('Epinephrine')">Epinephrine</span> &amp; <span class="drug" onclick="drugCard('Atropine')">Atropine</span></td></tr>
+      <tr><td>Atrial arrhythmias</td><td>Variable</td><td><strong>ABCD:</strong> <span class="drug" onclick="drugCard('Adenosine')">Adenocard</span>, <span class="drug" onclick="drugCard('Metoprolol')">Beta-blockers</span>, <span class="drug" onclick="drugCard('Diltiazem')">CCBs</span>, <span class="drug" onclick="drugCard('Digoxin')">Digitalis</span></td></tr>
+    </table></div>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 4: Chest Tubes                                       -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-syringe"></i></span>
+    <span class="sec-title">Chest Tubes</span>
+    <span class="sec-num">04</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <h3><i class="fa-solid fa-circle-info"></i> Purpose</h3>
+    <p>Re-establish <strong>negative pressure</strong> in the pleural space.</p>
+
+    <h3><i class="fa-solid fa-location-dot"></i> Location</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Placement</th><th>Drains</th></tr>
+      <tr><td><strong>Apical</strong> (top)</td><td>Air</td></tr>
+      <tr><td><strong>Basilar</strong> (bottom)</td><td>Blood</td></tr>
+    </table></div>
+
+    <h3><i class="fa-solid fa-burst"></i> Water Seal Broken (system disrupted)</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>CLAMP &rarr; CUT away &rarr; SUBMERGE</strong> under sterile water <strong>&rarr; UNCLAMP</strong></div>
+    <ul>
+      <li><strong>FIRST action:</strong> Clamp the tube</li>
+      <li><strong>BEST action:</strong> Submerge under sterile water</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-hand"></i> Tube Pulled Out of Patient</h3>
+    <ul>
+      <li><strong>FIRST:</strong> Gloved hand over the hole</li>
+      <li><strong>BEST:</strong> Vaseline (petroleum) gauze</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-droplet"></i> Bubbling Guide</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Chamber</th><th>Intermittent</th><th>Continuous</th></tr>
+      <tr><td><strong>Water Seal</strong></td><td><span style="color:#22c55e;font-weight:700;">GOOD</span></td><td><span style="color:#ef4444;font-weight:700;">BAD</span> (air leak)</td></tr>
+      <tr><td><strong>Suction</strong></td><td><span style="color:#ef4444;font-weight:700;">BAD</span></td><td><span style="color:#22c55e;font-weight:700;">GOOD</span></td></tr>
+    </table></div>
+
+    <div class="warning"><span class="warn-icon"><i class="fa-solid fa-triangle-exclamation"></i></span> <strong>Never clamp a chest tube for &gt;15 seconds</strong> without a physician&rsquo;s order.</div>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 5: Congenital Heart Defects                          -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-heart"></i></span>
+    <span class="sec-title">Congenital Heart Defects</span>
+    <span class="sec-num">05</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <h3><i class="fa-solid fa-arrows-left-right"></i> TRouBLe Mnemonic</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>TRouBLe:</strong> <u>T</u>ight to <u>L</u>eft = Cyanotic = <strong>TROUBLE</strong></div>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h4><i class="fa-solid fa-arrow-right"></i> Right &rarr; Left (TRouBLe)</h4>
+        <ul>
+          <li><strong>Cyanotic</strong></li>
+          <li>Needs surgery</li>
+          <li>Delayed growth &amp; development</li>
+        </ul>
+      </div>
+      <div class="compare-card">
+        <h4><i class="fa-solid fa-arrow-left"></i> Left &rarr; Right (NO Trouble)</h4>
+        <ul>
+          <li><strong>Pink / acyanotic</strong></li>
+          <li>No surgery needed</li>
+          <li>Generally good prognosis</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3><i class="fa-solid fa-list"></i> Trouble Defects (start with "T")</h3>
+    <ul>
+      <li><strong>T</strong>etralogy of Fallot</li>
+      <li><strong>T</strong>runcus arteriosus</li>
+      <li><strong>T</strong>ransposition of great vessels / arteries</li>
+      <li><strong>T</strong>ricuspid atresia</li>
+      <li><strong>T</strong>APVR (Total Anomalous Pulmonary Venous Return)</li>
+      <li>+ Left ventricular hypoplastic syndrome</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-heart-circle-check"></i> Tetralogy of Fallot</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>VD, PS, OA, RH</strong> &mdash; "Varied Pictures Of A Ranch"<br>
+    <strong>V</strong>entricular septal <strong>D</strong>efect, <strong>P</strong>ulmonary <strong>S</strong>tenosis, <strong>O</strong>verriding <strong>A</strong>orta, <strong>R</strong>ight ventricular <strong>H</strong>ypertrophy</div>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 6: Infectious Disease & Precautions                  -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-shield-virus"></i></span>
+    <span class="sec-title">Infectious Disease &amp; Precautions</span>
+    <span class="sec-num">06</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <div class="table-wrap"><table>
+      <tr><th>Type</th><th>Conditions</th><th>Room</th><th>PPE</th></tr>
+      <tr>
+        <td><strong>Contact</strong></td>
+        <td>C-diff, Hep A, Staph, RSV, Herpes (enteric)</td>
+        <td>Private preferred</td>
+        <td>Gloves + Gown</td>
+      </tr>
+      <tr>
+        <td><strong>Droplet</strong></td>
+        <td>Meningitis, H. influenzae (coughing/sneezing)</td>
+        <td>Private preferred</td>
+        <td>Mask</td>
+      </tr>
+      <tr>
+        <td><strong>Airborne</strong></td>
+        <td>Measles, Mumps, Rubella, TB, Varicella</td>
+        <td>Private <strong>REQUIRED</strong>, negative airflow</td>
+        <td>Special filter mask (N95 for TB)</td>
+      </tr>
+    </table></div>
+
+    <h3><i class="fa-solid fa-shirt"></i> PPE Order</h3>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h4><i class="fa-solid fa-arrow-right"></i> Putting ON</h4>
+        <ol>
+          <li>Gown</li>
+          <li>Mask</li>
+          <li>Goggles</li>
+          <li>Gloves</li>
+        </ol>
+      </div>
+      <div class="compare-card">
+        <h4><i class="fa-solid fa-arrow-left"></i> Taking OFF (ABC order)</h4>
+        <ol>
+          <li>Gloves</li>
+          <li>Goggles</li>
+          <li>Gown</li>
+          <li>Mask</li>
+        </ol>
+      </div>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 7: Crutches, Canes & Walkers                         -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-crutch"></i></span>
+    <span class="sec-title">Crutches, Canes &amp; Walkers</span>
+    <span class="sec-num">07</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <h3><i class="fa-solid fa-ruler"></i> Crutch Measurement</h3>
+    <ul>
+      <li><strong>2&ndash;3 finger widths</strong> below the anterior axillary fold</li>
+      <li>Elbow flexion ~<strong>30&deg;</strong></li>
+    </ul>
+
+    <h3><i class="fa-solid fa-person-walking"></i> Gait Patterns</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Gait</th><th>Indication</th></tr>
+      <tr><td><strong>2-point</strong></td><td>Mild bilateral weakness</td></tr>
+      <tr><td><strong>3-point</strong></td><td>One bad leg</td></tr>
+      <tr><td><strong>4-point</strong></td><td>Severe bilateral weakness</td></tr>
+      <tr><td><strong>Swing-through</strong></td><td>Non-weight bearing</td></tr>
+    </table></div>
+
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>"Even for even, odd for odd"</strong> &mdash; 2-point = bilateral (2 = even); 3-point = one leg (3 = odd)</div>
+
+    <h3><i class="fa-solid fa-stairs"></i> Stairs</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>UP with the GOOD, DOWN with the BAD</strong></div>
+
+    <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Canes</h3>
+    <ul>
+      <li>Hold on the <strong>strong / unaffected</strong> side</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-wheelchair-move"></i> Walkers</h3>
+    <ul>
+      <li><strong>Pick up and set down</strong> (do NOT slide)</li>
+      <li>No wheels, no tennis balls</li>
+      <li>Tie belongings to the <strong>side</strong>, NOT the front</li>
+    </ul>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 8: Psych - Delusions, Hallucinations & Illusions     -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-brain"></i></span>
+    <span class="sec-title">Psych &ndash; Delusions, Hallucinations &amp; Illusions</span>
+    <span class="sec-num">08</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <h3><i class="fa-solid fa-eye"></i> Non-Psychotic (Neurotic)</h3>
+    <ul>
+      <li>Has <strong>insight</strong></li>
+      <li>Reality-based</li>
+      <li>Intervention: <strong>Therapeutic communication</strong></li>
+    </ul>
+
+    <h3><i class="fa-solid fa-eye-slash"></i> Psychotic</h3>
+    <p><strong>No insight</strong> &rarr; Determine the type:</p>
+
+    <div class="table-wrap"><table>
+      <tr><th>Type</th><th>Examples</th><th>Approach</th></tr>
+      <tr>
+        <td><strong>Functional Psychosis</strong></td>
+        <td>Schizophrenia, Major Depression, Manic episode</td>
+        <td><strong>Teach reality via 4 steps:</strong><br>1. Acknowledge feeling<br>2. Present reality<br>3. Set limit<br>4. Enforce limit</td>
+      </tr>
+      <tr>
+        <td><strong>Dementia</strong></td>
+        <td>Alzheimer&rsquo;s, Organic Brain Syndrome</td>
+        <td><strong>CAN&rsquo;T learn reality</strong> &rarr; Acknowledge + Redirect + Reality orientation (person/place/time) but <strong>DON&rsquo;T present reality</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Delirium</strong></td>
+        <td>Temporary, chemical imbalance</td>
+        <td><strong>Remove underlying cause</strong> &rarr; Acknowledge + Reassure</td>
+      </tr>
+    </table></div>
+
+    <h3><i class="fa-solid fa-ranking-star"></i> Hallucination Frequency (Most to Least Common)</h3>
+    <ol>
+      <li><strong>Auditory</strong> (most common)</li>
+      <li>Visual</li>
+      <li>Tactile</li>
+      <li>Gustatory</li>
+      <li>Olfactory (least common)</li>
+    </ol>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 9: Diabetes                                          -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-droplet"></i></span>
+    <span class="sec-title">Diabetes</span>
+    <span class="sec-num">09</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <h3><i class="fa-solid fa-1"></i> Type 1 vs Type 2</h3>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h4>Type 1 (DIE)</h4>
+        <ul>
+          <li>Insulin dependent</li>
+          <li>Ketosis prone</li>
+          <li><strong>D</strong>iet, <strong>I</strong>nsulin, <strong>E</strong>xercise</li>
+        </ul>
+      </div>
+      <div class="compare-card">
+        <h4>Type 2 (DOA)</h4>
+        <ul>
+          <li>Non-insulin dependent</li>
+          <li><strong>D</strong>iet, <strong>O</strong>ral hypoglycemic, <strong>A</strong>ctivity</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3><i class="fa-solid fa-syringe"></i> Insulin Types</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Type</th><th>Onset</th><th>Peak</th><th>Duration</th><th>Notes</th></tr>
+      <tr><td><span class="drug" onclick="drugCard('Regular Insulin')">Regular</span></td><td>1 hr</td><td>2 hr</td><td>4 hr</td><td>Clear, IV OK</td></tr>
+      <tr><td><span class="drug" onclick="drugCard('NPH Insulin')">NPH</span></td><td>6 hr</td><td>8&ndash;10 hr</td><td>12 hr</td><td>Cloudy, <strong>NEVER IV</strong></td></tr>
+      <tr><td><span class="drug" onclick="drugCard('Insulin Glargine')">Lantus</span></td><td>1 hr</td><td><strong>NO peak</strong></td><td>12&ndash;24 hr</td><td>Safe at bedtime</td></tr>
+      <tr><td><span class="drug" onclick="drugCard('Insulin Lispro')">Humalog</span></td><td>15 min</td><td>30 min</td><td>3 hr</td><td>Give <strong>WITH</strong> meals</td></tr>
+    </table></div>
+
+    <h3><i class="fa-solid fa-person-running"></i> Exercise &amp; Insulin</h3>
+    <div class="rule-box">Exercise = like another shot of insulin. <strong>More exercise = need LESS insulin.</strong></div>
+
+    <h3><i class="fa-solid fa-arrow-down"></i> Hypoglycemia</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>"Drunk in shock"</strong> &mdash; tremors, diaphoresis, confusion, tachycardia</div>
+    <ul>
+      <li><strong>Conscious:</strong> Rapidly metabolizable carbs (OJ + crackers)</li>
+      <li><strong>Unconscious:</strong> <span class="drug" onclick="drugCard('Glucagon')">Glucagon</span> IM or <span class="drug" onclick="drugCard('Dextrose')">D10/D50</span> IV</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-arrow-up"></i> DKA vs HHNK</h3>
+    <div class="table-wrap"><table>
+      <tr><th></th><th>DKA (Type 1 ONLY)</th><th>HHNK (Type 2)</th></tr>
+      <tr><td><strong>Features</strong></td><td>Dehydration, ketones, Kussmaul breathing, high K+, acidosis</td><td>Severe dehydration</td></tr>
+      <tr><td><strong>Treatment</strong></td><td><strong>HYDRATE</strong> + <span class="drug" onclick="drugCard('Regular Insulin')">Regular Insulin</span> + NS</td><td><strong>HYDRATE</strong></td></tr>
+    </table></div>
+
+    <h3><i class="fa-solid fa-thermometer"></i> Sick Day Rules</h3>
+    <ul>
+      <li>Glucose goes <strong>UP</strong> when sick</li>
+      <li><strong>Still take insulin</strong></li>
+      <li>Sip water frequently</li>
+      <li>Stay active as tolerated</li>
+    </ul>
+
+    <div class="key-point"><span class="kp-icon"><i class="fa-solid fa-circle-info"></i></span> <strong>Open insulin expires in 30 days.</strong></div>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 10: Drug Toxicities & Electrolytes                   -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-flask-vial"></i></span>
+    <span class="sec-title">Drug Toxicities &amp; Electrolytes</span>
+    <span class="sec-num">10</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <h3><i class="fa-solid fa-skull-crossbones"></i> Drug Therapeutic &amp; Toxic Levels</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Drug</th><th>Therapeutic</th><th>Toxic</th><th>Used For</th></tr>
+      <tr><td><span class="drug" onclick="drugCard('Lithium')">Lithium</span></td><td>0.6 &ndash; 1.2</td><td>&ge;2</td><td>Bipolar disorder</td></tr>
+      <tr><td><span class="drug" onclick="drugCard('Digoxin')">Digoxin</span></td><td>1 &ndash; 2</td><td>&ge;2</td><td>A-fib, CHF</td></tr>
+      <tr><td><span class="drug" onclick="drugCard('Aminophylline')">Aminophylline</span></td><td>10 &ndash; 20</td><td>&ge;20</td><td>Airway antispasmodic</td></tr>
+      <tr><td><span class="drug" onclick="drugCard('Phenytoin')">Dilantin (Phenytoin)</span></td><td>10 &ndash; 20</td><td>&ge;20</td><td>Seizures</td></tr>
+    </table></div>
+
+    <h3><i class="fa-solid fa-baby"></i> Bilirubin</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Level</th><th>Action</th></tr>
+      <tr><td>&lt;9.9</td><td>Normal</td></tr>
+      <tr><td>14 &ndash; 15</td><td>Hospitalize</td></tr>
+      <tr><td>&ge;20</td><td><strong>Toxic</strong> &mdash; Kernicterus, opisthotonus (position on side)</td></tr>
+    </table></div>
+
+    <h3><i class="fa-solid fa-utensils"></i> Dumping Syndrome vs Hiatal Hernia</h3>
+    <div class="table-wrap"><table>
+      <tr><th></th><th>Dumping Syndrome</th><th>Hiatal Hernia</th></tr>
+      <tr><td><strong>Problem</strong></td><td>Food moves too fast</td><td>Food goes wrong direction</td></tr>
+      <tr><td><strong>Carbs</strong></td><td>LOW</td><td>HIGH</td></tr>
+      <tr><td><strong>Protein</strong></td><td>HIGH</td><td>LOW</td></tr>
+      <tr><td><strong>Fluids</strong></td><td>Restrict with meals</td><td>HIGH</td></tr>
+      <tr><td><strong>Position</strong></td><td>Head LOW (lie down)</td><td>Raise HOB</td></tr>
+    </table></div>
+
+    <h3><i class="fa-solid fa-bolt"></i> Electrolyte Rules</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span>
+      <strong>Kalemias</strong> (potassium) = <strong>SAME</strong> as prefix (hyper-K = everything hyper) <em>EXCEPT</em> HR &amp; urine output<br>
+      <strong>Calcemias</strong> (calcium) = <strong>OPPOSITE</strong> of prefix<br>
+      <strong>Magnesiums</strong> = <strong>OPPOSITE</strong> of prefix
+    </div>
+
+    <ul>
+      <li><strong>Chvostek sign:</strong> Cheek tap &rarr; facial spasm = <strong>LOW calcium</strong></li>
+      <li><strong>Trousseau sign:</strong> BP cuff &rarr; hand spasm = <strong>LOW calcium</strong></li>
+      <li><strong>Numbness/tingling</strong> = earliest sign of <strong>ANY</strong> electrolyte disorder</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-arrow-up"></i> High Potassium Treatment</h3>
+    <ul>
+      <li><strong>Fast/Temporary:</strong> D5W + <span class="drug" onclick="drugCard('Regular Insulin')">Regular Insulin</span></li>
+      <li><strong>Slow/Permanent:</strong> <span class="drug" onclick="drugCard('Kayexalate')">Kayexalate</span></li>
+    </ul>
+
+    <h3><i class="fa-solid fa-glass-water"></i> Sodium</h3>
+    <ul>
+      <li><strong>High sodium</strong> = Dehydration</li>
+      <li><strong>Low sodium</strong> = Fluid overload</li>
+    </ul>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 11: Endocrine                                        -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-disease"></i></span>
+    <span class="sec-title">Endocrine</span>
+    <span class="sec-num">11</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <h3><i class="fa-solid fa-fire"></i> Hyperthyroidism = Hypermetabolism</h3>
+    <ul>
+      <li>Weight loss, high pulse/BP, heat intolerance, exophthalmos</li>
+      <li><strong>Graves&rsquo; disease</strong></li>
+    </ul>
+    <p><strong>Treatments:</strong></p>
+    <ul>
+      <li><strong>Radioactive iodine:</strong> isolate 24 hrs, flush toilet 3&times;</li>
+      <li><span class="drug" onclick="drugCard('Propylthiouracil')">PTU (Propylthiouracil)</span>: immunosuppressor, monitor WBCs</li>
+      <li><strong>Thyroidectomy</strong></li>
+    </ul>
+
+    <h3><i class="fa-solid fa-temperature-arrow-up"></i> Thyroid Storm = EMERGENCY</h3>
+    <div class="warning"><span class="warn-icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
+      <strong>Signs:</strong> Temps &gt;105&deg;F, severe HTN, severe tachycardia, psychotic delirium<br>
+      <strong>FIRST:</strong> Ice packs<br>
+      <strong>BEST:</strong> Cooling blanket<br>
+      <strong>Also:</strong> O<sub>2</sub> 10L via mask<br>
+      <strong>NO <span class="drug" onclick="drugCard('Acetaminophen')">Tylenol</span></strong> (acetaminophen)
+    </div>
+
+    <h3><i class="fa-solid fa-snowflake"></i> Hypothyroidism = Hypometabolism</h3>
+    <ul>
+      <li>Obese, cold intolerance = <strong>Myxedema</strong></li>
+      <li>Treatment: <span class="drug" onclick="drugCard('Levothyroxine')">Synthroid (Levothyroxine)</span></li>
+      <li><strong>NEVER sedate</strong> a hypothyroid patient</li>
+      <li><strong>Never hold thyroid pills</strong></li>
+    </ul>
+
+    <h3><i class="fa-solid fa-minus"></i> Addison&rsquo;s Disease (Undersecretion)</h3>
+    <ul>
+      <li>Hyperpigmented skin</li>
+      <li>Can&rsquo;t adapt to stress</li>
+    </ul>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>"Add a SONE"</strong> &mdash; Give glucocorticoids (<span class="drug" onclick="drugCard('Prednisone')">Prednisone</span>, <span class="drug" onclick="drugCard('Hydrocortisone')">Hydrocortisone</span>)</div>
+
+    <h3><i class="fa-solid fa-plus"></i> Cushing&rsquo;s Syndrome (Oversecretion)</h3>
+    <ul>
+      <li>Moon face, buffalo hump</li>
+      <li>Immunosuppressed, high glucose</li>
+      <li>Treatment: <strong>Adrenalectomy</strong></li>
+    </ul>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 12: Lab Values (Priority Levels)                     -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-vials"></i></span>
+    <span class="sec-title">Lab Values &amp; Priority Levels</span>
+    <span class="sec-num">12</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <div class="table-wrap"><table>
+      <tr><th>Lab</th><th>Normal</th><th>Level B</th><th>Level C</th><th>Level D (Deadly)</th></tr>
+      <tr><td><strong>Creatinine</strong></td><td>0.6 &ndash; 1.2</td><td colspan="3">Level A (assess kidney function)</td></tr>
+      <tr><td><strong>BUN</strong></td><td>8 &ndash; 25</td><td colspan="3">Assess dehydration</td></tr>
+      <tr><td><strong>Hemoglobin</strong></td><td>12 &ndash; 18</td><td>8 &ndash; 11</td><td>&lt;8 (prepare blood)</td><td>&mdash;</td></tr>
+      <tr><td><strong>Potassium</strong></td><td>3.5 &ndash; 5.3</td><td>&mdash;</td><td>Low K+; High 5.4&ndash;5.9</td><td><strong>&ge;6 (DEADLY)</strong></td></tr>
+      <tr><td><strong>pH</strong></td><td>7.35 &ndash; 7.45</td><td>&mdash;</td><td>&mdash;</td><td><strong>In the 6&rsquo;s (DEADLY)</strong></td></tr>
+      <tr><td><strong>CO<sub>2</sub></strong></td><td>35 &ndash; 45</td><td>&mdash;</td><td>High 50s</td><td><strong>In the 60s</strong></td></tr>
+      <tr><td><strong>pO<sub>2</sub></strong></td><td>78 &ndash; 100</td><td>&mdash;</td><td>Low 70s</td><td><strong>In the 60s</strong></td></tr>
+      <tr><td><strong>INR</strong></td><td>2s &amp; 3s</td><td>&mdash;</td><td><strong>&ge;4</strong> (HOLD&rarr;ASSESS&rarr;PREPARE Vit K&rarr;CALL doc)</td><td>&mdash;</td></tr>
+      <tr><td><strong>Platelets</strong></td><td>&gt;150K</td><td>&mdash;</td><td>&lt;90K</td><td><strong>&lt;40K (DEADLY)</strong></td></tr>
+      <tr><td><strong>WBC</strong></td><td>5K &ndash; 11K</td><td colspan="3">&mdash;</td></tr>
+      <tr><td><strong>ANC</strong></td><td>&gt;500</td><td colspan="3">&mdash;</td></tr>
+      <tr><td><strong>CD4</strong></td><td>&gt;200</td><td colspan="3">&lt;200 = HIV &rarr; AIDS</td></tr>
+      <tr><td><strong>O<sub>2</sub> Sat</strong></td><td>93 &ndash; 100</td><td>&mdash;</td><td>&lt;93 (peds &lt;95 = concern)</td><td>&mdash;</td></tr>
+    </table></div>
+
+    <div class="warning"><span class="warn-icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
+      <strong>The 5 D&rsquo;s (HIGHEST Priority / Deadly):</strong><br>
+      pH &amp; K+ <strong>in the 6&rsquo;s</strong> | CO<sub>2</sub> &amp; O<sub>2</sub> <strong>in the 60s</strong> | Platelets <strong>&lt;40K</strong>
+    </div>
+
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> Intubate when <strong>BOTH CO<sub>2</sub> and pO<sub>2</sub> are in the 60s</strong>.</div>
+
+    <div class="rule-box"><strong>ASSESS before DO</strong>, unless delaying puts the patient at higher risk.</div>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 13: Psych Drugs                                      -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-pills"></i></span>
+    <span class="sec-title">Psych Drugs</span>
+    <span class="sec-num">13</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <div class="key-point"><span class="kp-icon"><i class="fa-solid fa-circle-info"></i></span> <strong>ALL psych drugs:</strong> Low BP &amp; weight changes</div>
+
+    <h3><i class="fa-solid fa-tablet-screen-button"></i> Phenothiazines (1st Generation &mdash; end in -zine)</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>ABCDEFG:</strong><br>
+      <strong>A</strong>nticholinergic | <strong>B</strong>lurred vision | <strong>C</strong>onstipation | <strong>D</strong>rowsiness | <strong>E</strong>PS (extrapyramidal symptoms) | Photosensitivity (<strong>F</strong> for &ldquo;fried in the sun&rdquo;) | A<strong>g</strong>ranulocytosis
+    </div>
+    <p>Examples: <span class="drug" onclick="drugCard('Chlorpromazine')">Chlorpromazine</span>, <span class="drug" onclick="drugCard('Fluphenazine')">Fluphenazine</span></p>
+
+    <h3><i class="fa-solid fa-tablets"></i> Tricyclics</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>ABCDE:</strong> A through D (same as above) + <strong>E</strong>uphoria. Takes <strong>2&ndash;4 weeks</strong> to work.</div>
+    <p>Examples: <span class="drug" onclick="drugCard('Amitriptyline')">Elavil (Amitriptyline)</span>, <span class="drug" onclick="drugCard('Imipramine')">Tofranil (Imipramine)</span></p>
+
+    <h3><i class="fa-solid fa-capsules"></i> Benzodiazepines (end in -zep)</h3>
+    <ul>
+      <li><strong>Minor tranquilizers</strong></li>
+      <li>Uses: pre-op sedation, muscle relaxant, alcohol withdrawal, seizures</li>
+      <li><strong>Max duration: 2&ndash;4 weeks</strong></li>
+    </ul>
+    <p>Examples: <span class="drug" onclick="drugCard('Diazepam')">Diazepam</span>, <span class="drug" onclick="drugCard('Lorazepam')">Lorazepam</span>, <span class="drug" onclick="drugCard('Alprazolam')">Alprazolam</span></p>
+
+    <h3><i class="fa-solid fa-ban"></i> MAOIs</h3>
+    <p><span class="drug" onclick="drugCard('Isocarboxazid')">Marplan</span>, <span class="drug" onclick="drugCard('Phenelzine')">Nardil</span>, <span class="drug" onclick="drugCard('Tranylcypromine')">Parnate</span></p>
+    <div class="warning"><span class="warn-icon"><i class="fa-solid fa-triangle-exclamation"></i></span> <strong>Avoid tyramine!</strong><br>
+      <strong>No BAR:</strong> <strong>B</strong>ananas, <strong>A</strong>vocados, <strong>R</strong>aisins/dried fruit<br>
+      No organ or preserved meats<br>
+      No cheese EXCEPT cottage &amp; mozzarella<br>
+      No alcohol or chocolate
+    </div>
+
+    <h3><i class="fa-solid fa-gem"></i> Lithium</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>3 P&rsquo;s of <span class="drug" onclick="drugCard('Lithium')">Lithium</span>:</strong> Peeing, Pooping, Paresthesia</div>
+    <ul>
+      <li><strong>Toxic signs:</strong> tremors, metallic taste, severe diarrhea</li>
+      <li><strong>Linked to sodium</strong> &mdash; low Na = high Li toxicity</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-sun"></i> Prozac (SSRI)</h3>
+    <ul>
+      <li><span class="drug" onclick="drugCard('Fluoxetine')">Prozac (Fluoxetine)</span>: causes <strong>insomnia</strong> &rarr; give before noon</li>
+      <li>Watch for <strong>suicidal risk in adolescents</strong> with dose changes</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-shield-halved"></i> Haldol</h3>
+    <ul>
+      <li><span class="drug" onclick="drugCard('Haloperidol')">Haldol (Haloperidol)</span>: Only major antipsychotic <strong>safe in pregnancy</strong></li>
+      <li>Available in <strong>decanoate</strong> (long-acting IM) form</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-temperature-high"></i> NMS (Neuroleptic Malignant Syndrome)</h3>
+    <div class="warning"><span class="warn-icon"><i class="fa-solid fa-triangle-exclamation"></i></span> <strong>Life-threatening!</strong> Temps <strong>106&ndash;108&deg;F</strong>. Take temperature to distinguish NMS from EPS.</div>
+
+    <h3><i class="fa-solid fa-prescription-bottle-medical"></i> Special Drugs</h3>
+    <ul>
+      <li><span class="drug" onclick="drugCard('Clozapine')">Clozapine</span>: No ABCDEF side effects BUT <strong>DOES have agranulocytosis</strong> (trashes bone marrow)</li>
+      <li><span class="drug" onclick="drugCard('Ziprasidone')">Geodon (Ziprasidone)</span>: <strong>BLACK BOX WARNING</strong> &mdash; prolongs QT interval, risk of sudden cardiac arrest</li>
+    </ul>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 14: Labor & Delivery                                 -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-baby"></i></span>
+    <span class="sec-title">Labor &amp; Delivery</span>
+    <span class="sec-num">14</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <h3><i class="fa-solid fa-1"></i> Stage 1: Fetal Monitoring</h3>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h4><span style="color:#ef4444;"><i class="fa-solid fa-xmark"></i></span> BAD Signs</h4>
+        <ul>
+          <li>Low FHR</li>
+          <li>Low variability</li>
+          <li>Late decelerations</li>
+        </ul>
+      </div>
+      <div class="compare-card">
+        <h4><span style="color:#22c55e;"><i class="fa-solid fa-check"></i></span> OKAY Signs</h4>
+        <ul>
+          <li>High FHR (take mom&rsquo;s temp)</li>
+          <li>High variability</li>
+          <li>Early decels (head compression)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>LION:</strong> <strong>L</strong>eft side &rarr; <strong>I</strong>V fluids &rarr; <strong>O</strong>xygen &rarr; <strong>N</strong>otify physician</div>
+
+    <p><strong>Variable decelerations</strong> = cord compression &rarr; reposition / push cord off</p>
+
+    <h3><i class="fa-solid fa-cow"></i> VEAL CHOP</h3>
+    <div class="table-wrap"><table>
+      <tr><th>VEAL</th><th>CHOP</th></tr>
+      <tr><td><strong>V</strong>ariable decels</td><td><strong>C</strong>ord compression</td></tr>
+      <tr><td><strong>E</strong>arly decels</td><td><strong>H</strong>ead compression</td></tr>
+      <tr><td><strong>A</strong>ccelerations</td><td><strong>O</strong>K</td></tr>
+      <tr><td><strong>L</strong>ate decels</td><td><strong>P</strong>lacental insufficiency</td></tr>
+    </table></div>
+
+    <h3><i class="fa-solid fa-2"></i> Stage 2: Delivery</h3>
+    <ol>
+      <li>Deliver head</li>
+      <li>Suction <strong>mouth THEN nose</strong></li>
+      <li>Check for nuchal cord</li>
+      <li>Deliver shoulders</li>
+      <li>Apply ID band</li>
+    </ol>
+
+    <h3><i class="fa-solid fa-3"></i> Stage 3: Placenta</h3>
+    <ul>
+      <li>Placenta must be <strong>INTACT</strong></li>
+      <li>Cord has <strong>3 vessels</strong>: <strong>AVA</strong> (2 Arteries, 1 Vein)</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-4"></i> Stage 4: Recovery</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>4 things, 4 times per hour:</strong></div>
+    <ol>
+      <li><strong>Vitals</strong> &mdash; watch for signs of shock</li>
+      <li><strong>Fundus</strong> &mdash; Boggy = massage; Displaced = catheterize</li>
+      <li><strong>Pads</strong> &mdash; Saturate in &lt;15 min = BAD</li>
+      <li><strong>Roll over</strong> &mdash; Check for hidden bleeding underneath</li>
+    </ol>
+
+    <h3><i class="fa-solid fa-clipboard-list"></i> Postpartum Assessment</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>BUBBLESHEAD</strong> (Breasts, Uterus, Bladder, Bowels, Lochia, Episiotomy, Surgical site, Homans, Emotions, Attachment, Discharge)</div>
+
+    <h3><i class="fa-solid fa-head-side-virus"></i> Newborn Head</h3>
+    <ul>
+      <li><strong>Caput succedaneum:</strong> Crosses suture lines</li>
+      <li><strong>Cephalohematoma:</strong> Does NOT cross suture lines</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-prescription-bottle-medical"></i> OB Medications</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Drug</th><th>Use</th><th>Key Monitoring</th></tr>
+      <tr><td><span class="drug" onclick="drugCard('Terbutaline')">Terbutaline</span></td><td>Tocolytic (stop contractions)</td><td>Maternal tachycardia</td></tr>
+      <tr><td><span class="drug" onclick="drugCard('Magnesium Sulfate')">Magnesium Sulfate</span></td><td>Tocolytic / anti-seizure</td><td>Respirations &gt;12, reflexes +2</td></tr>
+      <tr><td><span class="drug" onclick="drugCard('Oxytocin')">Oxytocin (Pitocin)</span></td><td>Induce/augment labor</td><td>Hyperstimulation: contractions &gt;90 sec or &lt;2 min apart</td></tr>
+      <tr><td><span class="drug" onclick="drugCard('Methylergonovine')">Methergine</span></td><td>Postpartum hemorrhage</td><td>Raises BP (avoid in HTN)</td></tr>
+    </table></div>
+
+    <h3><i class="fa-solid fa-lungs"></i> Fetal Lung Maturity</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Drug</th><th>When</th><th>Route</th></tr>
+      <tr><td><span class="drug" onclick="drugCard('Betamethasone')">Betamethasone</span> (steroid)</td><td>Given to <strong>MOM</strong> before birth</td><td>IM</td></tr>
+      <tr><td><span class="drug" onclick="drugCard('Beractant')">Survanta (Beractant)</span> (surfactant)</td><td>Given to <strong>BABY</strong> after birth</td><td>Trans-tracheal</td></tr>
+    </table></div>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 15: Medications - Insulin, Heparin, Coumadin         -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-prescription"></i></span>
+    <span class="sec-title">Medications &ndash; Insulin, Heparin, Coumadin</span>
+    <span class="sec-num">15</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <h3><i class="fa-solid fa-syringe"></i> Humulin 70/30</h3>
+    <ul>
+      <li><span class="drug" onclick="drugCard('NPH Insulin')">NPH</span> = 70%, <span class="drug" onclick="drugCard('Regular Insulin')">Regular</span> = 30%</li>
+    </ul>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>Draw up: Clear before Cloudy (RN)</strong><br>
+      Pressurize: Air into NPH first, then Regular<br>
+      Draw up: Regular first, then NPH
+    </div>
+
+    <h3><i class="fa-solid fa-ruler-combined"></i> Injection Sizes</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Route</th><th>Gauge</th><th>Length</th></tr>
+      <tr><td>IM</td><td>21 gauge</td><td>1 inch</td></tr>
+      <tr><td>SubQ</td><td>25 gauge</td><td>5/8 inch</td></tr>
+    </table></div>
+
+    <h3><i class="fa-solid fa-droplet"></i> Heparin vs Coumadin</h3>
+    <div class="table-wrap"><table>
+      <tr><th></th><th><span class="drug" onclick="drugCard('Heparin')">Heparin</span></th><th><span class="drug" onclick="drugCard('Warfarin')">Coumadin (Warfarin)</span></th></tr>
+      <tr><td><strong>Route</strong></td><td>IV or SubQ</td><td>PO only</td></tr>
+      <tr><td><strong>Onset</strong></td><td>Immediate</td><td>Days to 1 week</td></tr>
+      <tr><td><strong>Duration</strong></td><td>Max 3 weeks (except <span class="drug" onclick="drugCard('Enoxaparin')">Lovenox</span>)</td><td>Lifelong OK</td></tr>
+      <tr><td><strong>Antidote</strong></td><td><span class="drug" onclick="drugCard('Protamine Sulfate')">Protamine Sulfate</span></td><td><span class="drug" onclick="drugCard('Vitamin K')">Vitamin K</span></td></tr>
+      <tr><td><strong>Lab Monitor</strong></td><td>PTT</td><td>PT / INR</td></tr>
+      <tr><td><strong>Pregnancy</strong></td><td><strong>CAN</strong> give</td><td><strong>CANNOT</strong> give</td></tr>
+    </table></div>
+
+    <h3><i class="fa-solid fa-tablets"></i> K-Wasting Diuretics</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> Ends in <strong>-X</strong> + <span class="drug" onclick="drugCard('Chlorothiazide')">Diuril</span> = K-wasting. <strong>All others spare potassium.</strong></div>
+    <p>Examples: <span class="drug" onclick="drugCard('Furosemide')">Lasix</span>, <span class="drug" onclick="drugCard('Hydrochlorothiazide')">HCTZ</span></p>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 16: Pediatrics & Teaching                            -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-children"></i></span>
+    <span class="sec-title">Pediatrics &amp; Teaching</span>
+    <span class="sec-num">16</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <h3><i class="fa-solid fa-cube"></i> Kids&rsquo; Toys &mdash; Always Ask 3 Questions</h3>
+    <ol>
+      <li>Is it <strong>Safe?</strong></li>
+      <li>Is it <strong>Age-appropriate?</strong></li>
+      <li>Is it <strong>Feasible?</strong></li>
+    </ol>
+    <ul>
+      <li>No small toys for children under <strong>4</strong></li>
+      <li>No metal toys with O<sub>2</sub></li>
+      <li>Fomites: Worst = stuffed animals; Best = hard plastic</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-baby"></i> Age-Appropriate Toys</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Age</th><th>Toy / Activity</th><th>Developmental Focus</th></tr>
+      <tr><td>Infant 0&ndash;6 mo</td><td>Musical mobile</td><td>Sensory stimulation</td></tr>
+      <tr><td>Infant 6&ndash;9 mo</td><td>Peek-a-boo</td><td>Object permanence</td></tr>
+      <tr><td>Infant 9&ndash;12 mo</td><td>Talking toys</td><td>Vocalization</td></tr>
+      <tr><td>Toddler 1&ndash;3 yr</td><td>Push-pull toys</td><td>Gross motor</td></tr>
+      <tr><td>Preschool 3&ndash;6 yr</td><td>Fine motor / pretend play</td><td>Balance, cooperative play</td></tr>
+      <tr><td>School age 6&ndash;12 yr</td><td><strong>3 C&rsquo;s:</strong> Creative, Collective, Competitive</td><td>Industry vs inferiority</td></tr>
+      <tr><td>Adolescent</td><td>Peer group activities</td><td>Identity formation</td></tr>
+    </table></div>
+
+    <div class="key-point"><span class="kp-icon"><i class="fa-solid fa-circle-info"></i></span> <strong>Adolescents OK together</strong> UNLESS: fresh post-op, immunosuppressed, or contagious.</div>
+
+    <h3><i class="fa-solid fa-graduation-cap"></i> Piaget&rsquo;s Stages</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Stage</th><th>Age</th><th>Key Feature</th></tr>
+      <tr><td>Sensorimotor</td><td>0&ndash;2 yr</td><td>Learns through senses &amp; movement</td></tr>
+      <tr><td>Pre-operational</td><td>3&ndash;6 yr</td><td>Magical thinking, egocentrism</td></tr>
+      <tr><td>Concrete Operations</td><td>7&ndash;11 yr</td><td><strong>Rule-oriented</strong></td></tr>
+      <tr><td>Formal Operations</td><td>12&ndash;15 yr</td><td><strong>Can manage own care</strong></td></tr>
+    </table></div>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 17: Laminectomy                                      -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-bone"></i></span>
+    <span class="sec-title">Laminectomy</span>
+    <span class="sec-num">17</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <h3><i class="fa-solid fa-hand-dots"></i> 3 P&rsquo;s of Nerve Root Compression</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>Pain, Paresthesia, Paresis</strong></div>
+
+    <h3><i class="fa-solid fa-location-crosshairs"></i> Location Matters</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Level</th><th>Affected Functions</th></tr>
+      <tr><td><strong>Cervical</strong></td><td>Breathing + Arms</td></tr>
+      <tr><td><strong>Thoracic</strong></td><td>Cough + Bowels</td></tr>
+      <tr><td><strong>Lumbar</strong></td><td>Bladder + Legs</td></tr>
+    </table></div>
+
+    <h3><i class="fa-solid fa-bed"></i> Post-Op Care</h3>
+    <ul>
+      <li><strong>Log roll</strong></li>
+      <li><strong>Don&rsquo;t dangle</strong> legs</li>
+      <li>Don&rsquo;t sit &gt;30 minutes</li>
+      <li><strong>MAY:</strong> walk, stand, lie down</li>
+    </ul>
+
+    <div class="key-point"><span class="kp-icon"><i class="fa-solid fa-circle-info"></i></span> <strong>Anterior thoracic approach</strong> = chest tube needed.</div>
+
+    <h3><i class="fa-solid fa-link"></i> Fusion Surgery</h3>
+    <ul>
+      <li><strong>2 incisions:</strong> spine + hip (donor site)</li>
+      <li>Most pain at the <strong>hip</strong></li>
+      <li>JP drain at the <strong>hip</strong></li>
+      <li>Highest rejection risk at the <strong>spine</strong></li>
+    </ul>
+
+    <h3><i class="fa-solid fa-ban"></i> Restrictions</h3>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h4>Permanent</h4>
+        <ul>
+          <li>Lift with knees</li>
+          <li>Cervical: never lift overhead</li>
+        </ul>
+      </div>
+      <div class="compare-card">
+        <h4>Temporary (6 weeks)</h4>
+        <ul>
+          <li>No sitting &gt;30 min</li>
+          <li>Log roll</li>
+          <li>No driving</li>
+          <li>Nothing &gt;5 lbs</li>
+        </ul>
+      </div>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 18: Prioritization, Delegation & Staff Management    -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-ranking-star"></i></span>
+    <span class="sec-title">Prioritization, Delegation &amp; Staff Management</span>
+    <span class="sec-num">18</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <h3><i class="fa-solid fa-list-ol"></i> 4 Rules of Prioritization</h3>
+    <ol>
+      <li>Acute &gt; Chronic</li>
+      <li>Fresh post-op &gt; Medical</li>
+      <li>Unstable &gt; Stable</li>
+      <li>More vital organ = tiebreaker</li>
+    </ol>
+
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>Organ Vitality Ranking:</strong> Brain &gt; Lung &gt; Heart &gt; Liver &gt; Kidney &gt; Pancreas</div>
+
+    <h3><i class="fa-solid fa-magnifying-glass"></i> The Modifying Phrase</h3>
+    <p>The <strong>modifying phrase</strong> (descriptor) is what matters most &mdash; NOT the diagnosis, NOT the age/gender.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h4><i class="fa-solid fa-bolt"></i> Unstable Words</h4>
+        <ul>
+          <li>Acute</li>
+          <li>&lt;12 hr post-op</li>
+          <li>Lab Level C or D</li>
+          <li>Newly admitted/diagnosed</li>
+          <li>Changing assessments</li>
+        </ul>
+      </div>
+      <div class="compare-card">
+        <h4><i class="fa-solid fa-shield"></i> Stable Words</h4>
+        <ul>
+          <li>Chronic</li>
+          <li>&gt;12 hr post-op</li>
+          <li>Lab Level A or B</li>
+          <li>Ready for discharge</li>
+          <li>Unchanged assessments</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="warning"><span class="warn-icon"><i class="fa-solid fa-triangle-exclamation"></i></span> <strong>ALWAYS unstable:</strong> Hemorrhage, Fever &gt;105&deg;F, Hypoglycemia, Pulselessness/Breathlessness</div>
+
+    <h3><i class="fa-solid fa-user-nurse"></i> LPN Scope &mdash; CANNOT Do</h3>
+    <ul>
+      <li>Start an IV</li>
+      <li>Hang, mix, or push IV medications</li>
+      <li>Administer blood products</li>
+      <li>Central line care</li>
+      <li>Plan care / Develop teaching plans</li>
+      <li>Care for unstable patients</li>
+      <li>First of anything (first assessment, first dressing change, etc.)</li>
+      <li>Admission, discharge, or transfer assessments</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-user"></i> UAP Scope &mdash; CANNOT Do</h3>
+    <ul>
+      <li>Chart</li>
+      <li>Give medications (EXCEPT topical OTC barrier creams)</li>
+      <li>Assess (EXCEPT vitals &amp; accuchecks)</li>
+      <li>Treat (EXCEPT enemas)</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-people-group"></i> Staff Management</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Behavior</th><th>Action</th></tr>
+      <tr><td><strong>Illegal</strong></td><td>Tell supervisor</td></tr>
+      <tr><td><strong>Dangerous</strong></td><td>Confront &amp; take over</td></tr>
+      <tr><td><strong>Inappropriate</strong></td><td>Talk to staff member later</td></tr>
+      <tr><td><strong>Never</strong></td><td>Ignore any of the above</td></tr>
+    </table></div>
+
+  </div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 19: Test-Taking Strategies                           -->
+<!-- ============================================================ -->
+<div class="accordion">
+  <button class="accordion-header" onclick="toggleAccordion(this)">
+    <span class="sec-icon"><i class="fa-solid fa-pen-to-square"></i></span>
+    <span class="sec-title">Test-Taking Strategies</span>
+    <span class="sec-num">19</span>
+    <i class="fa-solid fa-chevron-down chevron"></i>
+  </button>
+  <div class="accordion-body"><div class="accordion-content">
+
+    <h3><i class="fa-solid fa-pyramid"></i> Maslow&rsquo;s Hierarchy (NCLEX Priority)</h3>
+    <ol>
+      <li><strong>Physiological</strong> (highest priority)</li>
+      <li>Safety</li>
+      <li>Comfort</li>
+      <li>Psychological</li>
+      <li>Social</li>
+      <li>Spiritual (lowest priority)</li>
+    </ol>
+
+    <h3><i class="fa-solid fa-circle-question"></i> FIRST vs BEST</h3>
+    <p><strong>FIRST</strong> = the immediate/initial action. <strong>BEST</strong> = the definitive/most effective action. They may differ.</p>
+
+    <h3><i class="fa-solid fa-utensils"></i> Nutrition Guessing Rules</h3>
+    <ul>
+      <li>Pick <strong>chicken</strong> (not fried) first, then <strong>fish</strong> (not shellfish)</li>
+      <li>Never pick casseroles for children</li>
+    </ul>
+
+    <h3><i class="fa-solid fa-capsules"></i> Pharmacology Tips</h3>
+    <ul>
+      <li>Side effects tend to be in the <strong>same body system</strong> where the drug works</li>
+      <li>PO drug = pick the <strong>GI side effect</strong></li>
+    </ul>
+
+    <h3><i class="fa-solid fa-stethoscope"></i> Specialty Tips</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Specialty</th><th>Default First Action</th></tr>
+      <tr><td><strong>OB</strong></td><td>Always check <strong>fetal heart rate</strong></td></tr>
+      <tr><td><strong>Med-Surg</strong></td><td>First assess <strong>LOC</strong> (level of consciousness)</td></tr>
+      <tr><td><strong>Peds</strong></td><td>When in doubt: call it <strong>normal</strong>, pick <strong>older age</strong>, pick <strong>easier task</strong></td></tr>
+    </table></div>
+
+    <h3><i class="fa-solid fa-scale-balanced"></i> Worst Consequences Game</h3>
+    <p>For HIGHEST priority questions &mdash; ask: <strong>&ldquo;Which patient will have the worst outcome if I don&rsquo;t act NOW?&rdquo;</strong></p>
+
+    <h3><i class="fa-solid fa-heart"></i> Empathy Rule</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>Ignore what is SAID, go with what is FELT.</strong></div>
+
+    <h3><i class="fa-solid fa-street-view"></i> Sesame Street Rule</h3>
+    <div class="mnemonic"><span class="mnemonic-icon"><i class="fa-solid fa-lightbulb"></i></span> <strong>3 belong, 1 is different.</strong> The <strong>different one</strong> is the correct answer.</div>
+
+  </div></div>
+</div>
+
+</div><!-- /container -->
+
+<script>
+/* ===== Accordion Toggle ===== */
+function toggleAccordion(header) {
+  const acc = header.closest('.accordion');
+  acc.classList.toggle('open');
+}
+
+/* ===== Drug Card postMessage ===== */
+function drugCard(drugName) {
+  window.parent.postMessage({ type: 'showDrugCard', drug: drugName }, '*');
+}
+
+/* ===== Open first section by default ===== */
+document.addEventListener('DOMContentLoaded', function() {
+  const first = document.querySelector('.accordion');
+  if (first) first.classList.add('open');
+});
+</script>
+
+</body>
+</html>
