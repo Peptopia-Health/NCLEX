@@ -443,7 +443,7 @@ var loadingEl = document.getElementById('home-dashboard');
 if (loadingEl) loadingEl.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-900);font-weight:600;">Loading study data...</div>';
 var GH_CDN = 'https://cdn.jsdelivr.net/gh/Peptopia/NCLEX@main/';
 var GH_PAGES = 'https://peptopia.github.io/NCLEX/';
-var CACHE_BUST = '?v=19.8'; /* bump this when uploading new quiz files */
+var CACHE_BUST = '?v=19.9'; /* bump this when uploading new quiz files */
 fetch(GH_CDN + 'mnt_studydata.json' + CACHE_BUST)
 .then(function(r) {
 if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -479,7 +479,7 @@ loadingEl.innerHTML =
 'Error: Study data failed to load.' +
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
-var APP_VERSION = '19.8';
+var APP_VERSION = '19.9';
 var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, comprehensive7:150, comprehensive8:150, comprehensive9:150, comprehensive10:1000, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:100, pinkguide:100 };
 var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, comprehensive7: 1, comprehensive8: 1, comprehensive9: 1, comprehensive10: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1, pinkguide: 1 };
 var GH_AUDIO = 'https://github.com/Peptopia/NCLEX/releases/download/audio-v1/';
@@ -1100,9 +1100,9 @@ document.getElementById('home-footer').textContent = buildBannerText();
 var sectionEmojis = {
 cardio: '\u2764\uFE0F', resp: '\uD83D\uDCA8', neuro: '\uD83E\uDDE0', gi: '\uD83C\uDF7D\uFE0F', obpeds: '\uD83D\uDC76',
 endo: '\u2697\uFE0F', musc: '\uD83E\uDDB4', psych: '\uD83E\uDDD8', hemonc: '\uD83E\uDE78', integ: '\uD83E\uDE79', pharm: '\uD83D\uDC8A',
-fund: '\uD83D\uDCCB', gero: '\uD83E\uDDD3', nutr: '\uD83E\uDD57', workpharm: '\uD83E\uDDEC', yellowfever: '\uD83E\uDDA0', comprehensive: '\uD83C\uDF93', comprehensive2: '\uD83D\uDCDA', comprehensive4: '\uD83C\uDFC6', comprehensive5: '\uD83C\uDFAF', comprehensive6: '\uD83D\uDD2C', comprehensive7: '\u2728', comprehensive8: '\uD83D\uDCA1', comprehensive9: '\uD83C\uDF1F', comprehensive10: '\uD83C\uDFAB', fullexam: '\uD83D\uDCDD',
+fund: '\uD83D\uDCCB', gero: '\uD83E\uDDD3', nutr: '\uD83E\uDD57', workpharm: '\uD83E\uDDEC', yellowfever: '\uD83D\uDCD4', comprehensive: '\uD83C\uDF93', comprehensive2: '\uD83D\uDCDA', comprehensive4: '\uD83C\uDFC6', comprehensive5: '\uD83C\uDFAF', comprehensive6: '\uD83D\uDD2C', comprehensive7: '\u2728', comprehensive8: '\uD83D\uDCA1', comprehensive9: '\uD83C\uDF1F', comprehensive10: '\uD83C\uDFAB', fullexam: '\uD83D\uDCDD',
 endocompare: '\u2697\uFE0F', infctrl: '\uD83E\uDDA0', priority: '\uD83D\uDEA8', fluids: '\uD83D\uDCA7', cardiac: '\u2764\uFE0F', obhtn: '\uD83E\uDD30', obmatnb: '\uD83D\uDC76',
-pharmguide: '\uD83D\uDC8A', fundguide: '\uD83D\uDCCB', geroguide: '\uD83E\uDDD3', nutrguide: '\uD83E\uDD57', yfguide: '\uD83E\uDDA0', pinkguide: '\uD83D\uDCD9'
+pharmguide: '\uD83D\uDC8A', fundguide: '\uD83D\uDCCB', geroguide: '\uD83E\uDDD3', nutrguide: '\uD83E\uDD57', yfguide: '\uD83D\uDCD4', pinkguide: '\uD83D\uDCD9'
 };
 var sectionSummaries = {
 cardio: 'Heart failure, rhythms, shock, vascular disorders.',
@@ -1973,7 +1973,7 @@ if (foundCards[fkey]) foundationsHtml += foundCards[fkey];
 if (fkey === 'workpharm') foundationsHtml += infCtrlCard + priorityCard + fluidsCard + cardiacCard;
 }
 document.getElementById('home-grid-systems').innerHTML = '<div class="klimek-banner">\uD83C\uDFE5 Systems</div>' + systemsHtml;
-var yfCard = _ncCardHtml('yellowfever',0,'#ea580c','#fff7ed','#9a3412','#c2410c','\uD83E\uDDA0','Yellow Fever','Flavivirus transmission, Faget sign, toxicity phases &amp; vaccination.','openYFGuide','launchYFGuideQuiz','100');
+var yfCard = _ncCardHtml('yellowfever',0,'#ea580c','#fff7ed','#9a3412','#c2410c','\uD83D\uDCD4','Yellow','Exhaustive Klimek master review \u2014 530 points across all 12 lectures &amp; bonus topics.','openYFGuide','launchYFGuideQuiz','530');
 var stdCard = _ncCardHtml('stdsti',0.5,'#0d9488','#ccfbf1','#134e4a','#115e59','\uD83E\uDDA0','STDs & STIs','Comprehensive STD/STI comparison \u2014 diagnosis, treatment &amp; nursing care.','openSTDGuide','launchSTDQuiz','150');
 var pinkCard = _ncCardHtml('pinkguide',1,'#db2777','#fdf2f8','#831843','#9d174d','\uD83D\uDCD9','Pink','MK Short condensed review \u2014 high-yield topics, key labs &amp; priority nursing interventions.','openPinkGuide','launchPinkGuideQuiz','100');
 foundationsHtml += yfCard + stdCard + pinkCard;
@@ -3049,7 +3049,7 @@ cardio:'Cardiac Quiz',resp:'Respiratory Quiz',neuro:'Neurology Quiz',gi:'GI Quiz
 obpeds:'OB/Peds Quiz',endo:'Endocrine Quiz',musc:'Musculoskeletal Quiz',
 psych:'Psych Quiz',hemonc:'Hem/Onc Quiz',integ:'Integumentary Quiz',
 pharm:'Pharmacology Quiz',fund:'Fundamentals Quiz',gero:'Gerontology Quiz',
-nutr:'Nutrition Quiz',workpharm:'Work Pharm Quiz',yellowfever:'Yellow Fever Quiz',
+nutr:'Nutrition Quiz',workpharm:'Work Pharm Quiz',yellowfever:'Yellow Quiz',
 comprehensive:'Comprehensive Quiz',comprehensive2:'Comprehensive II Quiz',comprehensive4:'Comprehensive IV Quiz',comprehensive5:'Comprehensive V Quiz',comprehensive6:'Comprehensive VI Quiz',comprehensive7:'Comprehensive VII Quiz',comprehensive8:'Comprehensive VIII Quiz',comprehensive9:'Comprehensive IX Quiz',comprehensive10:'Comprehensive X Quiz',
 fullexam:'Comprehensive III Quiz',endocompare:'Endo Comparisons Quiz',
 infctrl:'Infection Control Quiz',priority:'Prioritization Quiz',
@@ -3057,7 +3057,7 @@ fluids:'Fluid & Electrolytes Quiz',cardiac:'Cardiac Quiz',
 obhtn:'OB Hypertension Quiz',obmatnb:'OB - Newborn Quiz',
 pharmguide:'Pharmacology Guide Quiz',fundguide:'Fundamentals Guide Quiz',
 geroguide:'Gerontology Guide Quiz',nutrguide:'Nutrition Guide Quiz',
-yfguide:'Yellow Fever Guide Quiz',
+yfguide:'Yellow Guide Quiz',
 pinkguide:'Pink Guide Quiz'
 };
 var title = labels[key] || ((SECTION_LABELS[key] || key) + ' Quiz');
@@ -3066,7 +3066,7 @@ initQuizUI(title, key);
 /* Register quiz launchers — each calls initQuizUI(title, key) */
 [['launchWorkPharmQuiz','Work Pharm Quiz','workpharm'],
 ['launchFullExamQuiz','Comprehensive III Quiz','fullexam'],
-['launchYellowFeverQuiz','Yellow Fever Quiz','yellowfever'],
+['launchYellowFeverQuiz','Yellow Quiz','yellowfever'],
 ['launchComprehensiveQuiz','Comprehensive Quiz','comprehensive'],
 ['launchComprehensive2Quiz','Comprehensive II Quiz','comprehensive2'],
 ['launchComprehensive4Quiz','Comprehensive IV Quiz','comprehensive4'],
@@ -3087,7 +3087,7 @@ initQuizUI(title, key);
 ['launchFundGuideQuiz','Fundamentals Guide Quiz','fundguide'],
 ['launchGeroGuideQuiz','Gerontology Guide Quiz','geroguide'],
 ['launchNutrGuideQuiz','Nutrition Guide Quiz','nutrguide'],
-['launchYFGuideQuiz','Yellow Fever Guide Quiz','yfguide'],
+['launchYFGuideQuiz','Yellow Guide Quiz','yfguide'],
 ['launchPinkGuideQuiz','Pink Guide Quiz','pinkguide'],
 ['launchSTDQuiz','STDs & STIs Quiz','stdsti']
 ].forEach(function(e){window[e[0]]=function(){initQuizUI(e[1],e[2])}});
@@ -3466,8 +3466,8 @@ categories: [
 ]},
 { name: 'Knowledge Banks', icon: '\uD83E\uDDE0', items: [
 { title: 'Lectures', file: 'Klimek Review.pdf', emoji: '\uD83D\uDCD6' },
-{ title: 'Yellow', file: 'Yellow Review.pdf', emoji: '\uD83D\uDD30' },
-{ title: 'Quiz (Coming Soon)', file: '', emoji: '\uD83D\uDCDD', sub: true, disabled: true },
+{ title: 'Yellow', file: 'Yellow Review.pdf', emoji: '<span style="display:inline-block;filter:sepia(1) saturate(8) hue-rotate(5deg) brightness(1.15)">\uD83D\uDCD4</span>' },
+{ title: '\u21B3 100 Questions', emoji: '\uD83D\uDCDD', sub: true, quizKey: 'yfguide', quizColor: '#ea580c' },
 { title: 'Blue', file: 'Blue Book Question Set.pdf', emoji: '\uD83D\uDCD8' },
 { title: 'Quiz (Coming Soon)', file: '', emoji: '\uD83D\uDCDD', sub: true, disabled: true },
 { title: 'Full Notes - 92 Pages', file: 'Lecture Notes - 92 Pages.pdf', emoji: '\uD83D\uDCD3' },
@@ -3495,7 +3495,8 @@ categories: [
 { title: 'Fundamentals', file: 'Guides/Fundamentals.html', emoji: '\uD83D\uDCCB', isHtml: true },
 { title: 'Gerontology', file: 'Guides/Gerontology.html', emoji: '\uD83E\uDDD3', isHtml: true },
 { title: 'Nutrition', file: 'Guides/Nutrition.html', emoji: '\uD83E\uDD57', isHtml: true },
-{ title: 'Yellow Fever', file: 'Guides/Yellow-Fever.html', emoji: '\uD83E\uDDA0', isHtml: true },
+{ title: 'Yellow', file: 'Guides/Yellow-Fever.html', emoji: '<span style="display:inline-block;filter:sepia(1) saturate(8) hue-rotate(5deg) brightness(1.15)">\uD83D\uDCD4</span>', isHtml: true },
+{ title: '\u21B3 100 Questions', emoji: '\uD83D\uDCDD', sub: true, quizKey: 'yfguide', quizColor: '#ea580c' },
 { title: 'Pink', file: 'Guides/Pink.html', emoji: '\uD83D\uDCD9', isHtml: true },
 { title: '\u21B3 100 Questions', emoji: '\uD83D\uDCDD', sub: true, quizKey: 'pinkguide' }
 ]},
@@ -3633,7 +3634,8 @@ html += '<div class="pdf-sidebar-item themed-item' + subCls + '" data-file="' + 
 var itemEmoji = item.emoji || '\uD83D\uDCC4';
 var subCls2 = item.sub ? ' info-sub' : '';
 if (item.quizKey) {
-html += '<div class="pdf-sidebar-item' + subCls2 + '" style="font-style:italic;color:#db2777;cursor:pointer;" onclick="var lv=document.getElementById(\'lecture-view\');if(lv)lv.style.display=\'none\';document.body.style.overflow=\'\';launchSectionQuiz(\'' + item.quizKey + '\');">' +
+var quizClr = item.quizColor || '#db2777';
+html += '<div class="pdf-sidebar-item' + subCls2 + '" style="font-style:italic;color:' + quizClr + ';cursor:pointer;" onclick="var lv=document.getElementById(\'lecture-view\');if(lv)lv.style.display=\'none\';document.body.style.overflow=\'\';launchSectionQuiz(\'' + item.quizKey + '\');">' +
 itemEmoji + ' ' + item.title + '</div>';
 } else if (item.disabled) {
 html += '<div class="pdf-sidebar-item' + subCls2 + '" style="opacity:0.45;cursor:default;pointer-events:none;font-style:italic;">' +
@@ -4229,7 +4231,7 @@ for (var si = 0; si < allKeys.length; si++) {
 SECTION_LABELS[allKeys[si]] = contentData[allKeys[si]].title;
 }
 SECTION_LABELS.fullexam = 'Comprehensive III';
-SECTION_LABELS.yellowfever = 'Yellow Fever';
+SECTION_LABELS.yellowfever = 'Yellow';
 SECTION_LABELS.comprehensive = 'Comprehensive';
 SECTION_LABELS.comprehensive2 = 'Comprehensive II';
 SECTION_LABELS.comprehensive4 = 'Comprehensive IV';
@@ -4250,7 +4252,7 @@ SECTION_LABELS.pharmguide = 'Pharmacology Guide';
 SECTION_LABELS.fundguide = 'Fundamentals Guide';
 SECTION_LABELS.geroguide = 'Gerontology Guide';
 SECTION_LABELS.nutrguide = 'Nutrition Guide';
-SECTION_LABELS.yfguide = 'Yellow Fever Guide';
+SECTION_LABELS.yfguide = 'Yellow Guide';
 SECTION_LABELS.pinkguide = 'Pink Guide';
 window.showProgress = function() {
 renderProgressDashboard();
