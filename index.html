@@ -242,10 +242,10 @@
 html:not(.dark) #peptopia-klimek-guide .home-card[data-section="workpharm"] .home-card-desc{color:#1e1b4b !important}
 /* Guide card description light mode overrides — inline styles are for dark mode */
 html:not(.dark) #peptopia-klimek-guide .home-card[data-section="endocompare"] .home-card-desc{color:#78350f !important}
-html:not(.dark) #peptopia-klimek-guide .home-card[data-section="infctrl"] .home-card-desc{color:#3d2200 !important}
-html:not(.dark) #peptopia-klimek-guide .home-card[data-section="priority"] .home-card-desc{color:#7f1d1d !important}
+html:not(.dark) #peptopia-klimek-guide .home-card[data-section="infctrl"] .home-card-desc{color:#5b21b6 !important}
+html:not(.dark) #peptopia-klimek-guide .home-card[data-section="priority"] .home-card-desc{color:#3730a3 !important}
 html:not(.dark) #peptopia-klimek-guide .home-card[data-section="fluids"] .home-card-desc{color:#164e63 !important}
-html:not(.dark) #peptopia-klimek-guide .home-card[data-section="cardiac"] .home-card-desc{color:#4c0519 !important}
+html:not(.dark) #peptopia-klimek-guide .home-card[data-section="cardiac"] .home-card-desc{color:#0c4a6e !important}
 /* Dynamic compact mode: hide button text when footer is narrow, keep icons */
 #peptopia-klimek-guide .btn-compact .home-card-btn{font-size:0 !important;gap:0 !important;padding:0.45rem 0.55rem}
 #peptopia-klimek-guide .btn-compact .home-card-btn>span{font-size:0.82rem}
@@ -304,11 +304,11 @@ musc:          {bg:'#fff7ed',accent:'#ea580c',dk:'#9a3412',lt:'#fed7aa',hf:'#ffe
 integ:         {bg:'#fdf2f8',accent:'#db2777',dk:'#9d174d',lt:'#fce7f3',hf:'#fce7f3',ht:'#fbcfe8'},
 obhtn:         {bg:'#eef4f8',accent:'#3d5e80',dk:'#1a2840',lt:'#d0e4f0',hf:'#dce8f2',ht:'#c4d8e8'},
 obmatnb:       {bg:'#ecf7f2',accent:'#2d6b55',dk:'#0f2e24',lt:'#c8e6d8',hf:'#d5ede2',ht:'#b8ddc8'},
-infctrl:       {bg:'#fdf8ef',accent:'#8b5e0f',dk:'#3d2200',lt:'#fdf0d5',hf:'#f8e8c8',ht:'#f0d8a8'},
-priority:      {bg:'#fef2f2',accent:'#dc2626',dk:'#7f1d1d',lt:'#fecaca',hf:'#fecdd3',ht:'#fda4af'},
+infctrl:       {bg:'#f5f3ff',accent:'#7c3aed',dk:'#4c1d95',lt:'#ede9fe',hf:'#ede9fe',ht:'#ddd6fe'},
+priority:      {bg:'#eef2ff',accent:'#4338ca',dk:'#312e81',lt:'#e0e7ff',hf:'#e0e7ff',ht:'#c7d2fe'},
 fluids:        {bg:'#ecfeff',accent:'#0891b2',dk:'#164e63',lt:'#a5f3fc',hf:'#cffafe',ht:'#67e8f9'},
-cardiac:       {bg:'#fff1f2',accent:'#e11d48',dk:'#4c0519',lt:'#fecdd3',hf:'#ffe4e6',ht:'#fda4af'},
-yellowfever:   {bg:'#fffbeb',accent:'#b45309',dk:'#78350f',lt:'#fef3c7',hf:'#fef3c7',ht:'#fde68a'},
+cardiac:       {bg:'#f0f9ff',accent:'#0369a1',dk:'#0c4a6e',lt:'#e0f2fe',hf:'#e0f2fe',ht:'#bae6fd'},
+yellowfever:   {bg:'#fff7ed',accent:'#ea580c',dk:'#9a3412',lt:'#ffedd5',hf:'#ffedd5',ht:'#fed7aa'},
 comprehensive2:{bg:'#faf5ff',accent:'#7e22ce',dk:'#581c87',lt:'#f3e8ff',hf:'#f3e8ff',ht:'#e9d5ff'},
 comprehensive4:{bg:'#fef3c7',accent:'#b45309',dk:'#78350f',lt:'#fef3c7',hf:'#fffbeb',ht:'#fde68a'},
 comprehensive5:{bg:'#ccfbf1',accent:'#0d9488',dk:'#115e59',lt:'#ccfbf1',hf:'#f0fdfa',ht:'#99f6e4'},
@@ -441,7 +441,7 @@ var loadingEl = document.getElementById('home-dashboard');
 if (loadingEl) loadingEl.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-900);font-weight:600;">Loading study data...</div>';
 var GH_CDN = 'https://cdn.jsdelivr.net/gh/Peptopia/NCLEX@main/';
 var GH_PAGES = 'https://peptopia.github.io/NCLEX/';
-var CACHE_BUST = '?v=19.5'; /* bump this when uploading new quiz files */
+var CACHE_BUST = '?v=19.7'; /* bump this when uploading new quiz files */
 fetch(GH_CDN + 'mnt_studydata.json' + CACHE_BUST)
 .then(function(r) {
 if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -477,7 +477,7 @@ loadingEl.innerHTML =
 'Error: Study data failed to load.' +
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
-var APP_VERSION = '19.5';
+var APP_VERSION = '19.7';
 var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, comprehensive7:150, comprehensive8:150, comprehensive9:150, comprehensive10:1000, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:100 };
 var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, comprehensive7: 1, comprehensive8: 1, comprehensive9: 1, comprehensive10: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1 };
 var GH_AUDIO = 'https://github.com/Peptopia/NCLEX/releases/download/audio-v1/';
@@ -1960,10 +1960,10 @@ systemsHtml += endoCompCard;
 }
 idx++;
 }
-var infCtrlCard = _ncCardHtml('infctrl',2,'#c2870a','#fdf0d5','#3d2200','var(--amber-800)','\uD83E\uDDA0','Infection Control','Precautions, sterile technique, HAIs, TB, bloodborne pathogens &amp; neutropenic care.','openInfCtrlGuide','launchInfCtrlQuiz','100');
-var priorityCard = _ncCardHtml('priority',2.5,'#dc2626','#fecaca','#7f1d1d','var(--red-800)','\uD83D\uDEA8','Prioritization','ABCs, Maslow\u2019s, delegation, triage, SBAR &amp; emergency protocols.','openPriorityGuide','launchPriorityQuiz','100');
+var infCtrlCard = _ncCardHtml('infctrl',2,'#7c3aed','#ede9fe','#4c1d95','#5b21b6','\uD83E\uDDA0','Infection Control','Precautions, sterile technique, HAIs, TB, bloodborne pathogens &amp; neutropenic care.','openInfCtrlGuide','launchInfCtrlQuiz','100');
+var priorityCard = _ncCardHtml('priority',2.5,'#4338ca','#e0e7ff','#312e81','#3730a3','\uD83D\uDEA8','Prioritization','ABCs, Maslow\u2019s, delegation, triage, SBAR &amp; emergency protocols.','openPriorityGuide','launchPriorityQuiz','100');
 var fluidsCard = _ncCardHtml('fluids',3,'#0891b2','#a5f3fc','#164e63','var(--cyan-800)','\uD83D\uDCA7','Fluid &amp; Electrolytes','Na\u207A, K\u207A, Ca\u00B2\u207A, Mg\u00B2\u207A, PO\u2084, IV solutions &amp; electrolyte emergencies.','openFluidsGuide','launchFluidsQuiz','100');
-var cardiacCard = _ncCardHtml('cardiac',3.5,'#e11d48','#fecdd3','#4c0519','var(--rose-800)','\u2764\uFE0F','Cardiac','HF, CAD, MI, dysrhythmias, hemodynamic monitoring &amp; cardiac pharmacology.','openCardiacGuide','launchCardiacQuiz','100');
+var cardiacCard = _ncCardHtml('cardiac',3.5,'#0369a1','#e0f2fe','#075985','#0c4a6e','\u2764\uFE0F','Cardiac','HF, CAD, MI, dysrhythmias, hemodynamic monitoring &amp; cardiac pharmacology.','openCardiacGuide','launchCardiacQuiz','100');
 var foundationsHtml = '';
 for (var fi = 0; fi < GROUPS.foundations.length; fi++) {
 var fkey = GROUPS.foundations[fi];
@@ -1971,7 +1971,7 @@ if (foundCards[fkey]) foundationsHtml += foundCards[fkey];
 if (fkey === 'workpharm') foundationsHtml += infCtrlCard + priorityCard + fluidsCard + cardiacCard;
 }
 document.getElementById('home-grid-systems').innerHTML = '<div class="klimek-banner">\uD83C\uDFE5 Systems</div>' + systemsHtml;
-var yfCard = _ncCardHtml('yellowfever',0,'var(--amber-800)','var(--amber-100)','var(--amber-800)','var(--amber-800)','\uD83E\uDDA0','Yellow Fever','Flavivirus transmission, Faget sign, toxicity phases &amp; vaccination.','openYFGuide','launchYFGuideQuiz','100');
+var yfCard = _ncCardHtml('yellowfever',0,'#ea580c','#fff7ed','#9a3412','#c2410c','\uD83E\uDDA0','Yellow Fever','Flavivirus transmission, Faget sign, toxicity phases &amp; vaccination.','openYFGuide','launchYFGuideQuiz','100');
 var stdCard = _ncCardHtml('stdsti',0.5,'#0d9488','#ccfbf1','#134e4a','#115e59','\uD83E\uDDA0','STDs & STIs','Comprehensive STD/STI comparison \u2014 diagnosis, treatment &amp; nursing care.','openSTDGuide','launchSTDQuiz','150');
 foundationsHtml += yfCard + stdCard;
 /* Non-comp / guide card generator — v18.8 consolidation */
@@ -3768,7 +3768,7 @@ btn.innerHTML = '\uD83D\uDCDD 100 Questions';
 btn.style.cssText = 'display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 1rem;border-radius:2rem;font-size:0.85rem;font-weight:700;border:2px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.12);color:#fff;cursor:pointer;backdrop-filter:blur(4px);transition:all 0.15s;margin-top:0.5rem;';
 btn.onmouseover = function(){this.style.background='rgba(255,255,255,0.25)';this.style.transform='translateY(-1px)';};
 btn.onmouseout = function(){this.style.background='rgba(255,255,255,0.12)';this.style.transform='';};
-btn.onclick = function(){ window.parent.postMessage({type:'launchGuideQuiz',key:quizKey},'*'); };
+btn.onclick = function(){ var lv = document.getElementById('lecture-view'); if (lv) lv.style.display = 'none'; document.body.style.overflow = ''; launchSectionQuiz(quizKey); };
 hero.appendChild(btn);
 } catch(e) { /* cross-origin, skip injection */ }
 });
@@ -4507,7 +4507,7 @@ fund:{bg:'rgba(100,116,139,0.12)',border:'rgba(100,116,139,0.35)',accent:'#94a3b
 gero:{bg:'rgba(168,85,247,0.12)',border:'rgba(168,85,247,0.35)',accent:'#c084fc',label:'#d8b4fe'},
 nutr:{bg:'rgba(34,197,94,0.12)',border:'rgba(34,197,94,0.35)',accent:'#86efac',label:'#bbf7d0'},
 workpharm:{bg:'rgba(109,40,217,0.12)',border:'rgba(109,40,217,0.35)',accent:'#c4b5fd',label:'#ddd6fe'},
-yellowfever:{bg:'rgba(180,83,9,0.12)',border:'rgba(180,83,9,0.35)',accent:'#fbbf24',label:'#fde68a'},
+yellowfever:{bg:'rgba(234,88,12,0.12)',border:'rgba(234,88,12,0.35)',accent:'#fb923c',label:'#ffedd5'},
 comprehensive:{bg:'rgba(109,40,217,0.12)',border:'rgba(109,40,217,0.35)',accent:'#a78bfa',label:'#ddd6fe'},
 comprehensive2:{bg:'rgba(126,34,206,0.12)',border:'rgba(126,34,206,0.35)',accent:'#c084fc',label:'#e9d5ff'},
 comprehensive5:{bg:'rgba(13,148,136,0.12)',border:'rgba(13,148,136,0.35)',accent:'#2dd4bf',label:'#99f6e4'},
@@ -4517,19 +4517,19 @@ comprehensive9:{bg:'rgba(124,58,237,0.12)',border:'rgba(124,58,237,0.35)',accent
 comprehensive10:{bg:'rgba(234,88,12,0.12)',border:'rgba(234,88,12,0.35)',accent:'#fb923c',label:'#fed7aa'},
 fullexam:{bg:'rgba(79,70,229,0.12)',border:'rgba(79,70,229,0.35)',accent:'#818cf8',label:'#c7d2fe'},
 endocompare:{bg:'rgba(194,65,12,0.12)',border:'rgba(194,65,12,0.35)',accent:'#fb923c',label:'#fed7aa'},
-infctrl:{bg:'rgba(139,94,15,0.12)',border:'rgba(139,94,15,0.35)',accent:'#fbbf24',label:'#fdf0d5'},
+infctrl:{bg:'rgba(124,58,237,0.12)',border:'rgba(124,58,237,0.35)',accent:'#c4b5fd',label:'#ddd6fe'},
 fluids:{bg:'rgba(8,145,178,0.12)',border:'rgba(8,145,178,0.35)',accent:'#67e8f9',label:'#a5f3fc'},
-cardiac:{bg:'rgba(225,29,72,0.12)',border:'rgba(225,29,72,0.35)',accent:'#fb7185',label:'#fecdd3'},
+cardiac:{bg:'rgba(3,105,161,0.12)',border:'rgba(3,105,161,0.35)',accent:'#7dd3fc',label:'#e0f2fe'},
 obhtn:{bg:'rgba(61,94,128,0.12)',border:'rgba(61,94,128,0.35)',accent:'#7ca3c4',label:'#d0e4f0'},
 obmatnb:{bg:'rgba(45,107,85,0.12)',border:'rgba(45,107,85,0.35)',accent:'#6bb89a',label:'#c8e6d8'},
 nutrguide:{bg:'rgba(22,163,74,0.12)',border:'rgba(22,163,74,0.35)',accent:'#4ade80',label:'#bbf7d0'},
-yfguide:{bg:'rgba(217,119,6,0.12)',border:'rgba(217,119,6,0.35)',accent:'#fbbf24',label:'#fde68a'},
+yfguide:{bg:'rgba(234,88,12,0.12)',border:'rgba(234,88,12,0.35)',accent:'#fb923c',label:'#ffedd5'},
 stdsti:{bg:'rgba(13,148,136,0.12)',border:'rgba(13,148,136,0.35)',accent:'#5eead4',label:'#99f6e4'}
 };
 /* SP_THEME aliases — verified identical via exact byte match */
 SP_THEME.comprehensive4 = SP_THEME.yellowfever;
-SP_THEME.comprehensive6 = SP_THEME.cardiac;
-SP_THEME.priority = SP_THEME.cardio;
+SP_THEME.comprehensive6 = {bg:'rgba(225,29,72,0.12)',border:'rgba(225,29,72,0.35)',accent:'#fb7185',label:'#fecdd3'};
+SP_THEME.priority = {bg:'rgba(67,56,202,0.12)',border:'rgba(67,56,202,0.35)',accent:'#a5b4fc',label:'#c7d2fe'};
 SP_THEME.pharmguide = SP_THEME.fullexam;
 SP_THEME.fundguide = SP_THEME.fund;
 SP_THEME.geroguide = SP_THEME.gero;
@@ -4549,7 +4549,7 @@ fund:{bg:'rgba(100,116,139,0.07)',border:'rgba(100,116,139,0.25)',accent:'#47556
 gero:{bg:'rgba(168,85,247,0.07)',border:'rgba(168,85,247,0.25)',accent:'#7c3aed',label:'#5b21b6'},
 nutr:{bg:'rgba(34,197,94,0.07)',border:'rgba(34,197,94,0.25)',accent:'#15803d',label:'#14532d'},
 workpharm:{bg:'rgba(109,40,217,0.07)',border:'rgba(109,40,217,0.25)',accent:'#6d28d9',label:'#4c1d95'},
-yellowfever:{bg:'rgba(180,83,9,0.07)',border:'rgba(180,83,9,0.25)',accent:'#b45309',label:'#92400e'},
+yellowfever:{bg:'rgba(234,88,12,0.07)',border:'rgba(234,88,12,0.25)',accent:'#ea580c',label:'#9a3412'},
 comprehensive2:{bg:'rgba(126,34,206,0.07)',border:'rgba(126,34,206,0.25)',accent:'#7e22ce',label:'#581c87'},
 comprehensive5:{bg:'rgba(13,148,136,0.07)',border:'rgba(13,148,136,0.25)',accent:'#0d9488',label:'#115e59'},
 comprehensive6:{bg:'rgba(225,29,72,0.07)',border:'rgba(225,29,72,0.25)',accent:'#e11d48',label:'#9f1239'},
@@ -4558,20 +4558,20 @@ comprehensive8:{bg:'rgba(101,163,13,0.07)',border:'rgba(101,163,13,0.25)',accent
 comprehensive9:{bg:'rgba(124,58,237,0.07)',border:'rgba(124,58,237,0.25)',accent:'#7c3aed',label:'#5b21b6'},
 comprehensive10:{bg:'rgba(234,88,12,0.07)',border:'rgba(234,88,12,0.25)',accent:'#ea580c',label:'#9a3412'},
 endocompare:{bg:'rgba(194,65,12,0.07)',border:'rgba(194,65,12,0.25)',accent:'#c2410c',label:'#9a3412'},
-infctrl:{bg:'rgba(139,94,15,0.07)',border:'rgba(139,94,15,0.25)',accent:'#a16207',label:'#854d0e'},
+infctrl:{bg:'rgba(124,58,237,0.07)',border:'rgba(124,58,237,0.25)',accent:'#7c3aed',label:'#5b21b6'},
 fluids:{bg:'rgba(8,145,178,0.07)',border:'rgba(8,145,178,0.25)',accent:'#0e7490',label:'#155e75'},
-cardiac:{bg:'rgba(225,29,72,0.07)',border:'rgba(225,29,72,0.25)',accent:'#be123c',label:'#881337'},
+cardiac:{bg:'rgba(3,105,161,0.07)',border:'rgba(3,105,161,0.25)',accent:'#0369a1',label:'#0c4a6e'},
 obhtn:{bg:'rgba(61,94,128,0.07)',border:'rgba(61,94,128,0.25)',accent:'#3d5e80',label:'#1a2840'},
 obmatnb:{bg:'rgba(45,107,85,0.07)',border:'rgba(45,107,85,0.25)',accent:'#2d6b55',label:'#1a4a3a'},
 nutrguide:{bg:'rgba(22,163,74,0.07)',border:'rgba(22,163,74,0.25)',accent:'#15803d',label:'#166534'},
 fullexam:{bg:'rgba(79,70,229,0.07)',border:'rgba(79,70,229,0.25)',accent:'#4338ca',label:'#312e81'},
-yfguide:{bg:'rgba(217,119,6,0.07)',border:'rgba(217,119,6,0.25)',accent:'#b45309',label:'#92400e'},
+yfguide:{bg:'rgba(234,88,12,0.07)',border:'rgba(234,88,12,0.25)',accent:'#ea580c',label:'#9a3412'},
 stdsti:{bg:'rgba(13,148,136,0.07)',border:'rgba(13,148,136,0.25)',accent:'#0d9488',label:'#134e4a'}
 };
 /* SP_THEME_LIGHT aliases — verified identical via exact byte match */
 SP_THEME_LIGHT.comprehensive = SP_THEME_LIGHT.workpharm;
 SP_THEME_LIGHT.comprehensive4 = SP_THEME_LIGHT.yellowfever;
-SP_THEME_LIGHT.priority = SP_THEME_LIGHT.cardio;
+SP_THEME_LIGHT.priority = {bg:'rgba(67,56,202,0.06)',border:'rgba(67,56,202,0.2)',accent:'#4338ca',label:'#312e81'};
 SP_THEME_LIGHT.pharmguide = SP_THEME_LIGHT.fullexam;
 SP_THEME_LIGHT.fundguide = SP_THEME_LIGHT.fund;
 SP_THEME_LIGHT.geroguide = SP_THEME_LIGHT.gero;
