@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Book</title>
+</head>
+<body>
+
+<div id="peptopia-blue-book">
+    <style>
+        #peptopia-blue-book {
+            /* Palette - Softened / Pastel Indigo Theme */
+            --slate-50: #f8fafc; --slate-100: #f1f5f9; --slate-200: #e2e8f0;
+            --slate-700: #334155; --slate-800: #1e293b; --slate-900: #0f172a;
+            
+            /* Theme Colors (Buttons & Headers) */
+            --rose-500: #f43f5e; --rose-700: #be123c; 
+            --blue-500: #06b6d4; --blue-700: #0e7490;
+            --purple-500: #8b5cf6; --purple-700: #6d28d9;
+            --emerald-500: #10b981; --emerald-700: #047857;
+            
+            /* Pale Backgrounds */
+            --rose-50: #fff1f2; --blue-50: #ecfeff;
+            --purple-50: #f5f3ff; --emerald-50: #ecfdf5;
+
+            /* Alert Colors */
+            --alert-bg: #fff7ed; --alert-border: #fdba74; --alert-text: #1e293b;
+            
+            /* General Elements */
+            --accent-gold: #f59e0b; 
+            --drug-blue: #2563eb; --key-purple: #7c3aed; 
+            --bg-main: #eef2ff; /* Soft indigo instead of white */
+            --bg-panel: #f8faff; /* Very soft tint for panels */
+            
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--slate-900);
+            line-height: 1.6;
+            font-size: 16px;
+            max-width: 64rem;
+            margin: 0 auto;
+            padding: 1rem;
+            box-sizing: border-box;
+            min-height: 100vh;
+        }
+
+        #peptopia-blue-book * { box-sizing: border-box; }
+
+        /* Navbar Layout */
+        #peptopia-blue-book .navbar {
+            background-color: var(--slate-800); 
+            color: var(--bg-panel); padding: 0.75rem 1rem;
+            border-radius: 0.5rem; margin-bottom: 1.5rem; 
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            min-height: 80px; 
+        }
+        
+        #peptopia-blue-book .nav-title { 
+            font-weight: 800; font-size: 1.5rem; 
+            display: flex; align-items: center; gap: 0.75rem; 
+        }
+
+        #peptopia-blue-book .nav-actions {
+            display: flex; flex-direction: column; gap: 0.25rem; width: 140px; flex-shrink: 0; 
+        }
+        
+        #peptopia-blue-book .action-btn {
+            padding: 0.4rem 0.5rem; border-radius: 0.25rem; border: none; 
+            cursor: pointer; font-weight: 600; font-size: 0.85rem; 
+            transition: all 0.2s; width: 100%; text-align: center;
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        #peptopia-blue-book .print-btn { background-color: var(--accent-gold); color: #fff; }
+        #peptopia-blue-book .print-btn:hover { background-color: #d97706; }
+
+        @media (max-width: 650px) {
+            #peptopia-blue-book .navbar { flex-direction: column; gap: 1rem; text-align: center; }
+            #peptopia-blue-book .nav-title { width: 100%; justify-content: center; margin-bottom: 0.5rem; }
+            #peptopia-blue-book .nav-actions { margin: 0 auto; }
+        }
+
+        /* Tabs */
+        #peptopia-blue-book .tabs-container { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+        #peptopia-blue-book .tab-btn {
+            padding: 0.6rem 1rem; border-radius: 0.5rem; font-weight: 700; 
+            color: #fff; border: none; flex-grow: 1; text-align: center;
+            cursor: pointer; transition: all 0.2s; font-size: 0.95rem;
+            filter: grayscale(40%) opacity(0.9); 
+        }
+        #peptopia-blue-book .tab-btn:hover { filter: grayscale(0%) opacity(1); transform: translateY(-1px); }
+        #peptopia-blue-book .tab-btn.active { 
+            filter: grayscale(0%) opacity(1); 
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); 
+            transform: translateY(1px);
+        }
+
+        #peptopia-blue-book #tab-cardio { background-color: var(--rose-500); }
+        #peptopia-blue-book #tab-resp { background-color: var(--blue-500); }
+        #peptopia-blue-book #tab-neuro { background-color: var(--purple-500); }
+        #peptopia-blue-book #tab-gi { background-color: var(--emerald-500); }
+
+        /* Layout */
+        #peptopia-blue-book .grid-layout { display: flex; flex-direction: column; gap: 2rem; } 
+        
+        /* Card Headers */
+        #peptopia-blue-book .card-header {
+            padding: 0.4rem 1rem; min-height: 35px;
+            color: #fff; display: flex; justify-content: space-between; align-items: center;
+            border-radius: 0.5rem 0.5rem 0 0;
+            font-size: 0.95rem; font-weight: 700; letter-spacing: 0.5px;
+        }
+
+        /* Tables */
+        #peptopia-blue-book .table-container { 
+            overflow-x: auto; border: 2px solid; border-radius: 0 0 0.5rem 0.5rem; background: var(--bg-panel); 
+            max-height: 600px; overflow-y: auto; 
+        }
+        #peptopia-blue-book table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem; }
+        #peptopia-blue-book th { padding: 0.75rem; background-color: var(--slate-100); color: var(--slate-900); border-bottom: 2px solid var(--slate-200); position: sticky; top: 0; z-index: 10; }
+        #peptopia-blue-book td { padding: 0.75rem; border-bottom: 1px solid var(--slate-200); vertical-align: top; }
+        #peptopia-blue-book tr:hover td { cursor: pointer; filter: brightness(95%); }
+        #peptopia-blue-book tr.selected td { border-left: 5px solid var(--accent-gold); background-color: #e0e7ff; }
+
+        /* Specific Colors */
+        #peptopia-blue-book .bg-rose { background-color: var(--rose-500) !important; }
+        #peptopia-blue-book .border-rose { border-color: var(--rose-500) !important; }
+        #peptopia-blue-book .bg-blue { background-color: var(--blue-500) !important; }
+        #peptopia-blue-book .border-blue { border-color: var(--blue-500) !important; }
+        #peptopia-blue-book .bg-purple { background-color: var(--purple-500) !important; }
+        #peptopia-blue-book .border-purple { border-color: var(--purple-500) !important; }
+        #peptopia-blue-book .bg-emerald { background-color: var(--emerald-500) !important; }
+        #peptopia-blue-book .border-emerald { border-color: var(--emerald-500) !important; }
+
+        #peptopia-blue-book .topic-cell { font-weight: 800; white-space: nowrap; width: 1%; color: var(--slate-900); }
+        #peptopia-blue-book .topic-cell.cardio { background-color: var(--rose-50); }
+        #peptopia-blue-book .topic-cell.resp { background-color: var(--blue-50); }
+        #peptopia-blue-book .topic-cell.neuro { background-color: var(--purple-50); }
+        #peptopia-blue-book .topic-cell.gi { background-color: var(--emerald-50); }
+
+        #peptopia-blue-book .key-point-cell { color: var(--slate-700); font-style: italic; }
+        #peptopia-blue-book .key-term { color: var(--key-purple); font-weight: 600; font-style: italic; }
+        
+        #peptopia-blue-book .alert-cell { color: var(--alert-text); background-color: var(--alert-bg); border-left: 3px solid var(--alert-border); }
+        #peptopia-blue-book .alert-cell strong { color: #be123c; font-weight: 800; }
+        #peptopia-blue-book .drug-name { color: var(--drug-blue); font-weight: 800; }
+
+        /* Visuals */
+        #peptopia-blue-book .visual-container {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 1.5rem; background-color: var(--bg-panel); border: 1px solid var(--slate-200);
+            border-radius: 0.5rem; min-height: 250px; max-width: 600px; margin: 0 auto;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        #peptopia-blue-book .visual-svg-wrapper {
+            width: 100%; height: 220px; display: flex; justify-content: center; align-items: center; overflow: hidden;
+        }
+
+        /* Print */
+        @media print {
+            body { background: #fff; color: #000; }
+            #peptopia-blue-book .navbar, #peptopia-blue-book .tabs-container { display: none; }
+            #peptopia-blue-book .grid-layout { display: block; }
+            #peptopia-blue-book .table-container { max-height: none; overflow: visible; }
+            #peptopia-blue-book { background-color: #fff; }
+        }
+    </style>
+
+    <nav class="navbar">
+        <div class="nav-title">
+            <span>📘</span> Blue Book
+        </div>
+        <div class="nav-actions">
+            <button class="action-btn print-btn" onclick="window.print()">Print Guide</button>
+        </div>
+    </nav>
+
+    <div class="tabs-container">
+        <button class="tab-btn bg-rose" id="tab-cardio" onclick="switchTab('cardio')">Cardiovascular</button>
+        <button class="tab-btn bg-blue" id="tab-resp" onclick="switchTab('resp')">Respiratory</button>
+        <button class="tab-btn bg-purple" id="tab-neuro" onclick="switchTab('neuro')">Neurological</button>
+        <button class="tab-btn bg-emerald" id="tab-gi" onclick="switchTab('gi')">GI & Renal</button>
+    </div>
+
+    <div id="content-area"></div>
+
+    <script>
+    (function() {
+        const contentData = {
+            cardio: {
+                title: 'Cardiovascular System', color: 'bg-rose', border: 'border-rose', type: 'cardio',
+                description: 'Exhaustive CV notes: Blood Pressure, MI, Angina, CHF, Shock, Vascular, Aneurysms, and Pregnancy CV.',
+                data: [
+                    { t: 'Blood Pressure: Definition', f: '<span class="key-term">Systole</span> (Maximal force) vs <span class="key-term">Diastole</span> (Lowest force).', a: 'Cessation of sounds = 2nd diastolic sound.' },
+                    { t: 'BP Cuff Size', f: 'Width must be <span class="key-term">2/3</span> of the arm.', a: 'Too Narrow = False HIGH. Too Wide = False LOW.' },
+                    { t: 'Pulse Pressure', f: 'Difference between <span class="key-term">Systolic</span> and <span class="key-term">Diastolic</span> pressure.', a: '<strong>Shock:</strong> Pulse pressure narrows. <strong>ICP:</strong> Pulse pressure widens.' },
+                    { t: 'BP Deflation', f: 'Deflating cuff too slowly causes <span class="key-term">venous congestion</span>.', a: '<strong>Result:</strong> False High reading.' },
+                    { t: 'Vasoconstriction', f: '<span class="key-term">Vasoconstriction</span> increases peripheral resistance.', a: '<strong>Result:</strong> Increased Blood Pressure.' },
+                    { t: 'Vasodilation', f: '<span class="key-term">Vasodilation</span> decreases peripheral resistance.', a: '<strong>Result:</strong> Decreased Blood Pressure.' },
+                    { t: 'Shock BP', f: 'Shock causes a decrease in <span class="key-term">circulating volume</span>.', a: '<strong>Result:</strong> Decreased Blood Pressure.' },
+                    { t: 'ICP BP', f: 'Increased <span class="key-term">Intracranial Pressure</span> (ICP).', a: '<strong>Result:</strong> Widened Pulse Pressure (Cushings Triad).' },
+                    { t: 'Angina Pectoris', f: 'Chest pain caused by <span class="key-term">decreased blood supply</span> to myocardium (<span class="key-term">ischemia</span>).', a: 'Pain is crushing, substernal, radiating.' },
+                    { t: 'Angina: Treatment', f: '<span class="drug-name">Nitroglycerin</span> and Rest.', a: '<strong>Diff from MI:</strong> Angina IS relieved by rest/nitro. MI is NOT.' },
+                    { t: 'Nitroglycerin Protocol', f: 'Take 1 tab q 5 mins x 3. If no relief, call MD.', a: 'Drug dilates coronary arteries, increasing O2 supply.' },
+                    { t: 'Nitro Route', f: 'Administered under the tongue (<span class="key-term">sublingual</span>).', a: '<strong>Storage:</strong> Keep dry/cool. Replace q6mo.' },
+                    { t: 'Nitro Action', f: 'Dilates <span class="key-term">coronary arteries</span> to increase O2 supply.', a: '<strong>Also:</strong> Reduces preload.' },
+                    { t: 'Nitro Side Effects', f: 'Headache and <span class="key-term">Hypotension</span>.', a: '<strong>Safety:</strong> Nurse wear gloves with paste to avoid headache.' },
+                    { t: 'Nitro Paste', f: 'Topical application of nitroglycerin.', a: '<strong>Precaution:</strong> Wear gloves!' },
+                    { t: 'Myocardial Infarction', f: '<span class="key-term">Necrosis</span> (death) of myocardial cells due to blockage.', a: '<strong>Symptoms:</strong> Crushing pain, nausea, diaphoresis, cold/clammy skin.' },
+                    { t: 'MI: Pain Description', f: 'Crushing, heavy, squeezing. Radiates to L arm/jaw.', a: '<strong>Duration:</strong> >30 minutes.' },
+                    { t: 'MI: Gender', f: 'Males are more likely to get an MI than females.', a: '<strong>True/False:</strong> True.' },
+                    { t: 'MI: Death Risk', f: 'Death occurs within <span class="key-term">one hour</span> of symptom onset in 50% of pts.', a: '<strong>Priority:</strong> Early intervention.' },
+                    { t: 'MI: Pain Meds', f: '<span class="drug-name">Morphine</span>, <span class="drug-name">Demerol</span>, <span class="drug-name">Nitroglycerin</span>.', a: '<strong>MONA:</strong> Morphine, Oxygen, Nitro, Aspirin.' },
+                    { t: 'MI: Aspirin', f: 'Given to prevent <span class="key-term">platelet aggregation</span> (clots).', a: '<strong>Drug:</strong> <span class="drug-name">Plavix</span> also anti-platelet.' },
+                    { t: 'MI: Complications', f: 'Cardiogenic shock, Arrhythmias, CHF.', a: '<strong>Most Common Arrhythmia:</strong> PVCs.' },
+                    { t: 'MI: PVCs', f: 'Premature Ventricular Contractions.', a: '<strong>Treatment:</strong> <span class="drug-name">Lidocaine</span> or Amiodarone.' },
+                    { t: 'MI: Enzymes', f: 'CPK, LDH, SGOT. <span class="key-term">Troponin</span> rises earliest (3 hrs).', a: '<strong>Post-MI:</strong> Permanent EKG change is ST wave changes.' },
+                    { t: 'MI: Treatment', f: '<span class="drug-name">Morphine</span>, O2, <span class="drug-name">Nitroglycerin</span>, <span class="drug-name">Aspirin</span> (MONA).', a: '<strong>PVCs:</strong> Treat with <span class="drug-name">Lidocaine</span>.' },
+                    { t: 'MI: Activity', f: 'Bed rest with bedside commode.', a: '<strong>Sex:</strong> Resume 6 weeks post-discharge.' },
+                    { t: 'MI: Cardiogenic Shock', f: 'Pump failure. IV fluids do NOT help.', a: '<strong>Tx:</strong> Cardiac drugs (Vasopressors/Inotropes).' },
+                    { t: 'MI: Signs', f: 'Nausea, Vomiting, Diaphoresis.', a: '<strong>Skin:</strong> Cold, clammy.' },
+                    { t: 'MI: EKG', f: 'Permanent <span class="key-term">ST wave changes</span>.', a: '<strong>Q waves:</strong> Pathologic Q waves indicate necrosis.' },
+                    { t: 'CHF: Left Sided', f: 'Left Ventricle Failure. Fluid backs up into <span class="key-term">LUNGS</span>.', a: '<strong>Signs:</strong> Dyspnea, Rales/Crackles, Orthopnea, Frothy bloody sputum.' },
+                    { t: 'CHF: Right Sided', f: 'Right Ventricle Failure. Fluid backs up into <span class="key-term">BODY</span>.', a: '<strong>Signs:</strong> JVD, Dependent Edema, Ascites, Wt Gain, Hepatomegaly.' },
+                    { t: 'CHF: Compensation', f: 'Hypertrophy, Dilation, Tachycardia.', a: '<strong>Decompensation:</strong> When these fail.' },
+                    { t: 'CHF: Drugs', f: 'Diuretics, Vasodilators, Digitalis.', a: '<strong>Goal:</strong> Reduce preload/afterload, increase contractility.' },
+                    { t: 'CHF: TED Hose', f: 'Decrease venous stasis.', a: '<strong>Apply:</strong> Before getting out of bed. Remove daily.' },
+                    { t: 'CHF: Massage', f: 'NEVER massage calves.', a: '<strong>Risk:</strong> Dislodging clot (Embolism).' },
+                    { t: 'Digitalis (Digoxin)', f: 'Increases <span class="key-term">strength</span>, decreases <span class="key-term">rate</span>. Hold if pulse <60.', a: '<strong>Action:</strong> Apical Pulse check required.' },
+                    { t: 'Digoxin Toxicity', f: 'Anorexia, N/V, Yellow Vision, Arrhythmia.', a: '<strong>Risk:</strong> Hypokalemia potentiates toxicity.' },
+                    { t: 'CHF: Weight', f: 'Best indicator of <span class="key-term">fluid retention</span>.', a: '<strong>Report:</strong> Gain of 3 lbs in one week.' },
+                    { t: 'CHF: Complication', f: '<span class="key-term">Pulmonary Edema</span>.', a: '<strong>Emergency:</strong> Fluid in lungs.' },
+                    { t: 'CHF: Diuretics', f: '<span class="drug-name">Lasix</span> (Furosemide). Loss of <span class="key-term">Potassium (K+)</span>.', a: '<strong>Monitor:</strong> K+ levels.' },
+                    { t: 'Hypovolemic Shock', f: 'Decreased <span class="key-term">circulating volume</span>. Decreased <span class="key-term">tissue perfusion</span>.', a: '<strong>#1 Cause:</strong> Acute blood loss.' },
+                    { t: 'Shock: BP/Pulse', f: 'BP Decreases, Pulse Increases (<span class="key-term">Tachycardia</span>).', a: '<strong>Pulse Pressure:</strong> Narrows.' },
+                    { t: 'Shock: Urine/LOC', f: 'Urine <30cc/hr. LOC Decreased.', a: '<strong>Kidneys:</strong> Shut down due to poor perfusion.' },
+                    { t: 'Shock: Skin', f: 'Cool, Pale, Clammy.', a: '<strong>Mechanism:</strong> Vasoconstriction shunts blood to vital organs.' },
+                    { t: 'Shock: Acid/Base', f: '<span class="key-term">Metabolic Acidosis</span>.', a: '<strong>Cause:</strong> Lactic acid accumulation (Anaerobic metabolism).' },
+                    { t: 'Shock: Treatment', f: 'Replace blood and fluids. O2.', a: '<strong>Position:</strong> Legs elevated (Trendelenburg).' },
+                    { t: 'Buerger\'s Disease', f: '<span class="key-term">Arterial obstruction/inflammation</span> of lower extremities.', a: '<strong>Who:</strong> Men who SMOKE. <strong>Sign:</strong> Intermittent Claudication.' },
+                    { t: 'Raynaud\'s Disease', f: '<span class="key-term">Arterial spasms</span> of fingers/toes. Triggered by cold/stress.', a: '<strong>Signs:</strong> Pain, numbness, tingling. Pale/Blue digits.' },
+                    { t: 'Thrombophlebitis', f: '<span class="key-term">Inflammation of vein</span> with clot.', a: '<strong>Prevention:</strong> Ambulation. <strong>Treatment:</strong> Anticoagulants, Bed rest. <strong>Never:</strong> Massage leg.' },
+                    { t: 'Thrombophlebitis: Surgery', f: 'Most common after <span class="key-term">Pelvic/Low Abdominal</span> surgery.', a: '<strong>Complication:</strong> Pulmonary Embolism.' },
+                    { t: 'Heparin', f: 'Immediate anticoagulation (IV/SQ). Monitor <span class="key-term">PTT</span>.', a: '<strong>Antidote:</strong> <span class="drug-name">Protamine Sulfate</span>. <strong>Range:</strong> 1.5-2.5x normal.' },
+                    { t: 'Coumadin', f: 'Long term anticoagulation (PO). Monitor <span class="key-term">PT/INR</span>.', a: '<strong>Antidote:</strong> <span class="drug-name">Vitamin K</span>. <strong>Range:</strong> INR 2.0-3.0.' },
+                    { t: 'Lovenox', f: 'Low-dose Heparin for DVT prevention.', a: '<strong>Use:</strong> Post-op prevention. Not for PE treatment.' },
+                    { t: 'Hypertension', f: '<span class="key-term">Persistent BP</span> > 140/90.', a: '<strong>Organs Affected:</strong> Brain, Eyes, Heart, Kidneys.' },
+                    { t: 'HTN: Diastolic', f: 'Increased <span class="key-term">Diastolic</span> is most damaging.', a: '<strong>Definition:</strong> Sustained elevation.' },
+                    { t: 'HTN Treatment', f: 'Diuretics, Wt loss, Na+ restriction, Stress reduction.', a: '<strong>Side Effect:</strong> Orthostatic Hypotension.' },
+                    { t: 'HTN Risk', f: 'Race (Blacks), Obesity, Oral Contraceptives, Aging.', a: '<strong>Lifestyle:</strong> Activity helps.' },
+                    { t: 'Aneurysm', f: 'Abnormal widening/weakening of artery wall.', a: '<strong>Danger:</strong> Rupture = Shock and death.' },
+                    { t: 'Aneurysm: Thoracic', f: 'Widening of the aorta.', a: '<strong>Post-op Tube:</strong> Chest tube.' },
+                    { t: 'Aneurysm: Abdominal', f: 'Most common symptom: Pulsating mass above umbilicus.', a: '<strong>Note:</strong> Often silent/asymptomatic.' },
+                    { t: 'Aneurysm: Vitals', f: 'Monitor <span class="key-term">Pulse</span> and BP.', a: '<strong>Change:</strong> Pulse changes before BP if rupture occurs.' },
+                    { t: 'Aneurysm: Activity', f: '<span class="key-term">Absolute Bedrest</span>.', a: '<strong>Do NOT:</strong> Turn, cough, deep breathe until stable.' },
+                    { t: 'Aneurysm: Rupture', f: 'Decreased LOC, tachycardia, hypotension.', a: '<strong>Priority:</strong> Get them to the OR ASAP.' },
+                    { t: 'CV Disease in Pregnancy', f: 'CD ranks 4th in maternal death. Cause: <span class="key-term">Rheumatic Heart Disease</span>.', a: '<strong>CO:</strong> Pregnancy requires 30-50% increased cardiac output.' },
+                    { t: 'CV Preg: Decompensation', f: 'Failure of heart to maintain circulation.', a: '<strong>Signs:</strong> Sudden dyspnea, JVD, Murmurs, Crackles.' },
+                    { t: 'CV Preg: Treatment', f: '#1 Treatment is <span class="key-term">REST</span>.', a: '<strong>Drugs:</strong> Diuretics, Heparin, Digitalis.' },
+                    { t: 'CV Preg: Labor', f: 'Give analgesics (even Morphine) to decrease anxiety/preload.', a: '<strong>Delivery:</strong> C-section NOT mandatory.' },
+                    { t: 'Polycythemia Vera', f: 'Increase in RBCs, WBCs, Platelets. <span class="key-term">Thick blood</span>.', a: '<strong>Sign:</strong> Ruddy complexion, enlarged spleen. <strong>Tx:</strong> Phlebotomy.' }
+                ]
+            },
+            resp: {
+                title: 'Respiratory System', color: 'bg-blue', border: 'border-blue', type: 'resp',
+                description: 'Exhaustive notes on COPD, Pneumonia, RDS, CF, and Airway Management.',
+                data: [
+                    { t: 'COPD: Components', f: 'Asthma, Bronchitis, Emphysema.', a: '<strong>Definition:</strong> Chronic Obstructive Pulmonary Disease.' },
+                    { t: 'COPD: Signs', f: 'SOB, Wheezing, Cough, Cyanosis.', a: '<strong>ABG:</strong> Hypoxemia, Hypercapnia, Resp Acidosis.' },
+                    { t: 'COPD: Chest', f: '<span class="key-term">Barrel Chest</span> (Increased AP diameter).', a: '<strong>Fingers:</strong> Clubbing.' },
+                    { t: 'COPD: Oxygen', f: 'Hypoxic Drive (Low O2 stimulates breathing).', a: '<strong>Limit:</strong> Max 2 LPM via NC.' },
+                    { t: 'Emphysema: Alveoli', f: 'Over-enlarged and Under-ventilated.', a: '<strong>Result:</strong> Air Trapping.' },
+                    { t: 'Emphysema: Breathing', f: 'Pursed Lip Breathing. Rapid/Grunting.', a: '<strong>Type:</strong> Pink Puffer/Cyanotic.' },
+                    { t: 'Emphysema: Diet', f: 'Frequent small meals.', a: '<strong>Fluids:</strong> 3 Liters/day (Force fluids).' },
+                    { t: 'Pneumonia', f: 'Infection of <span class="key-term">alveoli</span>.', a: '<strong>Cause:</strong> Bacteria, Virus, Aspiration.' },
+                    { t: 'Pneumonia: ABG', f: '<span class="key-term">Respiratory Alkalosis</span> (early/hyperventilation).', a: '<strong>Mechanism:</strong> Blow off CO2 > Consolidation traps.' },
+                    { t: 'Pulmonary Embolus', f: 'Obstruction of pulmonary capillary bed.', a: '<strong>Source:</strong> DVT (Legs).' },
+                    { t: 'PE Signs', f: 'Dyspnea, Pleuritic Pain, Tachycardia.', a: '<strong>1st Sign:</strong> Dyspnea.' },
+                    { t: 'PE Risk Factors', f: 'Bed rest, Oral Contraceptives, Atrial Fibrillation.', a: '<strong>Right Atrial Fib:</strong> Causes PE. Left causes Stroke.' },
+                    { t: 'PE Treatment', f: 'Oxygen, Anticoagulants.', a: '<strong>Severe:</strong> Shock-like symptoms.' },
+                    { t: 'Pulmonary Edema', f: 'Fluid in lungs from <span class="key-term">Left Ventricular Failure</span>.', a: '<strong>Sputum:</strong> Bloody and Frothy.' },
+                    { t: 'Pulmonary Edema Tx', f: '<span class="drug-name">Lasix</span>, <span class="drug-name">Morphine</span>, <span class="drug-name">Aminophylline</span>.', a: '<strong>Immediate:</strong> Elevate HOB, O2, Call MD.' },
+                    { t: 'Tuberculosis (TB)', f: 'Caused by <span class="key-term">Mycobacterium tuberculosis</span>.', a: '<strong>Signs:</strong> Night sweats, Hemoptysis, Wt loss.' },
+                    { t: 'TB Test', f: 'Mantoux (PPD). Positive if >10mm induration.', a: '<strong>Isolation:</strong> Airborne (Negative Pressure - 6 exchanges/hr).' },
+                    { t: 'TB Drugs (STRIPE)', f: 'Streptomycin, Rifampin, Isoniazid, Pyrizinamide, Ethambutol.', a: '<strong>Side FX:</strong> Peripheral Neuritis (B6), Red Urine (Rifampin).' },
+                    { t: 'TB Teaching', f: 'Avoid Alcohol (Hepatotoxicity).', a: '<strong>Non-contagious:</strong> After 3 negative sputum cultures.' },
+                    { t: 'RDS (Hyaline Membrane)', f: 'Occurs in <span class="key-term">Premature</span> infants. Lack of Surfactant.', a: '<strong>Function:</strong> Surfactant prevents alveolar collapse.' },
+                    { t: 'RDS Signs', f: 'Retractions, Nasal flaring, Grunting.', a: '<strong>Death:</strong> Most commonly within 96 hours if untreated.' },
+                    { t: 'RDS Testing', f: '<span class="key-term">L/S Ratio</span> (Lecithin/Sphingomyelin).', a: '<strong>Maturity:</strong> 2/1 indicates mature lungs.' },
+                    { t: 'RDS Treatment', f: '<span class="drug-name">Survanta</span> via ET Tube. PEEP/CPAP.', a: '<strong>Acidosis:</strong> Respiratory acidosis (CO2 retained).' },
+                    { t: 'RDS Complications', f: 'High O2 = <span class="key-term">Retrolental Fibroplasia</span> (Blindness).', a: '<strong>Ventilator:</strong> High pressures = Broncho-pulmonary dysplasia.' },
+                    { t: 'Epiglottitis', f: 'Inflammation of epiglottis (<span class="key-term">H. influenza B</span>).', a: '<strong>#1 Danger:</strong> Airway Obstruction.' },
+                    { t: 'Epiglottitis Signs', f: 'Muffled voice, Drooling, Stridor. Tripod position.', a: '<strong>NEVER:</strong> Put tongue blade in mouth.' },
+                    { t: 'Epiglottitis Tx', f: 'Antibiotics (<span class="drug-name">Penicillin/Ampicillin</span>).', a: '<strong>Prevention:</strong> Hib Vaccine.' },
+                    { t: 'Cystic Fibrosis', f: 'Exocrine gland disorder. Thick mucous.', a: '<strong>Systems:</strong> Lungs & Pancreas.' },
+                    { t: 'CF Diagnosis', f: 'Iontophoresis - <span class="key-term">Sweat Test</span> (>60 mEq/L Cl).', a: '<strong>Diet:</strong> High Calorie, High Protein.' },
+                    { t: 'CF Stools', f: 'Steatorrhea (Fat, Frothy, Foul-smelling, Floating).', a: '<strong>History:</strong> Often had Meconium ileus at birth.' },
+                    { t: 'CF Meds', f: '<span class="drug-name">Pancreatic Enzymes</span> (Viokase/Pancreatin).', a: '<strong>Admin:</strong> With meals.' },
+                    { t: 'CF Interventions', f: 'Most common intervention: <span class="key-term">Postural drainage</span>.', a: '<strong>Hot weather:</strong> Need NaCl tablets.' },
+                    { t: 'Asthma', f: 'Spasms and Inflammation of bronchioles.', a: '<strong>Signs:</strong> Wheezing, SOB, Cough (at night).' },
+                    { t: 'Asthma Meds', f: 'Bronchodilators & Steroids.', a: '<strong>Order:</strong> Give Bronchodilator FIRST.' },
+                    { t: 'Suctioning', f: '<span class="key-term">Surgical Asepsis</span> (Sterile technique).', a: '<strong>Suction Type:</strong> Intermittent (prevent mucosal damage).' },
+                    { t: 'Suctioning Time', f: 'Max <span class="key-term">10 seconds</span> per entry.', a: '<strong>Action:</strong> Suction while REMOVING catheter.' },
+                    { t: 'Suctioning Position', f: 'Unconscious: Side-lying, facing nurse.', a: '<strong>Hypoxia prevention:</strong> 100% O2 before beginning.' },
+                    { t: 'Tracheostomy', f: 'Surgical airway.', a: '<strong>Safety:</strong> Obturator at bedside. Suctioning is sterile.' },
+                    { t: 'Lung Sounds', f: 'Crackles (Fluid), Wheezes (Musical), Stridor (Upper Airway).', a: '<strong>Stridor Cause:</strong> Laryngeal spasm/swelling.' }
+                ]
+            },
+            neuro: {
+                title: 'Neurological System', color: 'bg-purple', border: 'border-purple', type: 'neuro',
+                description: 'Exhaustive Neuro notes covering ICP, CVA, Spinal Cord, Laminectomy, and Degenerative diseases.',
+                data: [
+                    { t: 'Increased ICP', f: 'Normal ICP 0-15 mmHg. Causes: Trauma, hemorrhage, edema.', a: '<strong>Earliest Sign:</strong> Change in LOC.' },
+                    { t: 'ICP Signs (Infant)', f: 'Bulging fontanels, high pitched cry.', a: '<strong>Adult:</strong> Headache, projectile vomiting.' },
+                    { t: 'Cushing\'s Triad', f: 'Late sign of ICP. 1. HTN with widening pulse pressure. 2. Bradycardia. 3. Irregular Resp.', a: '<strong>Action:</strong> Elevate HOB 30 degrees.' },
+                    { t: 'ICP Meds', f: '<span class="drug-name">Mannitol</span> (Osmotic diuretic).', a: '<strong>Steroids:</strong> Decadron to decrease edema.' },
+                    { t: 'Meningitis', f: 'Inflammation of arachnoid/pia mater.', a: '<strong>Signs:</strong> Nuchal rigidity, photophobia, fever.' },
+                    { t: 'Meningitis Signs', f: 'Kernig\'s (Leg pain) and Brudzinski\'s (Neck flex -> Knee flex).', a: '<strong>Diagnosis:</strong> Lumbar Puncture (Cloudy CSF, Low Glucose).' },
+                    { t: 'Meningitis Isolation', f: 'Contact and respiratory precautions.', a: '<strong>Duration:</strong> Until on antibiotics for 48 hours.' },
+                    { t: 'Opisthotonos', f: 'Arching of back from severe meningeal irritation.', a: '<strong>Position:</strong> Place in Side-lying position.' },
+                    { t: 'Spinal Tap (LP)', f: 'Needle into subarachnoid space (L3-L4).', a: '<strong>Post-op:</strong> Lie flat 6-12 hrs (prevent HA). Force fluids.' },
+                    { t: 'Seizures', f: 'Uncontrolled electrical discharge.', a: '<strong>Safety:</strong> Do NOT restrain. Do NOT put anything in mouth.' },
+                    { t: 'Seizure Meds', f: '<span class="drug-name">Dilantin</span> (Phenytoin).', a: '<strong>Side FX:</strong> Gingival hyperplasia (gum overgrowth).' },
+                    { t: 'CVA (Stroke)', f: 'Disruption of blood to brain. Thrombus, Embolus, Hemorrhage.', a: '<strong>Risk:</strong> HTN, Smoking, A-fib (Embolic).' },
+                    { t: 'CVA: TIA', f: 'Transient Ischemic Attack. Warning sign.', a: '<strong>Duration:</strong> 30 seconds to 24 hours.' },
+                    { t: 'CVA: First Sign', f: 'The first sign of CVA is usually a <span class="key-term">Change in LOC</span>.', a: '<strong>Position:</strong> HOB up 30 degrees. Fluid restricted.' },
+                    { t: 'CVA: Hemiplegia', f: 'Motor tracts cross over in the medulla.', a: '<strong>Rule:</strong> Right brain controls Left body.' },
+                    { t: 'CVA: Hemianopsia', f: 'Not seeing one half of the visual field.', a: '<strong>Teaching:</strong> Teach client to SCAN (move head side to side).' },
+                    { t: 'CVA: Aphasia', f: 'Expressive (Broca\'s) vs Receptive (Wernicke\'s).', a: '<strong>Global:</strong> Both. Dominant hemisphere.' },
+                    { t: 'Spinal Cord Injury', f: 'Immobilization is #1 goal.', a: '<strong>Level:</strong> C1 to C8 = Quadriplegic. Thoracic/Lumbar = Paraplegic.' },
+                    { t: 'Spinal Shock', f: 'Spinal cord swells above and below injury.', a: '<strong>Duration:</strong> 5 days to 3 months.' },
+                    { t: 'Autonomic Dysreflexia', f: 'Emergency! Occurs in injuries T6 or higher.', a: '<strong>Signs:</strong> Severe HTN, Headache, Bradycardia, Sweating.' },
+                    { t: 'Autonomic Dysreflexia Tx', f: 'Response to full bladder/bowel.', a: '<strong>1st Action:</strong> Elevate HOB. <strong>2nd:</strong> Empty bladder/bowel.' },
+                    { t: 'Laminectomy', f: 'Removal of bone to relieve nerve compression.', a: '<strong>Signs:</strong> Pain, Paresthesia, Paresis.' },
+                    { t: 'Laminectomy: Cervical', f: 'Neck area. Innervates diaphragm and arms.', a: '<strong>Assess:</strong> Breathing and arm function.' },
+                    { t: 'Laminectomy: Thoracic', f: 'Upper back. Innervates gut and abdominal muscles.', a: '<strong>Assess:</strong> Cough mechanism and bowel sounds.' },
+                    { t: 'Laminectomy: Lumbar', f: 'Lower back. Innervates bladder and legs.', a: '<strong>Assess:</strong> Urinary retention and leg function.' },
+                    { t: 'Laminectomy: Post-op', f: '<span class="key-term">Log roll</span> always.', a: '<strong>Restrictions:</strong> Do NOT dangle legs. Do NOT sit for >30 mins.' },
+                    { t: 'Laminectomy: Discharge', f: 'Temporary restrictions (6 weeks).', a: '<strong>Rules:</strong> No driving, no lifting >5lbs.' },
+                    { t: 'Myasthenia Gravis', f: 'Defect in Acetylcholine. Weakness worsens with activity.', a: '<strong>Crisis:</strong> Respiratory failure.' },
+                    { t: 'MG Test', f: 'Tensilon Test.', a: '<strong>Positive:</strong> Improvement in muscle strength.' },
+                    { t: 'MG Medications', f: 'Anticholinesterases (-stigmine).', a: '<strong>Timing:</strong> Must be given exactly on time (with food).' },
+                    { t: 'Multiple Sclerosis', f: 'Demyelination of CNS. Remissions/Exacerbations.', a: '<strong>Signs:</strong> Charcot\'s Triad (Tremor, Scanning speech, Nystagmus).' },
+                    { t: 'MS Treatment', f: 'ACTH / Prednisone for acute exacerbations.', a: '<strong>Spasms:</strong> Treated with Baclofen or Dantrium.' },
+                    { t: 'Parkinson\'s', f: '<span class="key-term">Dopamine deficiency</span> in Basal ganglia.', a: '<strong>Signs:</strong> Tremor (pill-rolling), Rigidity (Cogwheel), Bradykinesia.' },
+                    { t: 'Parkinson\'s Meds', f: '<span class="drug-name">Levodopa/Carbidopa</span> (Sinemet).', a: '<strong>Action:</strong> Increases Dopamine. Avoid B6.' },
+                    { t: 'Glasgow Coma Scale', f: 'Eye, Verbal, Motor.', a: '<strong>Max:</strong> 15. <strong>Coma:</strong> < 8.' },
+                    { t: 'Head Injury', f: 'Epidural vs Subdural Hematoma.', a: '<strong>Epidural:</strong> Arterial (fast). <strong>Subdural:</strong> Venous (slow).' },
+                    { t: 'Bell\'s Palsy', f: 'Paralysis of Facial Nerve (CN VII). Unilateral.', a: '<strong>Eye Care:</strong> Patch eye at night (cannot close).' },
+                    { t: 'Meniere\'s Disease', f: 'Inner ear fluid imbalance.', a: '<strong>Triad:</strong> Vertigo, Tinnitus, Hearing loss. <strong>Safety:</strong> Fall precautions.' },
+                    { t: 'Glaucoma', f: 'Increased IOP. Tunnel vision.', a: '<strong>Avoid:</strong> Mydriatics (dilate pupil).' },
+                    { t: 'Cataracts', f: 'Opacity of lens. Blurry vision.', a: '<strong>Post-op:</strong> No straining/bending (increases IOP).' },
+                    { t: 'Retinal Detachment', f: 'Separation of retina.', a: '<strong>Signs:</strong> Flashes of light, Curtain falling.' },
+                    { t: 'Hearing Aids', f: 'Amplifies sound (does not clarify).', a: '<strong>Whistling:</strong> Loose earmold or low battery.' }
+                ]
+            },
+            gi: {
+                title: 'GI & Renal System', color: 'bg-emerald', border: 'border-emerald', type: 'gi',
+                description: 'Exhaustive GI and Renal notes covering Failure, Surgeries, Diets, and Digestive disorders.',
+                data: [
+                    { t: 'Acute Glomerulonephritis', f: 'Inflammation of glomeruli. Cause: <span class="key-term">Group A Strep</span>.', a: '<strong>Signs:</strong> Puffiness of face, dark urine, Hematuria.' },
+                    { t: 'AGN Treatment', f: 'Most important intervention is <span class="key-term">Bedrest</span>.', a: '<strong>Diet:</strong> Moderate sodium restriction.' },
+                    { t: 'Renal Failure', f: 'Kidneys fail to excrete waste (Azotemia).', a: '<strong>Danger:</strong> Hyperkalemia and its effect on the heart.' },
+                    { t: 'Renal Failure: Phases', f: 'Oliguric, Diuretic, Recovery.', a: '<strong>Oliguric:</strong> <500cc/day. High K, High Na, High fluid volume.' },
+                    { t: 'Renal Failure: Diet', f: 'Oliguric phase diet restrictions.', a: '<strong>Diet:</strong> High Carb, Low Protein, Low Na, Low K, Low H2O.' },
+                    { t: 'Hemodialysis', f: 'Requires AV Shunt, Fistula, or Graft.', a: '<strong>Safety:</strong> NO BP or venipuncture in that arm.' },
+                    { t: 'Hemodialysis Syndrome', f: 'Disequilibrium Syndrome.', a: '<strong>Signs:</strong> Change in LOC, N/V, Headache, Twitching.' },
+                    { t: 'Peritoneal Dialysis', f: 'Abdomen punctured, Dialysate infused by gravity.', a: '<strong>Color:</strong> Dialysate should be Straw-colored (clear).' },
+                    { t: 'Peritoneal Dialysis: Issues', f: 'Cloudy drainage means <span class="key-term">Peritonitis</span>.', a: '<strong>Dyspnea:</strong> If SOB occurs, slow flow and elevate HOB.' },
+                    { t: 'Kidney Stones', f: 'Nephrolithiasis. Primary Tx: <span class="key-term">Increase Fluids</span> (>3000cc/day).', a: '<strong>Uric Acid Stones:</strong> Require Low Purine diet.' },
+                    { t: 'Pyelonephritis', f: 'Bacterial infection of kidney pelvis (E. Coli).', a: '<strong>Danger:</strong> Permanent scarring and kidney damage.' },
+                    { t: 'BPH', f: 'Benign Prostatic Hypertrophy. Men >50.', a: '<strong>Signs:</strong> Decreased force, hesitancy, forked stream.' },
+                    { t: 'TURP / Prostatectomy', f: 'Removal of prostate. 3-way CBI used post-op.', a: '<strong>CBI Purpose:</strong> Keep catheter clear of clots.' },
+                    { t: 'TURP Post-Op', f: 'Belladonna & Opiates (B&O) for bladder spasms.', a: '<strong>Bleeding:</strong> If clots increase, increase flow rate of CBI.' },
+                    { t: 'Foley Catheter', f: 'Empty bag q8h. Keep bag below bladder.', a: '<strong>Infection:</strong> Most common route is up the inside of catheter.' },
+                    { t: 'Appendicitis', f: 'Inflammation of appendix. RLQ Pain (<span class="key-term">McBurney\'s Point</span>).', a: '<strong>Danger:</strong> Rupture -> Peritonitis. <strong>Tx:</strong> NPO, Surgery. NO HEAT.' },
+                    { t: 'Appendicitis Diagnosis', f: 'Rebound tenderness. Elevated WBC (Leukocytosis).', a: '<strong>Meds:</strong> Avoid pain meds/enemas before seeing MD.' },
+                    { t: 'Celiac Disease', f: 'Malabsorption due to Gluten intolerance. Steatorrhea.', a: '<strong>Diet:</strong> No B.R.O.W. (Barley, Rye, Oats, Wheat). Rice/Corn OK.' },
+                    { t: 'Pyloric Stenosis', f: 'Narrowing of pylorus in infants (4-6 wks).', a: '<strong>Signs:</strong> Projectile Vomiting, Olive-shaped mass.' },
+                    { t: 'Hepatitis', f: 'Liver inflammation. Viral. Pruritis & Jaundice.', a: '<strong>Transmission:</strong> A/E (Fecal-Oral), B/C (Blood/Body Fluids).' },
+                    { t: 'Hepatitis Signs', f: 'Urine turns dark. Stools are light/clay colored.', a: '<strong>Aversion:</strong> Patients have an aversion to cigarettes.' },
+                    { t: 'Colostomy', f: 'Surgically created opening of colon to abdomen.', a: '<strong>New Stoma:</strong> Red, large, noisy. Noise goes away in a week.' },
+                    { t: 'Colostomy Types', f: 'More colon removed = more liquid stool.', a: '<strong>Ileostomy:</strong> Liquid. <strong>Transverse:</strong> Soft. <strong>Descending:</strong> Formed.' },
+                    { t: 'Colostomy Irrigation', f: 'Used for Descending colostomies to train bowel.', a: '<strong>Fluid:</strong> Tap water, warmer than body temp. Position: Sitting.' }
+                ]
+            }
+        };
+
+        let currentTab = 'cardio';
+        let currentItem = contentData.cardio.data[0];
+
+        function renderVisual(key) {
+            const style = 'height:200px; width:auto; display:block; margin:0 auto;';
+            
+            if(key.includes('MI') || key.includes('Angina')) {
+                return `<svg viewBox="0 0 100 100" style="${style}"><path d="M50 30 C 20 10, 10 50, 50 90 C 90 50, 80 10, 50 30" fill="#ffe4e6" stroke="#f43f5e" stroke-width="2"/><path d="M55 35 Q 65 45 60 60" stroke="#7f1d1d" stroke-width="3" fill="none"/><circle cx="60" cy="50" r="4" fill="#000"/><text x="70" y="50" font-size="6" fill="#7f1d1d" font-weight="bold">Blockage</text></svg>`;
+            }
+            if(key.includes('Aneurysm')) {
+                return `<svg viewBox="0 0 100 100" style="${style}"><path d="M40 20 L40 40 C 20 50, 20 70, 40 80 L40 90 M60 20 L60 40 C 80 50, 80 70, 60 80 L60 90" fill="#fff1f2" stroke="#f43f5e" stroke-width="2"/><text x="50" y="60" font-size="6" text-anchor="middle" fill="#be123c" font-weight="bold">Weakened Wall</text></svg>`;
+            }
+            if(key.includes('Emphysema') || key.includes('COPD')) {
+                return `<svg viewBox="0 0 100 100" style="${style}"><circle cx="40" cy="40" r="15" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/><circle cx="60" cy="40" r="15" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/><circle cx="50" cy="60" r="20" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/><text x="50" y="50" font-size="6" text-anchor="middle" fill="#0891b2" font-weight="bold">Trapped Air</text></svg>`;
+            }
+            if(key.includes('RDS')) {
+                return `<svg viewBox="0 0 100 100" style="${style}"><circle cx="50" cy="50" r="30" fill="#f8fafc" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,2"/><text x="50" y="50" font-size="6" text-anchor="middle" fill="#0891b2" font-weight="bold">Needs Surfactant</text></svg>`;
+            }
+            if(key.includes('ICP') || key.includes('Neuro') || key.includes('Stroke') || key.includes('CVA')) {
+                return `<svg viewBox="0 0 100 100" style="${style}"><path d="M30 40 Q 50 10 70 40 Q 90 50 70 80 Q 50 90 30 80 Q 10 50 30 40" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2"/><circle cx="60" cy="60" r="10" fill="#ef4444" opacity="0.6"/><text x="50" y="50" font-size="6" text-anchor="middle" fill="#6d28d9" font-weight="bold">Brain / Pressure</text></svg>`;
+            }
+            if(key.includes('Spinal') || key.includes('Laminectomy')) {
+                return `<svg viewBox="0 0 100 100" style="${style}"><rect x="45" y="20" width="10" height="60" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2"/><line x1="35" y1="40" x2="65" y2="40" stroke="#8b5cf6" stroke-width="2"/><line x1="35" y1="60" x2="65" y2="60" stroke="#8b5cf6" stroke-width="2"/><text x="50" y="90" font-size="6" text-anchor="middle" fill="#6d28d9" font-weight="bold">Spinal Column</text></svg>`;
+            }
+            if(key.includes('Appendicitis')) {
+                return `<svg viewBox="0 0 100 100" style="${style}"><path d="M30 20 L30 80 L80 80 L80 20 Z" fill="none" stroke="#ccc"/><circle cx="70" cy="70" r="5" fill="#ef4444"/><text x="55" y="60" font-size="6" fill="#ef4444" font-weight="bold">McBurney's</text></svg>`;
+            }
+            if(key.includes('Pyloric') || key.includes('Stomach') || key.includes('Ulcer')) {
+                return `<svg viewBox="0 0 100 100" style="${style}"><path d="M30 40 Q 60 20 80 50 Q 70 90 40 80 Q 20 60 30 40" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/><ellipse cx="75" cy="50" rx="5" ry="8" fill="#047857"/><text x="75" y="70" font-size="6" text-anchor="middle" fill="#047857" font-weight="bold">Olive Mass</text></svg>`;
+            }
+            if(key.includes('Kidney') || key.includes('Renal') || key.includes('Pyelonephritis')) {
+                return `<svg viewBox="0 0 100 100" style="${style}"><path d="M30 30 Q 80 30 80 60 Q 80 90 50 80 Q 20 60 30 30" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/><path d="M35 45 Q 45 45 45 55 Q 45 65 35 65" fill="none" stroke="#047857" stroke-width="2"/><text x="50" y="95" font-size="6" text-anchor="middle" fill="#047857" font-weight="bold">Kidney</text></svg>`;
+            }
+            if(key.includes('Colostomy')) {
+                return `<svg viewBox="0 0 100 100" style="${style}"><path d="M20 80 L20 30 L80 30 L80 80" fill="none" stroke="#10b981" stroke-width="15" stroke-linecap="round"/><circle cx="80" cy="50" r="8" fill="#ef4444"/><text x="50" y="60" font-size="6" text-anchor="middle" fill="#047857" font-weight="bold">Descending Stoma</text></svg>`;
+            }
+
+            return `<svg viewBox="0 0 100 100" style="${style}"><circle cx="50" cy="50" r="40" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/><text x="50" y="50" font-size="8" text-anchor="middle" fill="#94a3b8">Visual Reference</text></svg>`;
+        }
+
+        window.switchTab = function(tabName) {
+            currentTab = tabName;
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-rose', 'bg-blue', 'bg-purple', 'bg-emerald');
+                if(btn.id === 'tab-cardio') btn.classList.add('bg-rose'); 
+            });
+            
+            const activeBtn = document.getElementById(`tab-${tabName}`);
+            activeBtn.classList.add('active');
+            
+            if(tabName === 'cardio') activeBtn.classList.add('bg-rose');
+            if(tabName === 'resp') activeBtn.classList.add('bg-blue');
+            if(tabName === 'neuro') activeBtn.classList.add('bg-purple');
+            if(tabName === 'gi') activeBtn.classList.add('bg-emerald');
+
+            currentItem = contentData[tabName].data[0];
+            renderGuide();
+        }
+
+        function renderGuide() {
+            const container = document.getElementById('content-area');
+            const data = contentData[currentTab];
+
+            const rows = data.data.map((item, idx) => `
+                <tr onclick="selectItem(${idx})" class="${currentItem.t === item.t ? 'selected ' + data.type : ''}">
+                    <td class="topic-cell ${data.type}">${item.t}</td>
+                    <td class="key-point-cell">${item.f}</td>
+                    <td class="alert-cell ${data.type}">${item.a}</td>
+                </tr>
+            `).join('');
+
+            const visualHTML = renderVisual(currentItem.t);
+
+            const content = `
+                <div class="card-header ${data.color}">
+                    <h2 style="margin:0;">${data.title}</h2>
+                    <span style="font-size:0.8rem; font-weight:normal; opacity:0.9;">${data.data.length} Items</span>
+                </div>
+                <div class="grid-layout">
+                    <div>
+                        <div style="margin-bottom:1rem; padding:0.5rem; background:var(--bg-panel); border:1px solid #e2e8f0; border-radius:0.25rem;">${data.description}</div>
+                        <div class="table-container ${data.border}">
+                            <table>
+                                <thead><tr><th>Topic</th><th>Clinical Fact</th><th>Nursing Priority / Alerts</th></tr></thead>
+                                <tbody>${rows}</tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="visual-container">
+                            <h3 style="margin:0 0 1rem 0; color:#334155; font-size:1rem;">Visual Reference</h3>
+                            <div class="visual-svg-wrapper">${visualHTML}</div>
+                            <p style="margin-top:1rem; font-weight:700; text-align:center; font-size:1.1rem; color:#0f172a;">${currentItem.t}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.innerHTML = content;
+        }
+
+        window.selectItem = function(idx) {
+            currentItem = contentData[currentTab].data[idx];
+            renderGuide();
+        }
+
+        if(document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', () => switchTab('cardio')); } 
+        else { switchTab('cardio'); }
+    })();
+    </script>
+</div>
+
+</body>
+</html>
