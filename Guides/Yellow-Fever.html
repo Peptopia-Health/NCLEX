@@ -3,477 +3,1068 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yellow Fever — NCLEX Crib Notes</title>
+<title>MK Yellow — Exhaustive Master Guide</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-
 :root {
-  --pri-bg-from: #1a1400;
-  --pri-bg-mid: #2d2308;
-  --pri-bg-to: #3d3112;
-  --pri-accent: #d97706;
-  --pri-accent-light: #fbbf24;
-  --pri-text: #e8ecf4;
-  --pri-text-muted: #94a3b8;
-  --pri-gold: #fbbf24;
-  --pri-border: #f59e0b;
-  --pri-card-bg: rgba(255,255,255,0.04);
+  --bg: #fffbf0;
+  --surface: #ffffff;
+  --surface-alt: #fff7ed;
+  --border: #fdba74;
+  --border-light: #fed7aa;
+  --text: #1c1917;
+  --text-muted: #78716c;
+  --accent: #ea580c;
+  --accent-dark: #9a3412;
+  --accent-light: #f97316;
+  --hero-from: #9a3412;
+  --hero-to: #ea580c;
+  --badge-bg: rgba(255,255,255,0.15);
+  --badge-border: rgba(255,255,255,0.35);
+  --table-header: #fff7ed;
+  --table-stripe: #fffbf0;
+  --tag-bg: #ffedd5;
+  --tag-text: #9a3412;
+  --callout-bg: #fefce8;
+  --callout-border: #f59e0b;
+  --callout-icon: #d97706;
+  --mnemonic-bg: #fef9c3;
+  --mnemonic-border: #fde047;
+  --mnemonic-text: #854d0e;
+  --drug-bg: #ede9fe;
+  --drug-text: #5b21b6;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
 }
-
+html.dark {
+  --bg: #1a0f05;
+  --surface: #292017;
+  --surface-alt: #352a1a;
+  --border: #6b4020;
+  --border-light: #4a3018;
+  --text: #ffedd5;
+  --text-muted: #c4a882;
+  --accent: #f97316;
+  --accent-dark: #fed7aa;
+  --accent-light: #ea580c;
+  --hero-from: #7c2d12;
+  --hero-to: #c2410c;
+  --table-header: #352a1a;
+  --table-stripe: #292017;
+  --tag-bg: #4a3018;
+  --tag-text: #fdba74;
+  --callout-bg: #2d2510;
+  --callout-border: #b45309;
+  --callout-icon: #fbbf24;
+  --mnemonic-bg: #2d2510;
+  --mnemonic-border: #854d0e;
+  --mnemonic-text: #fde047;
+  --drug-bg: #1e1045;
+  --drug-text: #c4b5fd;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background: linear-gradient(160deg, var(--pri-bg-from) 0%, var(--pri-bg-mid) 45%, var(--pri-bg-to) 100%);
-  color: var(--pri-text); min-height: 100vh; padding: 0; line-height: 1.6; font-size: 1.02rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 15px;
+  -webkit-text-size-adjust: 100%;
 }
-body::before {
-  content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
-  background:
-    radial-gradient(ellipse 70% 50% at 15% 15%, rgba(217,119,6,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 85% 80%, rgba(245,158,11,0.05) 0%, transparent 60%);
-  pointer-events: none;
-}
-.guide-container { max-width: 920px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
-
 .hero {
-  position: relative;
-  background: linear-gradient(135deg, #1a1200 0%, #332400 40%, #4a3510 100%);
-  border-radius: 1.25rem; padding: 2rem 1.75rem 1.75rem; margin-bottom: 2rem;
-  border: 2px solid var(--pri-accent); overflow: hidden;
+  background: linear-gradient(135deg, var(--hero-from), var(--hero-to));
+  color: #fff;
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
 }
-.hero::before { content: ''; position: absolute; top: -40%; right: -15%; width: 280px; height: 280px; background: radial-gradient(circle, rgba(251,191,36,0.12), transparent 70%); pointer-events: none; }
-.hero::after { content: '🦟'; position: absolute; top: 1rem; right: 1.25rem; font-size: 2.8rem; opacity: 0.12; pointer-events: none; }
-.hero h1 { font-size: 2rem; font-weight: 800; color: #fff; letter-spacing: -0.01em; margin-bottom: 0.5rem; text-shadow: 0 2px 12px rgba(217,119,6,0.3); }
-.hero .subtitle { font-size: 1.05rem; color: #fde68a; line-height: 1.6; font-weight: 400; }
-.hero .badge-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.85rem; }
-.hero .badge { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.25rem 0.65rem; border-radius: 2rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; backdrop-filter: blur(4px); cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; text-decoration: none; }
-.hero .badge:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
-.badge-etio  { background: rgba(217,119,6,0.2); color: #fde68a; border: 1px solid rgba(217,119,6,0.4); }
-.badge-path  { background: rgba(220,38,38,0.2); color: #fca5a5; border: 1px solid rgba(220,38,38,0.4); }
-.badge-dx    { background: rgba(59,130,246,0.2); color: #93c5fd; border: 1px solid rgba(59,130,246,0.4); }
-.badge-tx    { background: rgba(16,185,129,0.2); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.4); }
-.badge-nurs  { background: rgba(168,85,247,0.2); color: #d8b4fe; border: 1px solid rgba(168,85,247,0.4); }
-.badge-vax   { background: rgba(245,158,11,0.2); color: #fcd34d; border: 1px solid rgba(245,158,11,0.4); }
-.badge-glob  { background: rgba(14,165,233,0.2); color: #7dd3fc; border: 1px solid rgba(14,165,233,0.4); }
-.badge-mem   { background: rgba(148,163,184,0.2); color: #cbd5e1; border: 1px solid rgba(148,163,184,0.4); }
-.guide-quiz-btn{display:inline-flex;align-items:center;gap:0.4rem;padding:0.5rem 1.1rem;border-radius:2rem;font-size:0.85rem;font-weight:700;border:2px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.12);color:#fff;cursor:pointer;backdrop-filter:blur(4px);transition:all 0.15s;margin-top:0.75rem;text-transform:uppercase;letter-spacing:0.03em}
-.guide-quiz-btn:hover{background:rgba(255,255,255,0.25);transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
-
-.section-hdr { position: relative; margin: 2.5rem 0 0; padding: 0.85rem 1.15rem; border-radius: 0.75rem 0.75rem 0 0; font-family: 'Inter', system-ui, sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.01em; }
-.sh-etio { background: #78350f; color: #fef3c7; }
-.sh-path { background: #7f1d1d; color: #fecaca; }
-.sh-dx   { background: #1e3a5f; color: #bfdbfe; }
-.sh-tx   { background: #064e3b; color: #a7f3d0; }
-.sh-nurs { background: #4a1d96; color: #e9d5ff; }
-.sh-vax  { background: #713f12; color: #fef3c7; }
-.sh-glob { background: #0c4a6e; color: #bae6fd; }
-.sh-mem  { background: #1e293b; color: #e2e8f0; }
-
-.content-block { background: var(--pri-card-bg); border: 1px solid rgba(255,255,255,0.06); border-top: none; border-radius: 0 0 0.75rem 0.75rem; padding: 1.25rem 1.15rem 1.5rem; margin-bottom: 0.5rem; }
-.content-block h3 { font-size: 1.1rem; font-weight: 700; color: var(--pri-accent-light); margin: 1.4rem 0 0.5rem; }
-.content-block h3:first-child { margin-top: 0; }
-.content-block p { margin: 0.4rem 0 0.7rem; color: var(--pri-text); line-height: 1.65; }
-.content-block ul, .content-block ol { margin: 0.4rem 0 0.8rem 1.3rem; color: var(--pri-text); }
-.content-block li { margin-bottom: 0.35rem; line-height: 1.55; }
-.content-block li strong { color: #fff; }
-.drug { color: #93c5fd; font-weight: 700; }
-.lyte { color: #ffa040; font-weight: 700; }
-
-.info-table { width: 100%; border-collapse: collapse; margin: 0.75rem 0 1rem; font-size: 0.95rem; }
-.info-table th { background: rgba(217,119,6,0.15); color: var(--pri-accent-light); padding: 0.55rem 0.7rem; text-align: left; font-weight: 700; border-bottom: 2px solid rgba(217,119,6,0.3); }
-.info-table td { padding: 0.5rem 0.7rem; border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top; }
-.info-table tr:last-child td { border-bottom: none; }
-.info-table tr:hover td { background: rgba(255,255,255,0.02); }
-
-.priority-box { border-radius: 0.6rem; padding: 0.85rem 1rem; margin: 0.75rem 0; border-left: 4px solid; }
-.pbox-red { background: rgba(220,38,38,0.08); border-color: #dc2626; }
-.pbox-amber { background: rgba(245,158,11,0.08); border-color: #f59e0b; }
-.pbox-green { background: rgba(16,185,129,0.08); border-color: #10b981; }
-.pbox-blue { background: rgba(59,130,246,0.08); border-color: #3b82f6; }
-.pbox-purple { background: rgba(139,92,246,0.08); border-color: #8b5cf6; }
-
-.mnemonic-box { background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.2); border-radius: 0.6rem; padding: 0.85rem 1rem; margin: 0.75rem 0; }
-.mnemonic-box .title { font-weight: 700; color: var(--pri-accent-light); font-size: 1rem; margin-bottom: 0.3rem; }
-.mnemonic-box .letters { font-size: 0.95rem; }
-.mnemonic-box .letters span { color: var(--pri-gold); font-weight: 800; }
-.key-rule { background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.25); border-radius: 0.6rem; padding: 0.75rem 1rem; margin: 0.6rem 0; font-weight: 600; color: var(--pri-gold); font-size: 0.95rem; }
-.key-rule .rule-icon { margin-right: 0.4rem; }
-
-.decision-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin: 0.75rem 0; font-weight: 700; font-size: 0.95rem; }
-.flow-step { background: rgba(217,119,6,0.12); border: 1px solid rgba(217,119,6,0.3); color: #fde68a; padding: 0.4rem 0.75rem; border-radius: 0.5rem; }
-.flow-arrow { color: var(--pri-text-muted); font-size: 1.1rem; }
-
-@media (max-width: 600px) {
-  .hero h1 { font-size: 1.55rem; }
-  .guide-container { padding: 1rem 0.65rem 2rem; }
-  .content-block { padding: 1rem 0.85rem 1.2rem; }
-  .info-table { font-size: 0.85rem; }
-  .info-table th, .info-table td { padding: 0.4rem 0.5rem; }
+.hero h1 { font-size: 1.7rem; font-weight: 800; margin-bottom: 0.3rem; letter-spacing: -0.02em; }
+.hero .subtitle { opacity: 0.88; font-size: 0.92rem; font-weight: 500; margin-bottom: 1rem; }
+.badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+.badge {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  padding: 0.35rem 0.85rem; border-radius: 2rem;
+  font-size: 0.78rem; font-weight: 700;
+  background: var(--badge-bg); border: 1.5px solid var(--badge-border);
+  color: #fff; backdrop-filter: blur(4px);
+}
+.container { max-width: 820px; margin: 0 auto; padding: 1rem 1rem 3rem; }
+.toc {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: 0.75rem;
+  padding: 1.2rem 1.5rem;
+  margin: 1.2rem 0 1.5rem;
+  box-shadow: var(--shadow);
+}
+.toc h2 { font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--accent); }
+.toc ol { padding-left: 1.4rem; }
+.toc li { margin-bottom: 0.25rem; font-size: 0.88rem; }
+.toc a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.toc a:hover { text-decoration: underline; }
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: 0.75rem;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.section-header {
+  background: var(--surface-alt);
+  padding: 0.9rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-bottom: 1px solid var(--border-light);
+  user-select: none;
+}
+.section-header:hover { filter: brightness(0.97); }
+.section-header .arrow {
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.section-header.open .arrow { transform: rotate(90deg); }
+.section-header h2 { font-size: 1.05rem; font-weight: 700; color: var(--accent-dark); flex:1; }
+.section-header .lec-tag {
+  font-size: 0.68rem; font-weight: 700;
+  background: var(--tag-bg); color: var(--tag-text);
+  padding: 0.15rem 0.55rem; border-radius: 1rem;
+}
+.section-body { padding: 1rem 1.2rem; display: none; }
+.section-body.show { display: block; }
+h3 { font-size: 0.95rem; font-weight: 700; color: var(--accent-dark); margin: 1rem 0 0.5rem; }
+h3:first-child { margin-top: 0; }
+p, ul, ol { margin-bottom: 0.6rem; font-size: 0.9rem; }
+ul, ol { padding-left: 1.3rem; }
+li { margin-bottom: 0.25rem; }
+strong { font-weight: 700; }
+.callout {
+  background: var(--callout-bg);
+  border-left: 3px solid var(--callout-border);
+  padding: 0.65rem 0.9rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 0.7rem 0;
+  font-size: 0.88rem;
+}
+.callout::before { content: "⚡ "; }
+.callout.warn { border-left-color: #ef4444; background: #fef2f2; }
+html.dark .callout.warn { border-left-color: #b91c1c; background: #2d1010; }
+.callout.warn::before { content: "⚠️ "; }
+.mnemonic {
+  background: var(--mnemonic-bg);
+  border: 1px dashed var(--mnemonic-border);
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.5rem;
+  margin: 0.7rem 0;
+  font-size: 0.88rem;
+  color: var(--mnemonic-text);
+  font-weight: 600;
+}
+.mnemonic::before { content: "🧠 "; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.7rem 0;
+  font-size: 0.84rem;
+}
+th, td {
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--border-light);
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: var(--table-header);
+  font-weight: 700;
+  color: var(--accent-dark);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+tr:nth-child(even) td { background: var(--table-stripe); }
+.drug {
+  background: var(--drug-bg); color: var(--drug-text);
+  padding: 0.1rem 0.4rem; border-radius: 0.25rem;
+  font-weight: 700; font-size: 0.85rem; cursor: pointer;
+}
+.drug:hover { text-decoration: underline; }
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  margin: 0.7rem 0;
+}
+@media (max-width: 520px) {
+  .two-col { grid-template-columns: 1fr; }
+  .hero { padding: 2rem 1rem 1.5rem; }
+  .hero h1 { font-size: 1.4rem; }
+  .section-body { padding: 0.8rem 1rem; }
+  table { font-size: 0.78rem; }
+  th, td { padding: 0.35rem 0.45rem; }
+}
+.col-card {
+  background: var(--surface-alt);
+  border: 1px solid var(--border-light);
+  border-radius: 0.5rem;
+  padding: 0.7rem 0.85rem;
+}
+.col-card h4 {
+  font-size: 0.82rem; font-weight: 700;
+  color: var(--accent); margin-bottom: 0.3rem;
+}
+.col-card ul { margin-bottom: 0; }
+.footer-note {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  padding: 2rem 1rem 1rem;
+  border-top: 1px solid var(--border-light);
+  margin-top: 2rem;
 }
 </style>
 </head>
 <body>
-<div class="guide-container">
+<script>
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  document.documentElement.classList.add('dark');
+}
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+  e.matches ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
+});
+</script>
 
 <div class="hero">
-  <h1>🦟 Yellow Fever</h1>
-  <div class="subtitle">Flavivirus transmission, Faget sign, clinical phases, toxic phase management, vaccination, global prevention &amp; arboviral disease nursing for NCLEX mastery.</div>
+  <h1>📔 MK Yellow — Exhaustive Master</h1>
+  <p class="subtitle">Mark Klimek NCLEX Review · 12 Lectures + Extras · 530 Points</p>
   <div class="badge-row">
-    <a class="badge badge-etio" href="#sec-etio">🦠 Etiology</a>
-    <a class="badge badge-path" href="#sec-path">🔬 Pathophysiology</a>
-    <a class="badge badge-dx" href="#sec-dx">🧪 Diagnosis</a>
-    <a class="badge badge-tx" href="#sec-tx">💊 Treatment</a>
-    <a class="badge badge-nurs" href="#sec-nurs">🩺 Nursing Care</a>
-    <a class="badge badge-vax" href="#sec-vax">💉 Vaccination</a>
-    <a class="badge badge-glob" href="#sec-glob">🌍 Global Health</a>
-    <a class="badge badge-mem" href="#sec-mem">🧠 Memory</a>
+    <span class="badge">📝 530 Questions</span>
+    <span class="badge">📖 105 Pages</span>
+    <span class="badge">🎯 High-Yield</span>
   </div>
-  <button class="guide-quiz-btn" onclick="window.parent.postMessage({type:'launchGuideQuiz',key:'yfguide'},'*')">📝 100 Questions</button>
 </div>
 
-<!-- ==================== SECTION 1 ==================== -->
-<div id="sec-etio" class="section-hdr sh-etio">🦠 Section 1 — Etiology &amp; Transmission</div>
-<div class="content-block">
+<div class="container">
 
-  <h3>Yellow Fever Virus</h3>
-  <ul>
-    <li><strong>Agent:</strong> Yellow fever virus — a single-stranded RNA virus of the family <em>Flaviviridae</em>, genus <em>Flavivirus</em></li>
-    <li><strong>Related viruses:</strong> Dengue, Zika, West Nile, Japanese encephalitis — all flaviviruses transmitted by mosquitoes</li>
-    <li><strong>Reservoir:</strong> Primates (monkeys) in jungle/sylvatic cycle; humans in urban cycle</li>
-    <li><strong>Vector:</strong> <em>Aedes aegypti</em> mosquito (urban cycle) — same mosquito that transmits dengue, Zika, and chikungunya</li>
-    <li><em>Haemagogus</em> and <em>Sabethes</em> mosquitoes in the jungle/sylvatic cycle (South America)</li>
-  </ul>
-
-  <h3>Transmission Cycles</h3>
-  <table class="info-table">
-    <tr><th>Cycle</th><th>Vector</th><th>Hosts</th><th>Setting</th></tr>
-    <tr><td><strong>Sylvatic (Jungle)</strong></td><td><em>Haemagogus</em>, <em>Aedes africanus</em></td><td>Monkeys → humans (incidental)</td><td>Tropical forest. Workers entering jungle (loggers, farmers).</td></tr>
-    <tr><td><strong>Intermediate (Savanna)</strong></td><td><em>Aedes</em> spp.</td><td>Monkeys ↔ humans</td><td>Semi-domestic mosquitoes. Small outbreaks in African villages near forests.</td></tr>
-    <tr><td><strong>Urban</strong></td><td><em>Aedes aegypti</em></td><td>Humans → humans</td><td>Cities and towns. Large epidemics. Most dangerous from public health perspective.</td></tr>
-  </table>
-
-  <div class="key-rule">
-    <span class="rule-icon">⚡</span> Key Fact: Yellow fever is NOT transmitted person-to-person through casual contact, respiratory droplets, or body fluids. The mosquito vector is REQUIRED for transmission.
-  </div>
-
-  <h3>Epidemiology</h3>
-  <ul>
-    <li><strong>Endemic areas:</strong> Tropical regions of Africa (90% of cases) and South America</li>
-    <li><strong>NOT present in Asia</strong> — despite <em>Aedes aegypti</em> abundance (reasons debated)</li>
-    <li>Estimated <span class="lyte">200,000 cases/year</span> worldwide (WHO); <span class="lyte">30,000–60,000 deaths/year</span></li>
-    <li>Incubation period: <span class="lyte">3–6 days</span> after mosquito bite</li>
-    <li>Period of viremia (infectious to mosquitoes): approximately <span class="lyte">3–5 days</span> after symptom onset</li>
-  </ul>
+<div class="toc">
+  <h2>📋 Contents</h2>
+  <ol>
+    <li><a href="#s1">Acid-Base Balance &amp; Ventilators</a></li>
+    <li><a href="#s2">Addiction, Grief &amp; Substance Abuse</a></li>
+    <li><a href="#s3">Aminoglycosides &amp; Overdose Pharmacology</a></li>
+    <li><a href="#s4">Cardiac: CCBs, Rhythms &amp; Chest Tubes</a></li>
+    <li><a href="#s5">CHDs, Infection Control &amp; Crutches</a></li>
+    <li><a href="#s6">Psychiatric Nursing &amp; Psychopharmacology</a></li>
+    <li><a href="#s7">Diabetes &amp; Endocrine</a></li>
+    <li><a href="#s8">Drug Toxicities, Dumping &amp; Hiatal Hernia</a></li>
+    <li><a href="#s9">Lab Values &amp; Electrolytes</a></li>
+    <li><a href="#s10">Fluids, Anticoagulants &amp; Anticholinergics</a></li>
+    <li><a href="#s11">Maternal, Newborn &amp; OB Meds</a></li>
+    <li><a href="#s12">Prioritization, Delegation, Peds &amp; Burns</a></li>
+  </ol>
 </div>
 
-<!-- ==================== SECTION 2 ==================== -->
-<div id="sec-path" class="section-hdr sh-path">🔬 Section 2 — Pathophysiology &amp; Clinical Phases</div>
-<div class="content-block">
+<!-- ===== SECTION 1 ===== -->
+<div class="section" id="s1">
+  <div class="section-header open" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Acid-Base Balance &amp; Ventilators</h2>
+    <span class="lec-tag">Lec 1</span>
+  </div>
+  <div class="section-body show">
+    <h3>Rule of the B's</h3>
+    <p>If pH and <strong>B</strong>icarb go the same direction → <strong>Meta-B-olic</strong>. Different directions → <strong>Respiratory</strong>.</p>
+    <table>
+      <tr><th>Value</th><th>Normal</th><th>Memory Tip</th></tr>
+      <tr><td>pH</td><td>7.35 – 7.45</td><td>Below = acidosis · Above = alkalosis</td></tr>
+      <tr><td>HCO₃</td><td>22 – 26</td><td>Bicarb — moves WITH pH in metabolic</td></tr>
+      <tr><td>CO₂</td><td>35 – 45</td><td>Inverse relationship with pH</td></tr>
+    </table>
 
-  <h3>Pathophysiology</h3>
-  <ul>
-    <li>Virus enters via mosquito bite → replicates in regional lymph nodes → viremia → targets the <strong>liver</strong> (primary target organ), kidneys, heart, and immune system</li>
-    <li><strong>Liver damage:</strong> Councilman bodies (eosinophilic necrosis of hepatocytes) — pathognomonic finding on liver biopsy. Mid-zone necrosis pattern (spares portal areas).</li>
-    <li><strong>Kidney damage:</strong> Acute tubular necrosis → oliguria → renal failure</li>
-    <li><strong>Coagulopathy:</strong> ↓ clotting factor synthesis (liver failure) + DIC → hemorrhage</li>
-    <li><strong>Jaundice:</strong> From hepatocellular damage — gives the disease its name ("yellow")</li>
-  </ul>
+    <div class="mnemonic">As the pH goes, so goes my patient — EXCEPT Potassium (inverse)!</div>
 
-  <h3>Clinical Phases</h3>
-  <table class="info-table">
-    <tr><th>Phase</th><th>Timing</th><th>Symptoms</th><th>Key Features</th></tr>
-    <tr><td><strong>1. Infection (Acute/Viremic)</strong></td><td>Days <span class="lyte">1–3</span></td><td>Sudden fever (<span class="lyte">39–40°C</span>), headache, myalgia, nausea, photophobia, facial flushing</td><td>Viremia is present. Patient is infectious to mosquitoes. Resembles many other febrile illnesses.</td></tr>
-    <tr><td><strong>2. Remission</strong></td><td>Days <span class="lyte">3–4</span></td><td>Fever breaks, symptoms improve</td><td>Lasts <span class="lyte">24–48 hours</span>. ~85% of patients recover here. <strong>Does NOT mean the patient is cured — 15% progress to toxic phase.</strong></td></tr>
-    <tr><td><strong>3. Toxic Phase (Intoxication)</strong></td><td>Days <span class="lyte">4–7+</span></td><td>High fever returns, jaundice, hemorrhage, hematemesis ("black vomit"), oliguria, delirium, seizures</td><td>Multi-organ failure. <strong>Faget sign</strong> (fever with relative bradycardia). Case fatality rate: <span class="lyte">20–50%</span> in toxic phase.</td></tr>
-  </table>
+    <div class="two-col">
+      <div class="col-card">
+        <h4>↑ Alkalosis (pH Up)</h4>
+        <ul>
+          <li>Hypokalemia, HTN, tachycardia</li>
+          <li>Tachypnea, seizures, irritability</li>
+          <li>Spastic, diarrhea, borborygmi</li>
+          <li>Hyperreflexia (3+/4+)</li>
+        </ul>
+      </div>
+      <div class="col-card">
+        <h4>↓ Acidosis (pH Down)</h4>
+        <ul>
+          <li>Hyperkalemia, HTN, bradycardia</li>
+          <li>Bradypnea, lethargy, flaccid</li>
+          <li>Constipation, absent bowel sounds</li>
+          <li>Hyporeflexia (1+/2+)</li>
+        </ul>
+      </div>
+    </div>
 
-  <div class="priority-box pbox-red">
-    <strong>🔴 Faget Sign — Pathognomonic Clinical Finding:</strong>
-    <ul style="margin-top:0.3rem;margin-bottom:0;">
-      <li><strong>Definition:</strong> Fever with paradoxical bradycardia (pulse-temperature dissociation)</li>
-      <li><strong>Normal response:</strong> HR increases ~10 bpm for each 1°F of fever</li>
-      <li><strong>Faget sign:</strong> Temperature <span class="lyte">&gt; 102°F (39°C)</span> but HR remains <span class="lyte">&lt; 100 bpm</span> or even decreases</li>
-      <li><strong>Cause:</strong> Direct viral myocarditis affecting the SA node</li>
-      <li><strong>Also seen in:</strong> Typhoid fever, Legionnaires' disease, drug fever, beta-blocker use — but classically associated with yellow fever</li>
+    <div class="mnemonic">MACKussmaul — only acid-base causing Kussmaul breathing = Metabolic ACidosis</div>
+
+    <h3>Quick Decision Tree</h3>
+    <ol>
+      <li>Is it <strong>lung</strong>? → Respiratory. Over-ventilating = alkalosis · Under-ventilating = acidosis</li>
+      <li>Not lung? → <strong>Metabolic</strong>. Prolonged gastric vomiting/suction → alkalosis</li>
+      <li>Everything else that isn't lung → <strong>metabolic acidosis</strong> (best guess)</li>
+    </ol>
+
+    <h3>Ventilator Alarms</h3>
+    <table>
+      <tr><th>Alarm</th><th>Cause</th><th>Result</th><th>Action</th></tr>
+      <tr><td><strong>High Pressure</strong></td><td>↑ Resistance</td><td>Resp. alkalosis (too high)</td><td>Unkink → drain water → suction mucus</td></tr>
+      <tr><td><strong>Low Pressure</strong></td><td>↓ Resistance (disconnect)</td><td>Resp. acidosis (too low)</td><td>Reconnect tubing; tube on floor → bag &amp; call RT</td></tr>
+    </table>
+    <p><strong>Wean</strong> = gradually decrease with the goal of getting off the ventilator altogether.</p>
+
+    <h3>Maslow's Hierarchy (Highest → Lowest)</h3>
+    <p><strong>Physiological → Safety → Comfort → Psychological → Social → Spiritual</strong></p>
+  </div>
+</div>
+
+<!-- ===== SECTION 2 ===== -->
+<div class="section" id="s2">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Addiction, Grief &amp; Substance Abuse</h2>
+    <span class="lec-tag">Lec 2</span>
+  </div>
+  <div class="section-body">
+    <h3>Stages of Grief (DABDA)</h3>
+    <p><strong>Denial → Anger → Bargaining → Depression → Acceptance</strong></p>
+
+    <h3>Abuse Dynamics</h3>
+    <table>
+      <tr><th>Problem</th><th>Definition</th><th>Treatment</th></tr>
+      <tr><td><strong>#1 Denial</strong></td><td>Refusal to accept reality of problem</td><td><strong>Confront</strong> — point out difference between what they say &amp; do</td></tr>
+      <tr><td><strong>Dependency</strong></td><td>Abuser gets SO to do things/decisions</td><td>Set limits &amp; enforce them</td></tr>
+      <tr><td><strong>Codependency</strong></td><td>SO derives self-esteem from enabling</td><td>Work on SO's self-esteem</td></tr>
+      <tr><td><strong>Manipulation</strong></td><td>Abuser gets SO to do harmful/dangerous acts</td><td>Set limits &amp; enforce</td></tr>
+    </table>
+    <div class="callout warn">Abuse denial → CONFRONT it. Grief denial → SUPPORT it. Never confront grief!</div>
+
+    <h3>Wernicke-Korsakoff Syndrome</h3>
+    <ul>
+      <li>Psychosis from <strong>Vitamin B1 (thiamine)</strong> deficiency</li>
+      <li>Primary S/S: <strong>amnesia + confabulation</strong> (making up stories; they believe them)</li>
+      <li>Preventable &amp; arrestable (take B1), but <strong>irreversible</strong> (kills brain cells ~70%)</li>
+    </ul>
+
+    <h3>Antabuse / Revia (Aversion Therapy)</h3>
+    <p>Onset &amp; duration: <strong>2 weeks</strong> to enter/leave system.</p>
+    <div class="callout">Avoid ALL forms of alcohol: mouthwash, cologne, aftershave, elixirs, insect repellent, hand sanitizer, vanilla extract, OTC liquid meds.</div>
+
+    <h3>Uppers vs. Downers</h3>
+    <table>
+      <tr><th></th><th>Uppers</th><th>Downers</th></tr>
+      <tr><td><strong>Examples</strong></td><td>Caffeine, cocaine, PCP/LSD, meth, Adderall</td><td>Everything else: heroin, alcohol, marijuana, Dilaudid</td></tr>
+      <tr><td><strong>Signs (↑)</strong></td><td>Euphoria, tachycardia, diarrhea, hyperreflexia, seizures</td><td>Lethargy, resp. depression, constipation, bradycardia</td></tr>
+      <tr><td><strong>OD priority</strong></td><td>Seizure → suction</td><td>Resp. arrest → intubate/ventilate</td></tr>
+      <tr><td><strong>Overdose</strong></td><td>Too much UP (↑ signs)</td><td>Too much DOWN (↓ signs)</td></tr>
+      <tr><td><strong>Withdrawal</strong></td><td>Opposite: ↓ signs</td><td>Opposite: ↑ signs</td></tr>
+    </table>
+    <div class="mnemonic">Newborns: at birth → assume intoxication (+). After 24 hrs → assume withdrawal (−).</div>
+
+    <h3>AWS vs. Delirium Tremens</h3>
+    <table>
+      <tr><th>Feature</th><th>AWS (24 hrs)</th><th>DTs (72 hrs)</th></tr>
+      <tr><td>Danger</td><td>Not life-threatening</td><td><strong>Can kill</strong>. Unstable.</td></tr>
+      <tr><td>Room</td><td>Semi-private, any location</td><td>Private, near nurse's station</td></tr>
+      <tr><td>Diet</td><td>Regular</td><td>Clear liquid/NPO (aspiration risk)</td></tr>
+      <tr><td>Activity</td><td>Up ad lib</td><td>Restricted bedrest, no BRP</td></tr>
+      <tr><td>Restraints</td><td>None</td><td>Vest or 2-point locked leathers</td></tr>
+      <tr><td>Meds</td><td colspan="2">Both: Anti-HTN + Tranquilizer + Multivitamin (B1)</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ===== SECTION 3 ===== -->
+<div class="section" id="s3">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Aminoglycosides &amp; Overdose Pharmacology</h2>
+    <span class="lec-tag">Lec 2–3</span>
+  </div>
+  <div class="section-body">
+    <h3>Aminoglycosides — "A Mean Old Mycin"</h3>
+    <ul>
+      <li>Treat serious, life-threatening, gram-negative, resistant infections</li>
+      <li>All end in <strong>-mycin</strong>, but NOT all -mycins are aminoglycosides</li>
+      <li><strong>Wannabes</strong>: azithro-, clarithro-, erythro-mycin → if it has "thro," throw it off the list!</li>
+      <li><strong>Real ones</strong>: Strepto-, Cleo-, Tobra-, Genta-, Vanco-, Clinda-mycin</li>
+    </ul>
+    <div class="mnemonic">Mice = Ears → Ototoxicity (CN VIII: hearing, balance, tinnitus) + Nephrotoxicity (monitor creatinine). Route: IM/IV · Q8H · "8" drawn inside the ear</div>
+
+    <h3>Oral Aminoglycosides (2 Exceptions)</h3>
+    <ol>
+      <li><strong>Hepatic encephalopathy</strong> (high ammonia) — reduce GI ammonia</li>
+      <li><strong>Pre-op bowel surgery</strong> — sterilize bowel ("Who can sterilize my bowel? Neo-Kan")</li>
+    </ol>
+
+    <h3>Trough &amp; Peak Levels</h3>
+    <table>
+      <tr><th>Route</th><th>When to Draw Peak</th></tr>
+      <tr><td>Sublingual</td><td>5–10 min after drug dissolves</td></tr>
+      <tr><td>IV</td><td>15–30 min after medication finished</td></tr>
+      <tr><td>IM</td><td>30–60 min after injection</td></tr>
+      <tr><td>SubQ</td><td>Depends on insulin type</td></tr>
+      <tr><td>PO</td><td>Not necessary; not tested</td></tr>
+    </table>
+    <div class="callout">Trough is ALWAYS drawn <strong>30 min BEFORE next dose</strong> regardless of route.</div>
+  </div>
+</div>
+
+<!-- ===== SECTION 4 ===== -->
+<div class="section" id="s4">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Cardiac: CCBs, Rhythms &amp; Chest Tubes</h2>
+    <span class="lec-tag">Lec 3</span>
+  </div>
+  <div class="section-body">
+    <h3>Calcium Channel Blockers — "Valium for the Heart"</h3>
+    <p>Negative inotropic (weak), chronotropic (slow), dromotropic (blocks conduction).</p>
+    <ul>
+      <li><strong>Treats</strong>: HTN, angina, atrial arrhythmias (flutter &amp; fib)</li>
+      <li><strong>S/E</strong>: headache, hypotension</li>
+      <li><strong>Names</strong>: "I sop zem dipine" → -dipine, <span class="drug">Cardizem</span>, <span class="drug">Verapamil</span>/Isoptin</li>
+    </ul>
+    <div class="mnemonic">Positive Ino/Chrono/Dromo = strong, fast, excitable (atropine, epi). Negative = weak, slow, blocks (CCBs, beta blockers).</div>
+
+    <h3>Beta Blockers</h3>
+    <p>End in <strong>-olol</strong>. Act exactly like CCBs but also cause bronchospasm. <strong>Never give with asthma or COPD.</strong></p>
+
+    <h3>Cardiac Rhythms — Know These 6</h3>
+    <table>
+      <tr><th>Rhythm</th><th>Key EKG Feature</th><th>Severity</th></tr>
+      <tr><td>Normal Sinus</td><td>Regular P-QRS-T pattern</td><td>—</td></tr>
+      <tr><td>A-Flutter</td><td>Saw-tooth P waves</td><td>Potentially lethal</td></tr>
+      <tr><td>A-Fib</td><td>Chaotic P waves, irregular</td><td>Potentially lethal</td></tr>
+      <tr><td>V-Tach</td><td>Wide, bizarre QRS's</td><td>Potentially lethal</td></tr>
+      <tr><td>V-Fib</td><td>Chaotic, no pattern</td><td><strong>LETHAL</strong></td></tr>
+      <tr><td>Asystole</td><td>Flat line, no QRS</td><td><strong>LETHAL</strong></td></tr>
+    </table>
+    <p><strong>PVCs</strong>: periodic wide bizarre QRS's. Worry if: &gt;6/min, 6 in a row, or PVC falls on T-wave.</p>
+
+    <h3>Arrhythmia Treatments</h3>
+    <table>
+      <tr><th>Arrhythmia</th><th>Treatment</th></tr>
+      <tr><td>PVCs / V-Tach</td><td><span class="drug">Lidocaine</span> &amp; <span class="drug">Amiodarone</span></td></tr>
+      <tr><td>Supraventricular (ABCD)</td><td><span class="drug">Adenocard</span> (push FAST &lt;8s) → Beta blockers → CCBs → <span class="drug">Digoxin</span></td></tr>
+      <tr><td>V-Fib</td><td><strong>Defibrillate!</strong> (D-FIB)</td></tr>
+      <tr><td>Asystole</td><td><span class="drug">Epinephrine</span> first, then <span class="drug">Atropine</span></td></tr>
+    </table>
+    <div class="callout">IV push drugs: if you don't know → go SLOW. Exception: <span class="drug">Adenocard</span> → push FAST!</div>
+
+    <h3>Chest Tubes</h3>
+    <p>Purpose: re-establish <strong>negative pressure</strong> in pleural space.</p>
+    <table>
+      <tr><th>Location</th><th>Removes</th><th>Mnemonic</th></tr>
+      <tr><td><strong>Apical</strong> (high)</td><td>Air (pneumothorax)</td><td>Apex = Air</td></tr>
+      <tr><td><strong>Basilar</strong> (low)</td><td>Blood (hemothorax)</td><td>Base = Blood</td></tr>
+    </table>
+    <p>Unilateral pneumohemothorax = 2 tubes (apical + basilar same side). Post-op chest surgery = same.</p>
+
+    <h3>Chest Tube Emergencies</h3>
+    <table>
+      <tr><th>Situation</th><th>First</th><th>Best</th></tr>
+      <tr><td>Collection bottle knocked over</td><td colspan="2">Set it back up (not an emergency)</td></tr>
+      <tr><td>Water seal breaks</td><td>Clamp it, cut tube</td><td>Submerge tube under water, unclamp</td></tr>
+      <tr><td>Tube comes out</td><td>Cover with gloved hand</td><td>Vaseline gauze + dry sterile dressing, tape 3 sides</td></tr>
+    </table>
+
+    <h3>Bubbling Rules</h3>
+    <table>
+      <tr><th>Where</th><th>Intermittent</th><th>Continuous</th></tr>
+      <tr><td>Water Seal</td><td>✅ GOOD</td><td>❌ BAD (leak)</td></tr>
+      <tr><td>Suction Control</td><td>❌ BAD (too low)</td><td>✅ GOOD</td></tr>
+    </table>
+    <div class="callout warn">NEVER clamp longer than 15 seconds without MD order. Use rubber-tipped double clamps.</div>
+  </div>
+</div>
+
+<!-- ===== SECTION 5 ===== -->
+<div class="section" id="s5">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>CHDs, Infection Control &amp; Crutches</h2>
+    <span class="lec-tag">Lec 3–4</span>
+  </div>
+  <div class="section-body">
+    <h3>Congenital Heart Defects</h3>
+    <div class="two-col">
+      <div class="col-card">
+        <h4>TRouBLe (R→L Shunt, Blue/Cyanotic)</h4>
+        <ul>
+          <li>All start with "T": Tetralogy of Fallot, Truncus, Transposition, Tricuspid stenosis, TAPVR</li>
+          <li>Exception: L ventricular hypoplastic syndrome</li>
+          <li>Needs surgery, delayed growth</li>
+        </ul>
+      </div>
+      <div class="col-card">
+        <h4>No TRouBLe (L→R Shunt, Pink)</h4>
+        <ul>
+          <li>VSD, PDA, PFO, ASD, pulmonic stenosis</li>
+          <li>Left to Right shunt, acyanotic</li>
+          <li>No surgery needed, normal growth</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mnemonic">ALL CHD kids: murmurs + echocardiogram. Tetralogy = VarieD PictureS Of A RancH → VD, PS, OA, RH</div>
+
+    <h3>Transmission-Based Precautions</h3>
+    <table>
+      <tr><th>Type</th><th>Diseases</th><th>PPE &amp; Requirements</th></tr>
+      <tr><td><strong>Contact</strong></td><td>C. diff, Hep A, E. coli, staph, RSV, herpes</td><td>Hand wash → gown → gloves. Private room preferred. Disposable supplies.</td></tr>
+      <tr><td><strong>Droplet</strong></td><td>Meningitis, H. influenza b (epiglottitis)</td><td>Hand wash → mask → goggle → gloves. Patient wears mask outside room.</td></tr>
+      <tr><td><strong>Airborne</strong></td><td>"MTV" — MMR, TB, Varicella</td><td>N95 mask, negative pressure, private room REQUIRED, keep door closed.</td></tr>
+    </table>
+    <div class="mnemonic">Donning (outside room): Gown → Mask → Goggle → Gloves. Doffing (inside room): Gloves → Goggle → Gown → Mask.</div>
+
+    <h3>Crutches, Canes &amp; Walkers</h3>
+    <table>
+      <tr><th>Gait</th><th>Pattern</th><th>Use When</th></tr>
+      <tr><td><strong>2-point</strong></td><td>Crutch + opposite foot together</td><td>Even/mild bilateral weakness</td></tr>
+      <tr><td><strong>3-point</strong></td><td>2 crutches + bad leg together</td><td>One leg affected (odd#=1 leg)</td></tr>
+      <tr><td><strong>4-point</strong></td><td>Everything moves separately</td><td>Even/severe bilateral weakness</td></tr>
+      <tr><td><strong>Swing-through</strong></td><td>Plant crutches &amp; swing</td><td>Non-weight-bearing / amputees</td></tr>
+    </table>
+    <ul>
+      <li>Measure: 2–3 finger widths below axilla. Elbow flexion = <strong>30°</strong>.</li>
+      <li><strong>Stairs</strong>: UP with the GOOD, DOWN with the BAD. Crutches always move with the bad leg.</li>
+      <li><strong>Cane</strong>: hold on the unaffected (strong) side. Advance with the bad side.</li>
+      <li><strong>Walker</strong>: pick up, set down, walk to it. NO belongings on front. Stand from chair by holding chair FIRST.</li>
     </ul>
   </div>
-
-  <div class="key-rule">
-    <span class="rule-icon">⚡</span> NCLEX Rule: The remission phase is DECEPTIVE. A patient who initially improves may deteriorate rapidly into the toxic phase. Close monitoring must continue through the remission period.
-  </div>
-
-  <h3>"Black Vomit" — Hematemesis</h3>
-  <p>Coffee-ground or black vomitus (hematemesis) during the toxic phase is a <strong>classic and ominous sign</strong> of yellow fever. It results from GI hemorrhage secondary to coagulopathy and liver failure. The term "vómito negro" (black vomit) was historically used to describe yellow fever outbreaks.</p>
 </div>
 
-<!-- ==================== SECTION 3 ==================== -->
-<div id="sec-dx" class="section-hdr sh-dx">🧪 Section 3 — Diagnosis &amp; Laboratory Findings</div>
-<div class="content-block">
-
-  <h3>Diagnostic Tests</h3>
-  <table class="info-table">
-    <tr><th>Test</th><th>Method</th><th>Timing</th><th>Notes</th></tr>
-    <tr><td><strong>RT-PCR</strong></td><td>Detects viral RNA in blood</td><td>First <span class="lyte">3–5 days</span> (viremic phase)</td><td>Most specific early test. Confirms active infection.</td></tr>
-    <tr><td><strong>IgM ELISA</strong></td><td>Detects IgM antibodies</td><td>After day <span class="lyte">5–7</span></td><td>May cross-react with other flaviviruses (dengue, Zika). Requires confirmation.</td></tr>
-    <tr><td><strong>PRNT (Plaque Reduction Neutralization Test)</strong></td><td>Most specific serological test</td><td>Convalescent phase</td><td>Differentiates yellow fever from other flavivirus infections. Gold standard for confirmation.</td></tr>
-    <tr><td><strong>Liver biopsy</strong></td><td>Histopathology</td><td>Post-mortem or diagnostic</td><td>Councilman bodies (pathognomonic). <strong>Contraindicated during acute illness</strong> due to hemorrhage risk.</td></tr>
-  </table>
-
-  <h3>Laboratory Findings During Toxic Phase</h3>
-  <table class="info-table">
-    <tr><th>Lab</th><th>Expected Finding</th><th>Significance</th></tr>
-    <tr><td><span class="lyte">AST/ALT</span></td><td>Markedly elevated (AST &gt; ALT)</td><td>Hepatocellular damage. AST elevates more due to myocardial &amp; skeletal muscle involvement.</td></tr>
-    <tr><td><span class="lyte">Bilirubin</span></td><td>Elevated (total &amp; direct)</td><td>Jaundice. Reflects degree of hepatic damage.</td></tr>
-    <tr><td><span class="lyte">PT/INR</span></td><td>Prolonged</td><td>↓ clotting factor synthesis by damaged liver.</td></tr>
-    <tr><td><span class="lyte">Platelet count</span></td><td>Decreased (thrombocytopenia)</td><td>Consumption in DIC + ↓ production.</td></tr>
-    <tr><td><span class="lyte">BUN/Creatinine</span></td><td>Elevated</td><td>Acute renal failure (acute tubular necrosis).</td></tr>
-    <tr><td><span class="lyte">Albumin</span></td><td>Decreased</td><td>↓ hepatic synthesis + third-spacing.</td></tr>
-    <tr><td><span class="lyte">WBC</span></td><td>Leukopenia (initially), then leukocytosis</td><td>Early leukopenia is characteristic. Leukocytosis may indicate secondary infection.</td></tr>
-    <tr><td><span class="lyte">Urinalysis</span></td><td>Proteinuria, hematuria</td><td>Renal involvement. Proteinuria may precede overt renal failure.</td></tr>
-  </table>
-
-  <div class="key-rule">
-    <span class="rule-icon">⚡</span> Key Distinction: In yellow fever, AST rises MORE than ALT (AST &gt; ALT pattern) — unlike typical hepatitis where ALT &gt; AST. This is because yellow fever also damages cardiac and skeletal muscle.
+<!-- ===== SECTION 6 ===== -->
+<div class="section" id="s6">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Psychiatric Nursing &amp; Psychopharmacology</h2>
+    <span class="lec-tag">Lec 4 &amp; 9</span>
   </div>
-</div>
+  <div class="section-body">
+    <h3>Psychosis Types &amp; Approach</h3>
+    <table>
+      <tr><th>Type</th><th>Examples</th><th>Approach</th></tr>
+      <tr><td><strong>Functional Psychosis</strong></td><td>Schizophrenia, major depression, mania</td><td>4 steps: Acknowledge feeling → Present reality → Set limit → Enforce</td></tr>
+      <tr><td><strong>Psychosis of Dementia</strong></td><td>Alzheimer's, Wernicke's, organic brain syndrome</td><td>2 steps: Acknowledge feeling → Redirect (can NOT learn reality)</td></tr>
+      <tr><td><strong>Psychotic Delirium</strong></td><td>UTI, electrolyte imbalance, thyroid</td><td>2 steps: Acknowledge feeling → Reassure (safety &amp; temporariness)</td></tr>
+    </table>
+    <div class="callout">ALWAYS acknowledge feelings first. Functional = can teach reality. Dementia = cannot.</div>
 
-<!-- ==================== SECTION 4 ==================== -->
-<div id="sec-tx" class="section-hdr sh-tx">💊 Section 4 — Treatment &amp; Management</div>
-<div class="content-block">
-
-  <h3>Treatment — Supportive Care Only</h3>
-  <p><strong>There is NO specific antiviral treatment for yellow fever.</strong> Management is entirely supportive, focused on symptom management and preventing complications.</p>
-
-  <table class="info-table">
-    <tr><th>Complication</th><th>Management</th></tr>
-    <tr><td><strong>Dehydration &amp; fever</strong></td><td>IV fluid resuscitation. <span class="drug">Acetaminophen</span> for fever/pain. <strong>AVOID <span class="drug">aspirin</span> and <span class="drug">NSAIDs</span></strong> (↑ bleeding risk).</td></tr>
-    <tr><td><strong>Hemorrhage</strong></td><td>Blood products: FFP for coagulopathy, platelets if thrombocytopenic, PRBCs for significant blood loss. Vitamin K if indicated.</td></tr>
-    <tr><td><strong>Hepatic failure</strong></td><td>Monitor <span class="lyte">LFTs</span>, <span class="lyte">INR</span>, <span class="lyte">ammonia</span>. Low-protein diet if encephalopathy. <span class="drug">Lactulose</span> for hepatic encephalopathy. Avoid hepatotoxic drugs.</td></tr>
-    <tr><td><strong>Renal failure</strong></td><td>Aggressive IV hydration. Monitor <span class="lyte">I&amp;O</span>, <span class="lyte">BUN/Cr</span>, electrolytes. Dialysis if indicated.</td></tr>
-    <tr><td><strong>DIC</strong></td><td>Treat underlying cause. Blood products as needed. Monitor coagulation studies.</td></tr>
-    <tr><td><strong>Secondary infection</strong></td><td>Broad-spectrum antibiotics for bacterial superinfection. Culture-guided therapy.</td></tr>
-    <tr><td><strong>Seizures / Encephalopathy</strong></td><td>Benzodiazepines for acute seizures. Monitor neurological status. Correct metabolic derangements.</td></tr>
-  </table>
-
-  <div class="priority-box pbox-red">
-    <strong>🔴 NEVER Give These to Yellow Fever Patients:</strong>
-    <ul style="margin-top:0.3rem;margin-bottom:0;">
-      <li><span class="drug">Aspirin</span> — ↑ bleeding (antiplatelet effect + Reye syndrome risk)</li>
-      <li><span class="drug">NSAIDs</span> (ibuprofen, naproxen) — ↑ GI bleeding risk, ↓ platelet function</li>
-      <li><strong>IM injections</strong> — ↑ hematoma risk in coagulopathic patients</li>
-      <li><strong>Hepatotoxic drugs</strong> — <span class="drug">acetaminophen</span> caution (limit dose if hepatic impairment; use cautiously)</li>
+    <h3>Key Psych Terms</h3>
+    <ul>
+      <li><strong>Delusion</strong>: false fixed belief (paranoid, grandiose, somatic). No sensory component.</li>
+      <li><strong>Hallucination</strong>: false fixed sensory experience (auditory, tactile, visual, gustatory, olfactory)</li>
+      <li><strong>Illusion</strong>: misinterpretation of reality — there IS a referent in reality</li>
+      <li><strong>Loosening of association</strong>: flight of ideas (stringing phrases), word salad, neologisms</li>
+      <li><strong>Ideas of reference</strong>: thinks everyone is talking about them</li>
+      <li><strong>Narrowed self-concept</strong>: psychotic refuses to change clothes/leave room — don't force them</li>
     </ul>
-  </div>
 
-  <h3>ICU-Level Monitoring</h3>
-  <ul>
-    <li>Continuous cardiac monitoring (Faget sign, dysrhythmias)</li>
-    <li>Strict <span class="lyte">I&amp;O</span> with hourly urine output monitoring (target &gt; <span class="lyte">0.5 mL/kg/hr</span>)</li>
-    <li>Serial labs: <span class="lyte">CBC</span>, <span class="lyte">CMP</span>, <span class="lyte">LFTs</span>, <span class="lyte">coagulation panel</span>, <span class="lyte">lactate</span></li>
-    <li>Neurological assessment: Glasgow Coma Scale, pupil response, orientation</li>
-    <li>Hemorrhage monitoring: stool guaiac, NG aspirate, skin assessment for petechiae/ecchymosis</li>
-  </ul>
+    <h3>All Psych Drugs — Side Effects</h3>
+    <p>All cause <strong>hypotension</strong> &amp; <strong>weight gain</strong>.</p>
+    <table>
+      <tr><th>Class</th><th>Names</th><th>Side Effects</th><th>Key Facts</th></tr>
+      <tr><td><strong>Phenothiazines</strong></td><td>-zine endings (Thorazine, Compazine)</td><td>A-B-C-D-E-F-aG</td><td>Large dose = antipsychotic. Small = antiemetic. Decanoate = long-acting IM.</td></tr>
+      <tr><td><strong>Tricyclics</strong></td><td>Elavil, Tofranil</td><td>A-B-C-D-E</td><td>2–4 weeks to work. E = Euphoria.</td></tr>
+      <tr><td><strong>Benzodiazepines</strong></td><td>-pam/-lam (Valium)</td><td>A-B-C-D</td><td>Work quickly. Max 6 wk–3 mo. Pre-op, muscle relaxant, seizures, alcohol W/D.</td></tr>
+      <tr><td><strong>MAOIs</strong></td><td>MARplan, NARdil, PARnate</td><td>A-B-C-D</td><td>AVOID tyramine → fatal hypertensive crisis!</td></tr>
+      <tr><td><strong>SSRIs</strong></td><td><span class="drug">Prozac</span>, <span class="drug">Zoloft</span></td><td>A-B-C-D + insomnia</td><td>Give before noon. Watch suicide risk in adolescents during dose changes.</td></tr>
+      <tr><td><strong>Lithium</strong></td><td>—</td><td>3 P's: Peeing, Pooping, Paresthesia</td><td>Therapeutic 0.6–1.2. Toxic ≥2. Hydrate! Give Gatorade not water.</td></tr>
+      <tr><td><strong>Haldol</strong></td><td>—</td><td>A-B-C-D-E-F-aG</td><td>Elderly → NMS risk (fever 104°+). Give half dose. Has Decanoate form.</td></tr>
+      <tr><td><strong>Clozapine</strong></td><td>Clozaril</td><td><strong>aG only</strong></td><td>Worst agranulocytosis. Monitor WBC: weekly × 4wk, monthly × 6mo, then q6mo.</td></tr>
+    </table>
+    <p><strong>Side Effect Key</strong>: A=Anticholinergic · B=Blurred vision · C=Constipation · D=Drowsiness · E=EPS · F=Photosensitivity · aG=Agranulocytosis</p>
+    <div class="callout warn">MAOI Tyramine Foods — OK: fruits/veggies (except BAR: Bananas, Avocados, Raisins). NO: organ meats, preserved meats, aged cheese, alcohol, chocolate, soy sauce.</div>
+
+    <h3>Psych Treatment Protocols</h3>
+    <table>
+      <tr><th>Condition</th><th>Key Interventions</th></tr>
+      <tr><td>Depression</td><td>Ask about suicide. Get safety contract. Activities with others that don't require interaction.</td></tr>
+      <tr><td>Schizophrenia</td><td>If pacing → reduce stimulation, make observation, offer presence. Reality-based, non-competitive activities.</td></tr>
+      <tr><td>Bipolar (Mania)</td><td>Finger foods (↑ calorie). 8 hrs sleep. Gross motor, non-competitive exercise.</td></tr>
+      <tr><td>Anxiety (Phobia)</td><td>Desensitization: Talk → Show pics → Be around → Interact. Don't advance until not anxious.</td></tr>
+      <tr><td>Violent Client</td><td>5 people (1 per limb + head). Only 1 person talks. Give seconds to de-escalate.</td></tr>
+    </table>
+    <div class="mnemonic">Restraints: Psych = evaluate within 1 hr, constant observation. Non-psych = observe q15min, MD order q24h.</div>
+
+    <h3>Nurse-Patient Relationship Phases</h3>
+    <table>
+      <tr><th>Phase</th><th>Purpose</th><th>Correct Answer</th></tr>
+      <tr><td>Pre-interaction</td><td>Nurse explores own feelings</td><td>"Nurse will explore feelings about…"</td></tr>
+      <tr><td>Orientation</td><td>Establish &amp; assess</td><td>Warm, fuzzy, tolerant, probing</td></tr>
+      <tr><td>Working</td><td>Implement plan</td><td>Focused, directive, set limits (seems stern)</td></tr>
+      <tr><td>Termination</td><td>Begins on admission</td><td>—</td></tr>
+    </table>
+  </div>
 </div>
 
-<!-- ==================== SECTION 5 ==================== -->
-<div id="sec-nurs" class="section-hdr sh-nurs">🩺 Section 5 — Nursing Care &amp; Infection Prevention</div>
-<div class="content-block">
+<!-- ===== SECTION 7 ===== -->
+<div class="section" id="s7">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Diabetes &amp; Endocrine</h2>
+    <span class="lec-tag">Lec 5 &amp; 7</span>
+  </div>
+  <div class="section-body">
+    <h3>Diabetes Overview</h3>
+    <table>
+      <tr><th></th><th>Type 1</th><th>Type 2</th></tr>
+      <tr><td>Dependence</td><td>Insulin-dependent, juvenile onset</td><td>Non-insulin-dependent, adult onset</td></tr>
+      <tr><td>Ketosis</td><td>Prone</td><td>Not prone</td></tr>
+      <tr><td>Treatment</td><td><strong>DIE</strong>: Diet, Insulin, Exercise</td><td><strong>DOA</strong>: Diet, Oral hypoglycemics, Activity</td></tr>
+    </table>
+    <p><strong>Diabetes Insipidus</strong>: Low ADH → dehydration, polyuria, polydipsia. <strong>SIADH</strong>: Too much ADH → overload, oliguria.</p>
 
-  <h3>Nursing Priorities</h3>
-  <table class="info-table">
-    <tr><th>Priority</th><th>Interventions</th></tr>
-    <tr><td><strong>1. Fluid balance</strong></td><td>IV access (large bore). Fluid resuscitation per provider order. Strict I&amp;O. Daily weights. Monitor for fluid overload vs. dehydration.</td></tr>
-    <tr><td><strong>2. Hemorrhage surveillance</strong></td><td>Assess for bleeding: gums, nose, injection sites, GI tract (hematemesis, melena, hematochezia). Avoid unnecessary venipunctures. Apply pressure to all puncture sites × <span class="lyte">5+ minutes</span>.</td></tr>
-    <tr><td><strong>3. Neuro monitoring</strong></td><td>Level of consciousness, orientation, seizure precautions, GCS assessment. Report acute changes immediately.</td></tr>
-    <tr><td><strong>4. Mosquito protection</strong></td><td>Bed net over patient during viremic period (<span class="lyte">first 5 days</span> of illness). Eliminate standing water. Screen windows. DEET-based repellent on exposed skin.</td></tr>
-    <tr><td><strong>5. Liver-protective care</strong></td><td>Low-protein diet if hepatic encephalopathy risk. Avoid hepatotoxic drugs. Monitor ammonia levels. Assess for asterixis (liver flap).</td></tr>
-    <tr><td><strong>6. Renal support</strong></td><td>Monitor urine output hourly. Report output &lt; <span class="lyte">30 mL/hr</span>. Adjust IV fluids. Prepare for possible dialysis. Monitor <span class="lyte">K⁺</span> (hyperkalemia risk in renal failure).</td></tr>
-  </table>
+    <h3>Insulin Types</h3>
+    <table>
+      <tr><th>Type</th><th>Onset</th><th>Peak</th><th>Duration</th><th>Key Facts</th></tr>
+      <tr><td><strong>Humalog (Lispro)</strong></td><td>15 min</td><td>30 min</td><td>3 hrs</td><td>Fastest. Give WITH meals.</td></tr>
+      <tr><td><strong>Regular (R)</strong></td><td>1 hr</td><td>2 hrs</td><td>4 hrs</td><td>R=Rapid, Run (only insulin given IV). Clear.</td></tr>
+      <tr><td><strong>NPH (N)</strong></td><td>6 hrs</td><td>8–10 hrs</td><td>12 hrs</td><td>N=Not in bag, Not clear (cloudy).</td></tr>
+      <tr><td><strong>Lantus (Glargine)</strong></td><td>slow</td><td>NONE</td><td>12–24 hrs</td><td>Long-acting. Safe at bedtime. No peak = less hypo risk.</td></tr>
+    </table>
+    <div class="mnemonic">Drawing up insulin: NRRN → Air into N, Air into R, Draw R, Draw N. Clear before Cloudy!</div>
 
-  <div class="priority-box pbox-amber">
-    <strong>🟡 Infection Control for Yellow Fever:</strong>
-    <ul style="margin-top:0.3rem;margin-bottom:0;">
-      <li><strong>Standard precautions</strong> for blood/body fluid contact</li>
-      <li>NOT airborne, droplet, or direct contact transmission — mosquito vector required</li>
-      <li>Blood precautions: careful handling of blood samples (virus present in blood during viremia)</li>
-      <li><strong>Mosquito prevention is the key infection control measure:</strong> bed nets, screens, DEET repellent, eliminate breeding sites</li>
-      <li>No isolation room required (unlike TB or measles) — but protect from mosquitoes during viremic phase to prevent urban transmission</li>
+    <h3>Exercise &amp; Sick Day Rules</h3>
+    <ul>
+      <li>Exercise <strong>potentiates</strong> insulin: more exercise → less insulin; less exercise → more insulin</li>
+      <li>Sick days: take insulin, sip water, stay active. Blood sugar goes UP when sick.</li>
+      <li>Accu-check needed for: <strong>diabetes, TPN, steroids</strong></li>
     </ul>
-  </div>
 
-  <h3>Patient &amp; Family Teaching</h3>
-  <ul>
-    <li>Explain the disease course and the deceptive remission phase</li>
-    <li>Importance of mosquito avoidance even after feeling better (prevent transmission)</li>
-    <li>Signs of worsening: jaundice, dark urine, bleeding from any site, decreased urine output, confusion</li>
-    <li>After recovery: lifelong immunity develops (reinfection does not occur)</li>
-    <li>Emotional support: toxic phase is frightening — provide honest, compassionate communication</li>
-  </ul>
+    <h3>Acute Complications</h3>
+    <div class="two-col">
+      <div class="col-card">
+        <h4>Hypoglycemia (Insulin Shock)</h4>
+        <ul>
+          <li>Cause: not enough food, too much insulin/exercise</li>
+          <li>S/S: "Drunk in shock" — cold, clammy, staggering, slurred</li>
+          <li>Tx: fast sugar + protein (OJ &amp; crackers)</li>
+          <li>Unconscious: <span class="drug">Glucagon</span> IM or D50 IV</li>
+          <li>Danger: <strong>permanent brain damage</strong></li>
+        </ul>
+      </div>
+      <div class="col-card">
+        <h4>DKA (Type 1) / HHNK (Type 2)</h4>
+        <ul>
+          <li>DKA: #1 cause = acute viral URI in last 10 days</li>
+          <li>DKA S/S: Dehydration, Ketones, Kussmaul, ↑K⁺, Acidosis, Acetone breath</li>
+          <li>Tx DKA: Regular insulin IV, hydrate 200mL/hr</li>
+          <li>HHNK: severe dehydration. Hot, dry, ↑HR. Tx: <strong>rehydrate</strong></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mnemonic">Cold &amp; clammy → get some candy. Hot &amp; dry → sugar's high. HbA1c = best indicator of long-term glucose control.</div>
+
+    <h3>Endocrine</h3>
+    <div class="two-col">
+      <div class="col-card">
+        <h4>Hyperthyroidism (Graves')</h4>
+        <ul>
+          <li>= Hypermetabolism. Weight loss, diarrhea, ↑HR, hot, HTN, exophthalmos</li>
+          <li>Tx: radioactive iodine (double flush, private bathroom), PTU (↓WBC), thyroidectomy</li>
+          <li>"Run yourself into the Grave"</li>
+        </ul>
+      </div>
+      <div class="col-card">
+        <h4>Hypothyroidism (Myxedema)</h4>
+        <ul>
+          <li>= Hypometabolism. Weight gain, constipation, lethargy, cold, "slow"</li>
+          <li>Tx: thyroid replacement (<span class="drug">Synthroid</span>)</li>
+          <li>Do NOT sedate. NEVER hold thyroid pills when NPO.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Thyroidectomy Complications</h3>
+    <table>
+      <tr><th>Type</th><th>0–12 hrs</th><th>12–48 hrs</th></tr>
+      <tr><td><strong>Total</strong></td><td>Airway/bleeding</td><td><strong>Tetany</strong> (↓Ca from parathyroid damage)</td></tr>
+      <tr><td><strong>Subtotal</strong></td><td>Airway/bleeding</td><td><strong>Thyroid Storm</strong> (extreme vitals, psychotic delirium, fever &gt;105°F → O₂ + cool)</td></tr>
+    </table>
+
+    <h3>Adrenocortex</h3>
+    <table>
+      <tr><th></th><th>Addison's (UNDERsecretion)</th><th>Cushing's (OVERsecretion)</th></tr>
+      <tr><td>S/S</td><td>Hyperpigmented, can't handle stress, ↓BP/glucose (JFK)</td><td>Moon face, buffalo hump, hirsutism, immunosuppressed, central obesity, ↑glucose</td></tr>
+      <tr><td>Tx</td><td>"ADD-a-SONE" (steroids) + med alert bracelet</td><td>Adrenalectomy → then replacement steroids</td></tr>
+    </table>
+  </div>
 </div>
 
-<!-- ==================== SECTION 6 ==================== -->
-<div id="sec-vax" class="section-hdr sh-vax">💉 Section 6 — Vaccination</div>
-<div class="content-block">
-
-  <h3>Yellow Fever Vaccine (17D)</h3>
-  <table class="info-table">
-    <tr><th>Feature</th><th>Details</th></tr>
-    <tr><td><strong>Type</strong></td><td>Live attenuated virus vaccine (strain 17D)</td></tr>
-    <tr><td><strong>Dose</strong></td><td>Single SubQ injection</td></tr>
-    <tr><td><strong>Onset of protection</strong></td><td><span class="lyte">10 days</span> after vaccination (antibodies develop)</td></tr>
-    <tr><td><strong>Duration</strong></td><td>Lifelong immunity (WHO position since 2013 — single dose is sufficient)</td></tr>
-    <tr><td><strong>Administration</strong></td><td>Only at authorized Yellow Fever Vaccination Centers (stamped on International Certificate of Vaccination)</td></tr>
-    <tr><td><strong>International Certificate</strong></td><td>Valid <span class="lyte">10 days</span> after vaccination. Required for entry to many countries in endemic zones.</td></tr>
-    <tr><td><strong>Efficacy</strong></td><td>&gt; <span class="lyte">99%</span> effective. One of the most successful vaccines ever developed.</td></tr>
-  </table>
-
-  <h3>Contraindications</h3>
-  <div class="priority-box pbox-red">
-    <strong>🔴 Do NOT Vaccinate (Live Vaccine Contraindications):</strong>
-    <ul style="margin-top:0.3rem;margin-bottom:0;">
-      <li><strong>Infants &lt; <span class="lyte">6 months</span></strong> — absolute contraindication (risk of encephalitis)</li>
-      <li><strong>Infants 6–8 months</strong> — avoid unless high-risk exposure</li>
-      <li><strong>Immunocompromised:</strong> HIV with CD4 &lt; <span class="lyte">200</span>, active cancer therapy, high-dose corticosteroids, organ transplant recipients</li>
-      <li><strong>Thymus disorders:</strong> History of thymectomy or thymoma</li>
-      <li><strong>Severe egg allergy:</strong> Vaccine is grown in chicken embryo cells (skin testing available)</li>
-      <li><strong>Pregnancy</strong> — theoretical risk to fetus (defer if possible; risk-benefit discussion if travel unavoidable)</li>
-      <li><strong>Age &gt; 60 years</strong> — ↑ risk of vaccine-associated viscerotropic disease (first-time vaccination; benefits vs. risks assessment)</li>
+<!-- ===== SECTION 8 ===== -->
+<div class="section" id="s8">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Drug Toxicities, Dumping &amp; Hiatal Hernia</h2>
+    <span class="lec-tag">Lec 6</span>
+  </div>
+  <div class="section-body">
+    <h3>Five Drug Toxicities</h3>
+    <table>
+      <tr><th>Drug</th><th>Indication</th><th>Therapeutic</th><th>Toxic</th></tr>
+      <tr><td><span class="drug">Lithium</span></td><td>Bipolar (mania)</td><td>0.6 – 1.2</td><td>≥ 2.0</td></tr>
+      <tr><td><span class="drug">Digoxin</span></td><td>CHF / A-Fib</td><td>1.0 – 2.0</td><td>&gt; 2.0</td></tr>
+      <tr><td><span class="drug">Aminophylline</span></td><td>Airway spasms</td><td>10 – 20</td><td>≥ 20</td></tr>
+      <tr><td><span class="drug">Dilantin</span></td><td>Seizures</td><td>10 – 20</td><td>≥ 20</td></tr>
+      <tr><td><strong>Bilirubin</strong></td><td>Newborns</td><td>10 – 20 (elevated)</td><td>&gt; 20</td></tr>
+    </table>
+    <ul>
+      <li><strong>Kernicterus</strong> = bilirubin in the CSF → <strong>Opisthotonus</strong> (hyperextension of neck) = BAD sign</li>
     </ul>
-  </div>
 
-  <h3>Vaccine Adverse Events</h3>
-  <table class="info-table">
-    <tr><th>Reaction</th><th>Incidence</th><th>Description</th></tr>
-    <tr><td><strong>Mild</strong></td><td>~25%</td><td>Low-grade fever, headache, myalgia, injection site soreness — days <span class="lyte">5–10</span> post-vaccine. Self-limited.</td></tr>
-    <tr><td><strong>YEL-AND (Neurotropic disease)</strong></td><td>~1 in <span class="lyte">125,000</span></td><td>Encephalitis, Guillain-Barré, ADEM. Higher risk in infants &lt; 6 months and elderly &gt; 60.</td></tr>
-    <tr><td><strong>YEL-AVD (Viscerotropic disease)</strong></td><td>~1 in <span class="lyte">250,000</span></td><td>Multi-organ failure resembling wild-type yellow fever. Mortality ~60%. Higher risk in elderly, thymus disease.</td></tr>
-    <tr><td><strong>Anaphylaxis</strong></td><td>~1 in <span class="lyte">131,000</span></td><td>Immediate hypersensitivity (egg protein, gelatin). Treat with <span class="drug">epinephrine</span>.</td></tr>
-  </table>
-
-  <div class="key-rule">
-    <span class="rule-icon">⚡</span> NCLEX Rule: Yellow fever vaccine is a LIVE vaccine. Never give to immunocompromised patients. Administer at least <span class="lyte">4 weeks</span> before travel (10 days for immunity + safety margin). Lifelong immunity from one dose.
+    <h3>Dumping Syndrome vs. Hiatal Hernia</h3>
+    <table>
+      <tr><th></th><th>Hiatal Hernia</th><th>Dumping Syndrome</th></tr>
+      <tr><td>Problem</td><td>Wrong direction, correct rate (reflux)</td><td>Right direction, wrong rate (too fast)</td></tr>
+      <tr><td>Goal</td><td>Empty stomach faster</td><td>Keep stomach full longer</td></tr>
+      <tr><td>S/S</td><td>GERD when supine/after eating</td><td>"ADS": abd distress + drunk + shock</td></tr>
+      <tr><td>HOB</td><td><strong>HIGH</strong> during &amp; 1hr after</td><td><strong>LOW</strong> during &amp; 1hr after</td></tr>
+      <tr><td>Fluids</td><td><strong>HIGH</strong> with meals</td><td><strong>LOW</strong> with meals</td></tr>
+      <tr><td>Carbs</td><td><strong>HIGH</strong></td><td><strong>LOW</strong></td></tr>
+    </table>
   </div>
 </div>
 
-<!-- ==================== SECTION 7 ==================== -->
-<div id="sec-glob" class="section-hdr sh-glob">🌍 Section 7 — Global Health &amp; Prevention</div>
-<div class="content-block">
+<!-- ===== SECTION 9 ===== -->
+<div class="section" id="s9">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Lab Values &amp; Electrolytes</h2>
+    <span class="lec-tag">Lec 8</span>
+  </div>
+  <div class="section-body">
+    <h3>Lab Value Priority Levels</h3>
+    <p><strong>A</strong>=Low priority · <strong>B</strong>=Concerned · <strong>C</strong>=Critical (do something) · <strong>D</strong>=Deadly Dangerous (don't leave bedside)</p>
+    <table>
+      <tr><th>Lab</th><th>Normal</th><th>Level</th><th>Action</th></tr>
+      <tr><td>Creatinine</td><td>0.6–1.2</td><td>A</td><td>Best kidney indicator. Call if dye procedure planned.</td></tr>
+      <tr><td>INR</td><td>2–3</td><td>C if ≥4</td><td>Hold <span class="drug">Coumadin</span> → assess bleeding → prep Vitamin K → call MD</td></tr>
+      <tr><td>Potassium</td><td>3.5–5.0</td><td>C if low; <strong>D if ≥6</strong></td><td>Hold K⁺ → assess heart → prep Kayexalate/D5W → call MD</td></tr>
+      <tr><td>pH</td><td>7.35–7.45</td><td><strong>D if in the 6's</strong></td><td>Assess vitals → call MD STAT</td></tr>
+      <tr><td>BUN</td><td>8–30</td><td>B if high</td><td>Check for dehydration</td></tr>
+      <tr><td>Hemoglobin</td><td>12–18</td><td>B=8–11; C if &lt;8</td><td>Assess bleeding → prep transfusion → call MD</td></tr>
+      <tr><td>HCO₃</td><td>22–26</td><td>A</td><td>Don't worry</td></tr>
+      <tr><td>CO₂</td><td>35–45</td><td>C=50's; <strong>D=60's</strong></td><td>50's: pursed lip breathing. 60's: prep intubation → call RT</td></tr>
+      <tr><td>Hematocrit</td><td>36–54</td><td>B if high</td><td>Assess dehydration</td></tr>
+      <tr><td>pO₂</td><td>80–100</td><td>C=70's; <strong>D=60's</strong></td><td>70's: give O₂. 60's: intubate → call RT</td></tr>
+      <tr><td>O₂ Sat</td><td>93–100</td><td>C if &lt;95</td><td>Assess resp → give O₂</td></tr>
+      <tr><td>BNP</td><td>&lt;100</td><td>B if elevated</td><td>Best indicator for CHF</td></tr>
+      <tr><td>Sodium</td><td>135–145</td><td>C if LOC changes</td><td>High=dehydration · Low=overload</td></tr>
+      <tr><td>WBC</td><td>5k–11k</td><td>C if &lt;5k</td><td>Neutropenic precautions</td></tr>
+      <tr><td>ANC</td><td>&gt;500</td><td>C if &lt;500</td><td>Neutropenic precautions</td></tr>
+      <tr><td>CD4</td><td>&gt;200</td><td>C if &lt;200</td><td>&lt;200 = AIDS diagnosis</td></tr>
+      <tr><td>Platelets</td><td>150k–400k</td><td>C &lt;90k; <strong>D &lt;40k</strong></td><td>&lt;90k: bleeding precautions. &lt;40k: spontaneous death risk</td></tr>
+      <tr><td>RBC</td><td>4–6</td><td>B if abnormal</td><td>Concerned</td></tr>
+    </table>
 
-  <h3>WHO Eliminate Yellow Fever Epidemics (EYE) Strategy</h3>
-  <ul>
-    <li><strong>Goal:</strong> Eliminate yellow fever epidemics by 2026</li>
-    <li><strong>Three pillars:</strong>
-      <ol>
-        <li>Protect at-risk populations (mass vaccination campaigns)</li>
-        <li>Prevent international spread (vaccination requirements for travelers, stockpile management)</li>
-        <li>Contain outbreaks rapidly (surveillance, rapid response, reactive vaccination)</li>
-      </ol>
-    </li>
-    <li>Global vaccine stockpile of <span class="lyte">6 million doses</span> maintained for emergency response</li>
-  </ul>
+    <div class="mnemonic">The 5 D's (Deadly Dangerous): K⁺ ≥ 6 · pH in the 6's · CO₂ in the 60's · pO₂ ≤ 60's · Platelets &lt; 40,000</div>
 
-  <h3>Vector Control — Community-Level Prevention</h3>
-  <table class="info-table">
-    <tr><th>Strategy</th><th>Implementation</th></tr>
-    <tr><td><strong>Eliminate breeding sites</strong></td><td>Remove standing water (tires, flower pots, containers, gutters). Cover water storage. Weekly inspection.</td></tr>
-    <tr><td><strong>Personal protection</strong></td><td>DEET-based repellents. Long sleeves/pants during peak mosquito activity (dawn/dusk). Permethrin-treated clothing.</td></tr>
-    <tr><td><strong>Physical barriers</strong></td><td>Window/door screens. Bed nets (insecticide-treated). Air conditioning (reduces mosquito exposure).</td></tr>
-    <tr><td><strong>Insecticide application</strong></td><td>Indoor residual spraying. Ultra-low volume (ULV) fogging during outbreaks. Larvicides in water containers.</td></tr>
-    <tr><td><strong>Surveillance</strong></td><td>Sentinel surveillance sites. Rapid case reporting. Epi-linked outbreak investigation within <span class="lyte">48 hours</span>.</td></tr>
-  </table>
+    <h3>Electrolyte Master Rules</h3>
+    <table>
+      <tr><th>Rule</th><th>Hyper-</th><th>Hypo-</th></tr>
+      <tr><td><strong>Kalemias (K⁺)</strong> = SAME as prefix</td><td>Everything ↑ EXCEPT HR↓ &amp; UO↓</td><td>Everything ↓ EXCEPT HR↑ &amp; UO↑</td></tr>
+      <tr><td><strong>Calcemias (Ca²⁺)</strong> = OPPOSITE of prefix</td><td>Everything ↓</td><td>Everything ↑ (Chvostek/Trousseau)</td></tr>
+      <tr><td><strong>Magnesemias (Mg²⁺)</strong> = OPPOSITE of prefix</td><td>Everything ↓</td><td>Everything ↑</td></tr>
+      <tr><td><strong>Natremias (Na⁺)</strong></td><td>dEhydration (dry)</td><td>Overload (crackles, JVD)</td></tr>
+    </table>
+    <ul>
+      <li><strong>Earliest sign</strong> of ANY electrolyte disorder: numbness &amp; tingling (paresthesias)</li>
+      <li><strong>Universal sign</strong>: muscle weakness (paresis)</li>
+      <li>Nerve/skeletal muscle symptom → pick <strong>Calcium</strong>. Everything else → pick <strong>Potassium</strong></li>
+      <li><strong>Chvostek</strong> (cheek tap → face spasm) &amp; <strong>Trousseau</strong> (BP cuff → carpal spasm) = HYPOcalcemia</li>
+    </ul>
 
-  <h3>Comparison with Other Arboviral Diseases</h3>
-  <table class="info-table">
-    <tr><th>Disease</th><th>Virus</th><th>Vector</th><th>Distinguishing Features</th></tr>
-    <tr><td><strong>Yellow Fever</strong></td><td>Flavivirus</td><td><em>Aedes aegypti</em></td><td>Jaundice, hemorrhage, Faget sign, black vomit. Vaccine available.</td></tr>
-    <tr><td><strong>Dengue</strong></td><td>Flavivirus</td><td><em>Aedes aegypti</em></td><td>"Breakbone fever." Severe myalgia. Hemorrhagic form with plasma leakage. No jaundice typically.</td></tr>
-    <tr><td><strong>Zika</strong></td><td>Flavivirus</td><td><em>Aedes aegypti</em></td><td>Often mild. Congenital Zika syndrome (microcephaly). Also sexually transmitted. Conjunctivitis characteristic.</td></tr>
-    <tr><td><strong>Chikungunya</strong></td><td>Alphavirus</td><td><em>Aedes aegypti</em></td><td>Severe, debilitating polyarthralgia. "Stooped posture." Joint pain can persist months.</td></tr>
-    <tr><td><strong>Malaria</strong></td><td>Plasmodium (parasite)</td><td><em>Anopheles</em></td><td>Cyclical fevers (48–72 hr). NOT a virus. Thick/thin smear diagnosis. Antimalarial treatment available.</td></tr>
-    <tr><td><strong>West Nile</strong></td><td>Flavivirus</td><td><em>Culex</em></td><td>Most asymptomatic. Neuroinvasive in &lt; 1%. Encephalitis/meningitis in severe cases.</td></tr>
-  </table>
-
-  <h3>Travel Health Nursing</h3>
-  <ul>
-    <li>Assess travel itinerary for yellow fever risk zones</li>
-    <li>Ensure vaccination ≥ <span class="lyte">10 days</span> before departure</li>
-    <li>Issue International Certificate of Vaccination or Prophylaxis (ICVP)</li>
-    <li>Provide mosquito avoidance education</li>
-    <li>Advise to seek care if febrile illness develops within <span class="lyte">2 weeks</span> of returning from endemic area</li>
-    <li>Report suspected cases to public health authorities</li>
-  </ul>
+    <h3>Treating High Potassium</h3>
+    <ol>
+      <li>Never push K⁺ IV. Max 40 mEq/L of IV fluid.</li>
+      <li>Give <strong>D5W + Regular Insulin</strong> (fast/temporary — drives K⁺ into cells)</li>
+      <li>Give <strong>Kayexalate</strong> (slow/permanent — "K⁺ exits late")</li>
+    </ol>
+  </div>
 </div>
 
-<!-- ==================== SECTION 8 ==================== -->
-<div id="sec-mem" class="section-hdr sh-mem">🧠 Section 8 — Memory Anchors &amp; Key Rules</div>
-<div class="content-block">
-
-  <h3>Key Mnemonics</h3>
-
-  <div class="mnemonic-box">
-    <div class="title">🦟 Yellow Fever 3 Phases</div>
-    <div class="letters">
-      <span>I</span>nfection (acute fever) → <span>R</span>emission (false recovery) → <span>T</span>oxic (organ failure, hemorrhage, death)
-    </div>
+<!-- ===== SECTION 10 ===== -->
+<div class="section" id="s10">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Fluids, Anticoagulants &amp; Anticholinergics</h2>
+    <span class="lec-tag">Lec 10+</span>
   </div>
+  <div class="section-body">
+    <h3>Diuretics — K-Wasting vs. K-Sparing</h3>
+    <table>
+      <tr><th>Type</th><th>Endings</th><th>Examples</th><th>Key Point</th></tr>
+      <tr><td><strong>K-Wasting</strong></td><td>-X or -ide</td><td><span class="drug">Lasix</span>, <span class="drug">Furosemide</span>, <span class="drug">Bumex</span></td><td>Plus <span class="drug">Diuril</span>. "X" out potassium.</td></tr>
+      <tr><td><strong>K-Sparing</strong></td><td>-one, -ide (misc)</td><td><span class="drug">Spironolactone</span>, <span class="drug">Amiloride</span>, <span class="drug">Triamterene</span></td><td>Watch for hyperkalemia.</td></tr>
+    </table>
 
-  <div class="mnemonic-box">
-    <div class="title">💛 YELLOW — Key Features</div>
-    <div class="letters">
-      <span>Y</span>ellow skin (jaundice) · <span>E</span>mesis (black vomit) · <span>L</span>iver failure · <span>L</span>ow pulse + fever (Faget sign) · <span>O</span>liguria (renal failure) · <span>W</span>orldwide prevention (vaccine)
-    </div>
+    <h3>Heparin vs. Coumadin</h3>
+    <table>
+      <tr><th></th><th><span class="drug">Heparin</span></th><th><span class="drug">Coumadin</span></th></tr>
+      <tr><td>Route</td><td>IV or SubQ</td><td>PO only</td></tr>
+      <tr><td>Onset</td><td>Immediate</td><td>Takes days</td></tr>
+      <tr><td>Duration</td><td>Max 21 days (except <span class="drug">Lovenox</span>)</td><td>Lifelong OK</td></tr>
+      <tr><td>Antidote</td><td><span class="drug">Protamine sulfate</span> (heParin → P)</td><td>Vitamin K</td></tr>
+      <tr><td>Lab</td><td>PTT (+ all clotting/bleeding times)</td><td>PT/INR</td></tr>
+      <tr><td>Pregnancy</td><td>✅ Safe (Class C)</td><td>❌ Contraindicated (Class X)</td></tr>
+    </table>
+
+    <h3>Drug Reversals &amp; Herbal Hazards</h3>
+    <table>
+      <tr><th>Drug/Toxin</th><th>Antidote/Reversal</th></tr>
+      <tr><td>Opioids/Narcotics</td><td><span class="drug">Naloxone</span> (Narcan)</td></tr>
+      <tr><td>Benzodiazepines</td><td><span class="drug">Flumazenil</span> (Romazicon)</td></tr>
+      <tr><td>Acetaminophen (Tylenol)</td><td><span class="drug">Acetylcysteine</span> (Mucomyst)</td></tr>
+      <tr><td>Magnesium Sulfate</td><td>Calcium Gluconate</td></tr>
+    </table>
+    <div class="callout warn">Dangerous Herbals: St. John's Wort → serotonin syndrome with SSRIs. Licorice → severe hypokalemia. Ephedra → powerful stimulant. Ginkgo/Ginseng/Garlic → ↑ bleeding risk (stop 2 wks pre-op).</div>
+
+    <h3>Anticholinergic Pharmacology</h3>
+    <p>Blocks acetylcholine → dries out and shuts down GI/GU motility.</p>
+    <ul>
+      <li><strong>The ABCDs</strong>: Anorexia, Blurry vision, Constipation/Confusion, Dry Mouth, Sedation/Stasis of urine</li>
+      <li><strong>The 4 D's</strong>: Dry Mouth, Dry Stool, Dilated Pupils (Mydriasis), Dilated Bladder (retention)</li>
+      <li><strong>Other Signs</strong>: Tachycardia, anhidrosis (no sweat), absent bowel sounds</li>
+    </ul>
+    <div class="mnemonic">Atropine toxicity: "Hot as a Hare, Mad as a Hatter, Red as a Beet, Dry as a Bone, Blind as a Bat." Antidote: Physostigmine.</div>
+    <p><strong>Priority 1</strong>: Urinary retention → increase fluids (2–3L/day), high fiber. <strong>Priority 2</strong>: Dry mouth → sugarless gum, hard candy, ice chips (do NOT hold drug).</p>
+    <div class="callout warn">NEVER give anticholinergics (Atropine, Tolterodine) to patients with Glaucoma → increases intraocular pressure. Geodon prolongs QT → cardiac arrest (Black Box Warning).</div>
+
+    <h3>Comparative: Anticholinergic vs. Cholinergic</h3>
+    <table>
+      <tr><th>System</th><th>Anticholinergic ("Drying")</th><th>Cholinergic ("Wet" = SLUDGE)</th></tr>
+      <tr><td>GI</td><td>Constipation, anorexia, absent BS</td><td>Diarrhea, emesis, GI upset</td></tr>
+      <tr><td>GU</td><td>Urinary retention (dilated bladder)</td><td>Urination (increased)</td></tr>
+      <tr><td>Secretions</td><td>Dry mouth, anhidrosis</td><td>Salivation, lacrimation, diaphoresis</td></tr>
+      <tr><td>Respiratory</td><td>Bronchodilation (decreased mucus)</td><td>Bronchospasm, bronchorrhea</td></tr>
+      <tr><td>Ophthalmic</td><td>Blurry vision, dilated pupils</td><td>Constricted pupils (miosis)</td></tr>
+    </table>
+    <div class="callout">Overmedication with cholinergics (like <span class="drug">Myasthenia Gravis</span> drugs) → Cholinergic Crisis (SLUDGE signs).</div>
   </div>
-
-  <div class="mnemonic-box">
-    <div class="title">🔴 Faget Sign = Fever + Bradycardia</div>
-    <div class="letters">
-      Temperature UP ↑ but heart rate stays DOWN ↓ or doesn't rise as expected. Think: <span>F</span>aget = <span>F</span>ever without Fast heart rate
-    </div>
-  </div>
-
-  <div class="mnemonic-box">
-    <div class="title">🚫 Vaccine Contraindications — "IET"</div>
-    <div class="letters">
-      <span>I</span>mmunocompromised · <span>E</span>gg allergy (severe) · <span>T</span>hymus disorders — Plus: infants &lt; 6 mo, pregnancy
-    </div>
-  </div>
-
-  <h3>NCLEX Yellow Fever Quick-Reference Rules</h3>
-  <table class="info-table">
-    <tr><th>Rule</th><th>Application</th></tr>
-    <tr><td><strong>Faget sign = yellow fever hallmark</strong></td><td>Fever with paradoxical bradycardia. Classic pulse-temperature dissociation.</td></tr>
-    <tr><td><strong>Remission phase is deceptive</strong></td><td>Patient appears to improve, then may crash into toxic phase. Continue monitoring.</td></tr>
-    <tr><td><strong>No antiviral treatment exists</strong></td><td>Management is 100% supportive. Focus on fluids, bleeding control, organ support.</td></tr>
-    <tr><td><strong>NEVER give aspirin or NSAIDs</strong></td><td>↑ bleeding risk in coagulopathic patients. Use acetaminophen cautiously for fever.</td></tr>
-    <tr><td><strong>Mosquito protection = infection control</strong></td><td>Bed net during viremic period. Eliminate standing water. DEET repellent. Screen windows.</td></tr>
-    <tr><td><strong>Vaccine = live attenuated</strong></td><td>Single dose, lifelong immunity. Give ≥ 10 days before travel. No immunocompromised patients.</td></tr>
-    <tr><td><strong>AST &gt; ALT pattern</strong></td><td>Unlike typical hepatitis. Reflects multi-organ damage (liver + muscle + heart).</td></tr>
-    <tr><td><strong>Not person-to-person</strong></td><td>Requires mosquito vector. Standard precautions + mosquito prevention. No respiratory isolation.</td></tr>
-    <tr><td><strong>Councilman bodies</strong></td><td>Pathognomonic liver finding on biopsy. Eosinophilic hepatocyte necrosis.</td></tr>
-    <tr><td><strong>Endemic: Africa &amp; South America</strong></td><td>NOT Asia despite Aedes aegypti presence. 90% of cases in Africa.</td></tr>
-  </table>
-
-  <h3>Common NCLEX Yellow Fever Traps</h3>
-  <ul>
-    <li><strong>Trap:</strong> "Place the patient in airborne isolation" — Yellow fever is NOT airborne. Mosquito-borne. Standard precautions + mosquito protection.</li>
-    <li><strong>Trap:</strong> "Administer ibuprofen for fever" — NEVER. Use acetaminophen only. NSAIDs ↑ bleeding.</li>
-    <li><strong>Trap:</strong> "The patient is improving (remission phase), discharge planning" — No! 15% of patients progress to lethal toxic phase. Continue close monitoring.</li>
-    <li><strong>Trap:</strong> "Administer the yellow fever vaccine to the HIV+ patient with CD4 of 150" — Contraindicated. Live vaccine + immunocompromised = dangerous.</li>
-    <li><strong>Trap:</strong> "Start antiviral therapy" — No specific antiviral exists for yellow fever. Treatment is supportive only.</li>
-  </ul>
 </div>
 
+<!-- ===== SECTION 11 ===== -->
+<div class="section" id="s11">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Maternal, Newborn &amp; OB Meds</h2>
+    <span class="lec-tag">Lec 10–11</span>
+  </div>
+  <div class="section-body">
+    <h3>Pregnancy Basics</h3>
+    <ul>
+      <li><strong>Naegele's Rule</strong>: LMP + 7 days − 3 months</li>
+      <li>Weight gain: 25–31 lbs total. 1st trimester: 1 lb/mo. 2nd/3rd: 1 lb/wk.</li>
+      <li>Fundus palpable at 12 wks. Reaches umbilicus at 20–22 wks.</li>
+      <li><strong>Positive signs</strong>: fetal skeleton on X-ray, US, auscultation, examiner palpates movement</li>
+    </ul>
+
+    <h3>The 4 Stages of Labor</h3>
+    <table>
+      <tr><th>Phase</th><th>Dilation</th><th>Freq</th><th>Duration</th><th>Intensity</th></tr>
+      <tr><td>Latent</td><td>0–4 cm</td><td>5–30 min</td><td>15–30 sec</td><td>Mild</td></tr>
+      <tr><td>Active</td><td>5–7 cm</td><td>3–5 min</td><td>30–60 sec</td><td>Moderate</td></tr>
+      <tr><td>Transition</td><td>8–10 cm</td><td>2–3 min</td><td>60–90 sec</td><td>Strong</td></tr>
+    </table>
+    <div class="callout warn">Contractions should NOT be &gt;90 sec or closer than every 2 minutes → stop <span class="drug">Pitocin</span>!</div>
+
+    <h3>Fetal Heart Rate Monitoring</h3>
+    <table>
+      <tr><th>Pattern</th><th>Meaning</th><th>Action</th></tr>
+      <tr><td>Low FHR (&lt;110)</td><td>BAD</td><td><strong>LION</strong>: Left side, IV ↑, O₂, Notify. Stop Pit.</td></tr>
+      <tr><td>Low Baseline Variability</td><td>BAD</td><td>LION, stop Pit</td></tr>
+      <tr><td>Late Decelerations</td><td>BAD (placental insufficiency)</td><td>LION, stop Pit</td></tr>
+      <tr><td>Variable Decelerations</td><td><strong>VERY BAD</strong> (cord compression)</td><td>Push head back, knee-chest/Trendelenburg</td></tr>
+      <tr><td>FHR Accelerations</td><td>Good</td><td>Document</td></tr>
+      <tr><td>High Baseline Variability</td><td>Good</td><td>Document</td></tr>
+      <tr><td>Early Decelerations</td><td>Good (head compression)</td><td>Document</td></tr>
+    </table>
+
+    <h3>Stages 2–4 &amp; Postpartum</h3>
+    <ul>
+      <li><strong>Stage 2</strong>: Deliver head → suction mouth/nose → check nuchal cord → deliver body → ID band</li>
+      <li><strong>Stage 3</strong>: Deliver placenta. Check 3 vessels: 2 arteries, 1 vein (AVA).</li>
+      <li><strong>Stage 4</strong>: Recovery. 4 things, 4× per hour: vitals, fundus (boggy→massage; displaced→cath), pads (saturated ≤15 min = bad), roll patient.</li>
+    </ul>
+    <p><strong>Lochia</strong>: Rubra (first days) → Serosa (week). Moderate = 4–6 inches on pad in 1 hr. Excessive = pad saturated in 15 min.</p>
+
+    <h3>Newborn Findings</h3>
+    <table>
+      <tr><th>Finding</th><th>Description</th></tr>
+      <tr><td>Milia</td><td>Tiny white spots on face (sebaceous glands)</td></tr>
+      <tr><td>Epstein's Pearls</td><td>White cysts on gums</td></tr>
+      <tr><td>Mongolian Spots</td><td>Bluish-black macules on buttocks (darker-skinned)</td></tr>
+      <tr><td>Erythema Toxicum</td><td>Red papular rash on torso (benign, resolves)</td></tr>
+      <tr><td>Cephalohematoma</td><td>Bleeding between skull layers. Does NOT cross suture lines.</td></tr>
+      <tr><td>Caput Succedaneum</td><td>Scalp edema from birth pressure. CAN cross suture lines.</td></tr>
+      <tr><td>Acrocyanosis</td><td>Blue hands/feet (normal, intermittent, first 7–10 days)</td></tr>
+      <tr><td>Vernix Caseosa</td><td>Whitish cheese-like substance (normal)</td></tr>
+    </table>
+
+    <h3>OB Meds</h3>
+    <table>
+      <tr><th>Drug</th><th>Action</th><th>Key Point</th></tr>
+      <tr><td><span class="drug">Terbutaline</span> (Brethine)</td><td>Tocolytic (stop labor)</td><td>S/E: tachycardia. No cardiac disease.</td></tr>
+      <tr><td><span class="drug">Nifedipine</span></td><td>Tocolytic</td><td>S/E: headache/hypotension. CAN give with cardiac disease.</td></tr>
+      <tr><td><span class="drug">Pitocin</span> (Oxytocin)</td><td>Stimulate labor</td><td>S/E: uterine hyperstimulation</td></tr>
+      <tr><td><span class="drug">Cervidil</span> (Prostaglandin)</td><td>Dilate cervix</td><td>S/E: uterine hyperstimulation</td></tr>
+      <tr><td><span class="drug">Betamethasone</span></td><td>Fetal lung maturity</td><td>Give to MOTHER IM before birth. S/E: ↑blood sugar.</td></tr>
+      <tr><td><span class="drug">Survanta</span> (Surfactant)</td><td>Lung maturity</td><td>Give to BABY trans-tracheal after birth.</td></tr>
+      <tr><td><span class="drug">MgSO₄</span></td><td>Tocolytic / preeclampsia</td><td>Monitor: RR ≥12, reflexes +2, UO. Antidote: Calcium Gluconate.</td></tr>
+    </table>
+  </div>
 </div>
+
+<!-- ===== SECTION 12 ===== -->
+<div class="section" id="s12">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Prioritization, Delegation, Peds &amp; Burns</h2>
+    <span class="lec-tag">Lec 12+</span>
+  </div>
+  <div class="section-body">
+    <h3>4 Prioritization Rules</h3>
+    <ol>
+      <li><strong>Acute</strong> beats chronic</li>
+      <li><strong>Fresh post-op</strong> (&lt;12 hrs) beats medical or other surgical</li>
+      <li><strong>Unstable</strong> beats stable — always!</li>
+      <li><strong>Vital organ tie-breaker</strong>: Brain → Lungs → Heart → Liver → Kidney → Pancreas</li>
+    </ol>
+    <div class="callout">Focus on the MODIFYING PHRASE, not the diagnosis! 4 patients are ALWAYS unstable: hemorrhage, hypoglycemia, fever ≥104, pulseless/breathless.</div>
+
+    <div class="two-col">
+      <div class="col-card">
+        <h4>🔴 Unstable Indicators</h4>
+        <ul>
+          <li>Acute illness, post-op &lt;12 hrs</li>
+          <li>General anesthesia, C/D labs</li>
+          <li>"Newly admitted/diagnosed"</li>
+          <li>Changed/changing assessment</li>
+        </ul>
+      </div>
+      <div class="col-card">
+        <h4>🟢 Stable Indicators</h4>
+        <ul>
+          <li>Chronic illness, post-op &gt;12 hrs</li>
+          <li>Local/regional, A/B labs</li>
+          <li>"To be discharged"</li>
+          <li>Unchanged assessment</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Delegation</h3>
+    <table>
+      <tr><th></th><th>LPN Cannot Do</th><th>UAP Cannot Do</th></tr>
+      <tr><td>IVs/Blood</td><td>Start, hang, mix, push IV meds; transfusions</td><td>Anything IV/blood</td></tr>
+      <tr><td>Assessment</td><td>Admission, discharge, transfer, 1st post-change</td><td>All assessments (except VS &amp; accucheck)</td></tr>
+      <tr><td>Teaching</td><td>Develop teaching (CAN reinforce)</td><td>Any teaching</td></tr>
+      <tr><td>Planning</td><td>Plan of care (CAN implement)</td><td>Plan or implement</td></tr>
+    </table>
+    <div class="callout warn">Family: NEVER delegate safety responsibilities. They can only do what you teach them. UAP CAN do baths, beds, ADLs, SSE (not Fleets).</div>
+
+    <h3>Inappropriate Behavior</h3>
+    <ol>
+      <li>Is it <strong>illegal</strong>? → Tell supervisor</li>
+      <li>Is someone in <strong>immediate danger</strong>? → Intervene immediately</li>
+      <li>Legal but <strong>inappropriate</strong>? → Counsel later</li>
+      <li>NEVER ignore it (never the right answer)</li>
+    </ol>
+
+    <h3>Laminectomy — Location Matters</h3>
+    <table>
+      <tr><th>Location</th><th>Pre-op Assessment</th><th>Post-op Complication</th></tr>
+      <tr><td>Cervical</td><td>Upper extremities &amp; breathing</td><td>Pneumonia</td></tr>
+      <tr><td>Thoracic</td><td>Cough &amp; bowel sounds</td><td>Pneumonia &amp; paralytic ileus</td></tr>
+      <tr><td>Lumbar</td><td>Urine output &amp; legs</td><td>Urinary retention</td></tr>
+    </table>
+    <p>Post-op #1 answer: <strong>LOG ROLL!</strong> No dangling. Limit sitting to 20–30 min. Fusion = 2 incisions (spine + iliac crest).</p>
+
+    <h3>Piaget's Stages &amp; Toys</h3>
+    <table>
+      <tr><th>Stage/Age</th><th>Best Toy</th><th>Key Concept</th></tr>
+      <tr><td>Sensorimotor (0–2)</td><td>Musical mobile (0–6mo), Jack-in-box (6–9mo)</td><td>Present-oriented. Teach as it happens.</td></tr>
+      <tr><td>Pre-operational (3–6)</td><td>Tricycle, dance, crafts</td><td>Fantasy. Cooperative &amp; pretend play. Teach morning of.</td></tr>
+      <tr><td>Concrete (7–11)</td><td>Paper &amp; pencils, board games</td><td>3 C's: Creative, Competitive, Collective. Teach days ahead.</td></tr>
+      <tr><td>Formal (12+)</td><td>Peer group activities</td><td>Abstract thinking. Teach like an adult.</td></tr>
+    </table>
+    <div class="mnemonic">Safety: No small toys &lt;4 yrs. No metal if O₂. Worst fomite = stuffed animals. Go YOUNGER when in doubt.</div>
+
+    <h3>Burns &amp; Disaster Management</h3>
+    <table>
+      <tr><th>Triage Tag</th><th>Priority</th><th>Description</th></tr>
+      <tr><td>🔴 Red (1)</td><td>Life-threatening but survivable</td><td>Treat immediately. Shock, arterial bleeding, &gt;50% burns.</td></tr>
+      <tr><td>🟡 Yellow (2)</td><td>Significant injuries</td><td>Delay 30–60 min.</td></tr>
+      <tr><td>🟢 Green (3)</td><td>"Walking Wounded"</td><td>Minor.</td></tr>
+      <tr><td>⚫ Black (4)</td><td>Expectant</td><td>Survival unlikely even with care.</td></tr>
+    </table>
+    <ul>
+      <li><strong>Rule of Nines</strong>: Arms = 18% each, Front trunk = 18%, Lower extremities = 18% each</li>
+      <li><strong>Parkland Formula</strong>: 4mL × kg × %TBSA. Give 50% in first 8 hrs (from TIME of injury).</li>
+      <li><strong>Priority</strong>: Airway first. Establish open airway first.</li>
+    </ul>
+
+    <h3>Bioterrorism — Category A (STAPH-B)</h3>
+    <table>
+      <tr><th>Agent</th><th>Key Feature</th><th>Treatment</th></tr>
+      <tr><td><strong>Smallpox</strong></td><td>Airborne. Rash starts around mouth. Dies from septicemia.</td><td>No treatment.</td></tr>
+      <tr><td><strong>Tularemia</strong></td><td>Chest symptoms. Dies from resp. failure.</td><td><span class="drug">Streptomycin</span></td></tr>
+      <tr><td><strong>Anthrax</strong></td><td>Inhaled. Flu-like. Dies from resp. failure.</td><td>Cipro, PCN, Streptomycin</td></tr>
+      <tr><td><strong>Plague</strong></td><td>3 H's: Hemoptysis, Hematemesis, Hematochezia. DIC.</td><td><span class="drug">Doxycycline</span> + mycins. Non-communicable after 48hrs Tx.</td></tr>
+      <tr><td><strong>Hemorrhagic</strong></td><td>Petechiae &amp; ecchymoses. High fatality.</td><td>Supportive</td></tr>
+      <tr><td><strong>Botulism</strong></td><td>Ingested. Descending paralysis + fever + alert. Resp. arrest.</td><td>Antitoxin</td></tr>
+    </table>
+    <div class="mnemonic">Chemical agents: soap &amp; water for all EXCEPT Sarin (nerve agent) → needs bleach. BB-SLUDGE for nerve agent symptoms.</div>
+    <p><strong>Biological</strong> = isolate. <strong>Chemical</strong> = decontaminate (remove clothes, shower, re-dress).</p>
+  </div>
+</div>
+
+<div class="footer-note">
+  📔 MK Yellow — Exhaustive Master · Source: Mark Klimek NCLEX Review · Built for Peptopia
+</div>
+
+</div><!-- /container -->
+
 <script>
-document.querySelectorAll('.drug').forEach(function(el){
-  el.style.cursor='pointer';
-  el.title='Click to view drug card';
-  el.addEventListener('click',function(){
-    var name=this.textContent.trim();
-    if(window.parent&&window.parent!==window){
-      window.parent.postMessage({type:'showDrugCard',drug:name},'*');
+function toggleSection(header) {
+  var body = header.nextElementSibling;
+  header.classList.toggle('open');
+  body.classList.toggle('show');
+}
+/* Drug card popup — sends message to parent for drug card modal */
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('drug')) {
+    var name = e.target.textContent.trim();
+    try {
+      window.parent.postMessage({ type: 'showDrugCard', drug: name }, '*');
+    } catch(err) { /* cross-origin, skip */ }
+  }
+});
+/* Smooth scroll for TOC links */
+document.querySelectorAll('.toc a').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      var header = target.querySelector('.section-header');
+      if (header && !header.classList.contains('open')) {
+        header.classList.add('open');
+        header.nextElementSibling.classList.add('show');
+      }
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
 });
