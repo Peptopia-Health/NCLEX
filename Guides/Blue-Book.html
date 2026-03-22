@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blue Book — Systems Master Guide</title>
+<style>
+:root {
+  --bg: #f0f4ff;
+  --surface: #ffffff;
+  --surface-alt: #eef2ff;
+  --border: #93c5fd;
+  --border-light: #bfdbfe;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --accent: #2563eb;
+  --accent-dark: #1e3a8a;
+  --accent-light: #3b82f6;
+  --hero-from: #1e3a8a;
+  --hero-to: #2563eb;
+  --badge-bg: rgba(255,255,255,0.15);
+  --badge-border: rgba(255,255,255,0.35);
+  --table-header: #eef2ff;
+  --table-stripe: #f0f4ff;
+  --tag-bg: #dbeafe;
+  --tag-text: #1e3a8a;
+  --callout-bg: #eff6ff;
+  --callout-border: #3b82f6;
+  --callout-icon: #2563eb;
+  --mnemonic-bg: #e0f2fe;
+  --mnemonic-border: #38bdf8;
+  --mnemonic-text: #0c4a6e;
+  --drug-bg: #ede9fe;
+  --drug-text: #5b21b6;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+}
+html.dark {
+  --bg: #0a0f1e;
+  --surface: #141b2d;
+  --surface-alt: #1a2340;
+  --border: #1e40af;
+  --border-light: #1e3a6e;
+  --text: #dbeafe;
+  --text-muted: #94a3b8;
+  --accent: #60a5fa;
+  --accent-dark: #93c5fd;
+  --accent-light: #3b82f6;
+  --hero-from: #1e3a8a;
+  --hero-to: #1d4ed8;
+  --table-header: #1a2340;
+  --table-stripe: #141b2d;
+  --tag-bg: #1e3a6e;
+  --tag-text: #93c5fd;
+  --callout-bg: #0f1d3a;
+  --callout-border: #1d4ed8;
+  --callout-icon: #60a5fa;
+  --mnemonic-bg: #0c1a2e;
+  --mnemonic-border: #0369a1;
+  --mnemonic-text: #7dd3fc;
+  --drug-bg: #1e1045;
+  --drug-text: #c4b5fd;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 15px;
+  -webkit-text-size-adjust: 100%;
+}
+.hero {
+  background: linear-gradient(135deg, var(--hero-from), var(--hero-to));
+  color: #fff;
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+}
+.hero h1 { font-size: 1.7rem; font-weight: 800; margin-bottom: 0.3rem; letter-spacing: -0.02em; }
+.hero .subtitle { opacity: 0.88; font-size: 0.92rem; font-weight: 500; margin-bottom: 1rem; }
+.badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+.badge {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  padding: 0.35rem 0.85rem; border-radius: 2rem;
+  font-size: 0.78rem; font-weight: 700;
+  background: var(--badge-bg); border: 1.5px solid var(--badge-border);
+  color: #fff; backdrop-filter: blur(4px);
+}
+.guide-quiz-btn {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.45rem 1rem; border-radius: 2rem;
+  font-size: 0.85rem; font-weight: 700;
+  border: 2px solid rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.12);
+  color: #fff; cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: all 0.15s;
+  margin-top: 0.5rem;
+}
+.guide-quiz-btn:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-1px);
+}
+.container { max-width: 820px; margin: 0 auto; padding: 1rem 1rem 3rem; }
+.toc {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: 0.75rem;
+  padding: 1.2rem 1.5rem;
+  margin: 1.2rem 0 1.5rem;
+  box-shadow: var(--shadow);
+}
+.toc h2 { font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--accent); }
+.toc ol { padding-left: 1.4rem; }
+.toc li { margin-bottom: 0.25rem; font-size: 0.88rem; }
+.toc a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.toc a:hover { text-decoration: underline; }
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: 0.75rem;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.section-header {
+  background: var(--surface-alt);
+  padding: 0.9rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-bottom: 1px solid var(--border-light);
+  user-select: none;
+}
+.section-header:hover { filter: brightness(0.97); }
+.section-header .arrow {
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.section-header.open .arrow { transform: rotate(90deg); }
+.section-header h2 { font-size: 1.05rem; font-weight: 700; color: var(--accent-dark); flex:1; }
+.section-header .lec-tag {
+  font-size: 0.68rem; font-weight: 700;
+  background: var(--tag-bg); color: var(--tag-text);
+  padding: 0.15rem 0.55rem; border-radius: 1rem;
+}
+.section-body { padding: 1rem 1.2rem; display: none; }
+.section-body.show { display: block; }
+h3 { font-size: 0.95rem; font-weight: 700; color: var(--accent-dark); margin: 1rem 0 0.5rem; }
+h3:first-child { margin-top: 0; }
+p, ul, ol { margin-bottom: 0.6rem; font-size: 0.9rem; }
+ul, ol { padding-left: 1.3rem; }
+li { margin-bottom: 0.25rem; }
+strong { font-weight: 700; }
+.callout {
+  background: var(--callout-bg);
+  border-left: 3px solid var(--callout-border);
+  padding: 0.65rem 0.9rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 0.7rem 0;
+  font-size: 0.88rem;
+}
+.callout.warn { border-left-color: #ef4444; background: #fef2f2; }
+html.dark .callout.warn { border-left-color: #b91c1c; background: #2d1010; }
+.mnemonic {
+  background: var(--mnemonic-bg);
+  border: 1px dashed var(--mnemonic-border);
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.5rem;
+  margin: 0.7rem 0;
+  font-size: 0.88rem;
+  color: var(--mnemonic-text);
+  font-weight: 600;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.7rem 0;
+  font-size: 0.84rem;
+}
+th, td {
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--border-light);
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: var(--table-header);
+  font-weight: 700;
+  color: var(--accent-dark);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+tr:nth-child(even) td { background: var(--table-stripe); }
+.drug {
+  background: var(--drug-bg); color: var(--drug-text);
+  padding: 0.1rem 0.4rem; border-radius: 0.25rem;
+  font-weight: 700; font-size: 0.85rem; cursor: pointer;
+}
+.drug:hover { text-decoration: underline; }
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  margin: 0.7rem 0;
+}
+@media (max-width: 520px) {
+  .two-col { grid-template-columns: 1fr; }
+  .hero { padding: 2rem 1rem 1.5rem; }
+  .hero h1 { font-size: 1.4rem; }
+  .section-body { padding: 0.8rem 1rem; }
+  table { font-size: 0.78rem; }
+  th, td { padding: 0.35rem 0.45rem; }
+}
+.col-card {
+  background: var(--surface-alt);
+  border: 1px solid var(--border-light);
+  border-radius: 0.5rem;
+  padding: 0.7rem 0.85rem;
+}
+.col-card h4 {
+  font-size: 0.82rem; font-weight: 700;
+  color: var(--accent); margin-bottom: 0.3rem;
+}
+.col-card ul { margin-bottom: 0; }
+</style>
+</head>
+<body>
+<script>
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  document.documentElement.classList.add('dark');
+}
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+  e.matches ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
+});
+</script>
+
+<div class="hero">
+  <h1>📘 Blue Book — Systems Master</h1>
+  <p class="subtitle">NCLEX Review · Cardiovascular · Respiratory · Neurological · GI/Renal</p>
+  <div class="badge-row">
+    <span class="badge">📝 100 Questions</span>
+    <span class="badge">📖 4 Systems</span>
+    <span class="badge">🎯 High-Yield</span>
+  </div>
+  <button class="guide-quiz-btn" onclick="launchQuiz()">📝 Launch Quiz — 100 Questions</button>
+</div>
+
+<div class="container">
+
+<div class="toc">
+  <h2>📋 Contents</h2>
+  <ol>
+    <li><a href="#s1">Blood Pressure, Angina &amp; Nitroglycerin</a></li>
+    <li><a href="#s2">Myocardial Infarction</a></li>
+    <li><a href="#s3">CHF &amp; Cardiac Pharmacology</a></li>
+    <li><a href="#s4">Shock, Vascular Disorders &amp; Hypertension</a></li>
+    <li><a href="#s5">Aneurysms &amp; CV Disease in Pregnancy</a></li>
+    <li><a href="#s6">COPD, Emphysema &amp; Asthma</a></li>
+    <li><a href="#s7">Pneumonia, PE &amp; Pulmonary Edema</a></li>
+    <li><a href="#s8">TB, RDS, Cystic Fibrosis &amp; Epiglottitis</a></li>
+    <li><a href="#s9">ICP, Meningitis &amp; Seizures</a></li>
+    <li><a href="#s10">CVA, Spinal Cord &amp; Laminectomy</a></li>
+    <li><a href="#s11">Degenerative &amp; Sensory Disorders</a></li>
+    <li><a href="#s12">Renal, GI &amp; Surgical Disorders</a></li>
+  </ol>
+</div>
+
+<!-- ===== SECTION 1 ===== -->
+<div class="section" id="s1">
+  <div class="section-header open" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Blood Pressure, Angina &amp; Nitroglycerin</h2>
+    <span class="lec-tag">Cardiovascular</span>
+  </div>
+  <div class="section-body show">
+    <h3>Blood Pressure Fundamentals</h3>
+    <ul>
+      <li><strong>Systole</strong> = maximal force of blood on artery walls · <strong>Diastole</strong> = lowest force</li>
+      <li>Cessation of sounds = 2nd diastolic sound</li>
+      <li><strong>Pulse Pressure</strong> = Systolic − Diastolic. Shock: narrows · ICP: widens</li>
+    </ul>
+    <table>
+      <tr><th>Situation</th><th>Effect on BP</th><th>Mechanism</th></tr>
+      <tr><td>Too narrow cuff</td><td>False HIGH</td><td>Must be 2/3 of arm width</td></tr>
+      <tr><td>Too wide cuff</td><td>False LOW</td><td>Distributes pressure too broadly</td></tr>
+      <tr><td>Cuff deflated too slowly</td><td>False HIGH</td><td>Venous congestion</td></tr>
+      <tr><td>Vasoconstriction</td><td>↑ BP</td><td>↑ peripheral resistance</td></tr>
+      <tr><td>Vasodilation</td><td>↓ BP</td><td>↓ peripheral resistance</td></tr>
+      <tr><td>Shock</td><td>↓ BP</td><td>↓ circulating volume</td></tr>
+      <tr><td>↑ ICP</td><td>Widened PP</td><td>Cushing's Triad</td></tr>
+    </table>
+
+    <h3>Angina Pectoris</h3>
+    <ul>
+      <li>Chest pain from <strong>decreased blood supply</strong> to myocardium (ischemia)</li>
+      <li>Pain: crushing, substernal, radiating to left arm/jaw</li>
+      <li>🧠 <strong>Key distinction</strong>: Angina IS relieved by rest/nitroglycerin. MI is NOT.</li>
+    </ul>
+
+    <h3>Nitroglycerin Protocol</h3>
+    <table>
+      <tr><th>Parameter</th><th>Details</th></tr>
+      <tr><td>Route</td><td><strong>Sublingual</strong> (under the tongue)</td></tr>
+      <tr><td>Dosing</td><td>1 tab q5 min × 3 — if no relief, call MD</td></tr>
+      <tr><td>Action</td><td>Dilates coronary arteries → ↑ O₂ supply · Also reduces preload</td></tr>
+      <tr><td>Side Effects</td><td><strong>Headache</strong> and <strong>Hypotension</strong></td></tr>
+      <tr><td>Storage</td><td>Keep dry/cool. Replace every 6 months.</td></tr>
+    </table>
+    <div class="callout warn">⚠️ Nitro paste: nurse MUST wear gloves during application to avoid absorbing the drug and developing headache.</div>
+  </div>
+</div>
+
+<!-- ===== SECTION 2 ===== -->
+<div class="section" id="s2">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Myocardial Infarction</h2>
+    <span class="lec-tag">Cardiovascular</span>
+  </div>
+  <div class="section-body">
+    <h3>MI Definition &amp; Presentation</h3>
+    <ul>
+      <li>💀 <strong>Necrosis</strong> (death) of myocardial cells due to coronary artery blockage</li>
+      <li>Pain: crushing, heavy, squeezing. Radiates to left arm/jaw. Duration &gt;30 minutes.</li>
+      <li>S/S: nausea, vomiting, diaphoresis, cold/clammy skin</li>
+      <li>Males more likely than females. 50% of deaths occur within <strong>1 hour</strong> of onset.</li>
+    </ul>
+
+    <h3>MI Treatment — MONA</h3>
+    <div class="mnemonic">🧠 MONA: Morphine, Oxygen, Nitroglycerin, Aspirin. Aspirin prevents platelet aggregation (clots).</div>
+    <table>
+      <tr><th>Drug</th><th>Purpose</th><th>Key Point</th></tr>
+      <tr><td><span class="drug">Morphine</span></td><td>Pain relief &amp; reduces preload</td><td>First-line analgesic for MI pain</td></tr>
+      <tr><td>Oxygen</td><td>Increase O₂ to ischemic tissue</td><td>Give immediately</td></tr>
+      <tr><td><span class="drug">Nitroglycerin</span></td><td>Dilates coronary arteries</td><td>Does NOT relieve MI pain (unlike angina)</td></tr>
+      <tr><td><span class="drug">Aspirin</span></td><td>Anti-platelet</td><td>Prevents clot extension. Also: <span class="drug">Plavix</span></td></tr>
+    </table>
+
+    <h3>MI Complications</h3>
+    <ul>
+      <li>🚨 <strong>Top 3 complications</strong>: Cardiogenic shock, Arrhythmias (PVCs most common), CHF</li>
+      <li><strong>PVCs</strong> (Premature Ventricular Contractions) → treat with <span class="drug">Lidocaine</span> or <span class="drug">Amiodarone</span></li>
+      <li><strong>Cardiogenic Shock</strong> = pump failure. IV fluids do NOT help. Tx: vasopressors/inotropes.</li>
+    </ul>
+
+    <h3>MI Diagnostics &amp; Activity</h3>
+    <table>
+      <tr><th>Diagnostic</th><th>Key Finding</th></tr>
+      <tr><td>Cardiac Enzymes</td><td><strong>Troponin</strong> rises earliest (3 hrs). Also CPK, LDH, SGOT</td></tr>
+      <tr><td>EKG</td><td>Permanent <strong>ST wave changes</strong>. Pathologic Q waves = necrosis.</td></tr>
+      <tr><td>Activity Order</td><td>Bed rest with bedside commode. Resume sexual activity 6 weeks post-DC.</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ===== SECTION 3 ===== -->
+<div class="section" id="s3">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>CHF &amp; Cardiac Pharmacology</h2>
+    <span class="lec-tag">Cardiovascular</span>
+  </div>
+  <div class="section-body">
+    <h3>Left vs. Right Sided Heart Failure</h3>
+    <div class="two-col">
+      <div class="col-card">
+        <h4>Left-Sided Failure</h4>
+        <ul>
+          <li>Fluid backs up into <strong>LUNGS</strong></li>
+          <li>Dyspnea, Rales/Crackles</li>
+          <li>Orthopnea, Frothy bloody sputum</li>
+          <li>Can lead to <strong>Pulmonary Edema</strong></li>
+        </ul>
+      </div>
+      <div class="col-card">
+        <h4>Right-Sided Failure</h4>
+        <ul>
+          <li>Fluid backs up into <strong>BODY</strong></li>
+          <li>JVD, Dependent Edema</li>
+          <li>Ascites, Weight Gain</li>
+          <li>Hepatomegaly</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>CHF Compensation &amp; Treatment</h3>
+    <ul>
+      <li><strong>Compensation</strong>: Hypertrophy → Dilation → Tachycardia. When these fail = <strong>decompensation</strong>.</li>
+      <li><strong>3 Drug Groups</strong>: Diuretics + Vasodilators + Digitalis → Reduce preload/afterload, increase contractility</li>
+      <li><strong>Best indicator</strong> of fluid retention: <strong>Daily Weight</strong>. Report gain of 3 lbs in one week.</li>
+      <li><strong>TED Hose</strong>: Apply before getting out of bed. Remove daily to assess skin.</li>
+    </ul>
+    <div class="callout warn">🚨 NEVER massage calves of CHF patient → risk of dislodging clot (embolism).</div>
+
+    <h3>Digitalis (Digoxin)</h3>
+    <table>
+      <tr><th>Parameter</th><th>Details</th></tr>
+      <tr><td>Action</td><td>↑ strength (positive inotropic) · ↓ rate (negative chronotropic)</td></tr>
+      <tr><td>Before Giving</td><td>Check <strong>apical pulse</strong>. Hold if pulse &lt;60.</td></tr>
+      <tr><td>Toxicity Signs</td><td>⚠️ Anorexia, N/V, <strong>Yellow Vision</strong> (halos), Arrhythmia</td></tr>
+      <tr><td>Toxicity Risk</td><td>Hypokalemia potentiates toxicity — monitor K⁺!</td></tr>
+      <tr><td>Therapeutic Level</td><td>1.0 – 2.0 ng/mL</td></tr>
+    </table>
+
+    <h3>CHF Diuretics</h3>
+    <p><span class="drug">Lasix</span> (Furosemide): loop diuretic. Causes loss of <strong>Potassium (K⁺)</strong>. Monitor K⁺ levels closely. Encourage potassium-rich foods (bananas, oranges).</p>
+  </div>
+</div>
+
+<!-- ===== SECTION 4 ===== -->
+<div class="section" id="s4">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Shock, Vascular Disorders &amp; Hypertension</h2>
+    <span class="lec-tag">Cardiovascular</span>
+  </div>
+  <div class="section-body">
+    <h3>Hypovolemic Shock</h3>
+    <table>
+      <tr><th>Parameter</th><th>Finding</th></tr>
+      <tr><td>#1 Cause</td><td><strong>Acute blood loss</strong></td></tr>
+      <tr><td>BP / Pulse</td><td>BP ↓ decreases · Pulse ↑ (tachycardia) · Pulse pressure narrows</td></tr>
+      <tr><td>Urine / LOC</td><td>Urine &lt;30 cc/hr · LOC decreased (kidneys shut down)</td></tr>
+      <tr><td>Skin</td><td>Cool, Pale, Clammy (vasoconstriction shunts blood to vital organs)</td></tr>
+      <tr><td>Acid-Base</td><td>💀 <strong>Metabolic Acidosis</strong> (lactic acid from anaerobic metabolism)</td></tr>
+      <tr><td>Treatment</td><td><strong>Replace blood and fluids</strong> · O₂ · Position: legs elevated (Trendelenburg)</td></tr>
+    </table>
+
+    <h3>Vascular Disorders</h3>
+    <table>
+      <tr><th>Disorder</th><th>Definition</th><th>Key Facts</th></tr>
+      <tr><td><strong>Buerger's Disease</strong></td><td>Arterial obstruction/inflammation of lower extremities</td><td>Men who SMOKE. Sign: Intermittent Claudication</td></tr>
+      <tr><td><strong>Raynaud's Disease</strong></td><td>Arterial spasms of fingers/toes</td><td>Triggered by cold/stress. Pale/Blue digits.</td></tr>
+      <tr><td><strong>Thrombophlebitis</strong></td><td>Inflammation of vein with clot</td><td>Most common post pelvic/abdominal surgery. NEVER massage.</td></tr>
+    </table>
+    <div class="callout">⚡ Best prevention for thrombophlebitis: <strong>early ambulation</strong>. Complication: Pulmonary Embolism.</div>
+
+    <h3>Anticoagulants</h3>
+    <table>
+      <tr><th></th><th><span class="drug">Heparin</span></th><th><span class="drug">Coumadin</span></th><th><span class="drug">Lovenox</span></th></tr>
+      <tr><td>Route</td><td>IV / SubQ</td><td>PO</td><td>SubQ</td></tr>
+      <tr><td>Onset</td><td>Immediate</td><td>Days</td><td>Hours</td></tr>
+      <tr><td>Monitor</td><td>PTT (1.5-2.5× normal)</td><td>PT/INR (INR 2.0-3.0)</td><td>Anti-Xa levels</td></tr>
+      <tr><td>Antidote</td><td><span class="drug">Protamine Sulfate</span></td><td><span class="drug">Vitamin K</span></td><td>Supportive</td></tr>
+    </table>
+
+    <h3>Hypertension</h3>
+    <ul>
+      <li>Persistent BP &gt; 140/90. Increased <strong>diastolic</strong> is most damaging.</li>
+      <li><strong>Organs affected</strong>: Brain, Eyes, Heart, Kidneys</li>
+      <li><strong>Risk factors</strong>: Race (Blacks), Obesity, Oral Contraceptives, Aging</li>
+      <li><strong>Treatment</strong>: Diuretics, Weight loss, Na⁺ restriction, Stress reduction</li>
+      <li>⚠️ <strong>#1 Side effect</strong> of antihypertensives: Orthostatic Hypotension</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== SECTION 5 ===== -->
+<div class="section" id="s5">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Aneurysms &amp; CV Disease in Pregnancy</h2>
+    <span class="lec-tag">Cardiovascular</span>
+  </div>
+  <div class="section-body">
+    <h3>Aneurysms</h3>
+    <ul>
+      <li>Abnormal widening/weakening of artery wall. 💀 <strong>BIG danger: RUPTURE</strong> → Shock and death.</li>
+      <li><strong>Thoracic</strong>: widening of aorta. Post-op: chest tube.</li>
+      <li><strong>Abdominal</strong>: most common symptom = pulsating mass above umbilicus. Often silent.</li>
+    </ul>
+    <table>
+      <tr><th>Nursing Priority</th><th>Details</th></tr>
+      <tr><td>Vital Signs</td><td>Monitor pulse and BP. <strong>Pulse changes BEFORE BP</strong> if rupture occurs.</td></tr>
+      <tr><td>Activity</td><td><strong>Absolute Bedrest</strong>. Do NOT turn, cough, deep breathe until stable.</td></tr>
+      <tr><td>Rupture</td><td>🚨 ↓ LOC, tachycardia, hypotension. Priority: <strong>Get to OR ASAP</strong>.</td></tr>
+    </table>
+
+    <h3>CV Disease in Pregnancy</h3>
+    <ul>
+      <li>CD ranks <strong>4th</strong> in maternal death. Primary cause: Rheumatic Heart Disease.</li>
+      <li>Pregnancy requires <strong>30-50% increased</strong> cardiac output.</li>
+      <li><strong>Decompensation signs</strong>: Sudden dyspnea, JVD, Murmurs, Crackles</li>
+      <li><strong>#1 Treatment</strong>: REST. Drugs: Diuretics, <span class="drug">Heparin</span>, <span class="drug">Digoxin</span></li>
+      <li>Analgesics (even <span class="drug">Morphine</span>) OK during labor to ↓ anxiety/preload. C-section NOT mandatory.</li>
+    </ul>
+
+    <h3>Polycythemia Vera</h3>
+    <p>Increase in RBCs, WBCs, Platelets → <strong>thick blood</strong>. Sign: ruddy (red) complexion, enlarged spleen. Treatment: <strong>Phlebotomy</strong>.</p>
+  </div>
+</div>
+
+<!-- ===== SECTION 6 ===== -->
+<div class="section" id="s6">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>COPD, Emphysema &amp; Asthma</h2>
+    <span class="lec-tag">Respiratory</span>
+  </div>
+  <div class="section-body">
+    <h3>COPD — Chronic Obstructive Pulmonary Disease</h3>
+    <ul>
+      <li><strong>3 Components</strong>: Asthma, Bronchitis, Emphysema</li>
+      <li><strong>Signs</strong>: SOB, Wheezing, Cough, Cyanosis</li>
+      <li><strong>ABG</strong>: Hypoxemia, Hypercapnia, Respiratory Acidosis</li>
+      <li><strong>Chest</strong>: Barrel Chest (increased AP diameter). Fingers: Clubbing.</li>
+    </ul>
+    <div class="callout warn">🚨 COPD = <strong>Hypoxic Drive</strong> (low O₂ stimulates breathing). Max 2 LPM via nasal cannula. High flow O₂ can stop breathing!</div>
+
+    <h3>Emphysema</h3>
+    <table>
+      <tr><th>Feature</th><th>Details</th></tr>
+      <tr><td>Alveoli</td><td>Over-enlarged and Under-ventilated → Air Trapping</td></tr>
+      <tr><td>Breathing</td><td>Pursed Lip Breathing. Rapid/Grunting. Pink Puffer or Cyanotic.</td></tr>
+      <tr><td>Diet</td><td>Frequent small meals. Fluids: <strong>3 Liters/day</strong> (Force fluids).</td></tr>
+    </table>
+
+    <h3>Asthma</h3>
+    <ul>
+      <li>Spasms and Inflammation of bronchioles</li>
+      <li>Signs: Wheezing, SOB, Cough <strong>(at night)</strong></li>
+      <li>🧠 Meds: <strong>Bronchodilator FIRST</strong>, then Steroid (opens airways before delivering steroid)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== SECTION 7 ===== -->
+<div class="section" id="s7">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Pneumonia, PE &amp; Pulmonary Edema</h2>
+    <span class="lec-tag">Respiratory</span>
+  </div>
+  <div class="section-body">
+    <h3>Pneumonia</h3>
+    <ul>
+      <li>Infection of <strong>alveoli</strong>. Cause: bacteria, virus, aspiration</li>
+      <li>ABG: <strong>Respiratory Alkalosis</strong> (early — hyperventilation blows off CO₂)</li>
+    </ul>
+
+    <h3>Pulmonary Embolism (PE)</h3>
+    <table>
+      <tr><th>Feature</th><th>Details</th></tr>
+      <tr><td>Source</td><td>DVT from legs (most common)</td></tr>
+      <tr><td><strong>1st Sign</strong></td><td>🚨 <strong>Dyspnea</strong> + pleuritic pain + tachycardia</td></tr>
+      <tr><td>Risk Factors</td><td>Bed rest, Oral Contraceptives, <strong>Atrial Fibrillation</strong></td></tr>
+      <tr><td>Treatment</td><td>Oxygen + Anticoagulants</td></tr>
+    </table>
+    <div class="mnemonic">🧠 Right Atrial Fib → causes PE. Left Atrial Fib → causes Stroke. Remember: Right=Lungs, Left=Brain.</div>
+
+    <h3>Pulmonary Edema</h3>
+    <ul>
+      <li>Fluid in lungs from <strong>Left Ventricular Failure</strong></li>
+      <li>Sputum: <strong>Bloody and Frothy</strong></li>
+      <li>Treatment: Elevate HOB → O₂ → <span class="drug">Lasix</span> → <span class="drug">Morphine</span> → <span class="drug">Aminophylline</span> → Call MD</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== SECTION 8 ===== -->
+<div class="section" id="s8">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>TB, RDS, Cystic Fibrosis &amp; Epiglottitis</h2>
+    <span class="lec-tag">Respiratory</span>
+  </div>
+  <div class="section-body">
+    <h3>Tuberculosis (TB)</h3>
+    <table>
+      <tr><th>Feature</th><th>Details</th></tr>
+      <tr><td>Organism</td><td><strong>Mycobacterium tuberculosis</strong></td></tr>
+      <tr><td>Signs</td><td>Night sweats, Hemoptysis, Weight loss</td></tr>
+      <tr><td>Test</td><td>Mantoux (PPD). Positive if &gt;10mm induration</td></tr>
+      <tr><td>Isolation</td><td><strong>Airborne</strong> — Negative Pressure room, N95, 6 air exchanges/hr</td></tr>
+      <tr><td>Drugs (STRIPE)</td><td>Streptomycin, Rifampin, Isoniazid, Pyrazinamide, Ethambutol</td></tr>
+    </table>
+    <div class="callout">⚡ Rifampin → red/orange urine. Isoniazid → give B6 (Pyridoxine) to prevent peripheral neuritis. Avoid alcohol (hepatotoxicity). Non-contagious after 3 negative sputum cultures.</div>
+
+    <h3>RDS (Respiratory Distress Syndrome)</h3>
+    <ul>
+      <li>Occurs in <strong>premature</strong> infants. Cause: lack of <strong>surfactant</strong>.</li>
+      <li>Signs: Retractions, Nasal flaring, Grunting. 💀 Death within 96 hours if untreated.</li>
+      <li><strong>L/S Ratio</strong> 2:1 = mature lungs</li>
+      <li>Treatment: <span class="drug">Survanta</span> via ET tube + PEEP/CPAP</li>
+    </ul>
+    <div class="callout warn">⚠️ High O₂ = <strong>Retrolental Fibroplasia</strong> (blindness). High ventilator pressures = Bronchopulmonary Dysplasia.</div>
+
+    <h3>Cystic Fibrosis (CF)</h3>
+    <table>
+      <tr><th>Feature</th><th>Details</th></tr>
+      <tr><td>Pathology</td><td>Exocrine gland disorder → Thick mucous. Affects Lungs &amp; Pancreas.</td></tr>
+      <tr><td>Diagnosis</td><td><strong>Sweat Test</strong> (Iontophoresis) — &gt;60 mEq/L Chloride</td></tr>
+      <tr><td>Stools</td><td>Steatorrhea: Fat, Frothy, Foul-smelling, Floating (4 F's)</td></tr>
+      <tr><td>Diet</td><td>High Calorie, High Protein. <span class="drug">Pancreatic Enzymes</span> with meals.</td></tr>
+      <tr><td>Interventions</td><td><strong>Postural drainage</strong> (most common). Hot weather: NaCl tablets.</td></tr>
+    </table>
+
+    <h3>Epiglottitis</h3>
+    <ul>
+      <li>Inflammation of epiglottis — caused by <strong>H. influenza B</strong></li>
+      <li>🚨 <strong>#1 Danger</strong>: Airway Obstruction</li>
+      <li>Signs: Muffled voice, Drooling, Stridor, Tripod position</li>
+      <li><strong>NEVER</strong> put a tongue blade in the mouth</li>
+      <li>Treatment: Antibiotics (<span class="drug">Penicillin</span>/<span class="drug">Ampicillin</span>). Prevention: <strong>Hib Vaccine</strong>.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== SECTION 9 ===== -->
+<div class="section" id="s9">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>ICP, Meningitis &amp; Seizures</h2>
+    <span class="lec-tag">Neurological</span>
+  </div>
+  <div class="section-body">
+    <h3>Increased Intracranial Pressure (ICP)</h3>
+    <table>
+      <tr><th>Feature</th><th>Details</th></tr>
+      <tr><td>Normal ICP</td><td>0-15 mmHg</td></tr>
+      <tr><td><strong>Earliest Sign</strong></td><td><strong>Change in LOC</strong></td></tr>
+      <tr><td>Infant Signs</td><td>Bulging fontanels, High-pitched cry</td></tr>
+      <tr><td>Adult Signs</td><td>Headache, Projectile vomiting</td></tr>
+      <tr><td>Cushing's Triad (LATE)</td><td>🚨 1. HTN with widening pulse pressure · 2. Bradycardia · 3. Irregular respirations</td></tr>
+      <tr><td>Position</td><td><strong>HOB elevated 30°</strong></td></tr>
+      <tr><td>Meds</td><td><span class="drug">Mannitol</span> (osmotic diuretic) · <span class="drug">Decadron</span> (steroids to ↓ edema)</td></tr>
+    </table>
+
+    <h3>Meningitis</h3>
+    <ul>
+      <li>Inflammation of arachnoid/pia mater. Signs: <strong>Nuchal rigidity</strong>, photophobia, fever</li>
+      <li><strong>Kernig's</strong>: straighten knee → leg pain. <strong>Brudzinski's</strong>: flex neck → knees flex.</li>
+      <li>Diagnosis: Lumbar Puncture (Cloudy CSF, Low Glucose)</li>
+      <li>Isolation: Contact + Respiratory precautions until on antibiotics for 48 hours</li>
+      <li><strong>Opisthotonos</strong> (severe arching of back) → place in <strong>Side-lying</strong> position</li>
+    </ul>
+    <div class="callout">⚡ Spinal Tap (LP): Needle at L3-L4. Post-op: Lie flat 6-12 hrs (prevent headache). Force fluids.</div>
+
+    <h3>Seizures</h3>
+    <ul>
+      <li>Uncontrolled electrical discharge in the brain</li>
+      <li>⚠️ <strong>Safety</strong>: Do NOT restrain. Do NOT put anything in mouth.</li>
+      <li>Medication: <span class="drug">Dilantin</span> (Phenytoin). Side effect: <strong>Gingival hyperplasia</strong> (gum overgrowth)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== SECTION 10 ===== -->
+<div class="section" id="s10">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>CVA, Spinal Cord &amp; Laminectomy</h2>
+    <span class="lec-tag">Neurological</span>
+  </div>
+  <div class="section-body">
+    <h3>CVA (Stroke)</h3>
+    <table>
+      <tr><th>Feature</th><th>Details</th></tr>
+      <tr><td>Causes</td><td>Thrombus, Embolus, Hemorrhage. #1 Risk: <strong>HTN</strong></td></tr>
+      <tr><td>TIA</td><td>Warning sign: Transient Ischemic Attack. Lasts 30 sec to 24 hrs.</td></tr>
+      <tr><td><strong>First Sign</strong></td><td><strong>Change in LOC</strong>. Position: HOB up 30°. Fluid restricted.</td></tr>
+      <tr><td>Hemiplegia</td><td>Motor tracts cross at medulla. Right brain → Left body paralysis.</td></tr>
+      <tr><td>Hemianopsia</td><td>Can't see one half of visual field. Teach to <strong>SCAN</strong> (turn head).</td></tr>
+      <tr><td>Aphasia</td><td>Expressive (Broca's) = can't speak. Receptive (Wernicke's) = can't understand. Global = both.</td></tr>
+    </table>
+
+    <h3>Spinal Cord Injury</h3>
+    <ul>
+      <li><strong>#1 Goal</strong>: Immobilization</li>
+      <li>C1-C8 = <strong>Quadriplegic</strong> · Thoracic/Lumbar = <strong>Paraplegic</strong></li>
+      <li><strong>Spinal Shock</strong>: cord swells above and below injury. Duration: 5 days to 3 months.</li>
+    </ul>
+
+    <h3>Autonomic Dysreflexia</h3>
+    <div class="callout warn">🚨 EMERGENCY! Occurs in injuries T6 or higher. Signs: Severe HTN, Headache, Bradycardia, Sweating. Trigger: Full bladder/bowel impaction.</div>
+    <ol>
+      <li><strong>1st Action</strong>: Elevate HOB (lowers BP)</li>
+      <li><strong>2nd</strong>: Empty bladder (straight cath) then check bowel</li>
+    </ol>
+
+    <h3>Laminectomy</h3>
+    <table>
+      <tr><th>Location</th><th>Pre-op Assessment</th><th>Post-op Complication</th></tr>
+      <tr><td>Cervical</td><td>Upper extremities &amp; breathing</td><td>Pneumonia</td></tr>
+      <tr><td>Thoracic</td><td>Cough &amp; bowel sounds</td><td>Paralytic ileus</td></tr>
+      <tr><td>Lumbar</td><td>Urine output &amp; legs</td><td>Urinary retention</td></tr>
+    </table>
+    <p>Post-op: <strong>LOG ROLL</strong> always. No dangling legs. No sitting &gt;30 min. Restrictions for 6 weeks: no driving, no lifting &gt;5 lbs.</p>
+  </div>
+</div>
+
+<!-- ===== SECTION 11 ===== -->
+<div class="section" id="s11">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Degenerative &amp; Sensory Disorders</h2>
+    <span class="lec-tag">Neurological</span>
+  </div>
+  <div class="section-body">
+    <h3>Myasthenia Gravis</h3>
+    <ul>
+      <li>Defect in <strong>Acetylcholine</strong> at neuromuscular junction. Weakness worsens with activity.</li>
+      <li>Diagnosis: <strong>Tensilon Test</strong> (positive = improvement in strength)</li>
+      <li>Medications: Anticholinesterases (-stigmine). <strong>Must be given EXACTLY on time</strong> (with food).</li>
+      <li>💀 Crisis: <strong>Respiratory failure</strong></li>
+    </ul>
+
+    <h3>Multiple Sclerosis</h3>
+    <ul>
+      <li><strong>Demyelination of CNS</strong>. Pattern: Remissions &amp; Exacerbations.</li>
+      <li>🧠 Charcot's Triad: Tremor, Scanning speech, Nystagmus</li>
+      <li>Treatment: ACTH/Prednisone for acute exacerbations. Spasms: <span class="drug">Baclofen</span>/<span class="drug">Dantrium</span></li>
+      <li>Urinary retention: <span class="drug">Urecholine</span> (Bethanechol)</li>
+    </ul>
+
+    <h3>Parkinson's Disease</h3>
+    <ul>
+      <li><strong>Dopamine deficiency</strong> in Basal Ganglia</li>
+      <li>Signs: Tremor (pill-rolling), Rigidity (Cogwheel), Bradykinesia</li>
+      <li>Treatment: <span class="drug">Levodopa</span>/<span class="drug">Carbidopa</span> (Sinemet). Action: increases Dopamine. ⚠️ <strong>Avoid Vitamin B6.</strong></li>
+    </ul>
+
+    <h3>Head Injury &amp; GCS</h3>
+    <table>
+      <tr><th>Type</th><th>Key Difference</th></tr>
+      <tr><td>Epidural Hematoma</td><td><strong>Arterial</strong> (fast). Middle meningeal artery. Lucid interval.</td></tr>
+      <tr><td>Subdural Hematoma</td><td><strong>Venous</strong> (slow). Bridging veins. Gradual deterioration.</td></tr>
+    </table>
+    <p>Glasgow Coma Scale: Eye + Verbal + Motor. Max = <strong>15</strong>. Coma = &lt;8.</p>
+
+    <h3>Sensory Disorders</h3>
+    <table>
+      <tr><th>Disorder</th><th>Key Feature</th><th>Nursing Priority</th></tr>
+      <tr><td><strong>Bell's Palsy</strong></td><td>CN VII paralysis. Unilateral facial droop.</td><td>Patch eye at night (cannot close)</td></tr>
+      <tr><td><strong>Meniere's Disease</strong></td><td>Inner ear fluid. Triad: Vertigo, Tinnitus, Hearing loss</td><td>Fall precautions. Low-sodium diet.</td></tr>
+      <tr><td><strong>Glaucoma</strong></td><td>↑ IOP. Tunnel vision (peripheral loss).</td><td>Avoid mydriatics (dilate pupil). Miotics OK.</td></tr>
+      <tr><td><strong>Cataracts</strong></td><td>Opacity of lens. Blurry vision.</td><td>Post-op: No straining/bending (↑ IOP)</td></tr>
+      <tr><td><strong>Retinal Detachment</strong></td><td>Separation of retina.</td><td>Signs: Flashes of light, "Curtain falling"</td></tr>
+      <tr><td><strong>Hearing Aids</strong></td><td>Amplifies sound (does not clarify).</td><td>Whistling = loose earmold or low battery</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ===== SECTION 12 ===== -->
+<div class="section" id="s12">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="arrow">▶</span>
+    <h2>Renal, GI &amp; Surgical Disorders</h2>
+    <span class="lec-tag">GI &amp; Renal</span>
+  </div>
+  <div class="section-body">
+    <h3>Acute Glomerulonephritis (AGN)</h3>
+    <ul>
+      <li>Inflammation of glomeruli. Cause: <strong>Group A Beta-Hemolytic Strep</strong></li>
+      <li>Signs: Puffiness of face, dark urine, Hematuria</li>
+      <li><strong>Most important intervention</strong>: BEDREST. Diet: Moderate Na⁺ restriction.</li>
+    </ul>
+
+    <h3>Renal Failure</h3>
+    <table>
+      <tr><th>Phase</th><th>Urine</th><th>Electrolytes</th><th>Diet</th></tr>
+      <tr><td><strong>Oliguric</strong></td><td>&lt;500 cc/day</td><td>↑K⁺, ↑Na⁺, ↑Fluid volume</td><td>↑ Carb, ↓ Protein, ↓ Na, ↓ K, ↓ H₂O</td></tr>
+      <tr><td><strong>Diuretic</strong></td><td>↑ Output</td><td>K⁺ loss risk</td><td>Liberalize as labs normalize</td></tr>
+      <tr><td><strong>Recovery</strong></td><td>Normalizing</td><td>Normalizing</td><td>Regular with monitoring</td></tr>
+    </table>
+    <div class="callout warn">💀 BIGGEST DANGER in renal failure: <strong>Hyperkalemia</strong> and its effect on the heart (peaked T waves, cardiac arrest).</div>
+
+    <h3>Dialysis</h3>
+    <table>
+      <tr><th>Type</th><th>Key Points</th></tr>
+      <tr><td><strong>Hemodialysis</strong></td><td>AV Shunt/Fistula/Graft. NO BP or venipuncture in that arm. Feel for thrill, auscultate bruit.</td></tr>
+      <tr><td><strong>Peritoneal</strong></td><td>Dialysate infused by gravity. Should come out <strong>straw-colored</strong>. 🚨 Cloudy = <strong>Peritonitis</strong>!</td></tr>
+    </table>
+    <p><strong>Disequilibrium Syndrome</strong> (hemodialysis): change in LOC, N/V, headache, twitching — from too rapid fluid/electrolyte shifts.</p>
+
+    <h3>Urological Disorders</h3>
+    <table>
+      <tr><th>Disorder</th><th>Key Facts</th></tr>
+      <tr><td><strong>Kidney Stones</strong></td><td>#1 Treatment: ↑ Fluids (&gt;3000 cc/day). Uric acid stones: Low Purine diet.</td></tr>
+      <tr><td><strong>Pyelonephritis</strong></td><td>Bacterial infection (E. coli). Danger: Permanent scarring/kidney damage.</td></tr>
+      <tr><td><strong>BPH</strong></td><td>Men &gt;50. Signs: ↓ force, hesitancy, forked stream. Screen: DRE.</td></tr>
+      <tr><td><strong>TURP Post-op</strong></td><td>3-way CBI to keep catheter clear of clots. B&amp;O for bladder spasms. ↑ clots → ↑ CBI rate.</td></tr>
+    </table>
+    <p><strong>Foley Catheter</strong>: Keep bag below bladder. Empty q8h. Infection route: up the inside of catheter.</p>
+
+    <h3>GI Disorders</h3>
+    <table>
+      <tr><th>Disorder</th><th>Key Feature</th><th>Treatment</th></tr>
+      <tr><td><strong>Appendicitis</strong></td><td>RLQ Pain (McBurney's Point). ↑ WBC.</td><td>NPO → Surgery. NO HEAT. No pain meds/enemas before MD.</td></tr>
+      <tr><td><strong>Celiac Disease</strong></td><td>Gluten intolerance → Steatorrhea</td><td>No BROW (Barley, Rye, Oats, Wheat). Rice &amp; Corn OK.</td></tr>
+      <tr><td><strong>Pyloric Stenosis</strong></td><td>Infants 4-6 wks. Projectile vomiting. Olive-shaped mass.</td><td>Surgical repair (pyloromyotomy)</td></tr>
+      <tr><td><strong>Hepatitis A/E</strong></td><td>Fecal-Oral transmission</td><td>Hand hygiene, contact precautions</td></tr>
+      <tr><td><strong>Hepatitis B/C</strong></td><td>Blood/Body Fluid transmission</td><td>Standard precautions. HBV: vaccine available</td></tr>
+    </table>
+    <p>⚠️ Hepatitis signs: Dark urine, Light/clay stools, Pruritis &amp; Jaundice, Aversion to cigarettes.</p>
+
+    <h3>Colostomy</h3>
+    <table>
+      <tr><th>Type</th><th>Stool Consistency</th><th>Notes</th></tr>
+      <tr><td>Ileostomy</td><td>Liquid</td><td>Most colon removed = most liquid</td></tr>
+      <tr><td>Transverse</td><td>Soft/Semi-formed</td><td>—</td></tr>
+      <tr><td>Descending</td><td><strong>Formed</strong></td><td>Can be trained via irrigation (tap water, warmer than body temp)</td></tr>
+    </table>
+    <p><strong>New stoma</strong>: Red, large, noisy. Noise goes away in about a week. Reassure the patient.</p>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<script>
+function toggleSection(header) {
+  var body = header.nextElementSibling;
+  header.classList.toggle('open');
+  body.classList.toggle('show');
+}
+function launchQuiz() {
+  try {
+    window.parent.postMessage({ type: 'launchGuideQuiz', key: 'bbguide' }, '*');
+  } catch(err) { /* cross-origin fallback */ }
+}
+/* Drug card popup — sends message to parent for drug card modal */
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('drug')) {
+    var name = e.target.textContent.trim();
+    try {
+      window.parent.postMessage({ type: 'showDrugCard', drug: name }, '*');
+    } catch(err) { /* cross-origin, skip */ }
+  }
+});
+/* Smooth scroll for TOC links */
+document.querySelectorAll('.toc a').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      var header = target.querySelector('.section-header');
+      if (header && !header.classList.contains('open')) {
+        header.classList.add('open');
+        header.nextElementSibling.classList.add('show');
+      }
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>
