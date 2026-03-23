@@ -83,7 +83,21 @@ body::before{
   font-weight:800;
   letter-spacing:-0.01em;
   overflow:hidden;
+  display:flex;justify-content:space-between;align-items:center;
 }
+.sec-quiz-btn{
+  position:relative;z-index:1;
+  display:inline-flex;align-items:center;gap:0.3rem;
+  padding:0.35rem 0.85rem;border-radius:2rem;
+  font-size:0.78rem;font-weight:700;
+  border:1.5px solid rgba(255,255,255,0.4);
+  background:rgba(255,255,255,0.12);
+  color:#fff;cursor:pointer;
+  backdrop-filter:blur(4px);
+  transition:all 0.15s;
+  white-space:nowrap;flex-shrink:0;
+}
+.sec-quiz-btn:hover{background:rgba(255,255,255,0.25);transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
 .section-hdr::before{
   content:'';position:absolute;top:0;left:0;right:0;bottom:0;opacity:0.92;border-radius:1rem;z-index:0;
 }
@@ -356,6 +370,7 @@ em{color:#cbd5e1}
   .hero::after{display:none}
   .section-hdr{font-size:1.2rem;padding:0.85rem 1rem}
   .section-hdr .sec-num{width:26px;height:26px;font-size:0.75rem}
+  .sec-quiz-btn{font-size:0.68rem;padding:0.25rem 0.6rem}
   .compare-table{font-size:0.92rem}
   .compare-table th,.compare-table td{padding:0.5rem 0.55rem}
   .compare-table .cat-label{white-space:normal;min-width:80px;font-size:0.82rem}
@@ -392,11 +407,13 @@ em{color:#cbd5e1}
 <a class="badge badge-ref" href="#sec-ref">📊 Quick Ref</a>
 <a class="badge badge-mem" href="#sec-mem">🧠 Memory</a>
 </div>
+<button class="guide-quiz-btn" onclick="launchQuiz()" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 1rem;border-radius:2rem;font-size:0.85rem;font-weight:700;border:2px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.12);color:#fff;cursor:pointer;backdrop-filter:blur(4px);transition:all 0.15s;margin-top:0.5rem;">📝 Launch Quiz — 100 Questions</button>
 </div>
 
 <!-- ====================================================== -->
 <div id="sec-thyroid" class="section-hdr sh-thyroid anim d2">
 <span><span class="sec-num">1</span> 🦋 Thyroid Disorders</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
 </div>
 <!-- ====================================================== -->
 
@@ -622,6 +639,7 @@ em{color:#cbd5e1}
 <!-- ====================================================== -->
 <div id="sec-adrenal" class="section-hdr sh-adrenal">
 <span><span class="sec-num">2</span> 🎭 Adrenal Disorders</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
 </div>
 <!-- ====================================================== -->
 
@@ -769,7 +787,8 @@ Think: "Addison Adds Potassium, Subtracts Sodium" → ↓<span class="lyte">Na+<
 
 <!-- ====================================================== -->
 <div id="sec-adh" class="section-hdr sh-adh">
-<span><span class="sec-num">3</span> 💧 <span class="lyte">ADH</span> Disorders — SIADH vs. Diabetes Insipidus</span>
+<span><span class="sec-num">3</span> 💧 <span class="lyte">ADH</span> Disorders — SIADH vs. DI</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
 </div>
 <!-- ====================================================== -->
 
@@ -863,6 +882,7 @@ Think: "Addison Adds Potassium, Subtracts Sodium" → ↓<span class="lyte">Na+<
 <!-- ====================================================== -->
 <div id="sec-pth" class="section-hdr sh-pth">
 <span><span class="sec-num">4</span> 🦴 Parathyroid Disorders</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
 </div>
 <!-- ====================================================== -->
 
@@ -955,6 +975,7 @@ Moans: fatigue, depression, confusion, psychosis</td>
 <!-- ====================================================== -->
 <div id="sec-pheo" class="section-hdr sh-pheo">
 <span><span class="sec-num">5</span> ⚡ Pheochromocytoma</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
 </div>
 <!-- ====================================================== -->
 
@@ -999,7 +1020,8 @@ Moans: fatigue, depression, confusion, psychosis</td>
 
 <!-- ====================================================== -->
 <div id="sec-ref" class="section-hdr sh-ref">
-<span><span class="sec-num">6</span> 📊 Quick-Reference Comparison Tables</span>
+<span><span class="sec-num">6</span> 📊 Quick-Reference Tables</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
 </div>
 <!-- ====================================================== -->
 
@@ -1072,7 +1094,8 @@ Moans: fatigue, depression, confusion, psychosis</td>
 
 <!-- ====================================================== -->
 <div id="sec-mem" class="section-hdr sh-mem">
-<span><span class="sec-num">7</span> 🧠 High-Yield NCLEX Memory Anchors</span>
+<span><span class="sec-num">7</span> 🧠 Memory Anchors</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
 </div>
 <!-- ====================================================== -->
 
@@ -1156,6 +1179,11 @@ Moans: fatigue, depression, confusion, psychosis</td>
 
 </div><!-- end guide-container -->
 <script>
+function launchQuiz(){
+  if(window.parent&&window.parent!==window){
+    window.parent.postMessage({type:'launchGuideQuiz',key:'endocompare'},'*');
+  }
+}
 document.querySelectorAll('.drug').forEach(function(el){
   el.style.cursor='pointer';
   el.title='Click to view drug card';
