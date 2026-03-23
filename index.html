@@ -326,7 +326,8 @@ fund:          {bg:'#f0fdf4',accent:'#16a34a',dk:'#14532d',lt:'#dcfce7',hf:'#dcf
 gero:          {bg:'#f5f3ff',accent:'#7c3aed',dk:'#4c1d95',lt:'#ede9fe',hf:'#ede9fe',ht:'#ddd6fe'},
 nutr:          {bg:'#ecfdf5',accent:'#059669',dk:'#064e3b',lt:'#d1fae5',hf:'#d1fae5',ht:'#a7f3d0'},
 stdsti:        {bg:'#f0fdfa',accent:'#0d9488',dk:'#134e4a',lt:'#ccfbf1',hf:'#ccfbf1',ht:'#99f6e4'},
-bbguide:       {bg:'#eff6ff',accent:'#2563eb',dk:'#1e3a8a',lt:'#dbeafe',hf:'#eff6ff',ht:'#bfdbfe'}
+bbguide:       {bg:'#eff6ff',accent:'#2563eb',dk:'#1e3a8a',lt:'#dbeafe',hf:'#eff6ff',ht:'#bfdbfe'},
+qbank:         {bg:'#f0f4ff',accent:'#334155',dk:'#0f172a',lt:'#e2e8f0',hf:'#f1f5f9',ht:'#cbd5e1'}
 };
 /* Theme aliases — guide themes inherit from parent sections (v18.8 consolidation) */
 (function() {
@@ -483,9 +484,24 @@ loadingEl.innerHTML =
 'Error: Study data failed to load.' +
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
-var APP_VERSION = '21.0';
-var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, comprehensive7:150, comprehensive8:150, comprehensive9:150, comprehensive10:1000, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:530, pinkguide:100, bbguide:100, endoguide_thyroid:25, endoguide_adrenal:25, endoguide_adh:25, endoguide_parathyroid:25, endoguide_pheo:25, endoguide_quickref:25, endoguide_memory:25 };
-var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, comprehensive7: 1, comprehensive8: 1, comprehensive9: 1, comprehensive10: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1, pinkguide: 1, bbguide: 1, endoguide_thyroid: 1, endoguide_adrenal: 1, endoguide_adh: 1, endoguide_parathyroid: 1, endoguide_pheo: 1, endoguide_quickref: 1, endoguide_memory: 1 };
+var APP_VERSION = '21.1';
+var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, comprehensive7:150, comprehensive8:150, comprehensive9:150, comprehensive10:1000, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:530, pinkguide:100, bbguide:100, endoguide_thyroid:25, endoguide_adrenal:25, endoguide_adh:25, endoguide_parathyroid:25, endoguide_pheo:25, endoguide_quickref:25, endoguide_memory:25, qbank:5571 };
+var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, comprehensive7: 1, comprehensive8: 1, comprehensive9: 1, comprehensive10: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1, pinkguide: 1, bbguide: 1, endoguide_thyroid: 1, endoguide_adrenal: 1, endoguide_adh: 1, endoguide_parathyroid: 1, endoguide_pheo: 1, endoguide_quickref: 1, endoguide_memory: 1, qbank: 1 };
+/* Paged quiz configuration — incremental sets of N questions from large banks */
+var PAGED_QUIZZES = { qbank: { pageSize: 100, totalQ: 5571 } };
+var _pagedSetKey = 'nclex85_paged_sets';
+var _memPagedSets = {};
+function getPagedSet(secKey) {
+if (_storageOK) { try { var r = _ls.getItem(_pagedSetKey); if (r) { var o = JSON.parse(r); if (o[secKey]) return parseInt(o[secKey], 10) || 1; } } catch(e) {} }
+return _memPagedSets[secKey] || 1;
+}
+function setPagedSet(secKey, n) {
+_memPagedSets[secKey] = n;
+if (_storageOK) { try { var r = _ls.getItem(_pagedSetKey); var o = r ? JSON.parse(r) : {}; o[secKey] = n; _ls.setItem(_pagedSetKey, JSON.stringify(o)); } catch(e) {} }
+}
+function getPagedTotalSets(secKey) { var c = PAGED_QUIZZES[secKey]; return c ? Math.ceil(c.totalQ / c.pageSize) : 1; }
+var _currentPagedSet = 0;
+var _currentPagedKey = '';
 var GH_AUDIO = 'https://github.com/Peptopia/NCLEX/releases/download/audio-v1/';
 var PDF_AUDIO_MAP = {
 'Cardiovascular.pdf':  [{ title: 'Cardiovascular', src: GH_AUDIO + 'Cardiovascular.mp3' }],
@@ -1107,7 +1123,8 @@ endo: '\u2697\uFE0F', musc: '\uD83E\uDDB4', psych: '\uD83E\uDDD8', hemonc: '\uD8
 fund: '\uD83D\uDCCB', gero: '\uD83E\uDDD3', nutr: '\uD83E\uDD57', workpharm: '\uD83E\uDDEC', yellowfever: '\uD83D\uDCD4', comprehensive: '\uD83C\uDF93', comprehensive2: '\uD83D\uDCDA', comprehensive4: '\uD83C\uDFC6', comprehensive5: '\uD83C\uDFAF', comprehensive6: '\uD83D\uDD2C', comprehensive7: '\u2728', comprehensive8: '\uD83D\uDCA1', comprehensive9: '\uD83C\uDF1F', comprehensive10: '\uD83C\uDFAB', fullexam: '\uD83D\uDCDD',
 endocompare: '\u2697\uFE0F', infctrl: '\uD83E\uDDA0', priority: '\uD83D\uDEA8', fluids: '\uD83D\uDCA7', cardiac: '\u2764\uFE0F', obhtn: '\uD83E\uDD30', obmatnb: '\uD83D\uDC76',
 pharmguide: '\uD83D\uDC8A', fundguide: '\uD83D\uDCCB', geroguide: '\uD83E\uDDD3', nutrguide: '\uD83E\uDD57', yfguide: '\uD83D\uDCD4', pinkguide: '\uD83D\uDCD9', bbguide: '\uD83D\uDCD8',
-endoguide_thyroid: '\uD83E\uDD8B', endoguide_adrenal: '\uD83C\uDFAD', endoguide_adh: '\uD83D\uDCA7', endoguide_parathyroid: '\uD83E\uDDB4', endoguide_pheo: '\u26A1', endoguide_quickref: '\uD83D\uDCCA', endoguide_memory: '\uD83E\uDDE0'
+endoguide_thyroid: '\uD83E\uDD8B', endoguide_adrenal: '\uD83C\uDFAD', endoguide_adh: '\uD83D\uDCA7', endoguide_parathyroid: '\uD83E\uDDB4', endoguide_pheo: '\u26A1', endoguide_quickref: '\uD83D\uDCCA', endoguide_memory: '\uD83E\uDDE0',
+qbank: '\uD83D\uDCCB'
 };
 var sectionSummaries = {
 cardio: 'Heart failure, rhythms, shock, vascular disorders.',
@@ -2019,7 +2036,25 @@ var compGroupHtml = '<div class="coll-row"><div class="coll-group">' +
 var colorGroupHtml = '<div class="coll-row"><div class="coll-group color-85-group">' +
 '<div class="coll-label">\u2695 Color 85</div>' +
 '<div class="coll-cards">' + yfCard + bbCard + pinkCard + '</div></div></div>';
+/* Question Bank — paged quiz card with set selector */
+var _qbSet = getPagedSet('qbank');
+var _qbTotal = getPagedTotalSets('qbank');
+var qbCardHtml = '<div class="home-card" data-section="qbank" style="animation-delay:' + ((idx + 0.2) * 0.04) + 's; border-color:#334155; max-width:340px;" onclick="launchQBankSet()">' +
+'<div class="home-card-header" style="background:linear-gradient(135deg,#1e293b,#334155); color:#f1f5f9;">' +
+'<span class="home-card-emoji">\uD83D\uDCCB</span><span>Question Bank</span></div>' +
+'<div class="home-card-body"><div class="home-card-desc" style="color:#64748b;">5,571 NCLEX questions \u2014 56 sets of 100. Progress through the bank one set at a time.</div>' +
+'<div style="display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-top:0.6rem;">' +
+'<button id="qb-prev-btn" onclick="event.stopPropagation(); qbPrevSet();" style="background:#1e293b;color:#e2e8f0;border:2px solid #475569;border-radius:0.4rem;width:32px;height:30px;font-size:1rem;font-weight:900;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:all 0.15s;opacity:' + (_qbSet <= 1 ? '0.35' : '1') + ';">\u25C0</button>' +
+'<span id="qb-set-display" style="font-weight:700;font-size:0.92rem;color:#94a3b8;min-width:7rem;text-align:center;">Set ' + _qbSet + ' of ' + _qbTotal + '</span>' +
+'<button id="qb-next-btn" onclick="event.stopPropagation(); qbNextSet();" style="background:#1e293b;color:#e2e8f0;border:2px solid #475569;border-radius:0.4rem;width:32px;height:30px;font-size:1rem;font-weight:900;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:all 0.15s;opacity:' + (_qbSet >= _qbTotal ? '0.35' : '1') + ';">\u25B6</button>' +
+'</div></div>' +
+'<div class="home-card-footer">' +
+'<button class="home-card-btn quiz-btn" onclick="event.stopPropagation(); launchQBankSet();"><span class="quiz-icon">\uD83E\uDDE0</span><span class="q-label"> 100</span></button></div></div>';
+var qbGroupHtml = '<div class="coll-row"><div class="coll-group qbank-group">' +
+'<div class="coll-label">\uD83D\uDCCB Question Bank</div>' +
+'<div class="coll-cards">' + qbCardHtml + '</div></div></div>';
 foundationsHtml += colorGroupHtml;
+foundationsHtml += qbGroupHtml;
 foundationsHtml += compGroupHtml;
 var obHtnCard = _ncCardHtml('obhtn',3,'#5a8aad','var(--blue-100,#d0e4f0)','var(--blue-800,#1a2840)','var(--blue-800)','\uD83E\uDD30','OB Hypertension','Preeclampsia, Eclampsia &amp; HELLP \u2014 diagnostics, MgSO4 &amp; nursing priorities.','openObHtnGuide','launchObHtnQuiz','100');
 var obMatNbCard = _ncCardHtml('obmatnb',3.5,'#4a9a7d','var(--emerald-100,#c8e6d8)','var(--emerald-800,#0f2e24)','var(--emerald-800)','\uD83D\uDC76','OB - Newborn','Antepartum, L&amp;D, fetal monitoring, PPH, newborn care &amp; OB medications.','openObMatNbGuide','launchObMatNbQuiz','100');
@@ -3024,20 +3059,31 @@ document.getElementById('quiz-completion').classList.remove('visible');
 _showQuizLoading(title);
 fetchGitHubQuiz(secKey).then(function(result) {
 var quizQs = result.questions || [];
+/* Paged quiz slicing — only serve the current set's questions */
+if (PAGED_QUIZZES[secKey] && _currentPagedSet > 0) {
+var _pgCfg = PAGED_QUIZZES[secKey];
+var _pgStart = (_currentPagedSet - 1) * _pgCfg.pageSize;
+var _pgEnd = _pgStart + _pgCfg.pageSize;
+quizQs = quizQs.slice(_pgStart, _pgEnd);
+}
 if (quizQs.length === 0) {
 _showQuizError(title, secKey, result.error || 'No questions returned');
 return;
 }
 document.getElementById('quiz-score-bar').style.display = 'flex';
-var saved = loadQuizSession(secKey);
+/* For paged quizzes, use set-specific session key */
+var _sessKey = secKey;
+if (PAGED_QUIZZES[secKey] && _currentPagedSet > 0) _sessKey = secKey + '_s' + _currentPagedSet;
+var saved = loadQuizSession(_sessKey);
 if (saved && (saved.score + saved.wrong) < saved.order.length) {
-_pendingQuizKey = secKey;
+_pendingQuizKey = _sessKey;
 _pendingQuizTitle = title;
 _pendingQuizQs = quizQs;
 showResumePrompt(saved);
 } else {
 quizIndex = 0; quizScore = 0; quizWrong = 0;
 quizAnswered = {}; isRetestMode = false; origQuizData = null; retestHistory = [];
+quizSectionKey = _sessKey;
 currentQuizData = smartOrder(quizQs.slice(), secKey);
 document.getElementById('qsb-total').textContent = currentQuizData.length;
 updateScoreBar();
@@ -3069,7 +3115,8 @@ pharmguide:'Pharmacology Guide Quiz',fundguide:'Fundamentals Guide Quiz',
 geroguide:'Gerontology Guide Quiz',nutrguide:'Nutrition Guide Quiz',
 yfguide:'Yellow Guide Quiz',
 pinkguide:'Pink Guide Quiz',
-bbguide:'Blue Guide Quiz'
+bbguide:'Blue Guide Quiz',
+qbank:'Question Bank Quiz'
 };
 var title = labels[key] || ((SECTION_LABELS[key] || key) + ' Quiz');
 initQuizUI(title, key);
@@ -3104,6 +3151,36 @@ initQuizUI(title, key);
 ['launchSTDQuiz','STDs & STIs Quiz','stdsti']
 ].forEach(function(e){window[e[0]]=function(){initQuizUI(e[1],e[2])}});
 window.showFullExam = window.launchFullExamQuiz;
+/* --- Paged Question Bank launcher --- */
+window.launchQBankSet = function(setNum) {
+var cfg = PAGED_QUIZZES.qbank;
+if (!cfg) return;
+var total = getPagedTotalSets('qbank');
+setNum = Math.max(1, Math.min(setNum || getPagedSet('qbank'), total));
+setPagedSet('qbank', setNum);
+_currentPagedSet = setNum;
+_currentPagedKey = 'qbank';
+var title = 'Question Bank \u2014 Set ' + setNum + ' of ' + total;
+initQuizUI(title, 'qbank');
+_updateQBSetDisplay();
+};
+window.qbPrevSet = function() {
+var cur = getPagedSet('qbank');
+if (cur > 1) { setPagedSet('qbank', cur - 1); _updateQBSetDisplay(); }
+};
+window.qbNextSet = function() {
+var cur = getPagedSet('qbank');
+var total = getPagedTotalSets('qbank');
+if (cur < total) { setPagedSet('qbank', cur + 1); _updateQBSetDisplay(); }
+};
+function _updateQBSetDisplay() {
+var el = document.getElementById('qb-set-display');
+if (el) el.textContent = 'Set ' + getPagedSet('qbank') + ' of ' + getPagedTotalSets('qbank');
+var prevBtn = document.getElementById('qb-prev-btn');
+var nextBtn = document.getElementById('qb-next-btn');
+if (prevBtn) prevBtn.style.opacity = getPagedSet('qbank') <= 1 ? '0.35' : '1';
+if (nextBtn) nextBtn.style.opacity = getPagedSet('qbank') >= getPagedTotalSets('qbank') ? '0.35' : '1';
+}
 /* Register guide openers — each calls openGuideHtml(path) */
 [['openEndoGuide','Guides/Endocrine-Comparisons.html'],
 ['openObHtnGuide','Guides/OB-Hypertensive-Disorders.html'],
@@ -4286,6 +4363,7 @@ SECTION_LABELS.endoguide_parathyroid = 'Endo: Parathyroid';
 SECTION_LABELS.endoguide_pheo = 'Endo: Pheochromocytoma';
 SECTION_LABELS.endoguide_quickref = 'Endo: Quick Reference';
 SECTION_LABELS.endoguide_memory = 'Endo: Memory Anchors';
+SECTION_LABELS.qbank = 'Question Bank';
 window.showProgress = function() {
 renderProgressDashboard();
 document.getElementById('progress-modal').style.display = 'block';
@@ -4572,7 +4650,8 @@ nutrguide:{bg:'rgba(22,163,74,0.12)',border:'rgba(22,163,74,0.35)',accent:'#4ade
 yfguide:{bg:'rgba(202,138,4,0.12)',border:'rgba(202,138,4,0.35)',accent:'#fde047',label:'#fef9c3'},
 pinkguide:{bg:'rgba(219,39,119,0.12)',border:'rgba(219,39,119,0.35)',accent:'#f472b6',label:'#fce7f3'},
 stdsti:{bg:'rgba(13,148,136,0.12)',border:'rgba(13,148,136,0.35)',accent:'#5eead4',label:'#99f6e4'},
-bbguide:{bg:'rgba(37,99,235,0.12)',border:'rgba(37,99,235,0.35)',accent:'#60a5fa',label:'#bfdbfe'}
+bbguide:{bg:'rgba(37,99,235,0.12)',border:'rgba(37,99,235,0.35)',accent:'#60a5fa',label:'#bfdbfe'},
+qbank:{bg:'rgba(51,65,85,0.15)',border:'rgba(51,65,85,0.4)',accent:'#94a3b8',label:'#cbd5e1'}
 };
 /* SP_THEME aliases — verified identical via exact byte match */
 SP_THEME.comprehensive4 = SP_THEME.yellowfever;
@@ -4623,7 +4702,8 @@ fullexam:{bg:'rgba(79,70,229,0.07)',border:'rgba(79,70,229,0.25)',accent:'#4338c
 yfguide:{bg:'rgba(202,138,4,0.07)',border:'rgba(202,138,4,0.25)',accent:'#ca8a04',label:'#713f12'},
 pinkguide:{bg:'rgba(219,39,119,0.07)',border:'rgba(219,39,119,0.25)',accent:'#db2777',label:'#831843'},
 stdsti:{bg:'rgba(13,148,136,0.07)',border:'rgba(13,148,136,0.25)',accent:'#0d9488',label:'#134e4a'},
-bbguide:{bg:'rgba(37,99,235,0.07)',border:'rgba(37,99,235,0.25)',accent:'#2563eb',label:'#1e3a8a'}
+bbguide:{bg:'rgba(37,99,235,0.07)',border:'rgba(37,99,235,0.25)',accent:'#2563eb',label:'#1e3a8a'},
+qbank:{bg:'rgba(51,65,85,0.07)',border:'rgba(51,65,85,0.25)',accent:'#334155',label:'#0f172a'}
 };
 /* SP_THEME_LIGHT aliases — verified identical via exact byte match */
 SP_THEME_LIGHT.comprehensive = SP_THEME_LIGHT.workpharm;
