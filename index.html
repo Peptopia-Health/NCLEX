@@ -339,6 +339,8 @@ _a.nutrguide = _a.nutr;
 _a.yfguide = _a.yellowfever;
 _a.pinkguide = { bg:'#fdf2f8', accent:'#db2777', dk:'#831843', lt:'#fce7f3', hf:'#fce7f3', ht:'#fbcfe8' };
 _a.bbguide = { bg:'#eff6ff', accent:'#2563eb', dk:'#1e3a8a', lt:'#dbeafe', hf:'#eff6ff', ht:'#bfdbfe' };
+_a.endoguide_thyroid = _a.endocompare; _a.endoguide_adrenal = _a.endocompare; _a.endoguide_adh = _a.endocompare;
+_a.endoguide_parathyroid = _a.endocompare; _a.endoguide_pheo = _a.endocompare; _a.endoguide_quickref = _a.endocompare; _a.endoguide_memory = _a.endocompare;
 var _wpCats = ['Musculoskeletal','Anti-Infective','Cardiovascular','Psychiatric / Mental Health','Endocrine','Respiratory','Immune / Lymphatic','Renal / Urinary','Nervous System','Integumentary','Digestive / GI','Sensory / Ophthalmic','Nutritional Support'];
 for (var _i = 0; _i < _wpCats.length; _i++) _a['wp_' + _wpCats[_i]] = _a.workpharm;
 })();
@@ -445,7 +447,7 @@ var loadingEl = document.getElementById('home-dashboard');
 if (loadingEl) loadingEl.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--slate-900);font-weight:600;">Loading study data...</div>';
 var GH_CDN = 'https://cdn.jsdelivr.net/gh/Peptopia/NCLEX@main/';
 var GH_PAGES = 'https://peptopia.github.io/NCLEX/';
-var CACHE_BUST = '?v=20.8'; /* bump this when uploading new quiz files */
+var CACHE_BUST = '?v=20.9'; /* bump this when uploading new quiz files */
 fetch(GH_CDN + 'mnt_studydata.json' + CACHE_BUST)
 .then(function(r) {
 if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -481,9 +483,9 @@ loadingEl.innerHTML =
 'Error: Study data failed to load.' +
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
-var APP_VERSION = '20.8';
-var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, comprehensive7:150, comprehensive8:150, comprehensive9:150, comprehensive10:1000, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:530, pinkguide:100, bbguide:100 };
-var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, comprehensive7: 1, comprehensive8: 1, comprehensive9: 1, comprehensive10: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1, pinkguide: 1, bbguide: 1 };
+var APP_VERSION = '20.9';
+var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, comprehensive7:150, comprehensive8:150, comprehensive9:150, comprehensive10:1000, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:530, pinkguide:100, bbguide:100, endoguide_thyroid:25, endoguide_adrenal:25, endoguide_adh:25, endoguide_parathyroid:25, endoguide_pheo:25, endoguide_quickref:25, endoguide_memory:25 };
+var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, comprehensive7: 1, comprehensive8: 1, comprehensive9: 1, comprehensive10: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1, pinkguide: 1, bbguide: 1, endoguide_thyroid: 1, endoguide_adrenal: 1, endoguide_adh: 1, endoguide_parathyroid: 1, endoguide_pheo: 1, endoguide_quickref: 1, endoguide_memory: 1 };
 var GH_AUDIO = 'https://github.com/Peptopia/NCLEX/releases/download/audio-v1/';
 var PDF_AUDIO_MAP = {
 'Cardiovascular.pdf':  [{ title: 'Cardiovascular', src: GH_AUDIO + 'Cardiovascular.mp3' }],
@@ -1104,7 +1106,8 @@ cardio: '\u2764\uFE0F', resp: '\uD83D\uDCA8', neuro: '\uD83E\uDDE0', gi: '\uD83C
 endo: '\u2697\uFE0F', musc: '\uD83E\uDDB4', psych: '\uD83E\uDDD8', hemonc: '\uD83E\uDE78', integ: '\uD83E\uDE79', pharm: '\uD83D\uDC8A',
 fund: '\uD83D\uDCCB', gero: '\uD83E\uDDD3', nutr: '\uD83E\uDD57', workpharm: '\uD83E\uDDEC', yellowfever: '\uD83D\uDCD4', comprehensive: '\uD83C\uDF93', comprehensive2: '\uD83D\uDCDA', comprehensive4: '\uD83C\uDFC6', comprehensive5: '\uD83C\uDFAF', comprehensive6: '\uD83D\uDD2C', comprehensive7: '\u2728', comprehensive8: '\uD83D\uDCA1', comprehensive9: '\uD83C\uDF1F', comprehensive10: '\uD83C\uDFAB', fullexam: '\uD83D\uDCDD',
 endocompare: '\u2697\uFE0F', infctrl: '\uD83E\uDDA0', priority: '\uD83D\uDEA8', fluids: '\uD83D\uDCA7', cardiac: '\u2764\uFE0F', obhtn: '\uD83E\uDD30', obmatnb: '\uD83D\uDC76',
-pharmguide: '\uD83D\uDC8A', fundguide: '\uD83D\uDCCB', geroguide: '\uD83E\uDDD3', nutrguide: '\uD83E\uDD57', yfguide: '\uD83D\uDCD4', pinkguide: '\uD83D\uDCD9', bbguide: '\uD83D\uDCD8'
+pharmguide: '\uD83D\uDC8A', fundguide: '\uD83D\uDCCB', geroguide: '\uD83E\uDDD3', nutrguide: '\uD83E\uDD57', yfguide: '\uD83D\uDCD4', pinkguide: '\uD83D\uDCD9', bbguide: '\uD83D\uDCD8',
+endoguide_thyroid: '\uD83E\uDD8B', endoguide_adrenal: '\uD83C\uDFAD', endoguide_adh: '\uD83D\uDCA7', endoguide_parathyroid: '\uD83E\uDDB4', endoguide_pheo: '\u26A1', endoguide_quickref: '\uD83D\uDCCA', endoguide_memory: '\uD83E\uDDE0'
 };
 var sectionSummaries = {
 cardio: 'Heart failure, rhythms, shock, vascular disorders.',
@@ -4270,6 +4273,13 @@ SECTION_LABELS.nutrguide = 'Nutrition Guide';
 SECTION_LABELS.yfguide = 'Yellow Guide';
 SECTION_LABELS.pinkguide = 'Pink Guide';
 SECTION_LABELS.bbguide = 'Blue Guide';
+SECTION_LABELS.endoguide_thyroid = 'Endo: Thyroid';
+SECTION_LABELS.endoguide_adrenal = 'Endo: Adrenal';
+SECTION_LABELS.endoguide_adh = 'Endo: ADH / SIADH / DI';
+SECTION_LABELS.endoguide_parathyroid = 'Endo: Parathyroid';
+SECTION_LABELS.endoguide_pheo = 'Endo: Pheochromocytoma';
+SECTION_LABELS.endoguide_quickref = 'Endo: Quick Reference';
+SECTION_LABELS.endoguide_memory = 'Endo: Memory Anchors';
 window.showProgress = function() {
 renderProgressDashboard();
 document.getElementById('progress-modal').style.display = 'block';
@@ -4565,6 +4575,13 @@ SP_THEME.priority = {bg:'rgba(67,56,202,0.12)',border:'rgba(67,56,202,0.35)',acc
 SP_THEME.pharmguide = SP_THEME.fullexam;
 SP_THEME.fundguide = SP_THEME.fund;
 SP_THEME.geroguide = SP_THEME.gero;
+SP_THEME.endoguide_thyroid = SP_THEME.endocompare;
+SP_THEME.endoguide_adrenal = SP_THEME.endocompare;
+SP_THEME.endoguide_adh = SP_THEME.endocompare;
+SP_THEME.endoguide_parathyroid = SP_THEME.endocompare;
+SP_THEME.endoguide_pheo = SP_THEME.endocompare;
+SP_THEME.endoguide_quickref = SP_THEME.endocompare;
+SP_THEME.endoguide_memory = SP_THEME.endocompare;
 var SP_THEME_LIGHT = {
 cardio:{bg:'rgba(220,38,38,0.07)',border:'rgba(220,38,38,0.25)',accent:'#b91c1c',label:'#991b1b'},
 resp:{bg:'rgba(37,99,235,0.07)',border:'rgba(37,99,235,0.25)',accent:'#1d4ed8',label:'#1e3a8a'},
@@ -4609,6 +4626,13 @@ SP_THEME_LIGHT.priority = {bg:'rgba(67,56,202,0.06)',border:'rgba(67,56,202,0.2)
 SP_THEME_LIGHT.pharmguide = SP_THEME_LIGHT.fullexam;
 SP_THEME_LIGHT.fundguide = SP_THEME_LIGHT.fund;
 SP_THEME_LIGHT.geroguide = SP_THEME_LIGHT.gero;
+SP_THEME_LIGHT.endoguide_thyroid = SP_THEME_LIGHT.endocompare;
+SP_THEME_LIGHT.endoguide_adrenal = SP_THEME_LIGHT.endocompare;
+SP_THEME_LIGHT.endoguide_adh = SP_THEME_LIGHT.endocompare;
+SP_THEME_LIGHT.endoguide_parathyroid = SP_THEME_LIGHT.endocompare;
+SP_THEME_LIGHT.endoguide_pheo = SP_THEME_LIGHT.endocompare;
+SP_THEME_LIGHT.endoguide_quickref = SP_THEME_LIGHT.endocompare;
+SP_THEME_LIGHT.endoguide_memory = SP_THEME_LIGHT.endocompare;
 function _spTheme(key, light){var map = light ? SP_THEME_LIGHT : SP_THEME; return map[key]||(light ? {bg:'rgba(99,102,241,0.06)',border:'rgba(99,102,241,0.2)',accent:'#4338ca',label:'#1e293b'} : {bg:'rgba(99,102,241,0.1)',border:'rgba(99,102,241,0.3)',accent:'#a5b4fc',label:'#e0e7ff'});}
 window.renderStudyPlan = function() {
 var d = loadProgress();
