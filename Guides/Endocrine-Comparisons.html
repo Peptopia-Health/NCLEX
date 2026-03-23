@@ -413,7 +413,7 @@ em{color:#cbd5e1}
 <!-- ====================================================== -->
 <div id="sec-thyroid" class="section-hdr sh-thyroid anim d2">
 <span><span class="sec-num">1</span> 🦋 Thyroid Disorders</span>
-<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+<button class="sec-quiz-btn" onclick="launchQuiz('endoguide_thyroid')">📝 Quiz</button>
 </div>
 <!-- ====================================================== -->
 
@@ -639,7 +639,7 @@ em{color:#cbd5e1}
 <!-- ====================================================== -->
 <div id="sec-adrenal" class="section-hdr sh-adrenal">
 <span><span class="sec-num">2</span> 🎭 Adrenal Disorders</span>
-<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+<button class="sec-quiz-btn" onclick="launchQuiz('endoguide_adrenal')">📝 Quiz</button>
 </div>
 <!-- ====================================================== -->
 
@@ -788,7 +788,7 @@ Think: "Addison Adds Potassium, Subtracts Sodium" → ↓<span class="lyte">Na+<
 <!-- ====================================================== -->
 <div id="sec-adh" class="section-hdr sh-adh">
 <span><span class="sec-num">3</span> 💧 <span class="lyte">ADH</span> Disorders — SIADH vs. DI</span>
-<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+<button class="sec-quiz-btn" onclick="launchQuiz('endoguide_adh')">📝 Quiz</button>
 </div>
 <!-- ====================================================== -->
 
@@ -882,7 +882,7 @@ Think: "Addison Adds Potassium, Subtracts Sodium" → ↓<span class="lyte">Na+<
 <!-- ====================================================== -->
 <div id="sec-pth" class="section-hdr sh-pth">
 <span><span class="sec-num">4</span> 🦴 Parathyroid Disorders</span>
-<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+<button class="sec-quiz-btn" onclick="launchQuiz('endoguide_parathyroid')">📝 Quiz</button>
 </div>
 <!-- ====================================================== -->
 
@@ -975,7 +975,7 @@ Moans: fatigue, depression, confusion, psychosis</td>
 <!-- ====================================================== -->
 <div id="sec-pheo" class="section-hdr sh-pheo">
 <span><span class="sec-num">5</span> ⚡ Pheochromocytoma</span>
-<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+<button class="sec-quiz-btn" onclick="launchQuiz('endoguide_pheo')">📝 Quiz</button>
 </div>
 <!-- ====================================================== -->
 
@@ -1021,7 +1021,7 @@ Moans: fatigue, depression, confusion, psychosis</td>
 <!-- ====================================================== -->
 <div id="sec-ref" class="section-hdr sh-ref">
 <span><span class="sec-num">6</span> 📊 Quick-Reference Tables</span>
-<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+<button class="sec-quiz-btn" onclick="launchQuiz('endoguide_quickref')">📝 Quiz</button>
 </div>
 <!-- ====================================================== -->
 
@@ -1095,7 +1095,7 @@ Moans: fatigue, depression, confusion, psychosis</td>
 <!-- ====================================================== -->
 <div id="sec-mem" class="section-hdr sh-mem">
 <span><span class="sec-num">7</span> 🧠 Memory Anchors</span>
-<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+<button class="sec-quiz-btn" onclick="launchQuiz('endoguide_memory')">📝 Quiz</button>
 </div>
 <!-- ====================================================== -->
 
@@ -1179,9 +1179,10 @@ Moans: fatigue, depression, confusion, psychosis</td>
 
 </div><!-- end guide-container -->
 <script>
-function launchQuiz(){
+function launchQuiz(key){
+  var k = key || 'endocompare';
   if(window.parent&&window.parent!==window){
-    window.parent.postMessage({type:'launchGuideQuiz',key:'endocompare'},'*');
+    window.parent.postMessage({type:'launchGuideQuiz',key:k},'*');
   }
 }
 document.querySelectorAll('.drug').forEach(function(el){
