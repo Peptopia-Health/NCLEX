@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mental Health &amp; Psychiatric Nursing — NCLEX 85 &amp; Done</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#020707;
+  color:#e2e8f0;
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  line-height:1.75;
+  padding:0;
+  font-size:1.05rem;
+}
+body::before{
+  content:'';position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 10%, rgba(13,148,136,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 90%, rgba(45,212,191,0.03) 0%, transparent 60%);
+  pointer-events:none;
+}
+.guide-container{max-width:920px;margin:0 auto;padding:1.5rem 1.4rem 4rem}
+/* === HERO === */
+.hero{
+  position:relative;
+  background:linear-gradient(135deg,#042f2e 0%,#0f766e 40%,#14b8a6 100%);
+  border-radius:1.25rem;padding:2rem 1.75rem 1.75rem;margin-bottom:2rem;
+  border:2px solid #2dd4bf;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;
+  background:radial-gradient(circle,rgba(94,234,212,0.2),transparent 70%);pointer-events:none;
+}
+.hero::after{content:'🧠';position:absolute;top:1rem;right:1.25rem;font-size:3rem;opacity:0.15;pointer-events:none}
+.hero h1{font-size:1.85rem;font-weight:900;color:#e2e8f0;letter-spacing:-0.02em;margin-bottom:0.5rem;text-shadow:0 2px 12px rgba(13,148,136,0.4)}
+.hero .subtitle{font-size:1rem;color:#94a3b8;line-height:1.65;font-weight:400}
+.hero .badge-row{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.85rem}
+.hero .badge-row .badge{
+  display:inline-flex;align-items:center;gap:0.3rem;
+  padding:0.25rem 0.65rem;border-radius:2rem;font-size:0.78rem;font-weight:700;
+  letter-spacing:0.03em;text-transform:uppercase;backdrop-filter:blur(4px);
+  cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;text-decoration:none;
+}
+.hero .badge-row .badge:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+.b-comm{background:rgba(45,212,191,0.2);color:#5eead4;border:1px solid rgba(45,212,191,0.4)}
+.b-anx{background:rgba(251,191,36,0.2);color:#fde68a;border:1px solid rgba(251,191,36,0.4)}
+.b-mood{background:rgba(99,102,241,0.2);color:#a5b4fc;border:1px solid rgba(99,102,241,0.4)}
+.b-psy{background:rgba(248,113,113,0.2);color:#fca5a5;border:1px solid rgba(248,113,113,0.4)}
+.b-pers{background:rgba(244,114,182,0.2);color:#f9a8d4;border:1px solid rgba(244,114,182,0.4)}
+.b-sub{background:rgba(234,179,8,0.2);color:#fde047;border:1px solid rgba(234,179,8,0.4)}
+.b-eat{background:rgba(168,85,247,0.2);color:#d8b4fe;border:1px solid rgba(168,85,247,0.4)}
+.b-sui{background:rgba(239,68,68,0.2);color:#fca5a5;border:1px solid rgba(239,68,68,0.4)}
+.b-pharm{background:rgba(59,130,246,0.2);color:#93c5fd;border:1px solid rgba(59,130,246,0.4)}
+.b-legal{background:rgba(148,163,184,0.2);color:#cbd5e1;border:1px solid rgba(148,163,184,0.4)}
+.b-child{background:rgba(251,146,60,0.2);color:#fed7aa;border:1px solid rgba(251,146,60,0.4)}
+.b-ncog{background:rgba(163,230,53,0.2);color:#d9f99d;border:1px solid rgba(163,230,53,0.4)}
+.b-def{background:rgba(129,140,248,0.2);color:#c7d2fe;border:1px solid rgba(129,140,248,0.4)}
+.b-mem{background:rgba(148,163,184,0.2);color:#cbd5e1;border:1px solid rgba(148,163,184,0.4)}
+/* === SECTION HEADERS === */
+.section-hdr{
+  position:relative;margin:2.5rem 0 1.25rem;padding:1rem 1.25rem 1rem 1.15rem;
+  border-radius:1rem;font-size:1.45rem;font-weight:800;letter-spacing:-0.01em;overflow:hidden;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.section-hdr::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;opacity:0.92;border-radius:1rem;z-index:0}
+.section-hdr span{position:relative;z-index:1}
+.section-hdr .sec-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:50%;font-size:0.85rem;font-weight:900;
+  margin-right:0.5rem;vertical-align:middle;box-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+.sec-quiz-btn{
+  position:relative;z-index:1;display:inline-flex;align-items:center;gap:0.3rem;
+  padding:0.35rem 0.85rem;border-radius:2rem;font-size:0.78rem;font-weight:700;
+  border:1.5px solid rgba(255,255,255,0.4);background:rgba(255,255,255,0.12);
+  color:#e2e8f0;cursor:pointer;backdrop-filter:blur(4px);transition:all 0.15s;
+  white-space:nowrap;flex-shrink:0;
+}
+.sec-quiz-btn:hover{background:rgba(255,255,255,0.25);transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+/* Section themes */
+.sh-comm{border:2px solid #14b8a6;background:linear-gradient(135deg,#042f2e,#115e59,#0f766e)}
+.sh-comm::before{background:linear-gradient(135deg,rgba(20,184,166,0.1),transparent)}
+.sh-comm .sec-num{background:#14b8a6;color:#042f2e} .sh-comm span{color:#99f6e4}
+.sh-anx{border:2px solid #f59e0b;background:linear-gradient(135deg,#451a03,#78350f,#92400e)}
+.sh-anx::before{background:linear-gradient(135deg,rgba(245,158,11,0.1),transparent)}
+.sh-anx .sec-num{background:#f59e0b;color:#451a03} .sh-anx span{color:#fde68a}
+.sh-mood{border:2px solid #6366f1;background:linear-gradient(135deg,#1e1b4b,#312e81,#4338ca)}
+.sh-mood::before{background:linear-gradient(135deg,rgba(99,102,241,0.1),transparent)}
+.sh-mood .sec-num{background:#6366f1;color:#1e1b4b} .sh-mood span{color:#c7d2fe}
+.sh-psy{border:2px solid #ef4444;background:linear-gradient(135deg,#450a0a,#7f1d1d,#991b1b)}
+.sh-psy::before{background:linear-gradient(135deg,rgba(239,68,68,0.1),transparent)}
+.sh-psy .sec-num{background:#ef4444;color:#450a0a} .sh-psy span{color:#fecaca}
+.sh-pers{border:2px solid #ec4899;background:linear-gradient(135deg,#500724,#831843,#9d174d)}
+.sh-pers::before{background:linear-gradient(135deg,rgba(236,72,153,0.1),transparent)}
+.sh-pers .sec-num{background:#ec4899;color:#500724} .sh-pers span{color:#fbcfe8}
+.sh-sub{border:2px solid #eab308;background:linear-gradient(135deg,#422006,#713f12,#854d0e)}
+.sh-sub::before{background:linear-gradient(135deg,rgba(234,179,8,0.1),transparent)}
+.sh-sub .sec-num{background:#eab308;color:#422006} .sh-sub span{color:#fef08a}
+.sh-eat{border:2px solid #a855f7;background:linear-gradient(135deg,#2e1065,#4c1d95,#6b21a8)}
+.sh-eat::before{background:linear-gradient(135deg,rgba(168,85,247,0.1),transparent)}
+.sh-eat .sec-num{background:#a855f7;color:#2e1065} .sh-eat span{color:#d8b4fe}
+.sh-sui{border:2px solid #dc2626;background:linear-gradient(135deg,#450a0a,#991b1b,#b91c1c)}
+.sh-sui::before{background:linear-gradient(135deg,rgba(220,38,38,0.1),transparent)}
+.sh-sui .sec-num{background:#dc2626;color:#450a0a} .sh-sui span{color:#fecaca}
+.sh-pharm{border:2px solid #3b82f6;background:linear-gradient(135deg,#172554,#1e3a8a,#1d4ed8)}
+.sh-pharm::before{background:linear-gradient(135deg,rgba(59,130,246,0.1),transparent)}
+.sh-pharm .sec-num{background:#3b82f6;color:#172554} .sh-pharm span{color:#bfdbfe}
+.sh-legal{border:2px solid #64748b;background:linear-gradient(135deg,#0f172a,#1e293b,#334155)}
+.sh-legal::before{background:linear-gradient(135deg,rgba(100,116,139,0.1),transparent)}
+.sh-legal .sec-num{background:#64748b;color:#0f172a} .sh-legal span{color:#cbd5e1}
+.sh-child{border:2px solid #f97316;background:linear-gradient(135deg,#431407,#7c2d12,#9a3412)}
+.sh-child::before{background:linear-gradient(135deg,rgba(249,115,22,0.1),transparent)}
+.sh-child .sec-num{background:#f97316;color:#431407} .sh-child span{color:#fed7aa}
+.sh-ncog{border:2px solid #84cc16;background:linear-gradient(135deg,#1a2e05,#365314,#3f6212)}
+.sh-ncog::before{background:linear-gradient(135deg,rgba(132,204,22,0.1),transparent)}
+.sh-ncog .sec-num{background:#84cc16;color:#1a2e05} .sh-ncog span{color:#d9f99d}
+.sh-def{border:2px solid #818cf8;background:linear-gradient(135deg,#1e1b4b,#312e81,#3730a3)}
+.sh-def::before{background:linear-gradient(135deg,rgba(129,140,248,0.1),transparent)}
+.sh-def .sec-num{background:#818cf8;color:#1e1b4b} .sh-def span{color:#e0e7ff}
+.sh-mem{border:2px solid #a78bfa;background:linear-gradient(135deg,#1e1b4b,#312e81,#3730a3)}
+.sh-mem::before{background:linear-gradient(135deg,rgba(167,139,250,0.1),transparent)}
+.sh-mem .sec-num{background:#a78bfa;color:#1e1b4b} .sh-mem span{color:#ede9fe}
+/* === CONTENT ELEMENTS === */
+h3{font-size:1.18rem;color:#2dd4bf;margin:1.6rem 0 0.6rem;font-weight:700}
+h4{font-size:1.06rem;color:#5eead4;margin:1rem 0 0.4rem;font-weight:700}
+p,li{color:#e2e8f0;margin:0.3rem 0;font-size:1.02rem}
+ul,ol{padding-left:1.5rem}
+li{margin:0.25rem 0} li::marker{color:#2dd4bf}
+strong,b{color:#f1f5f9} em{color:#cbd5e1}
+.danger{color:#f87171;font-weight:700} .warn{color:#fbbf24;font-weight:700}
+.safe{color:#4ade80;font-weight:700} .drug{color:#93c5fd;font-weight:700}
+/* === COMPARISON TABLES === */
+.compare-table{
+  width:100%;border-collapse:separate;border-spacing:0;margin:0.85rem 0 1.5rem;font-size:1rem;
+  border:2px solid #334155;border-radius:0.85rem;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.3);
+}
+.compare-table th{
+  background:linear-gradient(180deg,#042f2e,#0a3d3b);color:#2dd4bf;font-weight:800;
+  padding:0.7rem 0.75rem;text-align:left;border-bottom:2px solid #0f766e;
+  font-size:0.88rem;text-transform:uppercase;letter-spacing:0.05em;position:sticky;top:0;z-index:2;
+}
+.compare-table td{background:#0a1614;color:#e2e8f0;padding:0.65rem 0.75rem;border-bottom:1px solid #1e293b;vertical-align:top;line-height:1.6}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table tr:hover td{background:rgba(13,148,136,0.06)}
+.compare-table .cat-label{font-weight:700;background:linear-gradient(90deg,#071a18,#0a1614);color:#2dd4bf;white-space:nowrap;min-width:115px;font-size:0.9rem;border-right:2px solid #1e3a3a}
+/* === VS BANNER === */
+.vs-banner{
+  display:flex;align-items:center;gap:0.75rem;margin:1.25rem 0;padding:0.6rem 1rem;
+  background:linear-gradient(90deg,rgba(4,47,46,0.5),rgba(15,23,42,0.8),rgba(4,47,46,0.5));
+  border-radius:0.75rem;border:1px solid #334155;
+}
+.vs-banner .vs-label{font-family:'JetBrains Mono',monospace;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#94a3b8;flex-shrink:0}
+.vs-banner .vs-cond{font-size:1.08rem;font-weight:700}
+.vs-banner .vs-circle{
+  flex-shrink:0;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:'JetBrains Mono',monospace;font-size:0.75rem;font-weight:900;
+  background:linear-gradient(135deg,#0f766e,#14b8a6);color:#042f2e;box-shadow:0 0 16px rgba(20,184,166,0.3);letter-spacing:0.05em;
+}
+.vs-left{color:#f87171} .vs-right{color:#67e8f9}
+/* === SPECIAL BOXES === */
+.dx-card{
+  position:relative;background:linear-gradient(135deg,rgba(4,47,46,0.7),rgba(10,22,20,0.95));
+  border:2px solid #0f766e;border-radius:1.1rem;padding:1.25rem;margin:1.25rem 0;overflow:hidden;
+}
+.dx-card::before{content:'';position:absolute;top:0;left:0;width:6px;height:100%;border-radius:1.1rem 0 0 1.1rem}
+.dx-card.card-teal::before{background:linear-gradient(180deg,#14b8a6,#0d9488)}
+.dx-card.card-red::before{background:linear-gradient(180deg,#ef4444,#dc2626)}
+.dx-card.card-amber::before{background:linear-gradient(180deg,#f59e0b,#d97706)}
+.dx-card.card-violet::before{background:linear-gradient(180deg,#8b5cf6,#7c3aed)}
+.dx-card.card-pink::before{background:linear-gradient(180deg,#ec4899,#db2777)}
+.dx-card.card-blue::before{background:linear-gradient(180deg,#3b82f6,#2563eb)}
+.dx-card h3{margin-top:0;color:#cbd5e1;font-size:1.18rem}
+.dx-card .tag-row{display:flex;flex-wrap:wrap;gap:0.35rem;margin:0.4rem 0 0.65rem}
+.tag{display:inline-flex;align-items:center;gap:0.25rem;padding:0.2rem 0.6rem;border-radius:2rem;font-size:0.78rem;font-weight:700;letter-spacing:0.03em;text-transform:uppercase}
+.tag-danger{background:rgba(248,113,113,0.15);color:#fca5a5;border:1px solid rgba(248,113,113,0.4)}
+.tag-teal{background:rgba(45,212,191,0.15);color:#5eead4;border:1px solid rgba(45,212,191,0.4)}
+.tag-blue{background:rgba(96,165,250,0.15);color:#93c5fd;border:1px solid rgba(96,165,250,0.4)}
+.tag-violet{background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.4)}
+.tag-amber{background:rgba(251,191,36,0.15);color:#fde68a;border:1px solid rgba(251,191,36,0.4)}
+.tag-pink{background:rgba(244,114,182,0.15);color:#f9a8d4;border:1px solid rgba(244,114,182,0.4)}
+/* Mnemonic */
+.mnemonic{
+  position:relative;background:linear-gradient(135deg,#042f2e,#0a3d3b);
+  border:2px solid #14b8a6;border-radius:0.85rem;padding:1rem 1.15rem 1rem 3rem;
+  margin:1rem 0;font-size:1.02rem;line-height:1.7;box-shadow:0 4px 16px rgba(20,184,166,0.15);
+}
+.mnemonic::before{content:'💡';position:absolute;left:0.85rem;top:0.9rem;font-size:1.35rem}
+.mnemonic strong{color:#2dd4bf;font-size:1.06rem} .mnemonic em{color:#14b8a6}
+/* NCLEX Tip */
+.nclex-tip{
+  position:relative;background:linear-gradient(135deg,rgba(13,148,136,0.1),rgba(15,118,110,0.05));
+  border:1.5px solid #0f766e;border-left:5px solid #14b8a6;border-radius:0.75rem;
+  padding:1rem 1.15rem 1rem 3rem;margin:1rem 0;font-size:1.02rem;line-height:1.65;
+}
+.nclex-tip::before{content:'🎯';position:absolute;left:0.85rem;top:0.9rem;font-size:1.25rem}
+.nclex-tip strong{color:#2dd4bf;font-size:1.04rem}
+/* Lethal */
+.lethal{
+  position:relative;background:linear-gradient(135deg,rgba(248,113,113,0.12),rgba(220,38,38,0.06));
+  border:2px solid #dc2626;border-left:6px solid #ef4444;border-radius:0.75rem;
+  padding:1rem 1.15rem 1rem 3.25rem;margin:1rem 0;font-size:1.05rem;line-height:1.65;
+  box-shadow:0 0 20px rgba(239,68,68,0.08);
+}
+.lethal::before{content:'☠️';position:absolute;left:0.85rem;top:0.85rem;font-size:1.35rem}
+.lethal strong{color:#fca5a5;font-size:1.08rem}
+/* Interaction box — unique to this guide */
+.interaction{
+  position:relative;background:linear-gradient(135deg,rgba(45,212,191,0.08),rgba(20,184,166,0.04));
+  border:1.5px solid #2dd4bf;border-left:5px solid #2dd4bf;border-radius:0.75rem;
+  padding:1rem 1.15rem 1rem 3.25rem;margin:1rem 0;font-size:1.02rem;line-height:1.65;
+}
+.interaction::before{content:'🗣️';position:absolute;left:0.85rem;top:0.85rem;font-size:1.25rem}
+.interaction strong{color:#2dd4bf}
+.interaction .do{color:#4ade80;font-weight:600} .interaction .dont{color:#f87171;font-weight:600}
+/* Quick ref grid */
+.qref{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0.85rem;margin:0.85rem 0}
+.qref-box{
+  background:linear-gradient(135deg,rgba(4,47,46,0.6),rgba(10,22,20,0.8));
+  border:1.5px solid #475569;border-radius:0.85rem;padding:0.85rem 1rem;transition:border-color 0.2s,transform 0.2s;
+}
+.qref-box:hover{border-color:#2dd4bf;transform:translateY(-2px)}
+.qref-box h4{margin-top:0;font-size:1.05rem;color:#cbd5e1;font-weight:800}
+.qref-box ul{margin:0.25rem 0 0;padding-left:1.2rem}
+.qref-box li{font-size:0.98rem;margin:0.2rem 0;color:#cbd5e1}
+.qref-box li strong{color:#f1f5f9}
+/* Cluster cards — unique to personality disorders */
+.cluster-card{
+  background:linear-gradient(135deg,rgba(4,47,46,0.5),rgba(10,22,20,0.8));
+  border-radius:0.85rem;padding:1rem 1.15rem;margin:0.75rem 0;
+}
+.cluster-card h4{margin-top:0;font-size:1.1rem}
+.cluster-card.cluster-a{border:2px solid #818cf8;} .cluster-card.cluster-a h4{color:#a5b4fc}
+.cluster-card.cluster-b{border:2px solid #f87171;} .cluster-card.cluster-b h4{color:#fca5a5}
+.cluster-card.cluster-c{border:2px solid #fbbf24;} .cluster-card.cluster-c h4{color:#fde68a}
+/* Dividers */
+.section-divider{border:none;height:2px;margin:2rem 0;background:linear-gradient(90deg,transparent,#0f766e,#14b8a6,#0f766e,transparent)}
+/* Sticky nav */
+.nav-bar{
+  position:sticky;top:0;z-index:100;display:flex;gap:0.35rem;padding:0.5rem 0;margin-bottom:0.5rem;
+  overflow-x:auto;-webkit-overflow-scrolling:touch;background:linear-gradient(180deg,#020707 60%,transparent);scrollbar-width:none;
+}
+.nav-bar::-webkit-scrollbar{display:none}
+.nav-pill{
+  display:inline-flex;align-items:center;gap:0.25rem;padding:0.35rem 0.7rem;border-radius:2rem;
+  font-size:0.75rem;font-weight:700;white-space:nowrap;text-decoration:none;
+  border:1.5px solid #334155;background:rgba(10,22,20,0.8);color:#94a3b8;
+  transition:all 0.2s;cursor:pointer;backdrop-filter:blur(8px);
+}
+.nav-pill:hover{border-color:#14b8a6;color:#5eead4;background:rgba(15,118,110,0.15)}
+/* Animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.anim{animation:fadeUp 0.5s ease-out both}
+.d1{animation-delay:0.05s}.d2{animation-delay:0.1s}.d3{animation-delay:0.15s}.d4{animation-delay:0.2s}.d5{animation-delay:0.25s}
+/* Responsive */
+@media(max-width:640px){
+  .guide-container{padding:1rem 0.75rem 3rem}
+  .hero{padding:1.5rem 1.15rem;border-radius:1rem} .hero h1{font-size:1.45rem} .hero::after{display:none}
+  .section-hdr{font-size:1.2rem;padding:0.85rem 1rem}
+  .section-hdr .sec-num{width:26px;height:26px;font-size:0.75rem}
+  .sec-quiz-btn{font-size:0.68rem;padding:0.25rem 0.6rem}
+  .compare-table{font-size:0.92rem} .compare-table th,.compare-table td{padding:0.5rem 0.55rem}
+  .compare-table .cat-label{white-space:normal;min-width:80px;font-size:0.82rem}
+  .vs-banner{flex-direction:column;text-align:center;gap:0.35rem;padding:0.5rem 0.75rem}
+  .vs-banner .vs-circle{width:32px;height:32px;font-size:0.65rem}
+  .qref{grid-template-columns:1fr}
+  .dx-card{padding:1rem} .mnemonic{padding-left:2.75rem} .mnemonic::before{left:0.65rem}
+  .nclex-tip{padding-left:2.75rem} .nclex-tip::before{left:0.65rem}
+  .lethal{padding-left:2.75rem} .lethal::before{left:0.65rem}
+  .interaction{padding-left:2.75rem} .interaction::before{left:0.65rem}
+  .nav-bar{gap:0.25rem} .nav-pill{font-size:0.68rem;padding:0.3rem 0.55rem}
+}
+</style>
+</head>
+<body>
+<div class="guide-container">
+
+<!-- HERO -->
+<div class="hero anim">
+<h1>🧠 Mental Health &amp; Psychiatric Nursing</h1>
+<p class="subtitle">A comprehensive NCLEX guide covering therapeutic communication, psychiatric disorders, psychopharmacology, crisis intervention, legal considerations, and patient interaction strategies. Master the art and science of psychiatric nursing.</p>
+<div class="badge-row">
+<a class="badge b-comm" href="#sec-comm">🗣️ Communication</a>
+<a class="badge b-anx" href="#sec-anx">😰 Anxiety</a>
+<a class="badge b-mood" href="#sec-mood">💔 Mood</a>
+<a class="badge b-psy" href="#sec-psy">🔮 Psychosis</a>
+<a class="badge b-pers" href="#sec-pers">🎭 Personality</a>
+<a class="badge b-sub" href="#sec-sub">🍷 Substance</a>
+<a class="badge b-eat" href="#sec-eat">🍽️ Eating</a>
+<a class="badge b-sui" href="#sec-sui">⚠️ Suicide</a>
+<a class="badge b-pharm" href="#sec-pharm">💊 Psych Meds</a>
+<a class="badge b-legal" href="#sec-legal">⚖️ Legal</a>
+<a class="badge b-child" href="#sec-child">🧒 Child</a>
+<a class="badge b-ncog" href="#sec-ncog">🧓 Neurocognitive</a>
+<a class="badge b-def" href="#sec-def">🛡️ Defenses</a>
+<a class="badge b-mem" href="#sec-mem">🧠 Memory</a>
+</div>
+<button class="guide-quiz-btn" onclick="launchQuiz()" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 1rem;border-radius:2rem;font-size:0.85rem;font-weight:700;border:2px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.12);color:#e2e8f0;cursor:pointer;backdrop-filter:blur(4px);transition:all 0.15s;margin-top:0.5rem;">📝 Launch Quiz — 100 Questions</button>
+</div>
+
+<!-- ================================================================ -->
+<div id="sec-comm" class="section-hdr sh-comm anim d2">
+<span><span class="sec-num">1</span> 🗣️ Therapeutic Communication</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+</div>
+
+<div class="mnemonic anim d3">
+<strong>Core Principle:</strong> Therapeutic communication is <em>purposeful, goal-directed</em> interaction that advances the patient's well-being. The nurse uses <strong>active listening, empathy, and professional boundaries</strong> — never personal opinions, false reassurance, or judgment.
+</div>
+
+<h3>✅ Therapeutic Techniques</h3>
+<table class="compare-table anim d4">
+<thead><tr><th>Technique</th><th>Example</th><th>Why It Works</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Open-ended Questions</td><td>"Tell me about what you're feeling."</td><td>Encourages patient to elaborate; avoids yes/no dead ends</td></tr>
+<tr><td class="cat-label">Reflection</td><td>Patient: "I'm angry." Nurse: "You sound angry."</td><td>Mirrors emotion back; validates without judging</td></tr>
+<tr><td class="cat-label">Restating</td><td>"So you're saying the voices started last week?"</td><td>Clarifies and confirms understanding</td></tr>
+<tr><td class="cat-label">Silence</td><td>Sitting quietly, maintaining presence</td><td>Allows patient to collect thoughts; shows patience</td></tr>
+<tr><td class="cat-label">Offering Self</td><td>"I'll sit with you for a while."</td><td>Shows availability and care without demands</td></tr>
+<tr><td class="cat-label">Focusing</td><td>"Let's talk more about the nightmares."</td><td>Redirects to important topics when patient rambles</td></tr>
+<tr><td class="cat-label">Summarizing</td><td>"Today we discussed your sleep and anxiety."</td><td>Organizes session; validates what was shared</td></tr>
+<tr><td class="cat-label">Exploring</td><td>"Tell me more about that experience."</td><td>Deepens understanding without leading</td></tr>
+<tr><td class="cat-label">Giving Info</td><td>"This medication may cause drowsiness."</td><td>Empowers patient with facts for decisions</td></tr>
+</tbody></table>
+
+<h3>❌ Non-Therapeutic Responses (NCLEX Traps!)</h3>
+<table class="compare-table">
+<thead><tr><th>Barrier</th><th>Example</th><th>Why It Fails</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">False Reassurance</td><td>"Everything will be fine."</td><td>Dismisses real fears; patient feels unheard</td></tr>
+<tr><td class="cat-label">Giving Advice</td><td>"You should leave your partner."</td><td>Removes patient autonomy; imposes nurse's values</td></tr>
+<tr><td class="cat-label">"Why" Questions</td><td>"Why did you do that?"</td><td>Sounds accusatory; patient feels defensive</td></tr>
+<tr><td class="cat-label">Changing Subject</td><td>"Let's talk about something happier."</td><td>Avoids patient's need; communicates discomfort</td></tr>
+<tr><td class="cat-label">Approval/Disapproval</td><td>"That was a good/bad decision."</td><td>Imposes judgment; patient seeks nurse approval</td></tr>
+<tr><td class="cat-label">Agreeing/Disagreeing</td><td>"You're right" or "That's wrong."</td><td>Prevents independent thinking</td></tr>
+<tr><td class="cat-label">Belittling</td><td>"Everyone goes through that."</td><td>Minimizes unique suffering</td></tr>
+</tbody></table>
+
+<div class="nclex-tip">
+<strong>NCLEX Key:</strong> When choosing the best response, eliminate <strong>false reassurance, advice-giving, and "why" questions</strong> first. The correct answer almost always <strong>acknowledges feelings</strong> and <strong>encourages the patient to talk more</strong>. Think: "What response keeps the door open?"
+</div>
+
+<h3>🤝 Phases of the Nurse-Patient Relationship</h3>
+<div class="dx-card card-teal">
+<h3>Peplau's 4 Phases</h3>
+<div class="tag-row"><span class="tag tag-teal">THERAPEUTIC RELATIONSHIP</span></div>
+<p><strong>1. Pre-interaction:</strong> Review chart, identify biases, plan approach. You haven't met the patient yet.</p>
+<p><strong>2. Orientation:</strong> Introductions, establish trust, set boundaries/goals, define roles. Most testing happens on NCLEX. <strong>Contract for safety</strong> happens here.</p>
+<p><strong>3. Working:</strong> Active problem-solving, therapeutic interventions, insight development. Patient may test boundaries. <strong>Transference and countertransference</strong> emerge here.</p>
+<p><strong>4. Termination:</strong> Summarize progress, address feelings about ending, referrals. Patient may regress — this is normal. Plan ahead by introducing termination early.</p>
+</div>
+
+<div class="interaction">
+<strong>Transference vs. Countertransference</strong><br>
+<span class="do">Transference</span> = Patient projects feelings about someone onto the nurse ("You remind me of my mother who abandoned me")<br>
+<span class="do">Countertransference</span> = Nurse projects personal feelings onto the patient (feeling overly protective because patient reminds nurse of a loved one)<br>
+<strong>Action:</strong> Recognize it → seek supervision → maintain professional boundaries
+</div>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<div id="sec-anx" class="section-hdr sh-anx">
+<span><span class="sec-num">2</span> 😰 Anxiety Spectrum Disorders</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+</div>
+
+<h3>📊 Four Levels of Anxiety</h3>
+<table class="compare-table">
+<thead><tr><th>Level</th><th>Perception</th><th>Behavior</th><th>Nursing Action</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Mild (+)</td><td>Alert, wide perceptual field</td><td>Motivated, can learn, slight restlessness</td><td>Use for teaching! Optimal learning state</td></tr>
+<tr><td class="cat-label">Moderate (++)</td><td>Narrowed focus, selective inattention</td><td>Difficulty concentrating, increased HR/RR, voice changes</td><td>Redirect focus, use simple clear communication</td></tr>
+<tr><td class="cat-label">Severe (+++)</td><td>Greatly reduced, scattered</td><td>Confusion, purposeless activity, somatic symptoms</td><td>Stay with patient, reduce stimuli, direct firmly</td></tr>
+<tr><td class="cat-label"><span class="danger">Panic (++++)</span></td><td>Distorted or lost — cannot process</td><td>Terror, immobilization OR flight, chest pain, dissociation</td><td><strong>Ensure safety</strong>, stay calm, brief directives, do NOT teach</td></tr>
+</tbody></table>
+
+<div class="nclex-tip">
+<strong>NCLEX Key:</strong> <strong>Mild anxiety is the BEST time to teach.</strong> At panic level, the patient <strong>cannot learn or process information</strong>. Priority at panic = <strong>safety and presence</strong>. Never leave a panicking patient alone.
+</div>
+
+<h3>Anxiety Disorders — Comparison</h3>
+<table class="compare-table">
+<thead><tr><th>Disorder</th><th>Key Features</th><th>Treatment</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">GAD</td><td>Excessive worry about <strong>everything</strong> for ≥6 months. Muscle tension, sleep disruption, restlessness, fatigue, irritability.</td><td><span class="drug">SSRIs (first-line)</span>, <span class="drug">Buspirone</span> (non-sedating, takes 2-4 weeks), CBT</td></tr>
+<tr><td class="cat-label">Panic Disorder</td><td>Recurrent, unexpected <strong>panic attacks</strong> — palpitations, dyspnea, chest pain, derealization. Fear of "going crazy" or dying. Peaks in 10 min.</td><td><span class="drug">SSRIs</span>, <span class="drug">Benzodiazepines (PRN)</span>, breathing techniques, CBT</td></tr>
+<tr><td class="cat-label">Phobias</td><td><strong>Specific:</strong> spiders, heights, blood. <strong>Social:</strong> fear of scrutiny. <strong>Agoraphobia:</strong> fear of places difficult to escape.</td><td><strong>Systematic desensitization</strong> (gradual exposure), <span class="drug">SSRIs</span> for social phobia</td></tr>
+<tr><td class="cat-label">OCD</td><td><strong>Obsessions</strong> (intrusive thoughts) + <strong>Compulsions</strong> (ritualistic behaviors to reduce anxiety). Handwashing, counting, checking. Ego-dystonic.</td><td><span class="drug">Fluvoxamine</span>, <span class="drug">SSRIs</span>, <strong>ERP (Exposure &amp; Response Prevention)</strong>. Do NOT interrupt rituals abruptly!</td></tr>
+<tr><td class="cat-label">PTSD</td><td>After trauma: flashbacks, nightmares, hypervigilance, avoidance, emotional numbing. Symptoms &gt;1 month. <strong>Acute Stress</strong> = &lt;1 month.</td><td><span class="drug">SSRIs (Sertraline, Paroxetine)</span>, <span class="drug">Prazosin</span> (nightmares), EMDR, trauma-focused CBT</td></tr>
+</tbody></table>
+
+<div class="interaction">
+<strong>Nursing Approach — OCD Patient:</strong><br>
+<span class="do">✅ DO:</span> Allow rituals when possible (reduces anxiety). Set time limits gradually. Redirect gently. Provide structured routine.<br>
+<span class="dont">❌ DON'T:</span> Interrupt rituals abruptly (causes panic). Argue about the irrationality. Punish or shame.
+</div>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<div id="sec-mood" class="section-hdr sh-mood">
+<span><span class="sec-num">3</span> 💔 Mood Disorders</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+</div>
+
+<div class="vs-banner">
+<span class="vs-cond vs-left">🌧️ Major Depression</span>
+<span class="vs-circle">VS</span>
+<span class="vs-cond vs-right">🌪️ Bipolar Disorder</span>
+</div>
+
+<table class="compare-table">
+<thead><tr><th>Feature</th><th>🌧️ Major Depressive Disorder</th><th>🌪️ Bipolar I (Manic Phase)</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Core Mood</td><td>Persistent sadness, hopelessness, anhedonia (loss of pleasure)</td><td>Euphoria, grandiosity, irritability — <strong>"on top of the world"</strong></td></tr>
+<tr><td class="cat-label">Energy</td><td>Fatigue, psychomotor retardation (or agitation)</td><td>Boundless energy, hyperactivity, decreased need for sleep (sleeps 0-2 hrs)</td></tr>
+<tr><td class="cat-label">Speech</td><td>Slow, soft, brief responses</td><td><strong>Pressured speech, flight of ideas</strong> — rapid topic changes, clang associations</td></tr>
+<tr><td class="cat-label">Cognition</td><td>Difficulty concentrating, indecisiveness, worthlessness, guilt</td><td>Racing thoughts, distractible, grandiose delusions ("I am God")</td></tr>
+<tr><td class="cat-label">Behavior</td><td>Social withdrawal, neglected hygiene, crying spells, suicidal ideation</td><td>Impulsive spending, hypersexuality, reckless driving, combativeness</td></tr>
+<tr><td class="cat-label">Sleep</td><td>Insomnia OR hypersomnia. Early-morning awakening classic.</td><td>Severely decreased — patient doesn't feel tired</td></tr>
+<tr><td class="cat-label">Appetite</td><td>Decreased (or increased in atypical depression)</td><td>Too busy to eat — <strong>priority: finger foods</strong> they can eat while moving</td></tr>
+<tr><td class="cat-label">Suicide Risk</td><td><span class="danger">HIGHEST when energy returns</span> (improving depression) — now has energy to act on plan</td><td>Risk during mixed episodes (depression + agitation simultaneously)</td></tr>
+<tr><td class="cat-label">💊 Treatment</td><td><span class="drug">SSRIs (first-line)</span>, <span class="drug">SNRIs</span>, <span class="drug">TCAs</span>, <span class="drug">MAOIs (last resort)</span>, ECT for refractory</td><td><span class="drug">Lithium (#1)</span>, <span class="drug">Valproic acid</span>, <span class="drug">Carbamazepine</span>, <span class="drug">Atypical antipsychotics</span></td></tr>
+</tbody></table>
+
+<div class="lethal">
+<strong>CRITICAL — Suicide Risk Peaks During Recovery!</strong> When a depressed patient suddenly seems "better" — cheerful, calm, giving away possessions — this may indicate they've decided on a plan and feel relief. <strong>Increase observation immediately.</strong>
+</div>
+
+<div class="mnemonic">
+<strong>Depression Mnemonic — SIG E CAPS:</strong><br>
+<strong>S</strong>leep (↑ or ↓) • <strong>I</strong>nterest (loss of) • <strong>G</strong>uilt (excessive) • <strong>E</strong>nergy (↓) • <strong>C</strong>oncentration (↓) • <strong>A</strong>ppetite (↑ or ↓) • <strong>P</strong>sychomotor (retardation/agitation) • <strong>S</strong>uicidal ideation<br>
+≥5 symptoms for ≥2 weeks = Major Depressive Episode
+</div>
+
+<div class="interaction">
+<strong>Nursing Approach — Manic Patient:</strong><br>
+<span class="do">✅ DO:</span> Provide calm, structured environment. Reduce stimuli (private room, low lights). Offer high-calorie finger foods. Set firm, consistent limits. Short, direct communication. Channel energy into physical activity.<br>
+<span class="dont">❌ DON'T:</span> Argue with grandiose beliefs. Engage in power struggles. Allow access to credit cards/phone (impulsive spending). Put in group settings during acute mania.
+</div>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<div id="sec-psy" class="section-hdr sh-psy">
+<span><span class="sec-num">4</span> 🔮 Schizophrenia &amp; Psychotic Disorders</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+</div>
+
+<div class="mnemonic">
+<strong>The Dopamine Hypothesis:</strong> Schizophrenia involves <em>excessive dopamine activity</em> in mesolimbic pathways (causes positive symptoms) and <em>decreased dopamine</em> in prefrontal cortex (causes negative symptoms). This is why antipsychotics block dopamine — and why they treat positive symptoms better than negative ones.
+</div>
+
+<h3>Positive vs. Negative Symptoms</h3>
+<div class="vs-banner">
+<span class="vs-cond vs-left">➕ Positive Symptoms</span>
+<span class="vs-circle">VS</span>
+<span class="vs-cond vs-right">➖ Negative Symptoms</span>
+</div>
+
+<table class="compare-table">
+<thead><tr><th>Feature</th><th>➕ Positive (Added to behavior)</th><th>➖ Negative (Taken away from behavior)</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Definition</td><td>Excess or distortion of normal function</td><td>Diminished or absent normal function</td></tr>
+<tr><td class="cat-label">Hallucinations</td><td><strong>Auditory</strong> most common (command, commentary). Visual, tactile, olfactory, gustatory.</td><td>—</td></tr>
+<tr><td class="cat-label">Delusions</td><td><strong>Persecutory</strong> (#1), grandiose, referential, somatic, erotomanic, nihilistic</td><td>—</td></tr>
+<tr><td class="cat-label">Thought Disorder</td><td>Loose associations, word salad, neologisms, echolalia, tangentiality</td><td>Poverty of speech (alogia)</td></tr>
+<tr><td class="cat-label">Behavior</td><td>Agitation, bizarre behavior, catatonic excitement</td><td>Catatonic withdrawal, psychomotor retardation</td></tr>
+<tr><td class="cat-label">Affect</td><td>Inappropriate affect (laughing at sad news)</td><td><strong>Flat affect</strong> (no emotional expression), <strong>anhedonia</strong></td></tr>
+<tr><td class="cat-label">Social</td><td>—</td><td><strong>Avolition</strong> (no motivation), social withdrawal, poor hygiene</td></tr>
+<tr><td class="cat-label">Treatment Response</td><td><strong>Better</strong> response to typical antipsychotics</td><td><strong>Poor</strong> response — atypicals slightly better. Most disabling long-term.</td></tr>
+</tbody></table>
+
+<div class="mnemonic">
+<strong>Negative Symptom Mnemonic — The 5 A's:</strong><br>
+<strong>A</strong>ffect (flat) • <strong>A</strong>logia (poverty of speech) • <strong>A</strong>volition (no motivation) • <strong>A</strong>nhedonia (no pleasure) • <strong>A</strong>ttention deficit
+</div>
+
+<h3>🔍 Types of Delusions — Know the Differences</h3>
+<table class="compare-table">
+<thead><tr><th>Type</th><th>Belief</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Persecutory</td><td>Others are plotting to harm, spy on, or control them</td><td>"The FBI has my phone tapped. My food is poisoned."</td></tr>
+<tr><td class="cat-label">Grandiose</td><td>Inflated self-importance, power, or identity</td><td>"I am Jesus Christ. I invented the internet."</td></tr>
+<tr><td class="cat-label">Referential</td><td>Random events have personal significance</td><td>"The news anchor was sending me a secret message."</td></tr>
+<tr><td class="cat-label">Somatic</td><td>Body is diseased, infested, or malfunctioning</td><td>"Insects are crawling under my skin."</td></tr>
+<tr><td class="cat-label">Erotomanic</td><td>A famous person is in love with them</td><td>"The celebrity sends me love letters through TV."</td></tr>
+<tr><td class="cat-label">Nihilistic</td><td>Major catastrophe will occur, or self/world doesn't exist</td><td>"I am already dead. The world is ending today."</td></tr>
+<tr><td class="cat-label">Thought Broadcasting</td><td>Others can hear their thoughts</td><td>"Everyone in this room can read my mind."</td></tr>
+<tr><td class="cat-label">Thought Insertion</td><td>Thoughts are placed in their mind by others</td><td>"The government is putting thoughts in my head."</td></tr>
+</tbody></table>
+
+<h3>🗣️ Types of Hallucinations</h3>
+<table class="compare-table">
+<thead><tr><th>Type</th><th>Description</th><th>Clinical Significance</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Auditory</td><td>Hearing voices — most common in schizophrenia</td><td><span class="danger">Command hallucinations ("Kill yourself") = highest risk</span></td></tr>
+<tr><td class="cat-label">Visual</td><td>Seeing things not there</td><td>More common in <strong>delirium, substance use, dementia</strong> than schizophrenia</td></tr>
+<tr><td class="cat-label">Tactile</td><td>Feeling things on/under skin</td><td>Classic in <strong>alcohol withdrawal (DTs)</strong> and stimulant use</td></tr>
+<tr><td class="cat-label">Olfactory</td><td>Smelling odors not present</td><td>May indicate <strong>brain tumor</strong> (temporal lobe) — requires medical workup</td></tr>
+<tr><td class="cat-label">Gustatory</td><td>Tasting something in absence of stimulus</td><td>Often accompanies persecutory delusions about poisoning</td></tr>
+</tbody></table>
+
+<div class="interaction">
+<strong>How to Interact with a Hallucinating Patient:</strong><br>
+<span class="do">✅ DO:</span> "I understand the voices are real to you, but I don't hear them." Present reality without arguing. Assess for command hallucinations. Distract with reality-based activities. Monitor safety.<br>
+<span class="dont">❌ DON'T:</span> Say "There are no voices — you're imagining things." Don't pretend you hear them too. Don't argue, laugh, or whisper in front of the patient.
+</div>
+
+<div class="interaction">
+<strong>How to Interact with a Delusional Patient:</strong><br>
+<span class="do">✅ DO:</span> "I understand you believe that, but I see it differently." Don't reinforce OR directly challenge the delusion. Focus on the <em>feeling</em> behind the delusion ("You seem frightened"). Redirect to reality-based topics.<br>
+<span class="dont">❌ DON'T:</span> Argue about the delusion. Present logical evidence against it (won't work). Pretend to agree.
+</div>
+
+<h3>Psychotic Disorder Spectrum — Diagnosing the Differences</h3>
+<table class="compare-table">
+<thead><tr><th>Disorder</th><th>Duration</th><th>Key Distinguishing Features</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Brief Psychotic Disorder</td><td>1 day – 1 month</td><td>Often after severe stress. Full return to premorbid functioning.</td></tr>
+<tr><td class="cat-label">Schizophreniform</td><td>1–6 months</td><td>Identical to schizophrenia but shorter. May or may not progress.</td></tr>
+<tr><td class="cat-label">Schizophrenia</td><td><strong>≥6 months</strong></td><td>≥2 symptoms for ≥1 month (active phase) + 6 months total. Chronic, relapsing.</td></tr>
+<tr><td class="cat-label">Schizoaffective</td><td>Ongoing</td><td>Schizophrenia + mood disorder (depression or mania) <strong>occurring simultaneously</strong>.</td></tr>
+<tr><td class="cat-label">Delusional Disorder</td><td>≥1 month</td><td>Non-bizarre delusions ONLY. No hallucinations, no disorganized behavior. <strong>Functions normally</strong> aside from delusion.</td></tr>
+</tbody></table>
+
+<div class="nclex-tip">
+<strong>NCLEX Key — Schizophrenia Diagnosis:</strong> Requires <strong>≥2 of the following for ≥1 month</strong>: delusions, hallucinations, disorganized speech, disorganized/catatonic behavior, negative symptoms. <strong>Total duration of illness ≥6 months</strong> (including prodromal/residual). If &lt;6 months → schizophreniform. If &lt;1 month → brief psychotic disorder.
+</div>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<div id="sec-pers" class="section-hdr sh-pers">
+<span><span class="sec-num">5</span> 🎭 Personality Disorders</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+</div>
+
+<div class="mnemonic">
+<strong>Remember the Clusters:</strong><br>
+<strong>Cluster A</strong> = "Weird" (odd/eccentric) — <em>Paranoid, Schizoid, Schizotypal</em><br>
+<strong>Cluster B</strong> = "Wild" (dramatic/emotional) — <em>Antisocial, Borderline, Histrionic, Narcissistic</em><br>
+<strong>Cluster C</strong> = "Worried" (anxious/fearful) — <em>Avoidant, Dependent, Obsessive-Compulsive</em>
+</div>
+
+<div class="cluster-card cluster-a">
+<h4>🧊 Cluster A — Odd/Eccentric ("Weird")</h4>
+<table class="compare-table">
+<thead><tr><th>Disorder</th><th>Core Pattern</th><th>Key Features</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Paranoid</td><td>Pervasive <strong>distrust &amp; suspicion</strong></td><td>Suspects others of exploiting, deceiving. Reads hidden threats into benign remarks. Won't confide. Bears grudges. Questions fidelity of spouse.</td></tr>
+<tr><td class="cat-label">Schizoid</td><td><strong>Detachment</strong> from social relationships</td><td>Prefers solitude. Emotionally cold/flat. No desire for close relationships. Indifferent to praise/criticism. "Loner" — but NOT distressed by it.</td></tr>
+<tr><td class="cat-label">Schizotypal</td><td><strong>Eccentric</strong> behavior + perceptual distortions</td><td>Magical thinking, ideas of reference, odd beliefs, peculiar speech/dress. Social anxiety that doesn't diminish with familiarity. Closest to schizophrenia without psychosis.</td></tr>
+</tbody></table>
+</div>
+
+<div class="cluster-card cluster-b">
+<h4>🔥 Cluster B — Dramatic/Emotional ("Wild")</h4>
+<table class="compare-table">
+<thead><tr><th>Disorder</th><th>Core Pattern</th><th>Key Features</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Antisocial</td><td><strong>Disregard for rights of others</strong></td><td>Deceitful, impulsive, aggressive, irresponsible. No remorse. Must be ≥18 with conduct disorder history before 15. "Charming manipulator."</td></tr>
+<tr><td class="cat-label">Borderline (BPD)</td><td><strong>Instability</strong> in relationships, self-image, affect</td><td><span class="danger">Splitting</span> (all good vs. all bad), fear of abandonment, impulsive self-harm, chronic emptiness, identity disturbance, intense/unstable relationships.</td></tr>
+<tr><td class="cat-label">Histrionic</td><td><strong>Excessive emotionality</strong> &amp; attention-seeking</td><td>Uncomfortable when not center of attention. Dramatic, seductive, shallow emotions. "Theater personality" — uses appearance to draw attention.</td></tr>
+<tr><td class="cat-label">Narcissistic</td><td><strong>Grandiosity</strong>, need for admiration, lack of empathy</td><td>Entitled, exploitative, envious, arrogant. Fragile self-esteem beneath grandiosity. Reacts to criticism with rage or shame.</td></tr>
+</tbody></table>
+</div>
+
+<div class="cluster-card cluster-c">
+<h4>😰 Cluster C — Anxious/Fearful ("Worried")</h4>
+<table class="compare-table">
+<thead><tr><th>Disorder</th><th>Core Pattern</th><th>Key Features</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Avoidant</td><td><strong>Social inhibition</strong>, fear of rejection</td><td>Desperately WANTS relationships but avoids them due to fear of inadequacy. Hypersensitive to criticism. Unlike schizoid — they DO feel distress.</td></tr>
+<tr><td class="cat-label">Dependent</td><td><strong>Excessive need to be cared for</strong></td><td>Can't make decisions alone, needs reassurance, fears separation, goes to excessive lengths to obtain nurturance. Submissive, clingy.</td></tr>
+<tr><td class="cat-label">OCPD</td><td><strong>Preoccupation with orderliness</strong>, perfectionism, control</td><td>Rigid, inflexible about rules. Workaholic. <strong>Ego-syntonic</strong> (feels natural to them). Different from OCD which is ego-dystonic!</td></tr>
+</tbody></table>
+</div>
+
+<div class="interaction">
+<strong>Nursing Approach — Borderline Patient:</strong><br>
+<span class="do">✅ DO:</span> Be consistent, set clear boundaries, use matter-of-fact tone. Recognize splitting behavior ("You're the only good nurse" / "All nurses are terrible"). Validate feelings without reinforcing maladaptive behavior. Use DBT principles (Dialectical Behavior Therapy).<br>
+<span class="dont">❌ DON'T:</span> Take splitting personally. Become the "special" nurse. Make promises you can't keep. React to manipulation with anger. The entire care team must be consistent.
+</div>
+
+<div class="nclex-tip">
+<strong>NCLEX Key — OCD vs. OCPD:</strong> <strong>OCD</strong> = ego-<em>dystonic</em> (patient recognizes their obsessions are irrational and distressing). <strong>OCPD</strong> = ego-<em>syntonic</em> (patient sees nothing wrong — "everyone SHOULD be this organized"). OCD is an anxiety disorder. OCPD is a personality disorder.
+</div>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<div id="sec-sub" class="section-hdr sh-sub">
+<span><span class="sec-num">6</span> 🍷 Substance Use &amp; Withdrawal</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+</div>
+
+<h3>Intoxication vs. Withdrawal — Key Comparisons</h3>
+<table class="compare-table">
+<thead><tr><th>Substance</th><th>Intoxication Signs</th><th>Withdrawal Signs</th><th>Treatment</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Alcohol</td><td>Slurred speech, ataxia, disinhibition, nystagmus, stupor</td><td><span class="danger">Tremors → seizures → DTs</span> (24-72h). Hallucinations, tachycardia, diaphoresis, agitation. <strong>Can be fatal!</strong></td><td><span class="drug">Benzodiazepines (Chlordiazepoxide, Lorazepam)</span>, thiamine BEFORE glucose, IV fluids, seizure precautions</td></tr>
+<tr><td class="cat-label">Opioids</td><td>Pinpoint pupils, respiratory depression, euphoria, sedation, constipation</td><td>Dilated pupils, rhinorrhea, lacrimation, N/V/D, yawning, muscle aches, piloerection ("cold turkey")</td><td>Intox: <span class="drug">Naloxone (Narcan)</span>. Withdrawal: <span class="drug">Methadone, Buprenorphine, Clonidine</span></td></tr>
+<tr><td class="cat-label">Benzodiazepines</td><td>Similar to alcohol: sedation, confusion, amnesia, respiratory depression</td><td><span class="danger">Similar to alcohol: seizures possible. Can be fatal!</span> Anxiety, insomnia, tremors, perceptual disturbances</td><td>Intox: <span class="drug">Flumazenil</span>. Withdrawal: <strong>slow taper</strong></td></tr>
+<tr><td class="cat-label">Stimulants (Cocaine/Amphetamines)</td><td>Euphoria, tachycardia, hypertension, dilated pupils, hyperthermia, paranoia, aggression</td><td>"Crash": severe depression, fatigue, hypersomnia, increased appetite. <strong>NOT physically dangerous</strong> but high suicide risk</td><td>Supportive. Intox: <span class="drug">Benzodiazepines</span> for agitation. No specific antidote.</td></tr>
+<tr><td class="cat-label">Cannabis</td><td>Euphoria, relaxed, ↑appetite, red conjunctivae, dry mouth, impaired coordination</td><td>Irritability, insomnia, decreased appetite. <strong>Mild, not dangerous</strong></td><td>Supportive</td></tr>
+<tr><td class="cat-label">Hallucinogens (LSD/PCP)</td><td>LSD: visual hallucinations, synesthesia, dilated pupils. PCP: nystagmus, violence, numbness</td><td>No significant physical withdrawal</td><td>Calm environment, "talk down." PCP: <strong>minimize stimuli, isolate if violent</strong></td></tr>
+</tbody></table>
+
+<div class="lethal">
+<strong>Only TWO withdrawals can KILL:</strong> <strong>Alcohol</strong> and <strong>Benzodiazepines</strong>. Both can cause fatal seizures and require medical detox. Opioid withdrawal is miserable but rarely fatal (exception: pregnant women — risk of fetal distress).
+</div>
+
+<div class="mnemonic">
+<strong>Wernicke-Korsakoff Syndrome:</strong><br>
+<strong>Wernicke's</strong> (acute, reversible): Confusion + Ataxia + Ophthalmoplegia (eye paralysis) — <em>"CAO"</em><br>
+<strong>Korsakoff's</strong> (chronic, irreversible): <strong>Confabulation</strong> (making up stories to fill memory gaps) + amnesia<br>
+<strong>Prevention:</strong> Give <span class="drug">Thiamine (B1) BEFORE glucose</span> in all alcoholics! Glucose without thiamine → Wernicke's.
+</div>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<div id="sec-eat" class="section-hdr sh-eat">
+<span><span class="sec-num">7</span> 🍽️ Eating Disorders</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+</div>
+
+<div class="vs-banner">
+<span class="vs-cond vs-left">🪶 Anorexia Nervosa</span>
+<span class="vs-circle">VS</span>
+<span class="vs-cond vs-right">🔄 Bulimia Nervosa</span>
+</div>
+
+<table class="compare-table">
+<thead><tr><th>Feature</th><th>🪶 Anorexia Nervosa</th><th>🔄 Bulimia Nervosa</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Weight</td><td><strong>Significantly underweight</strong> (BMI &lt;18.5). Refuses to maintain normal weight.</td><td>Usually <strong>normal weight or slightly overweight</strong></td></tr>
+<tr><td class="cat-label">Pattern</td><td>Severe restriction ± binge/purge type</td><td><strong>Binge-purge cycles</strong>. Eats large amounts then compensates (vomiting, laxatives, exercise)</td></tr>
+<tr><td class="cat-label">Self-Image</td><td>Distorted body image — sees self as fat even when emaciated</td><td>Aware behavior is abnormal. Shame and secrecy about bingeing.</td></tr>
+<tr><td class="cat-label">Personality</td><td>Rigid, perfectionistic, high-achieving, controlling</td><td>Impulsive, struggles with emotional regulation</td></tr>
+<tr><td class="cat-label">Physical Signs</td><td>Lanugo, amenorrhea, bradycardia, hypothermia, bone loss, muscle wasting</td><td><strong>Russell's sign</strong> (knuckle calluses), dental erosion, parotid gland swelling, esophageal tears (<strong>Mallory-Weiss</strong>)</td></tr>
+<tr><td class="cat-label">Labs</td><td>↓K+, ↓Na+, ↓glucose, ↓albumin, anemia, ↓WBC, ↓estrogen</td><td>↓K+ (from purging!), metabolic alkalosis (vomiting) or acidosis (laxatives)</td></tr>
+<tr><td class="cat-label">Mortality</td><td><span class="danger">HIGHEST mortality of any psychiatric disorder (5-20%)</span>. Cardiac arrhythmias from electrolyte imbalances.</td><td>Lower than anorexia but esophageal rupture and hypokalemia can be fatal</td></tr>
+</tbody></table>
+
+<div class="lethal">
+<strong>Refeeding Syndrome — Potentially Fatal!</strong> When severely malnourished patients begin eating again, rapid shifts in electrolytes (especially <strong>↓ phosphorus</strong>) can cause cardiac failure, respiratory failure, and death. <strong>Refeed SLOWLY.</strong> Monitor phosphorus, K+, Mg++. Cardiac monitoring first 72 hours.
+</div>
+
+<div class="interaction">
+<strong>Nursing Approach — Anorexia Patient:</strong><br>
+<span class="do">✅ DO:</span> Monitor meals (sit with patient during AND 1 hour after). Daily weights (same time, same scale, gown only). Strict I&amp;O. Monitor cardiac rhythm. Set weight gain goals (1-2 lbs/week). Focus conversations on feelings, NOT food/weight.<br>
+<span class="dont">❌ DON'T:</span> Allow bathroom unsupervised after meals (purging risk). Discuss calories/food amounts. Let patient prepare own meals initially. Use food as reward/punishment.
+</div>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<div id="sec-sui" class="section-hdr sh-sui">
+<span><span class="sec-num">8</span> ⚠️ Suicide Assessment &amp; Prevention</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+</div>
+
+<div class="dx-card card-red">
+<h3>⚠️ Suicide Risk Assessment</h3>
+<div class="tag-row"><span class="tag tag-danger">🚨 CRITICAL SAFETY</span></div>
+
+<h4>Risk Factors — SAD PERSONS Scale:</h4>
+<ul>
+<li><strong>S</strong>ex (male completes more; female attempts more)</li>
+<li><strong>A</strong>ge (elderly &gt;65 highest completion rate; adolescents highest attempt rate)</li>
+<li><strong>D</strong>epression (or hopelessness — strongest predictor)</li>
+<li><strong>P</strong>revious attempt (#1 predictor of future attempt)</li>
+<li><strong>E</strong>thanol/substance abuse</li>
+<li><strong>R</strong>ational thinking loss (psychosis)</li>
+<li><strong>S</strong>ocial supports lacking (isolated, divorced, widowed)</li>
+<li><strong>O</strong>rganized plan (specific method, access to means, timeline)</li>
+<li><strong>N</strong>o spouse / significant other</li>
+<li><strong>S</strong>ickness (chronic illness, chronic pain, terminal diagnosis)</li>
+</ul>
+
+<h4>Warning Signs — ACE Mnemonic:</h4>
+<ul>
+<li><strong>A</strong>ttempt (previous attempt or planning)</li>
+<li><strong>C</strong>urrent plan with means and timeline</li>
+<li><strong>E</strong>xpressions of hopelessness, burden, or trapped feeling</li>
+</ul>
+</div>
+
+<div class="nclex-tip">
+<strong>NCLEX Key — Always Ask Directly:</strong> "Are you thinking about killing yourself?" Asking about suicide does NOT plant the idea. It gives permission to discuss it. If yes → assess <strong>plan, means, intent, timeline</strong>. More specific plan = higher risk.
+</div>
+
+<h3>Nursing Interventions for Suicidal Patient</h3>
+<table class="compare-table">
+<thead><tr><th>Priority</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">1. Safety</td><td><strong>1:1 continuous observation.</strong> Remove ALL dangerous items: belts, shoelaces, sharps, glass, cords, plastic bags. Check belongings on admission.</td></tr>
+<tr><td class="cat-label">2. Environment</td><td>Place near nurses' station. Locked windows. No-suicide contract (in orientation phase). Break-away fixtures in bathroom.</td></tr>
+<tr><td class="cat-label">3. Communication</td><td>Use direct language. "Are you thinking of hurting yourself?" Document specific quotes. Active listening without judgment.</td></tr>
+<tr><td class="cat-label">4. Medication</td><td>Monitor for cheek/hoarding pills. Liquid forms preferred. <span class="danger">SSRI black box warning: increased suicidality in &lt;25 y/o in first weeks</span></td></tr>
+<tr><td class="cat-label">5. Discharge</td><td>Safety plan, emergency contacts, remove means at home, follow-up within 72 hours. Involve family with patient consent.</td></tr>
+</tbody></table>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<div id="sec-pharm" class="section-hdr sh-pharm">
+<span><span class="sec-num">9</span> 💊 Psychopharmacology</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+</div>
+
+<h3>Antidepressants</h3>
+<table class="compare-table">
+<thead><tr><th>Class</th><th>Key Drugs</th><th>Mechanism</th><th>Critical Nursing Points</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">SSRIs</td><td><span class="drug">Fluoxetine (Prozac)</span>, <span class="drug">Sertraline (Zoloft)</span>, <span class="drug">Paroxetine (Paxil)</span>, <span class="drug">Escitalopram (Lexapro)</span></td><td>Block serotonin reuptake</td><td>Takes <strong>2-4 weeks</strong> for effect. Sexual dysfunction common. <span class="danger">Serotonin syndrome</span> risk with MAOIs. <strong>First-line</strong> for depression, anxiety, OCD, PTSD</td></tr>
+<tr><td class="cat-label">SNRIs</td><td><span class="drug">Venlafaxine (Effexor)</span>, <span class="drug">Duloxetine (Cymbalta)</span></td><td>Block serotonin + norepinephrine reuptake</td><td>May ↑BP. Good for depression + chronic pain. Taper slowly — withdrawal syndrome</td></tr>
+<tr><td class="cat-label">TCAs</td><td><span class="drug">Amitriptyline</span>, <span class="drug">Nortriptyline</span>, <span class="drug">Imipramine</span></td><td>Block serotonin + norepinephrine reuptake (non-selective)</td><td><span class="danger">Lethal in overdose</span> (cardiac arrhythmias). Anticholinergic effects. Not first-line due to toxicity. Never give full supply to suicidal patient!</td></tr>
+<tr><td class="cat-label">MAOIs</td><td><span class="drug">Phenelzine (Nardil)</span>, <span class="drug">Tranylcypromine (Parnate)</span></td><td>Inhibit monoamine oxidase (breaks down serotonin, NE, dopamine)</td><td><span class="danger">Tyramine crisis!</span> Avoid aged cheese, wine, smoked meats, soy sauce, beer → hypertensive crisis. 14-day washout between MAOIs and SSRIs.</td></tr>
+</tbody></table>
+
+<div class="lethal">
+<strong>Serotonin Syndrome — Life-Threatening Emergency!</strong> Caused by excess serotonin (combining SSRIs + MAOIs, SSRIs + triptans, etc.).<br>
+<strong>Triad:</strong> Altered mental status + Autonomic instability (↑HR, ↑BP, ↑Temp, diaphoresis) + Neuromuscular hyperactivity (<strong>clonus, hyperreflexia, tremor, rigidity</strong>).<br>
+<strong>Treatment:</strong> Stop all serotonergic drugs. <span class="drug">Cyproheptadine</span> (serotonin antagonist). Cooling measures. Supportive care.
+</div>
+
+<h3>Mood Stabilizers</h3>
+<div class="dx-card card-blue">
+<h3>💎 Lithium — The Gold Standard for Bipolar</h3>
+<div class="tag-row"><span class="tag tag-blue">NARROW THERAPEUTIC INDEX</span> <span class="tag tag-danger">TOXICITY RISK</span></div>
+<p><strong>Therapeutic level:</strong> 0.6–1.2 mEq/L. Draw trough levels (12 hours after last dose).</p>
+<h4>Early Toxicity (1.5–2.0):</h4>
+<ul><li>N/V, diarrhea, coarse tremor, drowsiness, muscle weakness, slurred speech</li></ul>
+<h4>Severe Toxicity (2.0–3.5):</h4>
+<ul><li>Ataxia, confusion, seizures, <span class="danger">cardiac arrhythmias, renal failure, coma, death</span></li></ul>
+<h4>Critical Nursing Points:</h4>
+<ul>
+<li><strong>Monitor levels weekly initially,</strong> then monthly when stable</li>
+<li>Maintain adequate <strong>sodium and fluid intake</strong> — dehydration concentrates lithium</li>
+<li><span class="danger">NSAIDs, ACE inhibitors, thiazide diuretics ↑ lithium levels</span></li>
+<li>Monitor <strong>thyroid (hypothyroidism)</strong> and <strong>renal function</strong> — lithium is nephrotoxic long-term</li>
+<li>Pregnancy category D — <strong>Ebstein's anomaly</strong> (cardiac defect)</li>
+</ul>
+</div>
+
+<h3>Antipsychotics</h3>
+<table class="compare-table">
+<thead><tr><th>Class</th><th>Key Drugs</th><th>Side Effects</th><th>Key Points</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Typical (1st gen)</td><td><span class="drug">Haloperidol (Haldol)</span>, <span class="drug">Chlorpromazine (Thorazine)</span></td><td><strong>EPS:</strong> dystonia, akathisia, parkinsonism, tardive dyskinesia. <strong>NMS</strong> (neuroleptic malignant syndrome)</td><td>Good for positive symptoms. High EPS risk. <span class="drug">Benztropine (Cogentin)</span> or <span class="drug">Diphenhydramine</span> for EPS.</td></tr>
+<tr><td class="cat-label">Atypical (2nd gen)</td><td><span class="drug">Risperidone (Risperdal)</span>, <span class="drug">Olanzapine (Zyprexa)</span>, <span class="drug">Quetiapine (Seroquel)</span>, <span class="drug">Aripiprazole (Abilify)</span></td><td><strong>Metabolic syndrome:</strong> weight gain, hyperglycemia, hyperlipidemia. Lower EPS risk.</td><td>Better for negative symptoms. Monitor weight, glucose, lipids. <span class="drug">Clozapine</span> = most effective but <span class="danger">agranulocytosis risk → weekly WBC/ANC</span></td></tr>
+</tbody></table>
+
+<div class="lethal">
+<strong>Neuroleptic Malignant Syndrome (NMS) — Medical Emergency!</strong><br>
+<strong>FEVER</strong> mnemonic: <strong>F</strong>ever (↑ to 107°F) + <strong>E</strong>ncephalopathy (confusion) + <strong>V</strong>itals unstable (↑BP, ↑HR) + <strong>E</strong>levated enzymes (CPK markedly ↑) + <strong>R</strong>igidity (lead-pipe)<br>
+<strong>Action:</strong> STOP antipsychotic immediately. <span class="drug">Dantrolene</span> (muscle relaxant) + <span class="drug">Bromocriptine</span> (dopamine agonist). Cooling measures. ICU monitoring.
+</div>
+
+<h3>Anxiolytics &amp; Sedatives</h3>
+<table class="compare-table">
+<thead><tr><th>Drug</th><th>Use</th><th>Key Points</th></tr></thead>
+<tbody>
+<tr><td class="cat-label"><span class="drug">Benzodiazepines</span> (Lorazepam, Diazepam, Alprazolam)</td><td>Acute anxiety, panic, seizures, alcohol withdrawal, insomnia</td><td><span class="danger">Dependence risk!</span> Short-term use only. CNS depression with alcohol. Antidote: <span class="drug">Flumazenil</span>. Elderly: ↑ fall risk.</td></tr>
+<tr><td class="cat-label"><span class="drug">Buspirone (BuSpar)</span></td><td>Chronic GAD</td><td>Takes <strong>2-4 weeks</strong>. No sedation, no dependence, no withdrawal. Cannot be used PRN. Does NOT potentiate alcohol.</td></tr>
+</tbody></table>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<div id="sec-legal" class="section-hdr sh-legal">
+<span><span class="sec-num">10</span> ⚖️ Legal, Ethical &amp; Safety</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+</div>
+
+<h3>Admission Types</h3>
+<table class="compare-table">
+<thead><tr><th>Type</th><th>How It Works</th><th>Key Points</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Voluntary</td><td>Patient requests admission and signs consent</td><td>Can leave AMA (with notice period, usually 72 hrs). Retains all rights. Preferred when possible.</td></tr>
+<tr><td class="cat-label">Involuntary</td><td>Court-ordered or emergency hold. <strong>Danger to self or others</strong> or <strong>gravely disabled</strong>.</td><td>Duration varies by state (usually 72-hr hold for evaluation). Patient retains right to refuse treatment EXCEPT in emergencies.</td></tr>
+<tr><td class="cat-label">Emergency</td><td>Immediate danger. Physician can initiate.</td><td>Shortest hold. Purely for stabilization and evaluation. Converted to voluntary or involuntary as needed.</td></tr>
+</tbody></table>
+
+<h3>Patient Rights in Psychiatric Settings</h3>
+<ul>
+<li><strong>Right to refuse treatment</strong> (including medication) — UNLESS imminent danger to self/others</li>
+<li><strong>Right to informed consent</strong> — explained risks, benefits, alternatives</li>
+<li><strong>Right to least restrictive environment</strong></li>
+<li><strong>Right to confidentiality</strong> — exceptions: <strong>duty to warn</strong> (Tarasoff), child/elder abuse reporting, court orders</li>
+<li><strong>Right to communicate</strong> — phone, mail, visitors (may be limited for safety)</li>
+<li><strong>Right to be free from restraints</strong> unless danger is imminent and all alternatives exhausted</li>
+</ul>
+
+<h3>Restraints — Use as Last Resort</h3>
+<div class="dx-card card-red">
+<h3>🔒 Restraint Guidelines</h3>
+<div class="tag-row"><span class="tag tag-danger">LAST RESORT ONLY</span></div>
+<p><strong>Order of interventions:</strong> Verbal de-escalation → PRN medication → 1:1 observation → seclusion → physical restraints (LAST).</p>
+<h4>When restraints are applied:</h4>
+<ul>
+<li>Physician order required within <strong>1 hour</strong> of application</li>
+<li>Behavioral health: reassess every <strong>4 hours</strong> (adults), 2 hours (children 9-17), 1 hour (under 9)</li>
+<li>Check circulation, sensation, movement (CSM) every <strong>15 minutes</strong></li>
+<li>Offer food, fluids, toileting every <strong>2 hours</strong></li>
+<li>Remove restraints as soon as patient is safe — reassess continuously</li>
+<li>Document: behavior requiring restraint, alternatives attempted, patient response</li>
+</ul>
+</div>
+
+<div class="nclex-tip">
+<strong>NCLEX Key — Duty to Warn (Tarasoff Rule):</strong> If a patient makes a <strong>credible, specific threat</strong> against an identifiable person, the clinician has a legal <strong>duty to warn</strong> the potential victim AND notify authorities. Confidentiality is broken in this case. This overrides HIPAA.
+</div>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<div id="sec-child" class="section-hdr sh-child">
+<span><span class="sec-num">11</span> 🧒 Child &amp; Adolescent Psychiatric Disorders</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+</div>
+
+<table class="compare-table">
+<thead><tr><th>Disorder</th><th>Key Features</th><th>Treatment &amp; Nursing</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">ADHD</td><td><strong>Inattention + Hyperactivity + Impulsivity</strong>. Present before age 12 in ≥2 settings. More common in boys. Academic and social difficulties.</td><td><span class="drug">Stimulants: Methylphenidate (Ritalin), Amphetamine (Adderall)</span>. Give in AM (insomnia risk). Monitor height/weight (appetite suppression). Drug holidays may be used.</td></tr>
+<tr><td class="cat-label">Autism Spectrum</td><td>Deficits in <strong>social communication + restricted/repetitive behaviors</strong>. Sensory sensitivities. Difficulty with change. Range from mild to severe.</td><td>Structured environment, consistent routine, visual schedules. Speech/OT/behavioral therapy. Avoid sensory overload. Caregiver education essential.</td></tr>
+<tr><td class="cat-label">Conduct Disorder</td><td>Persistent pattern of violating others' rights and social norms. Aggression, destruction, deceitfulness. <strong>Before age 18</strong> → Conduct Disorder. <strong>After 18</strong> → Antisocial Personality Disorder.</td><td>Firm, consistent boundaries. Behavioral modification. Family therapy. Monitor for substance use. Safety of others is priority.</td></tr>
+<tr><td class="cat-label">Oppositional Defiant</td><td>Angry/irritable mood, argumentative, defiant, vindictive. LESS severe than conduct disorder — no major rights violations. Common ages 8-12.</td><td>Parent management training. Consistent expectations. Avoid power struggles. Positive reinforcement for prosocial behavior.</td></tr>
+<tr><td class="cat-label">Separation Anxiety</td><td>Excessive fear about separation from attachment figure. School refusal, nightmares, somatic complaints (stomachaches). Beyond developmentally appropriate.</td><td>Gradual desensitization. CBT. <span class="drug">SSRIs</span> if severe. Reassurance plan. Work with school.</td></tr>
+</tbody></table>
+
+<div class="nclex-tip">
+<strong>NCLEX Key — Autism Communication:</strong> Use simple, concrete language. Avoid idioms ("It's raining cats and dogs" = terrifying to a literal thinker). Maintain routine — prepare for ANY change well in advance. Social stories help with new situations.
+</div>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<div id="sec-ncog" class="section-hdr sh-ncog">
+<span><span class="sec-num">12</span> 🧓 Neurocognitive Disorders</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+</div>
+
+<div class="vs-banner">
+<span class="vs-cond vs-left">⚡ Delirium</span>
+<span class="vs-circle">VS</span>
+<span class="vs-cond vs-right">🌊 Dementia</span>
+</div>
+
+<table class="compare-table">
+<thead><tr><th>Feature</th><th>⚡ Delirium</th><th>🌊 Dementia (e.g., Alzheimer's)</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Onset</td><td><strong>Acute</strong> (hours to days)</td><td><strong>Gradual</strong> (months to years)</td></tr>
+<tr><td class="cat-label">Course</td><td>Fluctuating — waxes and wanes throughout day</td><td>Progressive, irreversible decline</td></tr>
+<tr><td class="cat-label">Duration</td><td>Temporary — usually days to weeks</td><td>Permanent and worsening</td></tr>
+<tr><td class="cat-label">Consciousness</td><td><strong>Altered</strong> — clouded, impaired attention</td><td><strong>Clear until late stages</strong></td></tr>
+<tr><td class="cat-label">Cognition</td><td>Globally impaired, inattentive</td><td>Memory loss first, then other domains</td></tr>
+<tr><td class="cat-label">Hallucinations</td><td>Common — especially <strong>visual</strong></td><td>Less common until late stages</td></tr>
+<tr><td class="cat-label">Reversibility</td><td><span class="safe"><strong>REVERSIBLE</strong> — treat the cause!</span></td><td><span class="danger">Irreversible</span></td></tr>
+<tr><td class="cat-label">Cause</td><td>Medical emergency! Infection (UTI #1 in elderly), meds, electrolyte imbalance, dehydration, hypoxia, surgery</td><td>Alzheimer's (most common), vascular, Lewy body, frontotemporal</td></tr>
+<tr><td class="cat-label">Priority</td><td><span class="danger">FIND AND TREAT THE CAUSE</span></td><td>Safety, maintain function, support caregivers</td></tr>
+</tbody></table>
+
+<div class="nclex-tip">
+<strong>NCLEX Key:</strong> When an elderly patient suddenly becomes confused → think <strong>DELIRIUM first</strong>, not dementia. Delirium is a medical emergency. The #1 cause in elderly is <strong>UTI</strong>. Check urine, electrolytes, meds, vitals, O2 sat. Delirium can happen ON TOP of existing dementia.
+</div>
+
+<h3>Alzheimer's Disease Stages</h3>
+<table class="compare-table">
+<thead><tr><th>Stage</th><th>Duration</th><th>Features</th><th>Nursing Priority</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Mild (Early)</td><td>2-4 years</td><td>Recent memory loss, word-finding difficulty, misplacing items, mood changes, mild confusion</td><td>Encourage independence. Consistent routine. Memory aids. Advance directives NOW while capacity exists.</td></tr>
+<tr><td class="cat-label">Moderate (Middle)</td><td>2-10 years</td><td>Worsening memory, wandering, sundowning, agitation, incontinence, cannot do ADLs, may not recognize family</td><td><strong>Safety #1:</strong> Wandering precautions, ID bracelet. Structured routine. Simple 1-step commands. Redirect, don't argue.</td></tr>
+<tr><td class="cat-label">Severe (Late)</td><td>1-3 years</td><td>Total dependence, bedridden, nonverbal, dysphagia, seizures</td><td>Comfort care. Aspiration precautions. Skin care. End-of-life planning. Caregiver respite support.</td></tr>
+</tbody></table>
+
+<div class="interaction">
+<strong>Communicating with Dementia Patients:</strong><br>
+<span class="do">✅ DO:</span> Simple, short sentences. One-step commands. Identify yourself each visit. Use calm, reassuring tone. Approach from front. Offer choices (not open-ended questions). Reality orientation in early stages only.<br>
+<span class="dont">❌ DON'T:</span> Argue about what's real. Say "Don't you remember?" Use logic or reason. Use reality orientation in late stages (causes distress). Restrain for wandering (use redirection, alarms, safe walking areas).
+</div>
+
+<div class="mnemonic">
+<strong>Sundowner's Syndrome:</strong> Increased confusion and agitation in <em>late afternoon/evening</em>. Nursing: increase lighting, maintain routine, avoid caffeine after noon, provide calming activities in afternoon, assess for fatigue/pain.
+</div>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<div id="sec-def" class="section-hdr sh-def">
+<span><span class="sec-num">13</span> 🛡️ Defense Mechanisms</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+</div>
+
+<h3>Mature vs. Immature Defense Mechanisms</h3>
+<table class="compare-table">
+<thead><tr><th>Mechanism</th><th>Definition</th><th>Example</th><th>Maturity</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Denial</td><td>Refusing to accept reality</td><td>Patient with MI: "There's nothing wrong with my heart."</td><td>Immature</td></tr>
+<tr><td class="cat-label">Projection</td><td>Attributing own unacceptable feelings to others</td><td>"I'm not angry — YOU'RE the one who's angry!"</td><td>Immature</td></tr>
+<tr><td class="cat-label">Displacement</td><td>Redirecting feelings to a safer target</td><td>Yelled at by boss → comes home and kicks the dog</td><td>Immature</td></tr>
+<tr><td class="cat-label">Regression</td><td>Returning to earlier developmental stage</td><td>Hospitalized 8-year-old starts bedwetting</td><td>Immature</td></tr>
+<tr><td class="cat-label">Rationalization</td><td>Making logical excuses for unacceptable behavior</td><td>"I only drink to relax after work — everyone does it."</td><td>Immature</td></tr>
+<tr><td class="cat-label">Reaction Formation</td><td>Acting opposite of true feelings</td><td>Homophobic person with unconscious same-sex attraction</td><td>Immature</td></tr>
+<tr><td class="cat-label">Repression</td><td>Unconsciously blocking painful memories</td><td>Abuse survivor has no memory of childhood trauma</td><td>Immature</td></tr>
+<tr><td class="cat-label">Suppression</td><td><strong>Consciously</strong> setting aside painful thoughts</td><td>"I'll deal with the diagnosis after my daughter's wedding."</td><td><strong>Mature</strong></td></tr>
+<tr><td class="cat-label">Sublimation</td><td>Channeling unacceptable impulses into constructive activities</td><td>Aggressive person becomes a surgeon or athlete</td><td><strong>Mature</strong></td></tr>
+<tr><td class="cat-label">Humor</td><td>Using comedy to cope with anxiety</td><td>Cancer patient jokes about losing hair</td><td><strong>Mature</strong></td></tr>
+<tr><td class="cat-label">Altruism</td><td>Helping others to manage own feelings</td><td>Bereaved parent starts foundation for other families</td><td><strong>Mature</strong></td></tr>
+<tr><td class="cat-label">Undoing</td><td>Trying to reverse an unacceptable act</td><td>After yelling at child, buys them a gift</td><td>Immature</td></tr>
+<tr><td class="cat-label">Identification</td><td>Modeling behavior after another person</td><td>Nursing student mimics favorite instructor's mannerisms</td><td>Varies</td></tr>
+<tr><td class="cat-label">Splitting</td><td>Seeing people as all good OR all bad</td><td>BPD patient: "You're the best nurse!" → next day: "You're the worst!"</td><td>Immature</td></tr>
+<tr><td class="cat-label">Conversion</td><td>Emotional conflict → physical symptom</td><td>Soldier develops paralysis before deployment (no organic cause)</td><td>Immature</td></tr>
+</tbody></table>
+
+<div class="nclex-tip">
+<strong>NCLEX Key:</strong> Suppression is the only <strong>mature, CONSCIOUS</strong> defense mechanism. Repression is <strong>unconscious</strong>. Both push things away, but the patient is aware of suppression. On NCLEX, sublimation and humor are almost always correct answers for "which defense mechanism is healthy?"
+</div>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<div id="sec-mem" class="section-hdr sh-mem">
+<span><span class="sec-num">14</span> 🧠 High-Yield NCLEX Memory Anchors</span>
+<button class="sec-quiz-btn" onclick="launchQuiz()">📝 Quiz</button>
+</div>
+
+<div class="qref">
+<div class="qref-box">
+<h4>🗣️ Communication</h4>
+<ul>
+<li>Best answer = acknowledges feelings + encourages elaboration</li>
+<li>Eliminate: false reassurance, advice, "why?"</li>
+<li>Silence IS therapeutic</li>
+</ul>
+</div>
+<div class="qref-box">
+<h4>😰 Anxiety Levels</h4>
+<ul>
+<li>Mild = BEST for teaching</li>
+<li>Panic = CANNOT learn → safety only</li>
+<li>Moderate = most common testing level</li>
+</ul>
+</div>
+<div class="qref-box">
+<h4>💔 Depression Safety</h4>
+<ul>
+<li>Suicide risk ↑ when energy RETURNS</li>
+<li>SIG E CAPS = diagnostic criteria</li>
+<li>Give away possessions = red flag</li>
+</ul>
+</div>
+<div class="qref-box">
+<h4>🔮 Schizophrenia</h4>
+<ul>
+<li>Positive = added (hallucinations, delusions)</li>
+<li>Negative = subtracted (5 A's)</li>
+<li>≥6 months = schizophrenia diagnosis</li>
+</ul>
+</div>
+<div class="qref-box">
+<h4>🎭 Personality Clusters</h4>
+<ul>
+<li>A = Weird (paranoid, schizoid, schizotypal)</li>
+<li>B = Wild (antisocial, borderline, histrionic, narcissistic)</li>
+<li>C = Worried (avoidant, dependent, OCPD)</li>
+</ul>
+</div>
+<div class="qref-box">
+<h4>🍷 Substance Withdrawal</h4>
+<ul>
+<li>Only alcohol &amp; benzos can KILL on withdrawal</li>
+<li>Thiamine BEFORE glucose in alcoholics</li>
+<li>Opioid withdrawal = miserable but NOT fatal</li>
+</ul>
+</div>
+<div class="qref-box">
+<h4>💊 Lithium</h4>
+<ul>
+<li>Level: 0.6–1.2 mEq/L</li>
+<li>Toxicity: tremor → confusion → seizures → death</li>
+<li>Maintain Na+ and fluids. Avoid NSAIDs</li>
+</ul>
+</div>
+<div class="qref-box">
+<h4>⚡ Delirium vs. Dementia</h4>
+<ul>
+<li>Delirium = ACUTE, reversible, find the cause</li>
+<li>Dementia = gradual, irreversible, safety focus</li>
+<li>#1 cause of delirium in elderly = UTI</li>
+</ul>
+</div>
+</div>
+
+<div class="nclex-tip" style="margin-top:1.25rem">
+<strong>Final NCLEX Tip:</strong> Psychiatric nursing questions test <strong>therapeutic communication first, safety second, and medication knowledge third</strong>. When unsure, choose the answer that <strong>acknowledges feelings</strong> and <strong>maintains safety</strong>. Always assess before intervening. Never argue with delusions or hallucinations — present reality gently. And remember: <strong>the nurse-patient relationship is the foundation of ALL psychiatric care.</strong>
+</div>
+
+<p style="text-align:center;color:#475569;font-size:0.85rem;margin-top:3rem;padding-top:1rem;border-top:1px solid #1e293b;">© 2026 Peptopia Health, a Berkeley, LLC product.</p>
+
+</div><!-- end guide-container -->
+<script>
+function launchQuiz(key){
+  var k = key || 'mentalhealth';
+  if(window.parent&&window.parent!==window){
+    window.parent.postMessage({type:'launchGuideQuiz',key:k},'*');
+  }
+}
+document.querySelectorAll('.drug').forEach(function(el){
+  el.style.cursor='pointer';
+  el.title='Click to view drug card';
+  el.addEventListener('click',function(){
+    var name=this.textContent.trim();
+    if(window.parent&&window.parent!==window){
+      window.parent.postMessage({type:'showDrugCard',drug:name},'*');
+    }
+  });
+});
+</script>
+</body>
+</html>
