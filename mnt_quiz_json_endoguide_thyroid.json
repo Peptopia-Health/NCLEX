@@ -1,0 +1,277 @@
+[
+  {
+    "q": "A 34-year-old female presents with a 10-pound weight loss over 2 months, palpitations, heat intolerance, and a fine tremor. Her thyroid is diffusely enlarged. Which condition does the nurse suspect?",
+    "options": [
+      "Hashimoto's thyroiditis",
+      "Graves' disease",
+      "Myxedema coma",
+      "Thyroid cancer"
+    ],
+    "correct": 1,
+    "rationale": "Graves' disease is the most common cause of hyperthyroidism and presents with weight loss, tachycardia/palpitations, heat intolerance, tremor, and diffuse goiter. Hashimoto's causes hypothyroidism. Myxedema is severe hypothyroidism."
+  },
+  {
+    "q": "A patient with hypothyroidism asks why she feels cold all the time. Which response by the nurse is most accurate?",
+    "options": [
+      "Your adrenal glands are not producing enough cortisol.",
+      "Decreased thyroid hormone lowers your metabolic rate and heat production.",
+      "Your body is retaining too much fluid, which makes you feel cold.",
+      "The medication you are taking causes vasoconstriction."
+    ],
+    "correct": 1,
+    "rationale": "Thyroid hormones regulate metabolic rate. In hypothyroidism, decreased T3/T4 leads to a lower metabolic rate and decreased heat production, causing cold intolerance."
+  },
+  {
+    "q": "A nurse is reviewing lab results for a patient suspected of having primary hypothyroidism. Which lab findings are expected?",
+    "options": [
+      "Elevated TSH, elevated T4",
+      "Decreased TSH, decreased T4",
+      "Elevated TSH, decreased T4",
+      "Decreased TSH, elevated T4"
+    ],
+    "correct": 2,
+    "rationale": "In primary hypothyroidism, the thyroid gland fails to produce adequate T3/T4. The pituitary compensates by increasing TSH (inverse relationship). Therefore, TSH is elevated and T4 is decreased."
+  },
+  {
+    "q": "A patient is 12 hours post-thyroidectomy and reports tingling around the mouth and fingertips. The nurse should first assess for which complication?",
+    "options": [
+      "Thyroid storm",
+      "Hemorrhage at the surgical site",
+      "Hypocalcemia from parathyroid damage",
+      "Laryngeal nerve injury"
+    ],
+    "correct": 2,
+    "rationale": "Perioral and fingertip tingling (paresthesias) are early signs of hypocalcemia, which can result from inadvertent removal or damage to the parathyroid glands during thyroidectomy. Chvostek's and Trousseau's signs should be assessed."
+  },
+  {
+    "q": "The nurse is caring for a patient in thyroid storm. Which assessment finding does the nurse expect?",
+    "options": [
+      "Bradycardia and hypothermia",
+      "Hypotension and weight gain",
+      "High fever, tachycardia, and agitation",
+      "Decreased deep tendon reflexes and constipation"
+    ],
+    "correct": 2,
+    "rationale": "Thyroid storm is a life-threatening exacerbation of hyperthyroidism characterized by high fever (often >104°F), severe tachycardia, hypertension, agitation, and delirium. It is a medical emergency requiring immediate treatment."
+  },
+  {
+    "q": "A patient with Graves' disease has exophthalmos. Which nursing intervention is most important to include in the plan of care?",
+    "options": [
+      "Encourage the patient to rub the eyes to relieve itching.",
+      "Apply artificial tears and elevate the head of bed to reduce periorbital edema.",
+      "Restrict all fluids to reduce eye swelling.",
+      "Apply warm compresses to the eyes every 2 hours."
+    ],
+    "correct": 1,
+    "rationale": "Exophthalmos (bulging eyes) in Graves' disease causes corneal dryness and irritation. Artificial tears protect the cornea, and elevating the HOB reduces periorbital edema. Eye rubbing can cause corneal abrasion."
+  },
+  {
+    "q": "A nurse is teaching a patient newly prescribed levothyroxine (Synthroid). Which instruction is most important?",
+    "options": [
+      "Take the medication with a full meal to enhance absorption.",
+      "Take the medication on an empty stomach, 30-60 minutes before breakfast.",
+      "The dose can be adjusted based on how you feel each day.",
+      "Take the medication at bedtime with a glass of milk."
+    ],
+    "correct": 1,
+    "rationale": "Levothyroxine should be taken on an empty stomach 30-60 minutes before breakfast for optimal absorption. Food, calcium, and iron can interfere with absorption. The dose is titrated by the provider based on TSH levels, not patient symptoms alone."
+  },
+  {
+    "q": "A patient receiving propylthiouracil (PTU) for hyperthyroidism develops a sore throat and fever. What should the nurse do first?",
+    "options": [
+      "Administer acetaminophen for fever.",
+      "Notify the health care provider immediately.",
+      "Encourage warm saline gargles.",
+      "Increase fluid intake."
+    ],
+    "correct": 1,
+    "rationale": "Sore throat and fever in a patient on PTU may indicate agranulocytosis, a serious and potentially fatal adverse effect. The HCP must be notified immediately so a WBC count can be obtained and the drug may be discontinued."
+  },
+  {
+    "q": "Which statement by a patient scheduled for radioactive iodine (RAI) therapy indicates a need for further teaching?",
+    "options": [
+      "I will need to avoid close contact with pregnant women and children for a few days after treatment.",
+      "This treatment will destroy overactive thyroid tissue.",
+      "I may eventually need thyroid hormone replacement after this treatment.",
+      "I should increase my iodine intake before the procedure to help the treatment work."
+    ],
+    "correct": 3,
+    "rationale": "Patients should avoid excess iodine before RAI therapy because it competes with the radioactive iodine for uptake by the thyroid. A low-iodine diet is typically recommended before treatment. All other statements are correct."
+  },
+  {
+    "q": "A nurse is assessing a patient with myxedema coma. Which clinical manifestation should the nurse anticipate?",
+    "options": [
+      "Hyperthermia, tachycardia, and diarrhea",
+      "Hypothermia, bradycardia, and altered mental status",
+      "Hypertension, exophthalmos, and weight loss",
+      "Polyuria, polydipsia, and polyphagia"
+    ],
+    "correct": 1,
+    "rationale": "Myxedema coma is a severe, life-threatening form of hypothyroidism presenting with hypothermia, bradycardia, hypotension, hypoventilation, and altered mental status (progressing to coma). It is a medical emergency."
+  },
+  {
+    "q": "After a thyroidectomy, the nurse asks the patient to speak. The patient's voice is hoarse. What does this finding suggest?",
+    "options": [
+      "Expected finding due to endotracheal intubation",
+      "Damage to the recurrent laryngeal nerve",
+      "Onset of thyroid storm",
+      "Hypocalcemia developing"
+    ],
+    "correct": 1,
+    "rationale": "Hoarseness after thyroidectomy suggests possible damage to the recurrent laryngeal nerve, which runs near the thyroid gland. While mild hoarseness can occur from intubation, persistent or significant hoarseness should raise concern for nerve damage and be reported."
+  },
+  {
+    "q": "A patient with primary hyperthyroidism has lab work drawn. Which results does the nurse expect?",
+    "options": [
+      "Elevated TSH, elevated T3 and T4",
+      "Decreased TSH, elevated T3 and T4",
+      "Elevated TSH, decreased T3 and T4",
+      "Decreased TSH, decreased T3 and T4"
+    ],
+    "correct": 1,
+    "rationale": "In primary hyperthyroidism, the thyroid overproduces T3 and T4. Through negative feedback, the elevated thyroid hormones suppress TSH from the anterior pituitary. This inverse relationship is the hallmark of primary thyroid disease."
+  },
+  {
+    "q": "A nurse is preparing a patient for a subtotal thyroidectomy. Which medication should be available at the bedside postoperatively?",
+    "options": [
+      "Insulin glargine",
+      "Calcium gluconate",
+      "Potassium chloride",
+      "Sodium bicarbonate"
+    ],
+    "correct": 1,
+    "rationale": "Calcium gluconate must be at the bedside after thyroidectomy because accidental removal or damage to the parathyroid glands can cause hypocalcemia leading to tetany. IV calcium gluconate is the emergency treatment."
+  },
+  {
+    "q": "A nurse is teaching a patient about methimazole (Tapazole). Which statement indicates the patient understands the medication?",
+    "options": [
+      "This medication increases my thyroid hormone production.",
+      "This medication blocks the synthesis of thyroid hormones.",
+      "I should take this medication only when I feel my heart racing.",
+      "This medication replaces the thyroid hormone my body cannot make."
+    ],
+    "correct": 1,
+    "rationale": "Methimazole is an antithyroid medication that inhibits the synthesis of thyroid hormones (T3 and T4). It is used in hyperthyroidism. It must be taken consistently as prescribed, not on an as-needed basis."
+  },
+  {
+    "q": "A patient with hyperthyroidism is prescribed propranolol (Inderal). The patient asks why a heart medication is being prescribed for a thyroid problem. What is the nurse's best response?",
+    "options": [
+      "It will cure your hyperthyroidism over time.",
+      "It slows the conversion of T4 to T3 in your body.",
+      "It controls symptoms like rapid heart rate and tremors while other treatments take effect.",
+      "It blocks the release of TSH from the pituitary gland."
+    ],
+    "correct": 2,
+    "rationale": "Beta-blockers like propranolol do not treat the underlying cause of hyperthyroidism but manage the adrenergic symptoms (tachycardia, tremor, anxiety, palpitations) while definitive treatment (antithyroid drugs, RAI, or surgery) takes effect."
+  },
+  {
+    "q": "A patient with hypothyroidism has been taking levothyroxine for 3 weeks and states, 'I don't feel any better.' Which is the best nursing response?",
+    "options": [
+      "You should double your dose until you feel improvement.",
+      "It can take 4-6 weeks to notice the full therapeutic effects of this medication.",
+      "Stop the medication and call your provider for a different drug.",
+      "You are probably not absorbing the medication. Take it with milk."
+    ],
+    "correct": 1,
+    "rationale": "Levothyroxine has a long half-life and reaches steady state over several weeks. Patients typically notice therapeutic effects within 4-6 weeks. Dose adjustments are made based on TSH levels, not patient-initiated changes."
+  },
+  {
+    "q": "A nurse is performing Trousseau's sign on a post-thyroidectomy patient. A positive result is indicated by which finding?",
+    "options": [
+      "Twitching of the facial muscles when the cheek is tapped",
+      "Carpopedal spasm when a blood pressure cuff is inflated above systolic pressure",
+      "Dorsiflexion of the foot when the sole is stroked",
+      "Extension of the leg when the patellar tendon is tapped"
+    ],
+    "correct": 1,
+    "rationale": "A positive Trousseau's sign is carpopedal spasm (hand contraction) occurring when a BP cuff is inflated above systolic pressure for 3 minutes. This indicates hypocalcemia. Tapping the facial nerve (Chvostek's sign) causes facial twitching, also indicating hypocalcemia."
+  },
+  {
+    "q": "A patient who recently underwent thyroidectomy develops stridor and difficulty breathing. What is the nurse's priority action?",
+    "options": [
+      "Elevate the head of the bed and encourage deep breathing.",
+      "Notify the surgeon immediately and prepare for emergency airway management.",
+      "Administer prescribed calcium gluconate IV.",
+      "Apply ice packs to the neck to reduce swelling."
+    ],
+    "correct": 1,
+    "rationale": "Stridor and respiratory distress after thyroidectomy may indicate hemorrhage compressing the trachea or severe laryngeal edema. This is a surgical emergency requiring immediate notification of the surgeon and preparation for possible reintubation or tracheostomy."
+  },
+  {
+    "q": "Which nursing assessment is the priority in the first 24 hours after thyroidectomy?",
+    "options": [
+      "Monitoring for signs of infection at the incision site",
+      "Assessing the posterior neck and shoulders for bleeding",
+      "Encouraging the patient to perform range-of-motion exercises",
+      "Monitoring strict intake and output"
+    ],
+    "correct": 1,
+    "rationale": "Hemorrhage is a critical early complication after thyroidectomy. Blood can pool behind the neck due to gravity when the patient is supine. The nurse should check the back of the neck and shoulders for bleeding, in addition to the anterior dressing."
+  },
+  {
+    "q": "A patient with Graves' disease asks about the cause of the condition. Which explanation by the nurse is most accurate?",
+    "options": [
+      "A tumor in the pituitary gland is producing excess TSH.",
+      "Your immune system produces antibodies that stimulate the thyroid gland to overproduce hormones.",
+      "You have a dietary deficiency of iodine causing the thyroid to enlarge.",
+      "An infection has damaged your thyroid, causing it to release stored hormones."
+    ],
+    "correct": 1,
+    "rationale": "Graves' disease is an autoimmune disorder in which thyroid-stimulating immunoglobulins (TSI) mimic TSH and stimulate the thyroid to overproduce T3 and T4. It is the most common cause of hyperthyroidism."
+  },
+  {
+    "q": "A patient with hypothyroidism asks which symptoms should prompt immediate medical attention after starting levothyroxine. Which response by the nurse is correct?",
+    "options": [
+      "Mild constipation and dry skin",
+      "Chest pain, rapid heart rate, or shortness of breath",
+      "Gradual weight loss of 1-2 pounds per week",
+      "Increased energy levels and improved mood"
+    ],
+    "correct": 1,
+    "rationale": "Chest pain, tachycardia, and dyspnea may indicate excess thyroid hormone replacement or cardiac complications, especially in older adults or those with cardiac disease. These require immediate medical evaluation. Weight loss and improved energy are expected therapeutic effects."
+  },
+  {
+    "q": "A nurse is caring for a patient taking both levothyroxine and a calcium supplement. What is the most appropriate teaching?",
+    "options": [
+      "Take both medications together to improve compliance.",
+      "Separate levothyroxine and calcium by at least 4 hours.",
+      "Calcium supplements are contraindicated with levothyroxine.",
+      "Take calcium first, then levothyroxine 30 minutes later."
+    ],
+    "correct": 1,
+    "rationale": "Calcium supplements (and antacids, iron) decrease the absorption of levothyroxine by binding to it in the GI tract. They should be separated by at least 4 hours. Calcium is not contraindicated; it just needs to be timed appropriately."
+  },
+  {
+    "q": "A patient is admitted with suspected thyroid storm after abruptly stopping methimazole. Which intervention does the nurse anticipate?",
+    "options": [
+      "Administering IV levothyroxine",
+      "Warming the patient with heated blankets",
+      "Administering IV fluids, antithyroid drugs, beta-blockers, and corticosteroids",
+      "Restricting fluids to 1000 mL per day"
+    ],
+    "correct": 2,
+    "rationale": "Thyroid storm management includes aggressive IV fluids (for dehydration and hyperthermia), antithyroid medications (PTU or methimazole), beta-blockers (to control tachycardia), corticosteroids (to reduce T4 to T3 conversion), and cooling measures. Levothyroxine would worsen the condition."
+  },
+  {
+    "q": "A nursing student asks why TSH is the best initial screening test for thyroid disorders. Which explanation is most accurate?",
+    "options": [
+      "TSH directly measures the amount of thyroid hormone in the tissues.",
+      "TSH is the most sensitive indicator of thyroid function because it responds to small changes in T3/T4 via the feedback loop.",
+      "TSH levels do not fluctuate throughout the day, making it more reliable.",
+      "TSH is produced by the thyroid gland and reflects its overall health."
+    ],
+    "correct": 1,
+    "rationale": "TSH, produced by the anterior pituitary, is the most sensitive marker for detecting thyroid dysfunction. Even small changes in circulating T3/T4 cause significant inverse changes in TSH due to the hypothalamic-pituitary-thyroid feedback axis."
+  },
+  {
+    "q": "A patient post-thyroidectomy is positioned in bed. Which position is most appropriate?",
+    "options": [
+      "Flat with a pillow under the knees",
+      "Semi-Fowler's with the head and neck supported to avoid flexion or hyperextension",
+      "Trendelenburg to promote venous return",
+      "Side-lying to prevent aspiration"
+    ],
+    "correct": 1,
+    "rationale": "After thyroidectomy, the patient should be placed in semi-Fowler's position with the head and neck supported (using pillows or sandbags) to reduce edema at the surgical site, promote drainage, and prevent strain on the suture line from flexion or hyperextension."
+  }
+]

@@ -1,0 +1,277 @@
+[
+  {
+    "q": "A patient with Addison's disease presents to the emergency department with severe hypotension, dehydration, and confusion after a recent bout of influenza. Which condition does the nurse suspect?",
+    "options": [
+      "Cushing's crisis",
+      "Addisonian crisis",
+      "Thyroid storm",
+      "Myxedema coma"
+    ],
+    "correct": 1,
+    "rationale": "Addisonian crisis (acute adrenal insufficiency) is a life-threatening emergency triggered by stress, infection, or abrupt steroid withdrawal. It presents with severe hypotension, dehydration, hyponatremia, hyperkalemia, and altered mental status."
+  },
+  {
+    "q": "A nurse is assessing a patient newly diagnosed with Addison's disease. Which finding does the nurse expect?",
+    "options": [
+      "Moon face and central obesity",
+      "Bronze hyperpigmentation of the skin",
+      "Purple striae on the abdomen",
+      "Buffalo hump on the upper back"
+    ],
+    "correct": 1,
+    "rationale": "Bronze or darkened skin pigmentation is a hallmark of Addison's disease. It occurs because decreased cortisol triggers increased ACTH secretion from the pituitary, and ACTH shares a precursor with melanocyte-stimulating hormone (MSH), leading to hyperpigmentation."
+  },
+  {
+    "q": "A patient with Cushing's syndrome asks why bruising occurs so easily. Which explanation by the nurse is most accurate?",
+    "options": [
+      "Excess cortisol causes platelet destruction.",
+      "Excess cortisol leads to protein wasting and capillary fragility.",
+      "Elevated aldosterone levels increase vascular permeability.",
+      "Decreased ACTH weakens the blood vessel walls."
+    ],
+    "correct": 1,
+    "rationale": "Excess cortisol in Cushing's syndrome causes protein catabolism, leading to loss of collagen support in blood vessel walls and capillary fragility. This results in easy bruising, thin skin, and poor wound healing."
+  },
+  {
+    "q": "A patient with Addison's disease is being discharged on hydrocortisone replacement. Which statement indicates the patient needs further teaching?",
+    "options": [
+      "I should wear a medical alert bracelet at all times.",
+      "I can stop taking this medication once I start feeling better.",
+      "I need to increase my dose during times of illness or stress.",
+      "I should carry an emergency injection kit of hydrocortisone."
+    ],
+    "correct": 1,
+    "rationale": "Corticosteroid replacement in Addison's disease is lifelong and must never be abruptly discontinued. Stopping can precipitate a life-threatening Addisonian crisis. The dose must be increased during physiological stress (illness, surgery, trauma)."
+  },
+  {
+    "q": "A nurse is caring for a patient with Cushing's syndrome. Which nursing intervention is the highest priority?",
+    "options": [
+      "Encouraging a high-sodium diet",
+      "Protecting the patient from infection",
+      "Administering potassium-wasting diuretics",
+      "Promoting vigorous exercise to reduce central obesity"
+    ],
+    "correct": 1,
+    "rationale": "Excess cortisol suppresses the immune system, placing patients with Cushing's syndrome at high risk for infection. Infection prevention is the priority. Sodium should be restricted (not increased), and potassium should be supplemented (not wasted)."
+  },
+  {
+    "q": "A patient with suspected pheochromocytoma is admitted for evaluation. Which assessment finding does the nurse anticipate?",
+    "options": [
+      "Hypotension, bradycardia, and weight gain",
+      "Severe hypertension, tachycardia, pounding headache, and diaphoresis",
+      "Bronze skin, fatigue, and salt craving",
+      "Moon face, buffalo hump, and hyperglycemia"
+    ],
+    "correct": 1,
+    "rationale": "Pheochromocytoma is a catecholamine-secreting tumor of the adrenal medulla. Excess epinephrine and norepinephrine cause severe paroxysmal hypertension, tachycardia, severe headache, diaphoresis, and anxiety."
+  },
+  {
+    "q": "A patient with Addison's disease has the following electrolyte values: Na+ 128 mEq/L, K+ 5.8 mEq/L. Which interpretation is correct?",
+    "options": [
+      "These values are within normal limits for this condition.",
+      "Hyponatremia and hyperkalemia are expected due to aldosterone deficiency.",
+      "The potassium level is dangerously low and requires immediate replacement.",
+      "These values suggest the patient is taking too much corticosteroid replacement."
+    ],
+    "correct": 1,
+    "rationale": "In Addison's disease, deficiency of aldosterone leads to sodium wasting (hyponatremia) and potassium retention (hyperkalemia). These electrolyte imbalances are characteristic of the disease and can be life-threatening if untreated."
+  },
+  {
+    "q": "A patient taking long-term prednisone for lupus asks to stop the medication because of side effects. What is the nurse's best response?",
+    "options": [
+      "You may stop whenever you choose since it is your right to refuse medication.",
+      "You must gradually taper the dose under your provider's guidance; stopping suddenly can be dangerous.",
+      "You can stop the prednisone and switch to an over-the-counter anti-inflammatory.",
+      "Missing a few doses will not cause any problems."
+    ],
+    "correct": 1,
+    "rationale": "Long-term corticosteroid therapy suppresses the hypothalamic-pituitary-adrenal (HPA) axis. Abrupt discontinuation can cause acute adrenal insufficiency (Addisonian crisis), which is potentially fatal. Steroids must always be tapered gradually."
+  },
+  {
+    "q": "A nurse is assessing a patient with Cushing's syndrome. Which set of findings is most consistent with this diagnosis?",
+    "options": [
+      "Hypotension, hypoglycemia, and weight loss",
+      "Truncal obesity, moon face, hyperglycemia, and purple striae",
+      "Exophthalmos, weight loss, and heat intolerance",
+      "Polyuria, polydipsia, and dilute urine"
+    ],
+    "correct": 1,
+    "rationale": "Cushing's syndrome (hypercortisolism) presents with central/truncal obesity, moon face, buffalo hump, hyperglycemia (cortisol is a glucocorticoid), thin skin with purple striae, easy bruising, and immunosuppression."
+  },
+  {
+    "q": "A patient with pheochromocytoma is scheduled for adrenalectomy. Which preoperative nursing action is most important?",
+    "options": [
+      "Encouraging a high-protein diet",
+      "Administering prescribed alpha-adrenergic blockers to control blood pressure",
+      "Withholding all antihypertensive medications",
+      "Encouraging vigorous ambulation to reduce anxiety"
+    ],
+    "correct": 1,
+    "rationale": "Alpha-adrenergic blockers (such as phenoxybenzamine) are given preoperatively to control severe hypertension and prevent a hypertensive crisis during tumor manipulation. Beta-blockers may be added after alpha-blockade is established."
+  },
+  {
+    "q": "The mnemonic 'ADD-a-SONE' is used to remember the treatment for Addison's disease. Which medication category does this represent?",
+    "options": [
+      "Antithyroid medications",
+      "Corticosteroid replacement therapy",
+      "Antihypertensive agents",
+      "Insulin replacement therapy"
+    ],
+    "correct": 1,
+    "rationale": "The mnemonic 'ADD-a-SONE' reminds nurses that Addison's disease is treated by ADDing a cortisone (corticosteroid). Patients require lifelong replacement of glucocorticoids (hydrocortisone) and often mineralocorticoids (fludrocortisone)."
+  },
+  {
+    "q": "A nurse is caring for a patient following bilateral adrenalectomy. Which nursing intervention is essential?",
+    "options": [
+      "Monitoring for signs of hyperthyroidism",
+      "Administering lifelong corticosteroid and mineralocorticoid replacement",
+      "Restricting sodium intake to prevent fluid retention",
+      "Encouraging the patient to discontinue steroids after 6 months"
+    ],
+    "correct": 1,
+    "rationale": "After bilateral adrenalectomy, the patient has no adrenal glands and cannot produce cortisol or aldosterone. Lifelong glucocorticoid (hydrocortisone) and mineralocorticoid (fludrocortisone) replacement is essential to sustain life."
+  },
+  {
+    "q": "A patient with Cushing's syndrome reports a blood glucose of 256 mg/dL. The nurse understands this is caused by which mechanism?",
+    "options": [
+      "Cortisol inhibits insulin secretion from the pancreas.",
+      "Excess cortisol promotes gluconeogenesis and decreases glucose uptake by cells.",
+      "Aldosterone excess causes glucose retention in the kidneys.",
+      "ACTH directly stimulates the release of glucagon."
+    ],
+    "correct": 1,
+    "rationale": "Cortisol is a glucocorticoid that promotes gluconeogenesis (glucose production in the liver) and antagonizes insulin action, reducing cellular glucose uptake. This leads to hyperglycemia, often called 'steroid-induced diabetes.'"
+  },
+  {
+    "q": "A patient with Addison's disease reports craving salty foods. The nurse recognizes this is related to which pathophysiological process?",
+    "options": [
+      "Excess cortisol causing sodium retention",
+      "Aldosterone deficiency causing renal sodium wasting",
+      "Increased ADH secretion causing dilutional hyponatremia",
+      "Excess catecholamine release stimulating thirst"
+    ],
+    "correct": 1,
+    "rationale": "In Addison's disease, aldosterone deficiency leads to excessive sodium loss through the kidneys. The resulting hyponatremia triggers salt craving as the body attempts to restore sodium balance."
+  },
+  {
+    "q": "A nurse is educating a patient on long-term corticosteroid therapy about infection risk. Which statement is most appropriate?",
+    "options": [
+      "Corticosteroids boost your immune system, so infections are less likely.",
+      "You should avoid crowds and people with infections because steroids suppress your immune response.",
+      "You only need to worry about infections during the first week of therapy.",
+      "Taking steroids with food eliminates the risk of infection."
+    ],
+    "correct": 1,
+    "rationale": "Corticosteroids suppress the immune and inflammatory responses, increasing susceptibility to infections. Patients should avoid exposure to infections, practice hand hygiene, and report early signs of infection immediately."
+  },
+  {
+    "q": "A patient presents with central obesity, thin extremities, facial plethora, and hypertension. The nurse obtains a 24-hour urine free cortisol level. Which result supports a diagnosis of Cushing's syndrome?",
+    "options": [
+      "Cortisol level below normal range",
+      "Cortisol level within normal range",
+      "Cortisol level significantly elevated above normal range",
+      "Cortisol level is not relevant to this diagnosis"
+    ],
+    "correct": 2,
+    "rationale": "Elevated 24-hour urine free cortisol confirms hypercortisolism, supporting a Cushing's syndrome diagnosis. This test measures total cortisol output over 24 hours, avoiding the diurnal variation seen in single blood draws."
+  },
+  {
+    "q": "A patient in Addisonian crisis arrives in the ED. Which intervention should the nurse perform first?",
+    "options": [
+      "Obtain a 24-hour urine collection for cortisol levels.",
+      "Administer IV hydrocortisone and normal saline as prescribed.",
+      "Place the patient on a low-sodium diet.",
+      "Administer potassium supplements intravenously."
+    ],
+    "correct": 1,
+    "rationale": "Addisonian crisis is a life-threatening emergency requiring immediate IV hydrocortisone (to replace absent cortisol) and IV normal saline (to treat hypotension and dehydration). Potassium is already elevated due to aldosterone deficiency, so supplementation is contraindicated."
+  },
+  {
+    "q": "A nurse is performing a physical assessment on a patient with Cushing's syndrome. Which skin finding is most characteristic?",
+    "options": [
+      "Bronze hyperpigmentation",
+      "Wide, purple (violaceous) striae on the abdomen",
+      "Yellowing of the skin and sclera",
+      "Petechiae covering the lower extremities"
+    ],
+    "correct": 1,
+    "rationale": "Purple (violaceous) striae occur in Cushing's syndrome due to protein catabolism weakening the dermis and subcutaneous tissue. Unlike the pale/white stretch marks from weight gain, these are characteristically wide and dark purple/red."
+  },
+  {
+    "q": "A patient on chronic steroid therapy is scheduled for surgery. What should the nurse anticipate regarding steroid management?",
+    "options": [
+      "Steroids will be discontinued 48 hours before surgery.",
+      "A stress dose of IV corticosteroids will be administered perioperatively.",
+      "The regular oral dose will be continued with no changes.",
+      "Steroids will be replaced with NSAIDs during the perioperative period."
+    ],
+    "correct": 1,
+    "rationale": "Patients on chronic steroid therapy have suppressed adrenal function and cannot mount an adequate cortisol response to surgical stress. A stress dose of IV corticosteroids is given perioperatively to prevent Addisonian crisis."
+  },
+  {
+    "q": "A patient with Addison's disease is prescribed fludrocortisone (Florinef). The nurse understands this medication replaces which hormone?",
+    "options": [
+      "Cortisol (glucocorticoid)",
+      "Aldosterone (mineralocorticoid)",
+      "Epinephrine (catecholamine)",
+      "Thyroxine (thyroid hormone)"
+    ],
+    "correct": 1,
+    "rationale": "Fludrocortisone is a synthetic mineralocorticoid that replaces aldosterone, which is deficient in Addison's disease. It promotes sodium and water retention and potassium excretion, helping maintain blood pressure and electrolyte balance."
+  },
+  {
+    "q": "Which assessment technique should the nurse use to differentiate Cushing's syndrome from simple obesity?",
+    "options": [
+      "Measure the patient's height and weight for BMI calculation.",
+      "Assess for characteristic fat distribution pattern: central obesity with thin extremities.",
+      "Perform a fasting blood glucose test only.",
+      "Measure waist circumference alone."
+    ],
+    "correct": 1,
+    "rationale": "Cushing's syndrome produces a distinctive fat redistribution: central/truncal obesity with thin extremities (due to muscle wasting), moon face, and buffalo hump. Simple obesity tends to have more generalized fat distribution without muscle wasting."
+  },
+  {
+    "q": "A patient with pheochromocytoma should avoid which activity prior to surgical removal of the tumor?",
+    "options": [
+      "Light walking in the hallway",
+      "Palpation of the abdomen",
+      "Slow deep-breathing exercises",
+      "Elevating the head of the bed"
+    ],
+    "correct": 1,
+    "rationale": "Abdominal palpation can stimulate catecholamine release from the pheochromocytoma, triggering a dangerous hypertensive crisis. The abdomen should not be palpated unnecessarily. Other triggers include Valsalva maneuver and positional changes."
+  },
+  {
+    "q": "A nurse is monitoring a patient after unilateral adrenalectomy for Cushing's syndrome. Which complication is the nurse most concerned about in the immediate postoperative period?",
+    "options": [
+      "Hyperglycemia from excess cortisol",
+      "Adrenal insufficiency and hemodynamic instability",
+      "Thyroid storm from hormone fluctuations",
+      "Hypercalcemia from immobility"
+    ],
+    "correct": 1,
+    "rationale": "After adrenalectomy, the remaining adrenal gland may be suppressed from chronic elevated cortisol levels and unable to produce adequate cortisol. Acute adrenal insufficiency can cause hypotension, shock, and hemodynamic instability. Corticosteroid replacement is needed."
+  },
+  {
+    "q": "A patient with Cushing's syndrome is at risk for osteoporosis. Which explanation describes why?",
+    "options": [
+      "Excess cortisol stimulates osteoblast activity excessively.",
+      "Excess cortisol inhibits calcium absorption and promotes bone resorption.",
+      "Aldosterone excess causes calcium to be excreted by the kidneys.",
+      "Low ACTH levels prevent vitamin D activation."
+    ],
+    "correct": 1,
+    "rationale": "Excess cortisol inhibits intestinal calcium absorption, promotes renal calcium excretion, and directly inhibits osteoblast function while promoting osteoclast activity. This results in decreased bone density and increased fracture risk."
+  },
+  {
+    "q": "A patient taking chronic prednisone therapy should be instructed to obtain which item to wear at all times?",
+    "options": [
+      "A pedometer to track daily activity",
+      "Compression stockings to prevent DVT",
+      "A medical alert bracelet identifying steroid use",
+      "A pulse oximeter for home monitoring"
+    ],
+    "correct": 2,
+    "rationale": "Patients on chronic steroid therapy should wear a medical alert bracelet to inform emergency personnel of their steroid dependence. In an emergency, if the patient is unable to communicate, health care providers need to know about steroid use to prevent Addisonian crisis."
+  }
+]

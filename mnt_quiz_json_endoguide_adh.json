@@ -1,0 +1,277 @@
+[
+  {
+    "q": "A nurse is caring for a patient diagnosed with SIADH. Which set of laboratory findings does the nurse expect?",
+    "options": [
+      "Serum sodium 150 mEq/L, urine specific gravity 1.002",
+      "Serum sodium 118 mEq/L, urine specific gravity 1.035",
+      "Serum sodium 140 mEq/L, urine specific gravity 1.015",
+      "Serum sodium 155 mEq/L, urine specific gravity 1.040"
+    ],
+    "correct": 1,
+    "rationale": "SIADH causes excess ADH secretion, leading to water retention and dilutional hyponatremia (low serum sodium). The kidneys produce concentrated urine (high specific gravity) despite the dilute serum, because ADH promotes water reabsorption."
+  },
+  {
+    "q": "A patient with diabetes insipidus reports urinating up to 20 liters per day and being constantly thirsty. Which type of urine does the nurse expect?",
+    "options": [
+      "Concentrated, dark amber urine with high specific gravity",
+      "Dilute, pale urine with low specific gravity",
+      "Cloudy urine with white blood cells",
+      "Bloody urine with protein"
+    ],
+    "correct": 1,
+    "rationale": "Diabetes insipidus is characterized by insufficient ADH (or renal resistance to ADH), resulting in massive polyuria of dilute urine with low specific gravity (often below 1.005). The patient becomes extremely thirsty (polydipsia) due to dehydration."
+  },
+  {
+    "q": "A nurse is developing a care plan for a patient with SIADH. Which intervention is the priority?",
+    "options": [
+      "Encouraging liberal fluid intake to maintain hydration",
+      "Implementing fluid restriction as prescribed",
+      "Administering desmopressin (DDAVP) as prescribed",
+      "Providing a low-sodium diet"
+    ],
+    "correct": 1,
+    "rationale": "Fluid restriction is the cornerstone of SIADH management. Since excess ADH causes water retention, restricting fluids (typically 500-1000 mL/day) helps correct dilutional hyponatremia. DDAVP would worsen SIADH by adding more ADH effect."
+  },
+  {
+    "q": "A patient with central diabetes insipidus is prescribed desmopressin (DDAVP). Which statement by the patient indicates correct understanding?",
+    "options": [
+      "This medication will help my kidneys get rid of excess water.",
+      "This medication replaces the antidiuretic hormone my body is not making enough of.",
+      "I should take this medication only when I feel thirsty.",
+      "This medication will increase my urine output."
+    ],
+    "correct": 1,
+    "rationale": "Desmopressin (DDAVP) is a synthetic analog of ADH (vasopressin). In central diabetes insipidus, the posterior pituitary does not produce enough ADH. DDAVP replaces this hormone, promoting water reabsorption in the kidneys and decreasing urine output."
+  },
+  {
+    "q": "A nurse is differentiating between SIADH and diabetes insipidus. Which finding is associated with diabetes insipidus but NOT with SIADH?",
+    "options": [
+      "Hyponatremia",
+      "Concentrated urine",
+      "Severe dehydration and hypernatremia",
+      "Fluid overload"
+    ],
+    "correct": 2,
+    "rationale": "Diabetes insipidus causes massive water loss through dilute urine, leading to dehydration and hypernatremia (elevated serum sodium). SIADH causes the opposite: water retention, fluid overload, and dilutional hyponatremia."
+  },
+  {
+    "q": "A patient with SIADH has a serum sodium level of 115 mEq/L. The nurse monitors for which neurological complication?",
+    "options": [
+      "Hyperactive reflexes from hypercalcemia",
+      "Seizures from severe hyponatremia",
+      "Peripheral neuropathy from hyperkalemia",
+      "Visual changes from hyperglycemia"
+    ],
+    "correct": 1,
+    "rationale": "Severe hyponatremia (below 120 mEq/L) can cause cerebral edema leading to seizures, altered mental status, and potentially fatal brain herniation. Seizure precautions are essential when sodium is critically low."
+  },
+  {
+    "q": "A nurse is caring for a patient with central diabetes insipidus following a traumatic brain injury. Which assessment finding requires immediate intervention?",
+    "options": [
+      "Urine output of 50 mL/hour",
+      "Urine output of 800 mL/hour with a specific gravity of 1.001",
+      "Blood pressure 128/78 mmHg",
+      "Oral intake of 2 liters in 8 hours"
+    ],
+    "correct": 1,
+    "rationale": "A urine output of 800 mL/hour with a very low specific gravity (1.001) indicates severe diabetes insipidus with massive free water loss. This can quickly lead to hypovolemic shock and severe hypernatremia. Immediate fluid replacement and DDAVP administration are needed."
+  },
+  {
+    "q": "Demeclocycline is prescribed for a patient with SIADH. The nurse understands that this medication works by which mechanism?",
+    "options": [
+      "Stimulating ADH release from the posterior pituitary",
+      "Blocking the action of ADH on the renal collecting ducts",
+      "Increasing sodium reabsorption in the proximal tubule",
+      "Suppressing aldosterone secretion from the adrenal cortex"
+    ],
+    "correct": 1,
+    "rationale": "Demeclocycline is a tetracycline antibiotic that, as a side effect, blocks ADH receptors in the renal collecting ducts. This makes it useful in chronic SIADH by inducing a nephrogenic diabetes insipidus-like state, promoting water excretion."
+  },
+  {
+    "q": "A water deprivation test is performed on a patient suspected of having diabetes insipidus. After fluid restriction, the patient's urine remains dilute. After administration of synthetic ADH (desmopressin), the urine becomes concentrated. Which type of diabetes insipidus does this confirm?",
+    "options": [
+      "Nephrogenic diabetes insipidus",
+      "Central diabetes insipidus",
+      "Psychogenic polydipsia",
+      "SIADH"
+    ],
+    "correct": 1,
+    "rationale": "In central DI, the pituitary fails to produce adequate ADH, but the kidneys can still respond to exogenous ADH. When desmopressin is administered and urine concentrates, this confirms central DI. In nephrogenic DI, the kidneys would not respond to desmopressin."
+  },
+  {
+    "q": "A patient with nephrogenic diabetes insipidus does not respond to desmopressin therapy. Which alternative treatment does the nurse anticipate?",
+    "options": [
+      "Increased desmopressin dose",
+      "Thiazide diuretics and a low-sodium, low-protein diet",
+      "Fluid restriction to 500 mL/day",
+      "IV hypertonic saline administration"
+    ],
+    "correct": 1,
+    "rationale": "In nephrogenic DI, the kidneys do not respond to ADH, so desmopressin is ineffective regardless of dose. Treatment includes thiazide diuretics (which paradoxically reduce urine output by promoting sodium and water reabsorption proximally) and a low-sodium, low-protein diet."
+  },
+  {
+    "q": "A nurse is comparing SIADH and diabetes insipidus. Which statement is correct regarding urine specific gravity?",
+    "options": [
+      "Both conditions produce dilute urine with low specific gravity.",
+      "SIADH produces concentrated urine (high specific gravity); DI produces dilute urine (low specific gravity).",
+      "DI produces concentrated urine (high specific gravity); SIADH produces dilute urine (low specific gravity).",
+      "Urine specific gravity is normal in both conditions."
+    ],
+    "correct": 1,
+    "rationale": "In SIADH, excess ADH causes the kidneys to reabsorb water, producing concentrated urine (specific gravity >1.030). In DI, lack of ADH (or renal resistance to it) results in massive water excretion as dilute urine (specific gravity <1.005)."
+  },
+  {
+    "q": "A patient with SIADH has a prescription for 3% hypertonic saline. Which nursing action is most important during administration?",
+    "options": [
+      "Infuse rapidly to correct sodium levels quickly.",
+      "Monitor serum sodium levels frequently and infuse slowly via an infusion pump.",
+      "Administer via a peripheral IV at a fast drip rate.",
+      "Restrict oral intake completely during the infusion."
+    ],
+    "correct": 1,
+    "rationale": "Hypertonic saline (3%) must be infused slowly and carefully via an infusion pump, with frequent monitoring of serum sodium levels. Rapid correction of hyponatremia can cause osmotic demyelination syndrome (central pontine myelinolysis), a devastating neurological complication."
+  },
+  {
+    "q": "A patient is admitted with polyuria, polydipsia, and a serum sodium of 152 mEq/L. Urine specific gravity is 1.002. Which condition does the nurse suspect?",
+    "options": [
+      "SIADH",
+      "Diabetes insipidus",
+      "Diabetes mellitus type 1",
+      "Addison's disease"
+    ],
+    "correct": 1,
+    "rationale": "Polyuria with dilute urine (low specific gravity of 1.002), polydipsia, and hypernatremia (serum sodium 152 mEq/L) are classic findings of diabetes insipidus. The body is losing excessive free water, concentrating the serum sodium."
+  },
+  {
+    "q": "A nurse is monitoring a patient with SIADH. Which assessment finding indicates the condition is worsening?",
+    "options": [
+      "Increasing urine output and rising serum sodium",
+      "Decreasing body weight and dry mucous membranes",
+      "Decreasing serum sodium and increasing body weight",
+      "Improving mental status and decreasing edema"
+    ],
+    "correct": 2,
+    "rationale": "Worsening SIADH shows continued water retention (increasing body weight) and progressive dilutional hyponatremia (decreasing serum sodium). Increasing urine output and rising sodium would indicate improvement."
+  },
+  {
+    "q": "A patient develops diabetes insipidus after transsphenoidal hypophysectomy. The nurse recognizes this is caused by which mechanism?",
+    "options": [
+      "Damage to the adrenal cortex during surgery",
+      "Damage to or edema of the posterior pituitary, reducing ADH secretion",
+      "Excessive intraoperative fluid administration",
+      "Removal of the thyroid gland during the procedure"
+    ],
+    "correct": 1,
+    "rationale": "ADH is produced in the hypothalamus and stored/released by the posterior pituitary. Transsphenoidal surgery (for pituitary tumors) can damage the posterior pituitary or its stalk, impairing ADH release and causing central diabetes insipidus."
+  },
+  {
+    "q": "A nurse is teaching a patient with chronic SIADH about dietary management. Which instruction is most appropriate?",
+    "options": [
+      "Increase fluid intake to at least 3 liters per day.",
+      "Follow a sodium-restricted diet to prevent edema.",
+      "Maintain adequate sodium intake and adhere to fluid restrictions.",
+      "Eat a high-potassium diet to balance electrolytes."
+    ],
+    "correct": 2,
+    "rationale": "In SIADH, fluid restriction is essential to correct dilutional hyponatremia. Sodium restriction would worsen hyponatremia. Adequate sodium intake is encouraged alongside strict fluid restriction to help restore sodium balance."
+  },
+  {
+    "q": "A patient with diabetes insipidus who is unable to drink independently is at greatest risk for which complication?",
+    "options": [
+      "Fluid overload and pulmonary edema",
+      "Severe dehydration, hypernatremia, and cardiovascular collapse",
+      "Dilutional hyponatremia and seizures",
+      "Metabolic alkalosis and hypokalemia"
+    ],
+    "correct": 1,
+    "rationale": "DI patients compensate for massive urinary water loss by drinking large volumes. If unable to access or drink fluids (unconscious, confused, immobilized), they quickly become severely dehydrated with life-threatening hypernatremia and potential cardiovascular collapse."
+  },
+  {
+    "q": "A nurse is administering desmopressin (DDAVP) intranasally to a patient with central diabetes insipidus. Which outcome indicates the medication is effective?",
+    "options": [
+      "Urine output increases to greater than 500 mL/hour.",
+      "Urine output decreases and urine specific gravity increases.",
+      "The patient develops peripheral edema and weight gain of 5 kg.",
+      "Serum sodium drops below 125 mEq/L."
+    ],
+    "correct": 1,
+    "rationale": "Effective DDAVP therapy replaces ADH, causing the kidneys to reabsorb water. This decreases urine output and increases urine concentration (higher specific gravity). Excessive weight gain and critically low sodium would indicate overtreatment."
+  },
+  {
+    "q": "A patient is diagnosed with nephrogenic diabetes insipidus caused by chronic lithium use. The nurse understands that this type of DI differs from central DI because:",
+    "options": [
+      "The posterior pituitary does not produce enough ADH.",
+      "The kidneys do not respond to ADH despite adequate production.",
+      "The hypothalamus overproduces ADH.",
+      "The adrenal glands fail to produce aldosterone."
+    ],
+    "correct": 1,
+    "rationale": "In nephrogenic DI, ADH is produced normally by the hypothalamus/posterior pituitary, but the renal collecting ducts are resistant to its effects. Lithium is a common cause because it interferes with ADH receptor signaling in the kidneys."
+  },
+  {
+    "q": "A patient with SIADH has a serum sodium of 122 mEq/L. The nurse implements seizure precautions. Which additional intervention is appropriate?",
+    "options": [
+      "Administer D5W intravenously to prevent dehydration.",
+      "Encourage oral fluids to prevent thirst.",
+      "Keep the bed in the lowest position with padded side rails up.",
+      "Administer desmopressin to increase urine concentration."
+    ],
+    "correct": 2,
+    "rationale": "With serum sodium of 122 mEq/L, the patient is at high risk for seizures. The bed should be in the lowest position with padded side rails for safety. D5W and extra fluids would worsen hyponatremia. Desmopressin would worsen SIADH by increasing water retention."
+  },
+  {
+    "q": "Which clinical scenario best illustrates the difference between central and nephrogenic diabetes insipidus?",
+    "options": [
+      "Both types respond equally well to desmopressin therapy.",
+      "Central DI responds to desmopressin; nephrogenic DI does not respond to desmopressin.",
+      "Nephrogenic DI responds to desmopressin; central DI does not respond.",
+      "Neither type responds to desmopressin therapy."
+    ],
+    "correct": 1,
+    "rationale": "This is the key differentiating feature. Central DI results from insufficient ADH production, so exogenous ADH (desmopressin) is effective. Nephrogenic DI results from renal resistance to ADH, so desmopressin has no effect regardless of dose."
+  },
+  {
+    "q": "A nurse is caring for a patient with SIADH who develops a serum sodium of 110 mEq/L. Which symptoms does the nurse assess for as a priority?",
+    "options": [
+      "Excessive thirst and dry mucous membranes",
+      "Muscle cramps, confusion, lethargy, and potential seizure activity",
+      "Polyuria and increased urine specific gravity",
+      "Kussmaul respirations and fruity breath odor"
+    ],
+    "correct": 1,
+    "rationale": "Critically low sodium (110 mEq/L) causes neurological symptoms due to cerebral edema: confusion, lethargy, headache, muscle cramps, and seizures. This is a medical emergency. Kussmaul respirations and fruity breath suggest diabetic ketoacidosis."
+  },
+  {
+    "q": "During a water deprivation test, a patient's urine remains dilute after fluid restriction AND after desmopressin administration. Which diagnosis is most likely?",
+    "options": [
+      "Central diabetes insipidus",
+      "SIADH",
+      "Nephrogenic diabetes insipidus",
+      "Psychogenic polydipsia"
+    ],
+    "correct": 2,
+    "rationale": "In nephrogenic DI, the kidneys cannot respond to ADH. During the water deprivation test, urine stays dilute even after fluid restriction (ruling out psychogenic polydipsia) and remains dilute after desmopressin administration (ruling out central DI, where kidneys would respond)."
+  },
+  {
+    "q": "A patient with diabetes insipidus is receiving IV fluid replacement. Which type of IV fluid does the nurse anticipate administering?",
+    "options": [
+      "3% hypertonic saline",
+      "Hypotonic solution such as 0.45% normal saline",
+      "Dextrose 50% (D50)",
+      "Lactated Ringer's with potassium"
+    ],
+    "correct": 1,
+    "rationale": "DI patients lose large volumes of free water, leading to hypernatremia. Hypotonic fluids (such as 0.45% NS) replace free water and gradually correct the hypernatremia. Hypertonic saline would worsen hypernatremia. D50 is used for severe hypoglycemia."
+  },
+  {
+    "q": "A nurse is reviewing the records of four patients. Which patient is most likely experiencing SIADH rather than diabetes insipidus?",
+    "options": [
+      "A patient with a urine output of 12 L/day and serum sodium of 155 mEq/L",
+      "A patient with weight gain, urine output of 300 mL/day, and serum sodium of 120 mEq/L",
+      "A patient reporting extreme thirst and producing very pale, dilute urine",
+      "A patient with dry skin, poor turgor, and a serum osmolality of 310 mOsm/kg"
+    ],
+    "correct": 1,
+    "rationale": "SIADH causes water retention (weight gain, low urine output of concentrated urine) and dilutional hyponatremia (serum sodium 120 mEq/L). The other options describe DI features: massive polyuria, hypernatremia, dehydration, dilute urine, and elevated serum osmolality."
+  }
+]

@@ -1,0 +1,277 @@
+[
+  {
+    "q": "A client with primary hyperparathyroidism asks the nurse why they have been having so many kidney stones. Which response by the nurse is most accurate?",
+    "options": [
+      "Excess parathyroid hormone causes calcium to be reabsorbed from the bones into the blood, and the kidneys filter out the excess calcium, forming stones.",
+      "Your parathyroid glands are producing too little hormone, which causes calcium to crystallize in the kidneys.",
+      "Kidney stones in hyperparathyroidism are caused by elevated phosphorus levels that precipitate in the renal tubules.",
+      "The stones are unrelated to your parathyroid condition and are caused by dietary factors alone."
+    ],
+    "correct": 0,
+    "rationale": "In hyperparathyroidism, excess PTH causes increased bone resorption, releasing calcium into the blood. The kidneys attempt to excrete the excess calcium, which can precipitate and form renal calculi (kidney stones)."
+  },
+  {
+    "q": "A nurse is assessing a client 24 hours after a total thyroidectomy. The client reports tingling around the mouth and fingertips. Which action should the nurse take first?",
+    "options": [
+      "Administer prescribed oral calcium carbonate tablet.",
+      "Check the serum calcium level and notify the provider.",
+      "Reassure the client that this is a normal postoperative sensation.",
+      "Apply a warm compress to the neck incision site."
+    ],
+    "correct": 1,
+    "rationale": "Perioral and fingertip tingling after thyroidectomy suggests hypocalcemia from inadvertent parathyroid damage. The nurse should check the serum calcium level immediately and notify the provider, as this could progress to tetany or laryngospasm."
+  },
+  {
+    "q": "A client with hypoparathyroidism is admitted with a serum calcium of 5.8 mg/dL. Which medication should the nurse anticipate administering first?",
+    "options": [
+      "Oral calcitriol (Vitamin D)",
+      "Intravenous calcium gluconate",
+      "Oral calcium carbonate with food",
+      "Subcutaneous calcitonin"
+    ],
+    "correct": 1,
+    "rationale": "A serum calcium of 5.8 mg/dL is critically low (normal 8.5-10.5 mg/dL). IV calcium gluconate is the priority treatment for acute, symptomatic hypocalcemia to prevent life-threatening complications such as tetany, seizures, and cardiac arrhythmias."
+  },
+  {
+    "q": "The nurse is caring for a client with hyperparathyroidism. Which assessment finding is consistent with the mnemonic 'bones, stones, groans, and moans'?",
+    "options": [
+      "Pathologic fractures, kidney stones, constipation, and depression",
+      "Joint stiffness, gallstones, diarrhea, and euphoria",
+      "Muscle spasms, bladder stones, nausea, and anxiety",
+      "Bone pain, kidney stones, hyperactive bowels, and insomnia"
+    ],
+    "correct": 0,
+    "rationale": "The classic mnemonic for hyperparathyroidism is 'bones, stones, groans, and moans': bones = pathologic fractures/osteoporosis, stones = kidney stones, groans = abdominal complaints including constipation, moans = psychiatric symptoms including depression and fatigue."
+  },
+  {
+    "q": "A nurse is performing assessments on a client suspected of having hypocalcemia. To elicit Chvostek sign, the nurse should:",
+    "options": [
+      "Inflate a blood pressure cuff on the arm above systolic pressure for 3 minutes.",
+      "Tap the facial nerve just anterior to the ear and observe for facial twitching.",
+      "Dorsiflex the client's foot and observe for calf pain.",
+      "Percuss the patellar tendon and observe for hyperreflexia."
+    ],
+    "correct": 1,
+    "rationale": "Chvostek sign is elicited by tapping the facial nerve (cranial nerve VII) just anterior to the ear. A positive sign is ipsilateral facial muscle twitching, indicating neuromuscular irritability from hypocalcemia."
+  },
+  {
+    "q": "A client with chronic hypoparathyroidism is being discharged on calcium and vitamin D supplements. Which statement by the client indicates a need for further teaching?",
+    "options": [
+      "I will take my calcium supplement with meals for better absorption.",
+      "I should take all of my daily calcium in one large dose in the morning.",
+      "I need to have my calcium levels checked regularly.",
+      "I will report any numbness or tingling to my doctor right away."
+    ],
+    "correct": 1,
+    "rationale": "Calcium supplements should be divided into multiple smaller doses throughout the day (no more than 500-600 mg at a time) because the body can only absorb a limited amount at once. Taking one large dose reduces absorption efficiency."
+  },
+  {
+    "q": "Which ECG change should the nurse expect in a client with hyperparathyroidism and a serum calcium of 12.8 mg/dL?",
+    "options": [
+      "Prolonged QT interval",
+      "Shortened QT interval",
+      "Tall, peaked T waves",
+      "Widened QRS complex"
+    ],
+    "correct": 1,
+    "rationale": "Hypercalcemia (as seen in hyperparathyroidism) causes a shortened QT interval on ECG. Calcium speeds cardiac repolarization. Conversely, hypocalcemia causes a prolonged QT interval."
+  },
+  {
+    "q": "A nurse is reviewing lab results for a client with primary hyperparathyroidism. Which set of findings is expected?",
+    "options": [
+      "Elevated PTH, elevated serum calcium, decreased serum phosphorus",
+      "Decreased PTH, elevated serum calcium, elevated serum phosphorus",
+      "Elevated PTH, decreased serum calcium, elevated serum phosphorus",
+      "Decreased PTH, decreased serum calcium, decreased serum phosphorus"
+    ],
+    "correct": 0,
+    "rationale": "In primary hyperparathyroidism, the parathyroid glands produce excess PTH, which increases serum calcium (through bone resorption and increased GI/renal absorption) and decreases serum phosphorus (due to the inverse relationship between calcium and phosphorus)."
+  },
+  {
+    "q": "A post-thyroidectomy client develops carpopedal spasm when the blood pressure cuff is inflated. The nurse recognizes this as:",
+    "options": [
+      "A negative Chvostek sign indicating normal calcium levels",
+      "A positive Trousseau sign indicating hypocalcemia",
+      "Homan sign indicating deep vein thrombosis",
+      "Carpal tunnel syndrome from positioning during surgery"
+    ],
+    "correct": 1,
+    "rationale": "A positive Trousseau sign is carpopedal spasm (hand/wrist spasm) that occurs when a blood pressure cuff is inflated above systolic pressure for 3 minutes. This indicates hypocalcemia, which can occur after thyroidectomy due to accidental parathyroid gland damage or removal."
+  },
+  {
+    "q": "A client with hyperparathyroidism and a serum calcium of 13.5 mg/dL is admitted to the hospital. Which nursing intervention has the highest priority?",
+    "options": [
+      "Encourage ambulation to reduce bone resorption.",
+      "Initiate IV normal saline as prescribed to promote renal calcium excretion.",
+      "Administer prescribed oral phosphorus supplements.",
+      "Place the client on a low-calcium diet immediately."
+    ],
+    "correct": 1,
+    "rationale": "For acute hypercalcemia, the priority intervention is aggressive IV hydration with normal saline to dilute serum calcium and promote renal excretion. Dehydration worsens hypercalcemia, so restoring fluid volume is the first-line treatment."
+  },
+  {
+    "q": "A nurse is caring for a client with hypoparathyroidism who is receiving IV calcium gluconate. Which assessment is most important during the infusion?",
+    "options": [
+      "Monitor respiratory rate every 4 hours.",
+      "Continuously monitor cardiac rhythm via telemetry.",
+      "Check blood glucose levels every 2 hours.",
+      "Assess pupillary response every 30 minutes."
+    ],
+    "correct": 1,
+    "rationale": "IV calcium gluconate can cause cardiac dysrhythmias including bradycardia and cardiac arrest if administered too rapidly. Continuous cardiac monitoring via telemetry is essential during the infusion to detect any rhythm changes immediately."
+  },
+  {
+    "q": "Which client is at greatest risk for developing hypoparathyroidism?",
+    "options": [
+      "A 55-year-old who had a subtotal thyroidectomy 2 days ago",
+      "A 40-year-old receiving long-term lithium therapy",
+      "A 60-year-old with a history of Graves disease treated with radioactive iodine",
+      "A 30-year-old with type 1 diabetes mellitus"
+    ],
+    "correct": 0,
+    "rationale": "The most common cause of hypoparathyroidism is surgical removal of or damage to the parathyroid glands during thyroid surgery. The parathyroid glands are located on the posterior surface of the thyroid and can be inadvertently removed or damaged during thyroidectomy."
+  },
+  {
+    "q": "A client with hyperparathyroidism reports chronic constipation. The nurse understands this symptom is related to:",
+    "options": [
+      "Decreased gastrointestinal motility caused by hypercalcemia",
+      "Increased phosphorus levels stimulating the parasympathetic nervous system",
+      "Side effects of calcium channel blocker medications",
+      "Hypocalcemia causing smooth muscle spasm in the bowel"
+    ],
+    "correct": 0,
+    "rationale": "Hypercalcemia from hyperparathyroidism decreases smooth muscle tone and gastrointestinal motility, leading to constipation. This is the 'groans' component of the 'bones, stones, groans, and moans' mnemonic."
+  },
+  {
+    "q": "The nurse is educating a client with hypoparathyroidism about foods high in calcium. Which food selection by the client indicates understanding?",
+    "options": [
+      "Grilled chicken breast with white rice",
+      "Greek yogurt with almonds and fortified orange juice",
+      "Hamburger with french fries and cola",
+      "Pasta with marinara sauce and garlic bread"
+    ],
+    "correct": 1,
+    "rationale": "Greek yogurt is an excellent source of calcium, almonds contain calcium, and fortified orange juice is supplemented with calcium. Clients with hypoparathyroidism should consume calcium-rich foods to help maintain adequate serum calcium levels."
+  },
+  {
+    "q": "A client with a serum calcium of 6.2 mg/dL begins having a seizure. Which nursing action takes priority?",
+    "options": [
+      "Administer IV calcium gluconate as prescribed.",
+      "Ensure client safety and protect from injury during the seizure.",
+      "Prepare for emergency intubation.",
+      "Obtain a STAT serum magnesium level."
+    ],
+    "correct": 1,
+    "rationale": "During an active seizure, the priority is client safety — position the client safely, protect from injury, and do not restrain. Once the seizure subsides, IV calcium gluconate should be administered to correct the underlying hypocalcemia. Safety during the seizure always comes first."
+  },
+  {
+    "q": "Which statement best describes the relationship between calcium and phosphorus in the body?",
+    "options": [
+      "Calcium and phosphorus levels rise and fall together in direct proportion.",
+      "Calcium and phosphorus have an inverse relationship regulated by parathyroid hormone.",
+      "Phosphorus has no significant relationship with calcium homeostasis.",
+      "Calcium regulates phosphorus, but phosphorus does not affect calcium levels."
+    ],
+    "correct": 1,
+    "rationale": "Calcium and phosphorus have an inverse (reciprocal) relationship. When calcium levels rise, phosphorus levels fall, and vice versa. PTH regulates this balance by increasing calcium reabsorption and decreasing phosphorus reabsorption in the kidneys."
+  },
+  {
+    "q": "A nurse is preparing a client with severe hyperparathyroidism for a parathyroidectomy. Which preoperative assessment finding should be reported to the surgeon immediately?",
+    "options": [
+      "Serum calcium of 14.2 mg/dL with ECG changes",
+      "Mild muscle weakness in the lower extremities",
+      "Reports of increased thirst and urination",
+      "A history of kidney stones over the past year"
+    ],
+    "correct": 0,
+    "rationale": "A serum calcium of 14.2 mg/dL is critically elevated and ECG changes indicate cardiac involvement (hypercalcemic crisis). This requires immediate intervention as it can lead to cardiac arrest. The surgeon must be notified for possible emergent measures before surgery."
+  },
+  {
+    "q": "A client diagnosed with hypoparathyroidism is taking calcitriol (Rocaltrol). The nurse explains that this medication works by:",
+    "options": [
+      "Directly replacing the parathyroid hormone that the body cannot produce.",
+      "Stimulating the parathyroid glands to increase PTH secretion.",
+      "Promoting calcium absorption from the gastrointestinal tract as the active form of vitamin D.",
+      "Blocking phosphorus absorption in the intestines to raise calcium levels."
+    ],
+    "correct": 2,
+    "rationale": "Calcitriol is the active form of vitamin D (1,25-dihydroxyvitamin D). Without adequate PTH, the kidneys cannot convert vitamin D to its active form. Calcitriol directly promotes intestinal absorption of calcium, which is essential for managing hypocalcemia in hypoparathyroidism."
+  },
+  {
+    "q": "A nurse is monitoring a client post-parathyroidectomy. Which finding requires immediate intervention?",
+    "options": [
+      "Mild hoarseness when speaking",
+      "Serum calcium of 8.8 mg/dL",
+      "Inspiratory stridor and difficulty breathing",
+      "Small amount of serous drainage on the neck dressing"
+    ],
+    "correct": 2,
+    "rationale": "Inspiratory stridor and difficulty breathing after parathyroidectomy could indicate laryngospasm from hypocalcemia or airway obstruction from hemorrhage/edema. This is a medical emergency requiring immediate intervention to maintain the airway."
+  },
+  {
+    "q": "A client with primary hyperparathyroidism is found to have a DEXA scan showing osteoporosis. The nurse explains the bone loss is caused by:",
+    "options": [
+      "Inadequate dietary calcium intake over many years.",
+      "Excessive PTH stimulating osteoclast activity and bone resorption.",
+      "Low vitamin D levels preventing calcium deposition in bone.",
+      "Elevated phosphorus levels dissolving the bone matrix."
+    ],
+    "correct": 1,
+    "rationale": "Excess PTH in hyperparathyroidism stimulates osteoclast activity, causing calcium to be resorbed from the bones into the bloodstream. Over time, this leads to decreased bone density and osteoporosis, which is the 'bones' component of the classic mnemonic."
+  },
+  {
+    "q": "When administering IV calcium gluconate, which nursing action is essential to prevent complications?",
+    "options": [
+      "Infuse the solution rapidly via IV push over 30 seconds.",
+      "Administer the solution slowly over 10-20 minutes and monitor the heart rate.",
+      "Mix calcium gluconate with sodium bicarbonate in the same IV line.",
+      "Warm the solution to body temperature before infusion."
+    ],
+    "correct": 1,
+    "rationale": "IV calcium gluconate must be administered slowly (over 10-20 minutes) to prevent cardiac dysrhythmias, hypotension, and cardiac arrest. The heart rate must be monitored continuously. Rapid administration can cause fatal cardiac complications."
+  },
+  {
+    "q": "A client with hyperparathyroidism asks why they feel so fatigued and depressed. The nurse's best response is:",
+    "options": [
+      "These symptoms are unrelated to your parathyroid condition and should be evaluated separately.",
+      "Elevated calcium levels affect your nervous system and can cause fatigue, depression, and cognitive changes.",
+      "You are likely not getting enough sleep because of your frequent urination at night.",
+      "Depression is caused by the low phosphorus levels associated with your condition."
+    ],
+    "correct": 1,
+    "rationale": "Hypercalcemia directly affects the central nervous system, causing neuropsychiatric symptoms including fatigue, depression, confusion, and psychosis. These are the 'moans' (psychiatric moans) in the classic mnemonic for hyperparathyroidism."
+  },
+  {
+    "q": "A nurse is caring for a client with secondary hyperparathyroidism related to chronic kidney disease. Which statement best explains the pathophysiology?",
+    "options": [
+      "A tumor on the parathyroid gland is autonomously secreting excess PTH.",
+      "The failing kidneys cannot activate vitamin D, leading to hypocalcemia, which stimulates the parathyroid glands to overproduce PTH.",
+      "The kidneys are excreting too much PTH, causing a compensatory increase in production.",
+      "Chronic kidney disease directly destroys the parathyroid glands, causing hormone deficiency."
+    ],
+    "correct": 1,
+    "rationale": "In secondary hyperparathyroidism from CKD, the kidneys cannot convert vitamin D to its active form (calcitriol), reducing calcium absorption from the gut. The resulting chronic hypocalcemia stimulates the parathyroid glands to continuously overproduce PTH in an attempt to raise calcium levels."
+  },
+  {
+    "q": "A client post-thyroidectomy has a positive Chvostek sign and a serum calcium of 7.0 mg/dL. The nurse has administered IV calcium gluconate as prescribed. Which outcome indicates the treatment has been effective?",
+    "options": [
+      "The client's blood pressure increases to 160/90 mmHg.",
+      "The Chvostek sign is no longer elicitable and tingling has resolved.",
+      "The client develops flushing and a feeling of warmth.",
+      "The serum phosphorus level rises to 6.0 mg/dL."
+    ],
+    "correct": 1,
+    "rationale": "Resolution of the positive Chvostek sign and absence of tingling indicate that calcium gluconate therapy has effectively raised serum calcium to a level where neuromuscular irritability has resolved. This is the expected therapeutic outcome."
+  },
+  {
+    "q": "A nurse is reviewing the medication list of a client with hypoparathyroidism. Which combination of medications would the nurse expect to find prescribed for long-term management?",
+    "options": [
+      "Levothyroxine and propranolol",
+      "Oral calcium supplements and calcitriol (active vitamin D)",
+      "Phosphate binders and erythropoietin",
+      "Cinacalcet and furosemide"
+    ],
+    "correct": 1,
+    "rationale": "Long-term management of hypoparathyroidism requires oral calcium supplements to directly replace calcium and calcitriol (active vitamin D) to enhance intestinal calcium absorption. Without adequate PTH, the body cannot activate vitamin D on its own, making calcitriol supplementation essential."
+  }
+]

@@ -1,0 +1,277 @@
+[
+  {
+    "q": "A nursing student uses the mnemonic 'ADD-a-SONE' to remember Addison disease treatment. This mnemonic reminds the student that the primary treatment for Addison disease is:",
+    "options": [
+      "Surgical removal of the adrenal glands (adrenalectomy)",
+      "Lifelong corticosteroid replacement (adding cortisone/hydrocortisone back to the body)",
+      "Administration of ACTH injections to stimulate the adrenal glands",
+      "High-dose aldosterone antagonists to restore electrolyte balance"
+    ],
+    "correct": 1,
+    "rationale": "The mnemonic 'ADD-a-SONE' reminds students that Addison disease requires adding cortisone (corticosteroid replacement). Since the adrenal glands are insufficient, lifelong replacement of glucocorticoids (hydrocortisone) and often mineralocorticoids (fludrocortisone) is necessary."
+  },
+  {
+    "q": "A nurse uses the mnemonic 'Run yourself into the Grave' to recall the presentation of Graves disease. Which set of symptoms does this mnemonic describe?",
+    "options": [
+      "Bradycardia, weight gain, cold intolerance, and constipation",
+      "Tachycardia, weight loss, heat intolerance, hypermetabolism, and exophthalmos",
+      "Hypertension, moon face, buffalo hump, and central obesity",
+      "Muscle weakness, bronze skin, and hypotension"
+    ],
+    "correct": 1,
+    "rationale": "'Run yourself into the Grave' (Graves disease) evokes a hypermetabolic, revved-up state: the body is running too fast. This includes tachycardia, weight loss despite increased appetite, heat intolerance, tremors, anxiety, and the hallmark exophthalmos (bulging eyes)."
+  },
+  {
+    "q": "A nurse is teaching a newly diagnosed type 1 diabetic about sick day rules. Which statement by the client indicates correct understanding?",
+    "options": [
+      "If I am sick and cannot eat, I should skip my insulin completely.",
+      "I should never take my insulin when I am vomiting because it will make my blood sugar too low.",
+      "I should continue taking my insulin as prescribed, monitor blood glucose every 3-4 hours, check urine for ketones, and stay hydrated even when sick.",
+      "I only need to check my blood sugar once a day when I am sick."
+    ],
+    "correct": 2,
+    "rationale": "Sick day rules for type 1 diabetes include NEVER skipping insulin (illness increases counter-regulatory hormones that raise blood glucose), monitoring blood glucose more frequently (every 3-4 hours), checking urine for ketones, maintaining hydration, and contacting the provider if unable to keep fluids down."
+  },
+  {
+    "q": "A nurse is comparing hyper vs. hypo conditions for the thyroid. Which pair correctly matches opposite presentations?",
+    "options": [
+      "Hyperthyroidism causes weight gain; hypothyroidism causes weight loss.",
+      "Hyperthyroidism causes bradycardia; hypothyroidism causes tachycardia.",
+      "Hyperthyroidism causes tachycardia, heat intolerance, and weight loss; hypothyroidism causes bradycardia, cold intolerance, and weight gain.",
+      "Both hyperthyroidism and hypothyroidism cause fatigue and weight gain."
+    ],
+    "correct": 2,
+    "rationale": "Thyroid hyper and hypo states are opposites. Hyperthyroidism accelerates metabolism (tachycardia, heat intolerance, weight loss, diarrhea, anxiety). Hypothyroidism slows metabolism (bradycardia, cold intolerance, weight gain, constipation, fatigue). Recognizing these as mirror images aids clinical differentiation."
+  },
+  {
+    "q": "A pediatric nurse is assessing a newborn who failed the newborn screening for congenital hypothyroidism. If untreated, this condition leads to:",
+    "options": [
+      "Precocious puberty and accelerated growth",
+      "Cretinism — severe intellectual disability and growth failure",
+      "Childhood obesity but normal cognitive development",
+      "Graves disease developing in adolescence"
+    ],
+    "correct": 1,
+    "rationale": "Untreated congenital hypothyroidism leads to cretinism, characterized by severe intellectual disability, growth failure, and developmental delays. Thyroid hormones are essential for brain development and growth in infancy. Early detection through newborn screening and prompt levothyroxine treatment prevents these irreversible consequences."
+  },
+  {
+    "q": "A nurse is prioritizing which client to assess first. Which endocrine client requires the most immediate attention?",
+    "options": [
+      "A client with hypothyroidism who has a TSH of 12 mIU/L and reports constipation",
+      "A client with type 2 diabetes who has a fasting glucose of 180 mg/dL",
+      "A client with thyroid storm who has a temperature of 105.2°F, heart rate of 168, and is becoming increasingly confused",
+      "A client with Cushing syndrome who has a blood glucose of 220 mg/dL and moon face"
+    ],
+    "correct": 2,
+    "rationale": "Thyroid storm is a life-threatening endocrine emergency with a high mortality rate. The client with extreme hyperthermia, severe tachycardia, and altered mental status requires immediate intervention including cooling measures, antithyroid drugs, beta-blockers, and corticosteroids. The other clients have concerning but stable conditions."
+  },
+  {
+    "q": "A nurse is teaching a client with Addison disease about wearing a medical alert bracelet. The most important reason for this recommendation is:",
+    "options": [
+      "It reminds the client to take medications on schedule.",
+      "In an emergency, responders need to know the client requires stress-dose corticosteroids to prevent fatal Addisonian crisis.",
+      "It qualifies the client for disability parking.",
+      "It alerts pharmacists to potential drug interactions."
+    ],
+    "correct": 1,
+    "rationale": "Clients with Addison disease cannot mount an appropriate cortisol stress response. In emergencies (trauma, surgery, severe illness), they require immediate stress-dose corticosteroids to prevent life-threatening Addisonian crisis. A medical alert bracelet communicates this critical need to emergency personnel who may treat an unconscious patient."
+  },
+  {
+    "q": "A nurse uses the memory aid that Cushing syndrome patients have 'too much cortisol — too much of everything' while Addison disease patients have 'too little cortisol — too little of everything.' Which finding is consistent with the Cushing 'too much' pattern?",
+    "options": [
+      "Hypotension, hypoglycemia, and weight loss",
+      "Hyperglycemia, hypertension, weight gain, and immunosuppression",
+      "Hyperpigmentation, hyperkalemia, and hyponatremia",
+      "Dehydration, salt craving, and fatigue"
+    ],
+    "correct": 1,
+    "rationale": "Cushing syndrome ('too much cortisol') causes hyperglycemia (cortisol raises blood glucose), hypertension (cortisol has mineralocorticoid effects), weight gain (fat redistribution and increased appetite), and immunosuppression (cortisol suppresses the immune system). Addison disease presents with the opposite findings."
+  },
+  {
+    "q": "An elderly client presents with nonspecific symptoms of fatigue, constipation, dry skin, and cognitive slowing. The nurse recognizes that in geriatric patients, these symptoms may indicate:",
+    "options": [
+      "Normal aging changes that do not require evaluation",
+      "Hypothyroidism, which is more common in older adults and often presents with subtle, nonspecific symptoms",
+      "Graves disease with atypical presentation",
+      "Pheochromocytoma with chronic catecholamine exposure"
+    ],
+    "correct": 1,
+    "rationale": "Hypothyroidism is increasingly common with age, especially in older women. In geriatric patients, symptoms often mimic normal aging (fatigue, constipation, dry skin, cognitive changes), leading to underdiagnosis. TSH screening is important in elderly patients with these nonspecific symptoms."
+  },
+  {
+    "q": "A nurse is discharging a client on levothyroxine for hypothyroidism. Which teaching point is most important for medication compliance?",
+    "options": [
+      "Take the medication with a full meal for best absorption.",
+      "Take the medication on an empty stomach, 30-60 minutes before breakfast, at the same time each day.",
+      "Take double doses if you miss a day.",
+      "You can stop the medication once your symptoms improve."
+    ],
+    "correct": 1,
+    "rationale": "Levothyroxine should be taken on an empty stomach, 30-60 minutes before breakfast, to maximize absorption. Food, calcium, iron, and antacids can impair absorption. It should be taken at the same time daily for consistent levels, and it is a lifelong medication that should never be stopped without provider guidance."
+  },
+  {
+    "q": "A nurse is comparing opposite conditions of the adrenal cortex. Which pair correctly identifies the opposing hormone imbalances?",
+    "options": [
+      "Cushing syndrome (excess cortisol) is the opposite of Graves disease (excess thyroid hormone).",
+      "Cushing syndrome (excess cortisol) is the opposite of Addison disease (deficient cortisol).",
+      "Addison disease (excess aldosterone) is the opposite of Conn syndrome (deficient aldosterone).",
+      "Cushing syndrome (deficient cortisol) is the opposite of Addison disease (excess cortisol)."
+    ],
+    "correct": 1,
+    "rationale": "Cushing syndrome and Addison disease are opposites on the adrenal cortex spectrum. Cushing syndrome results from excess cortisol (hyperfunction), while Addison disease results from deficient cortisol and aldosterone (hypofunction). Their clinical presentations are mirror images of each other."
+  },
+  {
+    "q": "A child is diagnosed with precocious puberty at age 5. The nurse understands this condition involves:",
+    "options": [
+      "Delayed onset of secondary sexual characteristics requiring growth hormone therapy",
+      "Early development of secondary sexual characteristics before age 8 in girls or 9 in boys, often related to premature activation of the HPG axis",
+      "Normal variation in pubertal development that requires no intervention",
+      "Hypothyroidism causing advanced bone age and early growth plate closure"
+    ],
+    "correct": 1,
+    "rationale": "Precocious puberty is defined as development of secondary sexual characteristics before age 8 in girls or 9 in boys. Central precocious puberty results from premature activation of the hypothalamic-pituitary-gonadal (HPG) axis. Treatment may include GnRH agonists to suppress premature pubertal development and preserve adult height."
+  },
+  {
+    "q": "A nurse is using the mnemonic 'S-I-A-D-H: Sodium Is Always Dramatically Halved' to remember the key electrolyte imbalance in SIADH. Which nursing intervention is the priority based on this mnemonic?",
+    "options": [
+      "Encouraging liberal fluid intake to flush out excess sodium",
+      "Implementing fluid restriction and monitoring serum sodium levels closely",
+      "Administering IV normal saline at 250 mL/hr to replace sodium quickly",
+      "Restricting dietary sodium intake"
+    ],
+    "correct": 1,
+    "rationale": "The mnemonic reminds nurses that SIADH causes critical hyponatremia (dramatically low sodium) from water retention. The priority intervention is fluid restriction (typically 500-1000 mL/day) to allow serum sodium to normalize. Sodium levels must be monitored closely because too-rapid correction can cause osmotic demyelination syndrome."
+  },
+  {
+    "q": "A nurse is providing discharge teaching for a client with type 1 diabetes about dietary modifications. Which statement indicates understanding?",
+    "options": [
+      "I can eat whatever I want as long as I take extra insulin to cover it.",
+      "I should follow a consistent carbohydrate meal plan, count carbohydrates, and coordinate my insulin doses with my meals.",
+      "I need to eliminate all carbohydrates from my diet permanently.",
+      "I should skip meals if my blood sugar is elevated to bring it down faster."
+    ],
+    "correct": 1,
+    "rationale": "Type 1 diabetes management requires consistent carbohydrate intake coordinated with insulin dosing. Carbohydrate counting helps match insulin to food intake. Eliminating all carbohydrates is not necessary or recommended, and skipping meals can cause dangerous hypoglycemia, especially if insulin has been administered."
+  },
+  {
+    "q": "A nurse is comparing the presentations of DI and SIADH using opposites. The client with diabetes insipidus would present with:",
+    "options": [
+      "Fluid overload, hyponatremia, and concentrated urine",
+      "Dehydration, hypernatremia, dilute urine with very high output, and extreme thirst",
+      "Normal fluid balance with elevated ADH levels",
+      "Peripheral edema, weight gain, and headache"
+    ],
+    "correct": 1,
+    "rationale": "DI and SIADH are opposites. DI (insufficient ADH effect) causes massive output of dilute urine, leading to dehydration, hypernatremia (concentrated blood), and extreme thirst (polydipsia). SIADH (excess ADH) causes water retention, hyponatremia, concentrated urine, and decreased output."
+  },
+  {
+    "q": "A nursing student is learning about endocrine emergencies using the memory aid: 'Storm = Hot and Fast; Coma = Cold and Slow.' This refers to:",
+    "options": [
+      "Addisonian crisis versus Cushing crisis",
+      "Thyroid storm (hyperthermia, tachycardia) versus myxedema coma (hypothermia, bradycardia)",
+      "DKA versus HHNK",
+      "Hypoglycemia versus hyperglycemia"
+    ],
+    "correct": 1,
+    "rationale": "This memory aid distinguishes thyroid storm from myxedema coma. Thyroid storm is 'hot and fast' — extreme hyperthermia and tachycardia from excess thyroid hormone. Myxedema coma is 'cold and slow' — hypothermia and bradycardia from severe thyroid hormone deficiency. These are the two thyroid emergencies."
+  },
+  {
+    "q": "A client with Addison disease calls the clinic reporting a fever of 102°F and vomiting for 12 hours. The nurse's priority instruction is:",
+    "options": [
+      "Take your regular dose of hydrocortisone and call back if symptoms worsen tomorrow.",
+      "Come to the emergency department immediately; you may need stress-dose steroids to prevent Addisonian crisis.",
+      "Stop taking hydrocortisone until the vomiting resolves.",
+      "Take an over-the-counter antiemetic and rest at home."
+    ],
+    "correct": 1,
+    "rationale": "Illness is a physiologic stressor that requires increased cortisol. A client with Addison disease who is vomiting cannot absorb oral hydrocortisone and is at high risk for Addisonian crisis. This requires emergency evaluation and likely parenteral stress-dose corticosteroids. This is a critical sick day rule for adrenal insufficiency."
+  },
+  {
+    "q": "A nurse uses the phrase 'Cushing's Keeps and Addison's Loses' to recall the fluid and sodium patterns. Which assessment findings align with this memory aid?",
+    "options": [
+      "Cushing syndrome: fluid retention, hypertension, hypernatremia; Addison disease: dehydration, hypotension, hyponatremia",
+      "Cushing syndrome: dehydration and hypotension; Addison disease: fluid overload and hypertension",
+      "Both conditions cause hyponatremia and hypotension",
+      "Cushing syndrome: hyperkalemia; Addison disease: hypokalemia"
+    ],
+    "correct": 0,
+    "rationale": "Cushing syndrome (excess cortisol with mineralocorticoid effects) 'keeps' sodium and water — causing fluid retention, hypertension, and hypernatremia. Addison disease (deficient aldosterone) 'loses' sodium and water — causing dehydration, hypotension, and hyponatremia. The potassium pattern is also opposite: Cushing loses K+ (hypokalemia), Addison keeps K+ (hyperkalemia)."
+  },
+  {
+    "q": "A pediatric nurse is monitoring a child started on levothyroxine for congenital hypothyroidism at 2 weeks of age. Which assessment finding indicates effective treatment?",
+    "options": [
+      "The child shows delayed developmental milestones at 6 months.",
+      "The child demonstrates normal growth patterns, appropriate developmental milestones, and normalized TSH levels.",
+      "The child develops tachycardia and poor weight gain.",
+      "The child's fontanelles close prematurely at 3 months."
+    ],
+    "correct": 1,
+    "rationale": "Effective treatment of congenital hypothyroidism is demonstrated by normal growth, appropriate developmental milestones, and normalization of TSH levels. Treatment must begin within the first 2-4 weeks of life to prevent irreversible intellectual disability. Regular monitoring of growth, development, and thyroid levels is essential."
+  },
+  {
+    "q": "A nurse is preparing a teaching plan about endocrine medication compliance. Which endocrine condition requires the nurse to emphasize that the client must NEVER abruptly stop their medication?",
+    "options": [
+      "Hyperthyroidism treated with methimazole",
+      "Addison disease treated with hydrocortisone replacement",
+      "Type 2 diabetes treated with metformin",
+      "Hyperparathyroidism treated with fluid hydration"
+    ],
+    "correct": 1,
+    "rationale": "Clients with Addison disease who are on hydrocortisone replacement must NEVER abruptly discontinue the medication, as this can precipitate a life-threatening Addisonian crisis. The adrenal glands cannot produce cortisol, and sudden withdrawal eliminates the only source of this essential hormone. This is a critical teaching point."
+  },
+  {
+    "q": "A nurse uses the mnemonic 'FIRED' to remember the causes of hyperthyroid symptoms: Fatigue, Irritability, Rapid heart rate, Exophthalmos, Diarrhea. A client presents with these symptoms. Which additional finding would the nurse expect?",
+    "options": [
+      "Weight gain and constipation",
+      "Heat intolerance, fine tremors, and unintentional weight loss",
+      "Cold intolerance and dry, coarse skin",
+      "Bradycardia and periorbital edema"
+    ],
+    "correct": 1,
+    "rationale": "In addition to the FIRED symptoms, hyperthyroidism causes heat intolerance (increased metabolic rate generates excess heat), fine tremors (from sympathetic overstimulation), and weight loss despite increased appetite (from hypermetabolism). These are all consequences of excess thyroid hormone accelerating body functions."
+  },
+  {
+    "q": "A geriatric nurse is assessing an 82-year-old client with hypothyroidism. The nurse understands that in elderly patients, hypothyroidism treatment should begin with:",
+    "options": [
+      "High-dose levothyroxine to rapidly normalize thyroid levels",
+      "Low-dose levothyroxine with gradual increases to avoid cardiac complications",
+      "Radioactive iodine therapy to stimulate the remaining thyroid tissue",
+      "No treatment, as hypothyroidism in the elderly does not require intervention"
+    ],
+    "correct": 1,
+    "rationale": "In elderly patients, levothyroxine should be started at a low dose and increased gradually (every 4-6 weeks). Rapid thyroid hormone replacement can increase myocardial oxygen demand and precipitate angina, myocardial infarction, or heart failure in older adults who may have underlying cardiovascular disease."
+  },
+  {
+    "q": "A nurse is applying the concept of 'opposite conditions' to the parathyroid glands. Which pair of findings correctly represents the opposites?",
+    "options": [
+      "Hyperparathyroidism: hypocalcemia and tetany; Hypoparathyroidism: hypercalcemia and kidney stones",
+      "Hyperparathyroidism: hypercalcemia, bone loss, and kidney stones; Hypoparathyroidism: hypocalcemia, tetany, and positive Chvostek/Trousseau signs",
+      "Both conditions cause elevated calcium and require the same treatment",
+      "Hyperparathyroidism: prolonged QT interval; Hypoparathyroidism: shortened QT interval"
+    ],
+    "correct": 1,
+    "rationale": "Hyperparathyroidism (excess PTH) causes hypercalcemia with bone resorption, kidney stones, and shortened QT. Hypoparathyroidism (deficient PTH) causes hypocalcemia with neuromuscular irritability (tetany, Chvostek/Trousseau signs) and prolonged QT. They are mirror images based on calcium levels."
+  },
+  {
+    "q": "A nurse is teaching a client with diabetes about when to seek emergency care. The nurse uses the memory aid 'Hot-Dry = Sugar High (DKA/HHS); Cold-Clammy = Need Candy (Hypoglycemia).' A client presents cold, clammy, and confused. The nurse should first:",
+    "options": [
+      "Administer prescribed insulin and recheck blood glucose in 1 hour.",
+      "Follow the Rule of 15: give 15 grams of fast-acting carbohydrate and recheck blood glucose in 15 minutes.",
+      "Encourage the client to eat a full meal with complex carbohydrates.",
+      "Administer IV normal saline for dehydration."
+    ],
+    "correct": 1,
+    "rationale": "Cold, clammy skin with confusion suggests hypoglycemia ('cold-clammy = need candy'). The Rule of 15 is the standard treatment: give 15 grams of fast-acting carbohydrate (glucose tablets, juice), wait 15 minutes, and recheck. If the client is unconscious, glucagon or IV dextrose should be administered instead."
+  },
+  {
+    "q": "A nurse is providing discharge teaching to a client newly diagnosed with an endocrine disorder. Which combination of teaching points applies across MOST endocrine conditions?",
+    "options": [
+      "Medications can be stopped once symptoms resolve; follow-up appointments are optional.",
+      "Medication compliance is essential, wear a medical alert bracelet, learn to recognize signs of both excess and deficiency, follow dietary recommendations, and attend regular follow-up appointments.",
+      "Only medications need to be taken; lifestyle modifications are unnecessary.",
+      "Endocrine conditions are curable with surgery, so medication teaching is temporary."
+    ],
+    "correct": 1,
+    "rationale": "Most endocrine conditions require lifelong management. Universal teaching points include medication compliance (never skip or abruptly stop), medical alert identification (for emergencies), recognizing symptoms of both hyper and hypo states, dietary modifications specific to the condition, and regular follow-up for lab monitoring and dose adjustments."
+  }
+]

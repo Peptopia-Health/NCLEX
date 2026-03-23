@@ -1,0 +1,277 @@
+[
+  {
+    "q": "A client presents to the emergency department with a blood pressure of 260/140 mmHg, severe headache, profuse sweating, and heart palpitations. The nurse suspects pheochromocytoma. Which diagnostic test is most definitive for confirming this diagnosis?",
+    "options": [
+      "Serum TSH level",
+      "24-hour urine collection for catecholamines, VMA, and metanephrines",
+      "Random serum cortisol level",
+      "Renal artery duplex ultrasound"
+    ],
+    "correct": 1,
+    "rationale": "The gold standard for diagnosing pheochromocytoma is a 24-hour urine collection for catecholamines (epinephrine, norepinephrine), vanillylmandelic acid (VMA), and metanephrines. Elevated levels confirm excessive catecholamine production from the adrenal medulla tumor."
+  },
+  {
+    "q": "A nurse is admitting a client with a suspected pheochromocytoma. During the abdominal assessment, the nurse should avoid which action?",
+    "options": [
+      "Auscultating bowel sounds in all four quadrants",
+      "Palpating the abdomen deeply over the adrenal gland area",
+      "Inspecting the abdomen for visible distension",
+      "Percussing the abdomen to assess for organomegaly"
+    ],
+    "correct": 1,
+    "rationale": "Deep abdominal palpation over the adrenal area is contraindicated in suspected pheochromocytoma because it can compress the tumor and trigger a massive release of catecholamines, potentially causing a life-threatening hypertensive crisis."
+  },
+  {
+    "q": "A client with pheochromocytoma is scheduled for an adrenalectomy. The nurse understands that preoperative preparation should include:",
+    "options": [
+      "Administration of a beta-blocker first, followed by an alpha-blocker",
+      "Administration of an alpha-blocker (phenoxybenzamine) for 10-14 days before surgery, with a beta-blocker added later if needed",
+      "High-dose corticosteroid therapy for 1 week before surgery",
+      "Withholding all antihypertensive medications 48 hours before surgery"
+    ],
+    "correct": 1,
+    "rationale": "Preoperative management of pheochromocytoma requires alpha-adrenergic blockade with phenoxybenzamine for 10-14 days before surgery to control blood pressure. A beta-blocker is added ONLY after adequate alpha-blockade is achieved. Giving a beta-blocker first can cause unopposed alpha stimulation and worsen hypertension."
+  },
+  {
+    "q": "A nurse is caring for a client immediately after surgical removal of a pheochromocytoma. Which postoperative complication should the nurse monitor for most closely?",
+    "options": [
+      "Severe hypertension from residual catecholamine effects",
+      "Hypotension and hypoglycemia from sudden catecholamine withdrawal",
+      "Thyroid storm from surgical stress response",
+      "Hyperkalemia from adrenal cortex damage"
+    ],
+    "correct": 1,
+    "rationale": "After pheochromocytoma removal, the sudden drop in circulating catecholamines can cause severe hypotension and hypoglycemia. The body has been accustomed to high catecholamine levels; their abrupt removal causes vasodilation and decreased blood glucose. Close hemodynamic monitoring and fluid resuscitation are essential."
+  },
+  {
+    "q": "A client with pheochromocytoma is experiencing a hypertensive crisis with a blood pressure of 280/160 mmHg. Which medication should the nurse anticipate administering first?",
+    "options": [
+      "Propranolol (Inderal) IV push",
+      "Phentolamine (Regitine) IV",
+      "Nitroprusside (Nipride) infusion only",
+      "Hydralazine (Apresoline) IM"
+    ],
+    "correct": 1,
+    "rationale": "Phentolamine (Regitine) is a rapid-acting alpha-adrenergic blocker that is the first-line treatment for acute hypertensive crisis in pheochromocytoma. It directly counteracts the effects of excessive catecholamines on alpha receptors. Beta-blockers alone are contraindicated as initial therapy."
+  },
+  {
+    "q": "The nurse is teaching a client about preparation for a 24-hour urine collection for catecholamines. Which instruction is most important?",
+    "options": [
+      "Increase fluid intake to at least 3 liters during the collection period.",
+      "Avoid foods and beverages containing caffeine, vanilla, and bananas for 2-3 days before and during the collection.",
+      "Collect only the first morning void each day for 3 consecutive days.",
+      "Refrigerate the specimen and add no preservatives to the container."
+    ],
+    "correct": 1,
+    "rationale": "Certain foods and substances (caffeine, vanilla, bananas, citrus fruits, and chocolate) can interfere with catecholamine and VMA levels in urine, causing false-positive results. Clients must avoid these substances for 2-3 days before and during the 24-hour collection."
+  },
+  {
+    "q": "A nurse is reviewing the classic triad of symptoms associated with pheochromocytoma. Which combination represents this triad?",
+    "options": [
+      "Polyuria, polydipsia, and polyphagia",
+      "Headache, diaphoresis, and palpitations",
+      "Weight gain, fatigue, and cold intolerance",
+      "Tremors, heat intolerance, and exophthalmos"
+    ],
+    "correct": 1,
+    "rationale": "The classic triad of pheochromocytoma consists of headache, diaphoresis (excessive sweating), and palpitations. These symptoms result from excessive catecholamine secretion causing sympathetic nervous system overstimulation."
+  },
+  {
+    "q": "A client with pheochromocytoma asks why the doctor insists on giving the alpha-blocker before the beta-blocker. The nurse's best response is:",
+    "options": [
+      "Beta-blockers are not effective against catecholamines, so we need the alpha-blocker to work first.",
+      "If a beta-blocker is given first without alpha-blockade, it can cause unopposed alpha-receptor stimulation and dangerously worsen your blood pressure.",
+      "The alpha-blocker must be given first because it takes longer to reach therapeutic levels.",
+      "There is no specific order required; the doctor just prefers this sequence."
+    ],
+    "correct": 1,
+    "rationale": "Beta-blockers block the vasodilatory effects of beta-2 receptors. Without prior alpha-blockade, the unopposed alpha-adrenergic stimulation from circulating catecholamines causes severe vasoconstriction, potentially leading to a lethal hypertensive crisis. Alpha-blockade must always precede beta-blockade."
+  },
+  {
+    "q": "A client with newly diagnosed pheochromocytoma is prescribed phenoxybenzamine (Dibenzyline). Which side effect should the nurse instruct the client to report?",
+    "options": [
+      "Bradycardia and cold extremities",
+      "Orthostatic hypotension, nasal congestion, and tachycardia",
+      "Weight gain and peripheral edema",
+      "Hyperglycemia and blurred vision"
+    ],
+    "correct": 1,
+    "rationale": "Phenoxybenzamine is a non-selective alpha-blocker that causes vasodilation. Common side effects include orthostatic hypotension (from decreased vascular resistance), reflex tachycardia (compensatory response), and nasal congestion (from vasodilation of nasal mucosa)."
+  },
+  {
+    "q": "A nurse is differentiating pheochromocytoma from other causes of secondary hypertension. Which characteristic best distinguishes pheochromocytoma?",
+    "options": [
+      "Hypertension that is consistently elevated and responds well to ACE inhibitors",
+      "Episodic hypertension with paroxysmal attacks of headache, sweating, and palpitations triggered by stress or position changes",
+      "Hypertension with hypokalemia and metabolic alkalosis",
+      "Hypertension with proteinuria and gradual renal function decline"
+    ],
+    "correct": 1,
+    "rationale": "Pheochromocytoma is characterized by episodic (paroxysmal) hypertension with the classic triad of headache, sweating, and palpitations. Attacks may be triggered by stress, exercise, position changes, or abdominal palpation. Hypertension with hypokalemia suggests hyperaldosteronism, not pheochromocytoma."
+  },
+  {
+    "q": "During a hypertensive episode, a client with pheochromocytoma becomes extremely anxious and states, 'I feel like I am going to die.' The nurse understands this feeling is caused by:",
+    "options": [
+      "A psychological response to hospitalization",
+      "The effect of massive catecholamine release stimulating the sympathetic fight-or-flight response",
+      "Cerebral hypoxia from the severely elevated blood pressure",
+      "A side effect of alpha-blocker medication"
+    ],
+    "correct": 1,
+    "rationale": "The overwhelming sense of impending doom experienced during pheochromocytoma paroxysms is a direct physiologic effect of massive catecholamine (epinephrine and norepinephrine) release. This activates the sympathetic fight-or-flight response, producing intense anxiety and a feeling of impending death."
+  },
+  {
+    "q": "A nurse is monitoring a client with pheochromocytoma who is receiving phentolamine IV for a hypertensive crisis. Which finding indicates a therapeutic response?",
+    "options": [
+      "Blood pressure decreases to 140/90 mmHg and headache resolves",
+      "Heart rate decreases to 50 beats per minute",
+      "Urine output drops to 10 mL per hour",
+      "The client becomes drowsy and difficult to arouse"
+    ],
+    "correct": 0,
+    "rationale": "A therapeutic response to phentolamine includes a reduction in blood pressure to safer levels and resolution of hypertensive symptoms such as headache. Bradycardia, oliguria, and excessive sedation are not expected therapeutic outcomes and would require further evaluation."
+  },
+  {
+    "q": "A client is admitted with suspected pheochromocytoma. Which nursing intervention is essential when positioning the client?",
+    "options": [
+      "Keep the head of bed flat to maintain cerebral perfusion.",
+      "Elevate the head of the bed and avoid sudden position changes that could trigger a catecholamine surge.",
+      "Place in Trendelenburg position to support blood pressure.",
+      "Maintain strict side-lying position to prevent aspiration."
+    ],
+    "correct": 1,
+    "rationale": "Clients with pheochromocytoma should have the head of bed elevated and avoid sudden position changes. Abrupt movements, straining, or bending can compress the tumor or trigger a sympathetic response, causing a dangerous catecholamine surge and hypertensive crisis."
+  },
+  {
+    "q": "Which laboratory finding would the nurse expect in a client with pheochromocytoma?",
+    "options": [
+      "Decreased serum glucose and decreased urine catecholamines",
+      "Elevated urine metanephrines and vanillylmandelic acid (VMA)",
+      "Decreased serum cortisol and elevated serum potassium",
+      "Elevated serum aldosterone and decreased plasma renin"
+    ],
+    "correct": 1,
+    "rationale": "Pheochromocytoma produces excess catecholamines, which are metabolized to metanephrines and VMA. Elevated urinary metanephrines and VMA are key diagnostic markers. Elevated serum glucose (not decreased) may also occur due to catecholamine-induced glycogenolysis."
+  },
+  {
+    "q": "A client with pheochromocytoma asks why blood glucose levels are sometimes elevated. The nurse explains:",
+    "options": [
+      "The tumor produces insulin-like growth factor that raises blood sugar.",
+      "Excess catecholamines stimulate glycogenolysis and gluconeogenesis, which increases blood glucose.",
+      "The alpha-blocking medications used for treatment cause hyperglycemia as a side effect.",
+      "Elevated blood pressure damages the pancreas, reducing insulin production."
+    ],
+    "correct": 1,
+    "rationale": "Catecholamines (especially epinephrine) stimulate glycogenolysis (breakdown of glycogen to glucose) in the liver and promote gluconeogenesis. They also inhibit insulin secretion. This results in elevated blood glucose levels during catecholamine surges."
+  },
+  {
+    "q": "A nurse is planning care for a client with pheochromocytoma. Which intervention should be included to reduce the risk of catecholamine surges?",
+    "options": [
+      "Encourage vigorous exercise to reduce stress hormones.",
+      "Maintain a calm, quiet environment and minimize stressors.",
+      "Administer caffeine-containing beverages to maintain alertness.",
+      "Schedule multiple invasive diagnostic procedures on the same day."
+    ],
+    "correct": 1,
+    "rationale": "A calm, quiet environment minimizes sympathetic stimulation that can trigger catecholamine release from the tumor. Stressors, anxiety, vigorous activity, caffeine, and invasive procedures should be avoided or minimized to prevent hypertensive crises."
+  },
+  {
+    "q": "A client with pheochromocytoma develops a blood pressure of 250/150 mmHg during a paroxysmal attack. The nurse notes the client also has ST-segment changes on the cardiac monitor. The priority nursing action is to:",
+    "options": [
+      "Administer prescribed IV phentolamine and notify the provider immediately.",
+      "Encourage deep breathing exercises and reassess in 15 minutes.",
+      "Administer prescribed oral nifedipine and recheck blood pressure in 1 hour.",
+      "Apply supplemental oxygen and place the client in supine position."
+    ],
+    "correct": 0,
+    "rationale": "With a blood pressure of 250/150 mmHg and cardiac changes, this is a hypertensive emergency. IV phentolamine is the first-line medication for acute hypertensive crisis in pheochromocytoma. The provider must be notified immediately as the client is at risk for stroke, myocardial infarction, or cardiac arrest."
+  },
+  {
+    "q": "After an adrenalectomy for pheochromocytoma, the client's blood pressure drops to 80/50 mmHg. The nurse should anticipate which intervention?",
+    "options": [
+      "Administration of IV vasopressors and aggressive fluid resuscitation",
+      "Administration of IV phentolamine to prevent rebound hypertension",
+      "Immediate return to the operating room for exploration",
+      "Discontinuation of all IV fluids to prevent fluid overload"
+    ],
+    "correct": 0,
+    "rationale": "Post-adrenalectomy hypotension is expected due to the sudden drop in catecholamines after tumor removal. Treatment includes aggressive IV fluid resuscitation and vasopressors as needed to maintain adequate blood pressure until the cardiovascular system adjusts to the reduced catecholamine levels."
+  },
+  {
+    "q": "A client with pheochromocytoma is collecting a 24-hour urine specimen. The client reports accidentally discarding one voiding during the collection. The nurse should:",
+    "options": [
+      "Continue the collection and note the missed specimen on the lab requisition.",
+      "Discard the current collection and restart the entire 24-hour collection.",
+      "Add extra time to the collection to compensate for the missed specimen.",
+      "Send the current specimen and request that the lab adjust the results."
+    ],
+    "correct": 1,
+    "rationale": "If any urine is discarded during a 24-hour collection, the entire specimen is invalid because it no longer represents total output over 24 hours. The collection must be discarded and restarted from the beginning to ensure accurate results."
+  },
+  {
+    "q": "A nurse is providing discharge teaching to a client after successful pheochromocytoma removal. Which instruction is most important?",
+    "options": [
+      "You will never need follow-up appointments after surgery.",
+      "Report any recurrence of headaches, sweating, or palpitations, and keep all follow-up appointments for monitoring of blood pressure and catecholamine levels.",
+      "You should continue taking phenoxybenzamine indefinitely.",
+      "Avoid all physical activity for the rest of your life."
+    ],
+    "correct": 1,
+    "rationale": "Although surgical removal is usually curative, pheochromocytoma can recur or may have been part of a familial syndrome (e.g., MEN type 2). Clients need lifelong follow-up with periodic monitoring of blood pressure and catecholamine levels. Any recurrence of the classic triad should be reported immediately."
+  },
+  {
+    "q": "A nurse is reviewing the anatomy of pheochromocytoma with a student nurse. Which statement by the student demonstrates correct understanding?",
+    "options": [
+      "Pheochromocytoma arises from the adrenal cortex and secretes aldosterone.",
+      "Pheochromocytoma arises from the chromaffin cells of the adrenal medulla and secretes catecholamines.",
+      "Pheochromocytoma is a pituitary tumor that stimulates the adrenal glands.",
+      "Pheochromocytoma originates in the thyroid gland and spreads to the adrenal glands."
+    ],
+    "correct": 1,
+    "rationale": "Pheochromocytoma is a tumor arising from the chromaffin cells of the adrenal medulla. These cells produce and store catecholamines (epinephrine and norepinephrine). The tumor causes unregulated release of these catecholamines, leading to the characteristic symptoms."
+  },
+  {
+    "q": "A client with pheochromocytoma is scheduled for a CT scan with contrast. The nurse is most concerned about:",
+    "options": [
+      "The contrast dye causing an allergic reaction",
+      "The contrast dye potentially triggering a catecholamine surge and hypertensive crisis",
+      "Radiation exposure during the CT scan",
+      "The need to lie flat during the procedure"
+    ],
+    "correct": 1,
+    "rationale": "IV contrast agents can stimulate catecholamine release from the pheochromocytoma, triggering a hypertensive crisis. The client must be adequately alpha-blocked before any imaging procedures involving contrast dye. Emergency medications (phentolamine) should be available during the procedure."
+  },
+  {
+    "q": "Which assessment finding differentiates pheochromocytoma from primary hyperaldosteronism as a cause of secondary hypertension?",
+    "options": [
+      "Pheochromocytoma presents with hypokalemia and metabolic alkalosis.",
+      "Primary hyperaldosteronism presents with episodic headaches and diaphoresis.",
+      "Pheochromocytoma presents with episodic hypertension, tachycardia, and diaphoresis, while hyperaldosteronism presents with sustained hypertension and hypokalemia.",
+      "Both conditions present identically and can only be differentiated by surgery."
+    ],
+    "correct": 2,
+    "rationale": "Pheochromocytoma is characterized by episodic hypertension with sympathetic symptoms (tachycardia, diaphoresis, headache). Primary hyperaldosteronism (Conn syndrome) presents with sustained hypertension, hypokalemia, and metabolic alkalosis from excess aldosterone. These distinct clinical presentations help differentiate the two conditions."
+  },
+  {
+    "q": "A nurse is caring for a client with pheochromocytoma who suddenly develops chest pain, dyspnea, and a blood pressure of 270/160 mmHg. Which action should the nurse take first?",
+    "options": [
+      "Obtain a 12-lead ECG while notifying the rapid response team.",
+      "Administer sublingual nitroglycerin and recheck blood pressure.",
+      "Place the client supine and elevate the legs.",
+      "Administer prescribed oral metoprolol and reassess in 30 minutes."
+    ],
+    "correct": 0,
+    "rationale": "Chest pain with severe hypertension in pheochromocytoma suggests a possible catecholamine-induced myocardial event. Obtaining a 12-lead ECG quickly while activating the rapid response team addresses both the cardiac and hypertensive emergency simultaneously. Oral metoprolol alone is inadequate and inappropriate as sole initial therapy."
+  },
+  {
+    "q": "During preoperative teaching for adrenalectomy, a client with pheochromocytoma asks what to expect after surgery. The nurse's best response includes:",
+    "options": [
+      "Your blood pressure will likely remain high for several months after surgery.",
+      "You may experience low blood pressure immediately after surgery because the source of excess adrenaline has been removed. We will monitor you closely and give fluids and medications as needed.",
+      "You will be placed on lifelong catecholamine replacement therapy.",
+      "There are no specific postoperative concerns beyond routine surgical recovery."
+    ],
+    "correct": 1,
+    "rationale": "After pheochromocytoma removal, the abrupt loss of catecholamine secretion commonly causes significant hypotension. Patients need close monitoring in an ICU or step-down setting with IV fluids and possible vasopressor support. This honest, informative explanation helps the client understand what to expect."
+  }
+]

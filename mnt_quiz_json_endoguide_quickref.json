@@ -1,0 +1,277 @@
+[
+  {
+    "q": "A nurse is reviewing lab results for a client with suspected hypothyroidism. Which combination of lab values supports this diagnosis?",
+    "options": [
+      "Elevated TSH, decreased free T4",
+      "Decreased TSH, elevated free T4",
+      "Elevated TSH, elevated free T3 and T4",
+      "Decreased TSH, decreased free T4"
+    ],
+    "correct": 0,
+    "rationale": "In primary hypothyroidism, the thyroid gland produces insufficient T3 and T4. Through negative feedback, the pituitary gland increases TSH production to stimulate the failing thyroid. The result is elevated TSH with decreased free T4."
+  },
+  {
+    "q": "A nurse is comparing endocrine emergencies. Which pair correctly matches the emergency with its precipitating condition?",
+    "options": [
+      "Thyroid storm is caused by untreated hypothyroidism; myxedema coma is caused by untreated hyperthyroidism.",
+      "Thyroid storm is a life-threatening exacerbation of hyperthyroidism; myxedema coma is a life-threatening exacerbation of hypothyroidism.",
+      "Thyroid storm and myxedema coma are both complications of hyperthyroidism.",
+      "Thyroid storm is triggered by low iodine intake; myxedema coma is triggered by excess iodine."
+    ],
+    "correct": 1,
+    "rationale": "Thyroid storm (thyrotoxic crisis) is the extreme, life-threatening form of hyperthyroidism with high fever, tachycardia, and delirium. Myxedema coma is the extreme form of hypothyroidism with hypothermia, bradycardia, and altered mental status. They are opposites on the thyroid spectrum."
+  },
+  {
+    "q": "A nurse is differentiating between DKA and HHNK (HHS). Which statement is correct?",
+    "options": [
+      "DKA occurs primarily in type 2 diabetes and presents with minimal dehydration.",
+      "HHNK presents with Kussmaul respirations and a fruity breath odor from ketone production.",
+      "DKA occurs primarily in type 1 diabetes with ketoacidosis, while HHNK occurs in type 2 diabetes with severe dehydration and very high blood glucose but no significant ketosis.",
+      "Both DKA and HHNK present identically and require the same treatment protocol."
+    ],
+    "correct": 2,
+    "rationale": "DKA primarily affects type 1 diabetics and involves ketone production, metabolic acidosis, Kussmaul respirations, and moderate hyperglycemia (300-800 mg/dL). HHNK/HHS primarily affects type 2 diabetics with extreme hyperglycemia (>600, often >1000 mg/dL) and severe dehydration but without significant ketosis because some insulin is still present."
+  },
+  {
+    "q": "A nurse is interpreting a client's cortisol levels. Which finding suggests Cushing syndrome?",
+    "options": [
+      "Low morning cortisol level that does not rise with ACTH stimulation",
+      "Elevated cortisol level that does not suppress with low-dose dexamethasone",
+      "Normal cortisol level with elevated aldosterone",
+      "Low cortisol level that normalizes after dexamethasone administration"
+    ],
+    "correct": 1,
+    "rationale": "In Cushing syndrome, cortisol is chronically elevated. The dexamethasone suppression test administers synthetic glucocorticoid; normally this suppresses ACTH and cortisol via negative feedback. In Cushing syndrome, cortisol remains elevated (fails to suppress), confirming autonomous or excessive cortisol production."
+  },
+  {
+    "q": "A nurse is comparing Addison disease and Cushing syndrome. Which assessment finding is associated with Addison disease but NOT Cushing syndrome?",
+    "options": [
+      "Moon face and buffalo hump",
+      "Bronze skin hyperpigmentation and salt craving",
+      "Central obesity and purple striae",
+      "Hirsutism and easy bruising"
+    ],
+    "correct": 1,
+    "rationale": "Addison disease (adrenal insufficiency) presents with bronze skin hyperpigmentation (from excess ACTH stimulating melanocytes) and salt craving (from aldosterone deficiency causing sodium loss). Moon face, buffalo hump, central obesity, purple striae, hirsutism, and easy bruising are features of Cushing syndrome."
+  },
+  {
+    "q": "Which diagnostic test is used to differentiate between Cushing disease (pituitary cause) and an adrenal tumor causing Cushing syndrome?",
+    "options": [
+      "Random serum glucose level",
+      "High-dose dexamethasone suppression test",
+      "Serum calcium level",
+      "24-hour urine for catecholamines"
+    ],
+    "correct": 1,
+    "rationale": "The high-dose dexamethasone suppression test helps differentiate the source of excess cortisol. In Cushing disease (pituitary adenoma), high-dose dexamethasone will partially suppress cortisol because the pituitary retains some feedback sensitivity. In adrenal tumors or ectopic ACTH, cortisol will not suppress."
+  },
+  {
+    "q": "A client's labs show low serum sodium, high urine specific gravity, and concentrated urine with decreased urine output. Which endocrine disorder does the nurse suspect?",
+    "options": [
+      "Diabetes insipidus",
+      "Syndrome of inappropriate antidiuretic hormone (SIADH)",
+      "Hyperaldosteronism",
+      "Addison disease"
+    ],
+    "correct": 1,
+    "rationale": "SIADH involves excess ADH secretion, causing water retention, dilutional hyponatremia (low serum sodium), concentrated urine (high specific gravity), and decreased urine output. Diabetes insipidus is the opposite — excess dilute urine with hypernatremia."
+  },
+  {
+    "q": "A nurse is comparing SIADH and diabetes insipidus (DI). Which statement correctly differentiates them?",
+    "options": [
+      "Both conditions cause hyponatremia and fluid overload.",
+      "SIADH causes fluid retention and hyponatremia; DI causes excessive water loss and hypernatremia.",
+      "SIADH causes polyuria; DI causes oliguria.",
+      "Both conditions are treated with fluid restriction and desmopressin."
+    ],
+    "correct": 1,
+    "rationale": "SIADH (excess ADH) causes the body to retain water, leading to dilutional hyponatremia and fluid overload. DI (insufficient ADH or kidney unresponsiveness to ADH) causes massive water loss through dilute urine, leading to dehydration and hypernatremia. They are opposite conditions."
+  },
+  {
+    "q": "The nurse is reviewing the hypothalamic-pituitary-thyroid (HPT) axis. Which statement best describes negative feedback in this system?",
+    "options": [
+      "High levels of T3 and T4 stimulate the hypothalamus to release more TRH.",
+      "Low levels of TSH cause the thyroid to produce more T3 and T4.",
+      "When T3 and T4 levels are adequate, they inhibit the hypothalamus and anterior pituitary from releasing TRH and TSH, respectively.",
+      "TSH directly inhibits T3 and T4 production when levels are too high."
+    ],
+    "correct": 2,
+    "rationale": "Negative feedback in the HPT axis means that when circulating T3/T4 levels are sufficient, they signal the hypothalamus to decrease TRH and the anterior pituitary to decrease TSH production. This prevents overproduction of thyroid hormones. When T3/T4 are low, feedback inhibition is reduced, and TRH/TSH increase."
+  },
+  {
+    "q": "A nurse is caring for a client in Addisonian crisis. Which set of findings does the nurse expect?",
+    "options": [
+      "Hypertension, hyperglycemia, hypernatremia",
+      "Hypotension, hypoglycemia, hyperkalemia",
+      "Hypertension, hypokalemia, metabolic alkalosis",
+      "Hypotension, hyperglycemia, hyponatremia"
+    ],
+    "correct": 1,
+    "rationale": "Addisonian crisis (acute adrenal insufficiency) presents with severe hypotension (from cortisol and aldosterone deficiency), hypoglycemia (from cortisol deficiency affecting gluconeogenesis), and hyperkalemia (from aldosterone deficiency impairing potassium excretion). This is a life-threatening emergency."
+  },
+  {
+    "q": "A nurse is comparing radioactive iodine uptake (RAIU) results. Which interpretation is correct?",
+    "options": [
+      "High uptake indicates hypothyroidism; low uptake indicates hyperthyroidism.",
+      "High uptake indicates Graves disease (hyperthyroidism); low uptake may indicate thyroiditis or exogenous thyroid hormone use.",
+      "RAIU is the same in all thyroid conditions.",
+      "Low uptake always confirms thyroid cancer."
+    ],
+    "correct": 1,
+    "rationale": "In Graves disease, the overactive thyroid gland avidly takes up radioactive iodine, showing high uptake. Low uptake occurs in thyroiditis (inflamed gland leaking stored hormone), exogenous hormone use, or ectopic thyroid tissue. RAIU helps differentiate the cause of hyperthyroidism."
+  },
+  {
+    "q": "Which lab value combination is consistent with primary hyperaldosteronism (Conn syndrome)?",
+    "options": [
+      "Elevated aldosterone, decreased renin, hypokalemia",
+      "Decreased aldosterone, elevated renin, hyperkalemia",
+      "Elevated aldosterone, elevated renin, hypernatremia",
+      "Decreased aldosterone, decreased renin, hyponatremia"
+    ],
+    "correct": 0,
+    "rationale": "Primary hyperaldosteronism features elevated aldosterone (from an adrenal adenoma) with suppressed renin (because high aldosterone causes sodium/water retention, which suppresses the renin-angiotensin system). Excess aldosterone causes potassium excretion, leading to hypokalemia."
+  },
+  {
+    "q": "A client with suspected Addison disease undergoes an ACTH stimulation test. Which result confirms adrenal insufficiency?",
+    "options": [
+      "Cortisol levels rise significantly after ACTH administration.",
+      "Cortisol levels remain low and do not rise adequately after ACTH administration.",
+      "ACTH levels drop to undetectable levels after cortisol injection.",
+      "Aldosterone levels double within 30 minutes of ACTH administration."
+    ],
+    "correct": 1,
+    "rationale": "In the ACTH stimulation (cosyntropin) test, synthetic ACTH is administered. In a healthy person, the adrenal glands respond by increasing cortisol production. In Addison disease, the damaged adrenal glands cannot respond, so cortisol levels remain low despite ACTH stimulation."
+  },
+  {
+    "q": "A nurse is recognizing the HPA (hypothalamic-pituitary-adrenal) axis feedback. A client has been taking prednisone 40 mg daily for 3 months. The nurse is most concerned about:",
+    "options": [
+      "The client developing thyroid storm from steroid use.",
+      "Adrenal atrophy from chronic exogenous steroid use, requiring gradual tapering to prevent Addisonian crisis.",
+      "The client developing hyperkalemia from long-term steroid use.",
+      "Immediate discontinuation being safe because the adrenal glands will resume normal function within hours."
+    ],
+    "correct": 1,
+    "rationale": "Chronic exogenous corticosteroid use suppresses the HPA axis through negative feedback, causing adrenal atrophy. If steroids are abruptly discontinued, the atrophied adrenal glands cannot produce adequate cortisol, precipitating Addisonian crisis. Gradual tapering allows the HPA axis to recover."
+  },
+  {
+    "q": "A nurse is comparing endocrine diagnostic tests. Which test-purpose pair is correctly matched?",
+    "options": [
+      "Dexamethasone suppression test — diagnoses diabetes insipidus",
+      "Water deprivation test — diagnoses Cushing syndrome",
+      "ACTH stimulation test — diagnoses Addison disease; Dexamethasone suppression test — diagnoses Cushing syndrome",
+      "Radioactive iodine uptake — diagnoses adrenal insufficiency"
+    ],
+    "correct": 2,
+    "rationale": "The ACTH stimulation test evaluates adrenal gland function (used to diagnose Addison disease). The dexamethasone suppression test evaluates cortisol regulation (used to diagnose Cushing syndrome). The water deprivation test diagnoses DI, and RAIU evaluates thyroid function."
+  },
+  {
+    "q": "A client presents with a blood glucose of 48 mg/dL, diaphoresis, tremors, and confusion. The nurse recognizes this as:",
+    "options": [
+      "Diabetic ketoacidosis requiring insulin administration",
+      "Hypoglycemia requiring immediate glucose administration",
+      "Hyperglycemic hyperosmolar state requiring IV fluids",
+      "Addisonian crisis requiring IV hydrocortisone"
+    ],
+    "correct": 1,
+    "rationale": "A blood glucose of 48 mg/dL with adrenergic symptoms (diaphoresis, tremors) and neuroglycopenic symptoms (confusion) indicates hypoglycemia. This is an endocrine emergency requiring immediate glucose administration (oral glucose if conscious, IV dextrose or glucagon if unconscious)."
+  },
+  {
+    "q": "A nurse is evaluating lab results for a client with suspected Graves disease. Which findings are expected?",
+    "options": [
+      "Elevated TSH, decreased T3 and T4",
+      "Decreased TSH, elevated free T3 and T4",
+      "Elevated TSH, elevated T3 and T4",
+      "Normal TSH, decreased T3 and elevated T4"
+    ],
+    "correct": 1,
+    "rationale": "Graves disease is a form of primary hyperthyroidism where the thyroid overproduces T3 and T4. Through negative feedback, the elevated T3/T4 levels suppress TSH production from the anterior pituitary, resulting in decreased TSH with elevated free T3 and T4."
+  },
+  {
+    "q": "A nurse is prioritizing care for four clients. Which client should the nurse assess first?",
+    "options": [
+      "A client with hypothyroidism who reports constipation and weight gain",
+      "A client with Cushing syndrome who has a blood glucose of 210 mg/dL",
+      "A client with Addison disease who has a blood pressure of 78/50 mmHg, confusion, and temperature of 101.4°F",
+      "A client with hyperparathyroidism who reports increased thirst"
+    ],
+    "correct": 2,
+    "rationale": "The client with Addison disease showing severe hypotension, confusion, and fever is likely in Addisonian crisis — a life-threatening emergency requiring immediate intervention with IV hydrocortisone and fluid resuscitation. The other clients have concerning but non-emergent findings."
+  },
+  {
+    "q": "Which hormone feedback loop correctly pairs the stimulus with the hormonal response?",
+    "options": [
+      "Low blood calcium stimulates calcitonin release from the thyroid gland.",
+      "High blood glucose stimulates glucagon release from pancreatic alpha cells.",
+      "Low blood calcium stimulates PTH release from the parathyroid glands.",
+      "High serum cortisol stimulates CRH release from the hypothalamus."
+    ],
+    "correct": 2,
+    "rationale": "Low blood calcium is the primary stimulus for PTH release from the parathyroid glands. PTH then acts to increase serum calcium through bone resorption, increased renal calcium reabsorption, and enhanced vitamin D activation (which increases intestinal calcium absorption). This is a direct negative feedback loop."
+  },
+  {
+    "q": "A nurse is comparing the presentation of thyroid storm and myxedema coma. Which vital sign pattern is associated with thyroid storm?",
+    "options": [
+      "Temperature 94°F, heart rate 48, blood pressure 88/60",
+      "Temperature 105°F, heart rate 160, blood pressure 180/100",
+      "Temperature 98.6°F, heart rate 72, blood pressure 120/80",
+      "Temperature 96°F, heart rate 52, blood pressure 100/70"
+    ],
+    "correct": 1,
+    "rationale": "Thyroid storm presents with extreme hyperthermia (>104°F), severe tachycardia (often >140), and hypertension from excessive thyroid hormone effects on metabolism and the cardiovascular system. Myxedema coma presents with the opposite: hypothermia, bradycardia, and hypotension."
+  },
+  {
+    "q": "A client's labs show elevated ADH levels, serum sodium of 118 mEq/L, and serum osmolality of 250 mOsm/kg. The nurse interprets these findings as consistent with:",
+    "options": [
+      "Diabetes insipidus",
+      "SIADH",
+      "Hyperaldosteronism",
+      "Diabetic ketoacidosis"
+    ],
+    "correct": 1,
+    "rationale": "Elevated ADH, very low serum sodium (hyponatremia), and low serum osmolality are hallmarks of SIADH. Excess ADH causes water retention, diluting serum sodium and decreasing serum osmolality. Normal serum sodium is 135-145 mEq/L; 118 mEq/L is dangerously low."
+  },
+  {
+    "q": "A nurse is comparing stimulation tests to suppression tests in endocrine diagnosis. Which statement is accurate?",
+    "options": [
+      "Stimulation tests are used when hormone excess is suspected; suppression tests are used when hormone deficiency is suspected.",
+      "Stimulation tests evaluate the gland's ability to produce hormone when challenged (used for deficiency); suppression tests evaluate whether hormone production can be inhibited (used for excess).",
+      "Both stimulation and suppression tests are used only for thyroid disorders.",
+      "Stimulation and suppression tests measure the same thing but use different laboratory techniques."
+    ],
+    "correct": 1,
+    "rationale": "Stimulation tests (e.g., ACTH stimulation test) challenge a gland to produce hormone — if it fails to respond, deficiency is confirmed. Suppression tests (e.g., dexamethasone suppression test) attempt to inhibit hormone production — if levels remain high despite suppression, excess/autonomous production is confirmed."
+  },
+  {
+    "q": "A nurse is caring for a client in DKA. Which set of lab findings is expected?",
+    "options": [
+      "Blood glucose 650 mg/dL, pH 7.48, serum bicarbonate 30 mEq/L",
+      "Blood glucose 420 mg/dL, pH 7.18, serum bicarbonate 10 mEq/L, positive ketones",
+      "Blood glucose 80 mg/dL, pH 7.35, serum bicarbonate 22 mEq/L",
+      "Blood glucose 1200 mg/dL, pH 7.40, serum bicarbonate 24 mEq/L, negative ketones"
+    ],
+    "correct": 1,
+    "rationale": "DKA presents with hyperglycemia (typically 300-800 mg/dL), metabolic acidosis (pH <7.30), low bicarbonate (<15 mEq/L), and positive serum/urine ketones. The acidosis results from accumulation of ketone bodies (ketoacids) produced when the body breaks down fat for energy due to insulin deficiency."
+  },
+  {
+    "q": "A nurse is evaluating a client's PTH and calcium levels. PTH is elevated and calcium is low. Which condition does this suggest?",
+    "options": [
+      "Primary hyperparathyroidism",
+      "Secondary hyperparathyroidism (compensatory response to chronic hypocalcemia)",
+      "Hypoparathyroidism",
+      "Parathyroid carcinoma"
+    ],
+    "correct": 1,
+    "rationale": "Elevated PTH with low calcium suggests secondary hyperparathyroidism — the parathyroid glands are overproducing PTH in response to chronically low calcium (often from chronic kidney disease or vitamin D deficiency). In primary hyperparathyroidism, both PTH and calcium would be elevated."
+  },
+  {
+    "q": "A nurse is comparing the treatment of endocrine emergencies. Which intervention is correctly paired with its emergency?",
+    "options": [
+      "Thyroid storm — administer levothyroxine IV; Myxedema coma — administer PTU",
+      "Thyroid storm — administer PTU, beta-blockers, corticosteroids, and cooling measures; Myxedema coma — administer IV levothyroxine and supportive warming",
+      "DKA — administer oral hypoglycemics; HHNK — administer glucagon",
+      "Addisonian crisis — administer spironolactone; Thyroid storm — administer radioactive iodine"
+    ],
+    "correct": 1,
+    "rationale": "Thyroid storm treatment includes antithyroid drugs (PTU/methimazole), beta-blockers (to control tachycardia), corticosteroids (to block T4 to T3 conversion), and cooling measures. Myxedema coma is treated with IV levothyroxine (thyroid hormone replacement), IV corticosteroids, and gradual rewarming. These treatments address the underlying hormonal imbalance in each emergency."
+  }
+]
