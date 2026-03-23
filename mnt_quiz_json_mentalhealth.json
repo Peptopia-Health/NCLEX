@@ -1,0 +1,1202 @@
+[
+  {
+    "question": "A client on the psychiatric unit states, 'Nobody cares about me. I might as well not be here.' Which nurse response is most therapeutic?",
+    "options": [
+      "A) \"Of course people care about you \u2014 your family visits every day.\"",
+      "B) \"It sounds like you're feeling alone and hopeless. Tell me more about that.\"",
+      "C) \"You shouldn't say things like that; let's focus on getting better.\"",
+      "D) \"I'll let your doctor know you said that.\""
+    ],
+    "answer": "B) \"It sounds like you're feeling alone and hopeless. Tell me more about that.\"",
+    "explanation": "Reflecting the client's feelings and inviting further expression is therapeutic communication. It validates the client's emotions and encourages exploration. Option A offers false reassurance. Option C is dismissive and blocks communication. Option D threatens the client and may shut down future disclosures.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "During a group therapy session, a client says, 'I don't want to talk about my problems in front of everyone.' Which response by the nurse demonstrates the best use of therapeutic communication?",
+    "options": [
+      "A) \"Everyone here has problems; you're not special.\"",
+      "B) \"You're required to participate \u2014 it's part of your treatment plan.\"",
+      "C) \"I understand your concern. You can share when you feel ready.\"",
+      "D) \"Why don't you want to talk? What are you afraid of?\""
+    ],
+    "answer": "C) \"I understand your concern. You can share when you feel ready.\"",
+    "explanation": "This response acknowledges the client's feelings and respects their autonomy without pressuring them. Option A is belittling and non-therapeutic. Option B is authoritarian and does not address the client's concern. Option D uses a 'why' question which can feel accusatory and puts the client on the defensive.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is conducting an admission interview with a newly admitted client. The client states, 'I just feel so overwhelmed.' The nurse responds, 'You feel overwhelmed.' Which therapeutic communication technique is the nurse using?",
+    "options": [
+      "A) Clarification",
+      "B) Reflection",
+      "C) Restating",
+      "D) Summarizing"
+    ],
+    "answer": "C) Restating",
+    "explanation": "Restating repeats the client's main message using the same or similar words, letting the client know they were heard. Reflection focuses on the emotional component behind the words. Clarification asks the client to explain further. Summarizing reviews key points from the entire conversation.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client who recently lost a spouse says, 'I don't know how I can go on without them.' Which nurse response is LEAST therapeutic?",
+    "options": [
+      "A) \"This must be an incredibly painful time for you.\"",
+      "B) \"Don't worry \u2014 time heals all wounds.\"",
+      "C) \"Tell me what your spouse meant to you.\"",
+      "D) \"I'm here to listen whenever you want to talk.\""
+    ],
+    "answer": "B) \"Don't worry \u2014 time heals all wounds.\"",
+    "explanation": "This is false reassurance and a clich\u00e9 that minimizes the client's grief. It is non-therapeutic because it does not address the client's feelings. Options A, C, and D all acknowledge the client's pain and open communication through empathy, exploration, and offering presence.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "The nurse is working with a client who becomes silent after discussing a traumatic event. What is the most appropriate nursing action?",
+    "options": [
+      "A) Immediately change the topic to reduce the client's discomfort",
+      "B) Ask the client, 'Why did you stop talking?'",
+      "C) Sit quietly with the client, allowing therapeutic use of silence",
+      "D) Leave the room to give the client privacy"
+    ],
+    "answer": "C) Sit quietly with the client, allowing therapeutic use of silence",
+    "explanation": "Therapeutic silence allows the client time to process feelings and gather thoughts. It communicates acceptance and patience. Changing the topic avoids the issue. Asking 'why' can feel confrontational. Leaving could make the client feel abandoned during a vulnerable moment.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client being admitted to a psychiatric unit asks the nurse, 'Are you going to lock me up forever?' Which response best demonstrates the orientation phase of the nurse-patient relationship?",
+    "options": [
+      "A) \"Let's not think about that right now.\"",
+      "B) \"I understand your concern. Let me explain how our unit works, what to expect during your stay, and how we'll work together on your treatment goals.\"",
+      "C) \"That depends on how well you cooperate with treatment.\"",
+      "D) \"You'll be fine \u2014 most people only stay a few days.\""
+    ],
+    "answer": "B) \"I understand your concern. Let me explain how our unit works, what to expect during your stay, and how we'll work together on your treatment goals.\"",
+    "explanation": "The orientation phase involves establishing trust, explaining roles, identifying expectations, and setting boundaries. Option B addresses the client's fear while establishing the framework for the therapeutic relationship. Option A dismisses concern. Option C is threatening. Option D offers false reassurance.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with paranoid schizophrenia whispers to the nurse, 'They're listening through the walls.' The nurse should respond by:",
+    "options": [
+      "A) \"No one is listening \u2014 these walls are soundproof.\"",
+      "B) \"Who is listening to you?\"",
+      "C) \"That must feel frightening. I don't hear anything, but let's sit somewhere you feel comfortable and talk.\"",
+      "D) \"I'll check the walls for listening devices to put your mind at ease.\""
+    ],
+    "answer": "C) \"That must feel frightening. I don't hear anything, but let's sit somewhere you feel comfortable and talk.\"",
+    "explanation": "This response acknowledges the client's feelings, presents reality without arguing, and offers a supportive action. Option A directly challenges the delusion and may increase paranoia. Option B explores the delusion and may reinforce it. Option D reinforces the delusional belief.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "When terminating the nurse-patient relationship, the nurse notices the client becoming withdrawn and angry. The nurse recognizes this behavior as which expected response?",
+    "options": [
+      "A) Psychotic decompensation",
+      "B) Manipulation to extend the relationship",
+      "C) A normal reaction to the termination phase involving feelings of loss",
+      "D) An indication the therapeutic relationship was ineffective"
+    ],
+    "answer": "C) A normal reaction to the termination phase involving feelings of loss",
+    "explanation": "Feelings of anger, withdrawal, and sadness are expected during the termination phase as the client experiences a sense of loss. This does not indicate psychosis, manipulation, or treatment failure. The nurse should acknowledge these feelings and review the client's progress and growth during the relationship.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client experiencing moderate anxiety reports difficulty concentrating and muscle tension. Which nursing intervention is most appropriate?",
+    "options": [
+      "A) Administer PRN lorazepam immediately",
+      "B) Guide the client through deep breathing exercises and help them focus on the immediate situation",
+      "C) Place the client in seclusion to reduce stimulation",
+      "D) Instruct the client to exercise vigorously until the anxiety resolves"
+    ],
+    "answer": "B) Guide the client through deep breathing exercises and help them focus on the immediate situation",
+    "explanation": "At the moderate anxiety level, the client has a narrowed perceptual field but can still learn and problem-solve with guidance. Deep breathing and focusing techniques are appropriate first-line interventions. PRN medication may not be needed at this level. Seclusion is excessive. Vigorous exercise alone does not teach coping skills.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client arrives at the emergency department experiencing a panic attack with hyperventilation, chest tightness, and a sense of impending doom. The priority nursing action is:",
+    "options": [
+      "A) Administer a paper bag for rebreathing",
+      "B) Stay with the client, speak in a calm, simple manner, and ensure physical safety",
+      "C) Obtain a detailed psychosocial history",
+      "D) Teach the client about the physiological basis of panic attacks"
+    ],
+    "answer": "B) Stay with the client, speak in a calm, simple manner, and ensure physical safety",
+    "explanation": "During panic-level anxiety, safety is the priority. The nurse should stay with the client, provide calm reassurance, use short simple statements, and reduce stimuli. Paper bag rebreathing is no longer recommended due to risk of hypoxia. Teaching and history-taking are not appropriate during acute panic as the client cannot process information.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client diagnosed with OCD spends 3 hours per day performing handwashing rituals. Which nursing intervention is most appropriate?",
+    "options": [
+      "A) Interrupt the ritual each time to help the client break the pattern",
+      "B) Allow time for the ritual while gradually working to limit the duration",
+      "C) Tell the client the handwashing is irrational and unnecessary",
+      "D) Restrict access to all sinks on the unit"
+    ],
+    "answer": "B) Allow time for the ritual while gradually working to limit the duration",
+    "explanation": "Abruptly stopping rituals increases anxiety to intolerable levels. The nurse should allow the ritual while gradually establishing limits and teaching alternative coping strategies. Interrupting rituals or telling the client they are irrational increases anxiety and is non-therapeutic. Restricting access does not address the underlying compulsion.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with PTSD from military combat has a flashback during a therapy session. The nurse should first:",
+    "options": [
+      "A) Administer emergency medication",
+      "B) Orient the client to the present by stating their name, the date, and current location in a calm voice",
+      "C) Leave the room to get the psychiatrist",
+      "D) Restrain the client to prevent harm"
+    ],
+    "answer": "B) Orient the client to the present by stating their name, the date, and current location in a calm voice",
+    "explanation": "During a flashback, the client is re-experiencing the traumatic event. The priority is grounding the client in the present through reorientation \u2014 stating their name, date, and safe location. Medication is not the first intervention. Leaving the client alone increases risk. Restraints are inappropriate unless the client is actively violent.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with generalized anxiety disorder asks the nurse why buspirone was prescribed instead of a benzodiazepine. The nurse's best response is:",
+    "options": [
+      "A) \"Buspirone is more effective than benzodiazepines for anxiety.\"",
+      "B) \"Buspirone has a lower risk of dependence and is preferred for long-term management, though it takes 2\u20134 weeks to become fully effective.\"",
+      "C) \"Your doctor made that decision; you should ask them.\"",
+      "D) \"Benzodiazepines are only for emergencies.\""
+    ],
+    "answer": "B) \"Buspirone has a lower risk of dependence and is preferred for long-term management, though it takes 2\u20134 weeks to become fully effective.\"",
+    "explanation": "Buspirone is a non-benzodiazepine anxiolytic with no sedation, no dependence potential, and no CNS depression. However, it takes 2\u20134 weeks for full effect. Benzodiazepines are appropriate for short-term or acute anxiety but carry dependence risk. Option A is inaccurate. Option C deflects responsibility. Option D is incorrect.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with social phobia avoids the dining room and eats meals alone in their room. Which intervention should the nurse implement first?",
+    "options": [
+      "A) Require the client to eat in the dining room with all other clients",
+      "B) Eat a meal with the client in their room, then gradually introduce eating with one other person",
+      "C) Refer the client for electroconvulsive therapy",
+      "D) Withhold meals until the client agrees to eat in the dining room"
+    ],
+    "answer": "B) Eat a meal with the client in their room, then gradually introduce eating with one other person",
+    "explanation": "Systematic desensitization involves gradually exposing the client to anxiety-producing situations. Starting with a one-on-one supportive setting and slowly increasing social exposure is appropriate. Forcing full exposure immediately increases anxiety. ECT is not indicated for phobias. Withholding meals is punitive and unethical.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with a phobia of elevators is prescribed exposure therapy. The nurse understands that the highest level of anxiety will occur at which point in the treatment?",
+    "options": [
+      "A) During the relaxation training phase",
+      "B) When the client first visualizes being near an elevator",
+      "C) During actual in-vivo exposure to riding in an elevator",
+      "D) After completion of all therapy sessions"
+    ],
+    "answer": "C) During actual in-vivo exposure to riding in an elevator",
+    "explanation": "In-vivo (real-life) exposure produces the highest anxiety because the client directly confronts the feared stimulus. Relaxation training occurs before exposure and produces low anxiety. Visualization (imaginal exposure) produces moderate anxiety. After therapy completion, anxiety should be significantly reduced.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client diagnosed with major depressive disorder has been hospitalized for 5 days and suddenly appears cheerful, gives away personal belongings, and states they 'finally feel at peace.' The nurse's priority action is:",
+    "options": [
+      "A) Document the improvement and prepare for discharge planning",
+      "B) Implement one-to-one observation and assess for suicidal ideation immediately",
+      "C) Encourage the client to continue their positive progress",
+      "D) Notify the family that the client is improving"
+    ],
+    "answer": "B) Implement one-to-one observation and assess for suicidal ideation immediately",
+    "explanation": "Sudden mood improvement, giving away belongings, and feeling 'at peace' are critical warning signs that a client may have made a decision to attempt suicide. The client may have resolved their ambivalence and formed a plan. This requires immediate assessment and one-to-one observation for safety. Assuming improvement without assessment is dangerous.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client taking lithium carbonate for bipolar disorder presents with coarse tremors, vomiting, diarrhea, and confusion. The lithium level is 2.0 mEq/L. The nurse should first:",
+    "options": [
+      "A) Administer the next scheduled dose of lithium",
+      "B) Encourage the client to increase sodium intake",
+      "C) Hold the lithium, notify the provider, and prepare for emergency management",
+      "D) Document the findings and recheck the level in 4 hours"
+    ],
+    "answer": "C) Hold the lithium, notify the provider, and prepare for emergency management",
+    "explanation": "A lithium level of 2.0 mEq/L is toxic (therapeutic range 0.6\u20131.2 mEq/L). Symptoms of toxicity include coarse tremors, persistent GI symptoms, and confusion. The nurse must immediately hold the drug, notify the provider, and prepare for potential emergency treatment including IV fluids and possible dialysis. Administering more lithium would worsen toxicity.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "The nurse is educating a client newly diagnosed with bipolar I disorder about lithium therapy. Which statement by the client indicates the need for further teaching?",
+    "options": [
+      "A) \"I should have regular blood tests to check my lithium level.\"",
+      "B) \"I need to maintain adequate salt and fluid intake.\"",
+      "C) \"I can take ibuprofen for headaches since it's over the counter.\"",
+      "D) \"I should report excessive thirst or urination to my doctor.\""
+    ],
+    "answer": "C) \"I can take ibuprofen for headaches since it's over the counter.\"",
+    "explanation": "NSAIDs like ibuprofen decrease renal clearance of lithium, leading to increased lithium levels and potential toxicity. Clients on lithium should use acetaminophen instead. Regular blood monitoring, adequate salt/fluid intake, and reporting polyuria/polydipsia are all correct understandings of lithium therapy.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with bipolar disorder in the manic phase is pacing rapidly, talking non-stop, and has not slept in 3 days. Which nursing intervention takes priority?",
+    "options": [
+      "A) Engage the client in group therapy to redirect energy",
+      "B) Provide a quiet, low-stimulation environment with high-calorie finger foods and fluids",
+      "C) Confront the client about their disruptive behavior",
+      "D) Encourage the client to journal their thoughts"
+    ],
+    "answer": "B) Provide a quiet, low-stimulation environment with high-calorie finger foods and fluids",
+    "explanation": "During acute mania, the priority is meeting physiological needs (nutrition, hydration, sleep) and reducing stimulation. Finger foods allow eating while active. Group therapy would be overstimulating. Confrontation escalates agitation. Journaling requires concentration the client lacks during mania.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client taking an MAOI calls the clinic reporting a sudden severe headache, stiff neck, and elevated blood pressure of 210/120 mmHg. The nurse suspects:",
+    "options": [
+      "A) Serotonin syndrome",
+      "B) Neuroleptic malignant syndrome",
+      "C) Hypertensive crisis from tyramine ingestion",
+      "D) Lithium toxicity"
+    ],
+    "answer": "C) Hypertensive crisis from tyramine ingestion",
+    "explanation": "MAOIs prevent the breakdown of tyramine. When tyramine-rich foods are consumed, excessive norepinephrine is released causing a hypertensive crisis characterized by severe headache, stiff neck, and dangerously elevated blood pressure. Serotonin syndrome presents with confusion, agitation, and clonus. NMS involves fever and rigidity. Lithium toxicity causes tremors and GI symptoms.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is using the SIG E CAPS mnemonic to assess a client for depression. Which symptoms does this mnemonic evaluate?",
+    "options": [
+      "A) Suicidal ideation, Irritability, Guilt, Energy loss, Concentration difficulty, Appetite changes, Psychomotor changes, Sleep disturbance",
+      "B) Sadness, Isolation, Grandiosity, Euphoria, Confusion, Agitation, Paranoia, Suspicion",
+      "C) Social withdrawal, Insomnia, Guilt, Excitement, Crying, Anger, Panic, Seizures",
+      "D) Stupor, Insensitivity, Grief, Exhaustion, Compulsions, Avoidance, Phobias, Somatization"
+    ],
+    "answer": "A) Suicidal ideation, Irritability, Guilt, Energy loss, Concentration difficulty, Appetite changes, Psychomotor changes, Sleep disturbance",
+    "explanation": "SIG E CAPS is a mnemonic for the diagnostic criteria of major depressive disorder: Sleep changes, Interest loss, Guilt, Energy loss, Concentration difficulty, Appetite changes, Psychomotor changes, and Suicidal ideation. Five or more symptoms present for 2+ weeks suggest major depression.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client taking a tricyclic antidepressant (TCA) is brought to the emergency department after an intentional overdose. The nurse anticipates which priority assessment?",
+    "options": [
+      "A) Liver function tests",
+      "B) Continuous cardiac monitoring for arrhythmias",
+      "C) Complete blood count",
+      "D) Serum lithium level"
+    ],
+    "answer": "B) Continuous cardiac monitoring for arrhythmias",
+    "explanation": "TCA overdose is potentially fatal, primarily due to cardiac toxicity including arrhythmias, prolonged QRS intervals, and cardiac arrest. Continuous cardiac monitoring is the priority. While liver function and CBC may be checked, they are not the priority. Lithium levels are irrelevant for TCA overdose.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with schizophrenia tells the nurse, 'The television is sending me special messages that only I can understand.' This statement is an example of:",
+    "options": [
+      "A) A delusion of grandeur",
+      "B) A delusion of reference",
+      "C) A delusion of persecution",
+      "D) Thought broadcasting"
+    ],
+    "answer": "B) A delusion of reference",
+    "explanation": "A delusion of reference is the belief that events, objects, or other people have particular and unusual significance directed toward the individual. The client believes the TV is communicating specifically to them. Grandiosity involves inflated self-importance. Persecution involves belief that others intend harm. Thought broadcasting is the belief that one's thoughts are transmitted to others.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with schizophrenia is experiencing auditory command hallucinations telling them to hurt other patients. The nurse's priority action is:",
+    "options": [
+      "A) Explore the content of the hallucinations in detail",
+      "B) Ensure immediate safety by removing the client from the milieu and initiating one-to-one observation",
+      "C) Administer PRN antipsychotic medication",
+      "D) Document the hallucination and continue routine monitoring"
+    ],
+    "answer": "B) Ensure immediate safety by removing the client from the milieu and initiating one-to-one observation",
+    "explanation": "Command hallucinations directing violence pose an immediate safety threat to other patients. The priority is safety \u2014 the nurse should separate the client from potential victims and initiate close observation. While PRN medication may be needed, the immediate action is ensuring safety. Exploring hallucination content is inappropriate when there is an imminent danger. Routine monitoring is insufficient.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client prescribed haloperidol develops a stiff neck, tongue protrusion, and difficulty swallowing 2 hours after the first dose. The nurse recognizes this as:",
+    "options": [
+      "A) Tardive dyskinesia",
+      "B) Akathisia",
+      "C) Acute dystonia",
+      "D) Neuroleptic malignant syndrome"
+    ],
+    "answer": "C) Acute dystonia",
+    "explanation": "Acute dystonia involves sudden, sustained muscle contractions typically occurring within hours to days of starting an antipsychotic. Symptoms include torticollis, tongue protrusion, and oculogyric crisis. Treatment is IM benztropine or diphenhydramine. Tardive dyskinesia develops after months/years. Akathisia is restlessness. NMS involves fever and muscle rigidity.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is caring for a client with schizophrenia who states, 'I invented the internet, and the president calls me every day for advice.' This is an example of which type of delusion?",
+    "options": [
+      "A) Persecution",
+      "B) Reference",
+      "C) Somatic",
+      "D) Grandeur"
+    ],
+    "answer": "D) Grandeur",
+    "explanation": "Delusions of grandeur involve an inflated sense of self-importance, power, or identity. The client believes they have extraordinary abilities or connections. Persecutory delusions involve belief of being harmed. Reference delusions involve believing events have personal significance. Somatic delusions involve false beliefs about the body.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client taking clozapine has a white blood cell count of 2,800/mm\u00b3 and an absolute neutrophil count (ANC) of 900/mm\u00b3. The nurse should:",
+    "options": [
+      "A) Continue the medication and recheck labs in one week",
+      "B) Hold the medication, notify the provider immediately, and implement neutropenic precautions",
+      "C) Administer the next dose and monitor for fever",
+      "D) Increase the dose as the low WBC is a common benign finding"
+    ],
+    "answer": "B) Hold the medication, notify the provider immediately, and implement neutropenic precautions",
+    "explanation": "Clozapine carries a risk of life-threatening agranulocytosis. An ANC below 1,000/mm\u00b3 requires immediate discontinuation of clozapine and notification of the provider. Neutropenic precautions should be implemented to prevent infection. Continuing the medication could be fatal. Regular ANC monitoring is required for all clients on clozapine.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is caring for a client with schizophrenia who reports seeing snakes crawling on the floor. Which response is most therapeutic?",
+    "options": [
+      "A) \"There are no snakes here \u2014 you're just imagining things.\"",
+      "B) \"I don't see any snakes, but I understand this is frightening for you. You are safe here.\"",
+      "C) \"Let me look under the bed to make sure there are no snakes.\"",
+      "D) \"Tell me more about the snakes \u2014 what do they look like?\""
+    ],
+    "answer": "B) \"I don't see any snakes, but I understand this is frightening for you. You are safe here.\"",
+    "explanation": "The nurse should present reality (I don't see snakes) while acknowledging the client's experience and feelings (this is frightening). This validates the client without reinforcing the hallucination. Option A is dismissive. Option C reinforces the hallucination by searching. Option D explores the hallucination in detail, which can reinforce it.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client receiving a typical antipsychotic develops a temperature of 104\u00b0F (40\u00b0C), severe muscle rigidity, altered consciousness, and elevated creatine kinase (CK). The nurse suspects:",
+    "options": [
+      "A) Serotonin syndrome",
+      "B) Neuroleptic malignant syndrome (NMS)",
+      "C) Tardive dyskinesia",
+      "D) Malignant hyperthermia"
+    ],
+    "answer": "B) Neuroleptic malignant syndrome (NMS)",
+    "explanation": "NMS is a life-threatening emergency associated with antipsychotic medications, characterized by hyperthermia, severe muscle rigidity (lead-pipe rigidity), altered mental status, and elevated CK from muscle breakdown. Treatment includes stopping the antipsychotic, cooling measures, dantrolene, and bromocriptine. Serotonin syndrome involves agitation, clonus, and diarrhea. Tardive dyskinesia involves involuntary movements without fever.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is providing care for a client with schizophrenia who exhibits flat affect, social withdrawal, and lack of motivation. These symptoms are classified as:",
+    "options": [
+      "A) Positive symptoms",
+      "B) Negative symptoms",
+      "C) Cognitive symptoms",
+      "D) Affective symptoms"
+    ],
+    "answer": "B) Negative symptoms",
+    "explanation": "Negative symptoms represent a deficit or absence of normal functioning: flat affect, alogia (poverty of speech), avolition (lack of motivation), anhedonia (inability to feel pleasure), and social withdrawal. Positive symptoms are excesses (hallucinations, delusions). Negative symptoms are generally harder to treat and respond less well to typical antipsychotics.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with paranoid schizophrenia refuses to eat, stating the food is poisoned. Which nursing intervention is most appropriate?",
+    "options": [
+      "A) Force the client to eat for their own safety",
+      "B) Allow the client to choose sealed, pre-packaged foods or prepare their own food from the unit kitchen",
+      "C) Tell the client the food is not poisoned and insist they eat",
+      "D) Skip the meal and try again at the next mealtime"
+    ],
+    "answer": "B) Allow the client to choose sealed, pre-packaged foods or prepare their own food from the unit kitchen",
+    "explanation": "This intervention respects the client's fear while ensuring nutritional intake. Sealed foods may feel safer to a paranoid client because they appear untampered with. Forcing or insisting increases mistrust. Skipping meals puts the client at nutritional risk. The goal is to meet needs while building trust.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client diagnosed with borderline personality disorder (BPD) tells the night nurse, 'You're the only one who understands me. The day nurse is terrible and doesn't care at all.' The nurse recognizes this behavior as:",
+    "options": [
+      "A) Confabulation",
+      "B) Projection",
+      "C) Splitting",
+      "D) Reaction formation"
+    ],
+    "answer": "C) Splitting",
+    "explanation": "Splitting is a defense mechanism common in BPD where the client sees people as all good or all bad, with no middle ground. The client idealizes one nurse while devaluing another. The nursing response is to maintain consistent boundaries across all shifts and avoid becoming pulled into the idealization. Projection assigns one's own feelings to others. Confabulation fills memory gaps with fabrication.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with antisocial personality disorder asks the nurse to bend the unit rules 'just this once' because of a 'special situation.' Which nursing response is most appropriate?",
+    "options": [
+      "A) Make an exception to build rapport with the client",
+      "B) Explain that the rules apply to everyone equally and consistently enforce the established limits",
+      "C) Ignore the request and walk away",
+      "D) Report the client to the psychiatrist for manipulation"
+    ],
+    "answer": "B) Explain that the rules apply to everyone equally and consistently enforce the established limits",
+    "explanation": "Clients with antisocial personality disorder frequently test limits and use manipulation. The nurse must set firm, consistent boundaries while remaining non-judgmental. Making exceptions reinforces manipulative behavior. Ignoring is dismissive. Reporting alone does not address the immediate situation or teach the client appropriate behavior.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with borderline personality disorder (BPD) is found superficially cutting their arm with a plastic utensil. The priority nursing action is:",
+    "options": [
+      "A) Ask the client why they are self-harming",
+      "B) Remove the object, provide wound care, and assess the client's current emotional state in a calm, non-judgmental manner",
+      "C) Place the client in seclusion as punishment for self-harm",
+      "D) Ignore the behavior to avoid reinforcing it"
+    ],
+    "answer": "B) Remove the object, provide wound care, and assess the client's current emotional state in a calm, non-judgmental manner",
+    "explanation": "Safety is the priority \u2014 remove the harmful object and address the wound. Then assess the client's emotional state non-judgmentally to understand the trigger. Asking 'why' can feel accusatory. Seclusion as punishment is unethical and inappropriate. Ignoring self-harm behavior could lead to escalation and serious injury.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is assigned to care for a client with narcissistic personality disorder who frequently belittles the nursing staff. Which approach is most therapeutic?",
+    "options": [
+      "A) Confront the client aggressively about their behavior",
+      "B) Maintain professional boundaries, avoid power struggles, and address the behavior calmly without personalizing it",
+      "C) Avoid interacting with the client as much as possible",
+      "D) Compliment the client excessively to gain their cooperation"
+    ],
+    "answer": "B) Maintain professional boundaries, avoid power struggles, and address the behavior calmly without personalizing it",
+    "explanation": "Clients with narcissistic personality disorder may belittle others to maintain a sense of superiority. The nurse should remain calm, professional, and not take the behavior personally. Aggressive confrontation triggers defensive reactions. Avoidance fails to address therapeutic needs. Excessive flattery reinforces maladaptive patterns.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "Which personality disorder cluster is characterized by odd, eccentric behaviors and includes paranoid, schizoid, and schizotypal personality disorders?",
+    "options": [
+      "A) Cluster A",
+      "B) Cluster B",
+      "C) Cluster C",
+      "D) Cluster D"
+    ],
+    "answer": "A) Cluster A",
+    "explanation": "Cluster A personality disorders (paranoid, schizoid, schizotypal) are characterized by odd and eccentric behaviors. Cluster B (antisocial, borderline, histrionic, narcissistic) involves dramatic and erratic behavior. Cluster C (avoidant, dependent, obsessive-compulsive) involves anxious and fearful behavior. There is no Cluster D.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is developing a care plan for a client with dependent personality disorder. Which nursing intervention is most appropriate?",
+    "options": [
+      "A) Make all decisions for the client to reduce their anxiety",
+      "B) Encourage gradual independent decision-making starting with simple choices",
+      "C) Avoid interacting with the client to foster independence",
+      "D) Assign the client to lead a group therapy session immediately"
+    ],
+    "answer": "B) Encourage gradual independent decision-making starting with simple choices",
+    "explanation": "Clients with dependent personality disorder have difficulty making decisions independently. The nurse should gradually build the client's confidence through small, achievable choices. Making decisions for the client reinforces dependence. Avoidance does not provide therapeutic support. Leading group therapy is too advanced and anxiety-provoking initially.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client admitted for alcohol detoxification begins to experience visual hallucinations, severe tremors, tachycardia, and diaphoresis 72 hours after the last drink. The nurse recognizes these as signs of:",
+    "options": [
+      "A) Alcohol intoxication",
+      "B) Wernicke's encephalopathy",
+      "C) Delirium tremens (DTs)",
+      "D) Korsakoff's syndrome"
+    ],
+    "answer": "C) Delirium tremens (DTs)",
+    "explanation": "Delirium tremens is the most severe form of alcohol withdrawal, typically occurring 48\u201372 hours after the last drink. It is characterized by hallucinations (visual, tactile), severe autonomic instability (tachycardia, diaphoresis, hypertension), confusion, and seizure risk. DTs can be fatal and require immediate medical intervention. Wernicke's involves confusion, ataxia, and ophthalmoplegia. Korsakoff's involves confabulation and memory loss.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client is being treated for alcohol withdrawal using the CIWA-Ar protocol. The client's score is 22. The nurse should anticipate:",
+    "options": [
+      "A) No medication is needed at this score",
+      "B) Administering a benzodiazepine as the score indicates moderate to severe withdrawal",
+      "C) Discharging the client as they are stable",
+      "D) Encouraging the client to sleep it off"
+    ],
+    "answer": "B) Administering a benzodiazepine as the score indicates moderate to severe withdrawal",
+    "explanation": "The CIWA-Ar (Clinical Institute Withdrawal Assessment for Alcohol) scale ranges from 0\u201367. Scores above 20 indicate severe withdrawal requiring aggressive pharmacological management, typically with benzodiazepines (chlordiazepoxide, lorazepam). A score of 22 warrants medication to prevent progression to DTs and seizures. Discharge would be unsafe.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "An unconscious client is brought to the emergency department with pinpoint pupils, respiratory rate of 6 breaths/min, and a friend reports the client 'used some pills.' The nurse's priority action is:",
+    "options": [
+      "A) Obtain a urine drug screen",
+      "B) Administer naloxone (Narcan) and prepare for airway management",
+      "C) Contact the client's family for medication history",
+      "D) Start an IV and administer normal saline"
+    ],
+    "answer": "B) Administer naloxone (Narcan) and prepare for airway management",
+    "explanation": "The triad of pinpoint pupils, respiratory depression, and decreased consciousness strongly suggests opioid overdose. Naloxone is the priority as it reverses opioid effects. Airway management is critical with a respiratory rate of 6. A drug screen takes time and does not treat the emergency. IV access is important but secondary to reversing the overdose.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client taking disulfiram (Antabuse) for alcohol use disorder reports severe nausea, vomiting, flushing, and headache. The nurse should assess for:",
+    "options": [
+      "A) Recent alcohol consumption, including hidden sources like mouthwash or cooking wine",
+      "B) Drug allergy to disulfiram",
+      "C) Concurrent lithium use",
+      "D) Opiate withdrawal"
+    ],
+    "answer": "A) Recent alcohol consumption, including hidden sources like mouthwash or cooking wine",
+    "explanation": "Disulfiram causes a severe reaction when combined with ANY alcohol, including hidden sources (mouthwash, cough syrup, cooking wine, cologne applied to skin). Symptoms include nausea, vomiting, flushing, headache, and potentially cardiovascular collapse. The nurse should assess for all possible alcohol exposure. This is not an allergy or related to opiates or lithium.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with a history of chronic alcohol use presents with confusion, ataxia, and ophthalmoplegia. The nurse should anticipate the provider ordering:",
+    "options": [
+      "A) Naltrexone",
+      "B) Intravenous thiamine (vitamin B1)",
+      "C) Flumazenil",
+      "D) Phenytoin"
+    ],
+    "answer": "B) Intravenous thiamine (vitamin B1)",
+    "explanation": "The triad of confusion, ataxia, and ophthalmoplegia (eye movement abnormalities) characterizes Wernicke's encephalopathy, caused by thiamine deficiency in chronic alcoholism. IV thiamine must be administered BEFORE glucose to prevent worsening of the condition. Naltrexone treats alcohol craving. Flumazenil reverses benzodiazepines. Phenytoin is an anticonvulsant.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client experiencing benzodiazepine withdrawal is at highest risk for which life-threatening complication?",
+    "options": [
+      "A) Diarrhea and dehydration",
+      "B) Generalized tonic-clonic seizures",
+      "C) Respiratory depression",
+      "D) Serotonin syndrome"
+    ],
+    "answer": "B) Generalized tonic-clonic seizures",
+    "explanation": "Benzodiazepine withdrawal, like alcohol withdrawal, can cause life-threatening seizures because both substances act on GABA receptors. Abrupt discontinuation after prolonged use can lead to CNS hyperexcitability, seizures, and potentially death. This is why benzodiazepines must be tapered gradually. Respiratory depression occurs with benzodiazepine overdose, not withdrawal.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client withdrawing from cocaine reports fatigue, increased appetite, vivid dreams, and depressed mood. The nurse should know that cocaine withdrawal is:",
+    "options": [
+      "A) Life-threatening and requires ICU admission",
+      "B) Characterized primarily by psychological symptoms and is not typically life-threatening",
+      "C) Treated with naloxone",
+      "D) Identical to alcohol withdrawal in presentation"
+    ],
+    "answer": "B) Characterized primarily by psychological symptoms and is not typically life-threatening",
+    "explanation": "Cocaine withdrawal produces a 'crash' with fatigue, depression, increased appetite, and vivid dreams. Unlike alcohol or benzodiazepine withdrawal, stimulant withdrawal is not typically life-threatening as it does not cause seizures or autonomic instability. Treatment is supportive. Naloxone is for opioid overdose, not stimulant withdrawal.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client diagnosed with anorexia nervosa has been started on nutritional rehabilitation. On day 3, the client develops confusion, rapid heart rate, and peripheral edema. The nurse suspects:",
+    "options": [
+      "A) Myocardial infarction",
+      "B) Refeeding syndrome",
+      "C) Allergic reaction to the diet",
+      "D) Anxiety-related symptoms"
+    ],
+    "answer": "B) Refeeding syndrome",
+    "explanation": "Refeeding syndrome occurs when nutrition is reintroduced too rapidly in a severely malnourished client. It causes dangerous shifts in phosphorus, potassium, and magnesium, leading to cardiac complications, edema, confusion, and potentially death. The nurse should monitor electrolytes closely, especially phosphorus, and initiate refeeding slowly. This is a life-threatening complication.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with bulimia nervosa is on the inpatient unit. Which nursing intervention is most important during the 1\u20132 hours following meals?",
+    "options": [
+      "A) Encourage the client to rest in their room alone",
+      "B) Monitor the client and restrict bathroom access to prevent purging behavior",
+      "C) Encourage vigorous physical exercise",
+      "D) Allow the client to choose their next meal"
+    ],
+    "answer": "B) Monitor the client and restrict bathroom access to prevent purging behavior",
+    "explanation": "Clients with bulimia nervosa typically purge (through vomiting, laxatives, or excessive exercise) after eating. The nurse should monitor the client for 1\u20132 hours post-meal and restrict unsupervised bathroom access. Leaving the client alone enables purging. Exercise should not be encouraged as a compensatory behavior. Meal planning is important but not the priority post-meal.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with anorexia nervosa insists on weighing themselves multiple times per day. The nurse should:",
+    "options": [
+      "A) Allow the client unlimited access to the scale",
+      "B) Weigh the client once daily in a hospital gown after voiding, with the client facing away from the scale",
+      "C) Remove all scales from the unit",
+      "D) Encourage the client to track their weight in a personal journal"
+    ],
+    "answer": "B) Weigh the client once daily in a hospital gown after voiding, with the client facing away from the scale",
+    "explanation": "Standard protocol for anorexia nervosa includes daily weighing under controlled conditions: same time, after voiding, in a gown (to detect hidden objects), with the client facing away from the scale to reduce obsession with numbers. Unlimited scale access reinforces the disorder. Removing all scales prevents necessary monitoring. Self-tracking weight reinforces the preoccupation.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "Which laboratory finding is most characteristic of a client with bulimia nervosa who frequently purges by vomiting?",
+    "options": [
+      "A) Hyperkalemia",
+      "B) Hypokalemia and metabolic alkalosis",
+      "C) Elevated blood glucose",
+      "D) Elevated hemoglobin"
+    ],
+    "answer": "B) Hypokalemia and metabolic alkalosis",
+    "explanation": "Frequent vomiting causes loss of hydrochloric acid (leading to metabolic alkalosis) and potassium (leading to hypokalemia). Hypokalemia is dangerous as it can cause cardiac arrhythmias. Other findings may include dental erosion, parotid gland enlargement (chipmunk cheeks), and Russell's sign (calluses on knuckles). Hyperkalemia is the opposite finding.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with anorexia nervosa has a BMI of 14.5 and refuses to eat, stating, 'I'm still too fat.' The nurse recognizes this as an example of:",
+    "options": [
+      "A) Delusions of grandeur",
+      "B) Distorted body image",
+      "C) Denial as a defense mechanism",
+      "D) Confabulation"
+    ],
+    "answer": "B) Distorted body image",
+    "explanation": "Distorted body image is a hallmark feature of anorexia nervosa. Despite being significantly underweight (BMI 14.5 is severely underweight), the client perceives themselves as overweight. This is not a psychotic delusion but a perceptual disturbance specific to eating disorders. Denial may coexist but does not fully capture the body image distortion. Confabulation involves fabricating memories.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is assessing a client's suicide risk. Which factor indicates the HIGHEST level of risk?",
+    "options": [
+      "A) The client reports vague thoughts of 'not wanting to be here'",
+      "B) The client has a specific plan with access to a firearm and no identified reasons to live",
+      "C) The client reports occasional sadness since a recent breakup",
+      "D) The client has a strong social support system but reports feeling down"
+    ],
+    "answer": "B) The client has a specific plan with access to a firearm and no identified reasons to live",
+    "explanation": "The highest suicide risk is indicated by a specific plan, access to lethal means (firearm is the most lethal method), and absence of protective factors. The specificity of the plan, lethality of the method, availability of means, and lack of reasons for living all dramatically increase risk. Vague thoughts without a plan indicate lower risk. Social support is a protective factor.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client is placed on suicide precautions with one-to-one observation. Which action by the nursing assistant requires immediate intervention by the nurse?",
+    "options": [
+      "A) Accompanying the client to the bathroom",
+      "B) Allowing the client to use a plastic fork during meals",
+      "C) Leaving the client unattended while answering a phone call at the nurses' station",
+      "D) Documenting the client's behavior every 15 minutes"
+    ],
+    "answer": "C) Leaving the client unattended while answering a phone call at the nurses' station",
+    "explanation": "One-to-one observation means the assigned staff member must maintain continuous visual contact with the client at all times, including during bathroom use. Leaving the client unattended, even briefly, violates the safety protocol and puts the client at risk. The nurse must immediately address this safety breach. Plastic utensils and 15-minute documentation are appropriate for suicide precautions.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client who attempted suicide by overdose has been medically stabilized. The nurse's first psychosocial assessment should focus on:",
+    "options": [
+      "A) Why the client chose that particular method",
+      "B) Whether the client has health insurance for follow-up care",
+      "C) Current suicidal ideation, intent, and whether the client still has a plan or access to means",
+      "D) The client's childhood trauma history"
+    ],
+    "answer": "C) Current suicidal ideation, intent, and whether the client still has a plan or access to means",
+    "explanation": "After medical stabilization, the immediate priority is assessing ongoing suicide risk: current ideation, intent, plan, and access to means. This determines the level of monitoring and intervention needed. While the method, insurance, and history are relevant for comprehensive assessment, the immediate safety concern takes priority.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A 16-year-old client confides in the nurse that they are planning to kill themselves tonight by taking their parent's medication. What is the nurse's legal and ethical obligation?",
+    "options": [
+      "A) Keep the information confidential as the client requested",
+      "B) Break confidentiality and immediately notify the treatment team, initiate safety precautions, and inform the parents",
+      "C) Wait until the next day to discuss it with the psychiatrist",
+      "D) Ask the client to sign a no-suicide contract and document the conversation"
+    ],
+    "answer": "B) Break confidentiality and immediately notify the treatment team, initiate safety precautions, and inform the parents",
+    "explanation": "When a client expresses a specific suicide plan with access to means, the duty to protect life overrides confidentiality. The nurse must immediately notify the treatment team, implement safety precautions, and ensure the parent removes access to medications. No-suicide contracts are not considered evidence-based safety measures. Waiting would be negligent.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "Which client statement should the nurse interpret as a WARNING SIGN for imminent suicide risk?",
+    "options": [
+      "A) \"I've been having trouble sleeping for the past week.\"",
+      "B) \"I've decided to give my car to my sister and my jewelry to my daughter.\"",
+      "C) \"I feel sad most days but my support group helps.\"",
+      "D) \"I wish things were different in my life.\""
+    ],
+    "answer": "B) \"I've decided to give my car to my sister and my jewelry to my daughter.\"",
+    "explanation": "Giving away valued possessions is a significant warning sign for imminent suicide risk, suggesting the client is preparing for death and 'getting affairs in order.' This requires immediate further assessment. Sleep difficulty and general sadness are common but less acute symptoms. Having a support group is a protective factor. Wishing things were different is a vague statement without specific intent.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is developing a safety plan with a client at risk for suicide. Which component is ESSENTIAL to include?",
+    "options": [
+      "A) A list of the client's psychiatric medications",
+      "B) Emergency contact numbers, coping strategies, warning signs, and instructions for restricting access to lethal means",
+      "C) A detailed account of the client's past suicide attempts",
+      "D) The client's insurance information for emergency services"
+    ],
+    "answer": "B) Emergency contact numbers, coping strategies, warning signs, and instructions for restricting access to lethal means",
+    "explanation": "A safety plan should include: warning signs that a crisis is developing, internal coping strategies, people and social settings that provide distraction, people to contact for help, emergency resources (988 Suicide & Crisis Lifeline, emergency services), and steps to restrict access to lethal means. Medication lists and insurance details, while useful, are not the core components.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse assesses a hospitalized client who was recently prescribed venlafaxine. Which statement by the client requires the nurse to hold the medication and contact the provider?",
+    "options": [
+      "A) \"I've been taking ibuprofen for back pain.\"",
+      "B) \"I started taking St. John's Wort last week to help my mood.\"",
+      "C) \"I had a glass of wine with dinner two weeks ago.\"",
+      "D) \"I take a multivitamin every morning.\""
+    ],
+    "answer": "B) \"I started taking St. John's Wort last week to help my mood.\"",
+    "explanation": "St. John's Wort has serotonergic properties and combined with venlafaxine (an SNRI) significantly increases the risk of serotonin syndrome \u2014 a potentially life-threatening condition. The nurse should hold the medication and notify the provider immediately. While ibuprofen and alcohol have their own considerations, the combination with St. John's Wort poses the most acute danger.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client taking an SSRI for 3 weeks reports no improvement in depressive symptoms. The client asks to discontinue the medication. The nurse's best response is:",
+    "options": [
+      "A) \"You're right \u2014 if it hasn't worked by now, it won't.\"",
+      "B) \"SSRIs typically take 4\u20136 weeks to reach full therapeutic effect. Let's discuss this with your provider, but it's important not to stop abruptly.\"",
+      "C) \"Just double your dose to speed up the effect.\"",
+      "D) \"Stop taking it today and we'll try something else.\""
+    ],
+    "answer": "B) \"SSRIs typically take 4\u20136 weeks to reach full therapeutic effect. Let's discuss this with your provider, but it's important not to stop abruptly.\"",
+    "explanation": "SSRIs have a delayed onset of action, typically requiring 4\u20136 weeks for full therapeutic effect. Clients need education about this timeline to maintain adherence. Abrupt discontinuation can cause withdrawal symptoms (dizziness, nausea, flu-like symptoms). The dose should never be changed without provider guidance. Switching after only 3 weeks is premature.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client is prescribed phenelzine (Nardil), an MAOI. Which meal selection by the client requires immediate nursing intervention?",
+    "options": [
+      "A) Grilled chicken breast with steamed rice and fresh green beans",
+      "B) Aged cheddar cheese sandwich with pepperoni and a glass of red wine",
+      "C) Fresh fruit salad with yogurt and granola",
+      "D) Baked salmon with lemon and roasted vegetables"
+    ],
+    "answer": "B) Aged cheddar cheese sandwich with pepperoni and a glass of red wine",
+    "explanation": "This meal contains multiple tyramine-rich foods: aged cheese, cured meat (pepperoni), and red wine. Combined with an MAOI, these foods can trigger a hypertensive crisis \u2014 a life-threatening emergency. Clients on MAOIs must avoid aged cheeses, cured meats, fermented foods, soy sauce, fava beans, and alcoholic beverages (especially red wine and beer).",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client experiencing serotonin syndrome would most likely present with which cluster of symptoms?",
+    "options": [
+      "A) Lead-pipe rigidity, high fever, elevated CK, and altered consciousness",
+      "B) Agitation, hyperreflexia, clonus, diarrhea, diaphoresis, and hyperthermia",
+      "C) Pinpoint pupils, respiratory depression, and decreased consciousness",
+      "D) Dry mouth, blurred vision, urinary retention, and constipation"
+    ],
+    "answer": "B) Agitation, hyperreflexia, clonus, diarrhea, diaphoresis, and hyperthermia",
+    "explanation": "Serotonin syndrome results from excess serotonergic activity and presents with the triad of altered mental status (agitation, confusion), neuromuscular abnormalities (hyperreflexia, clonus, tremor), and autonomic instability (diaphoresis, diarrhea, hyperthermia). Option A describes NMS. Option C describes opioid overdose. Option D describes anticholinergic effects.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is comparing serotonin syndrome and neuroleptic malignant syndrome (NMS). Which distinguishing feature helps differentiate serotonin syndrome from NMS?",
+    "options": [
+      "A) Serotonin syndrome involves lead-pipe rigidity while NMS involves hyperreflexia",
+      "B) Serotonin syndrome has a rapid onset (within hours) and features clonus/hyperreflexia, while NMS develops gradually (days to weeks) with lead-pipe rigidity",
+      "C) NMS is caused by SSRIs while serotonin syndrome is caused by antipsychotics",
+      "D) Both conditions present identically and cannot be distinguished clinically"
+    ],
+    "answer": "B) Serotonin syndrome has a rapid onset (within hours) and features clonus/hyperreflexia, while NMS develops gradually (days to weeks) with lead-pipe rigidity",
+    "explanation": "Key differences: Serotonin syndrome has rapid onset (hours), involves hyperreflexia, clonus, and diarrhea, and is caused by serotonergic agents. NMS develops over days to weeks, features lead-pipe rigidity (not hyperreflexia), elevated CK, and is caused by antipsychotics. Both can cause hyperthermia and altered mental status.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client prescribed valproic acid (Depakote) for bipolar disorder should be monitored for which serious adverse effect?",
+    "options": [
+      "A) Agranulocytosis",
+      "B) Hepatotoxicity and pancreatitis",
+      "C) Hypertensive crisis",
+      "D) Serotonin syndrome"
+    ],
+    "answer": "B) Hepatotoxicity and pancreatitis",
+    "explanation": "Valproic acid carries a risk of serious hepatotoxicity and pancreatitis. Liver function tests should be monitored at baseline and regularly during treatment. Clients should report signs of liver dysfunction (jaundice, abdominal pain, nausea) immediately. Agranulocytosis is associated with clozapine. Hypertensive crisis is associated with MAOIs. Serotonin syndrome is associated with serotonergic agents.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client prescribed lithium reports polyuria, polydipsia, and a consistently dilute urine. The nurse should suspect which complication of long-term lithium therapy?",
+    "options": [
+      "A) Lithium toxicity",
+      "B) Nephrogenic diabetes insipidus",
+      "C) Diabetic ketoacidosis",
+      "D) Thyroid storm"
+    ],
+    "answer": "B) Nephrogenic diabetes insipidus",
+    "explanation": "Long-term lithium use can cause nephrogenic diabetes insipidus, where the kidneys become resistant to ADH, leading to excessive dilute urine and compensatory increased thirst. This is different from lithium toxicity (which presents with tremors, GI symptoms, confusion). Regular renal function monitoring is essential for clients on lithium therapy.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client on the psychiatric unit asks to leave against medical advice (AMA). The client is a voluntary admission and is not a danger to self or others. The nurse should:",
+    "options": [
+      "A) Call security to prevent the client from leaving",
+      "B) Inform the client of the risks, have them sign the AMA form, and document the interaction",
+      "C) Administer a PRN sedative to prevent the client from leaving",
+      "D) Tell the client they cannot leave until the doctor approves discharge"
+    ],
+    "answer": "B) Inform the client of the risks, have them sign the AMA form, and document the interaction",
+    "explanation": "Voluntary clients have the right to leave the hospital. The nurse should educate the client about the risks of leaving, have them sign an AMA form, and thoroughly document the interaction. Preventing a voluntary client from leaving violates their rights. Sedation to prevent departure is false imprisonment. A physician's approval is not required for a voluntary client to leave.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client on an involuntary psychiatric hold states, 'You can't make me take that medication \u2014 I have rights!' The nurse's best response is:",
+    "options": [
+      "A) \"You're on an involuntary hold, so you have no rights.\"",
+      "B) \"You are correct \u2014 you retain the right to refuse medication unless a court order has been obtained or you pose an imminent danger to yourself or others.\"",
+      "C) \"I'll have to restrain you if you don't take it.\"",
+      "D) \"Your family signed consent for you.\""
+    ],
+    "answer": "B) \"You are correct \u2014 you retain the right to refuse medication unless a court order has been obtained or you pose an imminent danger to yourself or others.\"",
+    "explanation": "Involuntary admission does not automatically remove the right to refuse treatment. Forced medication requires a court order or an emergency situation where the client poses imminent danger. The nurse should educate the client about their rights. Stating the client has no rights is false. Threatening restraint for medication refusal is coercive. Family consent does not override the client's autonomy.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse finds a client in physical restraints with cold, blue fingers on the restrained hand. The first action is to:",
+    "options": [
+      "A) Document the finding and continue monitoring",
+      "B) Release the restraint immediately to restore circulation and notify the provider",
+      "C) Tighten the restraint to prevent the client from removing it",
+      "D) Apply warm blankets over the restraint"
+    ],
+    "answer": "B) Release the restraint immediately to restore circulation and notify the provider",
+    "explanation": "Cold, blue (cyanotic) fingers indicate compromised circulation, which is a medical emergency requiring immediate release of the restraint. Restraints must be checked every 15 minutes for circulation, sensation, and movement (CSM). Documentation alone is insufficient \u2014 action is needed. Tightening would worsen the problem. The provider must be notified of the complication.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client on the psychiatric unit tells the nurse they are going to kill their ex-partner when discharged. The nurse's legal obligation includes:",
+    "options": [
+      "A) Keeping this information confidential between nurse and client",
+      "B) Notifying the identified potential victim and appropriate authorities (Tarasoff duty to warn)",
+      "C) Telling the client not to say such things",
+      "D) Documenting the statement but taking no other action"
+    ],
+    "answer": "B) Notifying the identified potential victim and appropriate authorities (Tarasoff duty to warn)",
+    "explanation": "The Tarasoff ruling established the 'duty to warn' \u2014 when a client makes a credible threat against an identifiable person, the mental health professional must take steps to warn the potential victim and notify authorities. Confidentiality does not protect threats of violence against specific individuals. Simply documenting is insufficient without protective action.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is caring for a client in seclusion. Which documentation element is essential?",
+    "options": [
+      "A) The client's food preferences for the next meal",
+      "B) The specific behavior that necessitated seclusion, ongoing assessments every 15 minutes, and any interventions attempted before seclusion",
+      "C) A complete nursing health history",
+      "D) The client's insurance authorization for seclusion"
+    ],
+    "answer": "B) The specific behavior that necessitated seclusion, ongoing assessments every 15 minutes, and any interventions attempted before seclusion",
+    "explanation": "Seclusion requires thorough documentation including: the behavior warranting seclusion, less restrictive alternatives attempted first, the client's response, assessments every 15 minutes (vital signs, behavior, hydration, elimination, circulation), and the time seclusion was initiated and discontinued. Insurance authorization is not required for clinical safety interventions.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with a history of violent behavior toward others is becoming increasingly agitated, pacing, clenching fists, and raising their voice. Using the least restrictive intervention approach, the nurse should first:",
+    "options": [
+      "A) Apply physical restraints immediately",
+      "B) Call security to stand by",
+      "C) Attempt verbal de-escalation in a calm, non-threatening manner while offering the client choices",
+      "D) Place the client in seclusion"
+    ],
+    "answer": "C) Attempt verbal de-escalation in a calm, non-threatening manner while offering the client choices",
+    "explanation": "The principle of least restrictive intervention requires attempting the least intrusive method first. Verbal de-escalation \u2014 speaking calmly, offering choices, acknowledging feelings \u2014 should always be attempted before physical interventions. Restraints and seclusion are last resorts. Having security available is reasonable but should not be the first action. Offering choices gives the client a sense of control.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client's family asks the nurse for information about the client's psychiatric diagnosis and treatment plan. The client has not signed a release of information. The nurse should:",
+    "options": [
+      "A) Share the information since family is involved in the client's care",
+      "B) Decline to share specific information, explain confidentiality requirements, and suggest the family discuss it directly with the client",
+      "C) Share only the diagnosis but not the treatment plan",
+      "D) Tell the family to contact the hospital's billing department"
+    ],
+    "answer": "B) Decline to share specific information, explain confidentiality requirements, and suggest the family discuss it directly with the client",
+    "explanation": "Without a signed release of information, the nurse cannot share any details about the client's diagnosis, treatment, or even confirm they are a patient. HIPAA and mental health confidentiality laws protect client information. The nurse should respectfully explain this and suggest the family speak directly with the client. Sharing any clinical details violates confidentiality.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "The nurse informs a voluntary psychiatric client that restraints may be necessary. The client responds, 'I want to leave right now!' What is the nurse's most appropriate action?",
+    "options": [
+      "A) Apply restraints to prevent the client from leaving",
+      "B) Allow the client to leave; voluntary clients may revoke consent to treatment",
+      "C) Sedate the client to prevent them from leaving",
+      "D) Lock the unit doors to prevent departure"
+    ],
+    "answer": "B) Allow the client to leave; voluntary clients may revoke consent to treatment",
+    "explanation": "Voluntary clients admitted themselves and retain the right to leave at any time. Preventing a voluntary client from leaving constitutes false imprisonment. The nurse should follow AMA procedures: inform of risks, have documentation signed, and ensure the client is not a danger to self or others. If the client IS dangerous, involuntary commitment procedures would need to be initiated through proper legal channels.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A 7-year-old child diagnosed with ADHD is prescribed methylphenidate (Ritalin). The nurse educates the parents that the medication should be administered:",
+    "options": [
+      "A) At bedtime to promote sleep",
+      "B) In the morning and early afternoon to prevent insomnia",
+      "C) Only on school days, never on weekends",
+      "D) With a high-fat meal to increase absorption"
+    ],
+    "answer": "B) In the morning and early afternoon to prevent insomnia",
+    "explanation": "Methylphenidate is a CNS stimulant that can cause insomnia if given too late in the day. It should be given in the morning (and early afternoon for a second dose if prescribed) to maximize effectiveness during school/activity hours while minimizing sleep disruption. Drug holidays (weekends off) may be discussed with the provider but are not absolute. Fat content does not significantly affect absorption.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A school nurse notices that a child on methylphenidate has lost 5 pounds over the past month and the child's height percentile has decreased. The nurse should:",
+    "options": [
+      "A) Immediately discontinue the medication",
+      "B) Document the findings and report to the provider for medication evaluation, while encouraging calorie-dense snacks at non-peak medication times",
+      "C) Increase the dose to control hyperactivity so the child can sit still and eat",
+      "D) Recommend the child eat only at lunch time"
+    ],
+    "answer": "B) Document the findings and report to the provider for medication evaluation, while encouraging calorie-dense snacks at non-peak medication times",
+    "explanation": "Stimulant medications commonly suppress appetite and can affect growth in children. The nurse should monitor height and weight, report concerns to the provider, and implement strategies like offering calorie-dense meals/snacks when the medication effect is lowest (morning before medication, evening). The nurse should not discontinue or adjust medication doses independently.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is assessing a 4-year-old child for autism spectrum disorder (ASD). Which behavior would be MOST consistent with this diagnosis?",
+    "options": [
+      "A) The child engages in imaginative play with other children",
+      "B) The child lines up toy cars in a precise row repeatedly and becomes extremely distressed when the arrangement is disturbed",
+      "C) The child cries when their parent leaves but is consoled easily",
+      "D) The child shares toys readily with siblings"
+    ],
+    "answer": "B) The child lines up toy cars in a precise row repeatedly and becomes extremely distressed when the arrangement is disturbed",
+    "explanation": "Repetitive, restricted behaviors and intense distress with changes in routine are hallmark features of ASD. Lining objects up and reacting strongly to disruption demonstrates restricted, repetitive patterns. Imaginative play, social sharing, and normal separation reactions are typical developmental behaviors that are often impaired in ASD.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "An adolescent brought to the emergency department after a suicide attempt is diagnosed with major depressive disorder. The nurse knows that depression in adolescents often presents differently from adults. Which symptom is more common in adolescent depression?",
+    "options": [
+      "A) Psychomotor retardation",
+      "B) Irritability and anger rather than sadness",
+      "C) Early morning awakening",
+      "D) Weight loss from decreased appetite"
+    ],
+    "answer": "B) Irritability and anger rather than sadness",
+    "explanation": "Adolescent depression commonly manifests as irritability, anger, and acting-out behaviors rather than the classic sadness seen in adults. Other adolescent presentations include declining school performance, social withdrawal, somatic complaints, and substance use. Recognizing atypical presentations is essential for early identification and intervention.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A 10-year-old child in the psychiatric unit frequently lies, bullies younger children, has started fires, and shows no remorse for these behaviors. The nurse suspects:",
+    "options": [
+      "A) Oppositional defiant disorder (ODD)",
+      "B) Conduct disorder",
+      "C) ADHD",
+      "D) Autism spectrum disorder"
+    ],
+    "answer": "B) Conduct disorder",
+    "explanation": "Conduct disorder is characterized by persistent patterns of behavior that violate the rights of others and age-appropriate societal norms: aggression, destruction, deceitfulness, fire-setting, and lack of remorse. ODD involves defiance and hostility but does not typically involve violations of others' rights to this degree. ADHD involves inattention and hyperactivity. ASD involves communication and social deficits.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is screening an adolescent for substance use using the CRAFFT tool. Which question is included in this screening?",
+    "options": [
+      "A) \"How many standard drinks do you consume per week?\"",
+      "B) \"Have you ever ridden in a CAR driven by someone (including yourself) who was high or had been using alcohol or drugs?\"",
+      "C) \"What is your preferred type of alcoholic beverage?\"",
+      "D) \"At what age did your parents start drinking?\""
+    ],
+    "answer": "B) \"Have you ever ridden in a CAR driven by someone (including yourself) who was high or had been using alcohol or drugs?\"",
+    "explanation": "CRAFFT is a validated screening tool for adolescent substance use. C = Car (riding with impaired driver), R = Relax (using to relax), A = Alone (using alone), F = Forget (blackouts), F = Friends/Family (told to cut down), T = Trouble (gotten into trouble while using). Two or more positive responses suggest a substance use problem requiring further assessment.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client in the early stage of Alzheimer's disease is having difficulty remembering recent conversations. The nurse should implement which intervention?",
+    "options": [
+      "A) Correct the client each time they repeat themselves",
+      "B) Use written notes, calendars, and consistent routines to support memory",
+      "C) Isolate the client to prevent embarrassment",
+      "D) Speak to the client only when necessary to avoid overwhelming them"
+    ],
+    "answer": "B) Use written notes, calendars, and consistent routines to support memory",
+    "explanation": "In early Alzheimer's, the client retains the ability to use compensatory strategies. Written reminders, calendars, labeled items, and consistent routines help maintain independence and reduce frustration. Correcting the client causes embarrassment and frustration. Isolation increases confusion and depression. Limiting communication reduces stimulation needed for cognitive function.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with moderate dementia becomes increasingly agitated and confused every evening around 5 PM. The nurse recognizes this as sundowning. Which intervention is most appropriate?",
+    "options": [
+      "A) Administer a sedative at 4 PM daily",
+      "B) Increase lighting, reduce stimulation, maintain a calm routine during late afternoon, and offer a light snack",
+      "C) Restrain the client each evening to prevent wandering",
+      "D) Move the client to a private room at 3 PM each day"
+    ],
+    "answer": "B) Increase lighting, reduce stimulation, maintain a calm routine during late afternoon, and offer a light snack",
+    "explanation": "Sundowning management includes increasing environmental lighting (to counteract fading daylight), reducing stimulating activities in the afternoon, maintaining predictable routines, ensuring adequate nutrition, and providing a calm environment. Sedation is a last resort. Restraints do not address the cause. Isolation can increase confusion and agitation.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client is admitted to the hospital with sudden onset of confusion, disorientation, and visual hallucinations. The family reports the client was fine yesterday. Which condition should the nurse suspect FIRST?",
+    "options": [
+      "A) Alzheimer's disease",
+      "B) Delirium",
+      "C) Vascular dementia",
+      "D) Schizophrenia"
+    ],
+    "answer": "B) Delirium",
+    "explanation": "Sudden onset of confusion with fluctuating consciousness, disorientation, and hallucinations strongly suggests delirium, which is acute and typically caused by an underlying medical condition (infection, medication, metabolic imbalance). Dementia has gradual onset. The nurse must identify and treat the underlying cause, as delirium is potentially reversible. Alzheimer's and vascular dementia develop over months to years.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is differentiating between delirium and dementia. Which statement is accurate?",
+    "options": [
+      "A) Both delirium and dementia have a sudden onset",
+      "B) Delirium is characterized by fluctuating consciousness and is often reversible, while dementia has a gradual onset and is progressive and irreversible",
+      "C) Dementia always involves visual hallucinations while delirium does not",
+      "D) Delirium only occurs in elderly clients"
+    ],
+    "answer": "B) Delirium is characterized by fluctuating consciousness and is often reversible, while dementia has a gradual onset and is progressive and irreversible",
+    "explanation": "Key differences: Delirium = sudden onset, fluctuating course, impaired attention, often reversible when the cause is treated. Dementia = gradual onset, progressive course, preserved consciousness initially, irreversible. Delirium can occur at any age (post-surgical, ICU, infection). Hallucinations can occur in both conditions.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client with middle-stage Alzheimer's disease is found wandering in the hallway at 2 AM wearing only a hospital gown. The most appropriate nursing response is:",
+    "options": [
+      "A) Scold the client for being out of bed and escort them back to their room",
+      "B) Gently approach the client, reorient them, and calmly guide them back to bed while ensuring the environment is safe",
+      "C) Apply a vest restraint to keep the client in bed",
+      "D) Administer a sleep medication immediately"
+    ],
+    "answer": "B) Gently approach the client, reorient them, and calmly guide them back to bed while ensuring the environment is safe",
+    "explanation": "Wandering is common in middle-stage Alzheimer's. The nurse should approach calmly (to avoid startling), reorient gently, and guide the client to safety. Scolding creates agitation and the client likely won't remember the instruction. Restraints increase fall risk and agitation. Medication should not be the first response \u2014 environmental safety measures (alarms, secure units) are preferred.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A caregiver of a client with dementia tells the nurse, 'I can't do this anymore \u2014 I haven't slept in weeks and I'm losing my mind.' The nurse's best response is:",
+    "options": [
+      "A) \"You should be grateful your loved one is still alive.\"",
+      "B) \"I understand this is exhausting. Let's discuss respite care options and support resources available to you.\"",
+      "C) \"You need to hire a professional caregiver immediately.\"",
+      "D) \"Maybe it's time to consider a nursing home.\""
+    ],
+    "answer": "B) \"I understand this is exhausting. Let's discuss respite care options and support resources available to you.\"",
+    "explanation": "Caregiver burnout is a real and serious concern. The nurse should acknowledge the caregiver's feelings, validate their experience, and provide information about respite care, support groups, and community resources. Option A dismisses the caregiver's distress. Options C and D make assumptions about the appropriate solution without exploring the caregiver's needs and preferences first.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client who was passed over for a promotion channels their frustration into training for a marathon. The nurse recognizes this as which defense mechanism?",
+    "options": [
+      "A) Displacement",
+      "B) Sublimation",
+      "C) Compensation",
+      "D) Reaction formation"
+    ],
+    "answer": "B) Sublimation",
+    "explanation": "Sublimation is a mature defense mechanism where socially unacceptable impulses or emotions are channeled into socially acceptable activities. Running a marathon is a constructive outlet for frustration. Displacement redirects emotions to a safer target. Compensation emphasizes strengths to offset weaknesses. Reaction formation adopts behaviors opposite to one's true feelings.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client who is angry at their boss goes home and yells at their spouse. This behavior is an example of:",
+    "options": [
+      "A) Projection",
+      "B) Sublimation",
+      "C) Displacement",
+      "D) Rationalization"
+    ],
+    "answer": "C) Displacement",
+    "explanation": "Displacement redirects emotions from the original source (boss) to a less threatening target (spouse). The person transfers their anger to a safer object. Projection attributes one's own feelings to another person. Sublimation channels emotions into constructive activities. Rationalization creates logical explanations for unacceptable behavior.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client diagnosed with terminal cancer tells the nurse, 'I feel fine \u2014 the doctors must have mixed up my lab results.' The nurse recognizes this as:",
+    "options": [
+      "A) Denial",
+      "B) Suppression",
+      "C) Intellectualization",
+      "D) Undoing"
+    ],
+    "answer": "A) Denial",
+    "explanation": "Denial is the unconscious refusal to acknowledge a painful reality. The client is not consciously choosing to ignore the diagnosis \u2014 they are unable to accept the overwhelming information. Suppression is a conscious decision to postpone dealing with something. Intellectualization uses logical analysis to distance from emotions. Undoing involves symbolic actions to reverse a perceived wrong.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nursing student fails an exam and tells their friend, 'The test was unfair \u2014 the questions were poorly written and the professor doesn't like me.' This is an example of:",
+    "options": [
+      "A) Projection",
+      "B) Rationalization",
+      "C) Denial",
+      "D) Regression"
+    ],
+    "answer": "B) Rationalization",
+    "explanation": "Rationalization creates logical-sounding excuses to justify unacceptable outcomes or behaviors, protecting self-esteem. The student blames external factors rather than acknowledging their own role. Projection would be attributing their own feelings to others. Denial would be refusing to acknowledge the failure. Regression would be reverting to childlike behavior.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A hospitalized adult client begins sucking their thumb and crying for their mother after a painful procedure. The nurse identifies this as:",
+    "options": [
+      "A) Regression",
+      "B) Reaction formation",
+      "C) Dissociation",
+      "D) Conversion"
+    ],
+    "answer": "A) Regression",
+    "explanation": "Regression is returning to an earlier, less mature stage of development when faced with stress or anxiety. Thumb-sucking and crying for a parent are behaviors typical of young children, not adults. This is an unconscious coping mechanism. Reaction formation involves adopting opposite behaviors. Dissociation involves detachment from reality. Conversion involves physical symptoms from psychological stress.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client experiencing extrapyramidal symptoms (EPS) from haloperidol is prescribed benztropine (Cogentin). The nurse understands this medication works by:",
+    "options": [
+      "A) Increasing dopamine levels in the brain",
+      "B) Blocking acetylcholine to restore the dopamine-acetylcholine balance",
+      "C) Increasing serotonin levels",
+      "D) Blocking dopamine receptors"
+    ],
+    "answer": "B) Blocking acetylcholine to restore the dopamine-acetylcholine balance",
+    "explanation": "EPS occurs when antipsychotics block dopamine, disrupting the dopamine-acetylcholine balance. Benztropine is an anticholinergic that blocks acetylcholine, restoring the balance and reducing EPS symptoms. It does not increase dopamine or serotonin. Blocking more dopamine would worsen EPS. Side effects of anticholinergics include dry mouth, constipation, urinary retention, and blurred vision.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client has been taking haloperidol for 8 months and develops involuntary lip smacking, tongue protrusion, and facial grimacing. The nurse recognizes this as:",
+    "options": [
+      "A) Acute dystonia",
+      "B) Akathisia",
+      "C) Tardive dyskinesia",
+      "D) Parkinsonism"
+    ],
+    "answer": "C) Tardive dyskinesia",
+    "explanation": "Tardive dyskinesia (TD) develops after prolonged use (months to years) of antipsychotics, particularly typical antipsychotics. It presents with involuntary choreiform movements of the face, tongue, and extremities. TD may be irreversible, which is why early detection is critical. The AIMS (Abnormal Involuntary Movement Scale) is used for screening. Dystonia occurs within hours-days. Akathisia involves restlessness. Parkinsonism involves tremor and bradykinesia.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "The nurse knows that the correct chronological order of extrapyramidal symptoms (EPS) onset from antipsychotic medications is:",
+    "options": [
+      "A) Tardive dyskinesia \u2192 Akathisia \u2192 Parkinsonism \u2192 Dystonia",
+      "B) Dystonia (hours-days) \u2192 Akathisia (days-weeks) \u2192 Parkinsonism (weeks-months) \u2192 Tardive dyskinesia (months-years)",
+      "C) Parkinsonism \u2192 Dystonia \u2192 Akathisia \u2192 Tardive dyskinesia",
+      "D) Akathisia \u2192 Dystonia \u2192 Tardive dyskinesia \u2192 Parkinsonism"
+    ],
+    "answer": "B) Dystonia (hours-days) \u2192 Akathisia (days-weeks) \u2192 Parkinsonism (weeks-months) \u2192 Tardive dyskinesia (months-years)",
+    "explanation": "EPS follows a predictable timeline: Dystonia appears first (hours to days) with muscle spasms. Akathisia follows (days to weeks) with motor restlessness. Parkinsonism develops next (weeks to months) with tremor, rigidity, and shuffling gait. Tardive dyskinesia appears last (months to years) with involuntary facial and limb movements. This timeline is a high-yield NCLEX topic.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client on the psychiatric unit states, 'The world would be better without me' and 'I have nothing to live for.' During shift report, the oncoming nurse learns the client also has access to a firearm at home. Which risk assessment tool component does the nurse prioritize?",
+    "options": [
+      "A) The client's insurance status for follow-up care",
+      "B) Means restriction \u2014 ensuring that upon discharge, the firearm is removed or secured by a family member",
+      "C) Whether the client has a history of substance abuse",
+      "D) The client's compliance with current medications"
+    ],
+    "answer": "B) Means restriction \u2014 ensuring that upon discharge, the firearm is removed or secured by a family member",
+    "explanation": "Means restriction is one of the most effective suicide prevention strategies. Access to firearms significantly increases lethality of suicide attempts. The nurse must work with the treatment team and family to ensure the firearm is removed or secured before discharge. While substance abuse history and medication compliance are relevant to overall assessment, restricting access to lethal means is the most impactful immediate intervention.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is caring for a client recently started on fluoxetine (Prozac) for depression. The client reports feeling more energized after 10 days but still expresses hopelessness. The nurse should be MOST concerned because:",
+    "options": [
+      "A) The medication is not working",
+      "B) Increased energy before mood improvement may increase the risk of suicide \u2014 the client now has the energy to act on suicidal thoughts",
+      "C) The client is having an allergic reaction",
+      "D) This is a normal and positive sign of recovery"
+    ],
+    "answer": "B) Increased energy before mood improvement may increase the risk of suicide \u2014 the client now has the energy to act on suicidal thoughts",
+    "explanation": "A critical teaching point: antidepressants may improve energy and motivation before resolving hopelessness and suicidal ideation. This creates a dangerous window where the client has the energy to act on thoughts they previously lacked the motivation to pursue. Close monitoring for suicidal behavior is essential during the first 2-4 weeks of antidepressant therapy.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client reports experiencing intense anxiety, paranoia, and visual disturbances after taking a substance at a party. The client's pupils are dilated, heart rate is 120 bpm, and they are diaphoretic. The nurse suspects ingestion of which substance?",
+    "options": [
+      "A) Opioids",
+      "B) Hallucinogens (LSD)",
+      "C) Benzodiazepines",
+      "D) Cannabis"
+    ],
+    "answer": "B) Hallucinogens (LSD)",
+    "explanation": "LSD and other hallucinogens cause visual disturbances (hallucinations, synesthesia), paranoia, anxiety, dilated pupils, tachycardia, and diaphoresis. Opioids cause constricted pupils and respiratory depression. Benzodiazepines cause sedation and decreased anxiety. Cannabis may cause anxiety but typically does not produce the intensity of visual disturbances and autonomic symptoms described.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is working with a client diagnosed with histrionic personality disorder who frequently makes dramatic, exaggerated statements and seeks attention from staff. The MOST appropriate nursing intervention is:",
+    "options": [
+      "A) Give the client extra attention whenever they display dramatic behavior",
+      "B) Set clear boundaries, reinforce appropriate behavior, and avoid giving excessive attention to dramatic displays",
+      "C) Isolate the client from other patients to reduce their audience",
+      "D) Confront the client harshly about their attention-seeking behavior"
+    ],
+    "answer": "B) Set clear boundaries, reinforce appropriate behavior, and avoid giving excessive attention to dramatic displays",
+    "explanation": "For histrionic personality disorder, the nurse should set clear behavioral expectations, reinforce appropriate interactions, and avoid reinforcing dramatic behavior with extra attention. Giving excessive attention rewards the maladaptive behavior. Isolation is unnecessarily restrictive. Harsh confrontation damages the therapeutic relationship and does not promote behavioral change.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "Which of the following is a TRUE statement about electroconvulsive therapy (ECT)?",
+    "options": [
+      "A) ECT is only used as a last resort after all medications have failed",
+      "B) ECT can be a first-line treatment for severe depression with psychotic features, acute suicidality, or catatonia when rapid response is needed",
+      "C) ECT permanently destroys brain cells",
+      "D) ECT is only effective for schizophrenia"
+    ],
+    "answer": "B) ECT can be a first-line treatment for severe depression with psychotic features, acute suicidality, or catatonia when rapid response is needed",
+    "explanation": "ECT can be a first-line treatment when rapid response is critical (severe depression with psychotic features, active suicidality, catatonia, severe mania) or when medications are contraindicated (pregnancy). It does not permanently damage brain cells. Temporary short-term memory loss is the most common side effect. ECT is primarily indicated for mood disorders and catatonia, not primarily for schizophrenia.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client on the unit tells the nurse they hear a voice telling them they are worthless. The client has been diagnosed with major depressive disorder with psychotic features. This type of hallucination is classified as:",
+    "options": [
+      "A) Command hallucination",
+      "B) Mood-congruent hallucination",
+      "C) Mood-incongruent hallucination",
+      "D) Tactile hallucination"
+    ],
+    "answer": "B) Mood-congruent hallucination",
+    "explanation": "Mood-congruent psychotic features are consistent with the current mood state. In depression, hearing voices saying one is worthless aligns with the depressive content (guilt, worthlessness, hopelessness). Mood-incongruent features would involve content unrelated to the mood (e.g., hearing voices about grandiose powers during depression). A command hallucination specifically directs the person to take action.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "During a mental status examination, a client rapidly shifts from crying about their mother's death to laughing about a joke to expressing anger at the nurse within minutes. This is documented as:",
+    "options": [
+      "A) Flat affect",
+      "B) Labile affect",
+      "C) Blunted affect",
+      "D) Inappropriate affect"
+    ],
+    "answer": "B) Labile affect",
+    "explanation": "Labile affect refers to rapid, unpredictable shifts in emotional expression, often with wide swings between extremes. Flat affect is the absence of emotional expression. Blunted affect is severely reduced emotional expression. Inappropriate affect is emotional expression that does not match the content of what is being discussed (e.g., laughing while describing a death).",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client taking lithium develops a fever and begins drinking less fluid due to feeling ill. The nurse should be MOST concerned about:",
+    "options": [
+      "A) The fever causing psychotic symptoms",
+      "B) Dehydration and fever leading to increased lithium concentration and potential toxicity",
+      "C) The need to increase the lithium dose during illness",
+      "D) Development of serotonin syndrome"
+    ],
+    "answer": "B) Dehydration and fever leading to increased lithium concentration and potential toxicity",
+    "explanation": "Lithium has a narrow therapeutic index (0.6\u20131.2 mEq/L). Dehydration from fever and decreased fluid intake concentrates lithium in the blood, increasing the risk of toxicity. The nurse should encourage fluid intake, monitor for signs of toxicity (coarse tremors, confusion, GI symptoms), and ensure lithium levels are checked. The dose should never be increased during illness \u2014 it may need to be held.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A client who witnessed a car accident is unable to remember the event but has no head injury. The nurse identifies this as:",
+    "options": [
+      "A) Suppression",
+      "B) Repression",
+      "C) Denial",
+      "D) Dissociation"
+    ],
+    "answer": "B) Repression",
+    "explanation": "Repression is the unconscious blocking of painful or traumatic memories from awareness without conscious effort. The client did not choose to forget \u2014 the memory was automatically pushed out of consciousness as a protective mechanism. Suppression is a conscious decision to put something out of mind. Denial involves refusing to accept reality that is perceived. Dissociation involves detachment from identity or surroundings.",
+    "section": "mentalhealth"
+  },
+  {
+    "question": "A nurse is educating a client about the medication aripiprazole (Abilify). Which statement by the nurse is accurate?",
+    "options": [
+      "A) \"This medication works exactly like haloperidol.\"",
+      "B) \"Aripiprazole is an atypical antipsychotic that acts as a partial dopamine agonist, which may cause fewer metabolic side effects than some other atypical antipsychotics.\"",
+      "C) \"You will need weekly blood draws to monitor for agranulocytosis.\"",
+      "D) \"This medication should be taken only when you feel psychotic.\""
+    ],
+    "answer": "B) \"Aripiprazole is an atypical antipsychotic that acts as a partial dopamine agonist, which may cause fewer metabolic side effects than some other atypical antipsychotics.\"",
+    "explanation": "Aripiprazole is unique among atypical antipsychotics as a partial dopamine agonist (it modulates rather than blocks dopamine). It generally has a lower risk of weight gain and metabolic syndrome compared to olanzapine or clozapine. Weekly blood monitoring for agranulocytosis is specific to clozapine, not aripiprazole. Antipsychotics must be taken consistently, not PRN.",
+    "section": "mentalhealth"
+  }
+]
