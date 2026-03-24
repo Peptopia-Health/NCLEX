@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCLEX Final Review Guide — NCLEX 85 &amp; Done</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#080510;
+  color:#e2e8f0;
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  line-height:1.75;
+  padding:0;
+  font-size:1.05rem;
+}
+body::before{
+  content:'';position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 10%, rgba(124,58,237,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 90%, rgba(167,139,250,0.03) 0%, transparent 60%);
+  pointer-events:none;
+}
+.guide-container{max-width:920px;margin:0 auto;padding:1.5rem 1.4rem 4rem}
+/* === HERO === */
+.hero{
+  position:relative;
+  background:linear-gradient(135deg,#1e1b4b 0%,#4c1d95 40%,#7c3aed 100%);
+  border-radius:1.25rem;padding:2rem 1.75rem 1.75rem;margin-bottom:2rem;
+  border:2px solid #a78bfa;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;
+  background:radial-gradient(circle,rgba(167,139,250,0.2),transparent 70%);pointer-events:none;
+}
+.hero::after{content:'🟪';position:absolute;top:1rem;right:1.25rem;font-size:3rem;opacity:0.15;pointer-events:none}
+.hero h1{font-size:1.85rem;font-weight:900;color:#e2e8f0;letter-spacing:-0.02em;margin-bottom:0.5rem;text-shadow:0 2px 12px rgba(124,58,237,0.4)}
+.hero .subtitle{font-size:1rem;color:#94a3b8;line-height:1.65;font-weight:400}
+.hero .badge-row{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.85rem}
+.hero .badge-row .badge{
+  display:inline-flex;align-items:center;gap:0.3rem;
+  padding:0.25rem 0.65rem;border-radius:2rem;font-size:0.78rem;font-weight:700;
+  letter-spacing:0.03em;text-transform:uppercase;backdrop-filter:blur(4px);
+  cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;text-decoration:none;
+}
+.hero .badge-row .badge:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+.b-endo{background:rgba(251,191,36,0.2);color:#fde68a;border:1px solid rgba(251,191,36,0.4)}
+.b-infect{background:rgba(248,113,113,0.2);color:#fca5a5;border:1px solid rgba(248,113,113,0.4)}
+.b-peds{background:rgba(251,146,60,0.2);color:#fed7aa;border:1px solid rgba(251,146,60,0.4)}
+.b-cardio{background:rgba(96,165,250,0.2);color:#93c5fd;border:1px solid rgba(96,165,250,0.4)}
+.b-musc{background:rgba(163,230,53,0.2);color:#d9f99d;border:1px solid rgba(163,230,53,0.4)}
+/* === SECTION HEADERS === */
+.section-hdr{
+  position:relative;margin:2.5rem 0 1.25rem;padding:1rem 1.25rem 1rem 1.15rem;
+  border-radius:1rem;font-size:1.45rem;font-weight:800;letter-spacing:-0.01em;overflow:hidden;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.section-hdr::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;opacity:0.92;border-radius:1rem;z-index:0}
+.section-hdr span{position:relative;z-index:1}
+.section-hdr .sec-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:50%;font-size:0.85rem;font-weight:900;
+  margin-right:0.5rem;vertical-align:middle;box-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+.sec-quiz-btn{
+  position:relative;z-index:1;display:inline-flex;align-items:center;gap:0.3rem;
+  padding:0.35rem 0.85rem;border-radius:2rem;font-size:0.78rem;font-weight:700;
+  border:1.5px solid rgba(255,255,255,0.4);background:rgba(255,255,255,0.12);
+  color:#e2e8f0;cursor:pointer;backdrop-filter:blur(4px);transition:all 0.15s;
+  white-space:nowrap;flex-shrink:0;
+}
+.sec-quiz-btn:hover{background:rgba(255,255,255,0.25);transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+/* Section themes */
+.sh-endo{border:2px solid #f59e0b;background:linear-gradient(135deg,#451a03,#78350f,#92400e)}
+.sh-endo::before{background:linear-gradient(135deg,rgba(245,158,11,0.1),transparent)}
+.sh-endo .sec-num{background:#f59e0b;color:#451a03} .sh-endo span{color:#fde68a}
+.sh-infect{border:2px solid #ef4444;background:linear-gradient(135deg,#450a0a,#7f1d1d,#991b1b)}
+.sh-infect::before{background:linear-gradient(135deg,rgba(239,68,68,0.1),transparent)}
+.sh-infect .sec-num{background:#ef4444;color:#450a0a} .sh-infect span{color:#fecaca}
+.sh-peds{border:2px solid #f97316;background:linear-gradient(135deg,#431407,#7c2d12,#9a3412)}
+.sh-peds::before{background:linear-gradient(135deg,rgba(249,115,22,0.1),transparent)}
+.sh-peds .sec-num{background:#f97316;color:#431407} .sh-peds span{color:#fed7aa}
+.sh-cardio{border:2px solid #3b82f6;background:linear-gradient(135deg,#172554,#1e3a8a,#1d4ed8)}
+.sh-cardio::before{background:linear-gradient(135deg,rgba(59,130,246,0.1),transparent)}
+.sh-cardio .sec-num{background:#3b82f6;color:#172554} .sh-cardio span{color:#bfdbfe}
+.sh-musc{border:2px solid #84cc16;background:linear-gradient(135deg,#1a2e05,#365314,#3f6212)}
+.sh-musc::before{background:linear-gradient(135deg,rgba(132,204,22,0.1),transparent)}
+.sh-musc .sec-num{background:#84cc16;color:#1a2e05} .sh-musc span{color:#d9f99d}
+/* === CONTENT ELEMENTS === */
+h3{font-size:1.18rem;color:#c4b5fd;margin:1.6rem 0 0.6rem;font-weight:700}
+h4{font-size:1.06rem;color:#a78bfa;margin:1rem 0 0.4rem;font-weight:700}
+p,li{color:#e2e8f0;margin:0.3rem 0;font-size:1.02rem}
+ul,ol{padding-left:1.5rem}
+li{margin:0.25rem 0} li::marker{color:#a78bfa}
+strong,b{color:#f1f5f9} em{color:#cbd5e1}
+.danger{color:#f87171;font-weight:700} .warn{color:#fbbf24;font-weight:700}
+.safe{color:#4ade80;font-weight:700} .drug{color:#93c5fd;font-weight:700}
+.lab{color:#4ade80;font-weight:700}
+/* === COMPARISON TABLES === */
+.compare-table{
+  width:100%;border-collapse:separate;border-spacing:0;margin:0.85rem 0 1.5rem;font-size:1rem;
+  border:2px solid #334155;border-radius:0.85rem;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.3);
+}
+.compare-table th{
+  background:linear-gradient(180deg,#1e1b4b,#2e1065);color:#c4b5fd;font-weight:800;
+  padding:0.7rem 0.75rem;text-align:left;border-bottom:2px solid #4c1d95;
+  font-size:0.88rem;text-transform:uppercase;letter-spacing:0.05em;position:sticky;top:0;z-index:2;
+}
+.compare-table td{background:#0c0a14;color:#e2e8f0;padding:0.65rem 0.75rem;border-bottom:1px solid #1e293b;vertical-align:top;line-height:1.6}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table tr:hover td{background:rgba(124,58,237,0.06)}
+.compare-table .cat-label{font-weight:700;background:linear-gradient(90deg,#0f0b1e,#0c0a14);color:#c4b5fd;white-space:nowrap;min-width:115px;font-size:0.9rem;border-right:2px solid #2e1b4b}
+/* === VS BANNER === */
+.vs-banner{
+  display:flex;align-items:center;gap:0.75rem;margin:1.25rem 0;padding:0.6rem 1rem;
+  background:linear-gradient(90deg,rgba(30,27,75,0.5),rgba(15,23,42,0.8),rgba(30,27,75,0.5));
+  border-radius:0.75rem;border:1px solid #334155;
+}
+.vs-banner .vs-label{font-family:'JetBrains Mono',monospace;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#94a3b8;flex-shrink:0}
+.vs-banner .vs-cond{font-size:1.08rem;font-weight:700}
+.vs-banner .vs-circle{
+  flex-shrink:0;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:'JetBrains Mono',monospace;font-size:0.75rem;font-weight:900;
+  background:linear-gradient(135deg,#6d28d9,#7c3aed);color:#e2e8f0;box-shadow:0 0 16px rgba(124,58,237,0.3);letter-spacing:0.05em;
+}
+.vs-left{color:#f87171} .vs-right{color:#67e8f9}
+/* === SPECIAL BOXES === */
+.dx-card{
+  position:relative;background:linear-gradient(135deg,rgba(30,27,75,0.7),rgba(12,10,20,0.95));
+  border:2px solid #4c1d95;border-radius:1.1rem;padding:1.25rem;margin:1.25rem 0;overflow:hidden;
+}
+.dx-card::before{content:'';position:absolute;top:0;left:0;width:6px;height:100%;border-radius:1.1rem 0 0 1.1rem}
+.dx-card.card-violet::before{background:linear-gradient(180deg,#8b5cf6,#7c3aed)}
+.dx-card.card-red::before{background:linear-gradient(180deg,#ef4444,#dc2626)}
+.dx-card.card-amber::before{background:linear-gradient(180deg,#f59e0b,#d97706)}
+.dx-card.card-blue::before{background:linear-gradient(180deg,#3b82f6,#2563eb)}
+.dx-card.card-green::before{background:linear-gradient(180deg,#84cc16,#65a30d)}
+.dx-card.card-orange::before{background:linear-gradient(180deg,#f97316,#ea580c)}
+.dx-card h3{margin-top:0;color:#cbd5e1;font-size:1.18rem}
+.dx-card .tag-row{display:flex;flex-wrap:wrap;gap:0.35rem;margin:0.4rem 0 0.65rem}
+.tag{display:inline-flex;align-items:center;gap:0.25rem;padding:0.2rem 0.6rem;border-radius:2rem;font-size:0.78rem;font-weight:700;letter-spacing:0.03em;text-transform:uppercase}
+.tag-danger{background:rgba(248,113,113,0.15);color:#fca5a5;border:1px solid rgba(248,113,113,0.4)}
+.tag-violet{background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.4)}
+.tag-blue{background:rgba(96,165,250,0.15);color:#93c5fd;border:1px solid rgba(96,165,250,0.4)}
+.tag-amber{background:rgba(251,191,36,0.15);color:#fde68a;border:1px solid rgba(251,191,36,0.4)}
+.tag-green{background:rgba(74,222,128,0.15);color:#86efac;border:1px solid rgba(74,222,128,0.4)}
+.tag-orange{background:rgba(251,146,60,0.15);color:#fed7aa;border:1px solid rgba(251,146,60,0.4)}
+/* Mnemonic */
+.mnemonic{
+  position:relative;background:linear-gradient(135deg,#1e1b4b,#2e1065);
+  border:2px solid #7c3aed;border-radius:0.85rem;padding:1rem 1.15rem 1rem 3rem;
+  margin:1rem 0;font-size:1.02rem;line-height:1.7;box-shadow:0 4px 16px rgba(124,58,237,0.15);
+}
+.mnemonic::before{content:'💡';position:absolute;left:0.85rem;top:0.9rem;font-size:1.35rem}
+.mnemonic strong{color:#c4b5fd;font-size:1.06rem} .mnemonic em{color:#a78bfa}
+/* NCLEX Tip */
+.nclex-tip{
+  position:relative;background:linear-gradient(135deg,rgba(124,58,237,0.1),rgba(76,29,149,0.05));
+  border:1.5px solid #4c1d95;border-left:5px solid #7c3aed;border-radius:0.75rem;
+  padding:1rem 1.15rem 1rem 3rem;margin:1rem 0;font-size:1.02rem;line-height:1.65;
+}
+.nclex-tip::before{content:'🎯';position:absolute;left:0.85rem;top:0.9rem;font-size:1.25rem}
+.nclex-tip strong{color:#c4b5fd;font-size:1.04rem}
+/* Lethal / Critical */
+.lethal{
+  position:relative;background:linear-gradient(135deg,rgba(248,113,113,0.12),rgba(220,38,38,0.06));
+  border:2px solid #dc2626;border-left:6px solid #ef4444;border-radius:0.75rem;
+  padding:1rem 1.15rem 1rem 3.25rem;margin:1rem 0;font-size:1.05rem;line-height:1.65;
+  box-shadow:0 0 20px rgba(239,68,68,0.08);
+}
+.lethal::before{content:'☠️';position:absolute;left:0.85rem;top:0.85rem;font-size:1.35rem}
+.lethal strong{color:#fca5a5;font-size:1.08rem}
+/* ADPIE Box */
+.adpie{
+  position:relative;background:linear-gradient(135deg,rgba(99,102,241,0.08),rgba(79,70,229,0.04));
+  border:2px solid #6366f1;border-radius:1rem;padding:1.25rem;margin:1.25rem 0;
+  box-shadow:0 4px 20px rgba(99,102,241,0.1);
+}
+.adpie h3{margin-top:0;color:#a5b4fc;font-size:1.12rem}
+.adpie-step{display:flex;gap:0.65rem;margin:0.6rem 0;align-items:flex-start}
+.adpie-label{
+  flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;
+  min-width:38px;height:24px;border-radius:2rem;font-size:0.7rem;font-weight:900;
+  letter-spacing:0.06em;text-transform:uppercase;
+}
+.adpie-a{background:rgba(96,165,250,0.2);color:#93c5fd;border:1px solid rgba(96,165,250,0.4)}
+.adpie-d{background:rgba(248,113,113,0.2);color:#fca5a5;border:1px solid rgba(248,113,113,0.4)}
+.adpie-p{background:rgba(251,191,36,0.2);color:#fde68a;border:1px solid rgba(251,191,36,0.4)}
+.adpie-i{background:rgba(74,222,128,0.2);color:#86efac;border:1px solid rgba(74,222,128,0.4)}
+.adpie-e{background:rgba(167,139,250,0.2);color:#c4b5fd;border:1px solid rgba(167,139,250,0.4)}
+.adpie-text{color:#e2e8f0;font-size:1rem;line-height:1.65}
+/* Dividers */
+.section-divider{border:none;height:2px;margin:2rem 0;background:linear-gradient(90deg,transparent,#4c1d95,#7c3aed,#4c1d95,transparent)}
+/* Sticky nav */
+.nav-bar{
+  position:sticky;top:0;z-index:100;display:flex;gap:0.35rem;padding:0.5rem 0;margin-bottom:0.5rem;
+  overflow-x:auto;-webkit-overflow-scrolling:touch;background:linear-gradient(180deg,#080510 60%,transparent);scrollbar-width:none;
+}
+.nav-bar::-webkit-scrollbar{display:none}
+.nav-pill{
+  display:inline-flex;align-items:center;gap:0.25rem;padding:0.35rem 0.7rem;border-radius:2rem;
+  font-size:0.75rem;font-weight:700;white-space:nowrap;text-decoration:none;
+  border:1.5px solid #334155;background:rgba(12,10,20,0.8);color:#94a3b8;
+  transition:all 0.2s;cursor:pointer;backdrop-filter:blur(8px);
+}
+.nav-pill:hover{border-color:#7c3aed;color:#c4b5fd;background:rgba(76,29,149,0.15)}
+/* Animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.anim{animation:fadeUp 0.5s ease-out both}
+.d1{animation-delay:0.05s}.d2{animation-delay:0.1s}.d3{animation-delay:0.15s}.d4{animation-delay:0.2s}.d5{animation-delay:0.25s}
+/* Responsive */
+@media(max-width:640px){
+  .guide-container{padding:1rem 0.75rem 3rem}
+  .hero{padding:1.5rem 1.15rem;border-radius:1rem} .hero h1{font-size:1.45rem} .hero::after{display:none}
+  .section-hdr{font-size:1.2rem;padding:0.85rem 1rem}
+  .section-hdr .sec-num{width:26px;height:26px;font-size:0.75rem}
+  .sec-quiz-btn{font-size:0.68rem;padding:0.25rem 0.6rem}
+  .compare-table{font-size:0.92rem} .compare-table th,.compare-table td{padding:0.5rem 0.55rem}
+  .compare-table .cat-label{white-space:normal;min-width:80px;font-size:0.82rem}
+  .vs-banner{flex-direction:column;text-align:center;gap:0.35rem;padding:0.5rem 0.75rem}
+  .vs-banner .vs-circle{width:32px;height:32px;font-size:0.65rem}
+  .dx-card{padding:1rem} .mnemonic{padding-left:2.75rem} .mnemonic::before{left:0.65rem}
+  .nclex-tip{padding-left:2.75rem} .nclex-tip::before{left:0.65rem}
+  .lethal{padding-left:2.75rem} .lethal::before{left:0.65rem}
+  .adpie{padding:1rem}
+  .nav-bar{gap:0.25rem} .nav-pill{font-size:0.68rem;padding:0.3rem 0.55rem}
+}
+</style>
+</head>
+<body>
+<div class="guide-container">
+
+<!-- HERO -->
+<div class="hero anim">
+<h1>🟪 NCLEX Final Review Guide</h1>
+<p class="subtitle">A comprehensive clinical review targeting priority gaps: Adult Endocrine, Infectious Disease, Pediatric Hematology/Oncology, Cardiovascular, and Musculoskeletal systems. Each section uses the ADPIE framework to structure clinical judgment.</p>
+<div class="badge-row">
+<a class="badge b-endo" href="#sec-endo">⚗️ Endocrine</a>
+<a class="badge b-infect" href="#sec-infect">🦠 Infectious Disease</a>
+<a class="badge b-peds" href="#sec-peds">🧒 Peds Heme/Onc</a>
+<a class="badge b-cardio" href="#sec-cardio">❤️ Cardiovascular</a>
+<a class="badge b-musc" href="#sec-musc">🦴 Musculoskeletal</a>
+</div>
+<button class="guide-quiz-btn" onclick="launchQuiz()" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 1rem;border-radius:2rem;font-size:0.85rem;font-weight:700;border:2px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.12);color:#e2e8f0;cursor:pointer;backdrop-filter:blur(4px);transition:all 0.15s;margin-top:0.5rem;">📝 Launch Quiz</button>
+</div>
+
+<!-- NAV BAR -->
+<div class="nav-bar">
+<a class="nav-pill" href="#sec-endo">⚗️ Endocrine</a>
+<a class="nav-pill" href="#sec-infect">🦠 Sepsis</a>
+<a class="nav-pill" href="#sec-peds">🧒 Sickle Cell</a>
+<a class="nav-pill" href="#sec-cardio">❤️ Heart Failure</a>
+<a class="nav-pill" href="#sec-musc">🦴 Ortho Emergencies</a>
+</div>
+
+<!-- ================================================================ -->
+<!-- SECTION 1: ENDOCRINE -->
+<!-- ================================================================ -->
+<div id="sec-endo" class="section-hdr sh-endo anim d2">
+<span><span class="sec-num">1</span> ⚗️ Endocrine &mdash; DKA vs. HHS</span>
+<button class="sec-quiz-btn" onclick="launchQuiz('finalreview')">📝 Quiz</button>
+</div>
+
+<div class="mnemonic anim d3">
+<strong>Core Concept:</strong> <em>DKA</em> affects Type 1 diabetics with absolute insulin deficiency, rapid onset, and ketosis. <em>HHS</em> affects Type 2 diabetics with profound dehydration, gradual onset, and no ketosis. Both are life-threatening hyperglycemic emergencies.
+</div>
+
+<!-- DKA vs HHS comparison -->
+<h3>🔬 Diagnostic Comparison</h3>
+<table class="compare-table anim d4">
+<thead><tr><th>Parameter</th><th>DKA</th><th>HHS</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Blood Glucose</td><td>250 &ndash; 800 mg/dL</td><td>&gt; 600 mg/dL (often &gt; 1000)</td></tr>
+<tr><td class="cat-label">ABG (pH)</td><td>Metabolic acidosis (pH &lt; 7.30)</td><td>Near normal</td></tr>
+<tr><td class="cat-label">Bicarbonate</td><td>HCO3 &lt; 18 mEq/L</td><td>Normal or mildly low</td></tr>
+<tr><td class="cat-label">Ketones</td><td><strong class="danger">Positive</strong> (urine &amp; serum)</td><td><strong class="safe">Negative</strong></td></tr>
+<tr><td class="cat-label">Serum Osmolality</td><td>Variable</td><td>&gt; 320 mOsm/kg</td></tr>
+<tr><td class="cat-label">Serum K+</td><td>Initially elevated, drops with treatment</td><td>Variable</td></tr>
+<tr><td class="cat-label">Onset</td><td>Rapid (hours)</td><td>Gradual (days to weeks)</td></tr>
+</tbody>
+</table>
+
+<h3>💊 Pharmacological Interventions</h3>
+<div class="dx-card card-amber">
+<h3>IV Fluid Protocol</h3>
+<ul>
+<li><strong class="drug">0.9% Normal Saline</strong> (isotonic) &mdash; Initiate first to restore circulating volume</li>
+<li>Switch to <strong class="drug">D5W &frac12;NS</strong> (5% Dextrose with 0.45% NS) when glucose reaches ~250 mg/dL to prevent hypoglycemia</li>
+</ul>
+</div>
+
+<div class="dx-card card-blue">
+<h3>Insulin &amp; Electrolyte Management</h3>
+<ul>
+<li><strong class="drug">Regular Insulin (IV)</strong> &mdash; The <em>only</em> insulin that can be administered intravenously. Given as continuous infusion.</li>
+<li><strong class="drug">Potassium Chloride (KCl)</strong> &mdash; Add to IV fluids once urine output is adequate. Insulin drives K+ back into cells, causing severe <span class="danger">hypokalemia</span>.</li>
+</ul>
+</div>
+
+<div class="nclex-tip">
+<strong>NCLEX Key:</strong> Always prime the IV tubing with Regular Insulin solution before initiating the drip &mdash; insulin adheres to plastic tubing.
+</div>
+
+<!-- ADPIE Case Study -->
+<div class="adpie">
+<h3>🟦 ADPIE Case Study: The DKA Patient</h3>
+<div class="adpie-step"><span class="adpie-label adpie-a">A</span><span class="adpie-text"><strong>Assessment:</strong> Kussmaul respirations, fruity breath odor, lethargy, poor skin turgor, tachycardia.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-d">Dx</span><span class="adpie-text"><strong>Diagnosis:</strong> Deficient fluid volume related to osmotic diuresis; Risk for electrolyte imbalance.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-p">P</span><span class="adpie-text"><strong>Planning:</strong> Restore fluid volume, correct acidosis, normalize blood glucose levels slowly.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-i">I</span><span class="adpie-text"><strong>Implementation:</strong> Establish two large-bore IVs. Administer bolus of 0.9% NS. Prime IV tubing with Regular Insulin before initiating drip. Monitor blood glucose hourly. Monitor telemetry for peaked T-waves (hyperkalemia) or prominent U-waves (hypokalemia).</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-e">E</span><span class="adpie-text"><strong>Evaluation:</strong> Resolution of acidosis (HCO3 &gt; 18, pH &gt; 7.30), patient alert and oriented, blood glucose stable 150&ndash;200 mg/dL.</span></div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<!-- SECTION 2: INFECTIOUS DISEASE -->
+<!-- ================================================================ -->
+<div id="sec-infect" class="section-hdr sh-infect anim d2">
+<span><span class="sec-num">2</span> 🦠 Infectious Disease &mdash; Sepsis &amp; Septic Shock</span>
+<button class="sec-quiz-btn" onclick="launchQuiz('finalreview')">📝 Quiz</button>
+</div>
+
+<div class="mnemonic anim d3">
+<strong>Core Concept:</strong> <em>Sepsis</em> is life-threatening organ dysfunction caused by a dysregulated host response to infection. <em>Septic shock</em> is a subset with profound circulatory, cellular, and metabolic abnormalities.
+</div>
+
+<h3>🔬 Diagnostic Labs</h3>
+<table class="compare-table">
+<thead><tr><th>Lab</th><th>Significance</th><th>Critical Value</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Lactic Acid</td><td>Indicates tissue hypoperfusion</td><td><strong class="danger">&gt; 2 mmol/L</strong></td></tr>
+<tr><td class="cat-label">Blood Cultures</td><td>Identify causative organism</td><td>Obtain <strong>BEFORE</strong> antibiotics</td></tr>
+<tr><td class="cat-label">WBC Count</td><td>Infection marker</td><td>&gt; 12,000 or &lt; 4,000/mm&sup3;, or &gt; 10% bands</td></tr>
+<tr><td class="cat-label">Procalcitonin</td><td>Bacterial infection biomarker</td><td>Elevated = bacterial etiology</td></tr>
+</tbody>
+</table>
+
+<h3>💊 Pharmacological Interventions</h3>
+<div class="dx-card card-red">
+<h3>Sepsis 1-Hour Bundle</h3>
+<div class="tag-row"><span class="tag tag-danger">TIME-CRITICAL</span></div>
+<ul>
+<li><strong class="drug">Broad-Spectrum Antibiotics</strong> (e.g., Piperacillin/Tazobactam, Vancomycin) &mdash; Administer within the <strong>first hour</strong> of recognition</li>
+<li><strong>30 mL/kg crystalloid fluids</strong> for hypotension or lactate &ge; 4 mmol/L</li>
+</ul>
+</div>
+
+<div class="dx-card card-violet">
+<h3>Vasopressors &amp; Adjuncts</h3>
+<ul>
+<li><strong class="drug">Norepinephrine</strong> &mdash; First-line vasopressor if hypotension persists after adequate fluid resuscitation</li>
+<li><strong class="drug">Hydrocortisone</strong> &mdash; Consider for refractory shock unresponsive to fluids and vasopressors</li>
+</ul>
+</div>
+
+<div class="lethal">
+<strong>Critical Alert:</strong> Blood cultures must be drawn <strong>BEFORE</strong> antibiotic administration. However, antibiotic delivery must <em>not be delayed</em> &mdash; if cultures are logistically difficult, administer antibiotics first. <strong>Time kills in sepsis.</strong>
+</div>
+
+<!-- ADPIE -->
+<div class="adpie">
+<h3>🟦 ADPIE Case Study: The Septic Patient</h3>
+<div class="adpie-step"><span class="adpie-label adpie-a">A</span><span class="adpie-text"><strong>Assessment:</strong> Temp &gt; 38.3&deg;C or &lt; 36.0&deg;C, HR &gt; 90, RR &gt; 20, altered mental status, MAP &lt; 65 mmHg.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-d">Dx</span><span class="adpie-text"><strong>Diagnosis:</strong> Impaired tissue perfusion; Infection.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-p">P</span><span class="adpie-text"><strong>Planning:</strong> Administer 1-hour bundle interventions. Restore MAP to &ge; 65 mmHg.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-i">I</span><span class="adpie-text"><strong>Implementation:</strong> Draw lactic acid and blood cultures. Administer 30 mL/kg crystalloid for hypotension or lactate &ge; 4. Administer broad-spectrum antibiotics.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-e">E</span><span class="adpie-text"><strong>Evaluation:</strong> Lactate clearance, normalization of vital signs, improved urine output (&gt; 0.5 mL/kg/hr).</span></div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<!-- SECTION 3: PEDIATRIC HEMATOLOGY -->
+<!-- ================================================================ -->
+<div id="sec-peds" class="section-hdr sh-peds anim d2">
+<span><span class="sec-num">3</span> 🧒 Peds Heme/Onc &mdash; Sickle Cell Crisis</span>
+<button class="sec-quiz-btn" onclick="launchQuiz('finalreview')">📝 Quiz</button>
+</div>
+
+<div class="mnemonic anim d3">
+<strong>Core Concept:</strong> Vaso-occlusive crisis is the most common and painful complication of sickle cell anemia. Sickled erythrocytes obstruct microcirculation, causing <em>tissue ischemia, pain, and cellular infarction</em>.
+</div>
+
+<h3>🔬 Diagnostic Labs</h3>
+<table class="compare-table">
+<thead><tr><th>Lab</th><th>Expected Finding</th><th>Clinical Significance</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Hemoglobin</td><td>7&ndash;10 g/dL baseline</td><td>Acute drops &rarr; aplastic or splenic sequestration crisis</td></tr>
+<tr><td class="cat-label">Reticulocyte Count</td><td>Elevated</td><td>Compensatory bone marrow production from rapid RBC destruction</td></tr>
+<tr><td class="cat-label">Bilirubin</td><td>Elevated</td><td>RBC hemolysis byproduct</td></tr>
+</tbody>
+</table>
+
+<h3>💊 Pharmacological Interventions</h3>
+<div class="dx-card card-orange">
+<h3>Pain Management</h3>
+<ul>
+<li><strong class="drug">Morphine</strong> or <strong class="drug">Hydromorphone</strong> via PCA pump &mdash; administer on a <strong>scheduled, around-the-clock</strong> basis (NOT PRN)</li>
+<li><strong class="danger">Avoid Meperidine (Demerol)</strong> &mdash; high risk of normeperidine-induced seizures</li>
+</ul>
+</div>
+
+<div class="dx-card card-violet">
+<h3>Disease Modifiers &amp; Hydration</h3>
+<ul>
+<li><strong class="drug">Hydroxyurea</strong> &mdash; Increases fetal hemoglobin (HbF) production, reducing frequency of sickling crises</li>
+<li><strong class="drug">0.45% Normal Saline</strong> &mdash; Aggressive IV hydration to reduce blood viscosity and prevent further sickling</li>
+</ul>
+</div>
+
+<div class="lethal">
+<strong>Critical Nursing Actions:</strong> Apply <strong>WARM</strong> compresses to painful joints. <span class="danger">NEVER use cold</span> &mdash; cold promotes vasoconstriction and sickling. Provide supplemental O2 <strong>only if hypoxic</strong> (SpO2 &lt; 92%).
+</div>
+
+<!-- ADPIE -->
+<div class="adpie">
+<h3>🟦 ADPIE Case Study: Pediatric Sickle Cell Patient</h3>
+<div class="adpie-step"><span class="adpie-label adpie-a">A</span><span class="adpie-text"><strong>Assessment:</strong> Severe, localized pain (extremities, back, abdomen), joint swelling (dactylitis in infants), fever.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-d">Dx</span><span class="adpie-text"><strong>Diagnosis:</strong> Acute pain related to tissue ischemia; Deficient fluid volume.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-p">P</span><span class="adpie-text"><strong>Planning:</strong> Achieve acceptable pain level (patient-defined), optimize hydration, prevent hypoxemia.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-i">I</span><span class="adpie-text"><strong>Implementation:</strong> Administer high-flow IV fluids. Administer scheduled Morphine around the clock. Apply warm compresses. Provide O2 only if SpO2 &lt; 92%.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-e">E</span><span class="adpie-text"><strong>Evaluation:</strong> Patient reports pain is manageable, O2 saturation maintained on room air, adequate and clear urine output.</span></div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<!-- SECTION 4: CARDIOVASCULAR -->
+<!-- ================================================================ -->
+<div id="sec-cardio" class="section-hdr sh-cardio anim d2">
+<span><span class="sec-num">4</span> ❤️ Cardiovascular &mdash; Heart Failure</span>
+<button class="sec-quiz-btn" onclick="launchQuiz('finalreview')">📝 Quiz</button>
+</div>
+
+<div class="mnemonic anim d3">
+<strong>Core Concept:</strong> <em>Left-sided HF</em> affects pulmonary circulation &mdash; fluid backs up into lungs (pulmonary edema). <em>Right-sided HF (Cor Pulmonale)</em> affects systemic circulation &mdash; fluid backs up into the venous system (peripheral edema, JVD, hepatomegaly).
+</div>
+
+<!-- Left vs Right comparison -->
+<h3>🔬 Left vs. Right Heart Failure</h3>
+<div class="vs-banner">
+<div style="flex:1;text-align:center">
+<div class="vs-cond vs-left">Left-Sided</div>
+<p style="font-size:0.9rem;color:#94a3b8;margin-top:0.25rem">Pulmonary symptoms</p>
+</div>
+<div class="vs-circle">VS</div>
+<div style="flex:1;text-align:center">
+<div class="vs-cond vs-right">Right-Sided</div>
+<p style="font-size:0.9rem;color:#94a3b8;margin-top:0.25rem">Systemic symptoms</p>
+</div>
+</div>
+
+<table class="compare-table">
+<thead><tr><th>Feature</th><th>Left-Sided HF</th><th>Right-Sided HF</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Key Symptoms</td><td>Dyspnea, orthopnea, crackles, pink frothy sputum, PND</td><td>Peripheral edema, JVD, hepatomegaly, ascites, weight gain</td></tr>
+<tr><td class="cat-label">Pathophysiology</td><td>LV fails &rarr; fluid backs into pulmonary veins</td><td>RV fails &rarr; fluid backs into systemic veins</td></tr>
+<tr><td class="cat-label">Common Cause</td><td>CAD, hypertension, aortic valve disease</td><td>Often secondary to left-sided HF, or pulmonary hypertension</td></tr>
+</tbody>
+</table>
+
+<h3>🔬 Diagnostic Labs &amp; Monitoring</h3>
+<table class="compare-table">
+<thead><tr><th>Test</th><th>Significance</th><th>Key Values</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">BNP</td><td>Heart failure biomarker</td><td><strong class="danger">&gt; 100 pg/mL</strong> = HF; correlates with severity</td></tr>
+<tr><td class="cat-label">Echocardiogram</td><td>Gold standard</td><td>EF normal 55&ndash;70%; <strong class="danger">EF &lt; 40%</strong> = systolic HF</td></tr>
+<tr><td class="cat-label">CMP (K+, BUN, Cr)</td><td>Monitor with diuretics</td><td>K+ critical with loop diuretics; BUN/Cr for renal perfusion</td></tr>
+<tr><td class="cat-label">Chest X-Ray</td><td>Structural assessment</td><td>Cardiomegaly, pleural effusions, pulmonary congestion</td></tr>
+</tbody>
+</table>
+
+<h3>💊 Pharmacological Interventions</h3>
+<div class="dx-card card-blue">
+<h3>Loop Diuretics</h3>
+<ul>
+<li><strong class="drug">Furosemide</strong> or <strong class="drug">Bumetanide</strong> &mdash; Rapidly decrease preload by promoting Na+ and water excretion</li>
+<li><span class="danger">Nursing priority:</span> Assess serum K+ before administration &mdash; high risk of <strong>hypokalemia</strong></li>
+<li>Administer IV push over 1&ndash;2 minutes to prevent <strong>ototoxicity</strong></li>
+</ul>
+</div>
+
+<div class="dx-card card-violet">
+<h3>ACE Inhibitors</h3>
+<ul>
+<li><strong class="drug">Lisinopril</strong> or <strong class="drug">Enalapril</strong> &mdash; Block RAAS, promoting vasodilation and decreasing afterload</li>
+<li><span class="danger">Monitor for:</span> Dry, hacking cough or life-threatening <strong>angioedema</strong></li>
+</ul>
+</div>
+
+<div class="dx-card card-blue">
+<h3>Beta-Blockers &amp; Cardiac Glycosides</h3>
+<ul>
+<li><strong class="drug">Metoprolol</strong> / <strong class="drug">Carvedilol</strong> &mdash; Decrease HR and myocardial O2 demand. <span class="danger">Hold if HR &lt; 60 or SBP &lt; 100.</span></li>
+<li><strong class="drug">Digoxin</strong> &mdash; Positive inotrope, negative chronotrope. Check <strong>apical pulse &times; 1 full minute</strong> before giving. Toxicity worsened by <strong class="danger">hypokalemia</strong> (visual disturbances, N/V, bradycardia).</li>
+</ul>
+</div>
+
+<!-- ADPIE -->
+<div class="adpie">
+<h3>🟦 ADPIE Case Study: Acute Decompensated Heart Failure</h3>
+<div class="adpie-step"><span class="adpie-label adpie-a">A</span><span class="adpie-text"><strong>Assessment:</strong> Severe dyspnea at rest, orthopnea, PND, bilateral crackles, pink frothy sputum, RR 28.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-d">Dx</span><span class="adpie-text"><strong>Diagnosis:</strong> Impaired gas exchange r/t alveolar fluid accumulation; Decreased cardiac output r/t altered contractility.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-p">P</span><span class="adpie-text"><strong>Planning:</strong> Improve oxygenation, rapidly reduce preload, decrease myocardial workload.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-i">I</span><span class="adpie-text"><strong>Implementation:</strong> Elevate HOB to high-Fowler's. O2 to maintain SpO2 &gt; 94%. IV Furosemide over 1&ndash;2 min. Insert Foley for strict I&amp;O. Continuous telemetry for ventricular dysrhythmias.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-e">E</span><span class="adpie-text"><strong>Evaluation:</strong> Unlabored RR 16, clear lung sounds, SpO2 96% on room air, UO &gt; 100 mL/hr.</span></div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ================================================================ -->
+<!-- SECTION 5: MUSCULOSKELETAL -->
+<!-- ================================================================ -->
+<div id="sec-musc" class="section-hdr sh-musc anim d2">
+<span><span class="sec-num">5</span> 🦴 Musculoskeletal &mdash; Ortho Emergencies</span>
+<button class="sec-quiz-btn" onclick="launchQuiz('finalreview')">📝 Quiz</button>
+</div>
+
+<div class="mnemonic anim d3">
+<strong>Two Critical Emergencies:</strong> <em>Compartment Syndrome</em> &mdash; increased pressure within a myofascial compartment compromises circulation and leads to necrosis. <em>Fat Embolism Syndrome (FES)</em> &mdash; fat globules from fractured long bones occlude microvasculature of lungs, brain, and skin.
+</div>
+
+<!-- Compartment vs FES comparison -->
+<h3>🔬 Compartment Syndrome vs. Fat Embolism Syndrome</h3>
+<table class="compare-table">
+<thead><tr><th>Feature</th><th>Compartment Syndrome</th><th>Fat Embolism (FES)</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Cause</td><td>Increased intracompartmental pressure (casts, fractures, crush injuries)</td><td>Long bone / pelvis fractures &rarr; fat globules in bloodstream</td></tr>
+<tr><td class="cat-label">Onset</td><td>Hours post-injury/surgery</td><td>12&ndash;72 hours post-fracture</td></tr>
+<tr><td class="cat-label">Key Finding</td><td><strong class="danger">Pain disproportionate to injury, unrelieved by opioids</strong></td><td><strong class="danger">Petechiae (chest/axillae/neck)</strong>, sudden dyspnea, confusion</td></tr>
+<tr><td class="cat-label">Diagnostic</td><td>Intracompartmental pressure &gt; 30 mmHg</td><td>ABG: PaO2 &lt; 60 mmHg; low platelets</td></tr>
+<tr><td class="cat-label">Treatment</td><td><strong>Emergent fasciotomy</strong></td><td>Supportive: O2, fluids, corticosteroids (controversial)</td></tr>
+</tbody>
+</table>
+
+<h3>🔬 Diagnostic Labs</h3>
+<table class="compare-table">
+<thead><tr><th>Lab</th><th>Relevance</th><th>Clinical Significance</th></tr></thead>
+<tbody>
+<tr><td class="cat-label">Compartment Pressure</td><td>Compartment Syndrome</td><td><strong class="danger">&gt; 30 mmHg</strong> = compromised perfusion</td></tr>
+<tr><td class="cat-label">ABG</td><td>FES</td><td>Profound hypoxemia (PaO2 &lt; 60); respiratory alkalosis &rarr; acidosis</td></tr>
+<tr><td class="cat-label">Platelets, PT/PTT</td><td>FES</td><td>Often decreased platelets</td></tr>
+<tr><td class="cat-label">CK / Myoglobin</td><td>Compartment Syndrome</td><td>Elevated from rhabdomyolysis &rarr; risk of acute kidney injury</td></tr>
+</tbody>
+</table>
+
+<h3>💊 Pharmacological Interventions</h3>
+<div class="dx-card card-green">
+<h3>Pain &amp; Fluid Management</h3>
+<ul>
+<li><strong class="drug">Morphine</strong> / <strong class="drug">Fentanyl</strong> &mdash; For severe pain. In compartment syndrome, pain is characteristically <strong>unresponsive</strong> to opioids (a primary clinical hallmark).</li>
+<li><strong class="drug">0.9% Normal Saline</strong> &mdash; Aggressive crystalloid resuscitation for both conditions; flushes myoglobin through kidneys in rhabdomyolysis.</li>
+<li><strong class="drug">Methylprednisolone</strong> &mdash; Controversial in FES; may decrease inflammatory response to fat globules.</li>
+</ul>
+</div>
+
+<div class="lethal">
+<strong>Critical Nursing Actions for Compartment Syndrome:</strong>
+<ul style="margin-top:0.5rem">
+<li>Keep extremity <strong>at heart level</strong> &mdash; <span class="danger">do NOT elevate</span> (decreases arterial perfusion pressure)</li>
+<li><span class="danger">Do NOT apply ice</span> (causes vasoconstriction)</li>
+<li><strong>Loosen all constrictive dressings, bivalve casts</strong></li>
+<li>Prepare patient for <strong>emergent fasciotomy</strong></li>
+</ul>
+</div>
+
+<!-- ADPIE -->
+<div class="adpie">
+<h3>🟦 ADPIE Case Study: Post-Op Femur Fracture</h3>
+<div class="adpie-step"><span class="adpie-label adpie-a">A</span><span class="adpie-text"><strong>Assessment:</strong> 24 hrs post-ORIF right femur. Excruciating, burning pain in right calf rated 10/10, unrelieved by Hydromorphone. Pain worsens with passive dorsiflexion. Pulses palpable but cap refill sluggish (4 sec).</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-d">Dx</span><span class="adpie-text"><strong>Diagnosis:</strong> Risk for peripheral neurovascular dysfunction r/t increased tissue pressure.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-p">P</span><span class="adpie-text"><strong>Planning:</strong> Prevent irreversible muscle and nerve ischemia. Facilitate immediate surgical decompression.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-i">I</span><span class="adpie-text"><strong>Implementation:</strong> Immediately notify orthopedic surgeon. Keep extremity at heart level (do NOT elevate). Loosen constrictive dressings, bivalve casts. Do NOT apply ice. Prepare for emergent fasciotomy.</span></div>
+<div class="adpie-step"><span class="adpie-label adpie-e">E</span><span class="adpie-text"><strong>Evaluation:</strong> Post-fasciotomy: significant pain reduction, cap refill &lt; 2 sec, normal sensation restored distally.</span></div>
+</div>
+
+</div><!-- end guide-container -->
+
+<script>
+function launchQuiz(key){
+  var k = key || 'finalreview';
+  if(window.parent && window.parent !== window){
+    window.parent.postMessage({type:'launchGuideQuiz', key:k},'*');
+  }
+}
+</script>
+</body>
+</html>
