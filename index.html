@@ -328,7 +328,8 @@ nutr:          {bg:'#ecfdf5',accent:'#059669',dk:'#064e3b',lt:'#d1fae5',hf:'#d1f
 stdsti:        {bg:'#f0fdfa',accent:'#0d9488',dk:'#134e4a',lt:'#ccfbf1',hf:'#ccfbf1',ht:'#99f6e4'},
 bbguide:       {bg:'#eff6ff',accent:'#2563eb',dk:'#1e3a8a',lt:'#dbeafe',hf:'#eff6ff',ht:'#bfdbfe'},
 qbank:         {bg:'#f0f4ff',accent:'#334155',dk:'#0f172a',lt:'#e2e8f0',hf:'#f1f5f9',ht:'#cbd5e1'},
-mentalhealth:  {bg:'#f0fdfa',accent:'#0d9488',dk:'#134e4a',lt:'#ccfbf1',hf:'#ccfbf1',ht:'#99f6e4'}
+mentalhealth:  {bg:'#f0fdfa',accent:'#0d9488',dk:'#134e4a',lt:'#ccfbf1',hf:'#ccfbf1',ht:'#99f6e4'},
+finalreview:   {bg:'#f5f3ff',accent:'#7c3aed',dk:'#4c1d95',lt:'#ede9fe',hf:'#ede9fe',ht:'#ddd6fe'}
 };
 /* Theme aliases — guide themes inherit from parent sections (v18.8 consolidation) */
 (function() {
@@ -485,9 +486,9 @@ loadingEl.innerHTML =
 'Error: Study data failed to load.' +
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
-var APP_VERSION = '21.2';
-var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, comprehensive7:150, comprehensive8:150, comprehensive9:150, comprehensive10:1000, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:530, pinkguide:100, bbguide:100, endoguide_thyroid:25, endoguide_adrenal:25, endoguide_adh:25, endoguide_parathyroid:25, endoguide_pheo:25, endoguide_quickref:25, endoguide_memory:25, qbank:5571, mentalhealth:100 };
-var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, comprehensive7: 1, comprehensive8: 1, comprehensive9: 1, comprehensive10: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1, pinkguide: 1, bbguide: 1, endoguide_thyroid: 1, endoguide_adrenal: 1, endoguide_adh: 1, endoguide_parathyroid: 1, endoguide_pheo: 1, endoguide_quickref: 1, endoguide_memory: 1, qbank: 1, mentalhealth: 1 };
+var APP_VERSION = '21.3';
+var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, comprehensive7:150, comprehensive8:150, comprehensive9:150, comprehensive10:1000, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:530, pinkguide:100, bbguide:100, endoguide_thyroid:25, endoguide_adrenal:25, endoguide_adh:25, endoguide_parathyroid:25, endoguide_pheo:25, endoguide_quickref:25, endoguide_memory:25, qbank:5571, mentalhealth:100, finalreview:100 };
+var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, comprehensive7: 1, comprehensive8: 1, comprehensive9: 1, comprehensive10: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1, pinkguide: 1, bbguide: 1, endoguide_thyroid: 1, endoguide_adrenal: 1, endoguide_adh: 1, endoguide_parathyroid: 1, endoguide_pheo: 1, endoguide_quickref: 1, endoguide_memory: 1, qbank: 1, mentalhealth: 1, finalreview: 1 };
 /* Paged quiz configuration — incremental sets of N questions from large banks */
 var PAGED_QUIZZES = { qbank: { pageSize: 100, totalQ: 5571 } };
 var _pagedSetKey = 'nclex85_paged_sets';
@@ -1126,7 +1127,8 @@ endocompare: '\u2697\uFE0F', infctrl: '\uD83E\uDDA0', priority: '\uD83D\uDEA8', 
 pharmguide: '\uD83D\uDC8A', fundguide: '\uD83D\uDCCB', geroguide: '\uD83E\uDDD3', nutrguide: '\uD83E\uDD57', yfguide: '\uD83D\uDCD4', pinkguide: '\uD83D\uDCD9', bbguide: '\uD83D\uDCD8',
 endoguide_thyroid: '\uD83E\uDD8B', endoguide_adrenal: '\uD83C\uDFAD', endoguide_adh: '\uD83D\uDCA7', endoguide_parathyroid: '\uD83E\uDDB4', endoguide_pheo: '\u26A1', endoguide_quickref: '\uD83D\uDCCA', endoguide_memory: '\uD83E\uDDE0',
 qbank: '\uD83D\uDCCB',
-mentalhealth: '\uD83E\uDDD8'
+mentalhealth: '\uD83E\uDDD8',
+finalreview: '\uD83D\uDFEA'
 };
 var sectionSummaries = {
 cardio: 'Heart failure, rhythms, shock, vascular disorders.',
@@ -3119,7 +3121,8 @@ yfguide:'Yellow Guide Quiz',
 pinkguide:'Pink Guide Quiz',
 bbguide:'Blue Guide Quiz',
 qbank:'Question Bank Quiz',
-mentalhealth:'Mental Health Quiz'
+mentalhealth:'Mental Health Quiz',
+finalreview:'Final Review Quiz'
 };
 var title = labels[key] || ((SECTION_LABELS[key] || key) + ' Quiz');
 initQuizUI(title, key);
@@ -3152,7 +3155,8 @@ initQuizUI(title, key);
 ['launchPinkGuideQuiz','Pink Guide Quiz','pinkguide'],
 ['launchBBGuideQuiz','Blue Guide Quiz','bbguide'],
 ['launchSTDQuiz','STDs & STIs Quiz','stdsti'],
-['launchMentalHealthQuiz','Mental Health Quiz','mentalhealth']
+['launchMentalHealthQuiz','Mental Health Quiz','mentalhealth'],
+['launchFinalReviewQuiz','Final Review Quiz','finalreview']
 ].forEach(function(e){window[e[0]]=function(){initQuizUI(e[1],e[2])}});
 window.showFullExam = window.launchFullExamQuiz;
 /* --- Paged Question Bank launcher --- */
@@ -3202,7 +3206,8 @@ if (nextBtn) nextBtn.style.opacity = getPagedSet('qbank') >= getPagedTotalSets('
 ['openBBGuide','Guides/Blue-Book.html'],
 ['openSTDGuide','Guides/STD-STI.html'],
 ['openGoldRulesGuide','Guides/Gold Rules.html'],
-['openMentalHealthGuide','Guides/Mental-Health.html']
+['openMentalHealthGuide','Guides/Mental-Health.html'],
+['openFinalReviewGuide','Guides/Final-Review.html']
 ].forEach(function(e){window[e[0]]=function(){openGuideHtml(e[1])}});
 /* launchSection — delegates to launchSectionQuiz which has the complete labels map */
 window.launchSection = function(key) { launchSectionQuiz(key); };
@@ -3606,6 +3611,8 @@ categories: [
 { title: '\u21B3 100 Questions', emoji: '\uD83D\uDCDD', sub: true, quizKey: 'nutrguide', quizColor: '#6366f1' },
 { title: 'Mental Health', file: 'Guides/Mental-Health.html', emoji: '\uD83E\uDDD8', isHtml: true },
 { title: '\u21B3 100 Questions', emoji: '\uD83D\uDCDD', sub: true, quizKey: 'mentalhealth', quizColor: '#6366f1' },
+{ title: 'Final Review', file: 'Guides/Final-Review.html', emoji: '\uD83D\uDFEA', isHtml: true },
+{ title: '\u21B3 100 Questions', emoji: '\uD83D\uDCDD', sub: true, quizKey: 'finalreview', quizColor: '#7c3aed' },
 ]},
 { name: 'Labs & Protocols', icon: '\uD83E\uDDEA', items: [
 { title: 'Labs, Protocols & Pharm', file: 'NCLEX_Labs_Protocols_Pharmacology.pdf', emoji: '\u2695\uFE0F' },
@@ -3856,7 +3863,8 @@ var GUIDE_QUIZ_MAP = {
 'Endocrine-Comparisons':'endocompare','OB-Hypertensive-Disorders':'obhtn','OB-Maternal-Newborn':'obmatnb',
 'Infection-Control-Safety':'infctrl','Prioritization':'priority','Fluid-Electrolytes':'fluids',
 'Cardiac-Hemodynamics':'cardiac','Pharmacology':'pharmguide','Fundamentals':'fundguide',
-'Gerontology':'geroguide','Nutrition':'nutrguide','Yellow-Fever':'yfguide','Pink':'pinkguide','Blue-Book':'bbguide','Mental-Health':'mentalhealth'
+'Gerontology':'geroguide','Nutrition':'nutrguide','Yellow-Fever':'yfguide','Pink':'pinkguide','Blue-Book':'bbguide','Mental-Health':'mentalhealth',
+'Final-Review':'finalreview'
 };
 window.addEventListener('message', function(evt) {
 if (!evt.data || evt.data.type !== 'launchGuideQuiz') return;
@@ -4372,6 +4380,7 @@ SECTION_LABELS.endoguide_quickref = 'Endo: Quick Reference';
 SECTION_LABELS.endoguide_memory = 'Endo: Memory Anchors';
 SECTION_LABELS.qbank = 'Question Bank';
 SECTION_LABELS.mentalhealth = 'Mental Health';
+SECTION_LABELS.finalreview = 'Final Review';
 window.showProgress = function() {
 renderProgressDashboard();
 document.getElementById('progress-modal').style.display = 'block';
@@ -4660,7 +4669,8 @@ pinkguide:{bg:'rgba(219,39,119,0.12)',border:'rgba(219,39,119,0.35)',accent:'#f4
 stdsti:{bg:'rgba(13,148,136,0.12)',border:'rgba(13,148,136,0.35)',accent:'#5eead4',label:'#99f6e4'},
 bbguide:{bg:'rgba(37,99,235,0.12)',border:'rgba(37,99,235,0.35)',accent:'#60a5fa',label:'#bfdbfe'},
 qbank:{bg:'rgba(51,65,85,0.15)',border:'rgba(51,65,85,0.4)',accent:'#94a3b8',label:'#cbd5e1'},
-mentalhealth:{bg:'rgba(13,148,136,0.12)',border:'rgba(13,148,136,0.35)',accent:'#5eead4',label:'#99f6e4'}
+mentalhealth:{bg:'rgba(13,148,136,0.12)',border:'rgba(13,148,136,0.35)',accent:'#5eead4',label:'#99f6e4'},
+finalreview:{bg:'rgba(124,58,237,0.12)',border:'rgba(124,58,237,0.35)',accent:'#a78bfa',label:'#c4b5fd'}
 };
 /* SP_THEME aliases — verified identical via exact byte match */
 SP_THEME.comprehensive4 = SP_THEME.yellowfever;
@@ -4713,7 +4723,8 @@ pinkguide:{bg:'rgba(219,39,119,0.07)',border:'rgba(219,39,119,0.25)',accent:'#db
 stdsti:{bg:'rgba(13,148,136,0.07)',border:'rgba(13,148,136,0.25)',accent:'#0d9488',label:'#134e4a'},
 bbguide:{bg:'rgba(37,99,235,0.07)',border:'rgba(37,99,235,0.25)',accent:'#2563eb',label:'#1e3a8a'},
 qbank:{bg:'rgba(51,65,85,0.07)',border:'rgba(51,65,85,0.25)',accent:'#334155',label:'#0f172a'},
-mentalhealth:{bg:'rgba(13,148,136,0.07)',border:'rgba(13,148,136,0.25)',accent:'#0d9488',label:'#134e4a'}
+mentalhealth:{bg:'rgba(13,148,136,0.07)',border:'rgba(13,148,136,0.25)',accent:'#0d9488',label:'#134e4a'},
+finalreview:{bg:'rgba(124,58,237,0.07)',border:'rgba(124,58,237,0.25)',accent:'#7c3aed',label:'#4c1d95'}
 };
 /* SP_THEME_LIGHT aliases — verified identical via exact byte match */
 SP_THEME_LIGHT.comprehensive = SP_THEME_LIGHT.workpharm;
