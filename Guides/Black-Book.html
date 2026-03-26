@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Black Book — Full Klimek Lecture Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#06060e;--surface:#0e0e1a;--card:#141422;--border:#1e1e35;
+--text:#d4d4e8;--text-muted:#8888aa;--heading:#f0f0ff;
+--accent:#c9a227;--accent-glow:rgba(201,162,39,.15);
+--gold:#c9a227;--gold-dim:#8b6914;
+--danger:#ef4444;--warn:#f59e0b;--safe:#22c55e;--drug:#a78bfa;--lyte:#38bdf8;--dx:#fb923c;
+}
+html:not(.dark){
+--bg:#f7f5f0;--surface:#ffffff;--card:#fffef9;--border:#e5e0d0;
+--text:#2d2a24;--text-muted:#6b6555;--heading:#1a1710;
+--accent:#8b6914;--accent-glow:rgba(139,105,20,.08);
+--gold:#8b6914;--gold-dim:#c9a227;
+--danger:#dc2626;--warn:#d97706;--safe:#16a34a;--drug:#7c3aed;--lyte:#0284c7;--dx:#ea580c;
+}
+body{font-family:'Outfit',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse at 20% 0%,rgba(201,162,39,.06) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(120,80,200,.04) 0%,transparent 50%);pointer-events:none;z-index:0}
+html:not(.dark) body::before{background:radial-gradient(ellipse at 20% 0%,rgba(201,162,39,.04) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(120,80,200,.02) 0%,transparent 50%)}
+
+/* Hero */
+.hero{position:relative;padding:3rem 1.5rem 2rem;text-align:center;background:linear-gradient(135deg,#0a0a14 0%,#141428 50%,#1a1220 100%);border-bottom:2px solid var(--gold);overflow:hidden}
+html:not(.dark) .hero{background:linear-gradient(135deg,#f5f0e0 0%,#fff8e8 50%,#f0ebe0 100%);border-bottom-color:var(--gold)}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:conic-gradient(from 0deg at 50% 50%,transparent 0deg,rgba(201,162,39,.03) 60deg,transparent 120deg);animation:heroSpin 30s linear infinite}
+@keyframes heroSpin{to{transform:rotate(360deg)}}
+.hero h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;background:linear-gradient(135deg,var(--gold),#f0d060,var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative}
+.hero .subtitle{color:var(--text-muted);margin:.5rem 0 1rem;font-size:.95rem;position:relative}
+.badge-row{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem;position:relative;max-width:800px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .6rem;border-radius:999px;font-size:.7rem;font-weight:600;text-decoration:none;color:#fff;cursor:pointer;transition:transform .15s,box-shadow .15s;border:1px solid rgba(255,255,255,.1)}
+.badge:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.3)}
+html:not(.dark) .badge{color:#fff}
+
+/* Nav Bar */
+.nav-bar{position:sticky;top:0;z-index:100;background:var(--surface);border-bottom:1px solid var(--border);padding:.5rem;display:flex;gap:.35rem;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-bar::-webkit-scrollbar{display:none}
+.nav-pill{white-space:nowrap;padding:.3rem .7rem;border-radius:999px;font-size:.7rem;font-weight:600;text-decoration:none;color:var(--text-muted);border:1px solid var(--border);transition:all .2s;flex-shrink:0}
+.nav-pill:hover{color:var(--heading);border-color:var(--gold)}
+
+/* Section Headers */
+.section-hdr{padding:2rem 1.5rem 1rem;display:flex;align-items:center;gap:1rem}
+.sec-num{width:2.8rem;height:2.8rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;color:#fff;flex-shrink:0}
+.sec-title{font-size:clamp(1.2rem,3vw,1.6rem);font-weight:700;color:var(--heading);line-height:1.3}
+.sec-sub{font-size:.85rem;color:var(--text-muted);margin-top:.15rem}
+.content{max-width:900px;margin:0 auto;padding:0 1rem 2rem}
+
+/* Section color themes - Dark */
+.sh-acid .sec-num{background:linear-gradient(135deg,#0d9488,#14b8a6)}.badge-acid{background:linear-gradient(135deg,#0d9488,#14b8a6)}
+.sh-alc .sec-num{background:linear-gradient(135deg,#d97706,#f59e0b)}.badge-alc{background:linear-gradient(135deg,#d97706,#f59e0b)}
+.sh-card .sec-num{background:linear-gradient(135deg,#dc2626,#ef4444)}.badge-card{background:linear-gradient(135deg,#dc2626,#ef4444)}
+.sh-mob .sec-num{background:linear-gradient(135deg,#059669,#10b981)}.badge-mob{background:linear-gradient(135deg,#059669,#10b981)}
+.sh-dm .sec-num{background:linear-gradient(135deg,#7c3aed,#8b5cf6)}.badge-dm{background:linear-gradient(135deg,#7c3aed,#8b5cf6)}
+.sh-tox .sec-num{background:linear-gradient(135deg,#e11d48,#fb7185)}.badge-tox{background:linear-gradient(135deg,#e11d48,#fb7185)}
+.sh-endo .sec-num{background:linear-gradient(135deg,#ca8a04,#eab308)}.badge-endo{background:linear-gradient(135deg,#ca8a04,#eab308)}
+.sh-lab .sec-num{background:linear-gradient(135deg,#2563eb,#3b82f6)}.badge-lab{background:linear-gradient(135deg,#2563eb,#3b82f6)}
+.sh-psy .sec-num{background:linear-gradient(135deg,#4f46e5,#6366f1)}.badge-psy{background:linear-gradient(135deg,#4f46e5,#6366f1)}
+.sh-mat .sec-num{background:linear-gradient(135deg,#db2777,#ec4899)}.badge-mat{background:linear-gradient(135deg,#db2777,#ec4899)}
+.sh-fetal .sec-num{background:linear-gradient(135deg,#0891b2,#22d3ee)}.badge-fetal{background:linear-gradient(135deg,#0891b2,#22d3ee)}
+.sh-pri .sec-num{background:linear-gradient(135deg,#475569,#64748b)}.badge-pri{background:linear-gradient(135deg,#475569,#64748b)}
+
+/* Light mode section colors */
+html:not(.dark) .sh-acid .sec-num{background:linear-gradient(135deg,#0f766e,#0d9488)}
+html:not(.dark) .sh-alc .sec-num{background:linear-gradient(135deg,#b45309,#d97706)}
+html:not(.dark) .sh-card .sec-num{background:linear-gradient(135deg,#b91c1c,#dc2626)}
+html:not(.dark) .sh-mob .sec-num{background:linear-gradient(135deg,#047857,#059669)}
+html:not(.dark) .sh-dm .sec-num{background:linear-gradient(135deg,#6d28d9,#7c3aed)}
+html:not(.dark) .sh-tox .sec-num{background:linear-gradient(135deg,#be123c,#e11d48)}
+html:not(.dark) .sh-endo .sec-num{background:linear-gradient(135deg,#a16207,#ca8a04)}
+html:not(.dark) .sh-lab .sec-num{background:linear-gradient(135deg,#1d4ed8,#2563eb)}
+html:not(.dark) .sh-psy .sec-num{background:linear-gradient(135deg,#4338ca,#4f46e5)}
+html:not(.dark) .sh-mat .sec-num{background:linear-gradient(135deg,#be185d,#db2777)}
+html:not(.dark) .sh-fetal .sec-num{background:linear-gradient(135deg,#0e7490,#0891b2)}
+html:not(.dark) .sh-pri .sec-num{background:linear-gradient(135deg,#334155,#475569)}
+
+/* Compare Table */
+.compare-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem;border-radius:10px;overflow:hidden;border:1px solid var(--border)}
+.compare-table th{background:var(--card);color:var(--gold);font-weight:600;padding:.6rem .8rem;text-align:left;border-bottom:2px solid var(--gold);position:sticky;top:0;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+.compare-table td{padding:.55rem .8rem;border-bottom:1px solid var(--border);vertical-align:top}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table tr:hover td{background:var(--accent-glow)}
+.cat-label{background:var(--card);font-weight:600;color:var(--gold);font-size:.78rem;text-transform:uppercase;letter-spacing:.03em}
+html:not(.dark) .compare-table th{background:#f5f0e0;color:var(--gold)}
+html:not(.dark) .cat-label{background:#f5f0e0;color:var(--gold)}
+html:not(.dark) .compare-table td{border-color:#e5e0d0}
+
+/* DX Cards */
+.dx-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem;margin:.8rem 0;border-left:4px solid var(--gold)}
+.dx-card.card-crisis{border-left-color:var(--danger)}
+.dx-card.card-info{border-left-color:var(--lyte)}
+.dx-card.card-safe{border-left-color:var(--safe)}
+.dx-card.card-drug{border-left-color:var(--drug)}
+.dx-card h4{font-weight:700;color:var(--heading);margin-bottom:.4rem;font-size:.95rem}
+.dx-card .tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:.5rem}
+.dx-card .tag{font-size:.65rem;padding:.15rem .45rem;border-radius:4px;font-weight:600;font-family:'JetBrains Mono',monospace}
+.tag.danger{background:rgba(239,68,68,.15);color:var(--danger)}
+.tag.warn{background:rgba(245,158,11,.15);color:var(--warn)}
+.tag.safe{background:rgba(34,197,94,.15);color:var(--safe)}
+.tag.drug{background:rgba(167,139,250,.15);color:var(--drug)}
+.tag.lyte{background:rgba(56,189,248,.15);color:var(--lyte)}
+.tag.dx{background:rgba(251,146,60,.15);color:var(--dx)}
+html:not(.dark) .dx-card{background:var(--card);border-color:#e5e0d0}
+
+/* Mnemonic / NCLEX Tip / Lethal */
+.mnemonic,.nclex-tip,.lethal{position:relative;border-radius:10px;padding:1rem 1rem 1rem 3rem;margin:.8rem 0;font-size:.88rem}
+.mnemonic::before,.nclex-tip::before,.lethal::before{position:absolute;left:.7rem;top:.85rem;font-size:1.2rem}
+.mnemonic{background:linear-gradient(135deg,rgba(201,162,39,.08),rgba(201,162,39,.03));border:1px solid rgba(201,162,39,.2)}
+.mnemonic::before{content:'💡'}
+.nclex-tip{background:linear-gradient(135deg,rgba(56,189,248,.08),rgba(56,189,248,.03));border:1px solid rgba(56,189,248,.2)}
+.nclex-tip::before{content:'🎯'}
+.lethal{background:linear-gradient(135deg,rgba(239,68,68,.08),rgba(239,68,68,.03));border:1px solid rgba(239,68,68,.2)}
+.lethal::before{content:'☠️'}
+html:not(.dark) .mnemonic{background:linear-gradient(135deg,rgba(201,162,39,.06),rgba(201,162,39,.02));border-color:rgba(139,105,20,.2)}
+html:not(.dark) .nclex-tip{background:linear-gradient(135deg,rgba(2,132,199,.06),rgba(2,132,199,.02));border-color:rgba(2,132,199,.2)}
+html:not(.dark) .lethal{background:linear-gradient(135deg,rgba(220,38,38,.06),rgba(220,38,38,.02));border-color:rgba(220,38,38,.2)}
+
+/* VS Banner */
+.vs-banner{text-align:center;padding:.5rem;margin:1rem 0;font-size:.85rem;font-weight:800;letter-spacing:.15em;color:var(--gold);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+
+/* Quick Reference Grid */
+.qref{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.6rem;margin:.8rem 0}
+.qref-box{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:.7rem .8rem}
+.qref-box h5{font-weight:700;color:var(--gold);font-size:.8rem;margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.03em}
+.qref-box p,.qref-box ul{font-size:.82rem;color:var(--text)}
+.qref-box ul{padding-left:1.1rem}
+.qref-box li{margin-bottom:.15rem}
+html:not(.dark) .qref-box{background:var(--card);border-color:#e5e0d0}
+
+/* Treatment Steps */
+.tx-steps{counter-reset:txs;margin:.8rem 0;padding-left:0;list-style:none}
+.tx-steps li{counter-increment:txs;position:relative;padding:.5rem .5rem .5rem 2.5rem;margin:.3rem 0;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:.85rem}
+.tx-steps li::before{content:counter(txs);position:absolute;left:.6rem;top:.5rem;width:1.4rem;height:1.4rem;border-radius:50%;background:var(--gold);color:#000;font-weight:700;font-size:.75rem;display:flex;align-items:center;justify-content:center}
+html:not(.dark) .tx-steps li{background:var(--card);border-color:#e5e0d0}
+html:not(.dark) .tx-steps li::before{background:var(--gold);color:#fff}
+
+/* Section Divider */
+.section-divider{height:2px;border:none;margin:2rem 1.5rem;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.3}
+
+/* Semantic spans */
+.danger{color:var(--danger);font-weight:600}
+.warn{color:var(--warn);font-weight:600}
+.safe{color:var(--safe);font-weight:600}
+.drug{color:var(--drug);font-weight:600;cursor:pointer;border-bottom:1px dashed var(--drug)}
+.lyte{color:var(--lyte);font-weight:600}
+.dx{color:var(--dx);font-weight:600}
+.gold{color:var(--gold);font-weight:600}
+
+/* Subsection heading */
+.sub-h{font-size:1.05rem;font-weight:700;color:var(--heading);margin:1.5rem 0 .5rem;padding-bottom:.3rem;border-bottom:1px solid var(--border)}
+.sub-h2{font-size:.95rem;font-weight:600;color:var(--gold);margin:1rem 0 .4rem}
+
+/* Theme Toggle */
+.theme-toggle-btn{position:absolute;top:1rem;right:1rem;background:var(--card);border:1px solid var(--border);color:var(--text);width:2.2rem;height:2.2rem;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;z-index:10;transition:all .2s}
+.theme-toggle-btn:hover{border-color:var(--gold)}
+
+/* Footer */
+.footer{text-align:center;padding:2rem;color:var(--text-muted);font-size:.8rem;border-top:1px solid var(--border);margin-top:2rem}
+
+/* FadeUp */
+.fadeUp{opacity:0;transform:translateY(18px);animation:fadeUpIn .5s ease forwards}
+@keyframes fadeUpIn{to{opacity:1;transform:translateY(0)}}
+.d1{animation-delay:.05s}.d2{animation-delay:.1s}.d3{animation-delay:.15s}.d4{animation-delay:.2s}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--gold-dim);border-radius:3px}
+
+/* Responsive */
+@media(max-width:600px){
+.section-hdr{padding:1.5rem 1rem .8rem}
+.content{padding:0 .7rem 1.5rem}
+.compare-table{font-size:.78rem}
+.compare-table th,.compare-table td{padding:.4rem .5rem}
+.qref{grid-template-columns:1fr}
+.hero{padding:2rem 1rem 1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<button class="theme-toggle-btn" onclick="_toggleGuideTheme()" title="Toggle theme">🌙</button>
+<h1 class="fadeUp">📓 Black Book</h1>
+<p class="subtitle fadeUp d1">Mark Klimek Full Lecture Notes — 92 Pages · 12 Lectures</p>
+<div class="badge-row fadeUp d2">
+<a class="badge badge-acid" href="#sec-acid">Acid-Base</a>
+<a class="badge badge-alc" href="#sec-alc">Alcohol</a>
+<a class="badge badge-card" href="#sec-card">Cardiac</a>
+<a class="badge badge-mob" href="#sec-mob">Mobility</a>
+<a class="badge badge-dm" href="#sec-dm">Diabetes</a>
+<a class="badge badge-tox" href="#sec-tox">Drug Tox</a>
+<a class="badge badge-endo" href="#sec-endo">Endocrine</a>
+<a class="badge badge-lab" href="#sec-lab">Lab Values</a>
+<a class="badge badge-psy" href="#sec-psy">Psych Drugs</a>
+<a class="badge badge-mat" href="#sec-mat">Maternity</a>
+<a class="badge badge-fetal" href="#sec-fetal">Fetal &amp; L&amp;D</a>
+<a class="badge badge-pri" href="#sec-pri">Prioritization</a>
+</div>
+</div>
+
+<!-- NAV BAR -->
+<div class="nav-bar">
+<a class="nav-pill" href="#sec-acid">Acid-Base</a>
+<a class="nav-pill" href="#sec-alc">Alcohol</a>
+<a class="nav-pill" href="#sec-card">Cardiac</a>
+<a class="nav-pill" href="#sec-mob">Mobility</a>
+<a class="nav-pill" href="#sec-dm">Diabetes</a>
+<a class="nav-pill" href="#sec-tox">Drug Tox</a>
+<a class="nav-pill" href="#sec-endo">Endocrine</a>
+<a class="nav-pill" href="#sec-lab">Labs</a>
+<a class="nav-pill" href="#sec-psy">Psych Meds</a>
+<a class="nav-pill" href="#sec-mat">Maternity</a>
+<a class="nav-pill" href="#sec-fetal">Fetal/L&amp;D</a>
+<a class="nav-pill" href="#sec-pri">Delegation</a>
+</div>
+
+<!-- ===================== LECTURE 1: ACID-BASE ===================== -->
+<div id="sec-acid"></div>
+<div class="section-hdr sh-acid fadeUp"><div class="sec-num">1</div><div><div class="sec-title">Acid-Base Balance &amp; Ventilators</div><div class="sec-sub">Lecture 1 · pH interpretation, compensations &amp; ventilator alarms</div></div></div>
+<div class="content fadeUp d1">
+
+<div class="sub-h">Normal Values</div>
+<div class="qref">
+<div class="qref-box"><h5>pH</h5><p><span class="gold">7.35 – 7.45</span><br>&lt;7.35 = Acidosis<br>&gt;7.45 = Alkalosis</p></div>
+<div class="qref-box"><h5>CO₂</h5><p><span class="gold">35 – 45</span></p></div>
+<div class="qref-box"><h5>HCO₃ (Bicarb)</h5><p><span class="gold">22 – 26</span></p></div>
+</div>
+
+<div class="mnemonic"><strong>Rule of the B's:</strong> If <span class="lyte">pH</span> and <span class="lyte">Bicarb</span> move <strong>Both</strong> in the <strong>same direction</strong> → <span class="dx">Metabolic</span>. Otherwise → <span class="dx">Respiratory</span>.</div>
+
+<div class="sub-h2">Worked Examples</div>
+<table class="compare-table">
+<tr><th>Example</th><th>pH</th><th>HCO₃</th><th>Direction</th><th>Diagnosis</th></tr>
+<tr><td>#1</td><td>7.30 ↓</td><td>20 ↓</td><td>Same</td><td class="danger">Metabolic Acidosis</td></tr>
+<tr><td>#2</td><td>7.58 ↑</td><td>32 ↑</td><td>Same</td><td class="warn">Metabolic Alkalosis</td></tr>
+<tr><td>#3</td><td>7.22 ↓</td><td>35 ↑</td><td>Opposite</td><td class="danger">Respiratory Acidosis</td></tr>
+</table>
+
+<div class="nclex-tip"><strong>"As the pH goes, so goes my patient — EXCEPT for Potassium."</strong><br>
+• pH ↓ (acidosis) → everything ↓ except <span class="lyte">K⁺</span> (hyperkalemia)<br>
+• pH ↑ (alkalosis) → everything ↑ except <span class="lyte">K⁺</span> (hypokalemia)</div>
+
+<div class="vs-banner">ALKALOSIS vs ACIDOSIS</div>
+<table class="compare-table">
+<tr><th>Feature</th><th>Alkalosis (pH &gt;7.45)</th><th>Acidosis (pH &lt;7.35)</th></tr>
+<tr><td class="cat-label">General</td><td>Everything UP</td><td>Everything DOWN</td></tr>
+<tr><td>HR</td><td>Tachycardia</td><td>Bradycardia</td></tr>
+<tr><td>BP</td><td>Hypertension</td><td>Low BP</td></tr>
+<tr><td>Neuro</td><td>Seizures, irritability, spastic</td><td>Obtunded, lethargy, coma, flaccid</td></tr>
+<tr><td>Bowel</td><td>Diarrhea, borborygmi</td><td>Constipation, absent bowel sounds</td></tr>
+<tr><td>Reflexes</td><td>Hyperreflexia (3+, 4+)</td><td>Hyporeflexia (0, 1+)</td></tr>
+<tr><td>K⁺</td><td class="warn">Hypokalemia (opposite)</td><td class="warn">Hyperkalemia (opposite)</td></tr>
+<tr><td class="cat-label">Priority Intervention</td><td>Suctioning (seizures)</td><td>Ambu bag (resp arrest)</td></tr>
+</table>
+
+<div class="mnemonic"><strong>MAC Kussmaul:</strong> The ONLY acid-base imbalance causing <span class="dx">Metabolic ACidosis + Kussmaul respirations</span>.</div>
+
+<div class="sub-h">Identifying the Cause</div>
+<div class="dx-card card-info">
+<h4>Decision Tree</h4>
+<ol style="padding-left:1.2rem;font-size:.85rem">
+<li><strong>Is it LUNG?</strong> → Respiratory
+<ul><li>Underventilating → <span class="danger">Respiratory Acidosis</span></li>
+<li>Overventilating → <span class="warn">Respiratory Alkalosis</span></li></ul></li>
+<li><strong>Not lung?</strong> → Metabolic
+<ul><li>Prolonged gastric vomiting/suction → <span class="warn">Metabolic Alkalosis</span></li>
+<li>Everything else → <span class="danger">Metabolic Acidosis</span> (default!)</li></ul></li>
+</ol>
+</div>
+
+<div class="nclex-tip"><strong>Default setting:</strong> When you don't know what to pick → pick <span class="danger">Metabolic Acidosis</span>.<br>Always pay attention to the <strong>modifying phrase</strong> rather than the original noun.</div>
+
+<div class="sub-h">Ventilators</div>
+<div class="vs-banner">HIGH PRESSURE ALARM vs LOW PRESSURE ALARM</div>
+<table class="compare-table">
+<tr><th>High Pressure Alarm</th><th>Low Pressure Alarm</th></tr>
+<tr><td>Increased resistance to airflow</td><td>Decreased resistance</td></tr>
+<tr><td>Causes: Kinks, water in tubing, mucus plugs</td><td>Causes: Main tubing or O₂ sensor disconnection</td></tr>
+</table>
+
+<div class="sub-h2">High Pressure Alarm — Order of Actions</div>
+<ol class="tx-steps">
+<li><strong>Unkink</strong> the tubing</li>
+<li><strong>Empty water</strong> out of tubing</li>
+<li>Ask pt to <strong>turn, cough, deep breathe</strong></li>
+<li><strong>Suction</strong> PRN</li>
+</ol>
+
+<div class="dx-card card-info">
+<h4>Ventilator Settings</h4>
+<p>• Too high → Patient overventilated → <span class="warn">Respiratory Alkalosis</span> (panting)<br>
+• Too low → Patient underventilated → <span class="danger">Respiratory Acidosis</span> (retaining CO₂)</p>
+</div>
+
+<div class="nclex-tip"><strong>Weaning question:</strong> If ABGs show <span class="danger">respiratory acidosis</span> → Notify physician, pt is NOT ready to wean (underventilated). If <span class="warn">respiratory alkalosis</span> → Ready to wean (overventilating).</div>
+</div>
+<hr class="section-divider">
+
+<!-- ===================== LECTURE 2: ALCOHOL ===================== -->
+<div id="sec-alc"></div>
+<div class="section-hdr sh-alc fadeUp"><div class="sec-num">2</div><div><div class="sec-title">Alcohol &amp; Substances</div><div class="sec-sub">Lecture 2 · Denial, OD/WD, Aminoglycosides, Peak &amp; Trough</div></div></div>
+<div class="content fadeUp d1">
+
+<div class="sub-h">Alcoholism — Psychological Problems</div>
+<div class="qref">
+<div class="qref-box"><h5>#1 Denial</h5><p>Confront by pointing out difference between what they say and do. Use <strong>"I" statements</strong> (not "YOU"). <em>Exception:</em> In loss &amp; grief, denial is OK (DABDA).</p></div>
+<div class="qref-box"><h5>#2 Dependency / Co-Dependency</h5><p><strong>Dependent</strong> (abuser) → Confront<br><strong>Co-dependent</strong> (SO) → Teach to set limits, work on self-esteem</p></div>
+<div class="qref-box"><h5>#3 Manipulation</h5><p>When SO is asked to do something <span class="danger">inherently dangerous/harmful</span>. Treatment: Set limits and enforce.</p></div>
+</div>
+
+<div class="nclex-tip"><strong>Dependency vs Manipulation:</strong> If the act is NOT inherently dangerous = Dependency/Co-dependency (2 patients). If the act IS dangerous = Manipulation (1 patient).</div>
+
+<div class="sub-h">Wernicke-Korsakoff Syndrome</div>
+<div class="dx-card card-crisis">
+<h4>Wernicke-Korsakoff</h4>
+<div class="tags"><span class="tag danger">Psychosis</span><span class="tag warn">Vitamin B1 Deficiency</span></div>
+<p>• Primary S/Sx: <strong>Amnesia</strong> + <strong>Confabulation</strong> (making up stories that feel real to pt)<br>
+• Intervention: <strong>Redirect</strong> to something they can do<br>
+• Characteristics: <span class="safe">Preventable</span> (take B1), <span class="warn">Arrestable</span> (take B1), <span class="danger">Irreversible 70%</span> (kills brain cells)</p>
+</div>
+
+<div class="sub-h2">Antabuse &amp; Revia (Disulfiram)</div>
+<div class="dx-card card-drug">
+<h4>Antabuse/Revia</h4>
+<p>• Aversion therapy: onset &amp; duration = <strong>2 weeks</strong><br>
+• Teach to avoid ALL forms of EtOH: mouthwash, cologne, perfume, aftershave, elixir, OTC liquid meds, insect repellant, hand sanitizer, vanilla extract<br>
+• <span class="safe">Red wine vinaigrette is OK</span> — no alcohol in it</p>
+</div>
+
+<div class="sub-h">Overdose &amp; Withdrawal</div>
+<div class="mnemonic"><strong>Two questions to ask:</strong> (1) Is it an <span class="warn">Upper</span> or a <span class="lyte">Downer</span>? (2) Is it <span class="danger">Overdose</span> or <span class="dx">Withdrawal</span>?</div>
+
+<div class="vs-banner">UPPERS vs DOWNERS</div>
+<table class="compare-table">
+<tr><th></th><th>Upper (5 to memorize)</th><th>Downer (135+ drugs)</th></tr>
+<tr><td class="cat-label">Drugs</td><td>Caffeine, Cocaine, PCP/LSD, Meth, Adderall</td><td>If it's not an upper, it's a downer</td></tr>
+<tr><td class="cat-label">OD S/Sx</td><td>Things go UP: euphoria, seizures, irritability, hyperreflexia, tachycardia, diarrhea</td><td>Things go DOWN: lethargic, resp depression/arrest, constipated</td></tr>
+<tr><td class="cat-label">OD Priority</td><td><span class="warn">Suctioning</span> (seizures)</td><td><span class="danger">Intubation/ventilation</span> (resp arrest)</td></tr>
+</table>
+
+<table class="compare-table">
+<tr><th></th><th>Overdose</th><th>Withdrawal</th></tr>
+<tr><td class="cat-label">Upper</td><td>Too much (↑↑↑)</td><td>Too little (↓↓↓)</td></tr>
+<tr><td class="cat-label">Downer</td><td>Too little (↓↓↓)</td><td>Too much (↑↑↑)</td></tr>
+</table>
+
+<div class="nclex-tip"><strong>Newborn Drug Abuse:</strong> &lt;24 hrs after birth = assume <strong>intoxication</strong>. ≥24 hrs after birth = assume <strong>withdrawal</strong>.</div>
+
+<div class="sub-h">Alcohol Withdrawal vs Delirium Tremens</div>
+<table class="compare-table">
+<tr><th>Feature</th><th>AWS</th><th>Delirium Tremens</th></tr>
+<tr><td>Onset</td><td>~24 hours after last drink</td><td>~72 hours after last drink</td></tr>
+<tr><td>Severity</td><td class="safe">Non-life threatening</td><td class="danger">Life threatening</td></tr>
+<tr><td>Diet</td><td>Regular diet</td><td>NPO or clear liquids</td></tr>
+<tr><td>Room</td><td>Semiprivate, anywhere</td><td>Private, near nursing station</td></tr>
+<tr><td>Activity</td><td>Up ad lib</td><td>Restricted bed rest</td></tr>
+<tr><td>Restraints</td><td>None</td><td>Vest or 2-point lock letters</td></tr>
+</table>
+
+<div class="sub-h">Aminoglycosides — "A Mean Old Mysin"</div>
+<div class="mnemonic"><strong>"A Mean Old Mysin"</strong> = Aminoglycosides. Use a <strong>mean old</strong> mycin for <strong>mean old</strong> infections (serious, resistant, life-threatening, Gram-negative).</div>
+
+<div class="dx-card card-drug">
+<h4>Key Facts</h4>
+<div class="tags"><span class="tag drug">Top 5 NCLEX Drug</span><span class="tag danger">Ototoxic</span><span class="tag danger">Nephrotoxic</span></div>
+<p>• Examples: <span class="drug">Gentamycin</span>, <span class="drug">Vancomycin</span>, <span class="drug">Clindamycin</span>, <span class="drug">Streptomycin</span>, <span class="drug">Tobramycin</span><br>
+• NOT aminoglycosides: Azithro/Clarithro/Erythromycin (have "THRO" — throw them off the list!)<br>
+• Toxic effects: <span class="danger">Ototoxicity</span> (CN8 — hearing, balance, tinnitus) + <span class="danger">Nephrotoxicity</span> (monitor Creatinine)<br>
+• Given IM or IV (not absorbed PO). Admin <strong>q8h</strong> (figure 8 inside the ear)<br>
+• PO only for: <strong>hepatic encephalopathy</strong> and <strong>pre-op bowel surgery</strong> (sterilize the bowel)<br>
+• Oral mycins: <strong>Neo Kan</strong> (Neomycin &amp; Kanamycin)</p>
+</div>
+
+<div class="sub-h2">Troughs &amp; Peaks — "TAP" Levels</div>
+<div class="mnemonic"><strong>TAP:</strong> <span class="gold">T</span>rough → <span class="gold">A</span>dminister → <span class="gold">P</span>eak. Trough before, Peak after. Drawn because of narrow therapeutic window.</div>
+
+<table class="compare-table">
+<tr><th>Route</th><th>Peak Time After Admin</th></tr>
+<tr><td>Sublingual</td><td>5–10 min after dissolved</td></tr>
+<tr><td>IV</td><td>15–30 min after bag empty</td></tr>
+<tr><td>IM</td><td>30–60 min</td></tr>
+<tr><td>SubQ</td><td>Depends on insulin type</td></tr>
+<tr><td>PO</td><td>Not tested</td></tr>
+</table>
+<div class="nclex-tip"><strong>Trough</strong> is always drawn <strong>30 min before</strong> next dose, regardless of route.</div>
+</div>
+<hr class="section-divider">
+
+<!-- ===================== LECTURE 3: CARDIAC ===================== -->
+<div id="sec-card"></div>
+<div class="section-hdr sh-card fadeUp"><div class="sec-num">3</div><div><div class="sec-title">Cardiac Meds, Arrhythmias &amp; Chest Tubes</div><div class="sec-sub">Lecture 3 · CCBs, rhythms, chest tubes, congenital defects, infection control</div></div></div>
+<div class="content fadeUp d1">
+
+<div class="sub-h">Calcium Channel Blockers</div>
+<div class="dx-card card-drug">
+<h4>CCBs — "Valium for the Heart"</h4>
+<p>• <strong>Negative</strong> inotropic, chronotropic, dromotropic → relax &amp; slow the heart<br>
+• Treat <span class="gold">"A, AA, AAA"</span>: Anti-HTN, AntiAnginal, AntiAtrialArrhythmia<br>
+• Names end in <strong>"-dipine"</strong> + <span class="drug">Verapamil</span>, <span class="drug">Cardizem (diltiazem)</span><br>
+• S/E: Headache &amp; hypotension. Hold if SBP &lt;100</p>
+</div>
+
+<div class="sub-h">Cardiac Arrhythmias</div>
+<div class="sub-h2">4 Rhythms to Know by Sight</div>
+<div class="qref">
+<div class="qref-box"><h5>Normal Sinus</h5><p>P → QRS → T for every complex, equally spaced</p></div>
+<div class="qref-box"><h5>V-Fib</h5><p>No pattern (chaotic)</p></div>
+<div class="qref-box"><h5>V-Tach</h5><p>Sharp peaks with pattern (bizarre)</p></div>
+<div class="qref-box"><h5>Asystole</h5><p>Flat line</p></div>
+</div>
+
+<div class="sub-h2">6 Most Tested Rhythms</div>
+<table class="compare-table">
+<tr><th>#</th><th>Pattern</th><th>Rhythm</th></tr>
+<tr><td>1</td><td>Lack of QRS complexes</td><td class="danger">Asystole (flat line)</td></tr>
+<tr><td>2</td><td>Sawtooth P waves</td><td>Atrial Flutter</td></tr>
+<tr><td>3</td><td>Chaotic P waves</td><td>A-Fib</td></tr>
+<tr><td>4</td><td>Chaotic QRS</td><td class="danger">V-Fib</td></tr>
+<tr><td>5</td><td>Bizarre QRS</td><td class="warn">V-Tach</td></tr>
+<tr><td>6</td><td>Periodic wide bizarre QRS</td><td>PVCs (salvos = short V-tach)</td></tr>
+</table>
+
+<div class="lethal"><strong>Lethal arrhythmias (kill in ≤8 min):</strong> Asystole &amp; V-Fib → No/low CO → no brain perfusion.<br><strong>Potentially lethal:</strong> V-Tach (has CO but unstable).</div>
+
+<div class="nclex-tip"><strong>PVCs:</strong> Usually low priority. Elevate to moderate if: ≥6/min, ≥6 in a row, or R-on-T phenomenon. PVCs after MI = common, low priority.</div>
+
+<div class="vs-banner">ATRIAL vs VENTRICULAR TREATMENT</div>
+<table class="compare-table">
+<tr><th>Supraventricular (Atrial) = "ABCD"</th><th>Ventricular</th></tr>
+<tr><td><span class="drug">Adenocard</span> (fast IV push &lt;8 sec + 20mL NS flush)<br><span class="drug">Beta-blockers</span> (-olol)<br><span class="drug">CCBs</span><br><span class="drug">Digitalis/Lanoxin</span></td><td><span class="drug">Lidocaine</span><br><span class="drug">Amiodarone</span></td></tr>
+</table>
+
+<table class="compare-table">
+<tr><th>V-Fib Treatment</th><th>Asystole Treatment</th></tr>
+<tr><td><span class="danger">Defib</span> (Shock em!)</td><td><span class="drug">Epinephrine</span> + <span class="drug">Atropine</span></td></tr>
+</table>
+
+<div class="sub-h">Chest Tubes</div>
+<div class="dx-card card-info">
+<h4>Purpose</h4>
+<p>Reestablish <strong>negative pressure</strong> in pleural space so lungs expand with chest wall.</p>
+</div>
+
+<div class="mnemonic"><strong>Apical = Air (top). Basilar = Blood (base, gravity).</strong></div>
+
+<table class="compare-table">
+<tr><th>Pneumothorax (air)</th><th>Hemothorax (blood)</th></tr>
+<tr><td>Apical tube</td><td>Basilar tube</td></tr>
+<tr><td>Expect <strong>bubbling</strong></td><td>Expect <strong>drainage</strong></td></tr>
+<tr><td>Report: NOT bubbling</td><td>Report: NOT draining</td></tr>
+</table>
+
+<div class="sub-h2">Water Seal Breaks — Action Steps</div>
+<ol class="tx-steps">
+<li><strong>Clamp</strong> the tube</li>
+<li><strong>Cut</strong> the tube away</li>
+<li><strong>Submerge</strong> end under sterile water (most important — reestablishes seal)</li>
+<li><strong>Unclamp</strong> the tube</li>
+</ol>
+<div class="lethal"><strong>Must complete in ≤15 seconds!</strong> "First" action = clamp. "Best/Priority" action = submerge under sterile water.</div>
+
+<div class="nclex-tip"><strong>Chest tube pulled out:</strong> (1) Gloved hand over opening (first). (2) Sterile Vaseline gauze taped on 3 sides (best).</div>
+
+<div class="sub-h2">Bubbling Assessment</div>
+<table class="compare-table">
+<tr><th>Location</th><th>Intermittent</th><th>Continuous</th></tr>
+<tr><td>Water seal chamber</td><td class="safe">Good (document)</td><td class="danger">Bad — leak in system (find &amp; tape)</td></tr>
+<tr><td>Suction control chamber</td><td class="warn">Suction too low (increase)</td><td class="safe">Good (document)</td></tr>
+</table>
+
+<div class="sub-h">Congenital Heart Defects</div>
+<div class="mnemonic"><strong>"TRouBLe"</strong> — T = Trouble. Shunts Right to Left. Blue (cyanotic). All start with "T":<br>
+Tetralogy of Fallot · Truncus arteriosus · Transposition of great vessels · Tricuspid atresia · TAPV<br>
+<em>Exception: Left ventricular hypoplastic syndrome</em></div>
+
+<div class="nclex-tip"><strong>Tetralogy of Fallot = "PROVe":</strong> Pulmonary artery stenosis, RVH, Overriding aorta, VSD.<br><strong>No TRouBLe:</strong> VSD, PDA, Patent foramen ovale, ASD, Pulmonic stenosis.<br>ALL congenital defects have a <strong>murmur</strong> → order <strong>echocardiogram</strong>.</div>
+
+<div class="sub-h">Infection Control — Transmission Precautions</div>
+<table class="compare-table">
+<tr><th>Type</th><th>Diseases</th><th>PPE/Key Points</th></tr>
+<tr><td class="cat-label">Contact</td><td>C. diff, Hep A, E. coli, Staph, RSV, Herpes</td><td>Gown + Gloves, dedicated equipment, disposable supplies</td></tr>
+<tr><td class="cat-label">Droplet</td><td>Meningitis, H. influenza b (epiglottitis)</td><td>Mask + Goggles + Gloves, &lt;3 feet</td></tr>
+<tr><td class="cat-label">Airborne "Air MTV"</td><td>MMR, TB, Varicella</td><td>N95/mask, negative airflow, door closed</td></tr>
+</table>
+
+<div class="mnemonic"><strong>PPE Order:</strong> Put ON = "Gs reverse alpha" → Gown, Mask, Goggles, Gloves.<br>Take OFF = Alphabetical → Gloves, Goggles, Gown, Mask.</div>
+</div>
+<hr class="section-divider">
+
+<!-- ===================== LECTURE 4: MOBILITY & PSYCH ===================== -->
+<div id="sec-mob"></div>
+<div class="section-hdr sh-mob fadeUp"><div class="sec-num">4</div><div><div class="sec-title">Mobility &amp; Psychiatry Basics</div><div class="sec-sub">Lecture 4 · Crutches, canes, walkers, psychosis types, interventions</div></div></div>
+<div class="content fadeUp d1">
+
+<div class="sub-h">Crutch Measurement &amp; Gaits</div>
+<div class="dx-card card-info">
+<h4>Crutch Fitting</h4>
+<p>• 2–3 finger widths between pad and anterior axillary fold<br>
+• Tip: 6 inches lateral and 6 inches in front of foot<br>
+• Elbow flexion: 30°. Wrists at level of handgrip.</p>
+</div>
+
+<table class="compare-table">
+<tr><th>Gait</th><th>Pattern</th><th>Use When</th></tr>
+<tr><td class="cat-label">2-Point</td><td>(R leg + L crutch) → (L leg + R crutch)</td><td>Mild bilateral weakness</td></tr>
+<tr><td class="cat-label">3-Point</td><td>(2 crutches + bad leg) → good leg</td><td>One leg affected</td></tr>
+<tr><td class="cat-label">4-Point</td><td>Crutch → opposite foot → other crutch → other foot</td><td>Severe bilateral weakness</td></tr>
+<tr><td class="cat-label">Swing-Through</td><td>Like 3-point but foot passes crutch tips</td><td>Non-weight bearing / amputees</td></tr>
+</table>
+
+<div class="mnemonic"><strong>Even-point for even (bilateral) problems. Odd-point for odd (one leg).</strong><br>Mild bilateral = 2-pt. Severe bilateral = 4-pt. One leg = 3-pt. Amputee = Swing-through.</div>
+
+<div class="nclex-tip"><strong>"Up with the Good, Down with the Bad."</strong> Both crutches always move with the bad leg.<br><strong>Cane:</strong> Hold on the strong/unaffected side. <strong>Walker:</strong> Pick up → Set down → Walk to it.</div>
+
+<div class="sub-h">Psychiatry</div>
+<div class="mnemonic"><strong>First question in any psych question:</strong> Is the patient <span class="safe">Non-psychotic</span> or <span class="danger">Psychotic</span>?</div>
+
+<div class="sub-h2">Psychotic Symptoms</div>
+<table class="compare-table">
+<tr><th>Symptom</th><th>Definition</th><th>Types</th></tr>
+<tr><td class="cat-label">Delusion</td><td>False, fixed belief (no sensory component)</td><td>Paranoid, Grandiose, Somatic</td></tr>
+<tr><td class="cat-label">Hallucination</td><td>Sensory experience (nothing there)</td><td>Auditory (#1), Visual, Tactile, Gustatory, Olfactory</td></tr>
+<tr><td class="cat-label">Illusion</td><td>Misinterpretation of reality (referent exists)</td><td>—</td></tr>
+</table>
+
+<div class="sub-h2">3 Types of Psychosis</div>
+<table class="compare-table">
+<tr><th>Type</th><th>Cause</th><th>Intervention</th></tr>
+<tr><td class="cat-label">Functional</td><td>Chemical imbalance (Schizo, Schizoaffective, Major Depression, Mania)</td><td>(1) Acknowledge feeling → (2) Present reality → (3) Set limits → (4) Enforce</td></tr>
+<tr><td class="cat-label">Dementia</td><td>Brain destruction (Alzheimer, stroke)</td><td>(1) Acknowledge feeling → (2) Redirect (DO NOT present reality!)</td></tr>
+<tr><td class="cat-label">Delirium</td><td>Temporary — UTI, thyroid, electrolytes, meds</td><td>(1) Acknowledge feeling → (2) Reassure safety &amp; temporariness</td></tr>
+</table>
+
+<div class="nclex-tip"><strong>2nd step always starts with "Re":</strong> Functional = Reality. Dementia = Redirect. Delirium = Reassure.<br><strong>Dementia hallmark:</strong> Memory loss, inability to learn.</div>
+
+<div class="sub-h2">Other Psychotic Symptoms</div>
+<div class="qref">
+<div class="qref-box"><h5>Flight of Ideas</h5><p>Rapid flow of thought</p></div>
+<div class="qref-box"><h5>Word Salad</h5><p>Words thrown together (sicker than flight)</p></div>
+<div class="qref-box"><h5>Neologisms</h5><p>Made-up words</p></div>
+<div class="qref-box"><h5>Narrowed Self-Concept</h5><p>Refuses to change clothes/leave room — leave them alone</p></div>
+<div class="qref-box"><h5>Idea of Reference</h5><p>Thinks everyone is talking about them</p></div>
+</div>
+</div>
+<hr class="section-divider">
+
+<!-- ===================== LECTURE 5: DIABETES ===================== -->
+<div id="sec-dm"></div>
+<div class="section-hdr sh-dm fadeUp"><div class="sec-num">5</div><div><div class="sec-title">Diabetes Mellitus</div><div class="sec-sub">Lecture 5 · DM, DI, SIADH, insulin types, DKA, HHNK</div></div></div>
+<div class="content fadeUp d1">
+
+<div class="sub-h">DM vs DI vs SIADH</div>
+<table class="compare-table">
+<tr><th>Condition</th><th>Key Feature</th><th>Fluid Status</th></tr>
+<tr><td class="cat-label">DM</td><td>Glucose metabolism error. Polyuria, polydipsia, polyphagia</td><td class="warn">Fluid Volume Deficit</td></tr>
+<tr><td class="cat-label">DI (Diabetes Insipidus)</td><td>Low ADH → massive polyuria, polydipsia → dehydration</td><td class="warn">Fluid Volume Deficit</td></tr>
+<tr><td class="cat-label">SIADH</td><td>Too much ADH → oliguria, no thirst, ↓ serum SG, ↑ urine SG</td><td class="danger">Fluid Volume Excess</td></tr>
+</table>
+
+<div class="sub-h">Treatment Mnemonics</div>
+<div class="vs-banner">TYPE 1 "DIE" vs TYPE 2 "DOA"</div>
+<table class="compare-table">
+<tr><th>Type 1 — "DIE"</th><th>Type 2 — "DOA"</th></tr>
+<tr><td><strong>D</strong>iet (least important)<br><strong>I</strong>nsulin (most important)<br><strong>E</strong>xercise</td><td><strong>D</strong>iet (most important — calorie restriction)<br><strong>O</strong>ral hypoglycemic<br><strong>A</strong>ctivity</td></tr>
+</table>
+
+<div class="sub-h">4 Types of Insulin</div>
+<table class="compare-table">
+<tr><th>Type</th><th>Onset</th><th>Peak</th><th>Duration</th><th>Key Facts</th></tr>
+<tr><td class="cat-label">R-Regular</td><td>1 hr</td><td><span class="danger">2 hr</span></td><td>4 hr</td><td>Clear, can run IV. Pattern: 1-2-4</td></tr>
+<tr><td class="cat-label">N-NPH</td><td>6 hr</td><td><span class="danger">8-10 hr</span></td><td>12 hr</td><td>Cloudy (N = Not so clear). Pattern: 6-8-10-12</td></tr>
+<tr><td class="cat-label">Lispro (Humalog)</td><td>15 min</td><td><span class="danger">30 min</span></td><td>3 hr</td><td>Give WITH meal (not AC). Pattern: 15-30-3</td></tr>
+<tr><td class="cat-label">Glargine (Lantus)</td><td>—</td><td><span class="safe">No peak</span></td><td>12-24 hr</td><td>Safe at bedtime. Little hypoglycemia risk</td></tr>
+</table>
+
+<div class="nclex-tip"><strong>Check for hypoglycemia at PEAK time.</strong> E.g., NPH given at 7 AM → check between 3–5 PM.<br><strong>Clear = Solution (can IV). Cloudy = Suspension (cannot IV).</strong><br><strong>Insulin storage:</strong> Open = 30 days, refrigeration optional. Unopened = refrigerate. No date? Throw out.</div>
+
+<div class="mnemonic"><strong>Exercise potentiates insulin</strong> = like another shot. Decrease dose + give snack/juice before exercise.<br><strong>Sick days:</strong> Glucose goes UP. Still need insulin + sips of water. 2 problems: Hyperglycemia + Dehydration.</div>
+
+<div class="sub-h">Acute Complications</div>
+<div class="dx-card card-crisis">
+<h4>Hypoglycemia — "Drunk in Shock"</h4>
+<div class="tags"><span class="tag danger">Low Blood Sugar</span><span class="tag warn">#1 cause: Too much insulin</span></div>
+<p><strong>Drunk:</strong> Staggering gait, slurred speech, cerebral impairment, slow reactions<br>
+<strong>Shock:</strong> Tachycardia, tachypnea, low BP, cold/clammy/mottled</p>
+<p><strong>Treatment:</strong> Sugar + starch/protein (juice + turkey, skim milk). Bad: 2 sugars together.<br>
+Unconscious at home → <span class="drug">Glucagon IM</span>. In ER → <span class="drug">Dextrose IV (D10, D50)</span></p>
+</div>
+
+<div class="dx-card card-crisis">
+<h4>DKA — Type 1 High Glucose</h4>
+<div class="tags"><span class="tag danger">Emergency</span><span class="tag lyte">Ketosis</span></div>
+<p><strong>"DKA" =</strong> <span class="danger">D</span>ehydration (dry, warm) · <span class="lyte">K</span>etones + Kussmaul + K⁺↑ · <span class="warn">A</span>cidosis + Acetone breath + Anorexia<br>
+<strong>#1 cause:</strong> Acute viral URI within last 2 weeks<br>
+<strong>Treatment:</strong> <span class="drug">Regular insulin IV</span> + <strong>IV fluid 200 mL/hr</strong></p>
+</div>
+
+<div class="dx-card card-crisis">
+<h4>HHNK/HHS — Type 2 High Glucose</h4>
+<div class="tags"><span class="tag danger">Higher mortality than DKA</span></div>
+<p>No ketones, no acid. Think <strong>SEVERE dehydration</strong>.<br>
+#1 Dx: Fluid volume deficit. #1 Intervention: <strong>Rehydrate!</strong></p>
+</div>
+
+<div class="nclex-tip"><strong>HbA1C:</strong> Average blood sugar over 90 days. &lt;6 = normal. 7 = borderline. &gt;8 = out of control.<br><strong>Long-term complications:</strong> Poor tissue perfusion (renal failure, gangrene) OR peripheral neuropathy (incontinence, can't feel burns).</div>
+</div>
+<hr class="section-divider">
+
+<!-- ===================== LECTURE 6: DRUG TOX & ELECTROLYTES ===================== -->
+<div id="sec-tox"></div>
+<div class="section-hdr sh-tox fadeUp"><div class="sec-num">6</div><div><div class="sec-title">Drug Toxicities &amp; Electrolytes</div><div class="sec-sub">Lecture 6 · 5 toxic drugs, kernicterus, hiatal hernia vs dumping, electrolyte rules</div></div></div>
+<div class="content fadeUp d1">
+
+<div class="sub-h">5 Drug Toxicities to Know</div>
+<table class="compare-table">
+<tr><th>Drug</th><th>Use</th><th>Therapeutic</th><th>Toxic</th><th>Pattern</th></tr>
+<tr><td class="cat-label"><span class="drug">Lithium</span></td><td>Bipolar (mania)</td><td>0.6 – 1.2</td><td class="danger">&gt;2.0</td><td rowspan="2">Low #s: <strong>2s</strong></td></tr>
+<tr><td class="cat-label"><span class="drug">Lanoxin/Digoxin</span></td><td>A-Fib, CHF</td><td>1 – 2</td><td class="danger">&gt;2</td></tr>
+<tr><td class="cat-label"><span class="drug">Aminophylline</span></td><td>Bronchodilator</td><td>10 – 20</td><td class="danger">&gt;20</td><td rowspan="3">High #s: <strong>20s</strong></td></tr>
+<tr><td class="cat-label"><span class="drug">Dilantin</span></td><td>Seizures</td><td>10 – 20</td><td class="danger">&gt;20</td></tr>
+<tr><td class="cat-label"><span class="lyte">Bilirubin (NB)</span></td><td>RBC breakdown</td><td>10 – 20 (elevated NB)</td><td class="danger">&gt;20 (kernicterus)</td></tr>
+</table>
+
+<div class="mnemonic"><strong>Pattern: 1s and 10s (therapeutic), 2s and 20s (toxic).</strong> Low # drugs (Lithium, Lanoxin) toxic at 2. High # drugs (Aminophylline, Dilantin, Bilirubin) toxic at 20.</div>
+
+<div class="lethal"><strong>Kernicterus:</strong> Bilirubin &gt;20 in the brain → aseptic meningitis/encephalopathy → can be DEADLY.<br><strong>Opisthotonos</strong> (hyperextended posture) = medical emergency → place newborn <strong>on the side</strong>.<br>Pathological jaundice = yellow at birth. Physiological = yellow 2-3 days postpartum (normal).</div>
+
+<div class="sub-h">Hiatal Hernia vs Dumping Syndrome</div>
+<div class="vs-banner">HIATAL HERNIA (Everything HIGH) vs DUMPING (Everything LOW)</div>
+<table class="compare-table">
+<tr><th>Feature</th><th>Hiatal Hernia</th><th>Dumping Syndrome</th></tr>
+<tr><td class="cat-label">Problem</td><td>Gastric contents go WRONG direction at correct rate</td><td>Gastric contents dumped too quickly into duodenum</td></tr>
+<tr><td>S/Sx</td><td>GERD: heartburn, indigestion on lying down after eating</td><td>Drunk + Shock + Acute abdominal distress (n/v, diarrhea, cramping, bloating)</td></tr>
+<tr><td>HOB</td><td class="safe">Elevate (HIGH)</td><td class="warn">Lower (LOW), turn on side</td></tr>
+<tr><td>Fluids</td><td>Increase with meals</td><td>Decrease 1-2 hrs before/after meals</td></tr>
+<tr><td>Carbs</td><td>Increase</td><td>Decrease</td></tr>
+<tr><td>Protein</td><td>Low</td><td>High (bulks, slower digestion)</td></tr>
+</table>
+
+<div class="sub-h">Electrolytes</div>
+<div class="mnemonic"><strong>3 Rules to Memorize:</strong><br>
+1. <span class="lyte">Kalemias</span> go SAME direction as prefix, EXCEPT HR &amp; urine output (opposite)<br>
+2. <span class="lyte">Calcemias</span> go OPPOSITE direction as prefix (calcium is a sedative)<br>
+3. <span class="lyte">Magnesemias</span> go OPPOSITE direction as prefix (also a sedative)</div>
+
+<table class="compare-table">
+<tr><th>Electrolyte</th><th>Hyper-</th><th>Hypo-</th></tr>
+<tr><td class="cat-label">K⁺ (Kalemia)</td><td>Seizures, agitation, diarrhea, spasticity, 3+/4+ reflexes, <span class="warn">bradycardia</span>, <span class="warn">oliguria</span></td><td>Lethargy, constipation, flaccid, 0/1+ reflexes, <span class="warn">tachycardia</span>, <span class="warn">polyuria</span></td></tr>
+<tr><td class="cat-label">Ca²⁺ (Calcemia)</td><td>Bradycardia, lethargy, flaccid, constipation (things DOWN)</td><td>Agitation, seizures, spasms, Chvostek, Trousseau (things UP)</td></tr>
+<tr><td class="cat-label">Na⁺ (Natremia)</td><td>DEhydration (hot, flushed, dry, thready pulse) — "E" = DE</td><td>Overload (crackles, distended neck veins) — "O" = Overload</td></tr>
+</table>
+
+<div class="nclex-tip"><strong>K⁺ for heart problems. Ca²⁺ for muscle/nerve problems.</strong><br>
+Earliest sign of ANY electrolyte disturbance = <strong>Paresthesia</strong> (numbness/tingling).<br>
+Universal sign = <strong>Paresis</strong> (muscle weakness).</div>
+
+<div class="sub-h2">Treatment of Hyperkalemia</div>
+<div class="lethal"><strong>High K⁺ can stop the heart!</strong></div>
+<ol class="tx-steps">
+<li><strong>D5W + Regular Insulin</strong> — drives K⁺ into cells (fast but temporary)</li>
+<li><strong>Kayexalate</strong> — exchanges K⁺ for Na⁺ via enema/PO (takes hours — "K Exits Late")</li>
+<li>Give <strong>both together</strong> for immediate + sustained effect</li>
+</ol>
+<div class="nclex-tip"><strong>Never push potassium IV.</strong> K⁺ &lt;40 mEq/L of IV fluid. If &gt;40 → clarify with physician.</div>
+</div>
+<hr class="section-divider">
+
+<!-- ===================== LECTURE 7: ENDOCRINE ===================== -->
+<div id="sec-endo"></div>
+<div class="section-hdr sh-endo fadeUp"><div class="sec-num">7</div><div><div class="sec-title">Endocrine, Toys &amp; Laminectomy</div><div class="sec-sub">Lecture 7 · Thyroid, adrenals, age-appropriate toys, spinal surgery</div></div></div>
+<div class="content fadeUp d1">
+
+<div class="sub-h">Thyroid — "Think Metabolism"</div>
+<div class="vs-banner">HYPERTHYROIDISM vs HYPOTHYROIDISM</div>
+<table class="compare-table">
+<tr><th>Feature</th><th>Hyper (↑ metabolism)</th><th>Hypo (↓ metabolism)</th></tr>
+<tr><td>Weight</td><td>Loss</td><td>Obesity</td></tr>
+<tr><td>Vitals</td><td>HR ↑, BP ↑</td><td>HR ↓, BP ↓</td></tr>
+<tr><td>Personality</td><td>Hyperpersonality</td><td>Flat, boring, dull</td></tr>
+<tr><td>Temperature</td><td>Heat intolerance</td><td>Cold intolerance</td></tr>
+<tr><td>Unique</td><td>Exophthalmos (Graves)</td><td>Academically challenged</td></tr>
+</table>
+
+<div class="sub-h2">Hyperthyroidism — 3 Treatments</div>
+<div class="qref">
+<div class="qref-box"><h5>1. Radioactive Iodine</h5><p>Flush 3x after urinating. Private room 24 hrs. Visitor restrictions.</p></div>
+<div class="qref-box"><h5>2. PTU</h5><p>"Puts Thyroid Under." Monitor WBC (immunosuppression).</p></div>
+<div class="qref-box"><h5>3. Thyroidectomy</h5><p>Total → lifelong replacement + hypocalcemia risk. Subtotal → thyroid storm risk.</p></div>
+</div>
+
+<div class="lethal"><strong>Thyroid Storm (Medical Emergency):</strong> Temp ≥105°F, BP ~210/180, HR 180-200, psychotically delirious.<br>First step = ice packs. Best step = cooling blanket. O₂ at 10L by mask. Stay with patient.</div>
+
+<div class="sub-h2">Post-op Thyroidectomy Risks</div>
+<table class="compare-table">
+<tr><th>Timeframe</th><th>Total</th><th>Subtotal</th></tr>
+<tr><td class="cat-label">First 12 hrs</td><td colspan="2">Airway (edema) → Hemorrhage (vascular)</td></tr>
+<tr><td class="cat-label">12–48 hrs</td><td><span class="danger">TETANY</span> (low Ca²⁺)</td><td><span class="danger">STORM</span> (thyroid storm)</td></tr>
+<tr><td class="cat-label">After 48 hrs</td><td colspan="2">Infection</td></tr>
+</table>
+
+<div class="mnemonic"><strong>Total = Tetany. Subtotal = Storm (Severe).</strong><br>Hypothyroidism treatment: <span class="drug">Levothyroxine (Synthroid)</span> — AM, 30-60 min before breakfast, alone, empty stomach, with water. Do NOT sedate hypothyroid patients (can go into coma).</div>
+
+<div class="sub-h">Adrenal Cortex Disease</div>
+<div class="vs-banner">ADDISON vs CUSHING</div>
+<table class="compare-table">
+<tr><th>Feature</th><th>Addison (undersecretion)</th><th>Cushing (oversecretion)</th></tr>
+<tr><td>Steroids</td><td>Too few (time bomb)</td><td>Too many</td></tr>
+<tr><td>Skin</td><td>Hyperpigmented (very tan)</td><td>Striae, easy bruising</td></tr>
+<tr><td>Stress</td><td>Cannot adapt → shock + hypoglycemia</td><td>—</td></tr>
+<tr><td>Body</td><td>—</td><td>Moon face, buffalo hump, truncal obesity, muscle atrophy</td></tr>
+<tr><td>Fluid</td><td>—</td><td>Retaining Na⁺/water, losing K⁺</td></tr>
+<tr><td>Glucose</td><td>↓ (crisis)</td><td>↑ (do Accu-Checks q6h)</td></tr>
+<tr><td>Treatment</td><td>"ADD-a-SONE" (Prednisone)</td><td>Adrenalectomy → then becomes Addison</td></tr>
+</table>
+
+<div class="sub-h">Kids Toys by Age</div>
+<table class="compare-table">
+<tr><th>Age</th><th>Stage</th><th>Best Toys</th></tr>
+<tr><td>0–6 mo</td><td>Sensorimotor</td><td>Musical mobile (large, soft)</td></tr>
+<tr><td>6–9 mo</td><td>Object permanence</td><td>Jack-in-the-box, peek-a-boo (large, firm). Mobile now DANGEROUS (strangulation)</td></tr>
+<tr><td>9–12 mo</td><td>Vocalization</td><td>Speaking toys (Tickle Me Elmo, See &amp; Say)</td></tr>
+<tr><td>1–3 yr</td><td>Toddler (gross motor)</td><td>Push/pull toys (wagons, lawn mowers). Parallel play.</td></tr>
+<tr><td>3–6 yr</td><td>Preschool (fine motor)</td><td>Pencils, scissors, tricycles. Cooperative/pretend play.</td></tr>
+<tr><td>7–11 yr</td><td>School age (3 Cs)</td><td>Creative (Legos), Collective (cards), Competitive (games)</td></tr>
+<tr><td>12–18 yr</td><td>Adolescent</td><td>Peer group. Allow room visits unless: &lt;12hr post-op, immunosuppressed, contagious</td></tr>
+</table>
+
+<div class="nclex-tip"><strong>Safety:</strong> No small toys &lt;4 years. No metal if O₂ in use. Immunosuppressed → hard plastic (disinfectable).<br><strong>When in doubt, go YOUNGER</strong> — children regress when sick.</div>
+
+<div class="sub-h">Laminectomy — Location, Location, Location</div>
+<table class="compare-table">
+<tr><th>Location</th><th>Innervates</th><th>Pre-op Assessment</th><th>Post-op Complication</th></tr>
+<tr><td class="cat-label">Cervical</td><td>Diaphragm, arms</td><td>Breathing → arm/hand function</td><td>Pneumonia</td></tr>
+<tr><td class="cat-label">Thoracic</td><td>Gut, abs</td><td>Cough → bowels</td><td>Pneumonia + paralytic ileus</td></tr>
+<tr><td class="cat-label">Lumbar</td><td>Bladder, legs</td><td>Urinary retention → leg function</td><td>Urinary retention + leg problems</td></tr>
+</table>
+
+<div class="mnemonic"><strong>#1 post-op answer: LOG ROLL.</strong> No sitting &gt;30 min. No dangling — supine to walking ASAP.<br><strong>Discharge:</strong> 4 temp restrictions (6 weeks): No sit &gt;30 min, log roll, no driving, no lift &gt;5 lbs.<br>3 permanent: Never bend at waist to lift (use knees), no lifting overhead (cervical), no jerky rides.</div>
+</div>
+<hr class="section-divider">
+
+<!-- ===================== LECTURE 8: LAB VALUES ===================== -->
+<div id="sec-lab"></div>
+<div class="section-hdr sh-lab fadeUp"><div class="sec-num">8</div><div><div class="sec-title">Lab Values &amp; Diagnostics</div><div class="sec-sub">Lecture 8 · ABCD prioritization, critical labs, Five Deadly Ds</div></div></div>
+<div class="content fadeUp d1">
+
+<div class="dx-card card-info">
+<h4>ABCD Scheme</h4>
+<p><strong>A</strong> = Low priority (can wait hours) · <strong>B</strong> = Concerning (monitor closely) · <strong>C</strong> = Critical (do something!) · <strong>D</strong> = Deadly (stay at bedside)</p>
+</div>
+
+<table class="compare-table">
+<tr><th>Lab</th><th>Normal</th><th>Level</th><th>Action</th></tr>
+<tr><td class="cat-label">Creatinine</td><td>0.6 – 1.2</td><td>A (B if dye procedure)</td><td>—</td></tr>
+<tr><td class="cat-label">BUN</td><td>8 – 25</td><td>A</td><td>Assess dehydration → IV fluid</td></tr>
+<tr><td class="cat-label">INR</td><td>2 – 3</td><td>C if ≥4</td><td>Hold Coumadin → Assess bleeding → Vit K → Call HCP</td></tr>
+<tr><td class="cat-label">K⁺</td><td>3.5 – 5.3</td><td>C if abnormal; <span class="danger">D if &gt;6</span></td><td>Low: Assess heart → Give K⁺. High: Hold K⁺ → EKG → Insulin/Kayexalate</td></tr>
+<tr><td class="cat-label">pH</td><td>7.35 – 7.45</td><td><span class="danger">D if in the 6s</span></td><td>Assess V/S → Call HCP</td></tr>
+<tr><td class="cat-label">Hb</td><td>12 – 18</td><td>B (8-11); C (&lt;8)</td><td>Assess bleeding/anemia → Prepare blood</td></tr>
+<tr><td class="cat-label">HCO₃</td><td>22 – 26</td><td>A</td><td>—</td></tr>
+<tr><td class="cat-label">CO₂</td><td>35 – 45</td><td>C (50s); <span class="danger">D (60s+)</span></td><td>50s: Pursed-lip breathing. 60s: Intubate/ventilate</td></tr>
+<tr><td class="cat-label">Hct</td><td>36 – 54</td><td>B</td><td>Assess dehydration</td></tr>
+<tr><td class="cat-label">PaO₂</td><td>78 – 100</td><td>C (70-77); <span class="danger">D (60s-)</span></td><td>70s: O₂ → Call HCP. 60s: Intubate/ventilate</td></tr>
+<tr><td class="cat-label">O₂ Sat</td><td>93 – 100</td><td>C if &lt;93</td><td>Give O₂. Invalidated by anemia or dye procedure</td></tr>
+<tr><td class="cat-label">BNP</td><td>&lt;100</td><td>B if &gt;100</td><td>Monitor for CHF signs</td></tr>
+<tr><td class="cat-label">Na⁺</td><td>135 – 145</td><td>B (abnormal); C (+ LOC change)</td><td>Low: Furosemide. High: IV fluid</td></tr>
+<tr><td class="cat-label">WBC</td><td>4K – 11K</td><td>C if &lt;4K</td><td rowspan="3">Neutropenic precautions</td></tr>
+<tr><td class="cat-label">ANC</td><td>&gt;500</td><td>C if &lt;500</td></tr>
+<tr><td class="cat-label">CD4</td><td>&gt;200</td><td>C if &lt;200 (=AIDS)</td></tr>
+<tr><td class="cat-label">Platelets</td><td>150K – 450K</td><td>C (&lt;90K); <span class="danger">D (&lt;40K)</span></td><td>Assess bleeding</td></tr>
+<tr><td class="cat-label">RBC</td><td>4 – 6 million</td><td>B</td><td>—</td></tr>
+</table>
+
+<div class="lethal"><strong>Five Deadly "Ds" — Highest Priority Labs (NCLEX won't pit these against each other):</strong><br>
+K⁺ &gt;6 · pH in the 6s · CO₂ in the 60s · PaO₂ &lt;60 · Platelets &lt;40,000</div>
+
+<div class="sub-h">Neutropenic Precautions</div>
+<div class="qref">
+<div class="qref-box"><h5>Hygiene</h5><ul><li>Strict handwashing</li><li>Shower BID with microbial soap</li></ul></div>
+<div class="qref-box"><h5>Environment</h5><ul><li>Private room</li><li>Reverse/protective isolation</li><li>No fresh flowers/potted plants</li></ul></div>
+<div class="qref-box"><h5>Diet</h5><ul><li>No raw fruits/veggies/undercooked meat</li><li>No water pitcher &gt;15 min</li><li>No reusing cups/plates</li></ul></div>
+<div class="qref-box"><h5>Monitoring</h5><ul><li>V/S q4h</li><li>WBC daily</li><li>Dedicated stethoscope/BP cuff</li><li>No indwelling catheters</li></ul></div>
+</div>
+</div>
+<hr class="section-divider">
+
+<!-- ===================== LECTURE 9: PSYCH DRUGS ===================== -->
+<div id="sec-psy"></div>
+<div class="section-hdr sh-psy fadeUp"><div class="sec-num">9</div><div><div class="sec-title">Psychiatric Drugs</div><div class="sec-sub">Lecture 9 · Phenothiazines, TCAs, benzos, MAOIs, lithium, SSRIs, atypicals</div></div></div>
+<div class="content fadeUp d1">
+
+<div class="nclex-tip"><strong>ALL psych drugs cause:</strong> Low BP + Weight changes (usually gain).</div>
+
+<div class="mnemonic"><strong>Naming:</strong> "ZINEs for the ZANY" (major antipsychotics). "ZEPs for ZZZs" (minor/anti-anxiety). "ZAPINEs" = 2nd gen antipsychotics.</div>
+
+<div class="sub-h">Phenothiazines (1st Gen Antipsychotics)</div>
+<div class="dx-card card-drug">
+<h4>Phenothiazines — Major Tranquilizers</h4>
+<div class="tags"><span class="tag drug">End in "ZINE"</span><span class="tag warn">Thorazine, Compazine</span></div>
+<p><strong>S/E = "ABCDEFG":</strong><br>
+<strong>A</strong>nticholinergic (dry mouth, urinary retention) · <strong>B</strong>lurred vision · <strong>C</strong>onstipation · <strong>D</strong>rowsiness · <strong>E</strong>PS (tremors, Parkinson) · <strong>F</strong>oto sensitivity · a<strong>G</strong>ranulocytosis (low WBC → teach to report sore throat/infection)</p>
+<p>S/E → Educate. Toxic effect → HOLD drug + Notify HCP.<br>
+#1 Dx for A–F: Safety. #1 Dx for G: Report infections.</p>
+</div>
+
+<div class="sub-h">Tricyclic Antidepressants (TCAs)</div>
+<div class="dx-card card-drug">
+<h4>TCAs — Mood Elevators</h4>
+<div class="tags"><span class="tag drug">Elavil, Tofranil, Aventyl, Desyrel</span></div>
+<p>S/E = "ABCDE" (same as above + <strong>E</strong>uphoria). Takes <strong>2–4 weeks</strong> for therapeutic effect. Teach patience.</p>
+</div>
+
+<div class="sub-h">Benzodiazepines (Anti-Anxiety)</div>
+<div class="dx-card card-drug">
+<h4>Benzos — Minor Tranquilizers</h4>
+<div class="tags"><span class="tag drug">Have "ZEP" in name</span><span class="tag drug">Pam or Lam endings</span></div>
+<p>Prototype: <span class="drug">Valium</span>. Uses: anti-anxiety, seizures, pre-op induction, muscle relaxant, EtOH withdrawal, vent sedation.<br>
+Work quickly but don't use &gt;2–4 weeks. S/E = "ABCD".</p>
+</div>
+
+<div class="nclex-tip"><strong>Give major + minor tranquilizers together</strong> (e.g., Valium + Elavil). Minor works immediately; major takes 2-4 weeks. Discontinue minor once major kicks in. Same principle as Heparin + Coumadin.</div>
+
+<div class="sub-h">MAO Inhibitors</div>
+<div class="dx-card card-drug">
+<h4>MAOIs — Antidepressants</h4>
+<div class="tags"><span class="tag drug">MARplan, NARdil, PARnate</span><span class="tag danger">Tyramine = Hypertensive Crisis</span></div>
+<p>S/E: ABCD. <strong>AVOID tyramine-containing foods:</strong><br>
+Fruits: "BAR" — Bananas, Avocados, Raisins · Grains OK except yeast · Meats: No organs, no preserved (smoked, dried, cured, pickled, hot dogs) · Dairy: No aged cheese (mozzarella &amp; cottage OK) · No EtOH, caffeine, chocolate, licorice, soy sauce</p>
+</div>
+
+<div class="sub-h">Lithium</div>
+<div class="dx-card card-drug">
+<h4>Lithium — Bipolar (LI = BI)</h4>
+<div class="tags"><span class="tag lyte">Acts like an electrolyte</span><span class="tag warn">Therapeutic: 0.6–1.2</span><span class="tag danger">Toxic: &gt;2.0</span></div>
+<p><strong>S/E (3 Ps):</strong> Peeing (polyuria), Pooping (diarrhea), Paresthesia<br>
+<strong>Toxic:</strong> Tremors, metallic taste, severe diarrhea<br>
+<strong>#1 Intervention (both S/E &amp; toxic):</strong> Give fluids. Low Na⁺ → lithium toxic. High Na⁺ → lithium ineffective. Keep Na⁺ normal.</p>
+</div>
+
+<div class="sub-h">Prozac, Haldol, Clozaril, Zoloft</div>
+<div class="qref">
+<div class="qref-box"><h5>Prozac (SSRI)</h5><p>S/E: ABCDE. Causes insomnia → give before noon. Watch for suicidal risk in adolescents with dose changes.</p></div>
+<div class="qref-box"><h5>Haldol (1st Gen)</h5><p>S/E: ABCDEFG (same as phenothiazines). <span class="danger">NMS risk</span> (high fever &gt;105). Differentiate NMS vs EPS: check temperature.</p></div>
+<div class="qref-box"><h5>Clozaril (Atypical)</h5><p>Advantage: No A-F side effects. Danger: <span class="danger">Agranulocytosis</span> (worse than chemo!). #1 intervention: Monitor WBC.</p></div>
+<div class="qref-box"><h5>Zoloft (SSRI)</h5><p>Can cause insomnia. Interacts with St. John's Wort → <span class="warn">Serotonin syndrome "SAD Head"</span>: Sweating, Apprehensive, Dizzy, Headache. Interacts with Warfarin → bleeding.</p></div>
+</div>
+
+<div class="nclex-tip"><strong>Geodon (ziprasidone):</strong> Black box warning — prolongs QT interval → sudden cardiac arrest. Do NOT use in cardiac patients.</div>
+</div>
+<hr class="section-divider">
+
+<!-- ===================== LECTURE 10: MATERNITY ===================== -->
+<div id="sec-mat"></div>
+<div class="section-hdr sh-mat fadeUp"><div class="sec-num">10</div><div><div class="sec-title">Maternity &amp; Neonatology</div><div class="sec-sub">Lecture 10 · Pregnancy, labor stages, complications, LION protocol</div></div></div>
+<div class="content fadeUp d1">
+
+<div class="sub-h">Pregnancy Basics</div>
+<div class="mnemonic"><strong>Naegele Rule:</strong> First day of LMP + 7 days − 3 months = EDD.<br>Example: LMP June 10 → June 17 → March 17.</div>
+
+<div class="sub-h2">Weight Gain</div>
+<div class="dx-card card-info">
+<h4>Ideal Weight Gain</h4>
+<p>1st trimester: 1 lb/month (3 lbs total). 2nd &amp; 3rd: 1 lb/week. Ideal total: <strong>25–31 lbs</strong>.<br>
+<strong>Quick formula:</strong> Weeks gestation − 9 = ideal lbs gained.<br>
+±1-2 lbs = WNL. ±3 = Assess. ±4+ = Trouble (BPP on fetus).</p>
+</div>
+
+<div class="sub-h2">Positive Signs of Pregnancy</div>
+<div class="qref">
+<div class="qref-box"><h5>1. Fetal skeleton</h5><p>On x-ray</p></div>
+<div class="qref-box"><h5>2. Fetus on US</h5><p>Ultrasound</p></div>
+<div class="qref-box"><h5>3. Fetal heart</h5><p>Auscultation (Doppler)</p></div>
+<div class="qref-box"><h5>4. Fetal movement</h5><p>EXAMINER palpates (not mother)</p></div>
+</div>
+
+<div class="nclex-tip"><strong>"When would you first?"</strong> = earliest date. <strong>"Most likely?"</strong> = midpoint. <strong>"By?"</strong> = latest date.<br>
+Fetal HR: 8-12 weeks. Quickening: 16-20 weeks.<br>
+<strong>Maybe signs:</strong> Chadwick (cervix blue) → Goodell (cervix soft) → Hegar (uterus soft) — Alphabetical, moving upward.</div>
+
+<div class="sub-h">Stages of Labor</div>
+<table class="compare-table">
+<tr><th>Stage/Phase</th><th>Dilation</th><th>Contractions</th><th>Intensity</th></tr>
+<tr><td class="cat-label">Stage 1, Phase 1 (Latent)</td><td>0–4 cm</td><td>5–30 min apart, 15–30 sec</td><td>Mild</td></tr>
+<tr><td class="cat-label">Stage 1, Phase 2 (Active)</td><td>5–7 cm</td><td>3–5 min apart, 30–60 sec</td><td>Moderate</td></tr>
+<tr><td class="cat-label">Stage 1, Phase 3 (Transition)</td><td>8–10 cm</td><td>2–3 min apart, 60–90 sec</td><td>Strong</td></tr>
+<tr><td class="cat-label">Stage 2</td><td colspan="3">Delivery of baby</td></tr>
+<tr><td class="cat-label">Stage 3</td><td colspan="3">Delivery of placenta (check intact + 3-vessel cord)</td></tr>
+<tr><td class="cat-label">Stage 4</td><td colspan="3">Recovery — 2 hours until bleeding stops</td></tr>
+</table>
+
+<div class="mnemonic"><strong>Memorize Active (Phase 2):</strong> 3-5 min apart, 30-60 sec → deduce Phase 1 &amp; 3 from there.<br><strong>Uterine hyperstimulation:</strong> Longer than 90 sec OR closer than 2 min → <span class="danger">Stop Pitocin!</span></div>
+
+<div class="sub-h">Complications of Labor</div>
+<table class="compare-table">
+<tr><th>Complication</th><th>Intervention</th></tr>
+<tr><td class="cat-label">Painful back labor ("OP")</td><td><strong>Position + Push:</strong> Knee-chest position → push fist into sacrum</td></tr>
+<tr><td class="cat-label">Prolapsed cord</td><td><strong>Push + Position:</strong> Push head off cord → Knee-chest or Trendelenburg → Prep C-section</td></tr>
+<tr><td class="cat-label">All others (Tetany, HTN, Vena cava, Toxemia, Uterine rupture)</td><td><strong>"LION":</strong> Left side, IV, Oxygen, Notify HCP. Stop Pitocin FIRST if running.</td></tr>
+</table>
+
+<div class="sub-h">Fetal Heart Monitoring — 7 Patterns</div>
+<div class="mnemonic"><strong>If it starts with "L" = Bad → do "LION".</strong> Variable = Very bad → Push &amp; Position.</div>
+
+<table class="compare-table">
+<tr><th>Pattern</th><th>Status</th><th>Intervention</th></tr>
+<tr><td>1. Low FHR (&lt;110)</td><td class="danger">BAD</td><td>LION + stop Pit</td></tr>
+<tr><td>2. High FHR (&gt;160)</td><td class="safe">OK</td><td>Document, take mom's temp</td></tr>
+<tr><td>3. Low baseline variability</td><td class="danger">BAD</td><td>LION + stop Pit</td></tr>
+<tr><td>4. High baseline variability</td><td class="safe">GOOD</td><td>Document</td></tr>
+<tr><td>5. Early deceleration</td><td class="safe">Normal</td><td>Document</td></tr>
+<tr><td>6. Variable deceleration</td><td class="danger">VERY BAD (prolapsed cord)</td><td>Push &amp; Position</td></tr>
+<tr><td>7. Late deceleration</td><td class="danger">BAD</td><td>LION + stop Pit</td></tr>
+</table>
+
+<div class="sub-h">Delivery &amp; Postpartum</div>
+<div class="sub-h2">Stage 2 — Delivery Order</div>
+<ol class="tx-steps">
+<li>Deliver head → mother stops pushing</li>
+<li>Suction: mouth THEN nose (ABC order)</li>
+<li>Check for nuchal cord</li>
+<li>Deliver shoulders, then body</li>
+<li>ID band before leaving delivery area</li>
+</ol>
+
+<div class="sub-h2">Stage 4 — Recovery (4 things q15 min)</div>
+<ol class="tx-steps">
+<li><strong>Vitals</strong> — Assess for shock (BP ↓, HR ↑)</li>
+<li><strong>Fundus</strong> — Boggy → massage. Displaced → catheterize</li>
+<li><strong>Peri pads</strong> — Saturated in ≤15 min = excessive</li>
+<li><strong>Roll pt over</strong> — Check for bleeding underneath</li>
+</ol>
+
+<div class="mnemonic"><strong>Postpartum "BUBBLE HEAD":</strong> Breasts, Uterine fundus (firm, midline, involutes 2cm/day), Bladder, Bowel, Lochia (Rubra→Serosa→Alba), Episiotomy, Hemoglobin, Extremities (thrombophlebitis — measure bilateral calf circumference), Affect, Discomforts.</div>
+
+<div class="sub-h">Newborn Variations (ALL Normal)</div>
+<div class="qref">
+<div class="qref-box"><h5>Milia</h5><p>White pinhead bumps on nose/cheeks</p></div>
+<div class="qref-box"><h5>Epstein Pearls</h5><p>White cysts on palate</p></div>
+<div class="qref-box"><h5>Mongolian Spot</h5><p>Bluish sacral area — document to prevent abuse charges</p></div>
+<div class="qref-box"><h5>Erythema Toxicum</h5><p>"Flea-bitten" rash, 24-48 hrs, resolves in days</p></div>
+<div class="qref-box"><h5>Acrocyanosis</h5><p>Blue hands/feet — normal, NOT poor O₂</p></div>
+<div class="qref-box"><h5>Vernix Caseosa</h5><p>Fatty whitish coating protecting skin</p></div>
+</div>
+
+<div class="vs-banner">CEPHALOHEMATOMA vs CAPUT SUCCEDANEUM</div>
+<table class="compare-table">
+<tr><th>Feature</th><th>Cephalohematoma</th><th>Caput Succedaneum</th></tr>
+<tr><td>What</td><td>Blood between periosteum &amp; skull</td><td>Edema of scalp from mechanical trauma</td></tr>
+<tr><td>Suture lines</td><td>Does NOT cross</td><td>CS = Crosses Suture lines</td></tr>
+<tr><td>Onset</td><td>24–48 hrs after birth</td><td>Present at birth</td></tr>
+</table>
+
+<div class="sub-h">OB Medications</div>
+<table class="compare-table">
+<tr><th>Drug</th><th>Type</th><th>Key Facts</th></tr>
+<tr><td class="cat-label"><span class="drug">Terbutaline (Brethine)</span></td><td>Tocolytic (stops labor)</td><td>S/E: maternal tachycardia. Don't give with cardiac disease.</td></tr>
+<tr><td class="cat-label"><span class="drug">Mag Sulfate</span></td><td>Tocolytic</td><td>Causes hypermagnesemia (everything ↓). Monitor RR (&lt;12 → decrease dose). Reflexes 0-1+ → decrease; 3-4+ → increase.</td></tr>
+<tr><td class="cat-label"><span class="drug">Pitocin</span></td><td>Oxytocic (stimulates labor)</td><td>S/E: Uterine hyperstimulation (&gt;90 sec, &lt;2 min apart) → lower dose</td></tr>
+<tr><td class="cat-label"><span class="drug">Methergine</span></td><td>Oxytocic</td><td>Causes HTN (contracts blood vessels)</td></tr>
+<tr><td class="cat-label"><span class="drug">Betamethasone</span></td><td>Fetal lung (steroid)</td><td>Given to mother IM. S/E: ↑ glucose</td></tr>
+<tr><td class="cat-label"><span class="drug">Surfactant (Survanta)</span></td><td>Neonatal lung</td><td>Given to baby transtracheally after birth</td></tr>
+</table>
+
+<div class="sub-h">Medication Hints</div>
+<div class="mnemonic"><strong>Insulin mixing "RN":</strong> Pressurize N → Pressurize R → Draw up R → Draw up N.<br>
+<strong>IM needle:</strong> Both have "1" → 21-gauge, 1-inch. <strong>SubQ needle:</strong> "S" looks like "5" → 25-gauge, 0.5-inch.</div>
+
+<table class="compare-table">
+<tr><th>Feature</th><th>Heparin</th><th>Coumadin</th></tr>
+<tr><td>Route</td><td>IV or SubQ</td><td>PO only</td></tr>
+<tr><td>Onset</td><td>Immediately</td><td>4-5 days</td></tr>
+<tr><td>Duration</td><td>≤21 days (except Lovenox)</td><td>Lifelong OK</td></tr>
+<tr><td>Antidote</td><td><span class="drug">Protamine Sulfate</span></td><td><span class="drug">Vitamin K</span></td></tr>
+<tr><td>Lab</td><td>PTT</td><td>PT/INR</td></tr>
+<tr><td>Pregnancy</td><td class="safe">Class C (can use)</td><td class="danger">Class X (cannot use)</td></tr>
+</table>
+
+<div class="mnemonic"><strong>Diuretics:</strong> Ends in "X" = K⁺-wasting (Lasix, Bumex, Demadex) + Diuril.<br>Does NOT end in "X" = K⁺-sparing (Aldactone, Moduretic).</div>
+</div>
+<hr class="section-divider">
+
+<!-- ===================== LECTURE 11: FETAL (merged into L10 above) ===================== -->
+<!-- Lectures 10 & 11 combined in Maternity section above since they are continuous -->
+
+<!-- ===================== LECTURE 12: PRIORITIZATION ===================== -->
+<div id="sec-fetal" style="display:none"></div>
+<div id="sec-pri"></div>
+<div class="section-hdr sh-pri fadeUp"><div class="sec-num">12</div><div><div class="sec-title">Prioritization, Delegation &amp; Test Strategies</div><div class="sec-sub">Lecture 12 · 4 rules, staff management, pediatric teaching, Piaget, guessing strategies</div></div></div>
+<div class="content fadeUp d1">
+
+<div class="nclex-tip"><strong>This is the most important lecture — at least 15 questions on the exam.</strong> Do not guess in this section — learn the material!</div>
+
+<div class="sub-h">4 Rules for Prioritization</div>
+
+<div class="dx-card card-crisis">
+<h4>Rule 1: Acute Beats Chronic</h4>
+<p>Acute appendicitis &gt; COPD or CHF. An acutely ill patient always takes priority.</p>
+</div>
+
+<div class="dx-card card-crisis">
+<h4>Rule 2: Fresh Post-op (&lt;12 hrs) Beats Medical/Other Surgical</h4>
+<p>2-hr postcholecystectomy &gt; radical neck dissection &gt; bilateral AKA &gt; craniotomy. Fresh post-op always wins.</p>
+</div>
+
+<div class="dx-card card-crisis">
+<h4>Rule 3: Unstable Beats Stable</h4>
+<p>Answers have 4 parts: (1) Age, (2) Gender, (3) Dx, (4) Modifying phrase. <strong>The modifying phrase is ALWAYS most important.</strong> Age &amp; gender are irrelevant for prioritization.</p>
+</div>
+
+<div class="vs-banner">STABLE vs UNSTABLE</div>
+<table class="compare-table">
+<tr><th>Stable</th><th>Unstable</th></tr>
+<tr><td>Stable, chronic, &gt;12hr post-op</td><td>Unstable, acute, &lt;12hr post-op</td></tr>
+<tr><td>Local/regional anesthesia</td><td>General anesthesia in first 12 hrs</td></tr>
+<tr><td>Labs A or B level</td><td>Labs C or D level</td></tr>
+<tr><td>Ready for discharge, &gt;24hr admitted</td><td>Newly diagnosed/admitted, &lt;24hr</td></tr>
+<tr><td>Unchanged assessment</td><td>Changing/changed assessment</td></tr>
+<tr><td>Expected S/Sx of disease</td><td>Unexpected S/Sx</td></tr>
+</table>
+
+<div class="lethal"><strong>4 Things That ALWAYS Make You Unstable (even if expected):</strong><br>
+1. Hemorrhage (not just bleeding) · 2. High fever &gt;105°F · 3. Hypoglycemia · 4. Pulseless or Breathless<br>
+<em>Exception: At unwitnessed accident scene, pulseless/breathless = low priority (likely dead) = BLACK TAG</em></div>
+
+<div class="dx-card card-info">
+<h4>Rule 4: Tie-Breaker — Organ Vitality</h4>
+<p>Use the <strong>modifying phrase organ</strong> (not diagnosis organ):<br>
+1. Brain → 2. Lung → 3. Heart → 4. Liver → 5. Kidney → 6. Pancreas</p>
+</div>
+
+<div class="nclex-tip"><strong>Mass Casualty BLACK TAG:</strong> Pulseless, Breathless, or Fixed/dilated pupils → "Tag them black, ship them last."</div>
+
+<div class="sub-h">Delegation</div>
+<div class="sub-h2">LPN Cannot Do (9 Things)</div>
+<table class="compare-table">
+<tr><th>#</th><th>Restriction</th></tr>
+<tr><td>1</td><td>Cannot <strong>start</strong> an IV</td></tr>
+<tr><td>2</td><td>Cannot <strong>hang or mix</strong> IV meds</td></tr>
+<tr><td>3</td><td>Cannot <strong>push</strong> IV push meds</td></tr>
+<tr><td>4</td><td>Cannot administer <strong>blood</strong> or deal with <strong>central lines</strong></td></tr>
+<tr><td>5</td><td>Cannot <strong>make</strong> the care plan (can implement)</td></tr>
+<tr><td>6</td><td>Cannot <strong>develop teaching</strong> (can reinforce)</td></tr>
+<tr><td>7</td><td>Cannot care for <strong>unstable</strong> patients</td></tr>
+<tr><td>8</td><td>Cannot perform the <strong>"first"</strong> of anything</td></tr>
+<tr><td>9</td><td>Cannot assess: admission, d/c, transfer, or first assessment after a change</td></tr>
+</table>
+
+<div class="nclex-tip"><strong>"First" rule:</strong> LPN can do tube feeding, dressing changes, feeding, ambulation, and V/S ONLY after the RN does it first.</div>
+
+<div class="sub-h2">UAP Cannot Do (4 Things)</div>
+<table class="compare-table">
+<tr><th>#</th><th>Restriction</th><th>Exception</th></tr>
+<tr><td>1</td><td>Cannot chart about the patient</td><td>Can chart what they did ("side rail up")</td></tr>
+<tr><td>2</td><td>Cannot administer medications</td><td>Topical OTC meds, barrier creams, A&amp;D ointment</td></tr>
+<tr><td>3</td><td>Cannot perform assessments</td><td>Vitals and Accu-Chek</td></tr>
+<tr><td>4</td><td>Cannot perform treatments</td><td>Enemas</td></tr>
+</table>
+
+<div class="lethal"><strong>NEVER delegate safety to family members</strong> unless trained (document teaching). UAP never does any ADL task first.</div>
+
+<div class="sub-h">Staff Management</div>
+<div class="mnemonic"><strong>4 answer choices:</strong> (1) Tell Supervisor, (2) Confront &amp; take over, (3) Talk later, (4) Ignore it. <strong>NEVER ignore.</strong></div>
+
+<table class="compare-table">
+<tr><th>Situation</th><th>Action</th></tr>
+<tr><td class="cat-label">Illegal act</td><td>Tell Supervisor (diverting narcotics, bulging pockets)</td></tr>
+<tr><td class="cat-label">Immediate harm</td><td>Confront &amp; take over (no gloves during care, contaminated gloves in surgery)</td></tr>
+<tr><td class="cat-label">Inappropriate but no harm</td><td>Talk to them later (wrong medical terminology)</td></tr>
+</table>
+
+<div class="sub-h">Pediatric Teaching — Piaget's 4 Stages</div>
+<table class="compare-table">
+<tr><th>Stage</th><th>Age</th><th>Key Feature</th><th>Teaching Method</th></tr>
+<tr><td class="cat-label">Sensorimotor</td><td>0–2 yr</td><td>Think about NOW only</td><td>Tell them WHILE doing it (present tense). No pre-op teaching for child.</td></tr>
+<tr><td class="cat-label">Preoperational</td><td>3–6 yr</td><td>Fantasy, imaginative, illogical</td><td>Teach 2 hours/morning/day of procedure. Don't give time to imagine worst.</td></tr>
+<tr><td class="cat-label">Concrete Operations</td><td>7–11 yr</td><td>"7/11 surrounded by concrete." Rule-oriented.</td><td>Teach 1-2 days ahead. Demonstration. Age-appropriate reading.</td></tr>
+<tr><td class="cat-label">Formal Operations</td><td>12–15 yr</td><td>Abstract, cause &amp; effect</td><td>Teach like an adult. Can manage own care at 12+.</td></tr>
+</table>
+
+<div class="nclex-tip"><strong>Manage ≠ Skill.</strong> Manage = 13+ (abstract decisions). Skill = 8+ (following steps).</div>
+
+<div class="sub-h">7 Psych Test Principles</div>
+<ol class="tx-steps">
+<li>Know what <strong>phase</strong> of the nurse-patient relationship you're in</li>
+<li><strong>Don't give/accept gifts</strong> in psych</li>
+<li><strong>Don't give advice!</strong> Ask "What do YOU think you should do?"</li>
+<li><strong>Never give guarantees</strong> ("If you cry, you'll feel better")</li>
+<li><strong>Immediacy:</strong> Pick the answer that keeps them talking</li>
+<li><strong>Concreteness:</strong> No slang, no figurative speech. Psych pts take you literally.</li>
+<li><strong>Empathy:</strong> Accept feelings. Never say "Don't worry" or "I know how you feel."</li>
+</ol>
+
+<div class="sub-h">Guessing Strategies</div>
+<table class="compare-table">
+<tr><th>#</th><th>Strategy</th></tr>
+<tr><td>1</td><td><strong>Psych:</strong> Pick "I will examine my feelings" or "Establish trust relationship"</td></tr>
+<tr><td>2</td><td><strong>Nutrition:</strong> Pick "baked chicken" (no fried). No chicken? Pick fish (not shellfish). Toddlers: finger food. Don't mix meds in kids' food.</td></tr>
+<tr><td>3</td><td><strong>Pharm:</strong> If unknown S/E, pick S/E in same body system as drug. Unknown PO drug → pick GI S/E.</td></tr>
+<tr><td>4</td><td><strong>OB:</strong> Check fetal heart rate</td></tr>
+<tr><td>5</td><td><strong>Med-Surg:</strong> "First thing to assess?" = LOC. "First thing to do?" = Establish airway.</td></tr>
+<tr><td>6</td><td><strong>Peds:</strong> "NORMAL, OLDER, EASIER" — Give the child more time</td></tr>
+<tr><td>7</td><td><strong>General:</strong> Rule out absolutes. Same-meaning answers are both wrong. Opposites → one is likely right.</td></tr>
+<tr><td>8</td><td><strong>Priority:</strong> Pick the worst consequence (Worst Consequences Game)</td></tr>
+<tr><td>9</td><td>Stuck between 2? Re-read the question — you missed something</td></tr>
+<tr><td>10</td><td><strong>Sesame Street Rule:</strong> The answer that looks different from the others is likely correct</td></tr>
+</table>
+
+<div class="mnemonic"><strong>3 Expectations NOT to have on test day:</strong><br>
+1. Don't expect 75/85 questions — prepare for the max (265/285)<br>
+2. Don't expect to know everything<br>
+3. Don't expect a perfect day — get through one question at a time</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<p><strong>📓 Black Book — Full Klimek Lecture Notes</strong></p>
+<p>92 Pages · 12 Lectures · Compiled for NCLEX Review</p>
+</div>
+
+<script>
+/* Theme Toggle */
+(function(){
+var h=document.documentElement;
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){h.classList.add('dark')}
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(e){e.matches?h.classList.add('dark'):h.classList.remove('dark')});
+window._toggleGuideTheme=function(){
+h.classList.toggle('dark');
+var btn=document.querySelector('.theme-toggle-btn');
+if(btn)btn.textContent=h.classList.contains('dark')?'🌙':'☀️';
+};
+})();
+</script>
+<script>
+/* Smooth scroll for badges and nav pills */
+document.querySelectorAll('.badge,.nav-pill').forEach(function(el){
+el.addEventListener('click',function(e){
+e.preventDefault();
+var id=this.getAttribute('href');
+if(id){var t=document.querySelector(id);if(t)t.scrollIntoView({behavior:'smooth',block:'start'})}
+});
+});
+/* Drug card popup */
+document.addEventListener('click',function(e){
+if(e.target.classList.contains('drug')){
+var name=e.target.textContent.trim();
+if(name&&window.parent!==window){window.parent.postMessage({type:'showDrugCard',drug:name},'*');}
+}
+});
+</script>
+</body>
+</html>
