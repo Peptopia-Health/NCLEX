@@ -1,518 +1,1288 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peptopia Klimek Review Guide - Comprehensive</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blue Book II — Foundations &amp; Clinical Review</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#0a0a1a;
+  color:#e2e8f0;
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  line-height:1.75;
+  padding:0;
+  font-size:1.05rem;
+}
+/* === ANIMATED BACKGROUND === */
+body::before{
+  content:'';position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 10%, rgba(37,99,235,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 90%, rgba(99,102,241,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 50% 50%, rgba(6,182,212,0.04) 0%, transparent 70%);
+  pointer-events:none;
+}
+.guide-container{
+  max-width:920px;
+  margin:0 auto;
+  padding:1.5rem 1.4rem 4rem;
+}
+/* === HERO HEADER === */
+.hero{
+  position:relative;
+  background:linear-gradient(135deg,#0c2461 0%,#1e3a8a 40%,#2563eb 100%);
+  border-radius:1.25rem;
+  padding:2rem 1.75rem 1.75rem;
+  margin-bottom:2rem;
+  border:2px solid #3b82f6;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;
+  background:radial-gradient(circle,rgba(96,165,250,0.2),transparent 70%);
+  pointer-events:none;
+}
+.hero::after{
+  content:'📘';position:absolute;top:1rem;right:1.25rem;font-size:3rem;opacity:0.15;
+  pointer-events:none;
+}
+.hero h1{
+  font-size:1.85rem;font-weight:900;color:#fff;letter-spacing:-0.02em;margin-bottom:0.5rem;
+  text-shadow:0 2px 12px rgba(37,99,235,0.4);
+}
+.hero .subtitle{
+  font-size:1rem;color:#bfdbfe;line-height:1.65;font-weight:400;
+}
+.hero .badge-row{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.85rem}
+.hero .badge-row .badge{
+  display:inline-flex;align-items:center;gap:0.3rem;
+  padding:0.25rem 0.65rem;border-radius:2rem;font-size:0.78rem;font-weight:700;
+  letter-spacing:0.03em;text-transform:uppercase;
+  backdrop-filter:blur(4px);cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;text-decoration:none;
+}
+.hero .badge-row .badge:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+.bdg-acid{background:rgba(34,211,238,0.2);color:#67e8f9;border:1px solid rgba(34,211,238,0.4)}
+.bdg-alc{background:rgba(251,146,60,0.2);color:#fdba74;border:1px solid rgba(251,146,60,0.4)}
+.bdg-card{background:rgba(248,113,113,0.2);color:#fca5a5;border:1px solid rgba(248,113,113,0.4)}
+.bdg-mob{background:rgba(52,211,153,0.2);color:#6ee7b7;border:1px solid rgba(52,211,153,0.4)}
+.bdg-dm{background:rgba(167,139,250,0.2);color:#c4b5fd;border:1px solid rgba(167,139,250,0.4)}
+.bdg-tox{background:rgba(244,114,182,0.2);color:#f9a8d4;border:1px solid rgba(244,114,182,0.4)}
+.bdg-endo{background:rgba(251,191,36,0.2);color:#fde68a;border:1px solid rgba(251,191,36,0.4)}
+.bdg-lab{background:rgba(96,165,250,0.2);color:#93c5fd;border:1px solid rgba(96,165,250,0.4)}
+.bdg-psy{background:rgba(129,140,248,0.2);color:#a5b4fc;border:1px solid rgba(129,140,248,0.4)}
+.bdg-mat{background:rgba(251,113,133,0.2);color:#fda4af;border:1px solid rgba(251,113,133,0.4)}
+.bdg-peds{background:rgba(74,222,128,0.2);color:#86efac;border:1px solid rgba(74,222,128,0.4)}
+.bdg-pri{background:rgba(192,132,252,0.2);color:#d8b4fe;border:1px solid rgba(192,132,252,0.4)}
+.bdg-test{background:rgba(148,163,184,0.2);color:#cbd5e1;border:1px solid rgba(148,163,184,0.4)}
+
+/* === STICKY NAV === */
+.nav-bar{
+  position:sticky;top:0;z-index:100;
+  display:flex;gap:0.35rem;padding:0.5rem 0;margin-bottom:0.5rem;
+  overflow-x:auto;-webkit-overflow-scrolling:touch;
+  background:linear-gradient(180deg,#0a0a1a 60%,transparent);
+  scrollbar-width:none;
+}
+.nav-bar::-webkit-scrollbar{display:none}
+.nav-pill{
+  display:inline-flex;align-items:center;gap:0.25rem;
+  padding:0.35rem 0.7rem;border-radius:2rem;
+  font-size:0.75rem;font-weight:700;white-space:nowrap;
+  text-decoration:none;
+  border:1.5px solid #334155;background:rgba(15,23,42,0.8);
+  color:#94a3b8;transition:all 0.2s;cursor:pointer;
+  backdrop-filter:blur(8px);
+}
+.nav-pill:hover{border-color:#3b82f6;color:#93c5fd;background:rgba(37,99,235,0.15)}
+
+/* === SECTION HEADERS === */
+.section-hdr{
+  position:relative;
+  margin:2.5rem 0 1.25rem;
+  padding:1rem 1.25rem 1rem 1.15rem;
+  border-radius:1rem;
+  font-size:1.45rem;
+  font-weight:800;
+  letter-spacing:-0.01em;
+  overflow:hidden;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.section-hdr::before{
+  content:'';position:absolute;top:0;left:0;right:0;bottom:0;opacity:0.92;border-radius:1rem;z-index:0;
+}
+.section-hdr span{position:relative;z-index:1}
+.section-hdr .sec-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:50%;font-size:0.85rem;font-weight:900;
+  margin-right:0.5rem;vertical-align:middle;
+  box-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+/* Section color themes */
+.sh-acid{border:2px solid #06b6d4;background:linear-gradient(135deg,#083344,#155e75,#0e7490)}
+.sh-acid::before{background:linear-gradient(135deg,rgba(6,182,212,0.1),transparent)}
+.sh-acid .sec-num{background:#06b6d4;color:#083344}
+.sh-acid span{color:#a5f3fc}
+
+.sh-alc{border:2px solid #f97316;background:linear-gradient(135deg,#431407,#7c2d12,#9a3412)}
+.sh-alc::before{background:linear-gradient(135deg,rgba(249,115,22,0.1),transparent)}
+.sh-alc .sec-num{background:#f97316;color:#431407}
+.sh-alc span{color:#fed7aa}
+
+.sh-card{border:2px solid #ef4444;background:linear-gradient(135deg,#450a0a,#7f1d1d,#991b1b)}
+.sh-card::before{background:linear-gradient(135deg,rgba(239,68,68,0.1),transparent)}
+.sh-card .sec-num{background:#ef4444;color:#450a0a}
+.sh-card span{color:#fecaca}
+
+.sh-mob{border:2px solid #10b981;background:linear-gradient(135deg,#022c22,#064e3b,#065f46)}
+.sh-mob::before{background:linear-gradient(135deg,rgba(16,185,129,0.1),transparent)}
+.sh-mob .sec-num{background:#10b981;color:#022c22}
+.sh-mob span{color:#a7f3d0}
+
+.sh-dm{border:2px solid #8b5cf6;background:linear-gradient(135deg,#2e1065,#4c1d95,#5b21b6)}
+.sh-dm::before{background:linear-gradient(135deg,rgba(139,92,246,0.1),transparent)}
+.sh-dm .sec-num{background:#8b5cf6;color:#2e1065}
+.sh-dm span{color:#ddd6fe}
+
+.sh-tox{border:2px solid #ec4899;background:linear-gradient(135deg,#500724,#831843,#9d174d)}
+.sh-tox::before{background:linear-gradient(135deg,rgba(236,72,153,0.1),transparent)}
+.sh-tox .sec-num{background:#ec4899;color:#500724}
+.sh-tox span{color:#fbcfe8}
+
+.sh-endo{border:2px solid #eab308;background:linear-gradient(135deg,#422006,#713f12,#854d0e)}
+.sh-endo::before{background:linear-gradient(135deg,rgba(234,179,8,0.1),transparent)}
+.sh-endo .sec-num{background:#eab308;color:#422006}
+.sh-endo span{color:#fef08a}
+
+.sh-lab{border:2px solid #3b82f6;background:linear-gradient(135deg,#0c2461,#1e3a8a,#1d4ed8)}
+.sh-lab::before{background:linear-gradient(135deg,rgba(59,130,246,0.1),transparent)}
+.sh-lab .sec-num{background:#3b82f6;color:#0c2461}
+.sh-lab span{color:#bfdbfe}
+
+.sh-psy{border:2px solid #6366f1;background:linear-gradient(135deg,#1e1b4b,#312e81,#3730a3)}
+.sh-psy::before{background:linear-gradient(135deg,rgba(99,102,241,0.1),transparent)}
+.sh-psy .sec-num{background:#6366f1;color:#1e1b4b}
+.sh-psy span{color:#c7d2fe}
+
+.sh-mat{border:2px solid #f43f5e;background:linear-gradient(135deg,#4c0519,#881337,#9f1239)}
+.sh-mat::before{background:linear-gradient(135deg,rgba(244,63,94,0.1),transparent)}
+.sh-mat .sec-num{background:#f43f5e;color:#4c0519}
+.sh-mat span{color:#fecdd3}
+
+.sh-peds{border:2px solid #22c55e;background:linear-gradient(135deg,#052e16,#14532d,#166534)}
+.sh-peds::before{background:linear-gradient(135deg,rgba(34,197,94,0.1),transparent)}
+.sh-peds .sec-num{background:#22c55e;color:#052e16}
+.sh-peds span{color:#bbf7d0}
+
+.sh-pri{border:2px solid #a855f7;background:linear-gradient(135deg,#3b0764,#581c87,#6b21a8)}
+.sh-pri::before{background:linear-gradient(135deg,rgba(168,85,247,0.1),transparent)}
+.sh-pri .sec-num{background:#a855f7;color:#3b0764}
+.sh-pri span{color:#e9d5ff}
+
+.sh-test{border:2px solid #64748b;background:linear-gradient(135deg,#0f172a,#1e293b,#334155)}
+.sh-test::before{background:linear-gradient(135deg,rgba(100,116,139,0.1),transparent)}
+.sh-test .sec-num{background:#64748b;color:#0f172a}
+.sh-test span{color:#cbd5e1}
+
+/* === COMPARISON TABLES === */
+h3{
+  font-size:1.18rem;color:#93c5fd;margin:1.6rem 0 0.6rem;
+  font-weight:700;
+}
+h4{font-size:1.06rem;color:#a5b4fc;margin:1rem 0 0.4rem;font-weight:700}
+p,li{color:#e2e8f0;margin:0.3rem 0;font-size:1.02rem}
+ul,ol{padding-left:1.5rem}
+li{margin:0.25rem 0}
+li::marker{color:#60a5fa}
+strong,b{color:#f1f5f9}
+em{color:#cbd5e1}
+
+.compare-table{
+  width:100%;border-collapse:separate;border-spacing:0;
+  margin:0.85rem 0 1.5rem;font-size:1rem;
+  border:2px solid #334155;border-radius:0.85rem;overflow:hidden;
+  box-shadow:0 4px 24px rgba(0,0,0,0.3);
+}
+.compare-table th{
+  background:linear-gradient(180deg,#0c2461,#152a5e);
+  color:#93c5fd;font-weight:800;padding:0.7rem 0.75rem;text-align:left;
+  border-bottom:2px solid #2563eb;
+  font-size:0.88rem;text-transform:uppercase;letter-spacing:0.05em;
+  position:sticky;top:0;z-index:2;
+}
+.compare-table th:first-child{border-right:2px solid #334155}
+.compare-table td{
+  background:#0f172a;color:#e2e8f0;padding:0.65rem 0.75rem;
+  border-bottom:1px solid #1e293b;vertical-align:top;line-height:1.6;
+}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table tr:hover td{background:rgba(59,130,246,0.06)}
+.compare-table .cat-label{
+  font-weight:700;background:linear-gradient(90deg,#0c1a35,#0f172a);
+  color:#93c5fd;white-space:nowrap;min-width:115px;font-size:0.9rem;
+  border-right:2px solid #334155;
+}
+.compare-table td:nth-child(2){border-right:1px solid #1e293b}
+.compare-table .up{color:#f87171;font-weight:700}
+.compare-table .down{color:#67e8f9;font-weight:700}
+.compare-table .normal{color:#94a3b8}
+
+/* Inline semantic colors */
+.danger{color:#f87171;font-weight:700}
+.warn{color:#fbbf24;font-weight:700}
+.safe{color:#4ade80;font-weight:700}
+.drug{color:#93c5fd;font-weight:700;cursor:pointer}
+.drug:hover{text-decoration:underline}
+.lyte{color:#ffa040;font-weight:700}
+.dx{color:#f9a8d4;font-weight:600}
+.arr-up::before{content:"↑ ";color:#f87171;font-weight:900}
+.arr-down::before{content:"↓ ";color:#67e8f9;font-weight:900}
+
+/* === DX CARDS === */
+.dx-card{
+  position:relative;
+  background:linear-gradient(135deg,rgba(12,36,97,0.7),rgba(15,15,35,0.95));
+  border:2px solid #2563eb;border-radius:1.1rem;
+  padding:1.25rem 1.25rem;margin:1.25rem 0;
+  overflow:hidden;
+}
+.dx-card::before{
+  content:'';position:absolute;top:0;left:0;width:6px;height:100%;
+  border-radius:1.1rem 0 0 1.1rem;
+}
+.dx-card.card-hyper::before{background:linear-gradient(180deg,#f97316,#ef4444)}
+.dx-card.card-hypo::before{background:linear-gradient(180deg,#06b6d4,#3b82f6)}
+.dx-card.card-crisis::before{background:linear-gradient(180deg,#ef4444,#dc2626)}
+.dx-card.card-info::before{background:linear-gradient(180deg,#6366f1,#8b5cf6)}
+.dx-card.card-safe::before{background:linear-gradient(180deg,#10b981,#22c55e)}
+.dx-card h3{margin-top:0;color:#e0e7ff;font-size:1.18rem}
+.dx-card .tag-row{display:flex;flex-wrap:wrap;gap:0.35rem;margin:0.4rem 0 0.65rem}
+.tag{
+  display:inline-flex;align-items:center;gap:0.25rem;
+  padding:0.2rem 0.6rem;border-radius:2rem;
+  font-size:0.78rem;font-weight:700;letter-spacing:0.03em;text-transform:uppercase;
+}
+.tag-danger{background:rgba(248,113,113,0.15);color:#fca5a5;border:1px solid rgba(248,113,113,0.4)}
+.tag-caution{background:rgba(251,191,36,0.15);color:#fde68a;border:1px solid rgba(251,191,36,0.4)}
+.tag-safe{background:rgba(74,222,128,0.15);color:#86efac;border:1px solid rgba(74,222,128,0.4)}
+.tag-info{background:rgba(129,140,248,0.15);color:#a5b4fc;border:1px solid rgba(129,140,248,0.4)}
+.tag-key{background:rgba(96,165,250,0.15);color:#93c5fd;border:1px solid rgba(96,165,250,0.4)}
+
+/* === MNEMONIC BOXES === */
+.mnemonic{
+  position:relative;
+  background:linear-gradient(135deg,#1e3a8a,#1d4ed8);
+  border:2px solid #3b82f6;border-radius:0.85rem;
+  padding:1rem 1.15rem 1rem 3rem;
+  margin:1rem 0;font-size:1.02rem;line-height:1.7;
+  box-shadow:0 4px 16px rgba(37,99,235,0.15);
+}
+.mnemonic::before{
+  content:'💡';position:absolute;left:0.85rem;top:0.9rem;font-size:1.35rem;
+}
+.mnemonic strong{color:#e0f2fe;font-size:1.06rem}
+.mnemonic em{color:#93c5fd}
+
+/* === NCLEX TIP BOXES === */
+.nclex-tip{
+  position:relative;
+  background:linear-gradient(135deg,rgba(37,99,235,0.1),rgba(30,58,138,0.05));
+  border:1.5px solid #3b82f6;border-left:5px solid #3b82f6;
+  border-radius:0.75rem;
+  padding:1rem 1.15rem 1rem 3rem;
+  margin:1rem 0;font-size:1.02rem;line-height:1.65;
+}
+.nclex-tip::before{
+  content:'🎯';position:absolute;left:0.85rem;top:0.9rem;font-size:1.25rem;
+}
+.nclex-tip strong{color:#93c5fd;font-size:1.04rem}
+
+/* === LETHAL/DANGER BOXES === */
+.lethal{
+  position:relative;
+  background:linear-gradient(135deg,rgba(248,113,113,0.12),rgba(220,38,38,0.06));
+  border:2px solid #dc2626;border-left:6px solid #ef4444;
+  border-radius:0.75rem;
+  padding:1rem 1.15rem 1rem 3.25rem;
+  margin:1rem 0;font-size:1.05rem;line-height:1.65;
+  box-shadow:0 0 20px rgba(239,68,68,0.08);
+}
+.lethal::before{
+  content:'☠️';position:absolute;left:0.85rem;top:0.85rem;font-size:1.35rem;
+}
+.lethal strong{color:#fca5a5;font-size:1.08rem}
+
+/* === QUICK REF GRID === */
+.qref{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0.85rem;margin:0.85rem 0}
+.qref-box{
+  background:linear-gradient(135deg,rgba(12,36,97,0.6),rgba(15,23,42,0.8));
+  border:1.5px solid #475569;border-radius:0.85rem;padding:0.85rem 1rem;
+  transition:border-color 0.2s,transform 0.2s;
+}
+.qref-box:hover{border-color:#60a5fa;transform:translateY(-2px)}
+.qref-box h4{margin-top:0;font-size:1.05rem;color:#e0e7ff;font-weight:800}
+.qref-box ul{margin:0.25rem 0 0;padding-left:1.2rem}
+.qref-box li{font-size:0.98rem;margin:0.2rem 0;color:#cbd5e1}
+.qref-box li strong{color:#f1f5f9}
+
+/* === HR DIVIDERS === */
+.section-divider{
+  border:none;height:2px;margin:2rem 0;
+  background:linear-gradient(90deg,transparent,#2563eb,#3b82f6,#2563eb,transparent);
+}
+
+/* === NUMBERED STEPS === */
+.tx-steps{counter-reset:tx;list-style:none;padding-left:0}
+.tx-steps li{position:relative;padding-left:0.3rem;margin:0.35rem 0}
+.tx-steps li::before{
+  counter-increment:tx;content:counter(tx);
+  display:inline-flex;align-items:center;justify-content:center;
+  width:22px;height:22px;border-radius:50%;
+  background:#2563eb;color:#e0f2fe;
+  font-size:0.72rem;font-weight:800;margin-right:0.45rem;
+  vertical-align:middle;
+}
+.tx-steps li::marker{display:none}
+
+/* === VS BANNER === */
+.vs-banner{
+  display:flex;align-items:center;gap:0.75rem;
+  margin:1.25rem 0;
+  padding:0.6rem 1rem;
+  background:linear-gradient(90deg,rgba(12,36,97,0.5),rgba(15,23,42,0.8),rgba(12,36,97,0.5));
+  border-radius:0.75rem;
+  border:1px solid #334155;
+}
+.vs-banner .vs-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;
+  color:#94a3b8;flex-shrink:0;
+}
+.vs-banner .vs-cond{font-size:1.08rem;font-weight:700}
+.vs-banner .vs-circle{
+  flex-shrink:0;width:40px;height:40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.75rem;font-weight:900;
+  background:linear-gradient(135deg,#1e3a8a,#2563eb);
+  color:#fff;box-shadow:0 0 16px rgba(37,99,235,0.3);letter-spacing:0.05em;
+}
+.vs-left{color:#f87171}
+.vs-right{color:#67e8f9}
+
+/* === ANIMATION ENTRANCES === */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.anim{animation:fadeUp 0.5s ease-out both}
+.d1{animation-delay:0.05s}.d2{animation-delay:0.1s}.d3{animation-delay:0.15s}
+.d4{animation-delay:0.2s}.d5{animation-delay:0.25s}
+
+/* === FOOTER === */
+.footer{
+  text-align:center;margin-top:3rem;padding-top:1.5rem;
+  border-top:1px solid #1e293b;
+}
+.footer span{font-size:0.82rem;color:#94a3b8;font-weight:500}
+
+/* === RESPONSIVE === */
+@media(max-width:640px){
+  .guide-container{padding:1rem 0.75rem 3rem}
+  .hero{padding:1.5rem 1.15rem;border-radius:1rem}
+  .hero h1{font-size:1.45rem}
+  .hero::after{display:none}
+  .section-hdr{font-size:1.2rem;padding:0.85rem 1rem}
+  .section-hdr .sec-num{width:26px;height:26px;font-size:0.75rem}
+  .compare-table{font-size:0.92rem}
+  .compare-table th,.compare-table td{padding:0.5rem 0.55rem}
+  .compare-table .cat-label{white-space:normal;min-width:80px;font-size:0.82rem}
+  .compare-table th{font-size:0.78rem}
+  .vs-banner{flex-direction:column;text-align:center;gap:0.35rem;padding:0.5rem 0.75rem}
+  .vs-banner .vs-circle{width:32px;height:32px;font-size:0.65rem}
+  .qref{grid-template-columns:1fr}
+  .dx-card{padding:1rem 1rem 1rem 1.15rem}
+  .mnemonic{padding-left:2.75rem}
+  .mnemonic::before{left:0.65rem}
+  .nclex-tip{padding-left:2.75rem}
+  .nclex-tip::before{left:0.65rem}
+  .lethal{padding-left:2.75rem}
+  .lethal::before{left:0.65rem}
+  .nav-bar{gap:0.25rem}
+  .nav-pill{font-size:0.68rem;padding:0.3rem 0.55rem}
+}
+/* ===== LIGHT THEME ===== */
+html:not(.dark) body{background:#f8fafc;color:#1e293b}
+html:not(.dark) body::before{background:radial-gradient(ellipse 80% 50% at 20% 10%,rgba(37,99,235,0.04) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 80% 90%,rgba(99,102,241,0.03) 0%,transparent 60%),radial-gradient(ellipse 50% 50% at 50% 50%,rgba(6,182,212,0.02) 0%,transparent 70%)}
+html:not(.dark) .hero{background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 40%,#bfdbfe 100%);border-color:#60a5fa}
+html:not(.dark) .hero h1{color:#0c2461;text-shadow:none}
+html:not(.dark) .hero .subtitle{color:#1e40af}
+html:not(.dark) .bdg-acid{background:rgba(34,211,238,0.12);color:#155e75;border-color:rgba(34,211,238,0.5)}
+html:not(.dark) .bdg-alc{background:rgba(251,146,60,0.12);color:#9a3412;border-color:rgba(251,146,60,0.5)}
+html:not(.dark) .bdg-card{background:rgba(248,113,113,0.12);color:#991b1b;border-color:rgba(248,113,113,0.5)}
+html:not(.dark) .bdg-mob{background:rgba(52,211,153,0.12);color:#065f46;border-color:rgba(52,211,153,0.5)}
+html:not(.dark) .bdg-dm{background:rgba(167,139,250,0.12);color:#5b21b6;border-color:rgba(167,139,250,0.5)}
+html:not(.dark) .bdg-tox{background:rgba(244,114,182,0.12);color:#9d174d;border-color:rgba(244,114,182,0.5)}
+html:not(.dark) .bdg-endo{background:rgba(251,191,36,0.12);color:#854d0e;border-color:rgba(251,191,36,0.5)}
+html:not(.dark) .bdg-lab{background:rgba(96,165,250,0.12);color:#1e3a8a;border-color:rgba(96,165,250,0.5)}
+html:not(.dark) .bdg-psy{background:rgba(129,140,248,0.12);color:#3730a3;border-color:rgba(129,140,248,0.5)}
+html:not(.dark) .bdg-mat{background:rgba(251,113,133,0.12);color:#9f1239;border-color:rgba(251,113,133,0.5)}
+html:not(.dark) .bdg-peds{background:rgba(74,222,128,0.12);color:#166534;border-color:rgba(74,222,128,0.5)}
+html:not(.dark) .bdg-pri{background:rgba(192,132,252,0.12);color:#6b21a8;border-color:rgba(192,132,252,0.5)}
+html:not(.dark) .bdg-test{background:rgba(148,163,184,0.15);color:#334155;border-color:rgba(148,163,184,0.5)}
+/* Light section headers */
+html:not(.dark) .sh-acid{background:linear-gradient(135deg,#ecfeff,#cffafe,#a5f3fc) !important;border-color:#06b6d4 !important}
+html:not(.dark) .sh-acid span{color:#155e75 !important}
+html:not(.dark) .sh-acid .sec-num{background:#06b6d4;color:#fff}
+html:not(.dark) .sh-alc{background:linear-gradient(135deg,#fff7ed,#ffedd5,#fed7aa) !important;border-color:#f97316 !important}
+html:not(.dark) .sh-alc span{color:#9a3412 !important}
+html:not(.dark) .sh-alc .sec-num{background:#f97316;color:#fff}
+html:not(.dark) .sh-card{background:linear-gradient(135deg,#fef2f2,#fee2e2,#fecaca) !important;border-color:#ef4444 !important}
+html:not(.dark) .sh-card span{color:#991b1b !important}
+html:not(.dark) .sh-card .sec-num{background:#ef4444;color:#fff}
+html:not(.dark) .sh-mob{background:linear-gradient(135deg,#ecfdf5,#d1fae5,#a7f3d0) !important;border-color:#10b981 !important}
+html:not(.dark) .sh-mob span{color:#065f46 !important}
+html:not(.dark) .sh-mob .sec-num{background:#10b981;color:#fff}
+html:not(.dark) .sh-dm{background:linear-gradient(135deg,#f5f3ff,#ede9fe,#ddd6fe) !important;border-color:#8b5cf6 !important}
+html:not(.dark) .sh-dm span{color:#5b21b6 !important}
+html:not(.dark) .sh-dm .sec-num{background:#8b5cf6;color:#fff}
+html:not(.dark) .sh-tox{background:linear-gradient(135deg,#fdf2f8,#fce7f3,#fbcfe8) !important;border-color:#ec4899 !important}
+html:not(.dark) .sh-tox span{color:#9d174d !important}
+html:not(.dark) .sh-tox .sec-num{background:#ec4899;color:#fff}
+html:not(.dark) .sh-endo{background:linear-gradient(135deg,#fefce8,#fef9c3,#fef08a) !important;border-color:#eab308 !important}
+html:not(.dark) .sh-endo span{color:#854d0e !important}
+html:not(.dark) .sh-endo .sec-num{background:#eab308;color:#fff}
+html:not(.dark) .sh-lab{background:linear-gradient(135deg,#eff6ff,#dbeafe,#bfdbfe) !important;border-color:#3b82f6 !important}
+html:not(.dark) .sh-lab span{color:#1e3a8a !important}
+html:not(.dark) .sh-lab .sec-num{background:#3b82f6;color:#fff}
+html:not(.dark) .sh-psy{background:linear-gradient(135deg,#eef2ff,#e0e7ff,#c7d2fe) !important;border-color:#6366f1 !important}
+html:not(.dark) .sh-psy span{color:#3730a3 !important}
+html:not(.dark) .sh-psy .sec-num{background:#6366f1;color:#fff}
+html:not(.dark) .sh-mat{background:linear-gradient(135deg,#fff1f2,#ffe4e6,#fecdd3) !important;border-color:#f43f5e !important}
+html:not(.dark) .sh-mat span{color:#9f1239 !important}
+html:not(.dark) .sh-mat .sec-num{background:#f43f5e;color:#fff}
+html:not(.dark) .sh-peds{background:linear-gradient(135deg,#f0fdf4,#dcfce7,#bbf7d0) !important;border-color:#22c55e !important}
+html:not(.dark) .sh-peds span{color:#166534 !important}
+html:not(.dark) .sh-peds .sec-num{background:#22c55e;color:#fff}
+html:not(.dark) .sh-pri{background:linear-gradient(135deg,#faf5ff,#f3e8ff,#e9d5ff) !important;border-color:#a855f7 !important}
+html:not(.dark) .sh-pri span{color:#6b21a8 !important}
+html:not(.dark) .sh-pri .sec-num{background:#a855f7;color:#fff}
+html:not(.dark) .sh-test{background:linear-gradient(135deg,#f8fafc,#f1f5f9,#e2e8f0) !important;border-color:#64748b !important}
+html:not(.dark) .sh-test span{color:#334155 !important}
+html:not(.dark) .sh-test .sec-num{background:#64748b;color:#fff}
+/* Light tables/content */
+html:not(.dark) h3{color:#1e3a8a}
+html:not(.dark) h4{color:#1e40af}
+html:not(.dark) p,html:not(.dark) li{color:#334155}
+html:not(.dark) li::marker{color:#3b82f6}
+html:not(.dark) strong,html:not(.dark) b{color:#0f172a}
+html:not(.dark) em{color:#475569}
+html:not(.dark) .danger{color:#dc2626}
+html:not(.dark) .warn{color:#b45309}
+html:not(.dark) .safe{color:#15803d}
+html:not(.dark) .drug{color:#1d4ed8}
+html:not(.dark) .lyte{color:#c2410c}
+html:not(.dark) .dx{color:#be185d}
+html:not(.dark) .arr-up::before{color:#dc2626}
+html:not(.dark) .arr-down::before{color:#0891b2}
+html:not(.dark) .compare-table{border-color:#cbd5e1;box-shadow:0 4px 12px rgba(0,0,0,0.06)}
+html:not(.dark) .compare-table th{background:linear-gradient(180deg,#eff6ff,#dbeafe);color:#1e3a8a;border-bottom-color:#60a5fa}
+html:not(.dark) .compare-table th:first-child{border-right-color:#cbd5e1}
+html:not(.dark) .compare-table td{background:#ffffff;color:#1e293b;border-bottom-color:#e2e8f0}
+html:not(.dark) .compare-table td:nth-child(2){border-right-color:#e2e8f0}
+html:not(.dark) .compare-table tr:hover td{background:rgba(37,99,235,0.04)}
+html:not(.dark) .compare-table .cat-label{background:linear-gradient(90deg,#f1f5f9,#f8fafc);color:#1e40af;border-right-color:#cbd5e1}
+html:not(.dark) .up{color:#dc2626}
+html:not(.dark) .down{color:#0891b2}
+html:not(.dark) .normal{color:#64748b}
+html:not(.dark) .dx-card{background:linear-gradient(135deg,rgba(239,246,255,0.7),rgba(248,250,252,0.95));border-color:#93c5fd}
+html:not(.dark) .dx-card h3{color:#0c2461}
+html:not(.dark) .tag-danger{background:rgba(248,113,113,0.1);color:#991b1b;border-color:rgba(248,113,113,0.4)}
+html:not(.dark) .tag-caution{background:rgba(251,191,36,0.12);color:#92400e;border-color:rgba(251,191,36,0.5)}
+html:not(.dark) .tag-safe{background:rgba(74,222,128,0.1);color:#166534;border-color:rgba(74,222,128,0.4)}
+html:not(.dark) .tag-info{background:rgba(129,140,248,0.1);color:#3730a3;border-color:rgba(129,140,248,0.4)}
+html:not(.dark) .tag-key{background:rgba(96,165,250,0.1);color:#1e40af;border-color:rgba(96,165,250,0.4)}
+html:not(.dark) .mnemonic{background:linear-gradient(135deg,#eff6ff,#dbeafe);border-color:#60a5fa;box-shadow:0 2px 8px rgba(37,99,235,0.08)}
+html:not(.dark) .mnemonic strong{color:#1e3a8a}
+html:not(.dark) .mnemonic em{color:#1d4ed8}
+html:not(.dark) .nclex-tip{background:linear-gradient(135deg,rgba(37,99,235,0.06),rgba(30,58,138,0.03));border-color:#60a5fa}
+html:not(.dark) .nclex-tip strong{color:#1e40af}
+html:not(.dark) .lethal{background:linear-gradient(135deg,rgba(248,113,113,0.08),rgba(220,38,38,0.04))}
+html:not(.dark) .lethal strong{color:#991b1b}
+html:not(.dark) .qref-box{background:linear-gradient(135deg,rgba(241,245,249,0.8),rgba(248,250,252,0.95));border-color:#cbd5e1}
+html:not(.dark) .qref-box h4{color:#0c2461}
+html:not(.dark) .qref-box li{color:#475569}
+html:not(.dark) .qref-box li strong{color:#0f172a}
+html:not(.dark) .nav-bar{background:linear-gradient(180deg,#f8fafc 60%,transparent)}
+html:not(.dark) .nav-pill{border-color:#cbd5e1;background:rgba(255,255,255,0.9);color:#475569}
+html:not(.dark) .nav-pill:hover{border-color:#3b82f6;color:#1e3a8a;background:rgba(37,99,235,0.08)}
+html:not(.dark) .section-divider{background:linear-gradient(90deg,transparent,#60a5fa,#93c5fd,#60a5fa,transparent)}
+html:not(.dark) .tx-steps li::before{background:#3b82f6;color:#fff}
+html:not(.dark) .vs-banner{background:linear-gradient(90deg,rgba(219,234,254,0.5),rgba(241,245,249,0.8),rgba(219,234,254,0.5));border-color:#cbd5e1}
+html:not(.dark) .vs-label{color:#64748b !important}
+html:not(.dark) .vs-left{color:#dc2626 !important}
+html:not(.dark) .vs-right{color:#0891b2 !important}
+html:not(.dark) .footer{border-top-color:#e2e8f0}
+html:not(.dark) .footer span{color:#64748b}
+html:not(.dark) .guide-quiz-btn{border-color:rgba(30,58,138,0.4) !important;background:rgba(30,58,138,0.08) !important;color:#1e3a8a !important}
+html:not(.dark) .theme-toggle-btn{background:rgba(0,0,0,0.06) !important;border-color:rgba(0,0,0,0.15) !important}
+.theme-toggle-btn:hover{transform:scale(1.1);background:rgba(255,255,255,0.25) !important}
+</style>
 </head>
 <body>
+<script>
+(function(){
+  var isDark = !window.matchMedia || !window.matchMedia('(prefers-color-scheme: light)').matches;
+  if (!isDark) document.documentElement.classList.remove('dark');
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+    e.matches ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
+  });
+  window._toggleGuideTheme = function() {
+    document.documentElement.classList.toggle('dark');
+    var btn = document.querySelector('.theme-toggle-btn');
+    if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+  };
+})();
+</script>
 
-<!-- Peptopia Klimek Guide Widget -->
-<div id="peptopia-klimek-guide">
-    <style>
-        /* --- Scoped Styles --- */
-        #peptopia-klimek-guide {
-            /* Palette - Softened / Neon-Pastel */
-            --slate-50: #f8fafc; --slate-100: #f1f5f9; --slate-200: #e2e8f0;
-            --slate-700: #334155; --slate-800: #1e293b; --slate-900: #0f172a; --white: #ffffff;
-            
-            /* Theme Colors */
-            --rose-500: #f43f5e; /* Cardio */
-            --blue-500: #06b6d4; /* Respiratory */
-            --purple-500: #8b5cf6; /* Neuro */
-            --emerald-500: #10b981; /* GI/Renal */
-            
-            /* Backgrounds */
-            --rose-50: #fff1f2; --blue-50: #ecfeff;
-            --purple-50: #f5f3ff; --emerald-50: #ecfdf5;
+<div class="guide-container">
 
-            /* Alert Colors */
-            --alert-bg: #fff7ed; 
-            --alert-border: #fdba74;
-            --alert-text: #1e293b;
-            
-            /* Accents */
-            --accent-gold: #f59e0b; 
-            --drug-blue: #2563eb;
-            --key-purple: #7c3aed; 
-            
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--slate-50);
-            color: var(--slate-900);
-            line-height: 1.6;
-            font-size: 16px;
-            max-width: 64rem;
-            margin: 0 auto;
-            padding: 1rem;
-            box-sizing: border-box;
-        }
-
-        #peptopia-klimek-guide * { box-sizing: border-box; }
-
-        /* Navbar Layout */
-        #peptopia-klimek-guide .navbar {
-            background-color: var(--slate-800); 
-            color: var(--white); padding: 0.75rem 1rem;
-            border-radius: 0.5rem; margin-bottom: 1.5rem; 
-            display: flex; justify-content: space-between; align-items: center;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-            min-height: 80px; /* Ensure space for fixed buttons */
-        }
-        
-        #peptopia-klimek-guide .nav-title { 
-            font-weight: 800; font-size: 1.5rem; 
-            display: flex; align-items: center; gap: 0.75rem; 
-        }
-
-        /* Fixed Button Container */
-        #peptopia-klimek-guide .nav-actions {
-            display: flex; 
-            flex-direction: column; 
-            gap: 0.25rem; /* Tight vertical line */
-            width: 140px; /* Fixed width */
-            flex-shrink: 0; /* Do not flex */
-        }
-        
-        /* Buttons */
-        #peptopia-klimek-guide .action-btn {
-            padding: 0.4rem 0.5rem; border-radius: 0.25rem; border: none; 
-            cursor: pointer; font-weight: 600; font-size: 0.85rem; 
-            transition: all 0.2s; width: 100%; text-align: center;
-            text-transform: uppercase; letter-spacing: 0.5px;
-        }
-        #peptopia-klimek-guide .print-btn { background-color: var(--accent-gold); color: white; }
-        #peptopia-klimek-guide .print-btn:hover { background-color: #d97706; }
-        
-        #peptopia-klimek-guide .quiz-btn { background-color: #6366f1; color: white; }
-        #peptopia-klimek-guide .quiz-btn:hover { background-color: #4f46e5; }
-
-        /* Mobile Responsive Navbar */
-        @media (max-width: 650px) {
-            #peptopia-klimek-guide .navbar { flex-direction: column; gap: 1rem; text-align: center; }
-            #peptopia-klimek-guide .nav-title { width: 100%; justify-content: center; margin-bottom: 0.5rem; }
-            /* Button container remains fixed size but centered */
-            #peptopia-klimek-guide .nav-actions { margin: 0 auto; }
-        }
-
-        /* Tabs */
-        #peptopia-klimek-guide .tabs-container { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
-        #peptopia-klimek-guide .tab-btn {
-            padding: 0.6rem 1rem; border-radius: 0.5rem; font-weight: 700; 
-            color: var(--white); border: none; flex-grow: 1; text-align: center;
-            cursor: pointer; transition: all 0.2s; font-size: 0.95rem;
-            filter: grayscale(40%) opacity(0.9); 
-        }
-        #peptopia-klimek-guide .tab-btn:hover { filter: grayscale(0%) opacity(1); transform: translateY(-1px); }
-        #peptopia-klimek-guide .tab-btn.active { 
-            filter: grayscale(0%) opacity(1); 
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); 
-            transform: translateY(1px);
-        }
-
-        /* Tab Colors */
-        #peptopia-klimek-guide #tab-cardio { background-color: var(--rose-500); }
-        #peptopia-klimek-guide #tab-resp { background-color: var(--blue-500); }
-        #peptopia-klimek-guide #tab-neuro { background-color: var(--purple-500); }
-        #peptopia-klimek-guide #tab-gi { background-color: var(--emerald-500); }
-
-        /* Layout */
-        #peptopia-klimek-guide .grid-layout { display: flex; flex-direction: column; gap: 2rem; } 
-        
-        /* Card Headers - Reduced Height (60%) */
-        #peptopia-klimek-guide .card-header {
-            padding: 0.4rem 1rem; 
-            min-height: 35px;
-            color: white; display: flex; justify-content: space-between; align-items: center;
-            border-top-left-radius: 0.5rem; border-top-right-radius: 0.5rem;
-            font-size: 0.95rem; font-weight: 700; letter-spacing: 0.5px;
-        }
-
-        /* Tables */
-        #peptopia-klimek-guide .table-container { 
-            overflow-x: auto; border: 2px solid; border-radius: 0 0 0.5rem 0.5rem; background: white; 
-            max-height: 500px; overflow-y: auto; 
-        }
-        #peptopia-klimek-guide table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem; }
-        #peptopia-klimek-guide th { padding: 0.75rem; background-color: var(--slate-50); color: var(--slate-900); border-bottom: 2px solid var(--slate-200); position: sticky; top: 0; z-index: 10; }
-        #peptopia-klimek-guide td { padding: 0.75rem; border-bottom: 1px solid var(--slate-100); vertical-align: top; }
-        #peptopia-klimek-guide tr:hover td { cursor: pointer; filter: brightness(98%); }
-        
-        /* Selection Highlighting */
-        #peptopia-klimek-guide tr.selected td { border-left: 5px solid var(--accent-gold); background-color: #fffbeb; }
-
-        /* Specific Colors */
-        #peptopia-klimek-guide .bg-rose { background-color: var(--rose-500) !important; }
-        #peptopia-klimek-guide .border-rose { border-color: var(--rose-500) !important; }
-        #peptopia-klimek-guide .bg-blue { background-color: var(--blue-500) !important; }
-        #peptopia-klimek-guide .border-blue { border-color: var(--blue-500) !important; }
-        #peptopia-klimek-guide .bg-purple { background-color: var(--purple-500) !important; }
-        #peptopia-klimek-guide .border-purple { border-color: var(--purple-500) !important; }
-        #peptopia-klimek-guide .bg-emerald { background-color: var(--emerald-500) !important; }
-        #peptopia-klimek-guide .border-emerald { border-color: var(--emerald-500) !important; }
-
-        /* Cell Styles */
-        #peptopia-klimek-guide .topic-cell { font-weight: 800; white-space: nowrap; width: 1%; color: var(--slate-900); }
-        #peptopia-klimek-guide .topic-cell.cardio { background-color: var(--rose-50); }
-        #peptopia-klimek-guide .topic-cell.resp { background-color: var(--blue-50); }
-        #peptopia-klimek-guide .topic-cell.neuro { background-color: var(--purple-50); }
-        #peptopia-klimek-guide .topic-cell.gi { background-color: var(--emerald-50); }
-
-        #peptopia-klimek-guide .key-point-cell { color: var(--slate-700); font-style: italic; }
-        #peptopia-klimek-guide .key-term { color: var(--key-purple); font-weight: 600; font-style: italic; }
-        
-        #peptopia-klimek-guide .alert-cell { color: var(--alert-text); background-color: var(--alert-bg); border-left: 3px solid var(--alert-border); }
-        #peptopia-klimek-guide .alert-cell strong { color: #be123c; font-weight: 800; }
-        #peptopia-klimek-guide .drug-name { color: var(--drug-blue); font-weight: 800; }
-
-        /* Visuals */
-        #peptopia-klimek-guide .visual-container {
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            padding: 1.5rem; background-color: white; border: 1px solid var(--slate-200);
-            border-radius: 0.5rem; min-height: 250px; max-width: 600px; margin: 0 auto;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
-        #peptopia-klimek-guide .visual-svg-wrapper {
-            width: 100%; height: 220px; display: flex; justify-content: center; align-items: center; overflow: hidden;
-        }
-
-        /* Quiz */
-        #peptopia-klimek-guide .quiz-overlay {
-            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(15, 23, 42, 0.95); z-index: 1000; align-items: center; justify-content: center;
-        }
-        #peptopia-klimek-guide .quiz-box {
-            background: linear-gradient(145deg, #1e1b4b, #312e81); width: 90%; max-width: 700px; 
-            padding: 2rem; border-radius: 1rem; border: 1px solid #4338ca; color: white; position: relative;
-        }
-        #peptopia-klimek-guide .quiz-header { border-bottom: 1px solid #4338ca; padding-bottom: 1rem; margin-bottom: 2rem; text-align: center;}
-        #peptopia-klimek-guide .quiz-title { color: #a5b4fc; font-weight: 800; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 2px; }
-        #peptopia-klimek-guide .quiz-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 2rem; cursor: pointer; color: #a5b4fc; }
-        #peptopia-klimek-guide .quiz-option {
-            display: block; width: 100%; padding: 1rem; margin: 0.5rem 0; text-align: left;
-            border: 2px solid #4338ca; border-radius: 0.5rem; background: rgba(30, 27, 75, 0.6); 
-            color: #e0e7ff; cursor: pointer; transition: all 0.2s; font-size: 1rem;
-        }
-        #peptopia-klimek-guide .quiz-option:hover { background: #4338ca; }
-        #peptopia-klimek-guide .quiz-option.correct { background: #065f46; border-color: #34d399; }
-        #peptopia-klimek-guide .quiz-option.wrong { background: #7f1d1d; border-color: #f87171; }
-        #peptopia-klimek-guide .next-btn {
-            background: #4f46e5; color: white; border: none; padding: 0.5rem 1.5rem;
-            border-radius: 2rem; font-weight: 800; text-transform: uppercase; cursor: pointer;
-        }
-
-        /* Print */
-        @media print {
-            body { background: white; color: black; }
-            #peptopia-klimek-guide .navbar, #peptopia-klimek-guide .tabs-container, .quiz-btn { display: none; }
-            #peptopia-klimek-guide .grid-layout { display: block; }
-            #peptopia-klimek-guide .table-container { max-height: none; overflow: visible; }
-        }
-    </style>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-title">
-            <span>📘</span> Blue Book NCLEX Guide
-        </div>
-        <div class="nav-actions">
-            <button class="action-btn print-btn" onclick="window.print()">Print Guide</button>
-            <button class="action-btn quiz-btn" onclick="startQuiz()">Take Quiz</button>
-        </div>
-    </nav>
-
-    <!-- Tabs -->
-    <div class="tabs-container">
-        <button class="tab-btn bg-rose" id="tab-cardio" onclick="switchTab('cardio')">Cardiovascular</button>
-        <button class="tab-btn bg-blue" id="tab-resp" onclick="switchTab('resp')">Respiratory</button>
-        <button class="tab-btn bg-purple" id="tab-neuro" onclick="switchTab('neuro')">Neurological</button>
-        <button class="tab-btn bg-emerald" id="tab-gi" onclick="switchTab('gi')">GI & Renal</button>
-    </div>
-
-    <!-- Content -->
-    <div id="content-area"></div>
-
-    <!-- Quiz Modal -->
-    <div id="quiz-modal" class="quiz-overlay">
-        <div class="quiz-box">
-            <button onclick="closeQuiz()" class="quiz-close">&times;</button>
-            <div class="quiz-header">
-                <div class="quiz-title" id="quiz-title-text">Practice Questions</div>
-            </div>
-            <div id="quiz-question-container">
-                <p id="q-text" style="font-size:1.2rem; font-weight:600; margin-bottom:1.5rem;"></p>
-                <div id="q-options"></div>
-                <div id="q-feedback" style="margin-top:1rem; font-weight:bold; text-align:center; min-height:1.5rem;"></div>
-            </div>
-            <div style="margin-top:1.5rem; display:flex; justify-content:space-between; align-items:center;">
-                <span id="q-counter" style="color:#a5b4fc; font-weight:600;">Question 1 of ?</span>
-                <button id="next-btn" class="next-btn" style="display:none;" onclick="nextQuestion()">Next Question</button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-    (function() {
-        const contentData = {
-            cardio: {
-                title: 'Cardiovascular System', color: 'bg-rose', border: 'border-rose', type: 'cardio',
-                description: 'Exhaustive notes from Klimek Blue Book covering all cardiovascular concepts.',
-                data: [
-                    { topic: 'Blood Pressure', fact: '<span class="key-term">Systole</span> (Maximal force) vs <span class="key-term">Diastole</span> (Lowest force).', alert: 'Cessation of sounds = 2nd diastolic sound.', q: 'What is the definition of systole?', a: ['Maximal force of blood on artery walls', 'Lowest force of blood on artery walls', 'The average pressure', 'The pulse pressure'], correct: 0 },
-                    { topic: 'BP Cuff Size', fact: 'Width must be <span class="key-term">2/3</span> of the arm.', alert: 'Too Narrow = False HIGH. Too Wide = False LOW.', q: 'If you use a BP cuff that is too narrow, the reading will be:', a: ['False High', 'False Low', 'Accurate', 'Unreadable'], correct: 0 },
-                    { topic: 'Pulse Pressure', fact: 'Diff between <span class="key-term">Systolic</span> and <span class="key-term">Diastolic</span>.', alert: '<strong>Shock:</strong> Narrows. <strong>ICP:</strong> Widens.', q: 'What is the pulse pressure if BP is 190/110?', a: ['80 mmHg', '100 mmHg', '60 mmHg', '150 mmHg'], correct: 0 },
-                    { topic: 'Myocardial Infarction', fact: '<span class="key-term">Necrosis</span> of myocardial cells due to blockage.', alert: '<strong>Symptoms:</strong> Crushing pain, diaphoresis. Pain NOT relieved by rest/nitro.', q: 'What is the #1 symptom of an MI?', a: ['Severe chest pain unrelieved by rest/nitro', 'Indigestion', 'Shortness of breath', 'Left arm numbness'], correct: 0 },
-                    { topic: 'Angina Pectoris', fact: 'Chest pain caused by <span class="key-term">ischemia</span>.', alert: 'Pain IS relieved by rest/nitro.', q: 'What causes angina pectoris?', a: ['Decreased blood supply to myocardium', 'Coronary artery rupture', 'Heart failure', 'Pericarditis'], correct: 0 },
-                    { topic: 'Nitroglycerin', fact: 'Dilates <span class="key-term">coronary arteries</span>.', alert: '<strong>Protocol:</strong> 1 tab q5min x3. <strong>Storage:</strong> Dry/Cool.', q: 'How many nitroglycerin tabs can you take before calling the doctor?', a: ['3', '1', '2', '4'], correct: 0 },
-                    { topic: 'CHF: Left', fact: 'Fluid backs up into <span class="key-term">LUNGS</span>.', alert: '<strong>Signs:</strong> Dyspnea, Rales, Orthopnea, Frothy sputum.', q: 'Pulmonary edema usually results from failure of which side of the heart?', a: ['Left', 'Right', 'Both', 'Atrial'], correct: 0 },
-                    { topic: 'CHF: Right', fact: 'Fluid backs up into <span class="key-term">BODY</span>.', alert: '<strong>Signs:</strong> JVD, Edema, Ascites.', q: 'What sign is associated with Right Sided CHF?', a: ['Distended Neck Veins', 'Crackles', 'Dyspnea', 'Frothy Sputum'], correct: 0 },
-                    { topic: 'Digoxin', fact: 'Increases <span class="key-term">strength</span>, decreases <span class="key-term">rate</span>.', alert: '<strong>Hold:</strong> AP < 60. <strong>Toxicity:</strong> Yellow vision.', q: 'Before giving Digitalis, you must check:', a: ['Apical Pulse', 'Blood Pressure', 'Respiratory Rate', 'Urine Output'], correct: 0 }
-                ]
-            },
-            resp: {
-                title: 'Respiratory System', color: 'bg-blue', border: 'border-blue', type: 'resp',
-                description: 'Comprehensive Respiratory notes covering COPD, Pneumonia, TB, and Airway.',
-                data: [
-                    { topic: 'COPD', fact: 'Asthma, Bronchitis, Emphysema. <span class="key-term">Air Trapping</span>.', alert: '<strong>Drive:</strong> Hypoxic (Low O2). <strong>Max O2:</strong> 2 LPM.', q: 'A client with COPD should not receive O2 greater than:', a: ['2 LPM', '5 LPM', '10 LPM', '15 LPM'], correct: 0 },
-                    { topic: 'Emphysema', fact: 'Alveoli <span class="key-term">over-enlarged</span>/under-ventilated.', alert: '<strong>Sign:</strong> Barrel Chest, Pursed lip breathing.', q: 'What does the chest of a client with COPD look like?', a: ['Barrel chest', 'Pigeon chest', 'Funnel chest', 'Flat chest'], correct: 0 },
-                    { topic: 'Epiglottitis', fact: 'Inflammation of epiglottis. <span class="key-term">H. flu B</span>.', alert: '<strong>Danger:</strong> Airway Obstruction. <strong>NEVER:</strong> Put anything in mouth.', q: 'What is the #1 danger of epiglottitis?', a: ['Airway obstruction', 'Dehydration', 'High Fever', 'Seizures'], correct: 0 },
-                    { topic: 'Tuberculosis', fact: '<span class="key-term">Mycobacterium tuberculosis</span>.', alert: '<strong>Iso:</strong> Airborne (Neg Pressure). <strong>Meds:</strong> STRIPE.', q: 'What organism is the cause of TB?', a: ['Mycobacterium tuberculosis', 'Staph aureus', 'E. coli', 'Pseudomonas'], correct: 0 },
-                    { topic: 'Pulmonary Embolus', fact: 'Blockage of pulmonary artery. Source: <span class="key-term">DVT</span>.', alert: '<strong>Signs:</strong> Dyspnea, Pleuritic Pain.', q: 'What is the first sign of pulmonary embolus?', a: ['Dyspnea', 'Chest pain', 'Hemoptysis', 'Fever'], correct: 0 }
-                ]
-            },
-            neuro: {
-                title: 'Neurological System', color: 'bg-purple', border: 'border-purple', type: 'neuro',
-                description: 'Neuro content covering ICP, CVA, Spinal Cord, and Sensory.',
-                data: [
-                    { topic: 'Increased ICP', fact: 'Normal 0-15 mmHg.', alert: '<strong>Earliest Sign:</strong> Change in LOC.', q: 'What is the earliest sign of increased ICP?', a: ['Change in LOC', 'Pupil dilation', 'Vomiting', 'Headache'], correct: 0 },
-                    { topic: 'Cushing\'s Triad', fact: 'Late sign of ICP.', alert: '<strong>Signs:</strong> HTN w/ widening PP, Bradycardia, Irregular Resp.', q: 'What is Cushing\'s Triad?', a: ['HTN/Widening PP, Bradycardia, Irregular Resp', 'Hypotension, Tachycardia, Tachypnea', 'Fever, Rash, Joint pain', 'None of these'], correct: 0 },
-                    { topic: 'Meningitis', fact: 'Inflammation of arachnoid/pia.', alert: '<strong>Signs:</strong> Nuchal rigidity, Photophobia. Kernig/Brudzinski.', q: 'What is the classic sign of meningitis?', a: ['Nuchal rigidity', 'Back pain', 'Leg pain', 'Abdominal pain'], correct: 0 },
-                    { topic: 'Seizures', fact: 'Uncontrolled electrical discharge.', alert: '<strong>Safety:</strong> Do NOT restrain. Side lying.', q: 'What is the priority nursing action during a seizure?', a: ['Safety/Protect head', 'Restrain limbs', 'Insert airway', 'Give water'], correct: 0 },
-                    { topic: 'Laminectomy', fact: 'Removal of bone to relieve nerve compression.', alert: '<strong>Post-op:</strong> Log roll. No sitting >30 mins.', q: 'How do you turn a patient after a laminectomy?', a: ['Log roll', 'Twist', 'Sit up then turn', 'Normal turn'], correct: 0 }
-                ]
-            },
-            gi: {
-                title: 'GI & Renal System', color: 'bg-emerald', border: 'border-emerald', type: 'gi',
-                description: 'Comprehensive GI and Renal content including Failure, Stones, and Digestive disorders.',
-                data: [
-                    { topic: 'Acute Glomerulonephritis', fact: 'Inflammation of glomeruli. Cause: <span class="key-term">Strep</span>.', alert: '<strong>Signs:</strong> Hematuria, Proteinuria, HTN.', q: 'What organism commonly causes Acute Glomerulonephritis?', a: ['Group A Beta Strep', 'E. Coli', 'Staph Aureus', 'Pseudomonas'], correct: 0 },
-                    { topic: 'Appendicitis', fact: 'Inflammation of appendix. <span class="key-term">RLQ Pain</span>.', alert: '<strong>Sign:</strong> McBurney\'s Point. <strong>Tx:</strong> NPO, Surgery. NO HEAT.', q: 'Where is the pain located in appendicitis?', a: ['RLQ (McBurney\'s Point)', 'LLQ', 'RUQ', 'Epigastric'], correct: 0 },
-                    { topic: 'Celiac Disease', fact: 'Gluten intolerance.', alert: '<strong>Diet:</strong> No B.R.O.W. (Barley, Rye, Oats, Wheat).', q: 'Which food must a Celiac client avoid?', a: ['Wheat bread', 'Rice', 'Corn', 'Potatoes'], correct: 0 },
-                    { topic: 'Renal Failure', fact: 'Kidneys fail. Oliguric vs Diuretic phases.', alert: '<strong>Danger:</strong> Hyperkalemia.', q: 'What electrolyte imbalance is most dangerous in renal failure?', a: ['Hyperkalemia', 'Hyponatremia', 'Hypocalcemia', 'Hypermagnesemia'], correct: 0 },
-                    { topic: 'Pyloric Stenosis', fact: 'Narrowing of pylorus.', alert: '<strong>Signs:</strong> Projectile Vomiting, Olive-shaped mass.', q: 'What assessment finding is classic for Pyloric Stenosis?', a: ['Olive-shaped mass', 'Sausage-shaped mass', 'Bound abdomen', 'Distended veins'], correct: 0 },
-                    { topic: 'Intussusception', fact: 'Telescoping bowel.', alert: '<strong>Signs:</strong> Currant jelly stool, Sausage-shaped mass.', q: 'What is the classic sign of intussusception?', a: ['Currant jelly stool', 'Ribbon stool', 'Steatorrhea', 'Clay colored stool'], correct: 0 },
-                    { topic: 'Hirschsprung\'s', fact: 'Megacolon (No nerves).', alert: '<strong>Signs:</strong> Ribbon-like stool.', q: 'What type of stool is seen in Hirschsprung\'s?', a: ['Ribbon-like', 'Currant jelly', 'Tarry', 'Frothy'], correct: 0 },
-                    { topic: 'Hepatitis', fact: 'Liver inflammation.', alert: '<strong>Diet:</strong> High Carb, Low Fat. <strong>Urine:</strong> Dark.', q: 'In later stages of hepatitis, the urine turns:', a: ['Dark', 'Clear', 'Red', 'Blue'], correct: 0 },
-                    { topic: 'Pancreatitis', fact: 'Autodigestion.', alert: '<strong>Signs:</strong> Cullen\'s (Umbilicus), Turner\'s (Flank). <strong>Tx:</strong> NPO.', q: 'What sign indicates retroperitoneal bleeding in pancreatitis?', a: ['Turner\'s Sign', 'McBurney\'s Sign', 'Murphy\'s Sign', 'Homan\'s Sign'], correct: 0 },
-                    { topic: 'Peptic Ulcer', fact: 'Gastric vs Duodenal.', alert: '<strong>Gastric:</strong> Pain w/ food. <strong>Duodenal:</strong> Pain empty.', q: 'Does food relieve or worsen Duodenal Ulcer pain?', a: ['Relieves (Feed it)', 'Worsens (Starve it)', 'No effect', 'Causes vomiting'], correct: 0 }
-                ]
-            }
-        };
-
-        // --- Logic ---
-        let currentTab = 'cardio';
-        let currentItem = contentData.cardio.data[0];
-        let quizIndex = 0;
-        let quizScore = 0;
-        let currentQuizData = []; 
-
-        function renderVisual(key) {
-            const style = 'height:200px; width:auto; display:block; margin:0 auto;';
-            // Realistic Anatomy SVGs
-            if(key.includes('MI') || key.includes('Angina')) {
-                // Heart with blockage
-                return `<svg viewBox="0 0 100 100" style="${style}">
-                    <path d="M50 30 C 20 10, 10 50, 50 90 C 90 50, 80 10, 50 30" fill="#fee2e2" stroke="#e11d48" stroke-width="2"/>
-                    <path d="M55 35 Q 65 45 60 60" stroke="#7f1d1d" stroke-width="3" fill="none"/>
-                    <circle cx="60" cy="50" r="4" fill="#000"/>
-                    <text x="70" y="50" font-size="6" fill="#7f1d1d">Blockage</text>
-                </svg>`;
-            }
-            if(key.includes('Emphysema') || key.includes('COPD')) {
-                // Alveoli
-                return `<svg viewBox="0 0 100 100" style="${style}">
-                    <circle cx="40" cy="40" r="15" fill="#eff6ff" stroke="#0ea5e9" stroke-width="2"/>
-                    <circle cx="60" cy="40" r="15" fill="#eff6ff" stroke="#0ea5e9" stroke-width="2"/>
-                    <circle cx="50" cy="60" r="20" fill="#eff6ff" stroke="#0ea5e9" stroke-width="2"/>
-                    <text x="50" y="50" font-size="6" text-anchor="middle" fill="#0369a1">Trapped Air</text>
-                </svg>`;
-            }
-            if(key.includes('Pyloric') || key.includes('Stomach')) {
-                // Stomach with olive
-                return `<svg viewBox="0 0 100 100" style="${style}">
-                    <path d="M30 40 Q 60 20 80 50 Q 70 90 40 80 Q 20 60 30 40" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
-                    <ellipse cx="75" cy="50" rx="5" ry="8" fill="#047857"/>
-                    <text x="75" y="70" font-size="6" text-anchor="middle" fill="#047857">Olive Mass</text>
-                </svg>`;
-            }
-            if(key.includes('Kidney') || key.includes('Renal')) {
-                // Kidney
-                return `<svg viewBox="0 0 100 100" style="${style}">
-                    <path d="M30 30 Q 80 30 80 60 Q 80 90 50 80 Q 20 60 30 30" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
-                    <path d="M35 45 Q 45 45 45 55 Q 45 65 35 65" fill="none" stroke="#047857" stroke-width="2"/>
-                </svg>`;
-            }
-            if(key.includes('Appendicitis')) {
-                return `<svg viewBox="0 0 100 100" style="${style}">
-                   <path d="M30 20 L30 80 L80 80 L80 20 Z" fill="none" stroke="#ccc"/>
-                   <circle cx="70" cy="70" r="5" fill="#ef4444"/>
-                   <text x="60" y="60" font-size="6" fill="#ef4444">RLQ</text>
-                </svg>`;
-            }
-             if(key.includes('ICP') || key.includes('Neuro')) {
-                // Brain
-                return `<svg viewBox="0 0 100 100" style="${style}">
-                    <path d="M30 40 Q 50 10 70 40 Q 90 50 70 80 Q 50 90 30 80 Q 10 50 30 40" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-                    <text x="50" y="50" font-size="8" text-anchor="middle" fill="#7c3aed">Brain Tissue</text>
-                </svg>`;
-            }
-            return `<svg viewBox="0 0 100 100" style="${style}"><text x="50" y="50" font-size="8" text-anchor="middle" fill="#94a3b8">Visual Reference</text></svg>`;
-        }
-
-        // --- Render Logic ---
-        window.switchTab = function(tabName) {
-            currentTab = tabName;
-            
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active', 'bg-rose', 'bg-blue', 'bg-purple', 'bg-emerald');
-                if(btn.id === 'tab-cardio') btn.classList.add('bg-rose'); 
-            });
-            
-            const activeBtn = document.getElementById(`tab-${tabName}`);
-            activeBtn.classList.add('active');
-            
-            if(tabName === 'cardio') activeBtn.classList.add('bg-rose');
-            if(tabName === 'resp') activeBtn.classList.add('bg-blue');
-            if(tabName === 'neuro') activeBtn.classList.add('bg-purple');
-            if(tabName === 'gi') activeBtn.classList.add('bg-emerald');
-
-            currentItem = contentData[tabName].data[0];
-            renderGuide();
-        }
-
-        function renderGuide() {
-            const container = document.getElementById('content-area');
-            const data = contentData[currentTab];
-
-            const rows = data.data.map((item, idx) => `
-                <tr onclick="selectItem(${idx})" class="${currentItem.topic === item.topic ? 'selected ' + data.type : ''}">
-                    <td class="topic-cell ${data.type}">${item.topic}</td>
-                    <td class="key-point-cell">${item.fact}</td>
-                    <td class="alert-cell ${data.type}">${item.alert}</td>
-                </tr>
-            `).join('');
-
-            const visualHTML = renderVisual(currentItem.topic);
-
-            const content = `
-                <div class="card-header ${data.color}">
-                    <h2 style="margin:0;">${data.title}</h2>
-                </div>
-                <div class="grid-layout">
-                    <div>
-                        <div style="margin-bottom:1rem; padding:0.5rem; background:#f1f5f9; border-radius:0.25rem;">${data.description}</div>
-                        <div class="table-container ${data.border}">
-                            <table>
-                                <thead><tr><th>Topic</th><th>Clinical Fact</th><th>Nursing Priority / Alerts</th></tr></thead>
-                                <tbody>${rows}</tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="visual-container">
-                            <h3 style="margin:0 0 1rem 0;">Visual Reference</h3>
-                            <div class="visual-svg-wrapper">${visualHTML}</div>
-                            <p style="margin-top:1rem; font-weight:700; text-align:center;">${currentItem.topic}</p>
-                        </div>
-                    </div>
-                </div>
-            `;
-            container.innerHTML = content;
-        }
-
-        window.selectItem = function(idx) {
-            currentItem = contentData[currentTab].data[idx];
-            renderGuide();
-        }
-
-        // --- Quiz Logic ---
-        window.startQuiz = function() {
-            document.getElementById('quiz-modal').style.display = 'flex';
-            currentQuizData = contentData[currentTab].data;
-            document.getElementById('quiz-title-text').innerText = `${contentData[currentTab].title} Quiz`;
-            quizIndex = 0;
-            quizScore = 0;
-            loadQuestion();
-        }
-
-        window.closeQuiz = function() {
-            document.getElementById('quiz-modal').style.display = 'none';
-        }
-
-        function loadQuestion() {
-            const qData = currentQuizData[quizIndex];
-            document.getElementById('next-btn').style.display = 'none';
-            document.getElementById('q-counter').innerText = `Question ${quizIndex + 1} of ${currentQuizData.length}`;
-            document.getElementById('q-text').innerText = qData.q;
-            document.getElementById('q-feedback').innerText = '';
-            document.getElementById('q-feedback').className = 'quiz-feedback'; 
-
-            const optionsHTML = qData.a.map((opt, idx) => 
-                `<button class="quiz-option" onclick="checkAnswer(${idx})">${opt}</button>`
-            ).join('');
-            
-            document.getElementById('q-options').innerHTML = optionsHTML;
-        }
-
-        window.checkAnswer = function(selectedIdx) {
-            const qData = currentQuizData[quizIndex];
-            const options = document.querySelectorAll('.quiz-option');
-            const feedback = document.getElementById('q-feedback');
-            const nextBtn = document.getElementById('next-btn');
-
-            options.forEach(btn => {
-                btn.disabled = true;
-                btn.style.cursor = 'default';
-            });
-
-            if(selectedIdx === qData.correct) {
-                options[selectedIdx].classList.add('correct');
-                feedback.innerHTML = 'Correct!';
-                feedback.style.background = 'rgba(16, 185, 129, 0.2)';
-                feedback.style.color = '#34d399';
-                quizScore++;
-            } else {
-                options[selectedIdx].classList.add('wrong');
-                options[qData.correct].classList.add('correct');
-                feedback.innerHTML = 'Incorrect.';
-                feedback.style.background = 'rgba(239, 68, 68, 0.2)';
-                feedback.style.color = '#f87171';
-            }
-
-            nextBtn.style.display = 'block';
-        }
-
-        window.nextQuestion = function() {
-            quizIndex++;
-            if(quizIndex < currentQuizData.length) {
-                loadQuestion();
-            } else {
-                const container = document.getElementById('quiz-question-container');
-                container.innerHTML = `
-                    <div style="text-align:center; padding:2rem; color: white;">
-                        <h3>Quiz Complete!</h3>
-                        <p style="font-size:1.2rem;">You scored <strong>${quizScore} / ${currentQuizData.length}</strong></p>
-                        <button class="action-btn print-btn" onclick="closeQuiz()">Close</button>
-                    </div>
-                `;
-                document.getElementById('next-btn').style.display = 'none';
-            }
-        }
-
-        // Init
-        switchTab('cardio'); 
-    })();
-    </script>
+<!-- HERO -->
+<div class="hero anim">
+<h1>📘 Blue Book II — Foundations &amp; Clinical</h1>
+<p class="subtitle">A comprehensive review across 13 essential NCLEX topics — from acid-base balance and diabetes to maternity, pharmacology, and delegation. High-yield concepts distilled for exam day success.</p>
+<div class="badge-row">
+<a class="badge bdg-acid" href="#sec-acid">⚖️ Acid-Base</a>
+<a class="badge bdg-alc" href="#sec-alc">🍺 Substances</a>
+<a class="badge bdg-card" href="#sec-card">❤️ Cardiac</a>
+<a class="badge bdg-mob" href="#sec-mob">🦽 Mobility</a>
+<a class="badge bdg-dm" href="#sec-dm">🩸 Diabetes</a>
+<a class="badge bdg-tox" href="#sec-tox">💊 Toxicity</a>
+<a class="badge bdg-endo" href="#sec-endo">⚗️ Endocrine</a>
+<a class="badge bdg-lab" href="#sec-lab">🔬 Labs</a>
+<a class="badge bdg-psy" href="#sec-psy">💜 Psych Meds</a>
+<a class="badge bdg-mat" href="#sec-mat">🤰 Maternity</a>
+<a class="badge bdg-peds" href="#sec-peds">👶 Pediatrics</a>
+<a class="badge bdg-pri" href="#sec-pri">🚨 Delegation</a>
+<a class="badge bdg-test" href="#sec-test">🧠 Test Tips</a>
+</div>
+<button onclick="_toggleGuideTheme()" class="theme-toggle-btn" style="position:absolute;top:0.75rem;right:0.75rem;background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.3);border-radius:0.5rem;padding:0.3rem 0.5rem;cursor:pointer;font-size:1.2rem;z-index:10;transition:all 0.2s;backdrop-filter:blur(4px)">☀️</button>
 </div>
 
+<!-- STICKY NAV -->
+<div class="nav-bar">
+<a class="nav-pill" href="#sec-acid">⚖️ Acid-Base</a>
+<a class="nav-pill" href="#sec-alc">🍺 Alcohol</a>
+<a class="nav-pill" href="#sec-card">❤️ Cardiac</a>
+<a class="nav-pill" href="#sec-mob">🦽 Mobility</a>
+<a class="nav-pill" href="#sec-dm">🩸 DM</a>
+<a class="nav-pill" href="#sec-tox">💊 Toxicity</a>
+<a class="nav-pill" href="#sec-endo">⚗️ Endocrine</a>
+<a class="nav-pill" href="#sec-lab">🔬 Labs</a>
+<a class="nav-pill" href="#sec-psy">💜 Psych</a>
+<a class="nav-pill" href="#sec-mat">🤰 OB</a>
+<a class="nav-pill" href="#sec-peds">👶 Peds</a>
+<a class="nav-pill" href="#sec-pri">🚨 Delegate</a>
+<a class="nav-pill" href="#sec-test">🧠 Test</a>
+</div>
+
+<!-- ===== SECTION 1: ACID-BASE ===== -->
+<div id="sec-acid" class="section-hdr sh-acid anim d1">
+  <span><span class="sec-num">1</span> Acid-Base Balance</span>
+</div>
+
+<h3>pH Fundamentals</h3>
+<table class="compare-table">
+  <tr><th>Parameter</th><th>Normal Range</th><th>Interpretation</th></tr>
+  <tr><td class="cat-label">pH</td><td>7.35 – 7.45</td><td>&lt;7.35 = <span class="danger">Acidosis</span> · &gt;7.45 = <span class="danger">Alkalosis</span></td></tr>
+  <tr><td class="cat-label">PaCO₂</td><td>35 – 45 mmHg</td><td>Respiratory component. <span class="arr-up">CO₂</span> = Acidosis</td></tr>
+  <tr><td class="cat-label">HCO₃⁻</td><td>22 – 26 mEq/L</td><td>Metabolic component. <span class="arr-down">Bicarb</span> = Acidosis</td></tr>
+  <tr><td class="cat-label">PaO₂</td><td>80 – 100 mmHg</td><td>&lt;60 = <span class="danger">Respiratory failure</span></td></tr>
+</table>
+
+<div class="mnemonic"><strong>ROME</strong>: <em>Respiratory = Opposite</em> (pH↓ CO₂↑), <em>Metabolic = Equal</em> (pH↓ HCO₃↓)</div>
+
+<h3>The Four Imbalances</h3>
+<table class="compare-table">
+  <tr><th>Imbalance</th><th>pH</th><th>Primary Change</th><th>Classic Causes</th></tr>
+  <tr><td class="cat-label">Respiratory Acidosis</td><td class="down">↓</td><td><span class="arr-up">CO₂</span> (retained)</td><td>COPD, Overdose, Hypoventilation</td></tr>
+  <tr><td class="cat-label">Respiratory Alkalosis</td><td class="up">↑</td><td><span class="arr-down">CO₂</span> (blown off)</td><td>Hyperventilation, Anxiety, PE (early)</td></tr>
+  <tr><td class="cat-label">Metabolic Acidosis</td><td class="down">↓</td><td><span class="arr-down">HCO₃⁻</span></td><td>DKA, Renal failure, Shock, Diarrhea</td></tr>
+  <tr><td class="cat-label">Metabolic Alkalosis</td><td class="up">↑</td><td><span class="arr-up">HCO₃⁻</span></td><td>Vomiting, NG suction, Antacid overuse</td></tr>
+</table>
+
+<h3>Compensation</h3>
+<ul>
+  <li><strong>Lungs compensate for metabolic problems</strong> → adjust breathing rate (fast = blow off CO₂; slow = retain CO₂)</li>
+  <li><strong>Kidneys compensate for respiratory problems</strong> → retain or excrete HCO₃⁻ (takes hours to days)</li>
+  <li><strong>Kussmaul breathing</strong>: Deep rapid respirations → body trying to blow off CO₂ in <strong>metabolic acidosis</strong> (especially DKA)</li>
+</ul>
+
+<div class="lethal"><strong>Acidosis → Hyperkalemia</strong> (H⁺ moves INTO cells, K⁺ moves OUT). <strong>Alkalosis → Hypokalemia</strong> (H⁺ moves OUT, K⁺ moves IN). Both can cause cardiac arrest — always check K⁺ with any acid-base imbalance!</div>
+
+<div class="nclex-tip"><strong>ABG Interpretation Steps</strong>: 1) Look at pH → acidosis or alkalosis? 2) Look at CO₂ → does it match? (respiratory). 3) Look at HCO₃ → does it match? (metabolic). 4) Both abnormal → compensation is occurring.</div>
+
+<hr class="section-divider">
+
+<!-- ===== SECTION 2: ALCOHOL ===== -->
+<div id="sec-alc" class="section-hdr sh-alc anim d1">
+  <span><span class="sec-num">2</span> Alcohol &amp; Substances</span>
+</div>
+
+<h3>Alcoholism</h3>
+<ul>
+  <li><strong>Psychodynamic</strong>: Low self-esteem, dependency, difficulty expressing feelings</li>
+  <li><strong>Defense mechanism</strong>: <span class="danger">DENIAL</span> (primary). Also projection, rationalization.</li>
+  <li><strong>Wernicke's Encephalopathy</strong>: Confusion, ataxia, nystagmus → Give <span class="drug">Thiamine</span> (B1) BEFORE glucose!</li>
+  <li><strong>Korsakoff's Syndrome</strong>: Permanent memory loss, confabulation (makes up stories). <span class="danger">Irreversible.</span></li>
+</ul>
+
+<div class="lethal"><strong>Always give Thiamine (B1) BEFORE glucose</strong> in suspected alcohol withdrawal. Giving glucose first can precipitate Wernicke's encephalopathy.</div>
+
+<h3>Alcohol Withdrawal Timeline</h3>
+<table class="compare-table">
+  <tr><th>Time After Last Drink</th><th>Symptoms</th></tr>
+  <tr><td class="cat-label">6-12 hours</td><td>Tremors, anxiety, N/V, diaphoresis, tachycardia</td></tr>
+  <tr><td class="cat-label">12-24 hours</td><td>Hallucinations (auditory/visual)</td></tr>
+  <tr><td class="cat-label">24-48 hours</td><td><span class="danger">Seizures</span> (Grand Mal)</td></tr>
+  <tr><td class="cat-label">48-96 hours</td><td><span class="danger">Delirium Tremens (DTs)</span> — medical emergency! Confusion, hallucinations, severe agitation, tachycardia, fever. <strong>Can be FATAL.</strong></td></tr>
+</table>
+<p>Treatment: <span class="drug">Benzodiazepines</span> (<span class="drug">Librium</span>, <span class="drug">Ativan</span>) for withdrawal. <span class="drug">Disulfiram</span> (Antabuse) for maintenance — causes severe N/V if patient drinks.</p>
+
+<div class="mnemonic"><strong>Key Rule</strong>: Withdrawal is the <em>OPPOSITE</em> of the drug's effect. Depressant withdrawal = excitation (tremors, seizures). Stimulant withdrawal = depression (fatigue, sleepiness).</div>
+
+<h3>Overdose vs Withdrawal</h3>
+<table class="compare-table">
+  <tr><th>Substance</th><th>Overdose Signs</th><th>Withdrawal Signs</th></tr>
+  <tr><td class="cat-label">Opioids</td><td>Pinpoint pupils, resp. depression, coma</td><td>Dilated pupils, rhinorrhea, yawning, diarrhea, gooseflesh</td></tr>
+  <tr><td class="cat-label">Alcohol</td><td>Slurred speech, ataxia, resp. depression</td><td>Tremors, seizures, DTs, tachycardia</td></tr>
+  <tr><td class="cat-label">Cocaine</td><td>Dilated pupils, tachycardia, HTN, paranoia</td><td>Fatigue, depression, increased appetite</td></tr>
+  <tr><td class="cat-label">Benzos</td><td>Drowsiness, confusion, resp. depression</td><td>Anxiety, tremors, seizures (like alcohol)</td></tr>
+</table>
+
+<h3>Key Antidotes</h3>
+<div class="qref">
+  <div class="qref-box"><h4>🔑 Opioid OD</h4><ul><li><span class="drug">Naloxone</span> (Narcan)</li></ul></div>
+  <div class="qref-box"><h4>🔑 Benzo OD</h4><ul><li><span class="drug">Flumazenil</span> (Romazicon)</li></ul></div>
+  <div class="qref-box"><h4>🔑 Acetaminophen OD</h4><ul><li><span class="drug">Acetylcysteine</span> (Mucomyst)</li></ul></div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ===== SECTION 3: CARDIAC MEDS ===== -->
+<div id="sec-card" class="section-hdr sh-card anim d1">
+  <span><span class="sec-num">3</span> Cardiac Meds, Aminoglycosides &amp; Bioterrorism</span>
+</div>
+
+<h3>Aminoglycosides</h3>
+<div class="dx-card card-crisis">
+  <h3>⚠️ Aminoglycoside Toxicity</h3>
+  <div class="tag-row"><span class="tag tag-danger">Ototoxicity</span><span class="tag tag-danger">Nephrotoxicity</span><span class="tag tag-key">Peak &amp; Trough</span></div>
+  <ul>
+    <li>Drugs ending in <strong>-mycin / -micin</strong>: <span class="drug">Gentamicin</span>, <span class="drug">Tobramycin</span>, <span class="drug">Amikacin</span>, <span class="drug">Streptomycin</span></li>
+    <li><strong>Ototoxicity</strong>: hearing loss, tinnitus. <strong>Nephrotoxicity</strong>: ↑ BUN/Creatinine</li>
+    <li><strong>Trough</strong>: drawn 30 min <em>before</em> dose. <strong>Peak</strong>: drawn 30 min <em>after</em> dose.</li>
+    <li>Assess <strong>hearing</strong> and <strong>renal function</strong> before and during therapy</li>
+  </ul>
+</div>
+
+<div class="nclex-tip"><strong>Never give aminoglycosides concurrently with other oto/nephrotoxic drugs</strong> (e.g., <span class="drug">Lasix</span>, <span class="drug">Vancomycin</span>) without close monitoring.</div>
+
+<h3>Cardiac Arrhythmias — Key ECG Findings</h3>
+<table class="compare-table">
+  <tr><th>Rhythm</th><th>Key Feature</th><th>Treatment</th></tr>
+  <tr><td class="cat-label">Sinus Brady</td><td>Rate &lt;60. Regular.</td><td><span class="drug">Atropine</span> (↑ HR). Pacemaker if severe.</td></tr>
+  <tr><td class="cat-label">Sinus Tach</td><td>Rate &gt;100. Regular.</td><td>Treat cause (fever, pain, hypovolemia)</td></tr>
+  <tr><td class="cat-label">A-Fib</td><td>Irregularly irregular. No P waves.</td><td><span class="drug">Digoxin</span>, <span class="drug">Diltiazem</span>, <span class="drug">Coumadin</span></td></tr>
+  <tr><td class="cat-label">V-Tach</td><td>Wide QRS, rapid.</td><td>Pulse: <span class="drug">Amiodarone</span>. No pulse: <span class="danger">Defib</span></td></tr>
+  <tr><td class="cat-label">V-Fib</td><td>Chaotic, no waves.</td><td><span class="danger">Immediate Defibrillation</span> + CPR</td></tr>
+  <tr><td class="cat-label">Asystole</td><td>Flat line.</td><td>CPR + <span class="drug">Epi</span>. Do <strong>NOT</strong> defib.</td></tr>
+</table>
+
+<h3>Chest Tubes</h3>
+<ul>
+  <li><strong>Purpose</strong>: Restore negative pressure in pleural space</li>
+  <li><strong>Placement</strong>: Air = upper (2nd intercostal). Fluid = lower (5th-6th).</li>
+  <li><strong>Tidaling</strong> in water seal chamber is <span class="safe">NORMAL</span></li>
+  <li><strong>Continuous bubbling</strong> in water seal = <span class="danger">air leak (NOT normal)</span></li>
+  <li>Keep <strong>petroleum jelly gauze</strong> at bedside for accidental dislodgement</li>
+</ul>
+
+<div class="mnemonic"><strong>Tube disconnects from system</strong>: Submerge end in sterile water. <strong>Tube falls OUT of patient</strong>: Cover with petroleum gauze taped on 3 sides.</div>
+
+<h3>CCBs &amp; Bioterrorism</h3>
+<div class="qref">
+  <div class="qref-box">
+    <h4>💊 Calcium Channel Blockers</h4>
+    <ul>
+      <li><span class="drug">Verapamil</span>, <span class="drug">Diltiazem</span>, <span class="drug">Nifedipine</span>, <span class="drug">Amlodipine</span></li>
+      <li>↓ BP, ↓ HR, ↓ contractility</li>
+      <li><span class="danger">No Grapefruit juice</span></li>
+    </ul>
+  </div>
+  <div class="qref-box">
+    <h4>☣️ Bioterrorism Agents</h4>
+    <ul>
+      <li><strong>Anthrax</strong>: Black eschar, NOT contagious</li>
+      <li><strong>Smallpox</strong>: Vesicular rash, <span class="danger">Airborne</span></li>
+      <li><strong>Botulism</strong>: Descending paralysis</li>
+      <li><strong>Ricin</strong>: No antidote</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ===== SECTION 4: MOBILITY ===== -->
+<div id="sec-mob" class="section-hdr sh-mob anim d1">
+  <span><span class="sec-num">4</span> Mobility &amp; Safety</span>
+</div>
+
+<h3>Crutch Walking Gaits</h3>
+<table class="compare-table">
+  <tr><th>Gait</th><th>Pattern</th><th>Use</th></tr>
+  <tr><td class="cat-label">4-Point</td><td>R crutch → L foot → L crutch → R foot</td><td>Both legs bear weight (most stable)</td></tr>
+  <tr><td class="cat-label">3-Point</td><td>Both crutches + affected leg → good leg</td><td>One leg non-weight-bearing</td></tr>
+  <tr><td class="cat-label">2-Point</td><td>R crutch + L foot → L crutch + R foot</td><td>Both legs partial WB (faster)</td></tr>
+  <tr><td class="cat-label">Swing-To</td><td>Both crutches → swing body TO crutches</td><td>Both legs paralyzed</td></tr>
+  <tr><td class="cat-label">Swing-Through</td><td>Both crutches → swing body PAST crutches</td><td>Faster; more skill needed</td></tr>
+</table>
+
+<div class="dx-card card-info">
+  <h3>🦯 Crutch Fitting &amp; Safety</h3>
+  <div class="tag-row"><span class="tag tag-key">Fitting</span><span class="tag tag-caution">Nerve Risk</span></div>
+  <ul>
+    <li><strong>2-3 finger widths</strong> between axilla and crutch pad</li>
+    <li>Weight bears on <strong>HANDS</strong>, NOT axillae</li>
+    <li>Numbness/tingling in hands = <span class="danger">crutch palsy</span> (nerve compression)</li>
+  </ul>
+</div>
+
+<div class="mnemonic"><strong>"Up with the Good, Down with the Bad"</strong> — Going UP stairs: good leg goes first. Going DOWN stairs: bad (affected) leg + crutches go first.</div>
+
+<h3>Assistive Devices</h3>
+<ul>
+  <li><strong>Cane</strong>: Hold on the <strong>STRONG</strong> (unaffected) side. Advance cane with the weak leg.</li>
+  <li><strong>Walker</strong>: Advance walker → weak leg → strong leg. All 4 legs must touch ground before stepping.</li>
+</ul>
+
+<h3>Weight-Bearing Status</h3>
+<table class="compare-table">
+  <tr><th>Abbreviation</th><th>Meaning</th><th>Description</th></tr>
+  <tr><td class="cat-label">NWB</td><td>Non-Weight-Bearing</td><td>NO weight on affected limb</td></tr>
+  <tr><td class="cat-label">TDWB</td><td>Touch-Down WB</td><td>Toe touch only for balance</td></tr>
+  <tr><td class="cat-label">PWB</td><td>Partial WB</td><td>30-50% weight allowed</td></tr>
+  <tr><td class="cat-label">WBAT</td><td>WB As Tolerated</td><td>As much as patient can tolerate</td></tr>
+  <tr><td class="cat-label">FWB</td><td>Full WB</td><td>No restrictions</td></tr>
+</table>
+
+<hr class="section-divider">
+
+<!-- ===== SECTION 5: DIABETES ===== -->
+<div id="sec-dm" class="section-hdr sh-dm anim d1">
+  <span><span class="sec-num">5</span> Diabetes Mellitus</span>
+</div>
+
+<div class="vs-banner">
+  <div class="vs-cond vs-left">Type 1 (IDDM)</div>
+  <div class="vs-circle">VS</div>
+  <div class="vs-cond vs-right">Type 2 (NIDDM)</div>
+</div>
+
+<div class="qref">
+  <div class="qref-box">
+    <h4>🔴 Type 1</h4>
+    <ul>
+      <li><strong>NO insulin production</strong></li>
+      <li>Onset: childhood/young adult</li>
+      <li>Thin body habitus</li>
+      <li>Requires <strong>insulin injections</strong></li>
+      <li>Prone to <span class="danger">DKA</span></li>
+    </ul>
+  </div>
+  <div class="qref-box">
+    <h4>🔵 Type 2</h4>
+    <ul>
+      <li><strong>Insulin resistance</strong></li>
+      <li>Onset: adult (usually &gt;40)</li>
+      <li>Often obese</li>
+      <li>Oral hypoglycemics → may need insulin</li>
+      <li>Prone to <span class="danger">HHS (HHNS)</span></li>
+    </ul>
+  </div>
+</div>
+
+<h3>Insulin Types</h3>
+<table class="compare-table">
+  <tr><th>Type</th><th>Example</th><th>Onset</th><th>Peak</th><th>Duration</th></tr>
+  <tr><td class="cat-label">Rapid</td><td><span class="drug">Lispro</span>, <span class="drug">Aspart</span></td><td>15 min</td><td>1-2 hr</td><td>3-5 hr</td></tr>
+  <tr><td class="cat-label">Short</td><td><span class="drug">Regular</span> (Humulin R)</td><td>30 min</td><td>2-4 hr</td><td>6-8 hr</td></tr>
+  <tr><td class="cat-label">Intermediate</td><td><span class="drug">NPH</span> (Humulin N)</td><td>1-2 hr</td><td>6-12 hr</td><td>18-24 hr</td></tr>
+  <tr><td class="cat-label">Long</td><td><span class="drug">Glargine</span> (Lantus)</td><td>1-2 hr</td><td>No peak</td><td>24 hr</td></tr>
+</table>
+
+<div class="mnemonic"><strong>Hypoglycemia occurs at PEAK time</strong> — know your insulin peaks! <strong>Clear before Cloudy</strong> when mixing: draw Regular (clear) before NPH (cloudy). Only <em>Regular insulin</em> can be given IV.</div>
+
+<h3>DKA vs HHS</h3>
+<table class="compare-table">
+  <tr><th>Feature</th><th>DKA</th><th>HHS</th></tr>
+  <tr><td class="cat-label">Type</td><td>Type 1</td><td>Type 2</td></tr>
+  <tr><td class="cat-label">Onset</td><td>Rapid (hours)</td><td>Gradual (days-weeks)</td></tr>
+  <tr><td class="cat-label">Glucose</td><td class="up">&gt;300</td><td class="up">&gt;600 (very high)</td></tr>
+  <tr><td class="cat-label">Ketones</td><td>Present (fruity breath)</td><td>Absent or minimal</td></tr>
+  <tr><td class="cat-label">pH</td><td class="down">&lt;7.35 (acidosis)</td><td class="normal">Normal</td></tr>
+  <tr><td class="cat-label">Breathing</td><td>Kussmaul (deep, rapid)</td><td>Normal</td></tr>
+  <tr><td class="cat-label">Treatment</td><td>IV fluids + IV Regular insulin + K⁺</td><td>IV fluids (primary) + insulin</td></tr>
+</table>
+
+<div class="lethal"><strong>In DKA: Replace fluids FIRST</strong> (NS), then start insulin. Always monitor <strong>potassium</strong> — insulin drives K⁺ into cells → hypokalemia risk!</div>
+
+<h3>Hypoglycemia vs Hyperglycemia</h3>
+<table class="compare-table">
+  <tr><th>Feature</th><th>Hypo (&lt;70)</th><th>Hyper (&gt;250)</th></tr>
+  <tr><td class="cat-label">Onset</td><td>Sudden</td><td>Gradual</td></tr>
+  <tr><td class="cat-label">Skin</td><td>Cold, clammy, pale</td><td>Hot, dry, flushed</td></tr>
+  <tr><td class="cat-label">Behavior</td><td>Shaky, irritable, confused</td><td>Drowsy, lethargic, thirsty</td></tr>
+  <tr><td class="cat-label">Treatment</td><td><span class="danger">Rule of 15</span>: 15g carbs → recheck in 15 min</td><td>Insulin as ordered</td></tr>
+</table>
+
+<hr class="section-divider">
+
+<!-- ===== SECTION 6: DRUG TOXICITY ===== -->
+<div id="sec-tox" class="section-hdr sh-tox anim d1">
+  <span><span class="sec-num">6</span> Drug Toxicity &amp; Antidotes</span>
+</div>
+
+<h3>Therapeutic Drug Monitoring</h3>
+<table class="compare-table">
+  <tr><th>Drug</th><th>Therapeutic Level</th><th>Toxicity Signs</th></tr>
+  <tr><td class="cat-label"><span class="drug">Digoxin</span></td><td>1.0 – 2.0 ng/mL</td><td>Anorexia, N/V, <span class="warn">Yellow/Green halos</span>, Bradycardia</td></tr>
+  <tr><td class="cat-label"><span class="drug">Lithium</span></td><td>0.6 – 1.2 mEq/L</td><td>Tremors, N/V, Diarrhea, Slurred speech, Seizures</td></tr>
+  <tr><td class="cat-label"><span class="drug">Dilantin</span></td><td>10 – 20 mcg/mL</td><td>Nystagmus, Ataxia, Gingival hyperplasia</td></tr>
+  <tr><td class="cat-label"><span class="drug">Theophylline</span></td><td>10 – 20 mcg/mL</td><td>Tachycardia, N/V, Restlessness, Seizures</td></tr>
+  <tr><td class="cat-label"><span class="drug">Vancomycin</span></td><td>10 – 20 mcg/mL</td><td><span class="danger">Red Man Syndrome</span> (infuse over 60+ min)</td></tr>
+</table>
+
+<div class="nclex-tip"><strong>Peak</strong>: Highest level — drawn 30 min after IV dose. <strong>Trough</strong>: Lowest level — drawn 30 min BEFORE next dose. If trough too HIGH → <span class="danger">HOLD the dose</span> and notify provider.</div>
+
+<h3>Key Antidotes</h3>
+<table class="compare-table">
+  <tr><th>Toxicity</th><th>Antidote</th></tr>
+  <tr><td class="cat-label"><span class="drug">Heparin</span></td><td><span class="drug">Protamine Sulfate</span></td></tr>
+  <tr><td class="cat-label"><span class="drug">Coumadin</span></td><td><span class="drug">Vitamin K</span> (Phytonadione)</td></tr>
+  <tr><td class="cat-label"><span class="drug">Digoxin</span></td><td><span class="drug">Digibind</span> (Digoxin Immune Fab)</td></tr>
+  <tr><td class="cat-label"><span class="drug">Mag Sulfate</span></td><td><span class="drug">Calcium Gluconate</span></td></tr>
+  <tr><td class="cat-label">Opioids</td><td><span class="drug">Naloxone</span> (Narcan)</td></tr>
+  <tr><td class="cat-label">Benzodiazepines</td><td><span class="drug">Flumazenil</span> (Romazicon)</td></tr>
+  <tr><td class="cat-label"><span class="drug">Acetaminophen</span></td><td><span class="drug">Acetylcysteine</span> (Mucomyst)</td></tr>
+  <tr><td class="cat-label">Lead Poisoning</td><td><span class="drug">EDTA</span>, <span class="drug">Succimer</span></td></tr>
+  <tr><td class="cat-label"><span class="drug">Methotrexate</span></td><td><span class="drug">Leucovorin</span></td></tr>
+  <tr><td class="cat-label">Iron</td><td><span class="drug">Deferoxamine</span></td></tr>
+</table>
+
+<div class="mnemonic"><strong>Digoxin toxicity</strong>: Hold if apical pulse &lt;60 (adult) or &lt;100 (infant). Check K⁺ — hypokalemia potentiates toxicity. <strong>Lithium toxicity</strong>: Hold and hydrate. Lithium competes with Na⁺ — <em>low sodium = ↑ lithium levels</em>.</div>
+
+<hr class="section-divider">
+
+<!-- ===== SECTION 7: ENDOCRINE ===== -->
+<div id="sec-endo" class="section-hdr sh-endo anim d1">
+  <span><span class="sec-num">7</span> Endocrine System</span>
+</div>
+
+<h3>Thyroid Disorders</h3>
+<div class="vs-banner">
+  <div class="vs-cond vs-left">Hyperthyroidism (Graves')</div>
+  <div class="vs-circle">VS</div>
+  <div class="vs-cond vs-right">Hypothyroidism (Myxedema)</div>
+</div>
+
+<table class="compare-table">
+  <tr><th>Feature</th><th>Hyper (↑ Everything)</th><th>Hypo (↓ Everything)</th></tr>
+  <tr><td class="cat-label">Metabolism</td><td class="up">↑ Metabolism, ↑ HR, ↑ BP</td><td class="down">↓ Metabolism, ↓ HR, ↓ BP</td></tr>
+  <tr><td class="cat-label">Weight</td><td>Weight <strong>LOSS</strong></td><td>Weight <strong>GAIN</strong></td></tr>
+  <tr><td class="cat-label">Temperature</td><td><span class="danger">Heat intolerance</span></td><td>Cold intolerance</td></tr>
+  <tr><td class="cat-label">Appearance</td><td>Exophthalmos (bulging eyes)</td><td>Myxedema (puffy face/hands)</td></tr>
+  <tr><td class="cat-label">Behavior</td><td>Nervous, Irritable, Diarrhea</td><td>Lethargic, Fatigued, Constipation</td></tr>
+  <tr><td class="cat-label">Labs</td><td>↑ T3/T4, ↓ TSH</td><td>↓ T3/T4, ↑ TSH</td></tr>
+  <tr><td class="cat-label">Treatment</td><td><span class="drug">PTU</span>, <span class="drug">Tapazole</span>, I-131</td><td><span class="drug">Synthroid</span> (lifelong)</td></tr>
+</table>
+
+<div class="lethal"><strong>Post-thyroidectomy</strong>: Keep <strong>tracheostomy set</strong> and <strong>calcium gluconate</strong> at bedside. Risk of laryngeal nerve damage (hoarseness) and hypocalcemia (parathyroid removal → tetany).</div>
+
+<h3>Adrenal Disorders</h3>
+<div class="vs-banner">
+  <div class="vs-cond vs-left">Addison's (Hypo)</div>
+  <div class="vs-circle">VS</div>
+  <div class="vs-cond vs-right">Cushing's (Hyper)</div>
+</div>
+
+<table class="compare-table">
+  <tr><th>Feature</th><th>Addison's (↓ Cortisol)</th><th>Cushing's (↑ Cortisol)</th></tr>
+  <tr><td class="cat-label">Skin</td><td><strong>Bronze/dark pigmentation</strong></td><td>Thin skin, easy bruising, striae</td></tr>
+  <tr><td class="cat-label">Weight</td><td>Weight loss</td><td><strong>Truncal obesity</strong>, Moon face, Buffalo hump</td></tr>
+  <tr><td class="cat-label">BP</td><td class="down">Hypotension</td><td class="up">Hypertension</td></tr>
+  <tr><td class="cat-label">Glucose</td><td class="down">Hypoglycemia</td><td class="up">Hyperglycemia</td></tr>
+  <tr><td class="cat-label">Na⁺/K⁺</td><td>↓Na, ↑K</td><td>↑Na, ↓K</td></tr>
+  <tr><td class="cat-label">Crisis</td><td><span class="danger">Addisonian Crisis</span>: severe shock → IV steroids</td><td>Infection risk (immunosuppressed)</td></tr>
+</table>
+
+<div class="mnemonic"><strong>Addison's</strong> = <em>Add cortisol</em> (needs steroids). <strong>Cushing's</strong> = <em>Crushing excess</em> cortisol. Addison's = DARK and DOWN. Cushing's = ROUND and UP.</div>
+
+<h3>Pheochromocytoma</h3>
+<div class="dx-card card-crisis">
+  <h3>⚡ Pheo — Adrenal Medulla Tumor</h3>
+  <div class="tag-row"><span class="tag tag-danger">Severe HTN</span><span class="tag tag-key">24-Hr Urine VMA</span></div>
+  <ul>
+    <li>Excessive <strong>catecholamines</strong> (epi/norepi)</li>
+    <li>Signs: Severe paroxysmal HTN, Headache, Diaphoresis, Palpitations</li>
+    <li>Diagnosis: 24-hr urine for <span class="lyte">VMA</span></li>
+    <li>Pre-op: Alpha blocker (<span class="drug">Phentolamine</span>), then Beta blocker</li>
+  </ul>
+</div>
+
+<hr class="section-divider">
+
+<!-- ===== SECTION 8: LAB VALUES ===== -->
+<div id="sec-lab" class="section-hdr sh-lab anim d1">
+  <span><span class="sec-num">8</span> Lab Values &amp; Diagnostics</span>
+</div>
+
+<h3>Critical Electrolytes</h3>
+<table class="compare-table">
+  <tr><th>Lab</th><th>Normal</th><th>Clinical Significance</th></tr>
+  <tr><td class="cat-label"><span class="lyte">Na⁺</span></td><td>135 – 145</td><td>↓ = Confusion, seizures. ↑ = Thirst, agitation</td></tr>
+  <tr><td class="cat-label"><span class="lyte">K⁺</span></td><td>3.5 – 5.0</td><td>↓ = Flat T, U wave. ↑ = <span class="danger">Peaked T, cardiac arrest</span></td></tr>
+  <tr><td class="cat-label"><span class="lyte">Ca²⁺</span></td><td>8.5 – 10.5</td><td>↓ = Tetany, Chvostek, Trousseau. ↑ = Lethargy, stones</td></tr>
+  <tr><td class="cat-label"><span class="lyte">Mg²⁺</span></td><td>1.5 – 2.5</td><td>↓ = Tremors, seizures. ↑ = ↓ DTRs, resp. depression</td></tr>
+  <tr><td class="cat-label"><span class="lyte">PO₄</span></td><td>2.5 – 4.5</td><td>Inverse of Calcium. ↑ Phos = ↓ Ca</td></tr>
+  <tr><td class="cat-label">Glucose</td><td>70 – 110 (fasting)</td><td>&lt;70 = Hypo. &gt;126 fasting = Diabetes</td></tr>
+  <tr><td class="cat-label">BUN</td><td>10 – 20</td><td>↑ = Dehydration, Renal failure, GI bleed</td></tr>
+  <tr><td class="cat-label">Creatinine</td><td>0.6 – 1.2</td><td>↑ = <span class="danger">Kidney damage</span> (more specific than BUN)</td></tr>
+</table>
+
+<h3>Hematology</h3>
+<table class="compare-table">
+  <tr><th>Lab</th><th>Normal</th><th>Significance</th></tr>
+  <tr><td class="cat-label">WBC</td><td>5,000 – 10,000</td><td>↑ = Infection. ↓ = Immunosuppressed</td></tr>
+  <tr><td class="cat-label">Hgb</td><td>M: 14-18 / F: 12-16</td><td>↓ = Anemia, hemorrhage</td></tr>
+  <tr><td class="cat-label">Hct</td><td>M: 40-54% / F: 36-48%</td><td>↓ = Anemia. ↑ = Dehydration</td></tr>
+  <tr><td class="cat-label">Platelets</td><td>150K – 400K</td><td>↓ = <span class="danger">Bleeding risk</span></td></tr>
+</table>
+
+<h3>Coagulation Studies</h3>
+<table class="compare-table">
+  <tr><th>Test</th><th>Normal</th><th>Monitors</th><th>Therapeutic</th></tr>
+  <tr><td class="cat-label">PT / INR</td><td>11-13 sec / 1.0</td><td><span class="drug">Coumadin</span></td><td><strong>INR 2.0 – 3.0</strong></td></tr>
+  <tr><td class="cat-label">aPTT</td><td>25 – 35 sec</td><td><span class="drug">Heparin</span></td><td><strong>1.5-2.5× normal</strong></td></tr>
+</table>
+
+<div class="mnemonic"><strong>Chvostek's Sign</strong>: Tap facial nerve → face twitches = <em>hypocalcemia</em>. <strong>Trousseau's Sign</strong>: BP cuff inflated → hand spasms = <em>hypocalcemia</em>.</div>
+
+<hr class="section-divider">
+
+<!-- ===== SECTION 9: PSYCH MEDS ===== -->
+<div id="sec-psy" class="section-hdr sh-psy anim d1">
+  <span><span class="sec-num">9</span> Psych Medications</span>
+</div>
+
+<h3>SSRIs</h3>
+<ul>
+  <li>Drugs: <span class="drug">Fluoxetine</span> (Prozac), <span class="drug">Sertraline</span> (Zoloft), <span class="drug">Paroxetine</span> (Paxil), <span class="drug">Escitalopram</span> (Lexapro)</li>
+  <li>Takes <strong>2-4 weeks</strong> for therapeutic effect — educate patient to keep taking!</li>
+  <li>Side effects: Sexual dysfunction, GI upset, insomnia</li>
+</ul>
+
+<div class="lethal"><strong>Serotonin Syndrome</strong> (combining serotonergic drugs): Fever, agitation, tremors, diarrhea, muscle rigidity, hyperreflexia → medical emergency!</div>
+
+<h3>MAOIs</h3>
+<div class="dx-card card-crisis">
+  <h3>🚨 MAOI Dietary Restriction</h3>
+  <div class="tag-row"><span class="tag tag-danger">Hypertensive Crisis</span><span class="tag tag-caution">Tyramine</span></div>
+  <ul>
+    <li>Drugs: <span class="drug">Phenelzine</span> (Nardil), <span class="drug">Tranylcypromine</span> (Parnate)</li>
+    <li><strong>Avoid TYRAMINE</strong>: Aged cheese, Wine, Beer, Smoked meats, Soy sauce, Pickled/fermented foods</li>
+    <li>Danger: <span class="danger">Hypertensive Crisis</span> (severe HTN, headache, neck stiffness)</li>
+    <li>Do NOT combine with SSRIs, <span class="drug">Meperidine</span>, or sympathomimetics</li>
+  </ul>
+</div>
+
+<div class="nclex-tip"><strong>SSRI to MAOI switch</strong>: Must have a <strong>2-week washout</strong> period (5 weeks for Fluoxetine due to long half-life) to prevent Serotonin Syndrome.</div>
+
+<h3>Typical Antipsychotics</h3>
+<ul>
+  <li><span class="drug">Haloperidol</span> (Haldol), <span class="drug">Chlorpromazine</span> (Thorazine)</li>
+  <li><strong>EPS</strong>: Dystonia, Akathisia, <span class="danger">Tardive Dyskinesia</span> (irreversible lip smacking!), Parkinsonism</li>
+  <li>EPS treatment: <span class="drug">Cogentin</span> or <span class="drug">Benadryl</span></li>
+</ul>
+
+<div class="lethal"><strong>Neuroleptic Malignant Syndrome (NMS)</strong>: Fever &gt;104°F, "lead pipe" rigidity, altered LOC, autonomic instability. <strong>STOP drug immediately!</strong> Treat with <span class="drug">Dantrolene</span> + cooling.</div>
+
+<h3>Atypical Antipsychotics &amp; Mood Stabilizers</h3>
+<div class="qref">
+  <div class="qref-box">
+    <h4>🧪 Atypical Antipsychotics</h4>
+    <ul>
+      <li><span class="drug">Clozapine</span>, <span class="drug">Risperidone</span>, <span class="drug">Olanzapine</span>, <span class="drug">Quetiapine</span></li>
+      <li>Less EPS, but <strong>Metabolic Syndrome</strong></li>
+      <li><span class="danger">Clozapine</span>: <strong>Agranulocytosis</strong> — monitor WBC weekly!</li>
+    </ul>
+  </div>
+  <div class="qref-box">
+    <h4>⚖️ Lithium</h4>
+    <ul>
+      <li>Therapeutic: <strong>0.6-1.2 mEq/L</strong></li>
+      <li>Toxicity: Tremors → N/V → Ataxia → Seizures → Coma</li>
+      <li><strong>Maintain Na⁺ and fluids</strong> — dehydration = ↑ lithium</li>
+      <li>Draw levels <strong>12 hours</strong> after last dose</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ===== SECTION 10: MATERNITY ===== -->
+<div id="sec-mat" class="section-hdr sh-mat anim d1">
+  <span><span class="sec-num">10</span> Maternity &amp; OB</span>
+</div>
+
+<h3>Pregnancy Basics</h3>
+<ul>
+  <li><strong>Nagele's Rule</strong>: LMP + 7 days − 3 months = Estimated Due Date</li>
+  <li><strong>Presumptive</strong>: Amenorrhea, N/V, Breast tenderness, Fatigue, Quickening</li>
+  <li><strong>Probable</strong>: Positive hCG, Chadwick's (blue cervix), Goodell's (soft cervix), Hegar's (soft uterus)</li>
+  <li><strong>Positive</strong>: FHR by Doppler, Ultrasound visualization, Fetal movement by examiner</li>
+</ul>
+
+<h3>Fetal Heart Rate Monitoring</h3>
+<table class="compare-table">
+  <tr><th>Pattern</th><th>Description</th><th>Action</th></tr>
+  <tr><td class="cat-label">Normal FHR</td><td>110-160 bpm, moderate variability</td><td><span class="safe">Reassuring</span></td></tr>
+  <tr><td class="cat-label">Early Decels</td><td>Mirror contractions. <strong>Head compression.</strong></td><td><span class="safe">Normal/Benign</span></td></tr>
+  <tr><td class="cat-label">Variable Decels</td><td>V-shaped, abrupt. <strong>Cord compression.</strong></td><td><span class="warn">Reposition, Amnioinfusion, O₂</span></td></tr>
+  <tr><td class="cat-label">Late Decels</td><td>After peak. <strong>Uteroplacental insufficiency.</strong></td><td><span class="danger">MOST OMINOUS</span> — L side, O₂, Stop Pitocin, Notify MD</td></tr>
+</table>
+
+<div class="mnemonic"><strong>VEAL CHOP</strong>: <em>V</em>ariable = <em>C</em>ord, <em>E</em>arly = <em>H</em>ead, <em>A</em>ccelerations = <em>O</em>K, <em>L</em>ate = <em>P</em>lacental insufficiency</div>
+
+<h3>Stages of Labor</h3>
+<table class="compare-table">
+  <tr><th>Stage</th><th>Description</th><th>Key Points</th></tr>
+  <tr><td class="cat-label">1st Stage</td><td>Onset → full dilation (10 cm)</td><td>Latent (0-4) → Active (4-7) → <strong>Transition (7-10)</strong> = hardest/shortest</td></tr>
+  <tr><td class="cat-label">2nd Stage</td><td>Full dilation → delivery</td><td>Pushing. Crowning. Avg: 1 hr primip, 20 min multip</td></tr>
+  <tr><td class="cat-label">3rd Stage</td><td>Baby → placenta delivery</td><td>5-30 min. Check placenta completeness</td></tr>
+  <tr><td class="cat-label">4th Stage</td><td>First 1-4 hrs post-delivery</td><td>Monitor for hemorrhage. Fundus firm, midline.</td></tr>
+</table>
+
+<h3>APGAR Scoring (1 &amp; 5 min)</h3>
+<table class="compare-table">
+  <tr><th>Component</th><th>0</th><th>1</th><th>2</th></tr>
+  <tr><td class="cat-label"><strong>A</strong>ppearance</td><td>Blue/Pale all over</td><td>Body pink, blue extremities</td><td>Completely pink</td></tr>
+  <tr><td class="cat-label"><strong>P</strong>ulse</td><td>Absent</td><td>&lt;100</td><td>&gt;100</td></tr>
+  <tr><td class="cat-label"><strong>G</strong>rimace</td><td>No response</td><td>Grimace</td><td>Cry/Active</td></tr>
+  <tr><td class="cat-label"><strong>A</strong>ctivity</td><td>Limp</td><td>Some flexion</td><td>Active motion</td></tr>
+  <tr><td class="cat-label"><strong>R</strong>espiration</td><td>Absent</td><td>Slow/Weak cry</td><td>Good cry</td></tr>
+</table>
+
+<h3>Postpartum &amp; Preeclampsia</h3>
+<div class="dx-card card-crisis">
+  <h3>🚨 Preeclampsia</h3>
+  <div class="tag-row"><span class="tag tag-danger">HTN &gt;140/90</span><span class="tag tag-caution">Proteinuria</span><span class="tag tag-key">After 20 Weeks</span></div>
+  <ul>
+    <li><strong>Triad</strong>: HTN + Proteinuria + Edema (face/hands)</li>
+    <li>Severe: HTN &gt;160/110, headache, visual changes, epigastric pain, HELLP</li>
+    <li>Treatment: <span class="drug">Magnesium Sulfate</span> (seizure prevention). Antidote: <span class="drug">Calcium Gluconate</span></li>
+    <li><strong>Eclampsia</strong> = preeclampsia + SEIZURES</li>
+  </ul>
+</div>
+
+<div class="lethal"><strong>Mag Sulfate toxicity</strong>: ↓ DTRs (check reflexes!), ↓ respirations (&lt;12/min = HOLD), ↓ urine output (&lt;30 mL/hr). Keep <span class="drug">Calcium Gluconate</span> at bedside. <strong>Boggy uterus</strong> = #1 cause postpartum hemorrhage → massage the fundus!</div>
+
+<hr class="section-divider">
+
+<!-- ===== SECTION 11: PEDIATRICS ===== -->
+<div id="sec-peds" class="section-hdr sh-peds anim d1">
+  <span><span class="sec-num">11</span> Pediatrics &amp; Growth</span>
+</div>
+
+<h3>Piaget's Cognitive Development</h3>
+<table class="compare-table">
+  <tr><th>Stage</th><th>Age</th><th>Key Features</th></tr>
+  <tr><td class="cat-label">Sensorimotor</td><td>0 – 2 yr</td><td>Senses &amp; motor. <strong>Object permanence</strong> (8-12 mo).</td></tr>
+  <tr><td class="cat-label">Preoperational</td><td>2 – 7 yr</td><td>Pretend play. <strong>Egocentric</strong>. Magical thinking.</td></tr>
+  <tr><td class="cat-label">Concrete Op.</td><td>7 – 11 yr</td><td>Logical thinking. <strong>Conservation</strong>. Less egocentric.</td></tr>
+  <tr><td class="cat-label">Formal Op.</td><td>11+ yr</td><td>Abstract &amp; hypothetical reasoning.</td></tr>
+</table>
+
+<h3>Erikson's Psychosocial Stages</h3>
+<table class="compare-table">
+  <tr><th>Age</th><th>Stage</th><th>Key Concept</th></tr>
+  <tr><td class="cat-label">Infant (0-1)</td><td><strong>Trust vs Mistrust</strong></td><td>Consistent care = trust. Separation anxiety ~6 mo.</td></tr>
+  <tr><td class="cat-label">Toddler (1-3)</td><td><strong>Autonomy vs Shame</strong></td><td>"NO!", tantrums, Toilet training.</td></tr>
+  <tr><td class="cat-label">Preschool (3-6)</td><td><strong>Initiative vs Guilt</strong></td><td>Imaginary friends. Fear of body mutilation.</td></tr>
+  <tr><td class="cat-label">School (6-12)</td><td><strong>Industry vs Inferiority</strong></td><td>Rules, collections. Peer group important.</td></tr>
+  <tr><td class="cat-label">Adolescent</td><td><strong>Identity vs Confusion</strong></td><td>Self-identity. Peers = #1 influence.</td></tr>
+</table>
+
+<h3>Age-Appropriate Play</h3>
+<table class="compare-table">
+  <tr><th>Age</th><th>Play Type</th><th>Examples</th></tr>
+  <tr><td class="cat-label">Infant</td><td><strong>Solitary</strong></td><td>Rattles, mobiles, peek-a-boo</td></tr>
+  <tr><td class="cat-label">Toddler</td><td><strong>Parallel</strong></td><td>Play next to (not with) others. Blocks.</td></tr>
+  <tr><td class="cat-label">Preschool</td><td><strong>Associative</strong></td><td>Play together loosely. Dress-up, tricycle.</td></tr>
+  <tr><td class="cat-label">School</td><td><strong>Cooperative</strong></td><td>Team sports, board games, organized rules.</td></tr>
+</table>
+
+<h3>Key Milestones</h3>
+<div class="qref">
+  <div class="qref-box"><h4>👶 0-6 Months</h4><ul>
+    <li><strong>2 mo</strong>: Social smile</li>
+    <li><strong>4 mo</strong>: Rolls front to back, grasps rattle</li>
+    <li><strong>6 mo</strong>: Sits with support, stranger anxiety</li>
+  </ul></div>
+  <div class="qref-box"><h4>🧒 6-12 Months</h4><ul>
+    <li><strong>9 mo</strong>: Crawls, pincer grasp developing</li>
+    <li><strong>12 mo</strong>: Walks with help, 2-3 words, cup</li>
+    <li><strong>15 mo</strong>: Walks alone, 2-block tower</li>
+  </ul></div>
+  <div class="qref-box"><h4>🚸 1-3 Years</h4><ul>
+    <li><strong>2 yr</strong>: Runs, 2-word sentences, kicks ball</li>
+    <li><strong>3 yr</strong>: Rides tricycle, 3-word sentences</li>
+  </ul></div>
+</div>
+
+<div class="nclex-tip"><strong>Immunizations</strong>: Live vaccines (MMR, Varicella, Rotavirus) — do NOT give to immunocompromised. Delay if febrile. Minor illness with low-grade temp → OK to vaccinate.</div>
+
+<hr class="section-divider">
+
+<!-- ===== SECTION 12: DELEGATION ===== -->
+<div id="sec-pri" class="section-hdr sh-pri anim d1">
+  <span><span class="sec-num">12</span> Prioritization &amp; Delegation</span>
+</div>
+
+<h3>Triage — ABCs &amp; Maslow</h3>
+<ol class="tx-steps">
+  <li><strong>Airway</strong> → first priority always</li>
+  <li><strong>Breathing</strong> → ensure adequate ventilation</li>
+  <li><strong>Circulation</strong> → assess perfusion, bleeding</li>
+  <li><strong>Safety</strong> → environmental and patient safety</li>
+  <li><strong>Psychosocial</strong> → emotional and social needs last</li>
+</ol>
+
+<div class="mnemonic"><strong>Acute over Chronic. Unstable over Stable. New onset over Established. Unexpected over Expected.</strong> Use ABCs when all options are physiological. Use Maslow when options span different levels.</div>
+
+<h3>Scope of Practice</h3>
+<table class="compare-table">
+  <tr><th>Provider</th><th>Can Do</th><th>Cannot Do</th></tr>
+  <tr><td class="cat-label">RN</td><td>Assessment, Planning, Teaching, Evaluation. IV push. Blood admin. Triage.</td><td>Diagnose, Prescribe</td></tr>
+  <tr><td class="cat-label">LPN/LVN</td><td>Data collection, Routine care, Stable pts, PO/IM/SubQ meds, Dressings</td><td>Initial assessment, Teaching, IV push, Blood, Triage</td></tr>
+  <tr><td class="cat-label">UAP/CNA</td><td>ADLs (bath, feed, ambulate), I&amp;O, VS on stable pts, CPR</td><td>Any nursing judgment, Meds, Assessment, Teaching</td></tr>
+</table>
+
+<h3>Five Rights of Delegation</h3>
+<ol class="tx-steps">
+  <li><strong>Right Task</strong> — Can this be delegated? (Routine, non-complex)</li>
+  <li><strong>Right Circumstance</strong> — Is the patient stable enough?</li>
+  <li><strong>Right Person</strong> — Is the delegate competent &amp; within scope?</li>
+  <li><strong>Right Direction</strong> — Clear, concise instructions given?</li>
+  <li><strong>Right Supervision</strong> — RN follows up and evaluates outcomes</li>
+</ol>
+
+<div class="lethal"><strong>The RN can NEVER delegate</strong>: Assessment, Teaching, Evaluation, or anything requiring nursing judgment. The RN ALWAYS retains accountability.</div>
+
+<h3>Which Patient to See First?</h3>
+<table class="compare-table">
+  <tr><th>See FIRST ⚡</th><th>Can Wait ⏳</th></tr>
+  <tr><td><span class="danger">New-onset chest pain</span></td><td>Chronic angina requesting PRN nitro</td></tr>
+  <tr><td><span class="danger">Post-op with ↓ BP and ↑ HR</span></td><td>Post-op day 2 asking for pain meds</td></tr>
+  <tr><td><span class="danger">Diabetic with glucose of 42</span></td><td>Diabetic with glucose of 280</td></tr>
+  <tr><td><span class="danger">O₂ sat of 82%</span></td><td>COPD patient with O₂ sat 90% (baseline)</td></tr>
+</table>
+
+<hr class="section-divider">
+
+<!-- ===== SECTION 13: TEST TIPS ===== -->
+<div id="sec-test" class="section-hdr sh-test anim d1">
+  <span><span class="sec-num">13</span> Psych Nursing &amp; Test-Taking Strategies</span>
+</div>
+
+<h3>Therapeutic vs Non-Therapeutic Communication</h3>
+<table class="compare-table">
+  <tr><th>Therapeutic ✅</th><th>Non-Therapeutic ❌</th></tr>
+  <tr><td>Open-ended questions ("Tell me about...")</td><td>Yes/No questions</td></tr>
+  <tr><td>Reflecting ("You seem upset...")</td><td>Giving advice ("I think you should...")</td></tr>
+  <tr><td>Silence (allowing processing)</td><td>Changing the subject</td></tr>
+  <tr><td>Restating / Paraphrasing</td><td>"Why?" questions (defensive)</td></tr>
+  <tr><td>Empathy ("That must be difficult")</td><td>False reassurance ("Don't worry!")</td></tr>
+  <tr><td>Offering self ("I'll sit with you")</td><td>Challenging ("That's not true")</td></tr>
+</table>
+
+<h3>Nurse-Patient Relationship Phases</h3>
+<table class="compare-table">
+  <tr><th>Phase</th><th>Focus</th></tr>
+  <tr><td class="cat-label">Orientation</td><td>Establish trust, define roles, set boundaries, identify problems</td></tr>
+  <tr><td class="cat-label">Working</td><td>Therapeutic work, problem-solving, developing coping skills</td></tr>
+  <tr><td class="cat-label">Termination</td><td>Review progress, plan for future, deal with feelings of loss</td></tr>
+</table>
+
+<h3>Key Psych Disorders — Quick Review</h3>
+<div class="qref">
+  <div class="qref-box"><h4>😞 Depression</h4><ul><li>Suicide risk <strong>highest when improving</strong> (has energy to act)</li><li>Ask directly about suicidal ideation</li></ul></div>
+  <div class="qref-box"><h4>🎢 Mania</h4><ul><li><strong>Safety first</strong>. High-cal finger foods</li><li>Decrease stimuli, firm limits</li></ul></div>
+  <div class="qref-box"><h4>😰 Panic</h4><ul><li>Stay with patient. Short sentences.</li><li>Breathing techniques. Do NOT leave.</li></ul></div>
+  <div class="qref-box"><h4>🔁 OCD</h4><ul><li>Do NOT interrupt rituals initially</li><li>Gradually limit time for rituals</li></ul></div>
+  <div class="qref-box"><h4>🍽️ Anorexia</h4><ul><li>Monitor refeeding syndrome</li><li>Sit with pt 30-60 min after meals</li></ul></div>
+  <div class="qref-box"><h4>🧩 Schizophrenia</h4><ul><li>Don't argue with hallucinations</li><li>Present reality, focus on feelings</li></ul></div>
+</div>
+
+<h3>NCLEX Test-Taking Strategies</h3>
+<ul>
+  <li><strong>Assessment before Intervention</strong> — unless life-threatening emergency → intervene first</li>
+  <li><strong>Safety first</strong> — when in doubt, choose the safest answer</li>
+  <li><strong>Therapeutic communication</strong> → acknowledge feelings, open-ended, don't give advice</li>
+  <li><strong>Never "Call the doctor" first</strong> unless you've exhausted nursing interventions</li>
+  <li><strong>Avoid absolutes</strong>: "always," "never," "all," "none" are usually WRONG</li>
+  <li><strong>"Which patient first?"</strong> → Most acute, unstable, or unexpected finding</li>
+</ul>
+
+<div class="mnemonic"><strong>SATA (Select All That Apply)</strong>: Treat each option independently as true/false. Don't look for a pattern. Each option stands on its own merits.</div>
+
+<h3>Isolation Quick Reference</h3>
+<table class="compare-table">
+  <tr><th>Type</th><th>Diseases</th><th>PPE</th></tr>
+  <tr><td class="cat-label">Airborne</td><td>TB, Measles, Varicella</td><td>N95, Negative pressure room</td></tr>
+  <tr><td class="cat-label">Droplet</td><td>Influenza, Pertussis, Meningitis, Mumps</td><td>Regular mask within 3 feet</td></tr>
+  <tr><td class="cat-label">Contact</td><td>MRSA, C. diff, Scabies, RSV</td><td>Gloves + Gown. C. diff: <span class="danger">SOAP &amp; WATER only!</span></td></tr>
+</table>
+
+<div class="mnemonic"><strong>My Chicken Has TB</strong> — Airborne: <em>M</em>easles, <em>C</em>hickenpox, TB. Everything else is droplet or contact.</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <span>📘 Blue Book II — Peptopia NCLEX Review · 13 Lectures · Foundations &amp; Clinical</span>
+</div>
+
+</div><!-- /guide-container -->
+
+<script>
+/* Drug card popup — sends message to parent for drug card modal */
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('drug')) {
+    var name = e.target.textContent.trim();
+    try {
+      window.parent.postMessage({ type: 'showDrugCard', drug: name }, '*');
+    } catch(err) { /* cross-origin, skip */ }
+  }
+});
+/* Smooth scroll for badges and nav */
+document.querySelectorAll('.badge, .nav-pill').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    var href = this.getAttribute('href');
+    if (href) {
+      var target = document.querySelector(href);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
 </body>
 </html>
