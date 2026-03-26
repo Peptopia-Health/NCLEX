@@ -73,6 +73,11 @@ _a.pinkguide = { bg:'#fdf2f8', accent:'#db2777', dk:'#831843', lt:'#fce7f3', hf:
 _a.bbguide = { bg:'#eff6ff', accent:'#2563eb', dk:'#1e3a8a', lt:'#dbeafe', hf:'#eff6ff', ht:'#bfdbfe' };
 _a.endoguide_thyroid = _a.endocompare; _a.endoguide_adrenal = _a.endocompare; _a.endoguide_adh = _a.endocompare;
 _a.endoguide_parathyroid = _a.endocompare; _a.endoguide_pheo = _a.endocompare; _a.endoguide_quickref = _a.endocompare; _a.endoguide_memory = _a.endocompare;
+_a.blackguide = { bg:'#1a1a2e', accent:'#c9a227', dk:'#8b6914', lt:'#fef3c7', hf:'#fefce8', ht:'#fef08a' };
+_a.blackguide_acid = _a.blackguide; _a.blackguide_alc = _a.blackguide; _a.blackguide_card = _a.blackguide; _a.blackguide_mob = _a.blackguide; _a.blackguide_dm = _a.blackguide; _a.blackguide_tox = _a.blackguide; _a.blackguide_endo = _a.blackguide; _a.blackguide_lab = _a.blackguide; _a.blackguide_psy = _a.blackguide; _a.blackguide_mat = _a.blackguide; _a.blackguide_pri = _a.blackguide;
+_a.pinkguide_acid = _a.pinkguide; _a.pinkguide_alc = _a.pinkguide; _a.pinkguide_amino = _a.pinkguide; _a.pinkguide_chd = _a.pinkguide; _a.pinkguide_dm = _a.pinkguide; _a.pinkguide_tox = _a.pinkguide; _a.pinkguide_lyte = _a.pinkguide; _a.pinkguide_lab = _a.pinkguide; _a.pinkguide_psy = _a.pinkguide; _a.pinkguide_ob = _a.pinkguide; _a.pinkguide_pri = _a.pinkguide; _a.pinkguide_test = _a.pinkguide;
+_a.yfguide_acid = _a.yfguide; _a.yfguide_grief = _a.yfguide; _a.yfguide_amino = _a.yfguide; _a.yfguide_card = _a.yfguide; _a.yfguide_chd = _a.yfguide; _a.yfguide_psy = _a.yfguide; _a.yfguide_dm = _a.yfguide; _a.yfguide_tox = _a.yfguide; _a.yfguide_lab = _a.yfguide; _a.yfguide_fluid = _a.yfguide; _a.yfguide_mat = _a.yfguide; _a.yfguide_pri = _a.yfguide;
+_a.bbguide_bp = _a.bbguide; _a.bbguide_mi = _a.bbguide; _a.bbguide_chf = _a.bbguide; _a.bbguide_shock = _a.bbguide; _a.bbguide_aneurysm = _a.bbguide; _a.bbguide_copd = _a.bbguide; _a.bbguide_pneumo = _a.bbguide; _a.bbguide_tb = _a.bbguide; _a.bbguide_icp = _a.bbguide; _a.bbguide_cva = _a.bbguide; _a.bbguide_neuro = _a.bbguide; _a.bbguide_renal = _a.bbguide;
 var _wpCats = ['Musculoskeletal','Anti-Infective','Cardiovascular','Psychiatric / Mental Health','Endocrine','Respiratory','Immune / Lymphatic','Renal / Urinary','Nervous System','Integumentary','Digestive / GI','Sensory / Ophthalmic','Nutritional Support'];
 for (var _i = 0; _i < _wpCats.length; _i++) _a['wp_' + _wpCats[_i]] = _a.workpharm;
 })();
@@ -226,8 +231,8 @@ loadingEl.innerHTML =
 '<br><small style="color:#94a3b8;font-weight:400;">' + err.message + '</small></div>';
 });
 var APP_VERSION = '27.0';
-var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, comprehensive7:150, comprehensive8:150, comprehensive9:150, comprehensive10:1000, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:530, pinkguide:100, bbguide:100, endoguide_thyroid:25, endoguide_adrenal:25, endoguide_adh:25, endoguide_parathyroid:25, endoguide_pheo:25, endoguide_quickref:25, endoguide_memory:25, qbank:5571, mentalhealth:100, finalreview:100 };
-var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, comprehensive7: 1, comprehensive8: 1, comprehensive9: 1, comprehensive10: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1, pinkguide: 1, bbguide: 1, endoguide_thyroid: 1, endoguide_adrenal: 1, endoguide_adh: 1, endoguide_parathyroid: 1, endoguide_pheo: 1, endoguide_quickref: 1, endoguide_memory: 1, qbank: 1, mentalhealth: 1, finalreview: 1 };
+var QUIZ_COUNTS = { cardio:116, resp:124, neuro:100, gi:113, obpeds:148, endo:114, musc:115, psych:124, hemonc:123, integ:100, pharm:182, fund:130, gero:95, nutr:103, workpharm:341, yellowfever:39, comprehensive:171, comprehensive2:72, comprehensive4:100, comprehensive5:100, comprehensive6:150, comprehensive7:150, comprehensive8:150, comprehensive9:150, comprehensive10:1000, fullexam:341, endocompare:100, infctrl:100, priority:100, fluids:100, cardiac:100, obhtn:100, obmatnb:100, pharmguide:100, fundguide:100, geroguide:100, nutrguide:100, yfguide:530, pinkguide:180, bbguide:180, endoguide_thyroid:25, endoguide_adrenal:25, endoguide_adh:25, endoguide_parathyroid:25, endoguide_pheo:25, endoguide_quickref:25, endoguide_memory:25, qbank:5571, mentalhealth:100, finalreview:100, blackguide:200, blackguide_acid:20, blackguide_alc:20, blackguide_card:20, blackguide_mob:20, blackguide_dm:20, blackguide_tox:20, blackguide_endo:20, blackguide_lab:20, blackguide_psy:20, blackguide_mat:20, blackguide_pri:20, pinkguide_acid:15, pinkguide_alc:15, pinkguide_amino:15, pinkguide_chd:15, pinkguide_dm:15, pinkguide_tox:15, pinkguide_lyte:15, pinkguide_lab:15, pinkguide_psy:15, pinkguide_ob:15, pinkguide_pri:15, pinkguide_test:15, yfguide_acid:15, yfguide_grief:15, yfguide_amino:15, yfguide_card:15, yfguide_chd:15, yfguide_psy:15, yfguide_dm:15, yfguide_tox:15, yfguide_lab:15, yfguide_fluid:15, yfguide_mat:15, yfguide_pri:15, bbguide_bp:15, bbguide_mi:15, bbguide_chf:15, bbguide_shock:15, bbguide_aneurysm:15, bbguide_copd:15, bbguide_pneumo:15, bbguide_tb:15, bbguide_icp:15, bbguide_cva:15, bbguide_neuro:15, bbguide_renal:15 };
+var EXCLUDED_FROM_PCT = { workpharm: 1, yellowfever: 1, comprehensive: 1, comprehensive2: 1, comprehensive4: 1, comprehensive5: 1, comprehensive6: 1, comprehensive7: 1, comprehensive8: 1, comprehensive9: 1, comprehensive10: 1, fullexam: 1, pharmguide: 1, fundguide: 1, geroguide: 1, nutrguide: 1, yfguide: 1, pinkguide: 1, bbguide: 1, endoguide_thyroid: 1, endoguide_adrenal: 1, endoguide_adh: 1, endoguide_parathyroid: 1, endoguide_pheo: 1, endoguide_quickref: 1, endoguide_memory: 1, qbank: 1, mentalhealth: 1, finalreview: 1, blackguide: 1, blackguide_acid: 1, blackguide_alc: 1, blackguide_card: 1, blackguide_mob: 1, blackguide_dm: 1, blackguide_tox: 1, blackguide_endo: 1, blackguide_lab: 1, blackguide_psy: 1, blackguide_mat: 1, blackguide_pri: 1, pinkguide_acid: 1, pinkguide_alc: 1, pinkguide_amino: 1, pinkguide_chd: 1, pinkguide_dm: 1, pinkguide_tox: 1, pinkguide_lyte: 1, pinkguide_lab: 1, pinkguide_psy: 1, pinkguide_ob: 1, pinkguide_pri: 1, pinkguide_test: 1, yfguide_acid: 1, yfguide_grief: 1, yfguide_amino: 1, yfguide_card: 1, yfguide_chd: 1, yfguide_psy: 1, yfguide_dm: 1, yfguide_tox: 1, yfguide_lab: 1, yfguide_fluid: 1, yfguide_mat: 1, yfguide_pri: 1, bbguide_bp: 1, bbguide_mi: 1, bbguide_chf: 1, bbguide_shock: 1, bbguide_aneurysm: 1, bbguide_copd: 1, bbguide_pneumo: 1, bbguide_tb: 1, bbguide_icp: 1, bbguide_cva: 1, bbguide_neuro: 1, bbguide_renal: 1 };
 /* Paged quiz configuration — incremental sets of N questions from large banks */
 var PAGED_QUIZZES = { qbank: { pageSize: 100, totalQ: QUIZ_COUNTS.qbank || 5571 } };
 var _pagedSetKey = 'nclex85_paged_sets';
@@ -2690,7 +2695,7 @@ function _parseQuizJson(j) {
 var raw = Array.isArray(j) ? j : (j.questions || []);
 if (!raw.length) return [];
 return raw.map(function(item, idx) {
-return { q: item.q || item.question, a: item.options || item.a, correct: item.correct !== undefined ? item.correct : item.answer, rationale: item.rationale || '', origIdx: idx };
+return { q: item.q || item.question, a: item.options || item.a, correct: item.correct !== undefined ? item.correct : item.answer, rationale: item.rationale || '', section: item.section || '', origIdx: idx };
 });
 }
 function _fetchWithTimeout(url, ms) {
@@ -2704,8 +2709,29 @@ return r.json();
 }).then(resolve).catch(function(e) { clearTimeout(timer); reject(e); });
 });
 }
+var SINGLE_FILE_GUIDES = { pinkguide:1, yfguide:1, bbguide:1 };
+var _sfgFullCache = {};
 function fetchGitHubQuiz(sectionKey, _isRetry) {
 if (ghQuizCache[sectionKey]) return Promise.resolve({ error: null, questions: ghQuizCache[sectionKey] });
+var parts = sectionKey.split('_');
+var parentKey = parts[0];
+var subSection = parts.length > 1 ? parts.slice(1).join('_') : null;
+if (subSection && SINGLE_FILE_GUIDES[parentKey]) {
+if (_sfgFullCache[parentKey]) {
+var filtered = _sfgFullCache[parentKey].filter(function(q) { return q.section === subSection; });
+ghQuizCache[sectionKey] = filtered;
+console.log('[Quiz] Single-file filter: ' + sectionKey + ' → ' + filtered.length + ' questions');
+return Promise.resolve({ error: null, questions: filtered });
+}
+return fetchGitHubQuiz(parentKey).then(function(result) {
+if (result.error) return result;
+var allQs = _sfgFullCache[parentKey] || [];
+var filtered = allQs.filter(function(q) { return q.section === subSection; });
+ghQuizCache[sectionKey] = filtered;
+console.log('[Quiz] Single-file filter (after fetch): ' + sectionKey + ' → ' + filtered.length + ' questions');
+return { error: null, questions: filtered };
+});
+}
 var fname = 'mnt_quiz_json_' + sectionKey + '.json';
 var bustParam = _isRetry ? '?_t=' + Date.now() : CACHE_BUST;
 var sources = [
@@ -2731,6 +2757,7 @@ var qs = _parseQuizJson(j);
 console.log('[Quiz] Source #' + (i+1) + ' returned ' + qs.length + ' questions for [' + sectionKey + ']');
 if (qs.length > 0) {
 ghQuizCache[sectionKey] = qs;
+if (SINGLE_FILE_GUIDES[sectionKey]) _sfgFullCache[sectionKey] = qs;
 if (i > 0 || _isRetry) _log('Quiz [' + sectionKey + '] loaded from ' + (_isRetry ? 'retry ' : '') + 'source #' + (i + 1));
 return { error: null, questions: qs };
 }
@@ -2880,7 +2907,12 @@ pinkguide:'Pink Guide Quiz',
 bbguide:'Blue Guide Quiz',
 qbank:'Question Bank Quiz',
 mentalhealth:'Mental Health Quiz',
-finalreview:'Final Review Quiz'
+finalreview:'Final Review Quiz',
+blackguide:'Black Guide Quiz',
+blackguide_acid:'Black: Acid-Base',blackguide_alc:'Black: Alcohol',blackguide_card:'Black: Cardiac',blackguide_mob:'Black: Mobility',blackguide_dm:'Black: Diabetes',blackguide_tox:'Black: Drug Tox',blackguide_endo:'Black: Endocrine',blackguide_lab:'Black: Lab Values',blackguide_psy:'Black: Psych Drugs',blackguide_mat:'Black: Maternity',blackguide_pri:'Black: Prioritization',
+pinkguide_acid:'Pink: Acid-Base',pinkguide_alc:'Pink: Alcoholism',pinkguide_amino:'Pink: Aminoglycosides',pinkguide_chd:'Pink: CHD & Precautions',pinkguide_dm:'Pink: Diabetes',pinkguide_tox:'Pink: Drug Toxicities',pinkguide_lyte:'Pink: Electrolytes',pinkguide_lab:'Pink: Lab Values',pinkguide_psy:'Pink: Psych Drugs',pinkguide_ob:'Pink: Labor & OB',pinkguide_pri:'Pink: Prioritization',pinkguide_test:'Pink: Test Strategies',
+yfguide_acid:'Yellow: Acid-Base',yfguide_grief:'Yellow: Addiction & Grief',yfguide_amino:'Yellow: Aminoglycosides',yfguide_card:'Yellow: Cardiac',yfguide_chd:'Yellow: CHDs & Crutches',yfguide_psy:'Yellow: Psych',yfguide_dm:'Yellow: Diabetes & Endo',yfguide_tox:'Yellow: Drug Toxicities',yfguide_lab:'Yellow: Lab Values',yfguide_fluid:'Yellow: Fluids',yfguide_mat:'Yellow: Maternity',yfguide_pri:'Yellow: Prioritization',
+bbguide_bp:'Blue: BP & Angina',bbguide_mi:'Blue: MI',bbguide_chf:'Blue: CHF',bbguide_shock:'Blue: Shock',bbguide_aneurysm:'Blue: Aneurysms',bbguide_copd:'Blue: COPD',bbguide_pneumo:'Blue: Pneumonia & PE',bbguide_tb:'Blue: TB & RDS',bbguide_icp:'Blue: ICP & Seizures',bbguide_cva:'Blue: CVA & Spine',bbguide_neuro:'Blue: Neuro Disorders',bbguide_renal:'Blue: Renal & GI'
 };
 var title = labels[key] || ((SECTION_LABELS[key] || key) + ' Quiz');
 initQuizUI(title, key);
@@ -3342,7 +3374,7 @@ categories: [
 { title: 'Yellow', file: 'Guides/Yellow-Fever.html', emoji: '<span style="display:inline-block;filter:sepia(1) saturate(8) hue-rotate(5deg) brightness(1.15)">\uD83D\uDCD4</span>', isHtml: true, quizKey: 'yfguide' },
 { title: 'Blue', file: 'Guides/Blue-Book.html', emoji: '\uD83D\uDCD8', isHtml: true, quizKey: 'bbguide' },
 { title: 'Blue II', file: 'Guides/Blue-Book-II.html', emoji: '<span style="display:inline-block;filter:sepia(1) saturate(3) hue-rotate(220deg) brightness(1.3)">\uD83D\uDCD8</span>', sub: true, isHtml: true },
-{ title: 'Full Notes - 92 Pages', file: 'Lecture Notes - 92 Pages.pdf', emoji: '\uD83D\uDCD3' }
+{ title: 'Black', file: 'Guides/Black-Book.html', emoji: '\uD83D\uDCD3', isHtml: true, quizKey: 'blackguide' }
 ]},
 { name: 'Source Banks', icon: '\uD83D\uDCDA', items: [
 { title: 'Quizlet - 2000', file: 'Klimek Quizlet - 2000 Questions.pdf', emoji: '\u2705' },
@@ -3648,7 +3680,7 @@ var GUIDE_QUIZ_MAP = {
 'Infection-Control-Safety':'infctrl','Prioritization':'priority','Fluid-Electrolytes':'fluids',
 'Cardiac-Hemodynamics':'cardiac','Pharmacology':'pharmguide','Fundamentals':'fundguide',
 'Gerontology':'geroguide','Nutrition':'nutrguide','Yellow-Fever':'yfguide','Pink':'pinkguide','Blue-Book':'bbguide','Mental-Health':'mentalhealth',
-'Final-Review':'finalreview'
+'Final-Review':'finalreview','Black-Book':'blackguide'
 };
 window.addEventListener('message', function(evt) {
 if (!evt.data || evt.data.type !== 'launchGuideQuiz') return;
@@ -4155,6 +4187,11 @@ SECTION_LABELS.nutrguide = 'Nutrition Guide';
 SECTION_LABELS.yfguide = 'Yellow Guide';
 SECTION_LABELS.pinkguide = 'Pink Guide';
 SECTION_LABELS.bbguide = 'Blue Guide';
+SECTION_LABELS.blackguide = 'Black Guide';
+SECTION_LABELS.blackguide_acid = 'Black: Acid-Base'; SECTION_LABELS.blackguide_alc = 'Black: Alcohol'; SECTION_LABELS.blackguide_card = 'Black: Cardiac'; SECTION_LABELS.blackguide_mob = 'Black: Mobility'; SECTION_LABELS.blackguide_dm = 'Black: Diabetes'; SECTION_LABELS.blackguide_tox = 'Black: Drug Tox'; SECTION_LABELS.blackguide_endo = 'Black: Endocrine'; SECTION_LABELS.blackguide_lab = 'Black: Lab Values'; SECTION_LABELS.blackguide_psy = 'Black: Psych Drugs'; SECTION_LABELS.blackguide_mat = 'Black: Maternity'; SECTION_LABELS.blackguide_pri = 'Black: Prioritization';
+SECTION_LABELS.pinkguide_acid = 'Pink: Acid-Base'; SECTION_LABELS.pinkguide_alc = 'Pink: Alcoholism'; SECTION_LABELS.pinkguide_amino = 'Pink: Aminoglycosides'; SECTION_LABELS.pinkguide_chd = 'Pink: CHD & Precautions'; SECTION_LABELS.pinkguide_dm = 'Pink: Diabetes'; SECTION_LABELS.pinkguide_tox = 'Pink: Drug Toxicities'; SECTION_LABELS.pinkguide_lyte = 'Pink: Electrolytes'; SECTION_LABELS.pinkguide_lab = 'Pink: Lab Values'; SECTION_LABELS.pinkguide_psy = 'Pink: Psych Drugs'; SECTION_LABELS.pinkguide_ob = 'Pink: Labor & OB'; SECTION_LABELS.pinkguide_pri = 'Pink: Prioritization'; SECTION_LABELS.pinkguide_test = 'Pink: Test Strategies';
+SECTION_LABELS.yfguide_acid = 'Yellow: Acid-Base'; SECTION_LABELS.yfguide_grief = 'Yellow: Addiction & Grief'; SECTION_LABELS.yfguide_amino = 'Yellow: Aminoglycosides'; SECTION_LABELS.yfguide_card = 'Yellow: Cardiac'; SECTION_LABELS.yfguide_chd = 'Yellow: CHDs & Crutches'; SECTION_LABELS.yfguide_psy = 'Yellow: Psych'; SECTION_LABELS.yfguide_dm = 'Yellow: Diabetes & Endo'; SECTION_LABELS.yfguide_tox = 'Yellow: Drug Toxicities'; SECTION_LABELS.yfguide_lab = 'Yellow: Lab Values'; SECTION_LABELS.yfguide_fluid = 'Yellow: Fluids'; SECTION_LABELS.yfguide_mat = 'Yellow: Maternity'; SECTION_LABELS.yfguide_pri = 'Yellow: Prioritization';
+SECTION_LABELS.bbguide_bp = 'Blue: BP & Angina'; SECTION_LABELS.bbguide_mi = 'Blue: MI'; SECTION_LABELS.bbguide_chf = 'Blue: CHF'; SECTION_LABELS.bbguide_shock = 'Blue: Shock'; SECTION_LABELS.bbguide_aneurysm = 'Blue: Aneurysms'; SECTION_LABELS.bbguide_copd = 'Blue: COPD'; SECTION_LABELS.bbguide_pneumo = 'Blue: Pneumonia & PE'; SECTION_LABELS.bbguide_tb = 'Blue: TB & RDS'; SECTION_LABELS.bbguide_icp = 'Blue: ICP & Seizures'; SECTION_LABELS.bbguide_cva = 'Blue: CVA & Spine'; SECTION_LABELS.bbguide_neuro = 'Blue: Neuro Disorders'; SECTION_LABELS.bbguide_renal = 'Blue: Renal & GI';
 SECTION_LABELS.endoguide_thyroid = 'Endo: Thyroid';
 SECTION_LABELS.endoguide_adrenal = 'Endo: Adrenal';
 SECTION_LABELS.endoguide_adh = 'Endo: ADH / SIADH / DI';
