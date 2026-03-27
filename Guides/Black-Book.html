@@ -44,11 +44,19 @@ html:not(.dark) .badge{color:#fff}
 .nav-pill:hover{color:var(--heading);border-color:var(--gold)}
 
 /* Section Headers */
-.section-hdr{padding:2rem 1.5rem 1rem;display:flex;align-items:center;gap:1rem}
+.section-hdr{padding:2rem 1.5rem 1rem;display:flex;align-items:center;gap:1rem;position:relative;overflow:hidden}
+.section-hdr .sh-left{display:flex;align-items:center;gap:1rem;flex:1;min-width:0;position:relative;z-index:1}
 .sec-num{width:2.8rem;height:2.8rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;color:#fff;flex-shrink:0}
 .sec-title{font-size:clamp(1.2rem,3vw,1.6rem);font-weight:700;color:var(--heading);line-height:1.3}
 .sec-sub{font-size:.85rem;color:var(--text-muted);margin-top:.15rem}
 .content{max-width:900px;margin:0 auto;padding:0 1rem 2rem}
+/* Quiz Buttons */
+.sec-quiz-btn{position:relative;z-index:1;display:inline-flex;align-items:center;gap:.3rem;padding:.35rem .85rem;border-radius:2rem;font-size:.78rem;font-weight:700;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;backdrop-filter:blur(4px);transition:all .15s;white-space:nowrap;flex-shrink:0}
+.sec-quiz-btn:hover{background:rgba(255,255,255,.25);transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,.3)}
+html:not(.dark) .sec-quiz-btn{border-color:rgba(0,0,0,.2)!important;background:rgba(0,0,0,.06)!important;color:var(--gold)!important}
+.guide-quiz-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem 1rem;border-radius:2rem;font-size:.85rem;font-weight:700;border:2px solid rgba(255,255,255,.5);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;backdrop-filter:blur(4px);transition:all .15s;margin-top:.5rem;position:relative}
+.guide-quiz-btn:hover{background:rgba(255,255,255,.25);transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.3)}
+html:not(.dark) .guide-quiz-btn{border-color:rgba(139,105,20,.4)!important;background:rgba(139,105,20,.08)!important;color:var(--gold)!important}
 
 /* Section color themes - Dark */
 .sh-acid .sec-num{background:linear-gradient(135deg,#0d9488,#14b8a6)}.badge-acid{background:linear-gradient(135deg,#0d9488,#14b8a6)}
@@ -174,6 +182,8 @@ html:not(.dark) .tx-steps li::before{background:var(--gold);color:#fff}
 /* Responsive */
 @media(max-width:600px){
 .section-hdr{padding:1.5rem 1rem .8rem}
+.section-hdr .sec-num{width:2.2rem;height:2.2rem;font-size:.9rem}
+.sec-quiz-btn{font-size:.68rem;padding:.25rem .6rem}
 .content{padding:0 .7rem 1.5rem}
 .compare-table{font-size:.78rem}
 .compare-table th,.compare-table td{padding:.4rem .5rem}
@@ -186,7 +196,7 @@ html:not(.dark) .tx-steps li::before{background:var(--gold);color:#fff}
 
 <!-- HERO -->
 <div class="hero">
-<button class="theme-toggle-btn" onclick="_toggleGuideTheme()" title="Toggle theme">🌙</button>
+<button class="theme-toggle-btn" onclick="_toggleGuideTheme()" title="Toggle theme">☀️</button>
 <h1 class="fadeUp">📓 Black Book</h1>
 <p class="subtitle fadeUp d1">Mark Klimek Full Lecture Notes — 92 Pages · 12 Lectures</p>
 <div class="badge-row fadeUp d2">
@@ -203,6 +213,7 @@ html:not(.dark) .tx-steps li::before{background:var(--gold);color:#fff}
 <a class="badge badge-fetal" href="#sec-fetal">Fetal &amp; L&amp;D</a>
 <a class="badge badge-pri" href="#sec-pri">Prioritization</a>
 </div>
+<button class="guide-quiz-btn" onclick="launchQuiz()">📝 Launch Quiz — 200 Questions</button>
 </div>
 
 <!-- NAV BAR -->
@@ -223,7 +234,7 @@ html:not(.dark) .tx-steps li::before{background:var(--gold);color:#fff}
 
 <!-- ===================== LECTURE 1: ACID-BASE ===================== -->
 <div id="sec-acid"></div>
-<div class="section-hdr sh-acid fadeUp"><div class="sec-num">1</div><div><div class="sec-title">Acid-Base Balance &amp; Ventilators</div><div class="sec-sub">Lecture 1 · pH interpretation, compensations &amp; ventilator alarms</div></div></div>
+<div class="section-hdr sh-acid fadeUp"><div class="sh-left"><div class="sec-num">1</div><div><div class="sec-title">Acid-Base Balance &amp; Ventilators</div><div class="sec-sub">Lecture 1 · pH interpretation, compensations &amp; ventilator alarms</div></div></div><button class="sec-quiz-btn" onclick="launchQuiz('blackguide_acid')">📝 Mini-Quiz</button></div>
 <div class="content fadeUp d1">
 
 <div class="sub-h">Normal Values</div>
@@ -305,7 +316,7 @@ html:not(.dark) .tx-steps li::before{background:var(--gold);color:#fff}
 
 <!-- ===================== LECTURE 2: ALCOHOL ===================== -->
 <div id="sec-alc"></div>
-<div class="section-hdr sh-alc fadeUp"><div class="sec-num">2</div><div><div class="sec-title">Alcohol &amp; Substances</div><div class="sec-sub">Lecture 2 · Denial, OD/WD, Aminoglycosides, Peak &amp; Trough</div></div></div>
+<div class="section-hdr sh-alc fadeUp"><div class="sh-left"><div class="sec-num">2</div><div><div class="sec-title">Alcohol &amp; Substances</div><div class="sec-sub">Lecture 2 · Denial, OD/WD, Aminoglycosides, Peak &amp; Trough</div></div></div><button class="sec-quiz-btn" onclick="launchQuiz('blackguide_alc')">📝 Mini-Quiz</button></div>
 <div class="content fadeUp d1">
 
 <div class="sub-h">Alcoholism — Psychological Problems</div>
@@ -395,7 +406,7 @@ html:not(.dark) .tx-steps li::before{background:var(--gold);color:#fff}
 
 <!-- ===================== LECTURE 3: CARDIAC ===================== -->
 <div id="sec-card"></div>
-<div class="section-hdr sh-card fadeUp"><div class="sec-num">3</div><div><div class="sec-title">Cardiac Meds, Arrhythmias &amp; Chest Tubes</div><div class="sec-sub">Lecture 3 · CCBs, rhythms, chest tubes, congenital defects, infection control</div></div></div>
+<div class="section-hdr sh-card fadeUp"><div class="sh-left"><div class="sec-num">3</div><div><div class="sec-title">Cardiac Meds, Arrhythmias &amp; Chest Tubes</div><div class="sec-sub">Lecture 3 · CCBs, rhythms, chest tubes, congenital defects, infection control</div></div></div><button class="sec-quiz-btn" onclick="launchQuiz('blackguide_card')">📝 Mini-Quiz</button></div>
 <div class="content fadeUp d1">
 
 <div class="sub-h">Calcium Channel Blockers</div>
@@ -496,7 +507,7 @@ Tetralogy of Fallot · Truncus arteriosus · Transposition of great vessels · T
 
 <!-- ===================== LECTURE 4: MOBILITY & PSYCH ===================== -->
 <div id="sec-mob"></div>
-<div class="section-hdr sh-mob fadeUp"><div class="sec-num">4</div><div><div class="sec-title">Mobility &amp; Psychiatry Basics</div><div class="sec-sub">Lecture 4 · Crutches, canes, walkers, psychosis types, interventions</div></div></div>
+<div class="section-hdr sh-mob fadeUp"><div class="sh-left"><div class="sec-num">4</div><div><div class="sec-title">Mobility &amp; Psychiatry Basics</div><div class="sec-sub">Lecture 4 · Crutches, canes, walkers, psychosis types, interventions</div></div></div><button class="sec-quiz-btn" onclick="launchQuiz('blackguide_mob')">📝 Mini-Quiz</button></div>
 <div class="content fadeUp d1">
 
 <div class="sub-h">Crutch Measurement &amp; Gaits</div>
@@ -553,7 +564,7 @@ Tetralogy of Fallot · Truncus arteriosus · Transposition of great vessels · T
 
 <!-- ===================== LECTURE 5: DIABETES ===================== -->
 <div id="sec-dm"></div>
-<div class="section-hdr sh-dm fadeUp"><div class="sec-num">5</div><div><div class="sec-title">Diabetes Mellitus</div><div class="sec-sub">Lecture 5 · DM, DI, SIADH, insulin types, DKA, HHNK</div></div></div>
+<div class="section-hdr sh-dm fadeUp"><div class="sh-left"><div class="sec-num">5</div><div><div class="sec-title">Diabetes Mellitus</div><div class="sec-sub">Lecture 5 · DM, DI, SIADH, insulin types, DKA, HHNK</div></div></div><button class="sec-quiz-btn" onclick="launchQuiz('blackguide_dm')">📝 Mini-Quiz</button></div>
 <div class="content fadeUp d1">
 
 <div class="sub-h">DM vs DI vs SIADH</div>
@@ -615,7 +626,7 @@ Unconscious at home → <span class="drug">Glucagon IM</span>. In ER → <span c
 
 <!-- ===================== LECTURE 6: DRUG TOX & ELECTROLYTES ===================== -->
 <div id="sec-tox"></div>
-<div class="section-hdr sh-tox fadeUp"><div class="sec-num">6</div><div><div class="sec-title">Drug Toxicities &amp; Electrolytes</div><div class="sec-sub">Lecture 6 · 5 toxic drugs, kernicterus, hiatal hernia vs dumping, electrolyte rules</div></div></div>
+<div class="section-hdr sh-tox fadeUp"><div class="sh-left"><div class="sec-num">6</div><div><div class="sec-title">Drug Toxicities &amp; Electrolytes</div><div class="sec-sub">Lecture 6 · 5 toxic drugs, kernicterus, hiatal hernia vs dumping, electrolyte rules</div></div></div><button class="sec-quiz-btn" onclick="launchQuiz('blackguide_tox')">📝 Mini-Quiz</button></div>
 <div class="content fadeUp d1">
 
 <div class="sub-h">5 Drug Toxicities to Know</div>
@@ -674,7 +685,7 @@ Universal sign = <strong>Paresis</strong> (muscle weakness).</div>
 
 <!-- ===================== LECTURE 7: ENDOCRINE ===================== -->
 <div id="sec-endo"></div>
-<div class="section-hdr sh-endo fadeUp"><div class="sec-num">7</div><div><div class="sec-title">Endocrine, Toys &amp; Laminectomy</div><div class="sec-sub">Lecture 7 · Thyroid, adrenals, age-appropriate toys, spinal surgery</div></div></div>
+<div class="section-hdr sh-endo fadeUp"><div class="sh-left"><div class="sec-num">7</div><div><div class="sec-title">Endocrine, Toys &amp; Laminectomy</div><div class="sec-sub">Lecture 7 · Thyroid, adrenals, age-appropriate toys, spinal surgery</div></div></div><button class="sec-quiz-btn" onclick="launchQuiz('blackguide_endo')">📝 Mini-Quiz</button></div>
 <div class="content fadeUp d1">
 
 <div class="sub-h">Thyroid — "Think Metabolism"</div>
@@ -748,7 +759,7 @@ Universal sign = <strong>Paresis</strong> (muscle weakness).</div>
 
 <!-- ===================== LECTURE 8: LAB VALUES ===================== -->
 <div id="sec-lab"></div>
-<div class="section-hdr sh-lab fadeUp"><div class="sec-num">8</div><div><div class="sec-title">Lab Values &amp; Diagnostics</div><div class="sec-sub">Lecture 8 · ABCD prioritization, critical labs, Five Deadly Ds</div></div></div>
+<div class="section-hdr sh-lab fadeUp"><div class="sh-left"><div class="sec-num">8</div><div><div class="sec-title">Lab Values &amp; Diagnostics</div><div class="sec-sub">Lecture 8 · ABCD prioritization, critical labs, Five Deadly Ds</div></div></div><button class="sec-quiz-btn" onclick="launchQuiz('blackguide_lab')">📝 Mini-Quiz</button></div>
 <div class="content fadeUp d1">
 
 <div class="dx-card card-info">
@@ -793,7 +804,7 @@ K⁺ &gt;6 · pH in the 6s · CO₂ in the 60s · PaO₂ &lt;60 · Platelets &lt
 
 <!-- ===================== LECTURE 9: PSYCH DRUGS ===================== -->
 <div id="sec-psy"></div>
-<div class="section-hdr sh-psy fadeUp"><div class="sec-num">9</div><div><div class="sec-title">Psychiatric Drugs</div><div class="sec-sub">Lecture 9 · Phenothiazines, TCAs, benzos, MAOIs, lithium, SSRIs, atypicals</div></div></div>
+<div class="section-hdr sh-psy fadeUp"><div class="sh-left"><div class="sec-num">9</div><div><div class="sec-title">Psychiatric Drugs</div><div class="sec-sub">Lecture 9 · Phenothiazines, TCAs, benzos, MAOIs, lithium, SSRIs, atypicals</div></div></div><button class="sec-quiz-btn" onclick="launchQuiz('blackguide_psy')">📝 Mini-Quiz</button></div>
 <div class="content fadeUp d1">
 
 <div class="nclex-tip"><strong>ALL psych drugs cause:</strong> Low BP + Weight changes (usually gain).</div>
@@ -858,7 +869,7 @@ Fruits: "BAR" — Bananas, Avocados, Raisins · Grains OK except yeast · Meats:
 
 <!-- ===================== LECTURE 10: MATERNITY ===================== -->
 <div id="sec-mat"></div>
-<div class="section-hdr sh-mat fadeUp"><div class="sec-num">10</div><div><div class="sec-title">Maternity &amp; Neonatology</div><div class="sec-sub">Lecture 10 · Pregnancy, labor stages, complications, LION protocol</div></div></div>
+<div class="section-hdr sh-mat fadeUp"><div class="sh-left"><div class="sec-num">10</div><div><div class="sec-title">Maternity &amp; Neonatology</div><div class="sec-sub">Lecture 10 · Pregnancy, labor stages, complications, LION protocol</div></div></div><button class="sec-quiz-btn" onclick="launchQuiz('blackguide_mat')">📝 Mini-Quiz</button></div>
 <div class="content fadeUp d1">
 
 <div class="sub-h">Pregnancy Basics</div>
@@ -992,7 +1003,7 @@ Fetal HR: 8-12 weeks. Quickening: 16-20 weeks.<br>
 <!-- ===================== LECTURE 12: PRIORITIZATION ===================== -->
 <div id="sec-fetal" style="display:none"></div>
 <div id="sec-pri"></div>
-<div class="section-hdr sh-pri fadeUp"><div class="sec-num">12</div><div><div class="sec-title">Prioritization, Delegation &amp; Test Strategies</div><div class="sec-sub">Lecture 12 · 4 rules, staff management, pediatric teaching, Piaget, guessing strategies</div></div></div>
+<div class="section-hdr sh-pri fadeUp"><div class="sh-left"><div class="sec-num">12</div><div><div class="sec-title">Prioritization, Delegation &amp; Test Strategies</div><div class="sec-sub">Lecture 12 · 4 rules, staff management, pediatric teaching, Piaget, guessing strategies</div></div></div><button class="sec-quiz-btn" onclick="launchQuiz('blackguide_pri')">📝 Mini-Quiz</button></div>
 <div class="content fadeUp d1">
 
 <div class="nclex-tip"><strong>This is the most important lecture — at least 15 questions on the exam.</strong> Do not guess in this section — learn the material!</div>
@@ -1133,7 +1144,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',func
 window._toggleGuideTheme=function(){
 h.classList.toggle('dark');
 var btn=document.querySelector('.theme-toggle-btn');
-if(btn)btn.textContent=h.classList.contains('dark')?'🌙':'☀️';
+if(btn)btn.textContent=h.classList.contains('dark')?'☀️':'🌙';
 };
 })();
 </script>
@@ -1146,6 +1157,13 @@ var id=this.getAttribute('href');
 if(id){var t=document.querySelector(id);if(t)t.scrollIntoView({behavior:'smooth',block:'start'})}
 });
 });
+/* Launch quiz via parent postMessage */
+function launchQuiz(key){
+var k=key||'blackguide';
+if(window.parent&&window.parent!==window){
+window.parent.postMessage({type:'launchGuideQuiz',key:k},'*');
+}
+}
 /* Drug card popup */
 document.addEventListener('click',function(e){
 if(e.target.classList.contains('drug')){

@@ -103,6 +103,19 @@ body {
   background: rgba(255,255,255,0.25);
   transform: translateY(-1px);
 }
+.theme-toggle-btn { position:absolute;top:0.75rem;right:0.75rem;background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.3);border-radius:0.5rem;padding:0.3rem 0.5rem;cursor:pointer;font-size:1.2rem;z-index:10;transition:all 0.2s;backdrop-filter:blur(4px);line-height:1; }
+.theme-toggle-btn:hover { transform:scale(1.1);background:rgba(255,255,255,0.25) !important; }
+html:not(.dark) .theme-toggle-btn { background:rgba(0,0,0,0.06) !important;border-color:rgba(0,0,0,0.15) !important; }
+.sec-quiz-btn {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.25rem 0.7rem; border-radius: 1.5rem;
+  font-size: 0.72rem; font-weight: 700;
+  border: 1.5px solid var(--accent); background: rgba(37,99,235,0.08);
+  color: var(--accent); cursor: pointer;
+  transition: all 0.15s; float: right; margin-top: 0.1rem;
+}
+.sec-quiz-btn:hover { background: rgba(37,99,235,0.18); transform: translateY(-1px); }
+html:not(.dark) .sec-quiz-btn { border-color:rgba(37,99,235,.3);background:rgba(37,99,235,.08);color:var(--accent); }
 .container { max-width: 820px; margin: 0 auto; padding: 1rem 1rem 3rem; }
 .toc {
   background: var(--surface);
@@ -233,23 +246,28 @@ tr:nth-child(even) td { background: var(--table-stripe); }
 </head>
 <body>
 <script>
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  document.documentElement.classList.add('dark');
-}
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-  e.matches ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
-});
+(function(){
+  var h=document.documentElement;
+  if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){h.classList.add('dark')}
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(e){e.matches?h.classList.add('dark'):h.classList.remove('dark')});
+  window._toggleGuideTheme=function(){
+    h.classList.toggle('dark');
+    var btn=document.querySelector('.theme-toggle-btn');
+    if(btn)btn.textContent=h.classList.contains('dark')?'☀️':'🌙';
+  };
+})();
 </script>
 
-<div class="hero">
+<div class="hero" style="position:relative;">
+  <button class="theme-toggle-btn" onclick="_toggleGuideTheme()">☀️</button>
   <h1>📘 Blue Book — Systems Master</h1>
   <p class="subtitle">NCLEX Review · Cardiovascular · Respiratory · Neurological · GI/Renal</p>
   <div class="badge-row">
-    <span class="badge">📝 100 Questions</span>
+    <span class="badge">📝 180 Questions</span>
     <span class="badge">📖 4 Systems</span>
     <span class="badge">🎯 High-Yield</span>
   </div>
-  <button class="guide-quiz-btn" onclick="launchQuiz()">📝 Launch Quiz — 100 Questions</button>
+  <button class="guide-quiz-btn" onclick="launchQuiz()">📝 Launch Quiz — 180 Questions</button>
 </div>
 
 <div class="container">
@@ -277,6 +295,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
   <div class="section-header open" onclick="toggleSection(this)">
     <span class="arrow">▶</span>
     <h2>Blood Pressure, Angina &amp; Nitroglycerin</h2>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('bbguide_bp')">📝 Mini-Quiz</button>
     <span class="lec-tag">Cardiovascular</span>
   </div>
   <div class="section-body show">
@@ -322,6 +341,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
   <div class="section-header" onclick="toggleSection(this)">
     <span class="arrow">▶</span>
     <h2>Myocardial Infarction</h2>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('bbguide_mi')">📝 Mini-Quiz</button>
     <span class="lec-tag">Cardiovascular</span>
   </div>
   <div class="section-body">
@@ -365,6 +385,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
   <div class="section-header" onclick="toggleSection(this)">
     <span class="arrow">▶</span>
     <h2>CHF &amp; Cardiac Pharmacology</h2>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('bbguide_chf')">📝 Mini-Quiz</button>
     <span class="lec-tag">Cardiovascular</span>
   </div>
   <div class="section-body">
@@ -419,6 +440,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
   <div class="section-header" onclick="toggleSection(this)">
     <span class="arrow">▶</span>
     <h2>Shock, Vascular Disorders &amp; Hypertension</h2>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('bbguide_shock')">📝 Mini-Quiz</button>
     <span class="lec-tag">Cardiovascular</span>
   </div>
   <div class="section-body">
@@ -467,6 +489,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
   <div class="section-header" onclick="toggleSection(this)">
     <span class="arrow">▶</span>
     <h2>Aneurysms &amp; CV Disease in Pregnancy</h2>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('bbguide_aneurysm')">📝 Mini-Quiz</button>
     <span class="lec-tag">Cardiovascular</span>
   </div>
   <div class="section-body">
@@ -502,6 +525,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
   <div class="section-header" onclick="toggleSection(this)">
     <span class="arrow">▶</span>
     <h2>COPD, Emphysema &amp; Asthma</h2>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('bbguide_copd')">📝 Mini-Quiz</button>
     <span class="lec-tag">Respiratory</span>
   </div>
   <div class="section-body">
@@ -536,6 +560,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
   <div class="section-header" onclick="toggleSection(this)">
     <span class="arrow">▶</span>
     <h2>Pneumonia, PE &amp; Pulmonary Edema</h2>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('bbguide_pneumo')">📝 Mini-Quiz</button>
     <span class="lec-tag">Respiratory</span>
   </div>
   <div class="section-body">
@@ -569,6 +594,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
   <div class="section-header" onclick="toggleSection(this)">
     <span class="arrow">▶</span>
     <h2>TB, RDS, Cystic Fibrosis &amp; Epiglottitis</h2>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('bbguide_tb')">📝 Mini-Quiz</button>
     <span class="lec-tag">Respiratory</span>
   </div>
   <div class="section-body">
@@ -618,6 +644,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
   <div class="section-header" onclick="toggleSection(this)">
     <span class="arrow">▶</span>
     <h2>ICP, Meningitis &amp; Seizures</h2>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('bbguide_icp')">📝 Mini-Quiz</button>
     <span class="lec-tag">Neurological</span>
   </div>
   <div class="section-body">
@@ -657,6 +684,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
   <div class="section-header" onclick="toggleSection(this)">
     <span class="arrow">▶</span>
     <h2>CVA, Spinal Cord &amp; Laminectomy</h2>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('bbguide_cva')">📝 Mini-Quiz</button>
     <span class="lec-tag">Neurological</span>
   </div>
   <div class="section-body">
@@ -701,6 +729,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
   <div class="section-header" onclick="toggleSection(this)">
     <span class="arrow">▶</span>
     <h2>Degenerative &amp; Sensory Disorders</h2>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('bbguide_neuro')">📝 Mini-Quiz</button>
     <span class="lec-tag">Neurological</span>
   </div>
   <div class="section-body">
@@ -753,6 +782,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
   <div class="section-header" onclick="toggleSection(this)">
     <span class="arrow">▶</span>
     <h2>Renal, GI &amp; Surgical Disorders</h2>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('bbguide_renal')">📝 Mini-Quiz</button>
     <span class="lec-tag">GI &amp; Renal</span>
   </div>
   <div class="section-body">
@@ -820,9 +850,10 @@ function toggleSection(header) {
   header.classList.toggle('open');
   body.classList.toggle('show');
 }
-function launchQuiz() {
+function launchQuiz(key) {
+  var k = key || 'bbguide';
   try {
-    window.parent.postMessage({ type: 'launchGuideQuiz', key: 'bbguide' }, '*');
+    window.parent.postMessage({ type: 'launchGuideQuiz', key: k }, '*');
   } catch(err) { /* cross-origin fallback */ }
 }
 /* Drug card popup — sends message to parent for drug card modal */
