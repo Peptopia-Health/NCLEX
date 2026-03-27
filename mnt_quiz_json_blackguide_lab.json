@@ -1,0 +1,222 @@
+[
+  {
+    "q": "Using the ABCD prioritization scheme for lab values, a 'Level C' result indicates:",
+    "options": [
+      "A normal finding that can be ignored",
+      "A concerning result that needs monitoring",
+      "A critical result requiring immediate action",
+      "A deadly result requiring emergency intervention"
+    ],
+    "correct": 2,
+    "rationale": "ABCD scheme: A = low priority (can wait), B = concerning (monitor closely), C = CRITICAL (do something now), D = DEADLY (emergency). Level C requires immediate nursing action."
+  },
+  {
+    "q": "A hemoglobin level of 7 g/dL is classified as which ABCD level?",
+    "options": [
+      "Level A",
+      "Level B",
+      "Level C",
+      "Level D"
+    ],
+    "correct": 2,
+    "rationale": "Hemoglobin (normal 12-18): Level B if 8-11, Level C if <8. A Hb of 7 is Level C (critical). Action: assess for bleeding/anemia/malnutrition, prepare blood, call HCP."
+  },
+  {
+    "q": "The nurse receives lab results showing a potassium level of 6.8 mEq/L. This is classified as:",
+    "options": [
+      "Level A - ignore",
+      "Level B - monitor",
+      "Level C - critical, take action",
+      "Level D - deadly emergency"
+    ],
+    "correct": 2,
+    "rationale": "Potassium (normal 3.5-5): Level C if >6.5 or <3.0. A K+ of 6.8 is Level C. Action: hold potassium-containing foods/meds, assess for EKG changes (peaked T waves), prepare for treatment, call HCP."
+  },
+  {
+    "q": "A CO2 level in the 60s requires which level of response?",
+    "options": [
+      "Level A",
+      "Level B",
+      "Level C",
+      "Level D"
+    ],
+    "correct": 3,
+    "rationale": "CO2: Level C if in the 50s, Level D if in the 60s or higher. A CO2 in the 60s is DEADLY (Level D). The patient is in severe respiratory failure and needs immediate intervention."
+  },
+  {
+    "q": "The Five Deadly Ds that the nurse should remember for prioritization include dangerously abnormal labs combined with:",
+    "options": [
+      "Dehydration",
+      "Changes in level of consciousness",
+      "Fever",
+      "Low blood pressure"
+    ],
+    "correct": 1,
+    "rationale": "The Five Deadly Ds help identify which lab abnormalities become emergencies when combined with changes in the patient's LOC (level of consciousness)."
+  },
+  {
+    "q": "WBC count below 4,000 is classified as:",
+    "options": [
+      "Level A",
+      "Level B",
+      "Level C",
+      "Level D"
+    ],
+    "correct": 2,
+    "rationale": "WBC (normal 4,000-11,000): Level C if <4,000. Action: nothing to hold, assess for signs of infection, implement neutropenic precautions, call HCP."
+  },
+  {
+    "q": "A patient's CD4 count is 180. The nurse understands this indicates:",
+    "options": [
+      "Normal immune function",
+      "HIV without AIDS",
+      "AIDS",
+      "Elevated immune response"
+    ],
+    "correct": 2,
+    "rationale": "CD4 >200 but <500 = HIV. CD4 <200 = AIDS. A CD4 of 180 is Level C and indicates AIDS. Implement strict infection precautions."
+  },
+  {
+    "q": "BUN (Blood Urea Nitrogen) abnormality is classified as:",
+    "options": [
+      "Level A - low priority",
+      "Level B - concerning",
+      "Level C - critical",
+      "Level D - deadly"
+    ],
+    "correct": 0,
+    "rationale": "BUN (normal 8-25) is Level A when abnormal. Action: nothing to hold, assess for dehydration, prepare IV fluid, call HCP. It can be ignored for a few hours or until early morning."
+  },
+  {
+    "q": "Platelets below 40,000 are classified as:",
+    "options": [
+      "Level A",
+      "Level B",
+      "Level C",
+      "Level D"
+    ],
+    "correct": 3,
+    "rationale": "Platelets (normal 150,000-450,000): Level C if <90,000, Level D if <40,000. Below 40,000 is DEADLY - extreme risk of spontaneous hemorrhage."
+  },
+  {
+    "q": "ANC (Absolute Neutrophil Count) below 500 requires:",
+    "options": [
+      "No action needed",
+      "Routine monitoring",
+      "Level C critical response with neutropenic precautions",
+      "Level A response"
+    ],
+    "correct": 2,
+    "rationale": "ANC <500 is Level C. Implement neutropenic precautions: strict hand washing, reverse isolation, no fresh flowers/plants, no raw fruits/veggies, private room, limit visitors."
+  },
+  {
+    "q": "Neutropenic precautions include all EXCEPT:",
+    "options": [
+      "No fresh flowers or potted plants",
+      "No raw fruits, vegetables, or undercooked meat",
+      "Allow visitors freely to boost morale",
+      "Shower BID with microbial soap"
+    ],
+    "correct": 2,
+    "rationale": "Neutropenic precautions: strict hand washing, vitals q4h, dedicated equipment, reverse/protective isolation, shower BID with microbial soap, avoid crowds, limit visitors, private room."
+  },
+  {
+    "q": "Sodium levels that are abnormal with a change in LOC become:",
+    "options": [
+      "Level A",
+      "Level B",
+      "Level C",
+      "Level D"
+    ],
+    "correct": 2,
+    "rationale": "Sodium (normal 135-145): Level B if abnormal, but Level C if abnormal AND there is a change in patient's LOC. A safety issue. Assess for fluid overload (hypoNa) or dehydration (hyperNa)."
+  },
+  {
+    "q": "A glucose level of 40 mg/dL in a diabetic patient is classified as:",
+    "options": [
+      "Level A",
+      "Level B",
+      "Level C",
+      "Level D"
+    ],
+    "correct": 2,
+    "rationale": "Glucose <60 or >400 is Level C (critical). A glucose of 40 is critically low - the patient needs immediate sugar/glucose to prevent brain damage."
+  },
+  {
+    "q": "The ABCD prioritization scheme helps nurses:",
+    "options": [
+      "Diagnose diseases based on lab values",
+      "Rank patients based on abnormally critical lab values",
+      "Calculate medication dosages",
+      "Determine which labs to draw first"
+    ],
+    "correct": 1,
+    "rationale": "The ABCD scheme helps nurses prioritize patients based on lab values. It's not enough to know normal/abnormal - you must RANK them by severity (A=low priority through D=deadly)."
+  },
+  {
+    "q": "A CO2 level in the 50s requires which nursing actions?",
+    "options": [
+      "Nothing, just document",
+      "Assess breathing, teach pursed-lip breathing, call HCP",
+      "Immediate intubation",
+      "Administer IV bicarbonate"
+    ],
+    "correct": 1,
+    "rationale": "CO2 in the 50s = Level C. Action: nothing to hold, assess breathing, ask patient to perform pursed-lip breathing, call HCP. If in the 60s = Level D (deadly)."
+  },
+  {
+    "q": "A hemoglobin level of 10 g/dL is classified as:",
+    "options": [
+      "Level A",
+      "Level B",
+      "Level C",
+      "Level D"
+    ],
+    "correct": 1,
+    "rationale": "Hemoglobin (normal 12-18): Level B if 8-11. A Hb of 10 falls in the 8-11 range = Level B (concerning, needs monitoring). Only becomes Level C if <8."
+  },
+  {
+    "q": "No water pitcher should stand for more than how many minutes in a neutropenic patient's room?",
+    "options": [
+      "5 minutes",
+      "10 minutes",
+      "15 minutes",
+      "30 minutes"
+    ],
+    "correct": 2,
+    "rationale": "In neutropenic precautions, no water pitcher should stand for more than 15 minutes. Standing water can harbor bacteria that could be dangerous for immunocompromised patients."
+  },
+  {
+    "q": "For a Level C lab result, the nurse's actions include:",
+    "options": [
+      "Ignore and recheck in 24 hours",
+      "Nothing to hold, assess the patient, prepare treatment, call HCP",
+      "Only document and notify the charge nurse",
+      "Wait for the physician to order intervention"
+    ],
+    "correct": 1,
+    "rationale": "Level C protocol: (1) Nothing to hold (don't withhold needed meds unless contraindicated), (2) Assess the patient for related symptoms, (3) Prepare appropriate treatment, (4) Call HCP."
+  },
+  {
+    "q": "Potassium levels between 3.0 and 3.5 mEq/L are classified as:",
+    "options": [
+      "Level A",
+      "Level B",
+      "Level C",
+      "Level D"
+    ],
+    "correct": 1,
+    "rationale": "Potassium (normal 3.5-5.0): Level B when mildly abnormal. It becomes Level C when <3.0 or >6.5, as these levels can cause life-threatening cardiac arrhythmias."
+  },
+  {
+    "q": "RBC (Red Blood Cell) count abnormality is classified as:",
+    "options": [
+      "Level A",
+      "Level B",
+      "Level C",
+      "Level D"
+    ],
+    "correct": 1,
+    "rationale": "RBC (normal 4-6 million): Level B if abnormal. This is a concerning finding that needs monitoring, but is not immediately critical like low hemoglobin or platelets."
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "q": "A patient's ABG results show pH 7.30, CO2 50, HCO3 24. Which acid-base imbalance is present?",
+    "options": [
+      "Metabolic acidosis",
+      "Respiratory acidosis",
+      "Metabolic alkalosis",
+      "Respiratory alkalosis"
+    ],
+    "correct": 1,
+    "rationale": "pH is below 7.35 (acidotic). HCO3 is normal while CO2 is elevated. Since pH and bicarb do NOT move in the same direction, this is respiratory acidosis."
+  },
+  {
+    "q": "The nurse uses the 'Rule of the Bs' to determine an acid-base disorder. Which statement best describes this rule?",
+    "options": [
+      "If pH and BUN move together, it is metabolic",
+      "If pH and Bicarb move Both in the same direction, it is metabolic",
+      "If pH and Blood pressure correlate, it is respiratory",
+      "If Bicarb is above 26, it is always alkalosis"
+    ],
+    "correct": 1,
+    "rationale": "The Rule of the Bs states: if pH and Bicarb move Both in the same direction, the imbalance is metabolic. Otherwise, it is respiratory."
+  },
+  {
+    "q": "A patient with a pH below 7.35 presents with bradycardia, constipation, flaccid muscles, and hyporeflexia. The nurse should anticipate which priority intervention?",
+    "options": [
+      "Suctioning equipment at bedside",
+      "Ventilation with an Ambu bag",
+      "Administer potassium supplements",
+      "Place on seizure precautions"
+    ],
+    "correct": 1,
+    "rationale": "Acidosis (pH <7.35) causes everything to slow down including respiratory drive. The priority nursing intervention is ventilation with an Ambu bag due to risk of respiratory arrest."
+  },
+  {
+    "q": "A patient in alkalosis (pH >7.45) is most at risk for which complication that requires the nurse to have specific equipment at bedside?",
+    "options": [
+      "Respiratory arrest",
+      "Seizures",
+      "Cardiac tamponade",
+      "Renal failure"
+    ],
+    "correct": 1,
+    "rationale": "Alkalosis causes everything to speed up: tachycardia, tachypnea, hyperreflexia, irritability, and seizures. The nurse should have suctioning equipment ready due to seizure risk."
+  },
+  {
+    "q": "Which acid-base imbalance is associated with Kussmaul respirations?",
+    "options": [
+      "Respiratory acidosis",
+      "Respiratory alkalosis",
+      "Metabolic acidosis",
+      "Metabolic alkalosis"
+    ],
+    "correct": 2,
+    "rationale": "'MAC Kussmaul' - Metabolic ACidosis is the only acid-base imbalance that causes Kussmaul respirations (deep, rapid breathing to blow off CO2)."
+  },
+  {
+    "q": "In acidosis, potassium levels are typically:",
+    "options": [
+      "Low (hypokalemia)",
+      "High (hyperkalemia)",
+      "Normal",
+      "Unaffected by pH changes"
+    ],
+    "correct": 1,
+    "rationale": "In acidosis, everything goes down EXCEPT potassium, which goes in the opposite direction. Therefore, acidosis is associated with hyperkalemia."
+  },
+  {
+    "q": "The high-pressure alarm on a ventilator is sounding. Which action should the nurse take FIRST?",
+    "options": [
+      "Suction the patient",
+      "Empty water from the dependent tubing",
+      "Unkink the tubing",
+      "Call respiratory therapy"
+    ],
+    "correct": 2,
+    "rationale": "The correct order for addressing a high-pressure alarm is: (1) Unkink tubing, (2) Empty condensed water from dependent tubing, (3) Turn/cough/deep breathe, (4) Suction. High-pressure alarms indicate increased resistance to airflow."
+  },
+  {
+    "q": "A ventilator's low-pressure alarm is triggered. The nurse understands this indicates:",
+    "options": [
+      "Obstruction in the tubing",
+      "A disconnection or leak in the system",
+      "Mucus plug in the airway",
+      "Condensed water in dependent tubing"
+    ],
+    "correct": 1,
+    "rationale": "Low-pressure alarms are triggered by disconnections or leaks in the ventilator system, meaning air is escaping rather than reaching the patient."
+  },
+  {
+    "q": "A patient has ABG results: pH 7.50, CO2 30, HCO3 24. What is the acid-base imbalance?",
+    "options": [
+      "Metabolic acidosis",
+      "Respiratory acidosis",
+      "Metabolic alkalosis",
+      "Respiratory alkalosis"
+    ],
+    "correct": 3,
+    "rationale": "pH >7.45 = alkalosis. HCO3 is normal, CO2 is low. pH and bicarb do NOT move in the same direction, so it is respiratory alkalosis."
+  },
+  {
+    "q": "Normal values for pH, CO2, and HCO3 are respectively:",
+    "options": [
+      "7.25-7.35, 25-35, 12-16",
+      "7.35-7.45, 35-45, 22-26",
+      "7.45-7.55, 45-55, 26-30",
+      "7.30-7.40, 30-40, 20-24"
+    ],
+    "correct": 1,
+    "rationale": "Normal ABG values: pH 7.35-7.45, CO2 35-45 mmHg, HCO3 22-26 mEq/L. These must be memorized to interpret acid-base disorders."
+  },
+  {
+    "q": "The first value the nurse should examine when interpreting ABG results is:",
+    "options": [
+      "CO2",
+      "HCO3",
+      "pH",
+      "PaO2"
+    ],
+    "correct": 2,
+    "rationale": "The first value to look at is the pH. If pH <7.35, the imbalance is acidotic. If pH >7.45, the imbalance is alkalotic. Then determine if it is metabolic or respiratory."
+  },
+  {
+    "q": "A patient in metabolic acidosis will have ABG results showing:",
+    "options": [
+      "pH and HCO3 both decreased",
+      "pH decreased and HCO3 increased",
+      "pH and CO2 both increased",
+      "pH increased and CO2 decreased"
+    ],
+    "correct": 0,
+    "rationale": "In metabolic acidosis, pH is low (acidotic) and HCO3 is also low. By the Rule of the Bs, if pH and Bicarb move Both in the same direction, it is metabolic."
+  },
+  {
+    "q": "The nurse is caring for a patient on a ventilator who has a mucus plug. After repositioning and encouraging coughing, which action is appropriate?",
+    "options": [
+      "Disconnect the ventilator",
+      "Increase the FiO2 to 100%",
+      "Suction the airway PRN",
+      "Clamp the endotracheal tube"
+    ],
+    "correct": 2,
+    "rationale": "If unkinking, emptying water, and turning/coughing do not resolve the high-pressure alarm, the nurse should suction the airway PRN. This is the 4th step in the algorithm."
+  },
+  {
+    "q": "A patient with alkalosis would most likely present with which assessment findings?",
+    "options": [
+      "Bradycardia, constipation, lethargy",
+      "Tachycardia, diarrhea, hyperreflexia",
+      "Normal vital signs with confusion",
+      "Hypothermia and flaccid muscles"
+    ],
+    "correct": 1,
+    "rationale": "In alkalosis (pH >7.45), everything is UP: tachycardia, tachypnea, HTN, seizures, irritability, spastic muscles, diarrhea, borborygmi, hyperreflexia (3+, 4+). However, potassium is LOW."
+  },
+  {
+    "q": "ABG results show pH 7.32, CO2 40, HCO3 18. This represents:",
+    "options": [
+      "Respiratory acidosis",
+      "Respiratory alkalosis",
+      "Metabolic acidosis",
+      "Metabolic alkalosis"
+    ],
+    "correct": 2,
+    "rationale": "pH <7.35 = acidosis. CO2 is normal. HCO3 is low (below 22). pH and bicarb are both low (same direction), so by the Rule of the Bs, this is metabolic acidosis."
+  },
+  {
+    "q": "A patient is being mechanically ventilated. The nurse notes condensed water in the dependent tubing. The appropriate action is to:",
+    "options": [
+      "Increase the ventilator rate",
+      "Empty the water from the tubing",
+      "Suction the patient immediately",
+      "Notify the physician"
+    ],
+    "correct": 1,
+    "rationale": "Condensed water in the dependent tubing increases resistance to airflow and can trigger a high-pressure alarm. The solution is to empty it. This is step 2 after checking for kinks."
+  },
+  {
+    "q": "Which potassium level would the nurse expect in a patient with a pH of 7.50?",
+    "options": [
+      "6.0 mEq/L",
+      "5.5 mEq/L",
+      "3.0 mEq/L",
+      "4.5 mEq/L"
+    ],
+    "correct": 2,
+    "rationale": "In alkalosis, potassium goes in the opposite direction. Since alkalosis causes everything to go UP, potassium is the exception and goes DOWN (hypokalemia). A level of 3.0 indicates hypokalemia."
+  },
+  {
+    "q": "The nurse is ventilating a patient with an Ambu bag. This intervention is most appropriate for which condition?",
+    "options": [
+      "Alkalosis with seizures",
+      "Acidosis with respiratory depression",
+      "Hyperkalemia with peaked T waves",
+      "Metabolic alkalosis with diarrhea"
+    ],
+    "correct": 1,
+    "rationale": "Acidosis causes everything to slow down, including respiration, potentially leading to respiratory arrest. The priority intervention is ventilation with an Ambu bag."
+  },
+  {
+    "q": "A patient's ABG shows pH 7.48, CO2 44, HCO3 32. This acid-base disorder is:",
+    "options": [
+      "Metabolic alkalosis",
+      "Respiratory alkalosis",
+      "Metabolic acidosis",
+      "Respiratory acidosis"
+    ],
+    "correct": 0,
+    "rationale": "pH >7.45 = alkalosis. HCO3 is elevated (above 26). pH is up and bicarb is up - same direction = metabolic. This is metabolic alkalosis."
+  },
+  {
+    "q": "When a ventilator high-pressure alarm sounds, which finding would the nurse assess for FIRST?",
+    "options": [
+      "Disconnection in the circuit",
+      "Kinked tubing",
+      "Patient anxiety",
+      "Decreased oxygen saturation"
+    ],
+    "correct": 1,
+    "rationale": "High-pressure alarms are caused by increased resistance to airflow. The first thing to check is kinked tubing (Step 1), then condensed water, then mucus plugs, then suction."
+  }
+]

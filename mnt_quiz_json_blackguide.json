@@ -1,0 +1,2202 @@
+[
+  {
+    "q": "A patient's ABG shows pH 7.28, CO2 55, HCO3 25. What is the primary acid-base disturbance and what should the nurse anticipate?",
+    "options": [
+      "Metabolic acidosis; administer bicarbonate",
+      "Respiratory acidosis; prepare to assist ventilation",
+      "Metabolic alkalosis; suction equipment",
+      "Respiratory alkalosis; rebreather mask"
+    ],
+    "correct": 1,
+    "rationale": "pH <7.35 = acidosis. HCO3 is normal, CO2 is elevated. pH and bicarb do NOT move in same direction \u2192 respiratory. In respiratory acidosis with high CO2, prepare to assist ventilation."
+  },
+  {
+    "q": "A nurse interprets ABG results: pH 7.52, CO2 30, HCO3 23. Which condition is the patient experiencing?",
+    "options": [
+      "Metabolic alkalosis",
+      "Respiratory alkalosis",
+      "Metabolic acidosis",
+      "Respiratory acidosis"
+    ],
+    "correct": 1,
+    "rationale": "pH >7.45 = alkalosis. HCO3 is normal, CO2 is low. pH and bicarb do NOT move in same direction \u2192 respiratory alkalosis. The patient is hyperventilating (blowing off CO2)."
+  },
+  {
+    "q": "Which patient condition causes Kussmaul respirations as the body attempts to compensate?",
+    "options": [
+      "COPD exacerbation",
+      "Diabetic ketoacidosis",
+      "Pulmonary embolism",
+      "Congestive heart failure"
+    ],
+    "correct": 1,
+    "rationale": "DKA causes metabolic acidosis. MAC Kussmaul = Metabolic ACidosis causes Kussmaul respirations (deep, rapid breathing to blow off CO2 as compensation)."
+  },
+  {
+    "q": "For a patient with a pH of 7.25, which potassium level would the nurse most likely expect?",
+    "options": [
+      "2.8 mEq/L",
+      "3.5 mEq/L",
+      "4.0 mEq/L",
+      "5.8 mEq/L"
+    ],
+    "correct": 3,
+    "rationale": "In acidosis (pH <7.35), everything goes DOWN except potassium which goes UP (hyperkalemia). A K+ of 5.8 indicates hyperkalemia consistent with acidosis."
+  },
+  {
+    "q": "A ventilator alarm sounds. The nurse checks the tubing and finds it is kinked behind the patient. After unkinking, what should the nurse check next?",
+    "options": [
+      "Call respiratory therapy",
+      "Check for condensed water in dependent tubing",
+      "Immediately suction the patient",
+      "Increase the tidal volume"
+    ],
+    "correct": 1,
+    "rationale": "High-pressure alarm sequence: (1) Unkink \u2192 (2) Empty condensed water \u2192 (3) Turn/cough/deep breathe \u2192 (4) Suction. After unkinking, check for water next."
+  },
+  {
+    "q": "A patient with alkalosis has a seizure. The nurse's priority is to:",
+    "options": [
+      "Administer IV potassium",
+      "Have suctioning equipment at bedside and suction PRN",
+      "Administer sodium bicarbonate",
+      "Perform chest compressions"
+    ],
+    "correct": 1,
+    "rationale": "Alkalosis causes hyperexcitability including seizures. The priority nursing intervention is suctioning due to seizure risk."
+  },
+  {
+    "q": "ABG results: pH 7.38, CO2 50, HCO3 30. This represents:",
+    "options": [
+      "Uncompensated respiratory acidosis",
+      "Compensated respiratory acidosis",
+      "Normal ABGs",
+      "Metabolic alkalosis"
+    ],
+    "correct": 1,
+    "rationale": "pH is within normal range (7.35-7.45) = compensated. CO2 is high (would cause acidosis), HCO3 is high (compensating). The primary disturbance is respiratory acidosis with metabolic compensation."
+  },
+  {
+    "q": "The nurse knows that a low-pressure ventilator alarm indicates:",
+    "options": [
+      "The patient is biting the tube",
+      "There is a mucus plug",
+      "A disconnection or air leak",
+      "Water in the tubing"
+    ],
+    "correct": 2,
+    "rationale": "Low-pressure = air is escaping. This indicates a disconnection or air leak in the system. High-pressure = obstruction (kinks, water, mucus plugs)."
+  },
+  {
+    "q": "An alcoholic patient says, 'I can stop whenever I want.' The nurse should:",
+    "options": [
+      "Agree to build rapport",
+      "Say 'Tell me about a time you successfully stopped'",
+      "Point out 'You say you can stop, but you've been admitted 3 times this year for alcohol-related problems'",
+      "Ignore the statement and change the subject"
+    ],
+    "correct": 2,
+    "rationale": "Confront denial by pointing out the discrepancy between what they say and what they do, using 'I' observations, not attacking the person."
+  },
+  {
+    "q": "A patient taking Antabuse asks if they can have cough syrup. The nurse's best response is:",
+    "options": [
+      "'Yes, cough syrup is fine'",
+      "'You should avoid all products containing alcohol, including elixirs and tinctures'",
+      "'Only take it at night'",
+      "'Ask your pharmacist'"
+    ],
+    "correct": 1,
+    "rationale": "Patients on Antabuse must avoid ALL alcohol-containing products: beverages, elixirs, tinctures (iodine/betadine), cough syrups, mouthwash, cooking wine."
+  },
+  {
+    "q": "In dependency/co-dependency, how many patients need treatment?",
+    "options": [
+      "Only the dependent person",
+      "Only the co-dependent person",
+      "Both - there are 2 patients",
+      "Neither - it resolves on its own"
+    ],
+    "correct": 2,
+    "rationale": "In dependency/co-dependency, BOTH the dependent person AND the co-dependent person need treatment. There are 2 patients."
+  },
+  {
+    "q": "The nurse is monitoring a patient for Delirium Tremens (DTs). DTs typically occur:",
+    "options": [
+      "Within 6 hours of last drink",
+      "24 hours after last drink",
+      "48-72 hours after last drink",
+      "1 week after last drink"
+    ],
+    "correct": 2,
+    "rationale": "DTs typically occur 48-72 hours after the last drink. Every alcoholic goes through withdrawal at ~24 hours, but less than 20% progress to DTs."
+  },
+  {
+    "q": "A patient is overdosing on barbiturates (a Downer). The nurse should prepare for:",
+    "options": [
+      "Seizures and suctioning",
+      "Respiratory arrest and intubation/ventilation",
+      "Hypertensive crisis",
+      "Cardiac arrhythmias"
+    ],
+    "correct": 1,
+    "rationale": "A Downer in overdose = too much sedation. Priority: intubation/ventilation due to respiratory arrest. (Upper overdose = suctioning due to seizures.)"
+  },
+  {
+    "q": "An infant born to a cocaine-addicted mother at 36 hours of life would exhibit symptoms consistent with:",
+    "options": [
+      "Overdose of an Upper - too much stimulation",
+      "Withdrawal of an Upper - too little stimulation",
+      "Overdose of a Downer - sedation",
+      "Withdrawal of a Downer - stimulation"
+    ],
+    "correct": 1,
+    "rationale": "Cocaine is an Upper. At 36 hours = withdrawal. An Upper in withdrawal = too LITTLE stimulation = opposite of overdose symptoms. Expect lethargy, poor feeding, weak cry."
+  },
+  {
+    "q": "Which aminoglycoside monitoring is done BEFORE drug administration?",
+    "options": [
+      "Peak level",
+      "Trough level",
+      "Random level",
+      "Loading dose"
+    ],
+    "correct": 1,
+    "rationale": "TAP = Trough (BEFORE), Administer, Peak (AFTER). The trough level is drawn before administration to ensure the drug level has dropped to a safe range."
+  },
+  {
+    "q": "Wernicke-Korsakoff syndrome is characterized by being preventable, arrestable, but:",
+    "options": [
+      "100% reversible",
+      "70% irreversible",
+      "50% reversible with surgery",
+      "Always fatal"
+    ],
+    "correct": 1,
+    "rationale": "Wernicke-Korsakoff: (1) Preventable with B1, (2) Arrestable (stop progression) with B1, (3) But 70% irreversible because it kills brain cells."
+  },
+  {
+    "q": "Peak aminoglycoside levels should be drawn:",
+    "options": [
+      "Before drug administration",
+      "30-60 minutes after drug administration",
+      "24 hours after starting therapy",
+      "Only on the first dose"
+    ],
+    "correct": 1,
+    "rationale": "TAP: Trough before, Administer, Peak after. Peak levels are drawn 30-60 minutes after IV administration to check if the level is in therapeutic range."
+  },
+  {
+    "q": "Positive inotropic effect means:",
+    "options": [
+      "Decreased heart rate",
+      "Increased cardiac contractile force",
+      "Increased conduction speed",
+      "Decreased blood pressure"
+    ],
+    "correct": 1,
+    "rationale": "Positive inotropy = increased cardiac contractile force \u2192 ventricles empty more completely \u2192 improved cardiac output. CCBs have the opposite: NEGATIVE inotropic effect."
+  },
+  {
+    "q": "A nurse observes P waves in a sawtooth pattern on the cardiac monitor. The patient likely has:",
+    "options": [
+      "Atrial fibrillation",
+      "Atrial flutter",
+      "Ventricular tachycardia",
+      "Normal sinus rhythm"
+    ],
+    "correct": 1,
+    "rationale": "Sawtooth P waves (atrial) = atrial flutter. Chaotic P waves = atrial fibrillation. QRS patterns relate to ventricular rhythms."
+  },
+  {
+    "q": "PVCs become moderate priority when:",
+    "options": [
+      "They occur after an MI",
+      "There are 6+ PVCs per minute, 6+ in a row, or R on T phenomenon",
+      "They are unifocal",
+      "The patient has no symptoms"
+    ],
+    "correct": 1,
+    "rationale": "PVCs are usually low priority (especially after MI). Elevate to MODERATE priority if: 6+ per minute, 6+ in a row, or R on T phenomenon."
+  },
+  {
+    "q": "Which rhythms have bizarre QRS complexes?",
+    "options": [
+      "Atrial fibrillation",
+      "Atrial flutter",
+      "Ventricular tachycardia",
+      "Normal sinus rhythm"
+    ],
+    "correct": 2,
+    "rationale": "Bizarre QRS complexes = ventricular tachycardia (V-tach). Chaotic QRS = V-fib. Sawtooth P waves = atrial flutter. Chaotic P waves = atrial fibrillation."
+  },
+  {
+    "q": "For a patient with v-fib who is unresponsive and pulseless, the FIRST action is:",
+    "options": [
+      "Start chest compressions",
+      "Place a backboard under the patient",
+      "Administer epinephrine",
+      "Call for the defibrillator"
+    ],
+    "correct": 1,
+    "rationale": "The FIRST step is to place a backboard under the patient's back while supine. 'First' is about ORDER. Then begin chest compressions and defibrillation."
+  },
+  {
+    "q": "Contact precautions require which PPE sequence?",
+    "options": [
+      "Gown \u2192 Mask \u2192 Goggle \u2192 Gloves",
+      "Hand washing \u2192 Gown \u2192 Gloves",
+      "Mask \u2192 Gloves only",
+      "N95 respirator and gown"
+    ],
+    "correct": 1,
+    "rationale": "Contact precautions: Hand washing \u2192 Gown \u2192 Gloves. Also: disposable supplies, dedicated equipment (stethoscope, BP cuff), and toys stay in the room."
+  },
+  {
+    "q": "Droplet precautions apply to which conditions?",
+    "options": [
+      "TB and chickenpox",
+      "C. diff and MRSA",
+      "Meningitis and H. influenzae b",
+      "RSV and herpes"
+    ],
+    "correct": 2,
+    "rationale": "Droplet precautions: for bugs traveling on large particles through coughing/sneezing to less than 3 feet. Includes meningitis, H. influenzae b (epiglottitis)."
+  },
+  {
+    "q": "The most important step when the water seal of a chest tube breaks is to:",
+    "options": [
+      "Clamp the tube",
+      "Cut the tube",
+      "Submerge the end under sterile water",
+      "Call the physician"
+    ],
+    "correct": 2,
+    "rationale": "The MOST important step is submerging the tube end under sterile water - this prevents air from entering the chest while allowing air/blood to exit. All steps must be done in 15 seconds."
+  },
+  {
+    "q": "No TRouBLe congenital heart defects include all EXCEPT:",
+    "options": [
+      "VSD",
+      "PDA",
+      "Tricuspid atresia",
+      "Atrial septal defect"
+    ],
+    "correct": 2,
+    "rationale": "Tricuspid atresia is a TRouBLe defect (starts with T, cyanotic, R\u2192L shunt). No TRouBLe defects: VSD, PDA, Patent foramen ovale, ASD, Pulmonic stenosis."
+  },
+  {
+    "q": "A patient with a right hip replacement is ambulating with crutches. Going up stairs, which moves first?",
+    "options": [
+      "Right foot (affected side)",
+      "Left foot (unaffected side)",
+      "Both crutches",
+      "The walker"
+    ],
+    "correct": 1,
+    "rationale": "Going UP stairs: GOOD foot goes up first. Going DOWN: BAD foot goes down first. With a right hip replacement, the LEFT (good/unaffected) foot goes up first."
+  },
+  {
+    "q": "The crutch tip should be placed at what position relative to the foot?",
+    "options": [
+      "Directly at the toes",
+      "6 inches lateral and 6 inches in front of the foot",
+      "12 inches lateral and behind the foot",
+      "Under the armpit"
+    ],
+    "correct": 1,
+    "rationale": "The tip of the crutch is placed 6 inches lateral and slightly in front (6 inches) of the foot. Rule out landmarks on the foot or say axilla as incorrect."
+  },
+  {
+    "q": "A patient with Parkinson's disease and bilateral moderate leg weakness should use which gait?",
+    "options": [
+      "Swing-through",
+      "3-point gait",
+      "4-point gait",
+      "2-point gait"
+    ],
+    "correct": 2,
+    "rationale": "Bilateral weakness = even-numbered gait. Moderate/severe = 4-point gait (slow but stable). Mild = 2-point gait. Parkinson's with bilateral moderate weakness = 4-point."
+  },
+  {
+    "q": "A patient says, 'I am the President of the United States.' This is an example of:",
+    "options": [
+      "A paranoid delusion",
+      "A grandiose delusion",
+      "A hallucination",
+      "An illusion"
+    ],
+    "correct": 1,
+    "rationale": "A grandiose delusion is a false, fixed belief that one is someone important or powerful. There is no sensory component - it is just a thought/belief."
+  },
+  {
+    "q": "The nurse asks a psychotic patient, 'Tell me more about what you're experiencing.' This is an example of:",
+    "options": [
+      "Confrontation",
+      "Therapeutic communication",
+      "Reality orientation",
+      "Limit setting"
+    ],
+    "correct": 1,
+    "rationale": "For non-psychotic patients, use therapeutic communication: reflection, clarification, amplification, restatement. 'Tell me more about...' is therapeutic communication."
+  },
+  {
+    "q": "When a patient with dementia becomes agitated and confused, the nurse should:",
+    "options": [
+      "Present reality firmly and set limits",
+      "Acknowledge their feeling and redirect them to an activity",
+      "Restrain them for safety",
+      "Administer PRN sedation"
+    ],
+    "correct": 1,
+    "rationale": "For dementia: (1) Acknowledge feeling, (2) Redirect - give them something they can do. The 2nd step always begins with 'Re.' Dementia hallmark: memory loss, inability to learn."
+  },
+  {
+    "q": "Functional psychosis patients (schizophrenia) differ from demented patients because they:",
+    "options": [
+      "Cannot learn reality",
+      "Have no potential for improvement",
+      "Have the potential to learn reality since there is no brain damage",
+      "Will never respond to medication"
+    ],
+    "correct": 2,
+    "rationale": "Functional psychosis: patient has the potential to learn reality (no brain damage). Use the 4-step process: Acknowledge feeling \u2192 Present reality \u2192 Set limits \u2192 Enforce limits."
+  },
+  {
+    "q": "The swing-through gait is specifically designed for:",
+    "options": [
+      "Mild bilateral weakness",
+      "Non-weight bearing patients such as amputees",
+      "Moderate unilateral weakness",
+      "Post-stroke patients"
+    ],
+    "correct": 1,
+    "rationale": "Swing-through is for non-weight bearing patients (amputees). Similar to 3-point gait but the unaffected foot swings PAST the tip of both crutches."
+  },
+  {
+    "q": "SIADH (Syndrome of Inappropriate ADH) presents with:",
+    "options": [
+      "Polyuria and dehydration",
+      "Fluid retention and concentrated urine",
+      "High blood glucose",
+      "Kussmaul respirations"
+    ],
+    "correct": 1,
+    "rationale": "SIADH = too much ADH = body retains fluid = dilutional hyponatremia. Opposite of DI (which has too little ADH = polyuria/dehydration)."
+  },
+  {
+    "q": "When mixing insulins in the same syringe, which insulin is drawn up FIRST?",
+    "options": [
+      "NPH (cloudy) first",
+      "Regular (clear) first",
+      "Either can be drawn first",
+      "They cannot be mixed"
+    ],
+    "correct": 1,
+    "rationale": "Draw up Regular (clear) insulin first, then NPH (cloudy). Remember: 'Clear before cloudy' to prevent contamination of the Regular insulin vial with NPH."
+  },
+  {
+    "q": "A patient with Type 2 DM should eat:",
+    "options": [
+      "3 large meals per day",
+      "6 small feedings per day",
+      "Only 1 meal per day",
+      "Whatever they want as long as they take medication"
+    ],
+    "correct": 1,
+    "rationale": "DM2 patients should eat 6 small feedings per day (smaller, more frequent meals keep blood sugar more stable). Combined with calorie restriction (1200-1600 Cal)."
+  },
+  {
+    "q": "Glargine (Lantus) insulin differs from other insulins because:",
+    "options": [
+      "It can be given IV",
+      "It has the fastest onset",
+      "It has NO peak and minimal hypoglycemia risk",
+      "It must be mixed with Regular"
+    ],
+    "correct": 2,
+    "rationale": "Glargine: long-acting, NO peak, duration 12-24 hours. Little to no risk for hypoglycemia. The only insulin safe to give at bedtime. Cannot be mixed with other insulins."
+  },
+  {
+    "q": "The earliest sign of hypoglycemia that the nurse should recognize is:",
+    "options": [
+      "Seizures",
+      "Kussmaul breathing",
+      "Behavioral changes (irritability, confusion, tremors)",
+      "Fruity breath"
+    ],
+    "correct": 2,
+    "rationale": "Early hypoglycemia mimics a drunk person: staggering gait, slurred speech, cerebral impairment (behavioral changes), labile mood, slow reaction time. Fruity breath is DKA, not hypoglycemia."
+  },
+  {
+    "q": "Only _____ insulin can be given intravenously:",
+    "options": [
+      "NPH",
+      "Lispro",
+      "Regular",
+      "Glargine"
+    ],
+    "correct": 2,
+    "rationale": "Only Regular insulin can be given IV. This is critical for DKA treatment where IV Regular insulin and rapid IV fluids (200 mL/hr) are needed."
+  },
+  {
+    "q": "A patient with HHNK has a nursing diagnosis of Fluid Volume Deficit. The most important outcome indicator is:",
+    "options": [
+      "Decreased blood glucose",
+      "Increased urine output and moist mucous membranes",
+      "Normal potassium levels",
+      "Weight gain of 5 lbs"
+    ],
+    "correct": 1,
+    "rationale": "HHNK = severe dehydration. #1 intervention = rehydration. Outcomes of successful treatment: increased urine output, moist mucous membranes."
+  },
+  {
+    "q": "DKA is characterized by all EXCEPT:",
+    "options": [
+      "Kussmaul respirations",
+      "Fruity breath odor",
+      "Dehydration",
+      "Absence of ketones"
+    ],
+    "correct": 3,
+    "rationale": "DKA features: Kussmaul respirations (MAC Kussmaul), fruity breath (ketones), dehydration. DKA DOES have ketones. HHNK does NOT have ketones."
+  },
+  {
+    "q": "A newborn with a bilirubin of 22 is at risk for:",
+    "options": [
+      "Jaundice only",
+      "Kernicterus with possible brain damage",
+      "Normal physiologic adaptation",
+      "Respiratory distress"
+    ],
+    "correct": 1,
+    "rationale": "Bilirubin >20 in newborns = kernicterus (excess bilirubin in brain), which can cause aseptic meningitis, encephalopathy, and can be DEADLY."
+  },
+  {
+    "q": "The therapeutic range shared by both Aminophylline and Dilantin is:",
+    "options": [
+      "0.6 to 1.2",
+      "1 to 2",
+      "10 to 20",
+      "20 to 30"
+    ],
+    "correct": 2,
+    "rationale": "Both Aminophylline and Dilantin share therapeutic level 10-20 and toxic level >20. They are the 'high number' drugs along with Bilirubin in the '10s and 20s' pattern."
+  },
+  {
+    "q": "A patient with hypokalemia would present with:",
+    "options": [
+      "Bradycardia and constipation",
+      "Tachycardia and polyuria",
+      "Seizures and tetany",
+      "Flushed, dry skin"
+    ],
+    "correct": 0,
+    "rationale": "HypoKalemia: symptoms go in SAME direction as prefix (low). Everything slows: bradycardia, constipation, flaccid muscles. EXCEPT HR and urine go opposite (wait - kalemia goes same direction except HR and urine). Let me correct: kalemia goes in same direction, except HR and urine output are opposite. So hypoK = symptoms low, but tachycardia."
+  },
+  {
+    "q": "Hiatal hernia and GERD symptoms are worse when the patient:",
+    "options": [
+      "Is standing upright",
+      "Is lying down after eating",
+      "Is exercising vigorously",
+      "Takes deep breaths"
+    ],
+    "correct": 1,
+    "rationale": "Hiatal hernia S/Sx = GERD symptoms that worsen when lying down after a meal. Gastric contents go in the wrong direction at the correct rate ('like a cow with 2 stomachs')."
+  },
+  {
+    "q": "When administering D5W, Regular insulin, and Kayexalate simultaneously for hyperkalemia, which works fastest?",
+    "options": [
+      "Kayexalate works fastest",
+      "D5W and Regular insulin work instantly",
+      "All three work at the same speed",
+      "None work for several hours"
+    ],
+    "correct": 1,
+    "rationale": "D5W and Regular insulin work instantly (drive K+ into cells). Kayexalate = 'K Exits Late' (takes hours, works through feces causing hypernatremia). Give all three simultaneously."
+  },
+  {
+    "q": "Magnesemia follows which pattern?",
+    "options": [
+      "Same as calcemia - opposite of prefix",
+      "Same as kalemia - same direction as prefix",
+      "Same as natremia - related to fluid balance",
+      "Unpredictable pattern"
+    ],
+    "correct": 0,
+    "rationale": "Magnesemia follows the same pattern as calcemia - symptoms go in the OPPOSITE direction of the prefix. HyperMg = sedation (low), HypoMg = excitation (high). Calcium and magnesium are sedatives."
+  },
+  {
+    "q": "The nurse should hospitalize a newborn when bilirubin reaches approximately:",
+    "options": [
+      "5-8",
+      "8-10",
+      "14-15",
+      "Over 25"
+    ],
+    "correct": 2,
+    "rationale": "Newborn bilirubin: elevated 10-20, toxic >20. Physicians want to hospitalize at 14-15 to prevent progression to toxic levels and kernicterus."
+  },
+  {
+    "q": "Dumping syndrome requires HIGH protein in the diet because:",
+    "options": [
+      "Protein raises blood sugar quickly",
+      "Protein bulks gastric content, takes longer to digest, and moves slower",
+      "Protein stimulates gastric acid production",
+      "Protein reduces inflammation"
+    ],
+    "correct": 1,
+    "rationale": "Protein does the opposite of carbohydrate: bulks content, takes longer to digest, moves slower through the gut. HIGH protein for dumping (slows emptying), LOW protein for hiatal hernia."
+  },
+  {
+    "q": "A patient with Graves disease presents with weight loss, tachycardia, and heat intolerance. These symptoms reflect:",
+    "options": [
+      "Hypometabolism",
+      "Hypermetabolism",
+      "Adrenal insufficiency",
+      "Hypothyroidism"
+    ],
+    "correct": 1,
+    "rationale": "Graves disease = hyperthyroidism = hypermetabolism. S/Sx: weight loss, HR up, BP up, hyperpersonality, heat intolerance, exophthalmos."
+  },
+  {
+    "q": "After a subtotal thyroidectomy, the patient is at risk for which emergency?",
+    "options": [
+      "Myxedema coma",
+      "Thyroid storm",
+      "Addisonian crisis",
+      "Diabetic ketoacidosis"
+    ],
+    "correct": 1,
+    "rationale": "After subtotal thyroidectomy: may not need lifelong hormone replacement, may supplement initially, but at risk for thyroid storm (temps 105+, high BP, medical emergency)."
+  },
+  {
+    "q": "Post-thyroidectomy, the nurse monitors for hypocalcemia because:",
+    "options": [
+      "Thyroid hormones regulate calcium",
+      "The parathyroid glands may be accidentally removed or damaged",
+      "Anesthesia depletes calcium stores",
+      "Bleeding causes calcium loss"
+    ],
+    "correct": 1,
+    "rationale": "The parathyroid glands sit behind/on the thyroid and may be accidentally damaged during thyroidectomy, leading to hypocalcemia (tetany, Chvostek/Trousseau signs)."
+  },
+  {
+    "q": "Addisonian crisis is characterized by:",
+    "options": [
+      "Hypertension and hyperglycemia",
+      "Shock and hypoglycemia",
+      "Cushing-like features",
+      "Weight gain and edema"
+    ],
+    "correct": 1,
+    "rationale": "Addison disease patients who can't adapt to stress go into Addisonian crisis: shock + hypoglycemia. Treatment: give steroids (glucocorticoids ending in -SONE)."
+  },
+  {
+    "q": "A 4-year-old preschooler engages in which type of play?",
+    "options": [
+      "Parallel play",
+      "Solitary play",
+      "Cooperative/pretend play",
+      "Competitive play"
+    ],
+    "correct": 2,
+    "rationale": "Preschoolers (3-6 years): Cooperative play. 'Need to cooperate in Preschool (= Pretend).' You'd be the sheriff, I'll be the robber. Highly imaginative. Toddlers have parallel play."
+  },
+  {
+    "q": "An infant 0-3 months plays with which type of toys?",
+    "options": [
+      "Push/pull toys",
+      "Rattles and mobiles for visual stimulation",
+      "Building blocks",
+      "Talking books"
+    ],
+    "correct": 1,
+    "rationale": "Infants 0-3 months: visual stimulation with rattles and mobiles. They track objects and respond to visual/auditory stimuli."
+  },
+  {
+    "q": "A cervical laminectomy patient's most important pre-op assessment involves:",
+    "options": [
+      "Bowel function and cough",
+      "Bladder function and leg strength",
+      "Breathing and arm/hand function",
+      "Heart rate and blood pressure"
+    ],
+    "correct": 2,
+    "rationale": "Cervical innervates the diaphragm and arms. First assess breathing, then check arm/hand function. Post-op complication: pneumonia."
+  },
+  {
+    "q": "A thoracic laminectomy post-op complication includes:",
+    "options": [
+      "Urinary retention and leg problems",
+      "Pneumonia and paralytic ileus",
+      "Arm weakness",
+      "Cardiac arrhythmias"
+    ],
+    "correct": 1,
+    "rationale": "Thoracic innervates gut/abdominal muscles. Pre-op: assess cough and bowels. Post-op complications: pneumonia (can't cough without abs) and paralytic ileus."
+  },
+  {
+    "q": "Laminectomy with fusion uses bone graft from the iliac crest. The hip incision site has:",
+    "options": [
+      "Less pain than the spine",
+      "More pain AND more drainage than the spine",
+      "Higher rejection risk than the spine",
+      "No drainage at all"
+    ],
+    "correct": 1,
+    "rationale": "The HIP has the most pain AND the most bleeding/drainage (Hemovac/JP goes here). However, rejection risk is higher at the SPINE. Infection risk is equal."
+  },
+  {
+    "q": "A patient has a potassium of 2.8 mEq/L. Using the ABCD scheme, this is:",
+    "options": [
+      "Level A",
+      "Level B",
+      "Level C",
+      "Level D"
+    ],
+    "correct": 2,
+    "rationale": "Potassium <3.0 = Level C (critical). At this level, the patient is at risk for life-threatening cardiac arrhythmias. Prepare for potassium replacement, monitor EKG, call HCP."
+  },
+  {
+    "q": "The nurse prioritizes lab results using ABCD. Which statement is correct?",
+    "options": [
+      "Level A requires immediate intervention",
+      "Level D can wait until morning",
+      "Level B needs close monitoring",
+      "Level C can be ignored for a few hours"
+    ],
+    "correct": 2,
+    "rationale": "A = low priority (can wait hours), B = concerning (monitor closely), C = critical (act now), D = deadly (emergency). Level B needs close monitoring."
+  },
+  {
+    "q": "A patient with chronic renal failure has a creatinine of 24.7 (expected) but develops pink frothy sputum. Which organ determines priority?",
+    "options": [
+      "Kidney (renal failure)",
+      "Brain",
+      "Lung (frothy sputum)",
+      "Heart"
+    ],
+    "correct": 2,
+    "rationale": "Use the vital organ rule with the MODIFYING PHRASE, not the diagnosis. Pink frothy sputum = lung involvement. Lung is #2 priority organ (Brain > Lung > Heart > Liver > Kidney)."
+  },
+  {
+    "q": "A glucose level of 450 mg/dL is classified as:",
+    "options": [
+      "Level A",
+      "Level B",
+      "Level C",
+      "Level D"
+    ],
+    "correct": 2,
+    "rationale": "Glucose >400 is Level C (critical). The patient likely has severe hyperglycemia requiring immediate assessment for DKA or HHNK and insulin therapy."
+  },
+  {
+    "q": "Hemoglobin below 8 requires the nurse to prepare for:",
+    "options": [
+      "Dietary counseling",
+      "Blood transfusion",
+      "Iron supplementation only",
+      "No action needed"
+    ],
+    "correct": 1,
+    "rationale": "Hemoglobin <8 = Level C. Action: assess for bleeding/anemia/malnutrition, PREPARE BLOOD (transfusion), call HCP. This is a critical finding."
+  },
+  {
+    "q": "CD4 count between 200 and 500 indicates:",
+    "options": [
+      "Normal immune function",
+      "HIV without AIDS",
+      "AIDS",
+      "Severe immunodeficiency requiring isolation"
+    ],
+    "correct": 1,
+    "rationale": "CD4 >200 but <500 = HIV. CD4 <200 = AIDS (Level C). CD4 >500 is generally considered adequate immune function."
+  },
+  {
+    "q": "Fotosensitivity from phenothiazines means the nurse should teach the patient to:",
+    "options": [
+      "Avoid fluorescent lighting",
+      "Use sunscreen and avoid prolonged sun exposure",
+      "Increase vitamin D intake",
+      "Wear dark-colored clothing"
+    ],
+    "correct": 1,
+    "rationale": "The 'F' in ABCDEFG = Fotosensitivity. Teach patients to use sunscreen, wear protective clothing, and avoid prolonged sun exposure."
+  },
+  {
+    "q": "A patient on MAOIs eats a large amount of aged cheddar cheese. The nurse should monitor for:",
+    "options": [
+      "Hypoglycemia",
+      "Hypertensive crisis with severe headache and elevated BP",
+      "Hypotension and bradycardia",
+      "Respiratory depression"
+    ],
+    "correct": 1,
+    "rationale": "MAOIs + tyramine (aged cheese) = Hypertensive Crisis. S/Sx: severe headache, markedly elevated BP, potential stroke. This is a medical emergency."
+  },
+  {
+    "q": "Benzodiazepines are preferred for alcohol withdrawal because they:",
+    "options": [
+      "Treat the underlying addiction",
+      "Work quickly for seizure prevention and sedation",
+      "Have no side effects",
+      "Can be taken indefinitely"
+    ],
+    "correct": 1,
+    "rationale": "Benzodiazepines work quickly and are used for: alcohol withdrawal (seizure prevention/sedation), preop induction, muscle relaxation, and calming ventilator patients. But NOT long-term use."
+  },
+  {
+    "q": "The #1 nursing intervention for a patient taking Clozaril (clozapine) is:",
+    "options": [
+      "Monitor liver function tests",
+      "Monitor WBC count",
+      "Check blood pressure regularly",
+      "Assess for tardive dyskinesia"
+    ],
+    "correct": 1,
+    "rationale": "Clozapine can cause agranulocytosis (worse than cancer drugs, can trash bone marrow). The #1 nursing intervention is monitoring the WBC. Significant drops require stopping the medication."
+  },
+  {
+    "q": "A patient on Prozac who is an adolescent has a recent dose change. The nurse should be most vigilant for:",
+    "options": [
+      "Weight gain",
+      "Photosensitivity",
+      "Suicidal ideation",
+      "Tardive dyskinesia"
+    ],
+    "correct": 2,
+    "rationale": "When changing SSRI doses, watch for suicidal risk in adolescents. Must be a RECENT dose change AND an adolescent or young adult."
+  },
+  {
+    "q": "The advantage of second-generation antipsychotics (-zapines) over first-generation is:",
+    "options": [
+      "They are cheaper",
+      "They do not have A-F side effects",
+      "They work faster",
+      "They can be given IM only"
+    ],
+    "correct": 1,
+    "rationale": "Second-generation antipsychotics (ending in -zapine) have the advantage of NOT having the A-F side effects (Anticholinergic through Fotosensitivity) of first-generation. But Clozapine still has aGranulocytosis."
+  },
+  {
+    "q": "The 4 stages of labor are in order:",
+    "options": [
+      "Dilation, Delivery of baby, Delivery of placenta, Recovery",
+      "Contractions, Pushing, Repair, Bonding",
+      "Active labor, Transition, Delivery, Postpartum",
+      "Latent, Active, Transition, Delivery"
+    ],
+    "correct": 0,
+    "rationale": "Stage 1: Dilation/effacement of cervix. Stage 2: Delivery of baby. Stage 3: Delivery of placenta. Stage 4: Recovery (2 hours until bleeding stops). Postpartum begins 2 hours after placenta delivery."
+  },
+  {
+    "q": "During pregnancy, if a woman gains 5 lbs in one week during the 3rd trimester, the nurse should:",
+    "options": [
+      "Congratulate her on healthy weight gain",
+      "Assess for preeclampsia",
+      "Recommend increased exercise",
+      "Restrict all fluids"
+    ],
+    "correct": 1,
+    "rationale": "Normal weight gain: 1 lb/week in 2nd and 3rd trimesters. A sudden 5 lb gain in one week suggests fluid retention and possible preeclampsia. Assess BP, protein in urine, and edema."
+  },
+  {
+    "q": "The nurse assessing lochia on postpartum day 3 expects which color?",
+    "options": [
+      "Rubra (red)",
+      "Serosa (pink/brown)",
+      "Alba (white/yellow)",
+      "No lochia expected"
+    ],
+    "correct": 1,
+    "rationale": "Lochia progression: Rubra (red, days 1-3), Serosa (pink/brown, days 4-10), Alba (white/yellow, days 10-14+). Day 3 is the transition period."
+  },
+  {
+    "q": "Station refers to the relationship between the fetal presenting part and the mother's:",
+    "options": [
+      "Umbilicus",
+      "Cervix",
+      "Ischial spines",
+      "Pubic symphysis"
+    ],
+    "correct": 2,
+    "rationale": "Station = relationship between fetal presenting part and mother's ischial spines. 0 station = at the spines. Negative = above, Positive = below."
+  },
+  {
+    "q": "A transverse lie in pregnancy means:",
+    "options": [
+      "Compatible with vaginal delivery",
+      "Mother's and baby's spines are perpendicular - C-section needed",
+      "Normal presentation",
+      "Baby is in ROA position"
+    ],
+    "correct": 1,
+    "rationale": "If the mother's spine and baby's spine are perpendicular = transverse lie = Trouble = C-section. Vertical (parallel) lie = compatible with vaginal birth."
+  },
+  {
+    "q": "During the 4th stage of labor, the nurse finds the fundus is boggy. The immediate action is:",
+    "options": [
+      "Call the physician",
+      "Massage the fundus",
+      "Catheterize the bladder",
+      "Administer oxytocin"
+    ],
+    "correct": 1,
+    "rationale": "If fundus is boggy \u2192 massage it. If fundus is displaced \u2192 catheterize (full bladder displaces uterus). These are part of the every-15-minute assessments in 4th stage."
+  },
+  {
+    "q": "Normal fetal heart rate range is:",
+    "options": [
+      "80 to 100 bpm",
+      "100 to 120 bpm",
+      "120 to 160 bpm",
+      "160 to 200 bpm"
+    ],
+    "correct": 2,
+    "rationale": "Normal fetal heart rate = 120-160 bpm. Below 110 = low fetal HR (bad, do LION). Above 160 = high fetal HR (document acceleration)."
+  },
+  {
+    "q": "Before implementing LION in an OB crisis, if Pitocin is running, the nurse should FIRST:",
+    "options": [
+      "Increase the Pitocin rate",
+      "Continue Pitocin and do LION simultaneously",
+      "STOP the Pitocin",
+      "Call the physician before any action"
+    ],
+    "correct": 2,
+    "rationale": "In an OB crisis, if Pitocin is running, STOP IT FIRST before implementing LION. Pitocin stimulates contractions, which can worsen many OB emergencies."
+  },
+  {
+    "q": "Chadwick, Goodell, and Hegar signs progress from:",
+    "options": [
+      "Uterus to cervix to vulva",
+      "Vulva, vagina/cervix to lower uterine segment",
+      "Brain to heart to abdomen",
+      "Fundus downward"
+    ],
+    "correct": 1,
+    "rationale": "In alphabetical order (Chadwick \u2192 Goodell \u2192 Hegar), they move UP: vulva (Chadwick = bluish discoloration), cervix (Goodell = softening), lower uterine segment (Hegar = softening)."
+  },
+  {
+    "q": "Methergine is given postpartum to:",
+    "options": [
+      "Mature fetal lungs",
+      "Stop premature labor",
+      "Contract the uterus to prevent hemorrhage",
+      "Reverse magnesium toxicity"
+    ],
+    "correct": 2,
+    "rationale": "Methergine is an OB medication given postpartum to cause uterine contraction and prevent/treat postpartum hemorrhage. It is NOT given during labor."
+  },
+  {
+    "q": "Magnesium sulfate in pregnancy is used as:",
+    "options": [
+      "A tocolytic and for seizure prophylaxis in preeclampsia",
+      "An analgesic for labor pain",
+      "To induce labor",
+      "To mature fetal lungs"
+    ],
+    "correct": 0,
+    "rationale": "Mag sulfate serves dual purposes: tocolytic (stops contractions) and seizure prophylaxis/treatment in preeclampsia/eclampsia. Monitor for magnesium toxicity (loss of DTRs, respiratory depression)."
+  },
+  {
+    "q": "The best way to determine if a postpartum patient has thrombophlebitis is:",
+    "options": [
+      "Check Homan's sign",
+      "Measure bilateral calf circumference",
+      "Assess for ankle edema",
+      "Check pedal pulses"
+    ],
+    "correct": 1,
+    "rationale": "The BEST way is to measure bilateral calf circumference. Homan's sign is NOT the best answer. This is one of the 3 big postpartum topics along with fundus and lochia."
+  },
+  {
+    "q": "Surfactant (Survanta) is administered to the baby:",
+    "options": [
+      "Before birth via the placenta",
+      "After birth via transtracheal route",
+      "Orally after first feeding",
+      "Intramuscularly at birth"
+    ],
+    "correct": 1,
+    "rationale": "Surfactant (Survanta) is given to the baby via transtracheal route AFTER birth. Betamethasone is the steroid given to the MOTHER before birth to mature fetal lungs."
+  },
+  {
+    "q": "Assessment of contraction frequency is measured from:",
+    "options": [
+      "Peak of one contraction to peak of the next",
+      "End of one contraction to start of the next",
+      "Beginning of one contraction to beginning of the next",
+      "Peak to trough of the same contraction"
+    ],
+    "correct": 2,
+    "rationale": "Frequency = beginning of one contraction to beginning of the next. Duration = beginning to end of same contraction. Intensity = peak strength during contraction."
+  },
+  {
+    "q": "A nurse receives report on 4 patients. Which should be seen FIRST: (a) COPD with stable O2 sats, (b) CHF admitted 3 days ago, (c) New-onset chest pain admitted 2 hours ago, (d) Pneumonia on day 5 of antibiotics?",
+    "options": [
+      "COPD patient",
+      "CHF patient",
+      "New-onset chest pain",
+      "Pneumonia patient"
+    ],
+    "correct": 2,
+    "rationale": "Apply rules: Acute beats Chronic (chest pain is acute). Unstable beats Stable (new-onset, admitted <24 hours). The patient with new-onset chest pain admitted 2 hours ago is highest priority."
+  },
+  {
+    "q": "Rule 3 of prioritization states:",
+    "options": [
+      "Acute beats Chronic",
+      "Unstable beats Stable",
+      "Actual beats Potential",
+      "Vital organs determine priority"
+    ],
+    "correct": 2,
+    "rationale": "The 4 rules: (1) Acute beats Chronic, (2) Unstable beats Stable, (3) Actual beats Potential (an actual problem outweighs a potential one), (4) Vital organ priority."
+  },
+  {
+    "q": "The vital organ priority order is:",
+    "options": [
+      "Heart, Lung, Brain, Liver, Kidney",
+      "Brain, Lung, Heart, Liver, Kidney, Pancreas",
+      "Lung, Heart, Brain, Kidney, Liver",
+      "Heart, Brain, Lung, Kidney, Liver"
+    ],
+    "correct": 1,
+    "rationale": "Vital organ priority: (1) Brain, (2) Lung, (3) Heart, (4) Liver, (5) Kidney, (6) Pancreas. The more vital the organ, the higher the priority."
+  },
+  {
+    "q": "An LPN should NOT perform which of the following?",
+    "options": [
+      "Take vital signs on a stable patient",
+      "Administer PO medications",
+      "Perform admission assessments",
+      "Monitor a patient with an established care plan"
+    ],
+    "correct": 2,
+    "rationale": "LPNs cannot assess: admission, discharge, transfer, or first assessment after a change. These require RN assessment skills."
+  },
+  {
+    "q": "When staff exhibits inappropriate behavior, the nurse should NEVER:",
+    "options": [
+      "Talk to them privately later",
+      "Confront them and take over the task",
+      "Tell the supervisor",
+      "Ignore it"
+    ],
+    "correct": 3,
+    "rationale": "NEVER ignore inappropriate behavior. Use the incident as a teaching moment. Options include: tell supervisor, confront/take over immediately, or talk to them later."
+  },
+  {
+    "q": "Formal Operations stage (12+ years) in Piaget's theory means adolescents can:",
+    "options": [
+      "Only think concretely",
+      "Think abstractly and hypothesize",
+      "Only follow rules without questioning",
+      "Cannot understand consequences"
+    ],
+    "correct": 1,
+    "rationale": "Formal Operations (12+ years): abstract thinking, hypothesis testing, understanding consequences. They can manage their own diabetes (managing = knowing what to do and seeking help when needed)."
+  },
+  {
+    "q": "Teaching a school-age child (7-11) about a procedure should use:",
+    "options": [
+      "Abstract explanations",
+      "Hands-on demonstration on a doll, taught a day or two ahead",
+      "Play therapy only",
+      "Written instructions only"
+    ],
+    "correct": 1,
+    "rationale": "Concrete Operations (7-11): rule-oriented, need concrete demonstrations. Teach a day or two ahead. Demonstrate on a doll or model. Use present tense. One way to do things."
+  },
+  {
+    "q": "A nurse is unsure between two answer choices on the NCLEX. The best strategy is to:",
+    "options": [
+      "Always pick the longest answer",
+      "Go back and re-read the question - you probably missed something",
+      "Always pick 'C'",
+      "Pick the answer with the most nursing terminology"
+    ],
+    "correct": 1,
+    "rationale": "When stuck between two answers, go back and re-read the question. You probably missed something important in the stem that distinguishes the correct answer."
+  },
+  {
+    "q": "The Sesame Street Rule for NCLEX test-taking refers to:",
+    "options": [
+      "Always pick the happiest answer",
+      "If one option doesn't fit with the others, it's likely correct",
+      "Choose the answer that a child could understand",
+      "Eliminate the most complex answer"
+    ],
+    "correct": 1,
+    "rationale": "The Sesame Street Rule: 'One of these things is not like the others.' If three answers are similar and one is different, the different one is often the correct answer."
+  },
+  {
+    "q": "A patient says 'What do you think I should do about my marriage?' The nurse's best therapeutic response in psychiatry is:",
+    "options": [
+      "'I think you should try couples counseling'",
+      "'Here's what I would do...'",
+      "'What do you think you should do?'",
+      "'That's not something I can help with'"
+    ],
+    "correct": 2,
+    "rationale": "In psychiatric nursing: DON'T give advice. If the patient asks what they should do, reflect it back: 'What do you think you should do?' This promotes self-exploration."
+  },
+  {
+    "q": "K-sparing diuretics include:",
+    "options": [
+      "Lasix and Diuril",
+      "Spironolactone and Triamterene",
+      "Mannitol and Diamox",
+      "Hydrochlorothiazide and Bumex"
+    ],
+    "correct": 1,
+    "rationale": "K-sparing: Spironolactone, Triamterene (don't waste K). K-wasting: any diuretic ending in 'X' (Lasix) + Diuril. 'X' marks the potassium out."
+  },
+  {
+    "q": "The worst-case scenario guessing strategy: A newly admitted psychiatric patient - which action has the worst consequence if NOT done?",
+    "options": [
+      "Orient to unit",
+      "Put on suicide precautions",
+      "Introduce to staff",
+      "Provide meal tray"
+    ],
+    "correct": 1,
+    "rationale": "Ask 'What happens if I DON'T do this?' (a) Agitated, (b) Lost, (c) DEAD (no suicide precautions = patient could die), (d) Doesn't know anyone. Worst case = DEAD. Answer is suicide precautions."
+  },
+  {
+    "q": "An 8-year-old child can 'manage' their diabetes. This means the child can:",
+    "options": [
+      "Give their own insulin injections",
+      "Understand the biochemistry of diabetes",
+      "Know what to do and seek help when they cannot",
+      "Make independent medical decisions"
+    ],
+    "correct": 2,
+    "rationale": "'Manage' = knowing what you CAN do when you can, and seeking help when you cannot. This is age-appropriate for a 13-year-old. 'Skill' (like giving injections) is appropriate for an 8-year-old. Note: Manage \u2260 Skill."
+  },
+  {
+    "q": "The phases of the nurse-patient relationship in psychiatric nursing are important because:",
+    "options": [
+      "They determine medication administration timing",
+      "They guide what therapeutic techniques are appropriate at each stage",
+      "They are not relevant to modern nursing",
+      "They only apply to inpatient settings"
+    ],
+    "correct": 1,
+    "rationale": "In psychiatric tests, make sure you know what PHASE of the nurse-patient relationship you are in. This determines appropriate interventions and therapeutic communication techniques."
+  },
+  {
+    "q": "A patient with COPD retains CO2 chronically. Their ABG shows pH 7.36, CO2 58, HCO3 32. This is best described as:",
+    "options": [
+      "Uncompensated respiratory acidosis",
+      "Compensated respiratory acidosis",
+      "Metabolic alkalosis",
+      "Normal values"
+    ],
+    "correct": 1,
+    "rationale": "pH is within normal range despite elevated CO2 (respiratory acidosis). The elevated HCO3 indicates metabolic compensation. Chronic COPD patients often have compensated respiratory acidosis."
+  },
+  {
+    "q": "A nurse is assessing a patient with metabolic alkalosis. Which electrolyte imbalance is MOST expected?",
+    "options": [
+      "Hyperkalemia",
+      "Hypokalemia",
+      "Hypernatremia",
+      "Hypercalcemia"
+    ],
+    "correct": 1,
+    "rationale": "In alkalosis, potassium goes in the opposite direction of pH. Alkalosis = pH UP, potassium DOWN = hypokalemia."
+  },
+  {
+    "q": "Which nursing intervention is MOST important for a patient with a pH of 7.20?",
+    "options": [
+      "Encourage deep breathing",
+      "Prepare Ambu bag for ventilation",
+      "Administer oral potassium",
+      "Apply supplemental oxygen via nasal cannula"
+    ],
+    "correct": 1,
+    "rationale": "pH 7.20 is severely acidotic. Acidosis depresses everything including respiratory drive, risking respiratory arrest. Priority: prepare to ventilate with Ambu bag."
+  },
+  {
+    "q": "A patient is anxious and hyperventilating. The expected ABG change is:",
+    "options": [
+      "Increased CO2 and decreased pH",
+      "Decreased CO2 and increased pH",
+      "Increased HCO3 and decreased pH",
+      "No change in ABGs"
+    ],
+    "correct": 1,
+    "rationale": "Hyperventilation blows off CO2 (decreasing it), which raises pH (respiratory alkalosis). Anxiety-induced hyperventilation is a common cause of respiratory alkalosis."
+  },
+  {
+    "q": "When interpreting ABGs, the nurse determines that pH and HCO3 both move in opposite directions. This indicates:",
+    "options": [
+      "Metabolic disorder",
+      "Respiratory disorder",
+      "Compensated state",
+      "Normal values"
+    ],
+    "correct": 1,
+    "rationale": "Rule of the Bs: if pH and Bicarb move Both in the SAME direction = metabolic. If they move in OPPOSITE directions = respiratory."
+  },
+  {
+    "q": "A patient on a ventilator has the following ABGs: pH 7.50, CO2 28, HCO3 24. The ventilator setting that may need adjustment is:",
+    "options": [
+      "FiO2 (increase oxygen)",
+      "Respiratory rate (decrease rate)",
+      "PEEP (increase pressure)",
+      "Tidal volume (increase volume)"
+    ],
+    "correct": 1,
+    "rationale": "pH >7.45 with low CO2 = respiratory alkalosis. The ventilator is removing too much CO2. Decrease the rate or tidal volume to allow CO2 to build back up."
+  },
+  {
+    "q": "In the compensation process, if a patient has metabolic acidosis, the respiratory system compensates by:",
+    "options": [
+      "Decreasing respiratory rate",
+      "Increasing respiratory rate (Kussmaul) to blow off CO2",
+      "Retaining CO2",
+      "No respiratory compensation occurs"
+    ],
+    "correct": 1,
+    "rationale": "The lungs compensate for metabolic acidosis by increasing respiratory rate (Kussmaul breathing) to blow off CO2, which raises pH back toward normal."
+  },
+  {
+    "q": "ABG interpretation: pH 7.33, CO2 42, HCO3 19. This is:",
+    "options": [
+      "Respiratory acidosis",
+      "Uncompensated metabolic acidosis",
+      "Compensated metabolic alkalosis",
+      "Respiratory alkalosis"
+    ],
+    "correct": 1,
+    "rationale": "pH <7.35 = acidosis. HCO3 is low (19 < 22). pH and bicarb both decreased (same direction) = metabolic acidosis. CO2 is normal = uncompensated."
+  },
+  {
+    "q": "A patient with a nasogastric tube on continuous suction is at risk for which acid-base imbalance?",
+    "options": [
+      "Metabolic acidosis",
+      "Respiratory acidosis",
+      "Metabolic alkalosis",
+      "Respiratory alkalosis"
+    ],
+    "correct": 2,
+    "rationale": "NG suction removes acidic gastric contents (HCl), leading to loss of acid = metabolic alkalosis. Also causes hypokalemia."
+  },
+  {
+    "q": "The nurse expects which serum potassium level in a patient with prolonged vomiting and pH 7.52?",
+    "options": [
+      "6.0 mEq/L",
+      "5.2 mEq/L",
+      "4.0 mEq/L",
+      "2.9 mEq/L"
+    ],
+    "correct": 3,
+    "rationale": "Prolonged vomiting causes metabolic alkalosis (loss of HCl). In alkalosis, K+ drops (hypokalemia). A level of 2.9 indicates hypokalemia consistent with alkalosis."
+  },
+  {
+    "q": "The nurse is assessing stages of grief (DABDA). Which stage involves the patient saying 'If I promise to go to church, will God heal me?'",
+    "options": [
+      "Denial",
+      "Anger",
+      "Bargaining",
+      "Depression"
+    ],
+    "correct": 2,
+    "rationale": "DABDA: Denial, Anger, Bargaining, Depression, Acceptance. Bargaining involves making deals or promises in exchange for healing or more time."
+  },
+  {
+    "q": "A patient in alcohol withdrawal has tremors, diaphoresis, and elevated vital signs but is oriented. This is MOST consistent with:",
+    "options": [
+      "Delirium Tremens",
+      "Alcohol Withdrawal Syndrome",
+      "Wernicke's encephalopathy",
+      "Korsakoff's psychosis"
+    ],
+    "correct": 1,
+    "rationale": "Alcohol Withdrawal Syndrome occurs ~24 hours after last drink with tremors, diaphoresis, elevated VS. DTs are more severe with hallucinations, seizures, and can be fatal."
+  },
+  {
+    "q": "The therapeutic window of aminoglycosides is described as:",
+    "options": [
+      "Wide - large difference between therapeutic and toxic",
+      "Narrow - small difference between what works and what kills",
+      "Moderate - standard safety margin",
+      "Variable depending on the patient"
+    ],
+    "correct": 1,
+    "rationale": "Aminoglycosides have a narrow therapeutic window/index - small difference between therapeutic and toxic levels. That's why trough and peak (TAP) levels must be drawn."
+  },
+  {
+    "q": "A patient on Revia (naltrexone) for alcohol deterrence should be advised that the medication takes how long to become effective?",
+    "options": [
+      "24 hours",
+      "1 week",
+      "2 weeks",
+      "1 month"
+    ],
+    "correct": 2,
+    "rationale": "Both Antabuse and Revia have an onset and duration of effectiveness of 2 weeks. Patient must be on the medication at least 2 weeks before exposure to alcohol."
+  },
+  {
+    "q": "The nurse is caring for a patient withdrawing from benzodiazepines. This is withdrawal from which type of drug?",
+    "options": [
+      "An Upper",
+      "A Downer",
+      "A hallucinogen",
+      "An opioid"
+    ],
+    "correct": 1,
+    "rationale": "Benzodiazepines are Downers (sedatives/CNS depressants). Withdrawal from a Downer = TOO MUCH stimulation = risk of seizures, agitation, insomnia."
+  },
+  {
+    "q": "Which cranial nerve is most affected by aminoglycoside toxicity?",
+    "options": [
+      "CN II (Optic)",
+      "CN VII (Facial)",
+      "CN VIII (Vestibulocochlear)",
+      "CN X (Vagus)"
+    ],
+    "correct": 2,
+    "rationale": "The 'figure 8 drawn inside the ear' reminds: aminoglycosides are toxic to CN8 (vestibulocochlear). Monitor hearing, balance, and tinnitus."
+  },
+  {
+    "q": "Aminoglycosides are NOT absorbed when given orally because:",
+    "options": [
+      "They are destroyed by stomach acid",
+      "They are too large to cross the GI membrane",
+      "They are not absorbed through the GI tract",
+      "They bind to food particles"
+    ],
+    "correct": 2,
+    "rationale": "Aminoglycosides are not absorbed PO, therefore no systemic effects. Only given PO for local GI effects: hepatic encephalopathy (reduce ammonia) and bowel surgery prep."
+  },
+  {
+    "q": "A 'mean old infection' that requires aminoglycosides would be:",
+    "options": [
+      "A mild viral upper respiratory infection",
+      "A simple UTI",
+      "A serious, resistant, life-threatening Gram-negative infection",
+      "A fungal skin infection"
+    ],
+    "correct": 2,
+    "rationale": "'A Mean Old Mysin' = aminoglycosides. Treat a 'mean old infection' with a 'mean old mycin.' Used for serious, resistant, life-threatening, Gram-negative infections only."
+  },
+  {
+    "q": "Negative chronotropic effect means:",
+    "options": [
+      "Increased heart rate",
+      "Decreased heart rate",
+      "Increased contractile force",
+      "Increased conduction speed"
+    ],
+    "correct": 1,
+    "rationale": "Negative chronotropy = decrease rate of impulse formation at SA node = decelerate heart rate. CCBs have negative chronotropic effects."
+  },
+  {
+    "q": "Negative dromotropic effect refers to:",
+    "options": [
+      "Decreased contractile force",
+      "Increased conduction speed",
+      "Decreased speed of impulse conduction through the heart",
+      "Increased blood pressure"
+    ],
+    "correct": 2,
+    "rationale": "Negative dromotropy = decreased speed that impulses travel from SA node through the AV node. CCBs slow conduction through the heart."
+  },
+  {
+    "q": "A flat line on the cardiac monitor with no QRS complexes represents:",
+    "options": [
+      "V-fib",
+      "V-tach",
+      "Asystole",
+      "Atrial flutter"
+    ],
+    "correct": 2,
+    "rationale": "A lack of QRS complexes = asystole = a flat line. This is a lethal arrhythmia that will kill the patient in 8 minutes or less."
+  },
+  {
+    "q": "The R on T phenomenon with PVCs is dangerous because it can:",
+    "options": [
+      "Cause bradycardia",
+      "Trigger ventricular fibrillation",
+      "Lead to heart block",
+      "Cause atrial fibrillation"
+    ],
+    "correct": 1,
+    "rationale": "R on T phenomenon (a PVC falls on a T wave) can trigger ventricular fibrillation. This is why PVCs with R on T become moderate priority."
+  },
+  {
+    "q": "Cohort patients in contact precautions based on:",
+    "options": [
+      "Symptoms only",
+      "Culture and NOT symptoms",
+      "Age and gender",
+      "Room availability"
+    ],
+    "correct": 1,
+    "rationale": "For contact precautions: can be in same room if cohort based on CULTURE, not symptoms. Do NOT cohort 2 RSV patients unless culture AND symptoms say they have the same disease."
+  },
+  {
+    "q": "The PPE removal order (taking OFF) is:",
+    "options": [
+      "Gown, Mask, Goggle, Gloves",
+      "Gloves, Goggle, Gown, Mask",
+      "Mask, Gown, Gloves, Goggle",
+      "Reverse of putting on"
+    ],
+    "correct": 1,
+    "rationale": "PPE OFF = alphabetical order: Gloves \u2192 Goggle \u2192 Gown \u2192 Mask. PPE ON = Gs in reverse alphabetical with Mask 2nd: Gown \u2192 Mask \u2192 Goggle \u2192 Gloves."
+  },
+  {
+    "q": "A patient with a V-tach rhythm is conscious, talking, and has a pulse. This means:",
+    "options": [
+      "The rhythm is not V-tach",
+      "V-tach is lethal and the patient should be pulseless",
+      "V-tach has cardiac output, so the patient can still be conscious",
+      "The monitor is malfunctioning"
+    ],
+    "correct": 2,
+    "rationale": "V-tach is POTENTIALLY lethal but still HAS cardiac output. The patient may be conscious with a pulse. V-fib and asystole produce NO cardiac output."
+  },
+  {
+    "q": "Chest tube drainage from a hemothorax is expected from which type of tube?",
+    "options": [
+      "Apical",
+      "Basilar",
+      "Both equally",
+      "Neither - chest tubes don't remove blood"
+    ],
+    "correct": 1,
+    "rationale": "Basilar (base) tubes remove blood/fluid due to gravity. Apical (top) tubes remove air. Basilar drainage is expected; basilar NOT bubbling is a GOOD sign."
+  },
+  {
+    "q": "Left ventricular hypoplastic syndrome is a TRouBLe defect even though it:",
+    "options": [
+      "Starts with 'L' not 'T'",
+      "Is not cyanotic",
+      "Does not require surgery",
+      "Affects adults only"
+    ],
+    "correct": 0,
+    "rationale": "All TRouBLe defects start with 'T' EXCEPT Left ventricular hypoplastic syndrome. It is the exception that still qualifies as a TRouBLe defect."
+  },
+  {
+    "q": "Epiglottitis is an example of a disease requiring which type of precaution?",
+    "options": [
+      "Contact",
+      "Airborne",
+      "Droplet",
+      "Standard only"
+    ],
+    "correct": 2,
+    "rationale": "Epiglottitis is caused by H. influenzae b, which requires DROPLET precautions. Remember: 'nothing in the throat' - droplets travel on large particles through coughing/sneezing to <3 feet."
+  },
+  {
+    "q": "The nurse teaches a patient going downstairs with crutches. Which body part moves down FIRST?",
+    "options": [
+      "Good foot",
+      "Bad foot with both crutches",
+      "Both crutches alone",
+      "Good foot with one crutch"
+    ],
+    "correct": 1,
+    "rationale": "Going DOWN stairs: bad foot goes down first (with both crutches). Going UP stairs: good foot goes up first. Crutches ALWAYS move with the bad leg."
+  },
+  {
+    "q": "A somatic delusion involves:",
+    "options": [
+      "Believing others are out to get you",
+      "Believing you are someone famous",
+      "A false belief about one's own body",
+      "Hearing voices that aren't there"
+    ],
+    "correct": 2,
+    "rationale": "Three types of delusions: Paranoid (people are out to get me), Grandiose (I'm someone important), Somatic (false belief about one's body, e.g., 'bugs are crawling under my skin')."
+  },
+  {
+    "q": "The causes of delirium include all EXCEPT:",
+    "options": [
+      "UTI",
+      "Thyroid imbalance",
+      "Schizophrenia",
+      "Medications/drugs"
+    ],
+    "correct": 2,
+    "rationale": "Delirium causes: UTI, thyroid imbalance, adrenal crisis, electrolytes, medications/drugs. Schizophrenia is FUNCTIONAL psychosis, not delirium. Delirium is temporary and has an underlying chemical cause."
+  },
+  {
+    "q": "When dealing with a schizoaffective patient who says 'Those people are plotting to kill me,' the FIRST nursing action is:",
+    "options": [
+      "Restrain the patient",
+      "Administer PRN medication",
+      "Acknowledge the patient's feeling",
+      "Prove that the people are not plotting"
+    ],
+    "correct": 2,
+    "rationale": "For functional psychosis (schizophrenia): (1) Acknowledge feeling FIRST, (2) Present reality, (3) Set limits, (4) Enforce limits."
+  },
+  {
+    "q": "A 2-point gait is appropriate for patients with:",
+    "options": [
+      "Non-weight bearing status",
+      "Severe bilateral weakness",
+      "Mild bilateral weakness",
+      "Unilateral leg injury"
+    ],
+    "correct": 2,
+    "rationale": "2-point gait: bilateral weakness (even-numbered) that is MILD. It's faster than 4-point gait. Moves one crutch and opposite foot simultaneously."
+  },
+  {
+    "q": "For safety, crutch landmarks should NEVER include measurements from:",
+    "options": [
+      "The anterior axillary fold",
+      "The handgrip",
+      "The foot",
+      "The wrist"
+    ],
+    "correct": 2,
+    "rationale": "Rule out landmarks on the FOOT or say AXILLA as incorrect measurements. Correct: 2-3 finger widths from anterior axillary fold, tip 6 inches lateral and front of foot, wrist at handgrip, 30\u00b0 elbow flexion."
+  },
+  {
+    "q": "The hallmark of dementia that distinguishes it from other psychoses is:",
+    "options": [
+      "Sudden onset",
+      "Memory loss and inability to learn",
+      "Temporary symptoms",
+      "Response to medication"
+    ],
+    "correct": 1,
+    "rationale": "Dementia hallmark: memory loss and inability to learn. This is permanent and progressive (unlike delirium which is temporary). Always acknowledge feeling, then redirect."
+  },
+  {
+    "q": "Psychosis of delirium is managed by:",
+    "options": [
+      "Teaching reality and setting limits",
+      "Acknowledging feeling and redirecting",
+      "Treating the underlying cause, acknowledging feeling, reassuring safety",
+      "Medication alone"
+    ],
+    "correct": 2,
+    "rationale": "Delirium: treat the UNDERLYING CAUSE (UTI, thyroid, electrolytes, drugs). Then (1) Acknowledge feeling, (2) Reassure about safety and temporariness. Redirecting is futile."
+  },
+  {
+    "q": "NPH insulin characteristics include:",
+    "options": [
+      "Clear appearance, give IV, onset 15 min",
+      "Cloudy appearance, intermediate-acting, peak 8-10 hours",
+      "Clear appearance, no peak, give at bedtime",
+      "Rapid-acting, peak 30 min, give with meals"
+    ],
+    "correct": 1,
+    "rationale": "NPH: cloudy, intermediate-acting. Peak: 8-10 hours. Duration: 12-16 hours. Cannot be given IV. Check for hypoglycemia at peak time."
+  },
+  {
+    "q": "DKA breath has a characteristic:",
+    "options": [
+      "Ammonia odor",
+      "Fruity/acetone smell",
+      "Musty odor",
+      "No distinctive odor"
+    ],
+    "correct": 1,
+    "rationale": "DKA produces ketones from fat metabolism. The breath has a fruity/acetone smell from ketone bodies. This is a distinguishing feature from HHNK (which has no ketones)."
+  },
+  {
+    "q": "The treatment for a conscious hypoglycemic patient is:",
+    "options": [
+      "IV Regular insulin",
+      "Fast-acting sugar like juice or candy",
+      "IV D5W with insulin drip",
+      "NPH insulin subcutaneously"
+    ],
+    "correct": 1,
+    "rationale": "For conscious hypoglycemia: give fast-acting sugar (juice, candy, glucose tablets). For unconscious: glucagon IM or D50W IV push. Never give insulin - it will worsen hypoglycemia."
+  },
+  {
+    "q": "When drawing up mixed insulin (Regular and NPH), the syringe is inserted into which vial FIRST?",
+    "options": [
+      "Regular (clear) vial first - inject air",
+      "NPH (cloudy) vial first - inject air",
+      "It doesn't matter",
+      "Draw both from multi-dose pens"
+    ],
+    "correct": 1,
+    "rationale": "Insert air into NPH vial first (don't draw), then insert air into Regular vial and draw Regular first. This prevents NPH contamination of the Regular vial."
+  },
+  {
+    "q": "A DM1 patient exercises more than usual without adjusting insulin or food. The nurse expects:",
+    "options": [
+      "Hyperglycemia",
+      "Hypoglycemia",
+      "DKA",
+      "No change in blood glucose"
+    ],
+    "correct": 1,
+    "rationale": "Exercise lowers blood glucose. Too much exercise without adjusting insulin/food = hypoglycemia. The three causes: not enough food, too much insulin, too much exercise."
+  },
+  {
+    "q": "Peripheral neuropathy is a long-term complication of:",
+    "options": [
+      "DKA only",
+      "HHNK/HHS (poor perfusion)",
+      "Hypoglycemia only",
+      "Normal aging"
+    ],
+    "correct": 1,
+    "rationale": "HHNK = severe dehydration = poor perfusion. Long-term complications include poor perfusion and peripheral neuropathy from chronic hyperglycemia damage to nerves."
+  },
+  {
+    "q": "Type 1 DM is characterized by:",
+    "options": [
+      "Insulin resistance with normal production",
+      "Complete lack of insulin production",
+      "Gestational onset only",
+      "Reversible with diet alone"
+    ],
+    "correct": 1,
+    "rationale": "Type 1 DM = lack of insulin (pancreas doesn't produce it). Treatment: DIE (Diet, Insulin - most important, Exercise). Cannot be managed with oral hypoglycemics alone."
+  },
+  {
+    "q": "The #1 nursing diagnosis for HHNK is:",
+    "options": [
+      "Risk for injury",
+      "Fluid Volume Deficit",
+      "Impaired gas exchange",
+      "Altered nutrition"
+    ],
+    "correct": 1,
+    "rationale": "HHNK = SEVERE dehydration. #1 Nursing diagnosis = Fluid Volume Deficit. #1 intervention = Rehydration. Think HHNK = think dehydration."
+  },
+  {
+    "q": "A patient's Digoxin level is 2.5. The nurse should:",
+    "options": [
+      "Administer the next dose as scheduled",
+      "Hold the dose and notify the HCP - level is toxic",
+      "Increase the dose per protocol",
+      "Document as a therapeutic level"
+    ],
+    "correct": 1,
+    "rationale": "Digoxin therapeutic: 1-2, toxic: >2. A level of 2.5 is TOXIC. Hold the dose and notify the HCP. Assess for toxicity S/Sx (visual changes, bradycardia, nausea)."
+  },
+  {
+    "q": "Lithium has a gray area between levels:",
+    "options": [
+      "0.3 to 0.6",
+      "1.3 to 2.0",
+      "2.0 to 3.0",
+      "0.6 to 1.0"
+    ],
+    "correct": 1,
+    "rationale": "Lithium: therapeutic 0.6-1.2, toxic >2.0. The gray area of 1.3-2.0 requires close monitoring - not clearly therapeutic but not definitively toxic yet."
+  },
+  {
+    "q": "Pathologic jaundice in a newborn appears:",
+    "options": [
+      "After 24 hours - this is normal",
+      "Before 24 hours - this is abnormal",
+      "At 1 week of age",
+      "Only in premature infants"
+    ],
+    "correct": 1,
+    "rationale": "Pathologic jaundice appears BEFORE 24 hours = abnormal. Physiologic jaundice appears AFTER 24 hours = normal. This distinction is critical for NCLEX."
+  },
+  {
+    "q": "For hiatal hernia, give LOW protein because:",
+    "options": [
+      "Protein slows gastric emptying, worsening reflux",
+      "Protein causes increased acid production",
+      "Protein is hard to swallow",
+      "Protein has no effect on hiatal hernia"
+    ],
+    "correct": 0,
+    "rationale": "Hiatal hernia needs fast gastric emptying. Protein bulks content and slows emptying (bad for hiatal hernia). So give LOW protein for hiatal hernia, HIGH protein for dumping."
+  },
+  {
+    "q": "The treatment for hypercalcemia includes:",
+    "options": [
+      "Calcium supplements",
+      "Fluids, diuretics, and calcitonin",
+      "Vitamin D supplements",
+      "No treatment needed"
+    ],
+    "correct": 1,
+    "rationale": "Hypercalcemia = sedative effects (everything slow). Treatment: hydration (fluids), diuretics to promote excretion, calcitonin to lower calcium levels."
+  },
+  {
+    "q": "Hypomagnesemia symptoms mirror:",
+    "options": [
+      "Hypercalcemia (everything slow)",
+      "Hypocalcemia (everything up - tetany, seizures)",
+      "Hypernatremia (dehydration)",
+      "Hyponatremia (fluid overload)"
+    ],
+    "correct": 1,
+    "rationale": "Magnesemia = same pattern as calcemia (opposite of prefix). HypoMg = opposite of hypo = everything UP: tetany, tremors, seizures (same as hypocalcemia)."
+  },
+  {
+    "q": "Dilantin (phenytoin) at a sub-therapeutic level (<10) requires the nurse to:",
+    "options": [
+      "Hold the medication",
+      "Increase the dose and assess for compliance",
+      "Administer an extra dose immediately",
+      "Switch to a different seizure medication"
+    ],
+    "correct": 1,
+    "rationale": "If Dilantin is non-therapeutic (<10), increase the dose and assess for compliance. The patient may not be taking the medication as prescribed."
+  },
+  {
+    "q": "Dumping syndrome occurs after which type of surgery?",
+    "options": [
+      "Cholecystectomy",
+      "Gastric surgery (gastrectomy, Billroth procedures)",
+      "Appendectomy",
+      "Laminectomy"
+    ],
+    "correct": 1,
+    "rationale": "Dumping syndrome occurs after gastric surgery where the pyloric sphincter is altered. Gastric contents 'dump' too quickly into the duodenum causing cramping, diarrhea, dizziness."
+  },
+  {
+    "q": "Hyperthyroidism treatment modalities include all EXCEPT:",
+    "options": [
+      "Radioactive iodine",
+      "Subtotal thyroidectomy",
+      "Antithyroid medications",
+      "Levothyroxine (Synthroid)"
+    ],
+    "correct": 3,
+    "rationale": "Levothyroxine treats HYPOthyroidism (replaces thyroid hormone). Hyperthyroidism treatment: (1) Nuke with radioactive iodine, (2) Subtotal thyroidectomy, (3) Antithyroid medications."
+  },
+  {
+    "q": "Myxedema coma is associated with:",
+    "options": [
+      "Hyperthyroidism",
+      "Severe hypothyroidism with decreased mental status and hypothermia",
+      "Cushing syndrome",
+      "Addisonian crisis"
+    ],
+    "correct": 1,
+    "rationale": "Myxedema coma = severe hypothyroidism \u2192 decreased mental status, hypothermia, and slowing of function in multiple organs. It is a medical emergency."
+  },
+  {
+    "q": "Cushing syndrome physical features include:",
+    "options": [
+      "Thin face, long extremities, hypotension",
+      "Moon face, buffalo hump, truncal obesity, thin extremities",
+      "Weight loss and exophthalmos",
+      "Normal body habitus"
+    ],
+    "correct": 1,
+    "rationale": "Cushing = excess steroids. Features: moon face, buffalo hump, truncal obesity, thin extremities, hyperglycemia, immunosuppression. Same as steroid medication side effects."
+  },
+  {
+    "q": "When selecting toys, if given a choice between ages, always go:",
+    "options": [
+      "Older because older children are more developed",
+      "Younger because children regress when sick",
+      "With the child's actual age",
+      "With the parent's preference"
+    ],
+    "correct": 1,
+    "rationale": "When given a variety of ages, always go YOUNGER because (1) children regress when sick, (2) you want to give them time to grow developmentally."
+  },
+  {
+    "q": "A toddler engages in which type of play?",
+    "options": [
+      "Cooperative play",
+      "Parallel play",
+      "Competitive play",
+      "Solitary play only"
+    ],
+    "correct": 1,
+    "rationale": "Toddlers (1-3 years) are characterized by PARALLEL play (think terrible two). They play alongside other children but not together. Preschoolers = cooperative play."
+  },
+  {
+    "q": "Cervical laminectomy post-op complication to watch for is:",
+    "options": [
+      "Urinary retention",
+      "Pneumonia",
+      "Paralytic ileus",
+      "Leg weakness"
+    ],
+    "correct": 1,
+    "rationale": "Cervical innervates diaphragm and arms. Post-op: watch for pneumonia. Thoracic = pneumonia + ileus. Lumbar = urinary retention + leg problems."
+  },
+  {
+    "q": "After laminectomy, a patient should NEVER:",
+    "options": [
+      "Walk or stand",
+      "Lift by bending at the waist (use knees instead)",
+      "Lie flat on their back",
+      "Sleep on their side"
+    ],
+    "correct": 1,
+    "rationale": "PERMANENT restriction: laminectomy patients will NEVER be allowed to lift by bending at the waist (must use knees). Also: cervical - no lifting over head. No jarring activities."
+  },
+  {
+    "q": "For an infant 6-9 months, appropriate toys focus on:",
+    "options": [
+      "Building blocks and puzzles",
+      "Sensory stimulation with textures",
+      "Competitive games",
+      "Push/pull toys for walking"
+    ],
+    "correct": 1,
+    "rationale": "6-9 months: sensory stimulation. Infants explore through touch, taste, sight, sound. Textured toys, soft objects, and things they can grasp are appropriate."
+  },
+  {
+    "q": "INR is used to monitor which anticoagulant?",
+    "options": [
+      "Heparin",
+      "Coumadin (warfarin)",
+      "Aspirin",
+      "Lovenox"
+    ],
+    "correct": 1,
+    "rationale": "Coumadin monitoring: PT/INR. Heparin monitoring: PTT. Coumadin antidote: Vitamin K. Heparin antidote: Protamine sulfate."
+  },
+  {
+    "q": "A patient on neutropenic precautions should NOT have:",
+    "options": [
+      "Cooked vegetables",
+      "Bottled water",
+      "Fresh flowers or potted plants",
+      "Sealed canned food"
+    ],
+    "correct": 2,
+    "rationale": "No fresh flowers or potted plants in neutropenic rooms - they harbor bacteria and mold. Also no raw fruits/vegetables, no undercooked meat, no standing water >15 minutes."
+  },
+  {
+    "q": "When a sodium level is abnormal AND the patient has a change in LOC, the priority level changes from B to:",
+    "options": [
+      "Level A",
+      "Level C",
+      "Level D",
+      "Stays at B"
+    ],
+    "correct": 1,
+    "rationale": "Sodium: normally Level B when abnormal. Becomes Level C when there is a change in LOC (level of consciousness), making it a safety issue requiring immediate action."
+  },
+  {
+    "q": "Platelet count of 80,000 is classified as:",
+    "options": [
+      "Normal",
+      "Level B",
+      "Level C",
+      "Level D"
+    ],
+    "correct": 2,
+    "rationale": "Platelets (normal 150,000-450,000): Level C if <90,000. At 80,000, the patient has increased bleeding risk and needs immediate monitoring and precautions."
+  },
+  {
+    "q": "The nurse should assess for which signs when WBC is below 4,000?",
+    "options": [
+      "Bleeding and bruising",
+      "Signs of infection",
+      "Dehydration",
+      "Cardiac arrhythmias"
+    ],
+    "correct": 1,
+    "rationale": "WBC <4,000 = Level C = immunocompromised. Assess for signs of infection: fever, sore throat, chills, malaise. Implement neutropenic precautions."
+  },
+  {
+    "q": "A hemoglobin of 14 g/dL is classified as:",
+    "options": [
+      "Normal",
+      "Level A",
+      "Level B",
+      "Level C"
+    ],
+    "correct": 0,
+    "rationale": "Hemoglobin normal range is 12-18 g/dL. A level of 14 is within normal limits. No action needed."
+  },
+  {
+    "q": "Level D on the ABCD scheme requires which level of intervention?",
+    "options": [
+      "Routine monitoring",
+      "Close observation",
+      "Critical intervention",
+      "Emergency/life-saving intervention"
+    ],
+    "correct": 3,
+    "rationale": "Level D = DEADLY. Requires immediate emergency intervention. Examples: CO2 in the 60s+, platelets <40,000. These are life-threatening situations."
+  },
+  {
+    "q": "A BUN level of 35 with no other abnormalities would be classified as:",
+    "options": [
+      "Level A",
+      "Level B",
+      "Level C",
+      "Level D"
+    ],
+    "correct": 0,
+    "rationale": "BUN (normal 8-25) when abnormal is Level A (low priority). Action: assess for dehydration, prepare IV fluid, call HCP. Can wait a few hours or until early morning."
+  },
+  {
+    "q": "The 'E' in the ABCDEFG mnemonic for phenothiazine side effects stands for:",
+    "options": [
+      "Edema",
+      "EPS (extrapyramidal symptoms)",
+      "Emesis",
+      "Electrolyte imbalance"
+    ],
+    "correct": 1,
+    "rationale": "E = EPS (Extrapyramidal Symptoms): tremors, Parkinson-like symptoms (shuffling gait, rigidity, pill-rolling tremor). A significant side effect of first-generation antipsychotics."
+  },
+  {
+    "q": "Which cheese can a patient on MAOIs safely eat?",
+    "options": [
+      "Aged cheddar",
+      "Blue cheese",
+      "Mozzarella and cottage cheese",
+      "Brie"
+    ],
+    "correct": 2,
+    "rationale": "MAOIs: avoid aged cheese. Only mozzarella and cottage cheese are safe (they are not aged). All other cheeses contain tyramine, which can cause hypertensive crisis."
+  },
+  {
+    "q": "TCAs differ from phenothiazines in that TCAs do NOT cause:",
+    "options": [
+      "Anticholinergic effects",
+      "Blurred vision",
+      "EPS, photosensitivity, and agranulocytosis",
+      "Constipation"
+    ],
+    "correct": 2,
+    "rationale": "TCAs have ABCD (Anticholinergic, Blurred vision, Constipation, Drowsiness). They do NOT have EFG (EPS, Fotosensitivity, aGranulocytosis) that phenothiazines have."
+  },
+  {
+    "q": "A patient asks when their antidepressant will start working. The nurse should respond:",
+    "options": [
+      "'It works immediately'",
+      "'Give it 2-3 days'",
+      "'It takes about 2-4 weeks to reach full therapeutic effect'",
+      "'It may take 3-6 months'"
+    ],
+    "correct": 2,
+    "rationale": "Antidepressants take 2-4 weeks to reach therapeutic effects. Important patient teaching to prevent early discontinuation due to perceived lack of effect."
+  },
+  {
+    "q": "Benzodiazepines should NOT be used long-term because:",
+    "options": [
+      "They cause liver failure",
+      "They cause physical dependence and tolerance",
+      "They stop working immediately after one dose",
+      "They cause permanent brain damage"
+    ],
+    "correct": 1,
+    "rationale": "Benzodiazepines work quickly but can cause physical dependence and tolerance with long-term use. They are Downers - withdrawal can cause seizures."
+  },
+  {
+    "q": "The SSRI category of antidepressants includes:",
+    "options": [
+      "Lithium and Valium",
+      "Prozac (fluoxetine) and Zoloft (sertraline)",
+      "Thorazine and Haldol",
+      "Elavil and Tofranil"
+    ],
+    "correct": 1,
+    "rationale": "SSRIs (Selective Serotonin Reuptake Inhibitors): Prozac (fluoxetine), Zoloft (sertraline). They elevate mood. Side effects include ABCDE (with Euphoria). May cause insomnia."
+  },
+  {
+    "q": "Clozapine's advantage over first-generation antipsychotics is:",
+    "options": [
+      "It has no side effects",
+      "It does not cause A-F side effects (anticholinergic through fotosensitivity)",
+      "It is cheaper",
+      "It works faster"
+    ],
+    "correct": 1,
+    "rationale": "Clozapine does not have the A-F side effects. HOWEVER, it DOES cause severe agranulocytosis (the 'G') - worse than cancer drugs. Must monitor WBC closely."
+  },
+  {
+    "q": "A patient on Geodon (ziprasidone) develops chest palpitations. The nurse's priority is:",
+    "options": [
+      "Document and continue monitoring",
+      "Immediately assess cardiac rhythm - Geodon has a QT prolongation warning",
+      "Give PRN benzodiazepine",
+      "Reassure the patient"
+    ],
+    "correct": 1,
+    "rationale": "Geodon has a black box warning for prolonged QT interval causing sudden cardiac arrest. Palpitations in a patient on Geodon require immediate cardiac rhythm assessment."
+  },
+  {
+    "q": "Effacement is best described as:",
+    "options": [
+      "Opening of the cervix from 0-10 cm",
+      "Thinning of the cervix from thick to paper-thin (100%)",
+      "The fetal position relative to ischial spines",
+      "The relationship between fetal and maternal spine"
+    ],
+    "correct": 1,
+    "rationale": "Effacement = thinning of the cervix. It goes from thick to 100% effaced (thin like paper). Dilation = opening from 0-10 cm. Station = fetal presenting part to ischial spines."
+  },
+  {
+    "q": "High fetal heart rate (>160 bpm) requires the nurse to:",
+    "options": [
+      "Perform LION protocol",
+      "Document acceleration",
+      "PUSH and POSITION",
+      "Prepare for C-section immediately"
+    ],
+    "correct": 1,
+    "rationale": "High fetal HR >160 = document acceleration. This is not necessarily bad. Remember: tracings starting with 'L' (Low, Late) are bad \u2192 do LION. Variable = very bad \u2192 PUSH/POSITION."
+  },
+  {
+    "q": "OB medications that STOP labor include:",
+    "options": [
+      "Pitocin and Methergine",
+      "Terbutaline and Magnesium sulfate",
+      "Betamethasone and Surfactant",
+      "Heparin and Coumadin"
+    ],
+    "correct": 1,
+    "rationale": "Tocolytics STOP labor: Terbutaline (Brethine) and Magnesium sulfate. Pitocin and Methergine STIMULATE uterine contractions. Betamethasone matures lungs. Surfactant goes to the baby."
+  },
+  {
+    "q": "Postpartum, the nurse finds the fundus is displaced to the right. The most likely cause is:",
+    "options": [
+      "Normal involution",
+      "Full bladder",
+      "Uterine rupture",
+      "Placental retention"
+    ],
+    "correct": 1,
+    "rationale": "Displaced fundus = full bladder pushing uterus to one side. Action: catheterize the patient. If fundus is boggy = massage it."
+  },
+  {
+    "q": "Port wine stain in a newborn is characterized by:",
+    "options": [
+      "Disappearing within 24 hours",
+      "Red to purple, does NOT blanch on pressure",
+      "White pinhead-size spots on the nose",
+      "Crossing suture lines"
+    ],
+    "correct": 1,
+    "rationale": "Port wine stain (nevus flammeus): red to purple, varies in size, commonly on face/neck, does NOT blanch on pressure. Present at birth. Composed of newly formed capillaries."
+  },
+  {
+    "q": "Milia in a newborn is characterized by:",
+    "options": [
+      "Red to purple stains on the face",
+      "White, pinhead-size, distended sebaceous glands on nose, cheek, chin",
+      "Edema crossing suture lines",
+      "Yellow skin discoloration"
+    ],
+    "correct": 1,
+    "rationale": "Milia = white, pinhead-size, distended sebaceous glands on nose, cheek, chin, and occasionally trunk. NORMAL finding. Usually disappears spontaneously."
+  },
+  {
+    "q": "Cephalohematoma differs from caput succedaneum because cephalohematoma:",
+    "options": [
+      "Crosses suture lines",
+      "Does NOT cross suture lines",
+      "Is always symmetrical",
+      "Disappears faster"
+    ],
+    "correct": 1,
+    "rationale": "Cephalohematoma does NOT cross suture lines (confined to one bone). Caput Succedaneum (CS) = Crosses Suture lines and is symmetrical."
+  },
+  {
+    "q": "K-wasting diuretics include Lasix and:",
+    "options": [
+      "Spironolactone",
+      "Triamterene",
+      "Diuril",
+      "Amiloride"
+    ],
+    "correct": 2,
+    "rationale": "K-wasting: any diuretic ending in 'X' (Lasix) PLUS Diuril (a thiazide). K-sparing: Spironolactone, Triamterene. 'X' marks the potassium out."
+  },
+  {
+    "q": "An acute condition ALWAYS takes priority over a chronic condition because:",
+    "options": [
+      "Acute patients are always younger",
+      "Acute conditions can rapidly deteriorate",
+      "Chronic conditions are never life-threatening",
+      "Acute patients are always in more pain"
+    ],
+    "correct": 1,
+    "rationale": "Rule 1: Acute beats Chronic. Acute conditions can rapidly deteriorate and require immediate intervention, whereas chronic conditions are already being managed."
+  },
+  {
+    "q": "When a question asks 'Who would you discharge first?' the nurse should look for the:",
+    "options": [
+      "Highest priority patient",
+      "Lowest priority patient",
+      "Newest admission",
+      "Oldest patient"
+    ],
+    "correct": 1,
+    "rationale": "'Who to discharge?' = look for LOWEST priority (most stable). 'Who to see first?' = look for HIGHEST priority. Make sure you know what the question is asking."
+  },
+  {
+    "q": "An LPN can perform all EXCEPT:",
+    "options": [
+      "Administer routine PO medications",
+      "Perform wound care on established plans",
+      "Teach a newly diagnosed diabetic patient",
+      "Take vital signs on stable patients"
+    ],
+    "correct": 2,
+    "rationale": "LPNs cannot do initial teaching for newly diagnosed conditions - this requires RN assessment and planning. LPNs can reinforce established teaching plans."
+  },
+  {
+    "q": "The Formal Operations stage begins at age:",
+    "options": [
+      "7 years",
+      "9 years",
+      "12 years",
+      "16 years"
+    ],
+    "correct": 2,
+    "rationale": "Piaget's stages: Sensorimotor (0-2), Preoperational (2-7), Concrete Operations (7-11), Formal Operations (12+). At 12, adolescents develop abstract thinking."
+  },
+  {
+    "q": "A patient with hepatitis (liver) and confusion (brain) has:",
+    "options": [
+      "Low priority - both are expected",
+      "High priority - assess the BRAIN as the modifying organ",
+      "High priority - assess the LIVER as the diagnosis",
+      "Low priority - confusion is normal with hepatitis"
+    ],
+    "correct": 1,
+    "rationale": "Use the vital organ rule with the MODIFYING PHRASE (confusion = brain), not the diagnosis (hepatitis = liver). Brain is #1 priority organ. This patient is high priority."
+  },
+  {
+    "q": "The nurse teaches an adolescent (12-18) about their condition. According to Piaget, the teaching approach should include:",
+    "options": [
+      "Only concrete demonstrations",
+      "Abstract concepts, consequences, and self-management",
+      "Visual aids only",
+      "Parental instruction only"
+    ],
+    "correct": 1,
+    "rationale": "Formal Operations (12+): adolescents can think abstractly, understand consequences, and manage their own care. Teach about long-term effects and self-management."
+  },
+  {
+    "q": "Intervening with inappropriate staff behavior, the nurse should choose between telling supervisor, confronting/taking over, or talking later based on:",
+    "options": [
+      "Always tell the supervisor first",
+      "Based on severity and patient safety",
+      "Always confront immediately",
+      "Always wait to talk later"
+    ],
+    "correct": 1,
+    "rationale": "The choice depends on severity. If patient safety is immediately at risk, confront and take over. If not immediately dangerous but needs addressing, talk to them later. If pattern of behavior, tell supervisor. NEVER ignore."
+  },
+  {
+    "q": "A patient on a ventilator develops sudden respiratory distress with absent breath sounds on the left. The nurse suspects a tension pneumothorax. The immediate priority is:",
+    "options": [
+      "Obtain a chest X-ray",
+      "Prepare for needle decompression",
+      "Increase FiO2 to 100%",
+      "Administer bronchodilators"
+    ],
+    "correct": 1,
+    "rationale": "Tension pneumothorax is a medical emergency. The immediate priority is needle decompression to release trapped air. A chest X-ray would take too long."
+  },
+  {
+    "q": "The nurse caring for a patient with chronic alcohol abuse notes spider angiomas, ascites, and jaundice. These findings are consistent with:",
+    "options": [
+      "Acute pancreatitis",
+      "Hepatic cirrhosis",
+      "Wernicke encephalopathy",
+      "Delirium tremens"
+    ],
+    "correct": 1,
+    "rationale": "Spider angiomas, ascites, and jaundice are classic signs of hepatic cirrhosis from chronic alcohol abuse. The liver damage leads to portal hypertension and impaired bilirubin metabolism."
+  },
+  {
+    "q": "A patient with atrial fibrillation is at highest risk for which complication?",
+    "options": [
+      "Heart block",
+      "Pulmonary embolism from blood clot formation",
+      "Ventricular fibrillation",
+      "Cardiac tamponade"
+    ],
+    "correct": 1,
+    "rationale": "A-fib causes irregular, chaotic atrial contractions allowing blood to pool and form clots. These clots can break loose and cause pulmonary embolism or stroke. Anticoagulants are often prescribed."
+  },
+  {
+    "q": "The nurse is assessing a patient after a walker fitting. The correct position for the walker handgrip is at the level of the:",
+    "options": [
+      "Elbow",
+      "Shoulder",
+      "Greater trochanter (hip)",
+      "Wrist"
+    ],
+    "correct": 3,
+    "rationale": "The walker handgrip should be at wrist level, similar to crutch handgrips. This allows proper posture and adequate arm extension during ambulation."
+  },
+  {
+    "q": "A patient with newly diagnosed Type 1 diabetes asks why they cannot take pills instead of insulin injections. The best nursing response is:",
+    "options": [
+      "Pills are not as effective as insulin",
+      "Your pancreas does not produce insulin, so you must replace it with injections",
+      "Oral medications are only for elderly patients",
+      "You can switch to pills after your blood sugar stabilizes"
+    ],
+    "correct": 1,
+    "rationale": "Type 1 DM = no insulin production (pancreas failure). Oral hypoglycemics work by stimulating the pancreas to produce MORE insulin or improving sensitivity - useless if no insulin is being produced."
+  },
+  {
+    "q": "When assessing a patient for Trousseau sign, the nurse inflates a blood pressure cuff and observes for:",
+    "options": [
+      "Facial twitching when the cheek is tapped",
+      "Carpopedal spasm (hand cramping)",
+      "Hyperactive deep tendon reflexes",
+      "Positive Babinski sign"
+    ],
+    "correct": 1,
+    "rationale": "Trousseau sign: inflate BP cuff above systolic for 3 minutes and observe for carpopedal spasm (hand cramping). Positive in hypocalcemia. Chvostek sign = facial twitching when cheek is tapped."
+  },
+  {
+    "q": "A woman at 38 weeks gestation reports a sudden gush of clear fluid from the vagina. The nurse should FIRST:",
+    "options": [
+      "Prepare for immediate C-section",
+      "Assess fetal heart tones",
+      "Perform a sterile vaginal exam",
+      "Start Pitocin infusion"
+    ],
+    "correct": 1,
+    "rationale": "Rupture of membranes can lead to cord prolapse and fetal distress. The first priority is to assess fetal heart tones (FHR) to ensure the baby is tolerating the event."
+  },
+  {
+    "q": "The nurse knows that the key difference between physiologic and pathologic jaundice in newborns is:",
+    "options": [
+      "Physiologic is more severe",
+      "Pathologic appears BEFORE 24 hours; physiologic appears AFTER 24 hours",
+      "Physiologic requires phototherapy; pathologic does not",
+      "They are essentially the same condition"
+    ],
+    "correct": 1,
+    "rationale": "Timing is the critical distinction. Pathologic jaundice = before 24 hours (ABNORMAL). Physiologic jaundice = after 24 hours (NORMAL). Both involve elevated bilirubin but pathologic requires urgent workup."
+  },
+  {
+    "q": "When delegating tasks, the nurse remembers that UAPs (unlicensed assistive personnel) can perform:",
+    "options": [
+      "Medication administration",
+      "Assessment of new symptoms",
+      "Vital signs and hygiene care for stable patients",
+      "Discharge teaching"
+    ],
+    "correct": 2,
+    "rationale": "UAPs can perform routine, non-invasive tasks on stable patients: vital signs, hygiene, ambulation, feeding, I&O measurement. They cannot assess, administer medications, or teach."
+  },
+  {
+    "q": "A patient has a potassium of 6.8 with EKG changes showing peaked T waves. The nurse administers IV calcium gluconate to:",
+    "options": [
+      "Lower the potassium level directly",
+      "Protect the heart from arrhythmias while other treatments work",
+      "Increase calcium levels",
+      "Treat the underlying cause"
+    ],
+    "correct": 1,
+    "rationale": "IV calcium gluconate does NOT lower potassium. It stabilizes the cardiac membrane to PROTECT the heart while D5W, Regular insulin, and Kayexalate work to actually lower the K+ level."
+  }
+]

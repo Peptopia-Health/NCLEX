@@ -1,0 +1,222 @@
+[
+  {
+    "q": "Calcium channel blockers (CCBs) have which effects on the heart?",
+    "options": [
+      "Positive inotropic, chronotropic, and dromotropic effects",
+      "Negative inotropic, chronotropic, and dromotropic effects",
+      "Positive inotropic but negative chronotropic effects",
+      "No effect on cardiac function"
+    ],
+    "correct": 1,
+    "rationale": "CCBs are 'like Valium for the heart' - they relax and slow down the heart. They have negative inotropic (weaken contraction), negative chronotropic (slow rate), and negative dromotropic (slow conduction) effects."
+  },
+  {
+    "q": "A nurse observes a cardiac monitor showing a chaotic QRS pattern with no discernible rhythm. This is most likely:",
+    "options": [
+      "Atrial fibrillation",
+      "Atrial flutter",
+      "Ventricular fibrillation",
+      "Normal sinus rhythm"
+    ],
+    "correct": 2,
+    "rationale": "Chaotic QRS complexes = ventricular fibrillation (v-fib). The word 'chaotic' is used to describe fibrillation. QRS = ventricular. V-fib is lethal and will kill in 8 minutes or less."
+  },
+  {
+    "q": "Which cardiac rhythm produces a 'sawtooth' wave pattern?",
+    "options": [
+      "Ventricular tachycardia",
+      "Atrial fibrillation",
+      "Atrial flutter",
+      "Ventricular fibrillation"
+    ],
+    "correct": 2,
+    "rationale": "P waves (atrial) in the form of a sawtooth wave = atrial flutter. This is one of the 6 most tested rhythms on the NCLEX."
+  },
+  {
+    "q": "A patient has PVCs (premature ventricular contractions) after an MI. The nurse should:",
+    "options": [
+      "Call a code blue immediately",
+      "Treat this as a high priority",
+      "Document as a low priority finding",
+      "Administer IV amiodarone"
+    ],
+    "correct": 2,
+    "rationale": "PVCs after an MI are common and are LOW priority. PVCs become MODERATE priority only if: 6+ PVCs/minute, more than 6 PVCs in a row, or R on T phenomenon."
+  },
+  {
+    "q": "The nurse is caring for a patient with a hemothorax and a chest tube. Which finding should be reported immediately?",
+    "options": [
+      "The chest tube is not bubbling",
+      "The chest tube drained 800 mL in the first 10 hours",
+      "The chest tube is intermittently bubbling",
+      "A small amount of drainage in the collection chamber"
+    ],
+    "correct": 1,
+    "rationale": "For a hemothorax, 800 mL over 10 hours (80 mL/hr) is excessive and must be reported. For a hemothorax, some blood drainage is expected, but not bubbling (air)."
+  },
+  {
+    "q": "An apical chest tube is NOT bubbling. The nurse should:",
+    "options": [
+      "Document as a normal finding",
+      "Report this immediately as it is abnormal",
+      "Increase suction pressure",
+      "Reposition the patient"
+    ],
+    "correct": 1,
+    "rationale": "An APICAL chest tube removes AIR. If it is not bubbling, this is a BAD sign because air (bubbling) is expected. This needs to be reported."
+  },
+  {
+    "q": "The water seal of a chest tube breaks. Place the nurse's actions in the correct order:",
+    "options": [
+      "Cut, clamp, submerge under sterile water, unclamp",
+      "Clamp, cut, submerge under sterile water, unclamp",
+      "Submerge under sterile water, clamp, cut, unclamp",
+      "Call the physician, then clamp the tube"
+    ],
+    "correct": 1,
+    "rationale": "When the water seal breaks: Clamp \u2192 Cut the tube \u2192 Submerge the end under sterile water (MOST important step) \u2192 Unclamp. All must be done within 15 seconds."
+  },
+  {
+    "q": "Which lethal cardiac arrhythmias will kill a patient in 8 minutes or less?",
+    "options": [
+      "Atrial fibrillation and atrial flutter",
+      "V-tach and PVCs",
+      "Asystole and ventricular fibrillation",
+      "Sinus bradycardia and heart block"
+    ],
+    "correct": 2,
+    "rationale": "Asystole (flat line) and V-fib produce low or no cardiac output, without which there is inadequate brain perfusion leading to confusion and death within 8 minutes."
+  },
+  {
+    "q": "The mnemonic 'TRouBLe' helps identify congenital heart defects that:",
+    "options": [
+      "Are benign and require no intervention",
+      "Require surgery now/soon to live and shunt blood Right to Left",
+      "Are treated with medication only",
+      "Only affect adults"
+    ],
+    "correct": 1,
+    "rationale": "TRouBLe defects shunt blood Right to Left, are Blue (cyanotic), and all start with 'T' (plus left ventricular hypoplastic syndrome). These children need surgery, have delayed growth, and shortened life expectancy."
+  },
+  {
+    "q": "Which congenital heart defects are classified as 'TRouBLe' defects?",
+    "options": [
+      "VSD, PDA, ASD",
+      "Tetralogy of Fallot, Truncus arteriosus, Transposition of great vessels",
+      "Patent foramen ovale, Pulmonic stenosis, ASD",
+      "Coarctation of the aorta, VSD, PDA"
+    ],
+    "correct": 1,
+    "rationale": "All TRouBLe defects start with 'T': Tetralogy of Fallot, Truncus arteriosus, Transposition of great vessels, Tricuspid atresia, Totally anomalous pulmonary vasculature. Plus Left ventricular hypoplastic syndrome."
+  },
+  {
+    "q": "The mnemonic 'PROVe' identifies the 4 defects of Tetralogy of Fallot as:",
+    "options": [
+      "Pericarditis, Right heart failure, Obstruction, VSD",
+      "Pulmonary artery stenosis, RVH, Overriding aorta, VSD",
+      "Patent ductus, Right atrial enlargement, Obstruction, Valve defect",
+      "Pulmonary hypertension, Regurgitation, Outflow tract, Vessel anomaly"
+    ],
+    "correct": 1,
+    "rationale": "PROVe = Pulmonary artery stenosis, RVH (right ventricular hypertrophy), Overriding aorta, VSD (ventricular septal defect). You just need to spot these as answer choices."
+  },
+  {
+    "q": "Airborne precautions use the mnemonic 'Air MTV.' Which diseases require airborne precautions?",
+    "options": [
+      "Meningitis, Tetanus, Varicella",
+      "MMR (Measles, Mumps, Rubella), TB, Varicella",
+      "MRSA, TB, VRE",
+      "Malaria, Typhoid, Vibrio"
+    ],
+    "correct": 1,
+    "rationale": "Air MTV = MMR (measles, mumps, rubella), TB, and Varicella (chickenpox). These require negative airflow rooms, keeping the door closed, and the patient wears a mask when leaving the room."
+  },
+  {
+    "q": "The correct order for putting on PPE is:",
+    "options": [
+      "Gloves, Gown, Mask, Goggle",
+      "Mask, Gown, Goggle, Gloves",
+      "Gown, Mask, Goggle, Gloves",
+      "Goggle, Gloves, Gown, Mask"
+    ],
+    "correct": 2,
+    "rationale": "PPE ON: The 'Gs' are in reverse alphabetical order with Mask 2nd: Gown \u2192 Mask \u2192 Goggle \u2192 Gloves. PPE OFF: Alphabetical order: Gloves \u2192 Goggle \u2192 Gown \u2192 Mask."
+  },
+  {
+    "q": "Contact precautions are required for which of the following conditions?",
+    "options": [
+      "TB and measles",
+      "C. diff, Hepatitis A, Staph, RSV, Herpes",
+      "Meningitis and H. influenzae",
+      "Chickenpox and mumps"
+    ],
+    "correct": 1,
+    "rationale": "Contact precautions are for anything enteric (C. diff, Hep A, E. coli, cholera), Staph, RSV, and Herpes. PPE includes hand washing, gown, and gloves."
+  },
+  {
+    "q": "A closed chest drainage device (Jackson-Pratt, Hemovac) is accidentally knocked over. The nurse should:",
+    "options": [
+      "Call the physician immediately",
+      "Clamp the tubing and call for help",
+      "Ask the patient to take a deep breath and set the device upright",
+      "Prepare for emergency surgery"
+    ],
+    "correct": 2,
+    "rationale": "If a drainage device is knocked over, ask the patient to take a deep breath and set the device back up. This is NOT a medical emergency and there is no need to call the physician."
+  },
+  {
+    "q": "Which statement about ventricular tachycardia (V-tach) is correct?",
+    "options": [
+      "V-tach is always lethal",
+      "V-tach is a potentially lethal rhythm but still has cardiac output",
+      "V-tach and V-fib produce the same symptoms",
+      "V-tach is benign and requires no treatment"
+    ],
+    "correct": 1,
+    "rationale": "V-tach is a POTENTIALLY lethal cardiac rhythm but it still has a cardiac output (CO). V-fib and asystole are lethal because they produce low or no CO."
+  },
+  {
+    "q": "Droplet precautions are required for bugs traveling on large particles through coughing and sneezing to less than:",
+    "options": [
+      "1 foot",
+      "3 feet",
+      "6 feet",
+      "10 feet"
+    ],
+    "correct": 1,
+    "rationale": "Droplet precautions are for bugs traveling on large particles through coughing and sneezing to less than 3 feet. Diseases include meningitis and H. influenzae b."
+  },
+  {
+    "q": "A basilar chest tube is draining 200 mL in the first hour. The nurse should:",
+    "options": [
+      "Report this immediately as excessive",
+      "Document this as an expected finding",
+      "Clamp the tube",
+      "Increase suction"
+    ],
+    "correct": 1,
+    "rationale": "A basilar (base) chest tube removes blood or fluid due to gravity. Drainage of 200 mL in the first hour is expected. A basilar chest tube that is NOT bubbling is a good sign."
+  },
+  {
+    "q": "A patient has a right pneumonectomy. The nurse expects which of the following regarding chest tubes?",
+    "options": [
+      "Two chest tubes will be needed",
+      "One apical chest tube is standard",
+      "No chest tube is needed",
+      "A basilar tube only"
+    ],
+    "correct": 2,
+    "rationale": "Post-op right pneumonectomy does NOT need a chest tube since the right lung was removed. However, a lobectomy or wedge resection WILL require a chest tube."
+  },
+  {
+    "q": "All children with a congenital heart defect, whether TRouBLe or No TRouBLe, will have:",
+    "options": [
+      "Cyanosis",
+      "A murmur",
+      "Heart failure",
+      "Need for immediate surgery"
+    ],
+    "correct": 1,
+    "rationale": "ALL children with any congenital heart defect have a murmur. An echocardiogram is needed to find the cause of the murmur."
+  }
+]

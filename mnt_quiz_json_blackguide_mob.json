@@ -1,0 +1,222 @@
+[
+  {
+    "q": "When measuring crutch length, there should be how many finger widths between the pad and the anterior axillary fold?",
+    "options": [
+      "1 finger width",
+      "2 to 3 finger widths",
+      "4 to 5 finger widths",
+      "No space is needed"
+    ],
+    "correct": 1,
+    "rationale": "The crutch length is measured with 2 to 3 finger widths between the pad and the anterior axillary fold. The tip is placed 6 inches lateral and 6 inches in front of the foot."
+  },
+  {
+    "q": "A patient is first day post-op right knee surgery with partial weight bearing allowed. Which gait should the nurse teach?",
+    "options": [
+      "2-point gait",
+      "3-point gait",
+      "4-point gait",
+      "Swing-through"
+    ],
+    "correct": 1,
+    "rationale": "One leg affected = odd-numbered gait. Post-op with partial weight bearing = 3-point gait (2 crutches and bad leg move together, followed by the good leg). 3-1, 3-1, 3-1."
+  },
+  {
+    "q": "A patient has advanced-stage ALS with bilateral leg weakness. Which crutch gait is most appropriate?",
+    "options": [
+      "2-point gait",
+      "3-point gait",
+      "4-point gait",
+      "Swing-through"
+    ],
+    "correct": 2,
+    "rationale": "Bilateral leg weakness = both legs affected = even-numbered gait. Advanced stages = severe = 4-point gait (move everything separately). Very slow but very stable."
+  },
+  {
+    "q": "When going up stairs with crutches, which moves first?",
+    "options": [
+      "The bad foot goes up first",
+      "Both crutches go up first",
+      "The good foot goes up first",
+      "Both feet move simultaneously"
+    ],
+    "correct": 2,
+    "rationale": "Going UP stairs: good foot moves up first. Going DOWN stairs: bad foot moves down first. Both crutches always move with the bad leg."
+  },
+  {
+    "q": "A patient with a left above-the-knee amputation 2 days ago should use which gait?",
+    "options": [
+      "2-point gait",
+      "3-point gait",
+      "4-point gait",
+      "Swing-through"
+    ],
+    "correct": 3,
+    "rationale": "An amputee is non-weight bearing. Swing-through gait is for non-weight bearing patients. It is similar to 3-point gait but the unaffected foot swings past the tip of both crutches."
+  },
+  {
+    "q": "A cane should be held on which side of the body?",
+    "options": [
+      "The affected (weak) side",
+      "The unaffected (strong) side",
+      "Either side is acceptable",
+      "The dominant hand side"
+    ],
+    "correct": 1,
+    "rationale": "Hold the cane on the unaffected (strong) side. Advance the cane with the opposite side for a wide base of support. The handgrip should be at the level of the wrist."
+  },
+  {
+    "q": "The correct way to use a walker is:",
+    "options": [
+      "Push it forward while walking",
+      "Pick it up, set it down, walk to it",
+      "Lean heavily on it while dragging feet",
+      "Swing both legs through the walker"
+    ],
+    "correct": 1,
+    "rationale": "The correct method: Pick up the walker, Set it down, Walk to it. The patient should have all four legs of the walker on the floor before walking to it."
+  },
+  {
+    "q": "A patient says, 'The CIA has implanted a tracking device in my brain.' This is an example of:",
+    "options": [
+      "An illusion",
+      "A hallucination",
+      "A paranoid delusion",
+      "A functional thought"
+    ],
+    "correct": 2,
+    "rationale": "A delusion is a false, fixed belief with no sensory component - it's just a thought. A paranoid delusion involves believing people are out to get you or harm you."
+  },
+  {
+    "q": "A patient looks at the fire extinguisher on the wall and says, 'I see a bomb.' This is an example of:",
+    "options": [
+      "A delusion",
+      "A hallucination",
+      "An illusion",
+      "A phobia"
+    ],
+    "correct": 2,
+    "rationale": "An illusion involves a misinterpretation of a REAL stimulus. The fire extinguisher is real (the referent), but the patient misinterprets it as a bomb. A hallucination has NO real stimulus."
+  },
+  {
+    "q": "A patient with a blank stare says, 'I see a bomb.' There is nothing on the wall. This is:",
+    "options": [
+      "A delusion",
+      "A hallucination",
+      "An illusion",
+      "A phobia"
+    ],
+    "correct": 1,
+    "rationale": "A hallucination is a false sensory perception with NO real referent (stimulus). The patient sees something that is not actually there. In an illusion, there IS an actual object being misperceived."
+  },
+  {
+    "q": "For a patient with functional psychosis, the nurse should use which approach?",
+    "options": [
+      "Redirect the patient to a new activity",
+      "Reassure about safety and temporariness",
+      "Acknowledge feeling, present reality, set limits, enforce limits",
+      "Only medicate as needed"
+    ],
+    "correct": 2,
+    "rationale": "Functional psychosis (schizophrenia, mood disorders): (1) Acknowledge feeling, (2) Present reality, (3) Set limits, (4) Enforce limits. These patients have the potential to learn reality."
+  },
+  {
+    "q": "The nurse is caring for a patient with psychosis of dementia. Which approach is most appropriate?",
+    "options": [
+      "Present reality and set limits",
+      "Acknowledge feeling and redirect them",
+      "Restrain the patient for safety",
+      "Confront their false beliefs"
+    ],
+    "correct": 1,
+    "rationale": "For psychosis of dementia: (1) Acknowledge their feeling, (2) Redirect them - give them something they can do. Dementia hallmark: memory loss, inability to learn. 2nd step begins with 'Re.'"
+  },
+  {
+    "q": "Psychosis of delirium is best described as:",
+    "options": [
+      "A permanent, progressive loss of reality",
+      "A temporary, sudden, dramatic loss of reality usually due to chemical imbalance",
+      "A learned behavior that can be unlearned",
+      "A personality disorder"
+    ],
+    "correct": 1,
+    "rationale": "Delirium is temporary, sudden, dramatic, episodic, secondary loss of reality. Causes include UTI, thyroid imbalance, adrenal crisis, electrolytes, medications. Treat the underlying cause."
+  },
+  {
+    "q": "The handgrip measurement for crutches requires the angle of elbow flexion to be:",
+    "options": [
+      "15 degrees",
+      "30 degrees",
+      "45 degrees",
+      "90 degrees"
+    ],
+    "correct": 1,
+    "rationale": "For proper crutch fitting, the angle of elbow flexion should be 30 degrees. The wrists should be at the level of the handgrip."
+  },
+  {
+    "q": "A non-psychotic patient is best approached using:",
+    "options": [
+      "Reality orientation techniques",
+      "Therapeutic communication",
+      "Limit setting and enforcing",
+      "Redirection to activities"
+    ],
+    "correct": 1,
+    "rationale": "The non-psychotic patient has insight and is reality-based. Address them as you would any Med/Surg patient using therapeutic communication: reflection, clarification, amplification, restatement."
+  },
+  {
+    "q": "Which gait is described as 'very slow but very stable' where everything moves separately?",
+    "options": [
+      "2-point gait",
+      "3-point gait",
+      "4-point gait",
+      "Swing-through"
+    ],
+    "correct": 2,
+    "rationale": "4-point gait: move everything separately. Right crutch \u2192 Left foot \u2192 Left crutch \u2192 Right foot. Very slow but very stable. Used for bilateral leg weakness (even-numbered gait)."
+  },
+  {
+    "q": "A patient with early-stage MS with bilateral mild leg weakness should use which gait?",
+    "options": [
+      "Swing-through",
+      "3-point gait",
+      "4-point gait",
+      "2-point gait"
+    ],
+    "correct": 3,
+    "rationale": "Bilateral weakness = even-numbered gait. Early stage = mild. So use 2-point gait (milder, faster than 4-point). 2-point gait moves crutch and opposite foot at the same time."
+  },
+  {
+    "q": "Three types of delusions include:",
+    "options": [
+      "Visual, auditory, and tactile",
+      "Paranoid, grandiose, and somatic",
+      "Functional, demented, and delirious",
+      "Simple, complex, and mixed"
+    ],
+    "correct": 1,
+    "rationale": "Three types of delusions: Paranoid (people are out to get me), Grandiose (I'm the president), and Somatic (false belief about one's body)."
+  },
+  {
+    "q": "When caring for a patient with delirium who has lost touch with reality, the nurse should:",
+    "options": [
+      "Present reality firmly and repeatedly",
+      "Acknowledge feeling and reassure about safety and temporariness",
+      "Set strict limits on behavior",
+      "Redirect to a meaningful activity"
+    ],
+    "correct": 1,
+    "rationale": "For delirium: (1) Acknowledge feeling, (2) Reassure about safety and temporariness of condition. Do NOT try to redirect or teach reality - they have lost touch with reality."
+  },
+  {
+    "q": "The 2-point gait involves moving:",
+    "options": [
+      "Both crutches and both legs separately in sequence",
+      "One crutch and the opposite foot at the same time",
+      "Both crutches together, then both feet",
+      "Everything together at once"
+    ],
+    "correct": 1,
+    "rationale": "The 2-point gait moves one crutch and the opposite foot simultaneously. It is faster than 4-point gait and used for mild bilateral weakness."
+  }
+]

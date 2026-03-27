@@ -1,0 +1,222 @@
+[
+  {
+    "q": "The nurse teaches that whenever you see 'thyroid,' you should change it to:",
+    "options": [
+      "Hormones",
+      "Metabolism",
+      "Immunity",
+      "Growth"
+    ],
+    "correct": 1,
+    "rationale": "Since the thyroid gland regulates metabolism, whenever you see 'thyroid,' change it to 'metabolism.' Hyperthyroidism = hypermetabolism, hypothyroidism = hypometabolism."
+  },
+  {
+    "q": "Exophthalmos (bulging eyes) is a hallmark sign of which thyroid condition?",
+    "options": [
+      "Hypothyroidism",
+      "Hashimoto's thyroiditis",
+      "Graves disease (hyperthyroidism)",
+      "Thyroid cancer"
+    ],
+    "correct": 2,
+    "rationale": "Exophthalmos is seen in Graves disease. 'Run yourself into the Graves disease' = hyperthyroidism with hypermetabolism, weight loss, tachycardia, heat intolerance, and bulging eyes."
+  },
+  {
+    "q": "A patient with hypothyroidism is scheduled for surgery. The nurse should question which preoperative order?",
+    "options": [
+      "IV fluids",
+      "Levothyroxine",
+      "A sedative/tranquilizer",
+      "NPO after midnight"
+    ],
+    "correct": 2,
+    "rationale": "Do NOT sedate hypothyroid patients - they are already super slow. A sedative could push them into a coma (myxedema coma). Question any order for sedation in a hypothyroid patient."
+  },
+  {
+    "q": "Treatment for hypothyroidism includes Levothyroxine (Synthroid), which should be taken:",
+    "options": [
+      "At bedtime with food",
+      "In the morning, 30-60 minutes before breakfast, on an empty stomach",
+      "With the largest meal of the day",
+      "Twice daily with meals"
+    ],
+    "correct": 1,
+    "rationale": "Levothyroxine is taken in the morning, 30 minutes to 1 hour before breakfast, alone on an empty stomach with water."
+  },
+  {
+    "q": "Thyroid storm is a medical emergency characterized by temperatures of:",
+    "options": [
+      "100\u00b0F or above",
+      "102\u00b0F or above",
+      "105\u00b0F or above",
+      "99\u00b0F or above"
+    ],
+    "correct": 2,
+    "rationale": "Thyroid storm features temps of 105\u00b0F or above, high BP (stroke level). Emergency treatment: bring temp down (ice packs/cooling blankets), oxygen per mask at 10L, stay with patient."
+  },
+  {
+    "q": "'In Addison, you ADD-a-SONE' refers to treatment with:",
+    "options": [
+      "Antibiotics ending in -mycin",
+      "Glucocorticoids ending in -sone (Prednisone, Methylprednisone)",
+      "Antihypertensives ending in -pril",
+      "Diuretics ending in -ide"
+    ],
+    "correct": 1,
+    "rationale": "Addison disease = undersecretion of adrenal cortex (steroids). Treatment: ADD-a-SONE = give glucocorticoids (Prednisone, Methylprednisone). Under stress, these patients can go into Addisonian crisis (shock + hypoglycemia)."
+  },
+  {
+    "q": "All signs and symptoms of Cushing syndrome are the same as:",
+    "options": [
+      "Hypothyroidism side effects",
+      "Steroid medication side effects",
+      "Insulin side effects",
+      "Antibiotic side effects"
+    ],
+    "correct": 1,
+    "rationale": "Cushing = oversecretion of adrenal cortex (steroids). All S/Sx of Cushing's are the S/E of steroid medications: moon face, buffalo hump, thin extremities, truncal obesity, hyperglycemia."
+  },
+  {
+    "q": "After a bilateral adrenalectomy for Cushing syndrome, the patient now has:",
+    "options": [
+      "Hyperthyroidism",
+      "Diabetes Mellitus",
+      "Addison disease",
+      "Pheochromocytoma"
+    ],
+    "correct": 2,
+    "rationale": "After bilateral adrenalectomy for Cushing's, the patient now has Addison disease (no adrenal cortex). Treatment: give steroids (ending in -SONE). Patient will look Cushinoid initially; takes about a year of titration to look normal."
+  },
+  {
+    "q": "Appropriate toys for a toddler (1-3 years) focus on:",
+    "options": [
+      "Fine motor skills like scissors and pencils",
+      "Gross motor skills - push/pull toys",
+      "Verbal and speaking toys",
+      "Competitive games with winners and losers"
+    ],
+    "correct": 1,
+    "rationale": "Toddlers (1-3 years) work on gross motor skills (running, jumping). Best toys: push/pull toys (lawn mowers, wagons). They use parallel play (terrible twos)."
+  },
+  {
+    "q": "The nurse is selecting toys for a preschooler (3-6 years). Which toy is most appropriate?",
+    "options": [
+      "Push/pull wagon",
+      "Rattles and mobiles",
+      "Colored pencils and scissors",
+      "Baseball cards"
+    ],
+    "correct": 2,
+    "rationale": "Preschoolers (3-6 years) work on fine motor skills with finger dexterity. They can write, draw, use colored pencils and scissors. They also work on balance (dance, tricycles). Cooperative/pretend play."
+  },
+  {
+    "q": "School-age children (7-11 years) are characterized by which '3 Cs'?",
+    "options": [
+      "Compliant, Calm, Cautious",
+      "Creative, Collective, Competitive",
+      "Cooperative, Concrete, Calculating",
+      "Curious, Caring, Communicative"
+    ],
+    "correct": 1,
+    "rationale": "School-age (7-11 years) = Concrete, characterized by 3 Cs: (1) Creative (Legos, drawing), (2) Collective (baseball cards, Barbies), (3) Competitive (winner/losers)."
+  },
+  {
+    "q": "For purposeful play (build, sort, stack), an infant should be at least:",
+    "options": [
+      "3 months",
+      "6 months",
+      "9 months",
+      "12 months"
+    ],
+    "correct": 2,
+    "rationale": "For purposeful play (build, sort, stack, make, construct), the infant should be at least 9 months. 'Baby in womb for 9 months, another 9 months for purposeful play.'"
+  },
+  {
+    "q": "The 3 Ps of nerve root compression indicating need for laminectomy are:",
+    "options": [
+      "Pulse, Pressure, Perfusion",
+      "Pain, Paresthesia, Paresis",
+      "Pallor, Pulselessness, Poikilothermia",
+      "Pruritus, Purpura, Petechiae"
+    ],
+    "correct": 1,
+    "rationale": "The 3 Ps of nerve root compression: Pain, Paresthesia (tingly), Paresis (muscle weakness). A laminectomy relieves compression by removing the vertebral spinous process."
+  },
+  {
+    "q": "The #1 answer for postoperative laminectomy positioning is:",
+    "options": [
+      "Semi-Fowler's position",
+      "Prone position",
+      "Log roll",
+      "Side-lying with pillows"
+    ],
+    "correct": 2,
+    "rationale": "The number 1 answer for post-op laminectomy (including any spinal surgery) is LOG ROLL. Always pick log roll for these patients."
+  },
+  {
+    "q": "A post-op lumbar laminectomy patient is at highest risk for:",
+    "options": [
+      "Pneumonia and ileus",
+      "Urinary retention and leg problems",
+      "Respiratory failure",
+      "Cardiac arrhythmias"
+    ],
+    "correct": 1,
+    "rationale": "Lumbar = Bladder and Legs. Lumbar innervates bladder and legs. Post-op complications: urinary retention and leg problems. Cervical = neck/arms, Thoracic = lungs/GI."
+  },
+  {
+    "q": "After laminectomy, patients should NOT sit for more than:",
+    "options": [
+      "10 minutes",
+      "20 minutes",
+      "30 minutes",
+      "1 hour"
+    ],
+    "correct": 2,
+    "rationale": "Post-laminectomy patients should not sit for more than 30 minutes. They can walk, stand, and lie down without restriction. Question any order for 'Up in chair for 1 hour TID.'"
+  },
+  {
+    "q": "In a laminectomy with fusion, which incision site has the MOST pain?",
+    "options": [
+      "The spine",
+      "The hip",
+      "They are equal",
+      "Neither has significant pain"
+    ],
+    "correct": 1,
+    "rationale": "In laminectomy with fusion, a bone graft is taken from the iliac crest (hip) and the spine. The HIP has the most pain AND the most bleeding/drainage (where the Hemovac/JP will be)."
+  },
+  {
+    "q": "Temporary restrictions after laminectomy include all EXCEPT:",
+    "options": [
+      "Do not sit for >30 minutes for 6 weeks",
+      "Lie flat, log roll for 6 weeks",
+      "No lifting over the head permanently",
+      "Don't drive for 6 weeks"
+    ],
+    "correct": 2,
+    "rationale": "Temporary restrictions (6 weeks): no sitting >30 min, log roll, no driving, no lifting >5 lbs. PERMANENT restrictions: never lift by bending at waist, cervical - never lift over head, no jarring activities."
+  },
+  {
+    "q": "When selecting toys for children, the three considerations are:",
+    "options": [
+      "Cost, availability, and popularity",
+      "Safety, age appropriateness, and feasibility",
+      "Color, size, and material",
+      "Educational value, fun factor, and durability"
+    ],
+    "correct": 1,
+    "rationale": "When selecting toys: (1) Is it safe? (2) Is it age appropriate? (3) Is it feasible (possible to do easily or conveniently)?"
+  },
+  {
+    "q": "Adolescents (12-18 years) in the hospital should be allowed to visit each other's rooms UNLESS:",
+    "options": [
+      "They have different diagnoses",
+      "One is recently post-op <12 hrs, immunosuppressed, or contagious",
+      "They are different genders",
+      "A parent objects"
+    ],
+    "correct": 1,
+    "rationale": "Allow adolescents (peer group association) to be in each other's rooms UNLESS one is: (1) Recently post-op for <12 hours, (2) Immunosuppressed, or (3) Contagious."
+  }
+]

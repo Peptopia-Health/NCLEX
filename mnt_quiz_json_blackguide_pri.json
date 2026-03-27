@@ -1,0 +1,222 @@
+[
+  {
+    "q": "The 4 rules for prioritization include all EXCEPT:",
+    "options": [
+      "Acute beats Chronic",
+      "Unstable beats Stable",
+      "The more vital the organ, the higher the priority",
+      "The youngest patient always comes first"
+    ],
+    "correct": 3,
+    "rationale": "The 4 rules: (1) Acute beats Chronic, (2) Unstable beats Stable, (3) Actual beats Potential, (4) The more vital the organ, the higher the priority. Age is not one of the rules."
+  },
+  {
+    "q": "Among the following patients, which has the HIGHEST priority: COPD, CHF, or acute appendicitis?",
+    "options": [
+      "COPD",
+      "CHF",
+      "Acute appendicitis",
+      "They are equal priority"
+    ],
+    "correct": 2,
+    "rationale": "Rule 1: Acute beats Chronic. COPD and CHF are chronic conditions. Acute appendicitis is an acute condition and therefore has the highest priority."
+  },
+  {
+    "q": "A patient described as 'newly admitted less than 24 hours' would be considered:",
+    "options": [
+      "Stable",
+      "Unstable",
+      "Low priority",
+      "Ready for discharge"
+    ],
+    "correct": 1,
+    "rationale": "Unstable descriptors: newly diagnosed, newly admitted, not ready for discharge, admitted <24 hours, changing assessment, unexpected S/Sx. Stable: ready for discharge, admitted >24 hours, unchanged assessment."
+  },
+  {
+    "q": "Using the vital organ prioritization rule, which organ has the HIGHEST priority?",
+    "options": [
+      "Heart",
+      "Liver",
+      "Brain",
+      "Kidney"
+    ],
+    "correct": 2,
+    "rationale": "Vital organ priority: (1) Brain, (2) Lung, (3) Heart, (4) Liver, (5) Kidney, (6) Pancreas. Use this rule with the organ of the MODIFYING PHRASE, not the diagnosis."
+  },
+  {
+    "q": "Which tasks can an LPN/LVN perform?",
+    "options": [
+      "Admission assessments and discharge teaching",
+      "Stable, predictable tasks and monitoring established plans",
+      "Initial assessments and care plan development",
+      "Teaching new diagnoses and evaluating outcomes"
+    ],
+    "correct": 1,
+    "rationale": "LPNs handle stable, predictable tasks and can monitor patients on established care plans. They CANNOT do admission, discharge, transfer, or first assessments after a change."
+  },
+  {
+    "q": "An LPN reports hearing new crackles on a patient. Who should assess this patient?",
+    "options": [
+      "The LPN can assess since they heard it",
+      "The RN must assess since this is a new/changed symptom",
+      "Either nurse can assess",
+      "The nursing assistant"
+    ],
+    "correct": 1,
+    "rationale": "The RN must assess the patient since this is a new onset or change of symptoms. LPNs are NOT allowed to assess: admission, discharge, transfer, or first assessment after a change."
+  },
+  {
+    "q": "When handling inappropriate behavior from staff, which response is ALWAYS wrong?",
+    "options": [
+      "Tell the supervisor",
+      "Confront them and take over immediately",
+      "Talk to them later",
+      "Ignore it"
+    ],
+    "correct": 3,
+    "rationale": "Never ignore inappropriate behaviors. The 4 typical answers: (1) Tell supervisor, (2) Confront/take over immediately, (3) Talk later, (4) Ignore. Ignoring is always wrong - use it as a teaching moment."
+  },
+  {
+    "q": "Piaget's Concrete Operations stage (7-11 years) is characterized by children who are:",
+    "options": [
+      "Abstract thinkers who can hypothesize",
+      "Rule-oriented with one right way to do things",
+      "Only concerned with sensory input",
+      "Highly imaginative with pretend play"
+    ],
+    "correct": 1,
+    "rationale": "Concrete Operations (7-11): '7/11 Grocery Stores are surrounded by concrete.' These children are rule-oriented - live and die by the rules. Cannot abstract. One way to do things, everything else is wrong."
+  },
+  {
+    "q": "When teaching a preschooler (3-6 years) about a procedure, the nurse should:",
+    "options": [
+      "Teach a week in advance for thorough preparation",
+      "Teach 2 hours before, the morning of, or the day of the procedure",
+      "Teach using abstract concepts and diagrams",
+      "Have the parent explain everything"
+    ],
+    "correct": 1,
+    "rationale": "Preschoolers are in the 'imaginative' stage. Teach 2 hours before, morning of, or day of the procedure in future tense. Don't give them time to imagine the worst. They can learn by playing."
+  },
+  {
+    "q": "A modifying phrase that changes priority is exemplified by which scenario?",
+    "options": [
+      "An MI patient is always highest priority regardless",
+      "A patient with angina and unstable BP is higher priority than a stable MI",
+      "Chronic conditions are always highest priority",
+      "The diagnosis alone determines priority"
+    ],
+    "correct": 1,
+    "rationale": "Without modifying phrases, go by diagnosis (MI > Angina). WITH modifying phrases: 'unstable BP and Angina' is higher priority than 'stable vital signs and MI.' Unstable beats Stable."
+  },
+  {
+    "q": "Concrete Operations children (7-11) should be taught about procedures:",
+    "options": [
+      "Immediately before the procedure",
+      "A day or two ahead of time",
+      "A week in advance",
+      "They don't need preparation"
+    ],
+    "correct": 1,
+    "rationale": "Teach Concrete Operations children (7-11) a day or two ahead of time. They are rule-oriented and need to know the exact steps. Use present tense and demonstrate on a doll or model."
+  },
+  {
+    "q": "Seven principles for psychiatric nursing tests include: don't give advice. If a patient asks 'What should I do?', the best response is:",
+    "options": [
+      "Tell them exactly what to do",
+      "'What do you think you should do?'",
+      "Refer them to the physician",
+      "Change the subject"
+    ],
+    "correct": 1,
+    "rationale": "In psychiatric nursing: Don't give advice. If patient says 'What do you think I should do?' - reply by asking them the same question: 'What do you think you should do?'"
+  },
+  {
+    "q": "The pharmacology guessing strategy states: if you know what a drug does but don't know the side effect, pick:",
+    "options": [
+      "The most severe option",
+      "The side effect in the same body system the drug works in",
+      "The cardiovascular option",
+      "The neurological option"
+    ],
+    "correct": 1,
+    "rationale": "If you know what a drug does but don't know the S/E, pick the S/E in the same body system. GI drug \u2192 diarrhea. Cardiac drug \u2192 tachycardia. CNS drug \u2192 drowsiness."
+  },
+  {
+    "q": "When choosing between two patients and one has 'expected' symptoms while the other has 'unexpected' symptoms, who is the priority?",
+    "options": [
+      "The patient with expected symptoms",
+      "The patient with unexpected symptoms",
+      "They are equal priority",
+      "The one diagnosed most recently"
+    ],
+    "correct": 1,
+    "rationale": "Experiencing unexpected S/Sx makes a patient unstable and therefore higher priority than one with expected symptoms of their disease. Expected = stable, Unexpected = unstable."
+  },
+  {
+    "q": "Piaget's Sensorimotor stage (0-2 years) means children:",
+    "options": [
+      "Can think abstractly",
+      "Only think about what they are sensing now",
+      "Are rule-oriented",
+      "Can use formal logic"
+    ],
+    "correct": 1,
+    "rationale": "Sensorimotor (0-2 years): children only think about what they are currently sensing/experiencing. Object permanence develops during this stage."
+  },
+  {
+    "q": "In psychiatric nursing, why should you NOT accept gifts from patients?",
+    "options": [
+      "It's a HIPAA violation",
+      "What seems like a simple gift may have different meaning to the patient",
+      "Gifts are always manipulation",
+      "Hospital policy prohibits all gifts"
+    ],
+    "correct": 1,
+    "rationale": "Don't give/accept gifts in psych. If a schizophrenic patient gives you flowers, to the HCP it may be flowers; to the patient, it may be a marriage proposal. The meaning can be very different."
+  },
+  {
+    "q": "An LPN can take a post-op patient out of bed ONLY after:",
+    "options": [
+      "Getting a physician's order",
+      "The RN has done so first",
+      "24 hours post-surgery",
+      "The patient requests it"
+    ],
+    "correct": 1,
+    "rationale": "LPN can take patient out of bed post-op ONLY after the nurse (RN) has first done so. LPN can also take V/S post-op only after the RN has first done so."
+  },
+  {
+    "q": "K-wasting diuretics can be identified by:",
+    "options": [
+      "Ending in '-one' like Spironolactone",
+      "Ending in 'X' like Lasix",
+      "Ending in '-ide' like Hydrochlorothiazide",
+      "Ending in '-pril' like Lisinopril"
+    ],
+    "correct": 1,
+    "rationale": "Any diuretic ending in 'X' wastes potassium (X-es out K) like Lasix, PLUS Diuril (a thiazide). K-sparing diuretics: Spironolactone, Triamterene."
+  },
+  {
+    "q": "Baclofen is a muscle relaxant. The memory aid for this is:",
+    "options": [
+      "'Baclofen makes your back feel fine'",
+      "'When you are on baclofen, you are on your back loafing'",
+      "'Baclofen backs up your muscles'",
+      "'Baclofen is the backbone of therapy'"
+    ],
+    "correct": 1,
+    "rationale": "'When you are on baclofen, you are on your back loafing' helps remember it's a muscle relaxant. Teach patients: don't drink, don't drive, don't operate heavy machinery."
+  },
+  {
+    "q": "The 'worst case scenario' test-taking strategy works by:",
+    "options": [
+      "Always choosing the most dramatic answer",
+      "Asking 'What would happen if I did NOT do this?' and picking the one with worst consequences",
+      "Eliminating the shortest answers",
+      "Choosing the answer with the most medical terminology"
+    ],
+    "correct": 1,
+    "rationale": "Ask: 'What would happen if I did not implement this task?' The answer where NOT doing it leads to the worst consequence (like DEATH) is the correct priority answer."
+  }
+]

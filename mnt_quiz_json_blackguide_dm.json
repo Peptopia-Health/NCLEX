@@ -1,0 +1,222 @@
+[
+  {
+    "q": "The primary treatment modality for Type 2 Diabetes Mellitus is:",
+    "options": [
+      "Insulin injections",
+      "Exercise",
+      "Calorie restriction (diet)",
+      "Oral hypoglycemics"
+    ],
+    "correct": 2,
+    "rationale": "Type 2 DM treatment is 'DOA': Diet (most important), Oral hypoglycemic, Activity. Diet with calorie restriction (1200, 1400, 1600 Cal) is the PRIMARY treatment."
+  },
+  {
+    "q": "Diabetes Insipidus (DI) is characterized by:",
+    "options": [
+      "High blood glucose and glycosuria",
+      "Polyuria and polydipsia due to low ADH leading to dehydration",
+      "Fluid volume excess and edema",
+      "Low urine output and fluid retention"
+    ],
+    "correct": 1,
+    "rationale": "DI is NOT a type of DM. It has polyuria, polydipsia leading to dehydration due to low ADH. It's just the fluid part - no glucose element. Similar to DM, it has high urine output."
+  },
+  {
+    "q": "What is the opposite of Diabetes Insipidus?",
+    "options": [
+      "Diabetes Mellitus",
+      "SIADH",
+      "DKA",
+      "HHNK"
+    ],
+    "correct": 1,
+    "rationale": "SIADH (Syndrome of Inappropriate ADH) is the opposite of Diabetes Insipidus. DI = low ADH = too much urine (dehydration). SIADH = too much ADH = fluid retention."
+  },
+  {
+    "q": "A patient receives NPH insulin at 7:00 AM. When should the nurse check for hypoglycemia?",
+    "options": [
+      "8:00 AM to 9:00 AM",
+      "10:00 AM to 12:00 PM",
+      "3:00 PM to 5:00 PM",
+      "10:00 PM to midnight"
+    ],
+    "correct": 2,
+    "rationale": "Add the insulin peak time to the administration time. NPH peaks at 8-10 hours. 7 AM + 8-10 hours = 3 PM to 5 PM. Check for hypoglycemia between 3 and 5 PM."
+  },
+  {
+    "q": "Lispro (Humalog) insulin has a peak of 30 minutes. Which statement about its administration is correct?",
+    "options": [
+      "Give it 30 minutes before the meal",
+      "Give it WITH the meal",
+      "Give it at bedtime",
+      "Give it 1 hour before the meal"
+    ],
+    "correct": 1,
+    "rationale": "Lispro should NOT be given AC (before meal) - give it WITH the meal. Pattern: onset 15 min, peak 30 min, duration 3 hrs (15-30-3)."
+  },
+  {
+    "q": "Which insulin can safely be given at bedtime with little to no risk of hypoglycemia?",
+    "options": [
+      "Regular insulin",
+      "NPH insulin",
+      "Lispro insulin",
+      "Glargine (Lantus) insulin"
+    ],
+    "correct": 3,
+    "rationale": "Glargine (Lantus) is long-acting with NO peak and a duration of 12-24 hours. Because it has no peak, there is little to no risk of hypoglycemia, making it the only insulin safe to give at bedtime."
+  },
+  {
+    "q": "A patient with hypoglycemia would present with symptoms resembling:",
+    "options": [
+      "A patient in ketoacidosis",
+      "A drunk patient in shock",
+      "A patient with hypernatremia",
+      "A patient with metabolic alkalosis"
+    ],
+    "correct": 1,
+    "rationale": "Hypoglycemia looks like a 'Drunk patient in Shock': staggering gait, slurred speech, cerebral impairment, slow reaction time (Drunk) + tachycardia, low BP, cold/clammy skin (Shock)."
+  },
+  {
+    "q": "The #1 cause of hypoglycemia in a diabetic patient is:",
+    "options": [
+      "Not enough food",
+      "Too much exercise",
+      "Too much insulin",
+      "Stress"
+    ],
+    "correct": 2,
+    "rationale": "Too much insulin is the #1 cause of hypoglycemia and can lead to permanent brain damage. Other causes include not enough food and too much exercise."
+  },
+  {
+    "q": "DKA (Diabetic Ketoacidosis) occurs in which type of diabetes?",
+    "options": [
+      "Type 2 only",
+      "Type 1 only",
+      "Both Type 1 and Type 2",
+      "Neither type"
+    ],
+    "correct": 1,
+    "rationale": "DKA occurs in Type 1 DM. These patients burn fat for energy, producing ketones, which causes acidosis. Key features: Kussmaul breathing, fruity breath, dehydration."
+  },
+  {
+    "q": "Treatment for DKA includes:",
+    "options": [
+      "Oral hypoglycemics and diet modification",
+      "IV Regular insulin and IV fluids at 200 mL/hr",
+      "Subcutaneous NPH insulin and oral fluids",
+      "Glucagon injection and glucose tablets"
+    ],
+    "correct": 1,
+    "rationale": "DKA treatment: IV Regular insulin (only Regular can be given IV) and IV fluids at 200 mL/hr (one of the fastest rates). These patients are severely dehydrated."
+  },
+  {
+    "q": "HHNK/HHS occurs in Type 2 DM and is characterized primarily by:",
+    "options": [
+      "Kussmaul breathing and ketoacidosis",
+      "Severe dehydration without ketosis",
+      "Hypoglycemia with seizures",
+      "Respiratory alkalosis"
+    ],
+    "correct": 1,
+    "rationale": "HHNK (Hyperosmolar Hyperglycemic Nonketotic) occurs in Type 2 DM. These patients don't burn ketones so there's no acid. The primary issue is SEVERE dehydration. #1 Nursing Dx: Fluid Volume Deficit."
+  },
+  {
+    "q": "The nursing intervention for HHNK/HHS is primarily:",
+    "options": [
+      "Insulin administration",
+      "Rehydration",
+      "Potassium replacement",
+      "Bicarbonate administration"
+    ],
+    "correct": 1,
+    "rationale": "HHNK = dehydration. #1 Nursing intervention = Rehydration. Outcomes: increased urine output, moist mucous membranes. Long-term complications: poor perfusion, peripheral neuropathy."
+  },
+  {
+    "q": "What dietary action is BEST for a patient with Type 2 DM?",
+    "options": [
+      "Divide meals into 6 feedings per day",
+      "Restrict calories",
+      "Increase protein intake",
+      "Eliminate all carbohydrates"
+    ],
+    "correct": 1,
+    "rationale": "Restricting calories is the BEST answer because a patient can eat 6 meals without limiting calories. Calorie restriction (1200, 1400, 1600 Cal) is the primary treatment. Six small feedings keeps blood sugar more stable."
+  },
+  {
+    "q": "Humalin 70/30 contains which combination of insulin?",
+    "options": [
+      "70% Regular and 30% NPH",
+      "70% NPH and 30% Regular",
+      "70% Lispro and 30% Glargine",
+      "70% Glargine and 30% NPH"
+    ],
+    "correct": 1,
+    "rationale": "Humalin 70/30 = 70% NPH and 30% Regular. Remember: N (Numerator) is on top = NPH is the bigger number. So 100 units = 70 units NPH + 30 units Regular."
+  },
+  {
+    "q": "The nurse should always check which of the following before administering insulin?",
+    "options": [
+      "Patient's weight",
+      "Expiration date",
+      "Pupil size",
+      "Urine color"
+    ],
+    "correct": 1,
+    "rationale": "Always check insulin expiration date before administration. Expired insulin may not be effective, leading to uncontrolled blood glucose levels."
+  },
+  {
+    "q": "A patient with DKA would exhibit which type of breathing pattern?",
+    "options": [
+      "Cheyne-Stokes respirations",
+      "Biot's respirations",
+      "Kussmaul respirations",
+      "Apneustic breathing"
+    ],
+    "correct": 2,
+    "rationale": "MAC Kussmaul - Metabolic ACidosis causes Kussmaul respirations (deep, rapid breathing). DKA is metabolic acidosis, so these patients will have Kussmaul breathing."
+  },
+  {
+    "q": "Type 1 DM treatment follows which mnemonic?",
+    "options": [
+      "DOA: Diet, Oral hypoglycemic, Activity",
+      "DIE: Diet, Insulin, Exercise",
+      "SIADH: Sugar, Insulin, Activity, Diet, Hydration",
+      "ABC: Activity, Blood glucose monitoring, Calorie counting"
+    ],
+    "correct": 1,
+    "rationale": "Type 1 DM treatment = DIE: Diet, Insulin (most important), Exercise. Type 2 = DOA: Diet (most important), Oral hypoglycemic, Activity."
+  },
+  {
+    "q": "A patient experiencing hypoglycemia should receive:",
+    "options": [
+      "Regular insulin IV push",
+      "Glucagon or fast-acting sugar (juice, candy)",
+      "NPH insulin subcutaneously",
+      "IV normal saline at 200 mL/hr"
+    ],
+    "correct": 1,
+    "rationale": "For hypoglycemia: give the patient sugar (juice, candy, glucose tablets) or glucagon if unable to take PO. Regular D50W IV if unconscious. Goal is to rapidly raise blood glucose."
+  },
+  {
+    "q": "Between DKA and HHNK, which has a higher mortality rate?",
+    "options": [
+      "DKA has a higher mortality",
+      "HHNK has a higher mortality",
+      "They have equal mortality rates",
+      "Neither is life-threatening"
+    ],
+    "correct": 1,
+    "rationale": "HHNK has a higher mortality rate than DKA due to severe dehydration. The dehydration in HHNK is more extreme, and these patients are often elderly with comorbidities."
+  },
+  {
+    "q": "A patient taking Regular insulin should expect onset of action within:",
+    "options": [
+      "5 minutes",
+      "15-30 minutes",
+      "1-2 hours",
+      "4-6 hours"
+    ],
+    "correct": 1,
+    "rationale": "Regular insulin: onset 30 min to 1 hour, peak 2-4 hours, duration 6-8 hours. It is the only insulin that can be given IV (for DKA treatment)."
+  }
+]

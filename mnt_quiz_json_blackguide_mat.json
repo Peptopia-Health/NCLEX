@@ -1,0 +1,222 @@
+[
+  {
+    "q": "Using Naegele's rule, if the last menstrual period was June 10, the estimated date of delivery is:",
+    "options": [
+      "March 17",
+      "September 17",
+      "March 10",
+      "December 10"
+    ],
+    "correct": 0,
+    "rationale": "Naegele's rule: take first day of LMP, add 7 days, subtract 3 months. June 10 + 7 days = June 17. June - 3 months = March 17."
+  },
+  {
+    "q": "Ideal weight gain during pregnancy is:",
+    "options": [
+      "15-20 lbs",
+      "20-24 lbs",
+      "25-31 lbs",
+      "35-40 lbs"
+    ],
+    "correct": 2,
+    "rationale": "Ideal weight gain: 28 lbs \u00b1 3 = 25-31 lbs. 1st trimester: 1 lb/month (3 lbs total). 2nd and 3rd trimesters: 1 lb/week."
+  },
+  {
+    "q": "The fundus can be palpated at the umbilicus between weeks:",
+    "options": [
+      "8 and 10",
+      "12 and 14",
+      "20 and 22",
+      "30 and 32"
+    ],
+    "correct": 2,
+    "rationale": "Fundal height cannot be palpated until week 12 (midway between umbilicus and pubic symphysis). The fundus is at the umbilicus between 20-22 weeks."
+  },
+  {
+    "q": "The truest, most valid sign that a woman is in labor is:",
+    "options": [
+      "Rupture of membranes",
+      "Bloody show",
+      "Onset of regular, progressive contractions",
+      "Cervical dilation of 2 cm"
+    ],
+    "correct": 2,
+    "rationale": "The truest, most valid sign of labor is the onset of regular/progressive contractions. This is more reliable than other signs."
+  },
+  {
+    "q": "For a prolapsed umbilical cord, the nurse should:",
+    "options": [
+      "Do LION protocol",
+      "Push the fetal head off the cord and position mother in knee-chest or Trendelenburg",
+      "Apply oxygen and monitor contractions",
+      "Increase Pitocin to speed delivery"
+    ],
+    "correct": 1,
+    "rationale": "Prolapsed cord: PUSH and POSITION. Push the fetal head off the cord and position mother in knee-chest or Trendelenburg. Prepare for C-section."
+  },
+  {
+    "q": "The LION protocol for OB complications stands for:",
+    "options": [
+      "Listen, Inspect, Observe, Note",
+      "Left side, IV, Oxygen, Notify HCP",
+      "Labor, Induction, Oxytocin, Neonatal care",
+      "Lateral, Intubation, Oxygen, Narcotic reversal"
+    ],
+    "correct": 1,
+    "rationale": "LION: Left side (place mother on left side), IV, Oxygen, Notify HCP. Used for tetany, maternal hypertension, vena cava syndrome, toxemia, uterine rupture. Stop Pitocin FIRST if running."
+  },
+  {
+    "q": "Variable decelerations on fetal monitoring indicate:",
+    "options": [
+      "A normal finding",
+      "Placental insufficiency",
+      "Prolapsed cord - VERY BAD",
+      "Head compression during labor"
+    ],
+    "correct": 2,
+    "rationale": "Variable (VERY) decelerations = VERY BAD = prolapsed cord. Nursing intervention: PUSH and POSITION. Fetal tracings starting with 'L' are bad (do LION). Variable = very bad = push/position."
+  },
+  {
+    "q": "Late decelerations on fetal monitoring require which intervention?",
+    "options": [
+      "No intervention needed",
+      "PUSH and POSITION",
+      "LION protocol",
+      "Continue monitoring only"
+    ],
+    "correct": 2,
+    "rationale": "Late decelerations are BAD (starts with 'L'). Do LION: Left side, IV, Oxygen, Notify HCP. Stop Pitocin if running. Late decelerations indicate uteroplacental insufficiency."
+  },
+  {
+    "q": "Early decelerations on fetal monitoring indicate:",
+    "options": [
+      "A medical emergency",
+      "Prolapsed cord",
+      "A normal finding - document",
+      "Fetal distress"
+    ],
+    "correct": 2,
+    "rationale": "Early decelerations are NORMAL - no big deal. Just document the finding. They result from head compression during contractions."
+  },
+  {
+    "q": "The nurse should stop Pitocin if contractions are longer than _____ seconds or closer than _____ minutes:",
+    "options": [
+      "60 seconds, 3 minutes",
+      "90 seconds, 2 minutes",
+      "120 seconds, 1 minute",
+      "45 seconds, 5 minutes"
+    ],
+    "correct": 1,
+    "rationale": "Stop Pitocin if contractions are longer than 90 seconds or closer than 2 minutes. This indicates uterine tetany/hyperstimulation."
+  },
+  {
+    "q": "In the 4th stage of labor, the nurse assesses every 15 minutes for:",
+    "options": [
+      "Cervical dilation and effacement",
+      "V/S, fundus, perineal pads, roll patient over",
+      "Fetal heart tones and contractions",
+      "Baby's APGAR score"
+    ],
+    "correct": 1,
+    "rationale": "4th stage (Recovery, 2 hours until bleeding stops): Assess every 15 minutes: V/S (shock assessment), Fundus (if boggy, massage; if displaced, catheterize), Perineal pads, Roll patient over to check for bleeding."
+  },
+  {
+    "q": "Postpartum assessment uses the mnemonic 'BUBBLE HEAD.' The three BIG things on the exam are:",
+    "options": [
+      "Breasts, Uterus, Bladder",
+      "Fundus, Lochia, Thrombophlebitis",
+      "Bowels, Uterus, Bleeding",
+      "Breathing, Blood pressure, Baby"
+    ],
+    "correct": 1,
+    "rationale": "The 3 big postpartum exam topics are: Fundus, Lochia, and Thrombophlebitis. Best way to check for thrombophlebitis: measure bilateral calf circumference (not Homan's sign)."
+  },
+  {
+    "q": "Caput succedaneum is characterized by edema that:",
+    "options": [
+      "Does NOT cross suture lines",
+      "Crosses suture lines and is symmetrical",
+      "Only occurs on one side of the head",
+      "Requires surgical intervention"
+    ],
+    "correct": 1,
+    "rationale": "Caput Succedaneum (CS) = Crosses Suture lines and is Caput Symmetrical. It is a normal finding from mechanical trauma during birth and resolves spontaneously."
+  },
+  {
+    "q": "Physiologic jaundice in a newborn appears:",
+    "options": [
+      "Before 24 hours - abnormal",
+      "After 24 hours - normal",
+      "At 1 week - always pathologic",
+      "Only in premature infants"
+    ],
+    "correct": 1,
+    "rationale": "Physiologic jaundice is NORMAL and appears AFTER 24 hours. Pathologic jaundice appears BEFORE 24 hours and is abnormal. This is a key distinction on the NCLEX."
+  },
+  {
+    "q": "Terbutaline (Brethine) is a tocolytic used to:",
+    "options": [
+      "Induce labor contractions",
+      "Stop premature labor contractions",
+      "Treat postpartum hemorrhage",
+      "Mature fetal lungs"
+    ],
+    "correct": 1,
+    "rationale": "Tocolytics STOP contractions/labor. Terbutaline (Brethine) is given to women in premature labor that must be stopped. Side effect: maternal tachycardia."
+  },
+  {
+    "q": "Betamethasone is given during premature labor to:",
+    "options": [
+      "Stop contractions",
+      "Mature fetal lungs",
+      "Treat maternal infection",
+      "Reduce pain"
+    ],
+    "correct": 1,
+    "rationale": "Betamethasone (a steroid) is given to mature fetal lungs. Can be repeated as long as baby is in utero. Side effect: increased glucose (steroid effect). Surfactant (Survanta) is given to baby AFTER birth."
+  },
+  {
+    "q": "The most common and favorable fetal presentation is:",
+    "options": [
+      "Breech",
+      "Transverse lie",
+      "ROA (right occiput anterior) or LOA (left occiput anterior)",
+      "Frank breech"
+    ],
+    "correct": 2,
+    "rationale": "Most common presentation is ROA or LOA. Pick ROA before LOA. A vertical lie is compatible with vaginal birth. A transverse (perpendicular) lie = Trouble = C-section."
+  },
+  {
+    "q": "Prenatal visits are scheduled:",
+    "options": [
+      "Weekly throughout pregnancy",
+      "Monthly until 28 weeks, biweekly 28-36, weekly after 36",
+      "Monthly until delivery",
+      "Every two weeks throughout pregnancy"
+    ],
+    "correct": 1,
+    "rationale": "Prenatal visits: once monthly until week 28, every other week 28-36, once weekly after week 36 until delivery or week 42 (whichever comes first)."
+  },
+  {
+    "q": "Heparin anticoagulant therapy is monitored by which lab test?",
+    "options": [
+      "PT/INR",
+      "PTT",
+      "CBC",
+      "Platelet count"
+    ],
+    "correct": 1,
+    "rationale": "Heparin is monitored by PTT. It can be given IV or SQ (except Lovenox). Antidote: Protamine sulfate. Heparin CAN be used during pregnancy (Class C). Coumadin uses PT/INR."
+  },
+  {
+    "q": "Coumadin (warfarin) is classified as which pregnancy category?",
+    "options": [
+      "Category A - safe",
+      "Category B - probably safe",
+      "Category C - use with caution",
+      "Category X - contraindicated"
+    ],
+    "correct": 3,
+    "rationale": "Coumadin is Category X - CANNOT be used during pregnancy. It is teratogenic. Antidote: Vitamin K. Monitored by PT/INR. Only given PO. Takes 4-5 days to work."
+  }
+]
