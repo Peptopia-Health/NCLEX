@@ -97,6 +97,12 @@ body {
   backdrop-filter: blur(4px); transition: background 0.2s;
 }
 .guide-quiz-btn:hover { background: rgba(255,255,255,0.28); }
+.theme-toggle-btn { position:absolute;top:0.75rem;right:0.75rem;background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.3);border-radius:0.5rem;padding:0.3rem 0.5rem;cursor:pointer;font-size:1.2rem;z-index:10;transition:all 0.2s;backdrop-filter:blur(4px);line-height:1; }
+.theme-toggle-btn:hover { transform:scale(1.1);background:rgba(255,255,255,0.25) !important; }
+html:not(.dark) .theme-toggle-btn { background:rgba(0,0,0,0.06) !important;border-color:rgba(0,0,0,0.15) !important; }
+.sec-quiz-btn { display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:2rem;font-size:.75rem;font-weight:700;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;backdrop-filter:blur(4px);transition:all .15s;white-space:nowrap;float:right;margin-top:.1rem; }
+.sec-quiz-btn:hover { background:rgba(255,255,255,.25);transform:translateY(-1px); }
+html:not(.dark) .sec-quiz-btn { border-color:rgba(107,33,168,.3);background:rgba(107,33,168,.08);color:var(--accent); }
 .container { max-width: 820px; margin: 0 auto; padding: 1rem 1rem 3rem; }
 .toc {
   background: var(--surface);
@@ -243,23 +249,28 @@ tr:nth-child(even) td { background: var(--table-stripe); }
 </head>
 <body>
 <script>
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  document.documentElement.classList.add('dark');
-}
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-  e.matches ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
-});
+(function(){
+  var h=document.documentElement;
+  if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){h.classList.add('dark')}
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(e){e.matches?h.classList.add('dark'):h.classList.remove('dark')});
+  window._toggleGuideTheme=function(){
+    h.classList.toggle('dark');
+    var btn=document.querySelector('.theme-toggle-btn');
+    if(btn)btn.textContent=h.classList.contains('dark')?'☀️':'🌙';
+  };
+})();
 </script>
 
-<div class="hero">
+<div class="hero" style="position:relative;">
+  <button class="theme-toggle-btn" onclick="_toggleGuideTheme()">☀️</button>
   <h1>📙 Pink — Condensed Review</h1>
   <p class="subtitle">NCLEX Review · 11 Lectures · High-Yield Condensed Guide</p>
   <div class="badge-row">
-    <span class="badge">📝 100 Questions</span>
+    <span class="badge">📝 180 Questions</span>
     <span class="badge">🎯 High-Yield</span>
     <span class="badge">📖 12 Sections</span>
   </div>
-  <button class="guide-quiz-btn" onclick="launchQuiz()">📝 Launch Quiz — 100 Questions</button>
+  <button class="guide-quiz-btn" onclick="launchQuiz()">📝 Launch Quiz — 180 Questions</button>
 </div>
 
 <div class="container">
@@ -288,6 +299,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>Acid-Base Balance &amp; Ventilators</h2>
     <span class="lec-tag">Lec 1</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('pinkguide_acid')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body show">
     <h3>Rule of the B's</h3>
@@ -372,6 +384,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>Alcoholism &amp; Substance Abuse</h2>
     <span class="lec-tag">Lec 2</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('pinkguide_alc')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>Key Concepts</h3>
@@ -448,6 +461,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>Aminoglycosides, CCBs &amp; Cardiac Arrhythmias</h2>
     <span class="lec-tag">Lec 3</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('pinkguide_amino')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>Aminoglycosides — "A Mean Old Mycin"</h3>
@@ -528,6 +542,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>Congenital Heart Defects · Infection Precautions · Crutches</h2>
     <span class="lec-tag">Lec 3–4</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('pinkguide_chd')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>Congenital Heart Defects — TRouBLe</h3>
@@ -595,6 +610,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>Diabetes Mellitus</h2>
     <span class="lec-tag">Lec 5</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('pinkguide_dm')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <table>
@@ -671,6 +687,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>Drug Toxicities · Dumping Syndrome &amp; Hiatal Hernia</h2>
     <span class="lec-tag">Lec 6</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('pinkguide_tox')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>Five Drug Toxicities — Must Memorize!</h3>
@@ -717,6 +734,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>Electrolytes &amp; Endocrine</h2>
     <span class="lec-tag">Lec 7</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('pinkguide_lyte')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>Electrolyte Rules</h3>
@@ -807,6 +825,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>Lab Values &amp; Priority Levels</h2>
     <span class="lec-tag">Lec 8</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('pinkguide_lab')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <p><strong>A</strong> = Low priority · <strong>B</strong> = Low but watch · <strong>C</strong> = High priority (can leave bedside) · <strong>D</strong> = Critical (stay at bedside!)</p>
@@ -842,6 +861,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>Psych Drugs</h2>
     <span class="lec-tag">Lec 9</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('pinkguide_psy')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <p><strong>All psych drugs</strong> cause low BP &amp; weight changes (usually gain).</p>
@@ -889,6 +909,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>Labor &amp; Delivery · OB Meds</h2>
     <span class="lec-tag">Lec 10</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('pinkguide_ob')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>Stage 1 — Fetal Monitoring</h3>
@@ -959,6 +980,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>Prioritization, Delegation &amp; Staff Management</h2>
     <span class="lec-tag">Lec 11</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('pinkguide_pri')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>4 Rules for Prioritization</h3>
@@ -1043,6 +1065,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>Test-Taking Strategies &amp; Guessing Rules</h2>
     <span class="lec-tag">Bonus</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('pinkguide_test')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>Psych Test Principles</h3>
@@ -1115,9 +1138,10 @@ function toggleSection(header) {
   header.classList.toggle('open');
   body.classList.toggle('show');
 }
-function launchQuiz() {
+function launchQuiz(key) {
+  var k = key || 'pinkguide';
   try {
-    window.parent.postMessage({ type: 'launchGuideQuiz', key: 'pinkguide' }, '*');
+    window.parent.postMessage({ type: 'launchGuideQuiz', key: k }, '*');
   } catch(err) { /* cross-origin */ }
 }
 document.addEventListener('click', function(e) {

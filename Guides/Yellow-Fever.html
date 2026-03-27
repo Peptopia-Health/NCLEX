@@ -116,6 +116,12 @@ body {
   backdrop-filter: blur(4px);
 }
 .guide-quiz-btn:hover { background: rgba(255,255,255,0.3); transform: translateY(-1px); }
+.theme-toggle-btn { position:absolute;top:0.75rem;right:0.75rem;background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.3);border-radius:0.5rem;padding:0.3rem 0.5rem;cursor:pointer;font-size:1.2rem;z-index:10;transition:all 0.2s;backdrop-filter:blur(4px);line-height:1; }
+.theme-toggle-btn:hover { transform:scale(1.1);background:rgba(255,255,255,0.25) !important; }
+html:not(.dark) .theme-toggle-btn { background:rgba(0,0,0,0.06) !important;border-color:rgba(0,0,0,0.15) !important; }
+.sec-quiz-btn { display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:2rem;font-size:.75rem;font-weight:700;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;backdrop-filter:blur(4px);transition:all .15s;white-space:nowrap;float:right;margin-top:.1rem; }
+.sec-quiz-btn:hover { background:rgba(255,255,255,.25);transform:translateY(-1px); }
+html:not(.dark) .sec-quiz-btn { border-color:rgba(180,83,9,.3);background:rgba(180,83,9,.08);color:var(--accent); }
 .container { max-width: 820px; margin: 0 auto; padding: 1rem 1rem 3rem; }
 .toc {
   background: var(--surface);
@@ -263,15 +269,20 @@ tr:nth-child(even) td { background: var(--table-stripe); }
 </head>
 <body>
 <script>
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  document.documentElement.classList.add('dark');
-}
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-  e.matches ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
-});
+(function(){
+  var h=document.documentElement;
+  if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){h.classList.add('dark')}
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(e){e.matches?h.classList.add('dark'):h.classList.remove('dark')});
+  window._toggleGuideTheme=function(){
+    h.classList.toggle('dark');
+    var btn=document.querySelector('.theme-toggle-btn');
+    if(btn)btn.textContent=h.classList.contains('dark')?'☀️':'🌙';
+  };
+})();
 </script>
 
-<div class="hero">
+<div class="hero" style="position:relative;">
+  <button class="theme-toggle-btn" onclick="_toggleGuideTheme()">☀️</button>
   <h1>📔 Yellow — Exhaustive Master</h1>
   <p class="subtitle">NCLEX Review · 12 Lectures + Extras · 530 High-Yield Points</p>
   <div class="badge-row">
@@ -279,7 +290,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="badge" onclick="expandAll()">📖 Expand All</span>
     <span class="badge" onclick="collapseAll()">🔼 Collapse All</span>
   </div>
-  <button class="guide-quiz-btn" onclick="launchQuiz()">📝 Launch Quiz — 100 Questions</button>
+  <button class="guide-quiz-btn" onclick="launchQuiz()">📝 Launch Quiz — 180 Questions</button>
 </div>
 
 <div class="container">
@@ -308,6 +319,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>⚗️ Acid-Base Balance &amp; Ventilators</h2>
     <span class="lec-tag">Lec 1</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('yfguide_acid')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body show">
     <h3>🔤 Rule of the B's</h3>
@@ -370,6 +382,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>🍺 Addiction, Grief &amp; Substance Abuse</h2>
     <span class="lec-tag">Lec 2</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('yfguide_grief')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>💔 Stages of Grief (DABDA)</h3>
@@ -426,6 +439,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>🔬 Aminoglycosides &amp; Overdose Pharmacology</h2>
     <span class="lec-tag">Lec 2–3</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('yfguide_amino')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>🦠 Aminoglycosides — "A Mean Old Mycin"</h3>
@@ -462,6 +476,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>🫀 Cardiac: CCBs, Rhythms &amp; Chest Tubes</h2>
     <span class="lec-tag">Lec 3</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('yfguide_card')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>💊 Calcium Channel Blockers — "Valium for the Heart"</h3>
@@ -531,6 +546,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>👶 CHDs, Infection Control &amp; Crutches</h2>
     <span class="lec-tag">Lec 3–4</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('yfguide_chd')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>❤️ Congenital Heart Defects</h3>
@@ -586,6 +602,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>🧩 Psychiatric Nursing &amp; Psychopharmacology</h2>
     <span class="lec-tag">Lec 4 &amp; 9</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('yfguide_psy')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>🧩 Psychosis Types &amp; Approach</h3>
@@ -651,6 +668,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>🩺 Diabetes &amp; Endocrine</h2>
     <span class="lec-tag">Lec 5 &amp; 7</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('yfguide_dm')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>🩺 Diabetes Overview</h3>
@@ -745,6 +763,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>☠️ Drug Toxicities, Dumping &amp; Hiatal Hernia</h2>
     <span class="lec-tag">Lec 6</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('yfguide_tox')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>☠️ Five Drug Toxicities</h3>
@@ -779,6 +798,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>🔬 Lab Values &amp; Electrolytes</h2>
     <span class="lec-tag">Lec 8</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('yfguide_lab')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>🔬 Lab Value Priority Levels</h3>
@@ -837,6 +857,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>💧 Fluids, Anticoagulants &amp; Anticholinergics</h2>
     <span class="lec-tag">Lec 10+</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('yfguide_fluid')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>💧 Diuretics — K-Wasting vs. K-Sparing</h3>
@@ -897,6 +918,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>🤰 Maternal, Newborn &amp; OB Meds</h2>
     <span class="lec-tag">Lec 10–11</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('yfguide_mat')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>🤰 Pregnancy Basics</h3>
@@ -969,6 +991,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
     <span class="arrow">▶</span>
     <h2>🚨 Prioritization, Delegation, Peds &amp; Burns</h2>
     <span class="lec-tag">Lec 12+</span>
+    <button class="sec-quiz-btn" onclick="event.stopPropagation();launchQuiz('yfguide_pri')">📝 Mini-Quiz</button>
   </div>
   <div class="section-body">
     <h3>🎯 4 Prioritization Rules</h3>
@@ -1079,9 +1102,10 @@ function toggleSection(header) {
   header.classList.toggle('open');
   body.classList.toggle('show');
 }
-function launchQuiz() {
+function launchQuiz(key) {
+  var k = key || 'yfguide';
   try {
-    window.parent.postMessage({ type: 'launchGuideQuiz', key: 'yfguide' }, '*');
+    window.parent.postMessage({ type: 'launchGuideQuiz', key: k }, '*');
   } catch(err) { /* cross-origin, skip */ }
 }
 function expandAll() {
